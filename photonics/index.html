@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Photonics — AI optical interconnects</title>
-  <meta name="description" content="AI photonics and optical interconnects — components, connectivity, manufacturing, integration, and upstream supply.">
+  <meta name="description" content="Layperson briefing on AI photonics: why optics matter as GPU clusters scale, a six-layer company map, and who does what across optical networking, components, DSPs, foundries, test, and materials. Not investment advice.">
   <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="section.css">
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary">
@@ -23,27 +24,324 @@
   </nav>
 
   <main class="container">
-    <header class="page-header">
-      <h1>Photonics — AI optical interconnects</h1>
-      <p class="subtitle">AI compute is scaling faster than data movement, so optics matter: optical interconnects are becoming core infrastructure for bandwidth, reach, and power efficiency.</p>
-    </header>
+    <article class="briefing">
+      <nav aria-label="On this page" class="page-toc">
+        <div class="toc-inner">
+          <span class="toc-label">Jump</span>
+          <a href="#why">Why optics</a>
+          <a href="#stack-map">Stack map</a>
+          <a href="#layer-1">Platform</a>
+          <a href="#layer-2">Components</a>
+          <a href="#layer-3">Connectivity ICs</a>
+          <a href="#layer-4">Foundries</a>
+          <a href="#layer-5">Test &amp; integration</a>
+          <a href="#layer-6">Materials</a>
+          <a href="#disclaimer">Disclaimer</a>
+        </div>
+      </nav>
 
-    <section class="section">
-      <h2>Section scaffold</h2>
-      <p><strong>Content publishing soon.</strong> This section is owned by the Photonics AI bot and will cover the companies, technologies, and bottlenecks shaping optical data movement.</p>
-    </section>
+      <header class="hero">
+        <span class="eyebrow">Technical briefing · September 2026 baseline</span>
+        <h1>Photonics — AI optical interconnects</h1>
+        <p class="subtitle">
+          AI compute is scaling faster than data movement. Moving bits with light —
+          <a href="https://en.wikipedia.org/wiki/Photonics">photonics</a> —
+          is becoming core infrastructure for bandwidth, reach, and power efficiency inside large
+          <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit">GPU</a> clusters.
+        </p>
+        <div class="meta-row">
+          <span class="chip">Hub section · six-layer stack</span>
+          <span class="chip">Starter map · SergeyCYW</span>
+          <span class="chip warn">Not investment advice</span>
+        </div>
+      </header>
 
-    <section class="section">
-      <h2>Six stack layers</h2>
-      <ul>
-        <li>Platform architects &amp; optical networking</li>
-        <li>Optical components, lasers &amp; transceivers</li>
-        <li>Connectivity ICs &amp; DSPs</li>
-        <li>Foundries &amp; manufacturing</li>
-        <li>Testing &amp; advanced integration</li>
-        <li>Upstream materials &amp; equipment</li>
-      </ul>
-    </section>
+      <section aria-labelledby="h-why" id="why">
+        <h2 id="h-why">Why optics matter for AI infrastructure</h2>
+        <p class="lede">
+          Training and serving large models means packing thousands of accelerators into racks and rows,
+          then keeping them fed with data. The chips got faster; the wires between them are the bottleneck.
+        </p>
+        <p>
+          Inside a data center, chips talk over electrical links on copper for short distances.
+          As speeds climb toward hundreds of gigabits per second per lane, copper hits hard limits:
+          signal loss over distance, crosstalk, and watts burned just to push electrons a few meters.
+          That is why AI factories already use
+          <a href="https://en.wikipedia.org/wiki/Optical_fiber">optical fiber</a>
+          for most rack-to-rack and hall-scale links, and why the industry is pulling optics closer to the chip.
+        </p>
+        <ul>
+          <li>
+            <strong>Bandwidth.</strong>
+            <a href="https://en.wikipedia.org/wiki/Optical_interconnect">Optical interconnects</a>
+            carry more bits per second in less physical space — essential when
+            <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit">GPUs</a>
+            spend more time waiting on data than computing.
+          </li>
+          <li>
+            <strong>Reach.</strong>
+            Light stays clean over tens or hundreds of meters where copper becomes lossy and power-hungry.
+            That lets operators build larger non-blocking fabrics across rows and buildings.
+          </li>
+          <li>
+            <strong>Power.</strong>
+            At high line rates, the energy per bit of long electrical paths rises sharply.
+            Optics (especially when lasers and modulators sit nearer the switch or accelerator package)
+            can cut interconnect power — a first-class constraint in multi-megawatt AI halls.
+          </li>
+          <li>
+            <strong>Copper’s ceiling.</strong>
+            Short-reach copper remains useful inside a board or package, but scale-up and scale-out fabrics
+            increasingly leave copper behind beyond a meter or two.
+          </li>
+        </ul>
+        <div class="callout">
+          <div class="label">Pluggables today → co-packaged optics next</div>
+          <p style="margin:0">
+            Most links still use
+            <a href="https://en.wikipedia.org/wiki/Transceiver">pluggable optical transceivers</a>
+            that snap into the faceplate of a switch or network interface card.
+            The next step is
+            <a href="https://en.wikipedia.org/wiki/Co-packaged_optics">co-packaged optics (CPO)</a>:
+            putting the optical engine on the same package as the switch or accelerator
+            <a href="https://en.wikipedia.org/wiki/Application-specific_integrated_circuit">ASIC</a>,
+            shortening the electrical hop and improving power and density.
+            <a href="https://en.wikipedia.org/wiki/Silicon_photonics">Silicon photonics</a>
+            — building optical waveguides and devices in chip-like processes — is a main manufacturing path for that shift.
+            Pluggables will not vanish overnight; expect a multi-year mix as CPO ramps on the highest-bandwidth tiers.
+          </p>
+        </div>
+        <p>
+          The investment map below is a curated stack: who designs the platforms and networks,
+          who builds lasers and modules, who ships the high-speed chips that drive them,
+          who fabricates and assembles, who tests and integrates, and who supplies materials upstream.
+          Private specialists (for example optical chiplet vendors) matter too; this page sticks to listed names
+          you can research in public markets, with a few extras where they clearly strengthen a layer.
+        </p>
+      </section>
+
+      <section aria-labelledby="h-map" id="stack-map">
+        <h2 id="h-map">Stack map</h2>
+        <p>
+          Starter landscape of public names across six photonics layers for AI data movement.
+          Tickers on the graphic include a SiTime label that should read <strong>SITM</strong> (not SIVE).
+        </p>
+        <figure class="stack-map">
+          <img
+            src="stack-map.png"
+            alt="Photonics stocks stack map: six layers from platform architects and optical networking down through components, connectivity ICs, foundries, testing and integration, and upstream materials, with company logos and tickers."
+            width="1200"
+            height="900"
+            loading="eager"
+            decoding="async">
+          <figcaption>
+            Starter map source:
+            <a href="https://sergeycyw.substack.com" rel="noopener noreferrer">SergeyCYW</a>
+            / <a href="https://sergeycyw.substack.com" rel="noopener noreferrer">sergeycyw.substack.com</a>
+            (PHOTONICS STOCKS). Used here as a visual orientation for the hub; company blurbs below are independent commentary.
+          </figcaption>
+        </figure>
+      </section>
+
+      <section aria-labelledby="h-who" id="who">
+        <h2 id="h-who">Who-is-who by layer</h2>
+        <p class="lede">
+          Each company in one or two plain sentences — what they actually do in this stack.
+          Spellings and roles are orienting notes, not recommendations.
+        </p>
+
+        <h3 id="layer-1">1. Platform architects &amp; optical networking</h3>
+        <p class="layer-intro">
+          Systems and silicon vendors that set how AI clusters connect — switches, fabrics, and optical networking gear
+          that sit above the module and laser suppliers.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">NVIDIA</span><span class="ticker">NVDA</span>
+            <p>Designs AI accelerators and the networking that ties them together, including InfiniBand and Ethernet fabrics and, increasingly, silicon-photonics / CPO switch platforms for very high-bandwidth AI clusters.</p>
+          </li>
+          <li>
+            <span class="name">Broadcom</span><span class="ticker">AVGO</span>
+            <p>Dominant merchant supplier of high-radix Ethernet switch ASICs used in cloud and AI networks; a lead voice on CPO switch silicon that integrates optics next to the switching chip.</p>
+          </li>
+          <li>
+            <span class="name">Cisco</span><span class="ticker">CSCO</span>
+            <p>Builds routers, switches, and optical transport systems for campus, data-center, and long-haul networks — the gear that moves traffic between racks and between facilities.</p>
+          </li>
+          <li>
+            <span class="name">Arista Networks</span><span class="ticker">ANET</span>
+            <p>Sells cloud- and AI-oriented Ethernet switches and software widely used in hyperscale and enterprise AI fabrics, with heavy dependence on high-speed optical pluggables at the faceplate.</p>
+          </li>
+          <li>
+            <span class="name">Ciena</span><span class="ticker">CIEN</span>
+            <p>Specializes in optical transport and coherent networking — the long-reach “pipes” that interconnect data centers and metro/long-haul routes with dense wavelength multiplexing.</p>
+          </li>
+          <li>
+            <span class="name">Nokia</span><span class="ticker">NOK</span>
+            <p>Provides IP routing and optical network systems (including assets from its Infinera acquisition) used by carriers and large operators for high-capacity optical transport.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-2">2. Optical components, lasers &amp; transceivers</h3>
+        <p class="layer-intro">
+          The physical light path: lasers, modulators, detectors, and the pluggable or engine modules that turn electricity into photons and back.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Lumentum</span><span class="ticker">LITE</span>
+            <p>Makes lasers, optical components, and modules used in data-center and telecom links, including high-speed transceiver building blocks and related photonics parts.</p>
+          </li>
+          <li>
+            <span class="name">Applied Optoelectronics</span><span class="ticker">AAOI</span>
+            <p>Designs and manufactures fiber-optic transceivers and related components aimed at data-center and cable broadband customers.</p>
+          </li>
+          <li>
+            <span class="name">Coherent</span><span class="ticker">COHR</span>
+            <p>Broad photonics supplier (lasers, materials, and optical components) spanning industrial lasers and communications optics used in networking and sensing.</p>
+          </li>
+          <li>
+            <span class="name">MACOM</span><span class="ticker">MTSI</span>
+            <p>Sells high-speed analog and RF / optical semiconductors — drivers, amplifiers, and related chips that sit next to lasers and detectors in optical modules.</p>
+          </li>
+          <li>
+            <span class="name">IPG Photonics</span><span class="ticker">IPGP</span>
+            <p>Best known for high-power fiber lasers in industrial manufacturing; relevant as a deep laser-physics and fiber-laser franchise adjacent to the broader photonics supply chain.</p>
+          </li>
+          <li>
+            <span class="name">SiTime</span><span class="ticker">SITM</span>
+            <p>Builds silicon MEMS timing chips. Precise clocks are unglamorous but essential for synchronizing high-speed SerDes and optical links in AI and networking gear.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-3">3. Connectivity ICs &amp; DSPs</h3>
+        <p class="layer-intro">
+          The electronics that condition, serialize, and decode ultra-fast signals —
+          <a href="https://en.wikipedia.org/wiki/Digital_signal_processor">digital signal processors (DSPs)</a>,
+          <a href="https://en.wikipedia.org/wiki/SerDes">SerDes</a>,
+          retimers, and connectivity chiplets between compute, memory, and optics.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Credo</span><span class="ticker">CRDO</span>
+            <p>Focuses on high-speed connectivity chips — SerDes, retimers, and related silicon that help copper and optical links run cleanly at today’s AI line rates.</p>
+          </li>
+          <li>
+            <span class="name">Marvell</span><span class="ticker">MRVL</span>
+            <p>Supplies data-infrastructure silicon including electro-optics DSPs, Ethernet devices, and custom ASICs widely used in optical modules and cloud networking.</p>
+          </li>
+          <li>
+            <span class="name">Astera Labs</span><span class="ticker">ALAB</span>
+            <p>Builds connectivity ICs and retimers for AI servers — keeping PCIe, CXL, and Ethernet links stable as rack-scale GPU systems grow denser.</p>
+          </li>
+          <li>
+            <span class="name">Semtech</span><span class="ticker">SMTC</span>
+            <p>Through its Signal Integrity / Tri-Edge and related lines, sells optical transceiver ICs (laser drivers, TIAs, CDRs) used inside high-speed modules.</p>
+          </li>
+          <li>
+            <span class="name">Microchip Technology</span><span class="ticker">MCHP</span>
+            <p>Diversified microcontroller and analog supplier with timing, Ethernet, and optical-networking IC families used around data-center and communications systems.</p>
+          </li>
+          <li>
+            <span class="name">MaxLinear</span><span class="ticker">MXL</span>
+            <p>Adds a coherent / high-speed DSP angle: communications SoCs and modem/DSP silicon used in optical transport and related broadband links.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-4">4. Foundries &amp; manufacturing</h3>
+        <p class="layer-intro">
+          Who fabricates photonics-friendly silicon and who assembles complex optical modules at scale.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">TSMC</span><span class="ticker">TSM</span>
+            <p>The leading logic foundry; also a key platform for silicon photonics and advanced packaging approaches that enable co-packaged optical engines next to switch and AI silicon.</p>
+          </li>
+          <li>
+            <span class="name">GlobalFoundries</span><span class="ticker">GFS</span>
+            <p>Specialty foundry with established silicon-photonics process offerings used by optical-engine and transceiver chip designers.</p>
+          </li>
+          <li>
+            <span class="name">Tower Semiconductor</span><span class="ticker">TSEM</span>
+            <p>Analog and specialty foundry known for silicon-photonics and RF/optical process flavors used by communications chip companies.</p>
+          </li>
+          <li>
+            <span class="name">UMC</span><span class="ticker">UMC</span>
+            <p>Pure-play foundry serving specialty and mature-node logic — including processes relevant to mixed-signal and photonics-adjacent chips.</p>
+          </li>
+          <li>
+            <span class="name">STMicroelectronics</span><span class="ticker">STM</span>
+            <p>IDM with silicon-photonics technology used in optical communications and sensing, plus broader analog/power silicon around systems.</p>
+          </li>
+          <li>
+            <span class="name">Fabrinet</span><span class="ticker">FN</span>
+            <p>Precision optical manufacturing partner — assembles and tests complex optical modules and systems for many branded transceiver and networking vendors.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-5">5. Testing &amp; advanced integration</h3>
+        <p class="layer-intro">
+          Tools and platforms that verify high-speed optics and help integrate photonic chips into usable engines and packages.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Aehr Test Systems</span><span class="ticker">AEHR</span>
+            <p>Builds burn-in and test systems for semiconductors, including wafer-level and packaged parts used where reliability screening matters for advanced chips.</p>
+          </li>
+          <li>
+            <span class="name">Viavi Solutions</span><span class="ticker">VIAV</span>
+            <p>Provides optical test and measurement gear and network assurance tools used to qualify fiber links, modules, and production lines.</p>
+          </li>
+          <li>
+            <span class="name">Onto Innovation</span><span class="ticker">ONTO</span>
+            <p>Process-control and inspection equipment for advanced semiconductor packaging and manufacturing — relevant as optical engines and chiplets get packaged more densely.</p>
+          </li>
+          <li>
+            <span class="name">Keysight Technologies</span><span class="ticker">KEYS</span>
+            <p>Electronic and optical test instruments (scopes, BERTs, network analyzers) used to design and validate multi-hundred-gigabit electrical and optical links.</p>
+          </li>
+          <li>
+            <span class="name">POET Technologies</span><span class="ticker">POET</span>
+            <p>Develops optical interposer / photonic integration platforms aimed at lowering cost and complexity of assembling light engines for data-center modules.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-6">6. Upstream materials &amp; equipment</h3>
+        <p class="layer-intro">
+          Substrates, wafers, specialty materials, and glass/fiber inputs that sit beneath lasers, PICs, and cable plants.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">AXT</span><span class="ticker">AXTI</span>
+            <p>Produces compound-semiconductor substrates (such as gallium arsenide and indium phosphide families) used to grow the epitaxial material for many lasers and detectors.</p>
+          </li>
+          <li>
+            <span class="name">Soitec</span><span class="ticker">SOI.PA</span>
+            <p>French materials company known for engineered substrates, including silicon-on-insulator wafers used in RF and silicon-photonics device flows.</p>
+          </li>
+          <li>
+            <span class="name">IQE</span><span class="ticker">IQE.L</span>
+            <p>UK supplier of epitaxial wafers — the crystalline layers grown on substrates that become the active regions of compound-semiconductor photonics and RF chips.</p>
+          </li>
+          <li>
+            <span class="name">Lightwave Logic</span><span class="ticker">LWLG</span>
+            <p>Develops electro-optic polymer materials intended for high-speed modulators — an earlier-stage materials bet on alternatives to traditional inorganic modulators.</p>
+          </li>
+          <li>
+            <span class="name">Corning</span><span class="ticker">GLW</span>
+            <p>Major producer of optical fiber and specialty glass — the physical medium for almost every photonic link between racks, buildings, and cities.</p>
+          </li>
+        </ul>
+      </section>
+
+      <footer class="caveat" id="disclaimer" aria-labelledby="h-disclaimer">
+        <p id="h-disclaimer"><strong>Not investment advice.</strong>
+          This page is an educational briefing for Arman’s public investment hub.
+          It does not recommend buying or selling any security, does not consider your objectives or risk tolerance,
+          and may be incomplete or outdated. Do your own research. Past performance and thematic narratives are not guarantees of future results.
+          Section owned by the Photonics AI bot per <a href="../OWNERS.md">OWNERS.md</a>.
+        </p>
+      </footer>
+    </article>
   </main>
 
   <footer class="site-footer">
