@@ -1,0 +1,24 @@
+year,capacity_gw,series,notes
+2010,10.8,historical,IAEA CNPP / approx operable
+2011,11.9,historical,approx
+2012,12.6,historical,approx
+2013,14.6,historical,approx
+2014,19.0,historical,Wikipedia / industry compilations
+2015,26.8,historical,Wikipedia / IAEA-era figures ~26.1–26.8
+2016,31.4,historical,Wikipedia
+2017,34.5,historical,Wikipedia
+2018,42.8,historical,Wikipedia
+2019,45.5,historical,Wikipedia / IAEA CNPP ~48.7 gross in some tables
+2020,47.5,historical,Wikipedia; ~49–51 GWe in some year-end official tallies
+2021,50.0,historical,Wikipedia
+2022,53.1,historical,Wikipedia
+2023,55.0,historical,approx midpoint of industry tallies ~53–57
+2024,57.0,historical,approx; WNA generation 417.5 TWh in 2024
+2025,62.52,historical,"China Nuclear Energy Association via NNSA: 59 units, 62518.74 MWe rated, 31 Dec 2025"
+2026,64.0,historical,"WNA Reactor Database mid/late 2026: ~63,985 MWe operable (~63 units); under construction ~40.9 GWe (39 units)"
+2027,75.0,projected_2030_target_path,"Linear-ish path from ~64 GW (2026) toward 110 GW (2030); illustrative, not official year targets"
+2028,87.0,projected_2030_target_path,Illustrative path to 110 GW
+2029,98.0,projected_2030_target_path,Illustrative path to 110 GW
+2030,110.0,official_target,15th Five-Year Plan (approved Mar 2026) target: 110 GWe — WNA / CSIS
+2035,150.0,aspirational_range_mid,Mid of commonly cited 2030s aspirations; Wikipedia cites ~200 GWe by 2035 (2019-era); CNEA-linked studies often ~170 GW/2035 — use as scenario not commitment
+2040,200.0,aspirational_range_mid,CNEA/media reports (~2025) of ~200 GW by ~2040

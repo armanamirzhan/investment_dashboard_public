@@ -1,0 +1,70 @@
+{
+  "as_of": "2026-09-30",
+  "disclaimer": "Analytical metrics compiled from public sources. Not investment advice.",
+  "china_nuclear_capacity": {
+    "end_2025_gwe": 62.52,
+    "end_2025_units": 59,
+    "end_2025_source": "China Nuclear Energy Association via NNSA",
+    "mid_late_2026_gwe": 64.0,
+    "mid_late_2026_units_approx": 63,
+    "under_construction_gwe": 40.9,
+    "under_construction_units": 39,
+    "mid_late_2026_source": "WNA Reactor Database (~63,985 MWe operable)",
+    "target_2030_gwe": 110,
+    "target_2030_source": "15th Five-Year Plan (approved Mar 2026); WNA / CSIS",
+    "capacity_ratio_approx": 1.8,
+    "aspirational_2035_gwe_mid": 150,
+    "aspirational_2040_gwe_mid": 200,
+    "notes": "2035/2040 are mid aspirational scenarios, not firm FYP commitments. Gross vs net capacity differs by source (~2–5%)."
+  },
+  "china_uranium_demand": {
+    "recent_ktu": 11.5,
+    "recent_notes": "UxC via Wire China / Sightline; WNA >11 ktU (2023)",
+    "2030_ktu": 21,
+    "2030_source": "UxC via Wire China / Sightline (Mar 2025)",
+    "demand_ratio_approx": 1.83,
+    "increment_ktu": [9, 10],
+    "2040_ktu_wna_policy_case": 40,
+    "rule_of_thumb_tu_per_gwe_yr": [150, 200]
+  },
+  "stockpile_and_imports": {
+    "stockpile_ktu_est_2022": 132,
+    "stockpile_source": "WNA via Sightline / Wire China",
+    "imports_2025_t": 27440,
+    "imports_2025_source": "CRI Report",
+    "domestic_production_ktu_yr": [1.7, 1.8],
+    "domestic_source": "WNA Fuel Cycle / Red Book–era",
+    "strategy_thirds": "1/3 domestic : 1/3 overseas equity : 1/3 open market (domestic third not yet achieved)"
+  },
+  "kazakhstan": {
+    "holding_world_primary_share_2025": 0.39,
+    "kap_attributable_world_share_approx": 0.20,
+    "china_share_of_kz_exports_jan_jul_2024": 0.45,
+    "kz_share_of_china_natural_u_imports_2023_approx": 0.66,
+    "china_imports_from_kz_kt_2023_approx": [11.1, 11.3],
+    "kap_100pct_guide_2025_ktu": [25.0, 26.5],
+    "kap_100pct_guide_2026_ktu": [27.5, 29.0],
+    "kap_attrib_guide_2026_ktu": [14.5, 15.5],
+    "incremental_china_capture_base_ktu": [1.5, 3.5],
+    "incremental_china_capture_bull_ktu": [3, 6],
+    "needs_plus_25pct_production": false,
+    "near_term_growth_note": "Guiding ~+10% into 2026; Budenovskoye ramp largely Russia-committed through 2026"
+  },
+  "namibia": {
+    "country_output_2025_ktu_approx": [8.5, 9.0],
+    "chinese_linked_ktu_approx": [6.5, 7.5],
+    "husab_2025_ktu_approx": 4.4,
+    "husab_design_ktu_approx": 5.1,
+    "rossing_2025_ktu_approx": 2.7,
+    "langer_heinrich_ktu_approx": [1.55, 1.85],
+    "incremental_by_2030_ktu_typical": [2, 4],
+    "incremental_by_2030_ktu_optimistic_ceiling": 5,
+    "can_cover_full_china_increment_alone": false,
+    "etango_ktu_yr_if_built": 1.3,
+    "tumas_ktu_yr_if_built": 1.4
+  },
+  "chart_files": {
+    "png": "uranium/china-nuclear-capacity.png",
+    "csv": "uranium/china-nuclear-capacity.csv"
+  }
+}
