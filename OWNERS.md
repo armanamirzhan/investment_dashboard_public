@@ -9,6 +9,7 @@ Bot / human ownership rules for `investment_dashboard_public`. Do not commit int
 | `README.md`, `OWNERS.md` | **Website builder** | Purpose and ownership docs |
 | `data/` (shared seeds) | **Website builder** (+ section bots with prefix) | Curated JSON from private dashboard extract. Prefer prefixed files for section-only data (`electrification_*`, `smr_*`, `uranium_*`) |
 | `electrification/` | **Electrification / Power Map bot** | Power Map UI and briefings |
+| `photonics/` | **Photonics AI bot** | AI optical interconnects and data-movement stack |
 | `smr/` | **SMR bot** | Oklo, X-energy, NuScale tracker UI |
 | `uranium/` | **Uranium bot** | Uranium / HALEU map UI |
 | `digests/` | **Digest bot** | Digest index + dated brief HTML |
