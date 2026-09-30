@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Electrification — Power Map — Investment Hub</title>
-  <meta name="description" content="Grid equipment, turbines, utilities, and datacenter power delivery.">
+  <meta name="description" content="AI data-center electrification briefing: offsite and onsite generation, hydrogen path math, SST vs legacy conversion, in-hall DC distribution, bottlenecks, and company map. September 2026 baseline. Not investment advice.">
   <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="briefing.css">
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary">
@@ -13,7 +14,7 @@
       <a class="brand" href="../index.html">Arman <span>Invest</span></a>
       <div class="nav-links">
         <a href="../index.html" data-section="home">Hub</a>
-        <a href="../electrification/index.html" data-section="electrification">Electrification</a>
+        <a href="../electrification/index.html" data-section="electrification" class="active">Electrification</a>
         <a href="../smr/index.html" data-section="smr">SMR</a>
         <a href="../uranium/index.html" data-section="uranium">Uranium</a>
         <a href="../digests/index.html" data-section="digests">Digests</a>
@@ -22,43 +23,785 @@
   </nav>
 
   <main class="container">
-    <header class="page-header">
-      <h1>Electrification — Power Map</h1>
-      <p class="subtitle">Grid equipment, turbines, utilities, and datacenter power delivery.</p>
-      <span class="badge">Placeholder — section bot owns this folder</span>
-    </header>
-
-    <div class="placeholder-note">
-      This page is a scaffold for the <strong>electrification</strong> section. Content, maps, and briefings will be owned by the section bot per <a href="../OWNERS.md">OWNERS.md</a>. Shared curated identifiers live under <code>data/</code>.
-    </div>
-
-<section class="section">
-  <h2>Scope</h2>
-  <p>Power Map for AI/datacenter electrification: gas turbine OEMs, grid equipment, IPPs, nuclear utilities, renewables/storage, and cooling.</p>
-  <p>Seed tickers from curated extract:</p>
-  <p>
-    <span class="ticker">GEV</span>
-    <span class="ticker">ETN</span>
-    <span class="ticker">VRT</span>
-    <span class="ticker">CEG</span>
-    <span class="ticker">VST</span>
-    <span class="ticker">NEE</span>
-    <span class="ticker">AES</span>
-    <span class="ticker">ENR.DE</span>
-    <span class="ticker">FLNC</span>
-    <span class="ticker">BE</span>
-  </p>
-  <p class="meta-row">Data: <code>data/power_suppliers.json</code>, <code>data/hardware_suppliers.json</code>, <code>data/electrification_companies.json</code>, <code>data/hyperscaler_buildouts.json</code></p>
+    <article class="briefing">
+<nav aria-label="On this page" class="toc page-toc">
+<div class="toc-inner">
+<span class="toc-label">Jump</span>
+<a href="#overview">Overview</a>
+<a href="#paths-overview">Paths</a>
+<a href="#offsite">Offsite / Grid</a>
+<a href="#onsite">Onsite Gen</a>
+<a href="#hydrogen">Hydrogen</a>
+<a href="#conversion">Conversion</a>
+<a href="#in-hall">In-hall <abbr data-expand="Direct Current" title="Direct Current">DC</abbr></a>
+<a href="#bottlenecks">Bottlenecks</a>
+<a href="#companies">Companies</a>
+<a href="#comparison">Compare</a>
+<a href="#glossary">Glossary</a>
+<a href="#caveat">Caveat</a>
+</div>
+</nav>
+<header class="hero">
+<span class="eyebrow">Technical briefing · September 2026 baseline</span>
+<h1>AI Data-Center Electrification: Generators through <abbr data-expand="Graphics Processing Unit" title="Graphics Processing Unit">GPU</abbr> Voltage Regulators</h1>
+<p class="subtitle">A single-file map of how electricity reaches AI silicon—offsite Combined-Cycle Gas Turbine (<abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr>) and grid paths, onsite fuel cells and turbines, hydrogen round-trip math, Solid-State Transformer (<abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>) versus legacy Alternating Current (<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>) conversion, and in-hall Direct Current (<abbr data-expand="Direct Current" title="Direct Current">DC</abbr>) distribution to Voltage Regulators (<abbr data-expand="Voltage Regulators" title="Voltage Regulators">VRs</abbr>).</p>
+<div class="meta-row">
+<span class="chip">Prepared for Arman A</span>
+<span class="chip">Hub section · interactive terms</span>
+<span class="chip warn">Not investment advice</span>
+</div>
+</header>
+<section aria-labelledby="h-overview" id="overview">
+<h2 id="h-overview">1. Overview: the AI data-center power problem</h2>
+<p class="lede">AI training and inference clusters draw continuous multi-megawatt loads per hall. The constraint is rarely “enough electrons somewhere on Earth”—it is <strong>time-to-power</strong> at a specific site, plus conversion losses and heat from each hop between generation and the sub-1 V rails on Graphics Processing Unit (<abbr data-expand="Graphics Processing Unit" title="Graphics Processing Unit">GPU</abbr>) and Central Processing Unit (<abbr data-expand="Central Processing Unit" title="Central Processing Unit">CPU</abbr>) packages.</p>
+<p>Two high-level routes exist:</p>
+<ul>
+<li><strong>Offsite generation + grid:</strong> utility-scale plants (typically <abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr> today) deliver power over High-Voltage Alternating Current (<abbr data-expand="High-Voltage Alternating Current" title="High-Voltage Alternating Current">HVAC</abbr>) or High-Voltage Direct Current (<abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr>) transmission to the site boundary, then facility transformers and conversion stages feed the hall.</li>
+<li><strong>Onsite generation:</strong> fuel cells—especially Solid Oxide Fuel Cell (<abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr>)—gas turbines, diesel or gas gensets, or hybrids sit inside or adjacent to the campus fence, trading capital and fuel logistics for faster interconnect and sometimes better control of Direct Current (<abbr data-expand="Direct Current" title="Direct Current">DC</abbr>) output.</li>
+</ul>
+<div class="callout">
+<div class="label">Core trade-off</div>
+<p style="margin:0"><abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr> remains the cheapest long-run kilowatt-hour (kWh) when turbines and interconnects are available (~60–64% electrical Lower Heating Value / <abbr data-expand="Lower Heating Value" title="Lower Heating Value">LHV</abbr>). Fuel cells often win on <em>time-to-power</em>: a month early on a 1 GW AI campus can be worth on the order of ~$1–2 B of compute revenue—figures that dominate small efficiency gaps.</p>
+</div>
+<p>Inside the building, the industry is shifting from a many-stage <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr> chain (Uninterruptible Power Supply → Power Distribution Unit → Power Supply Unit → 12 V → <abbr data-expand="Voltage Regulators" title="Voltage Regulators">VRs</abbr>) toward medium-voltage <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr> rectified or <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>-converted to ~800 V <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> (or ±400 V bipolar), then rack/blade conversion and multiphase <abbr data-expand="Voltage Regulators" title="Voltage Regulators">VRs</abbr>. Collapsing stages cuts heat, parts count, and roughly ~5% conversion loss versus many <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>–<abbr data-expand="Direct Current" title="Direct Current">DC</abbr> hops.</p>
 </section>
-<section class="section">
-  <h2>Coming soon</h2>
-  <ul>
-    <li>Interactive Power Map</li>
-    <li>Hyperscaler PPA / buildout overlays</li>
-    <li>Lead-time and backlog briefings</li>
-  </ul>
+<section aria-labelledby="h-paths" id="paths-overview">
+<h2 id="h-paths">Navigation: onsite vs offsite electrification paths</h2>
+<p>Use this overview to orient; annotated hop-loss diagrams follow in later sections.</p>
+<figure class="diagram" id="diagram-overview">
+<svg aria-labelledby="ov-title ov-desc" role="img" viewbox="0 0 960 320" xmlns="http://www.w3.org/2000/svg">
+<title id="ov-title">Onsite versus offsite electrification overview</title>
+<desc id="ov-desc">Two branches: offsite CCGT via grid HVAC/HVDC to SST or rectifier, versus onsite SOFC, MCFC, PAFC, turbines, hybrid, feeding DC or AC into the same in-hall 800 V path to GPUs.</desc>
+<defs>
+<marker id="arrow" markerheight="7" markerwidth="7" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10">
+<path d="M0,0 L10,5 L0,10 z" fill="#5b9fd4"></path>
+</marker>
+<style>
+          .box{fill:#1c222b;stroke:#2a3340;stroke-width:1.2}
+          .box-a{fill:#1a2836;stroke:#3d6a8f}
+          .box-b{fill:#1a2a24;stroke:#3d7a5c}
+          .box-c{fill:#2a2430;stroke:#6b5a8f}
+          .lbl{fill:#e8eef6;font-family:Segoe UI,system-ui,sans-serif;font-size:12px;font-weight:600}
+          .sub{fill:#9aa7b8;font-family:Segoe UI,system-ui,sans-serif;font-size:10px}
+          .title{fill:#5b9fd4;font-family:Segoe UI,system-ui,sans-serif;font-size:13px;font-weight:700}
+          .lnk{stroke:#5b9fd4;stroke-width:1.6;fill:none;marker-end:url(#arrow)}
+        </style>
+</defs>
+<text class="title" x="24" y="28">OFFSITE PATH</text>
+<rect class="box-a" height="48" rx="6" width="120" x="24" y="44"></rect>
+<text class="lbl" text-anchor="middle" x="84" y="64">CCGT / utility</text>
+<text class="sub" text-anchor="middle" x="84" y="80">~60–64% LHV</text>
+<path class="lnk" d="M144,68 H178"></path>
+<rect class="box-a" height="48" rx="6" width="130" x="180" y="44"></rect>
+<text class="lbl" text-anchor="middle" x="245" y="64">HVAC / HVDC</text>
+<text class="sub" text-anchor="middle" x="245" y="80">grid transmission</text>
+<path class="lnk" d="M310,68 H344"></path>
+<rect class="box-a" height="48" rx="6" width="140" x="346" y="44"></rect>
+<text class="lbl" text-anchor="middle" x="416" y="64">Site XFMR / SST</text>
+<text class="sub" text-anchor="middle" x="416" y="80">MV AC → ~800 V DC</text>
+<text class="title" style="fill:#7ec8a3" x="24" y="148">ONSITE PATH</text>
+<rect class="box-b" height="48" rx="6" width="100" x="24" y="164"></rect>
+<text class="lbl" text-anchor="middle" x="74" y="184">SOFC</text>
+<text class="sub" text-anchor="middle" x="74" y="200">NG → DC</text>
+<rect class="box-b" height="48" rx="6" width="100" x="134" y="164"></rect>
+<text class="lbl" text-anchor="middle" x="184" y="184">MCFC / PAFC</text>
+<text class="sub" text-anchor="middle" x="184" y="200">CHP options</text>
+<rect class="box-b" height="48" rx="6" width="110" x="244" y="164"></rect>
+<text class="lbl" text-anchor="middle" x="299" y="184">Turbine / genset</text>
+<text class="sub" text-anchor="middle" x="299" y="200">fast start</text>
+<rect class="box-b" height="48" rx="6" width="100" x="364" y="164"></rect>
+<text class="lbl" text-anchor="middle" x="414" y="184">Hybrid</text>
+<text class="sub" text-anchor="middle" x="414" y="200">blend</text>
+<path class="lnk" d="M464,188 H500"></path>
+<path class="lnk" d="M486,68 H500"></path>
+<rect class="box-c" height="110" rx="6" width="150" x="502" y="90"></rect>
+<text class="lbl" text-anchor="middle" x="577" y="120">800 V DC bus</text>
+<text class="sub" text-anchor="middle" x="577" y="140">busway / rack</text>
+<text class="sub" text-anchor="middle" x="577" y="158">800→12 V LLC</text>
+<text class="sub" text-anchor="middle" x="577" y="176">VRMs → GPU/CPU</text>
+<path class="lnk" d="M652,145 H700"></path>
+<rect class="box" height="70" rx="6" width="120" x="702" y="110"></rect>
+<text class="lbl" text-anchor="middle" x="762" y="142">Silicon</text>
+<text class="sub" text-anchor="middle" x="762" y="160">sub-1 V rails</text>
+<text class="sub" x="24" y="260">PEM + electrolyzed H₂ is shown separately (loss trap)—not a primary baseload path for AI halls.</text>
+<text class="sub" x="24" y="280">Losses and company hops are annotated in diagrams (1)–(5) and the company map below.</text>
+</svg>
+<figcaption>Figure 0 — Path overview. Offsite (<abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr> + grid) and onsite (<abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> / <abbr data-expand="Molten Carbonate Fuel Cell" title="Molten Carbonate Fuel Cell">MCFC</abbr> / <abbr data-expand="Phosphoric Acid Fuel Cell" title="Phosphoric Acid Fuel Cell">PAFC</abbr> / turbine / hybrid) converge on an ~800 V <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> in-hall architecture feeding <abbr data-expand="Graphics Processing Unit" title="Graphics Processing Unit">GPU</abbr>/<abbr data-expand="Central Processing Unit" title="Central Processing Unit">CPU</abbr> Voltage Regulator Modules (<abbr data-expand="Voltage Regulator Modules" title="Voltage Regulator Modules">VRMs</abbr>).</figcaption>
+</figure>
 </section>
-
+<section aria-labelledby="h-offsite" id="offsite">
+<h2 id="h-offsite">2. Offsite generation + grid path (<abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr>, <abbr data-expand="High-Voltage Alternating Current" title="High-Voltage Alternating Current">HVAC</abbr> / <abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr>)</h2>
+<p>Utility-scale <strong>Combined-Cycle Gas Turbine (<abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr>)</strong> plants convert pipeline natural gas to electricity at roughly <strong>60–64% <abbr data-expand="Lower Heating Value" title="Lower Heating Value">LHV</abbr></strong> electrical efficiency—still the cheapest long-run kWh if you can secure the turbine and the interconnect. Power then travels over transmission:</p>
+<ul>
+<li><strong>High-Voltage Alternating Current (<abbr data-expand="High-Voltage Alternating Current" title="High-Voltage Alternating Current">HVAC</abbr>):</strong> roughly ~5–8% loss per 1 000 km class.</li>
+<li><strong>High-Voltage Direct Current (<abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr>):</strong> roughly ~3.5% per 1 000 km plus ~1% per converter station.</li>
+<li>Shorter hops: transmission often cited ~98.5% per ~100 km class; step-up and step-down transformers each ~99.5%.</li>
+</ul>
+<p><abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr> converter stations are expensive because they switch hundreds of kilovolts down toward medium voltage—a different product class from a data-center <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> that lands at ~800 V.</p>
+<figure class="diagram" id="diagram-ccgt-sst">
+<svg aria-labelledby="d2-title d2-desc" role="img" viewbox="0 0 980 420" xmlns="http://www.w3.org/2000/svg">
+<title id="d2-title">CCGT plus grid plus SST 800 V path with hop losses</title>
+<desc id="d2-desc">Annotated chain from CCGT through HVAC or HVDC, site step-down, SST or rectifier to 800 V DC, busway, LLC, VRMs to GPU.</desc>
+<defs>
+<marker id="a2" markerheight="6" markerwidth="6" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10">
+<path d="M0,0 L10,5 L0,10 z" fill="#5b9fd4"></path>
+</marker>
+<style>
+          .b{fill:#1c222b;stroke:#2a3340;stroke-width:1.2}
+          .ba{fill:#1a2836;stroke:#3d6a8f}
+          .l{fill:#e8eef6;font-family:Segoe UI,system-ui,sans-serif;font-size:11.5px;font-weight:600}
+          .s{fill:#9aa7b8;font-family:Segoe UI,system-ui,sans-serif;font-size:10px}
+          .e{fill:#d4a35b;font-family:Cascadia Code,Consolas,monospace;font-size:10px}
+          .t{fill:#5b9fd4;font-family:Segoe UI,system-ui,sans-serif;font-size:13px;font-weight:700}
+          .ln{stroke:#5b9fd4;stroke-width:1.5;fill:none;marker-end:url(#a2)}
+        </style>
+</defs>
+<text class="t" x="20" y="28">Diagram (2) — CCGT + grid + SST / rectifier → 800 V DC → silicon</text>
+<rect class="ba" height="70" rx="6" width="130" x="20" y="50"></rect>
+<text class="l" text-anchor="middle" x="85" y="74">CCGT plant</text>
+<text class="s" text-anchor="middle" x="85" y="92">natural gas</text>
+<text class="e" text-anchor="middle" x="85" y="108">η ≈ 60–64% LHV</text>
+<path class="ln" d="M150,85 H185"></path>
+<text class="e" text-anchor="middle" x="168" y="78">99.5%</text>
+<rect class="ba" height="70" rx="6" width="110" x="188" y="50"></rect>
+<text class="l" text-anchor="middle" x="243" y="78">Step-up XFMR</text>
+<text class="s" text-anchor="middle" x="243" y="96">to HV</text>
+<path class="ln" d="M298,85 H333"></path>
+<rect class="ba" height="86" rx="6" width="150" x="336" y="42"></rect>
+<text class="l" text-anchor="middle" x="411" y="68">HVAC or HVDC</text>
+<text class="s" text-anchor="middle" x="411" y="86">HVAC ~5–8%/1000 km</text>
+<text class="s" text-anchor="middle" x="411" y="102">HVDC ~3.5%+1%/stn</text>
+<text class="e" text-anchor="middle" x="411" y="118">~98.5% / ~100 km</text>
+<path class="ln" d="M486,85 H521"></path>
+<text class="e" text-anchor="middle" x="504" y="78">99.5%</text>
+<rect class="ba" height="70" rx="6" width="120" x="524" y="50"></rect>
+<text class="l" text-anchor="middle" x="584" y="74">Site step-down</text>
+<text class="s" text-anchor="middle" x="584" y="92">to MV AC</text>
+<text class="s" text-anchor="middle" x="584" y="108">facility XFMR</text>
+<path class="ln" d="M644,85 H679"></path>
+<rect class="ba" height="86" rx="6" width="140" x="682" y="42"></rect>
+<text class="l" text-anchor="middle" x="752" y="68">SST / rectifier</text>
+<text class="s" text-anchor="middle" x="752" y="86">MV AC → ~800 V DC</text>
+<text class="s" text-anchor="middle" x="752" y="102">or ±400 V bipolar</text>
+<text class="e" text-anchor="middle" x="752" y="118">η ≈ 97%</text>
+<path class="ln" d="M752,128 V170"></path>
+<rect class="b" height="58" rx="6" width="140" x="682" y="172"></rect>
+<text class="l" text-anchor="middle" x="752" y="196">800 V DC busway</text>
+<text class="e" text-anchor="middle" x="752" y="214">η ≈ 99%</text>
+<path class="ln" d="M682,201 H620"></path>
+<rect class="b" height="58" rx="6" width="148" x="470" y="172"></rect>
+<text class="l" text-anchor="middle" x="544" y="196">800→12 V LLC</text>
+<text class="e" text-anchor="middle" x="544" y="214">~64:1 · η ≈ 97.5%</text>
+<path class="ln" d="M470,201 H408"></path>
+<rect class="b" height="58" rx="6" width="126" x="280" y="172"></rect>
+<text class="l" text-anchor="middle" x="343" y="196">Multiphase VRMs</text>
+<text class="e" text-anchor="middle" x="343" y="214">η ≈ 90%</text>
+<path class="ln" d="M280,201 H218"></path>
+<rect class="b" height="58" rx="6" width="116" x="100" y="172"></rect>
+<text class="l" text-anchor="middle" x="158" y="196">GPU / CPU</text>
+<text class="s" text-anchor="middle" x="158" y="214">sub-1 V rails</text>
+<rect class="b" height="120" rx="6" style="fill:#161b22" width="800" x="20" y="270"></rect>
+<text class="l" x="36" y="298">Modeled gas-to-chip (illustrative chain)</text>
+<text class="s" x="36" y="322">CCGT 62% × grid hops × 800 V chain ≈ ~51% wall-to-core (order-of-magnitude; depends on distance and exact hop stack).</text>
+<text class="s" x="36" y="346">Typical hops after generation: step-up 99.5% · tx ~98.5%/100 km class · step-down 99.5% · SST/rectifier ~97% · bus ~99% · LLC ~97.5% · VRM ~90%.</text>
+<text class="s" x="36" y="370">Jefferies: US data-center SST market could grow from tens of millions toward ~$4.3B by 2030. SST commercial scale ~2027–2029.</text>
+</svg>
+<figcaption>Figure 2 — Offsite <abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr> + grid + <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>/rectifier path with annotated hop efficiencies. Wall-to-core ~51% is a modeled order-of-magnitude for a 62% <abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr> plus the 800 V chain.</figcaption>
+</figure>
+</section>
+<section aria-labelledby="h-onsite" id="onsite">
+<h2 id="h-onsite">3. Onsite generation subtypes</h2>
+<p>Onsite options trade fuel logistics and stack/turbine capital for shorter interconnect queues and, for some fuel cells, native <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> output that aligns with 800 V hall architectures after boost conversion.</p>
+<h3>3.1 Solid Oxide Fuel Cell (<abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr>)</h3>
+<p><strong>Solid Oxide Fuel Cell (<abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr>)</strong> systems reform pipeline natural gas on-site and produce <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> electricity. Operating temperature is high (~800 °C for stationary stacks such as Bloom’s class). Electrical efficiency is often cited in the <strong>~55–65% <abbr data-expand="Lower Heating Value" title="Lower Heating Value">LHV</abbr></strong> band; Combined Heat and Power (<abbr data-expand="Combined Heat and Power" title="Combined Heat and Power">CHP</abbr>) recovery can raise total useful energy further when heat sinks exist.</p>
+<ul>
+<li><strong>Bloom Energy (NYSE: BE):</strong> roughly ~55–65% electrical <abbr data-expand="Lower Heating Value" title="Lower Heating Value">LHV</abbr>; ~75–85% share of stationary <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr>; stack fade ~2.4 percentage points/year; stack swap cadence ~5.5 years. Electrolyte uses scandium-stabilized zirconia (<abbr data-expand="Scandium-Stabilized Zirconia" title="Scandium-Stabilized Zirconia">ScSZ</abbr>). Scandium oxide supply (~40–80 t/yr global) is a Bloom-specific scarce-material concern; Ceres and most others avoid <abbr data-expand="Scandium-Stabilized Zirconia" title="Scandium-Stabilized Zirconia">ScSZ</abbr>.</li>
+<li><strong>Ceres Power (LSE: CWR) SteelCell:</strong> steel substrate; gadolinium-doped ceria plus thin yttria-stabilized zirconia (<abbr data-expand="Yttria-Stabilized Zirconia" title="Yttria-Stabilized Zirconia">YSZ</abbr>); 450–630 °C; claims ~65%. Licenses to Doosan Fuel Cell (KRX: 336260; <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr>-NG claims ~64%, 50 MW/yr plant), Delta, Weichai.</li>
+<li><strong>Mitsubishi Heavy Industries (TSE: 7011) MEGAMIE:</strong> <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> ~210 kW at ~53%—also a large-frame gas-turbine and genset supplier (see hybrid / turbines).</li>
+</ul>
+<div class="callout warn">
+<div class="label">Degradation caveat</div>
+<p style="margin:0"><abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> claims vary by product and duty cycle. Year-5 degraded <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> at ~45% electrical can drop a modeled gas-to-chip path to ~37%, while a grid/<abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr> path stays comparatively flat. At 57% <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> uses roughly ~15% more gas per core kWh versus a matched higher-efficiency case.</p>
+</div>
+<figure class="diagram" id="diagram-sofc">
+<svg aria-labelledby="d3-title d3-desc" role="img" viewbox="0 0 980 360" xmlns="http://www.w3.org/2000/svg">
+<title id="d3-title">Onsite SOFC path with hop losses</title>
+<desc id="d3-desc">Pipeline natural gas to SOFC DC, boost converter, 800 V bus, LLC, VRMs to GPU.</desc>
+<defs>
+<marker id="a3" markerheight="6" markerwidth="6" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10">
+<path d="M0,0 L10,5 L0,10 z" fill="#7ec8a3"></path>
+</marker>
+<style>
+          .b{fill:#1c222b;stroke:#2a3340;stroke-width:1.2}
+          .bb{fill:#1a2a24;stroke:#3d7a5c}
+          .l{fill:#e8eef6;font-family:Segoe UI,system-ui,sans-serif;font-size:11.5px;font-weight:600}
+          .s{fill:#9aa7b8;font-family:Segoe UI,system-ui,sans-serif;font-size:10px}
+          .e{fill:#d4a35b;font-family:Cascadia Code,Consolas,monospace;font-size:10px}
+          .t{fill:#7ec8a3;font-family:Segoe UI,system-ui,sans-serif;font-size:13px;font-weight:700}
+          .ln{stroke:#7ec8a3;stroke-width:1.5;fill:none;marker-end:url(#a3)}
+        </style>
+</defs>
+<text class="t" x="20" y="28">Diagram (3) — Onsite SOFC path</text>
+<rect class="bb" height="70" rx="6" width="130" x="20" y="55"></rect>
+<text class="l" text-anchor="middle" x="85" y="78">Pipeline NG</text>
+<text class="s" text-anchor="middle" x="85" y="96">site delivery</text>
+<text class="e" text-anchor="middle" x="85" y="112">pipe ≈ 98.5%</text>
+<path class="ln" d="M150,90 H190"></path>
+<rect class="bb" height="84" rx="6" width="150" x="192" y="48"></rect>
+<text class="l" text-anchor="middle" x="267" y="74">SOFC stack</text>
+<text class="s" text-anchor="middle" x="267" y="92">reform → DC</text>
+<text class="e" text-anchor="middle" x="267" y="108">η ≈ 55–65% LHV</text>
+<text class="s" text-anchor="middle" x="267" y="122">Bloom ~800 °C class</text>
+<path class="ln" d="M342,90 H382"></path>
+<text class="e" text-anchor="middle" x="362" y="82">97%</text>
+<rect class="bb" height="70" rx="6" width="120" x="384" y="55"></rect>
+<text class="l" text-anchor="middle" x="444" y="82">DC boost</text>
+<text class="s" text-anchor="middle" x="444" y="100">to ~800 V bus</text>
+<path class="ln" d="M504,90 H544"></path>
+<text class="e" text-anchor="middle" x="524" y="82">99%</text>
+<rect class="b" height="70" rx="6" width="110" x="546" y="55"></rect>
+<text class="l" text-anchor="middle" x="601" y="82">800 V bus</text>
+<text class="s" text-anchor="middle" x="601" y="100">busway</text>
+<path class="ln" d="M656,90 H696"></path>
+<rect class="b" height="42" rx="6" width="120" x="698" y="48"></rect>
+<text class="l" text-anchor="middle" x="758" y="74">800→12 LLC</text>
+<text class="e" style="font-size:9.5px" text-anchor="middle" x="758" y="98">97.5%</text>
+<path class="ln" d="M758,90 V120"></path>
+<rect class="b" height="42" rx="6" width="120" x="698" y="122"></rect>
+<text class="l" text-anchor="middle" x="758" y="148">VRMs ~90%</text>
+<path class="ln" d="M698,143 H640"></path>
+<rect class="b" height="42" rx="6" width="118" x="520" y="122"></rect>
+<text class="l" text-anchor="middle" x="579" y="148">GPU / CPU</text>
+<rect class="b" height="120" rx="6" style="fill:#161b22" width="860" x="20" y="210"></rect>
+<text class="l" x="36" y="238">Modeled gas-to-chip</text>
+<text class="s" x="36" y="262">Pipeline 98.5% × SOFC 57% × boost 97% × same DC chain ≈ ~47% wall-to-core. SOFC at 65% can approximately match the grid/CCGT path.</text>
+<text class="s" x="36" y="286">Year-5 degraded SOFC ~45% → path ≈ ~37%; grid path stays flat. SOFC at 57% uses ~15% more gas per core kWh.</text>
+<text class="s" x="36" y="310">ScSZ (Bloom): scandium oxide ~40–80 t/yr global. Ceres / most others use YSZ or GDC+YSZ without scandium.</text>
+</svg>
+<figcaption>Figure 3 — Onsite <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> path. Native <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> plus boost into the same 800 V hall stack used by <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>-fed sites.</figcaption>
+</figure>
+<h3>3.2 Molten Carbonate Fuel Cell (<abbr data-expand="Molten Carbonate Fuel Cell" title="Molten Carbonate Fuel Cell">MCFC</abbr>)</h3>
+<p><strong>Molten Carbonate Fuel Cell (<abbr data-expand="Molten Carbonate Fuel Cell" title="Molten Carbonate Fuel Cell">MCFC</abbr>)</strong> systems (notable public name: FuelCell Energy, NASDAQ: FCEL) typically deliver ~50% electrical / ~85% Combined Heat and Power (<abbr data-expand="Combined Heat and Power" title="Combined Heat and Power">CHP</abbr>). Construction leans on nickel and steel. They can consume carbon dioxide (CO<sub>2</sub>) as part of the cathode chemistry. Siemens has a data-center partnership context (details and commercial status may evolve—treat as partnership, not guaranteed fleet deployment).</p>
+<h3>3.3 Phosphoric Acid Fuel Cell (<abbr data-expand="Phosphoric Acid Fuel Cell" title="Phosphoric Acid Fuel Cell">PAFC</abbr>)</h3>
+<p><strong>Phosphoric Acid Fuel Cell (<abbr data-expand="Phosphoric Acid Fuel Cell" title="Phosphoric Acid Fuel Cell">PAFC</abbr>):</strong> HyAxiom PureCell (private; possible Nasdaq listing later—uncertain) ~43–44% electrical / ~90% <abbr data-expand="Combined Heat and Power" title="Combined Heat and Power">CHP</abbr>. Mature stationary technology; lower electrical efficiency than leading <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> claims, strong when heat is valuable.</p>
+<h3>3.4 Proton Exchange Membrane (<abbr data-expand="Proton Exchange Membrane" title="Proton Exchange Membrane">PEM</abbr>)—and why <abbr data-expand="Proton Exchange Membrane" title="Proton Exchange Membrane">PEM</abbr> / H<sub>2</sub> round-trip is usually wrong for baseload</h3>
+<p><strong>Proton Exchange Membrane (<abbr data-expand="Proton Exchange Membrane" title="Proton Exchange Membrane">PEM</abbr>)</strong> fuel cells (Plug Power NASDAQ: PLUG; Ballard Power NASDAQ: BLDP) use platinum and polymer membranes and require pure hydrogen. They fit vehicles, forklifts, and some backup niches—not multi-year AI baseload. <strong>Alkaline Fuel Cells (<abbr data-expand="Alkaline Fuel Cell" title="Alkaline Fuel Cell">AFC</abbr>)</strong> are cheaper but CO<sub>2</sub>-poisoned in ambient air without scrubbing.</p>
+<p>Electrolyzing on-site (or grid) power to make hydrogen to make power again destroys most of the energy (see §4). Do not use <abbr data-expand="Proton Exchange Membrane" title="Proton Exchange Membrane">PEM</abbr> + electrolyzed H<sub>2</sub> as a default AI hall baseload architecture.</p>
+<h3>3.5 Gas turbines, gensets, and hybrid</h3>
+<p>Large-frame turbines and fast-start gensets remain the workhorse for firm capacity and bridging interconnect delays:</p>
+<ul>
+<li><strong>Mitsubishi Heavy (TSE: 7011):</strong> M501 JAC large-frame gas turbines (capacity expansion plans cited through FY2030; $618M+ Japan/US investment context; ~74 unit backlog—figures as of baseline notes); MGS diesel gensets 0.5–3.4 MW with ~10 s start; 10 MW-class chillers; Turboden Organic Rankine Cycle (<abbr data-expand="Organic Rankine Cycle" title="Organic Rankine Cycle">ORC</abbr>) waste-heat recovery; DIAVAULT edge halls.</li>
+<li><strong>Hybrid:</strong> turbines/gensets for ramp and redundancy + <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> (or other fuel cells) for steadier, higher-efficiency baseload <abbr data-expand="Direct Current" title="Direct Current">DC</abbr>. Hybrids hedge <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> fade and turbine interconnect timing.</li>
+</ul>
+<figure class="diagram" id="diagram-hybrid">
+<svg aria-labelledby="d5-title d5-desc" role="img" viewbox="0 0 980 340" xmlns="http://www.w3.org/2000/svg">
+<title id="d5-title">Hybrid turbine or genset plus SOFC path</title>
+<desc id="d5-desc">Parallel onsite SOFC and gas turbine or genset feeding AC or DC conversion into shared 800 V bus and GPU chain.</desc>
+<defs>
+<marker id="a5" markerheight="6" markerwidth="6" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10">
+<path d="M0,0 L10,5 L0,10 z" fill="#a78bdb"></path>
+</marker>
+<style>
+          .b{fill:#1c222b;stroke:#2a3340;stroke-width:1.2}
+          .bp{fill:#2a2430;stroke:#6b5a8f}
+          .bb{fill:#1a2a24;stroke:#3d7a5c}
+          .ba{fill:#1a2836;stroke:#3d6a8f}
+          .l{fill:#e8eef6;font-family:Segoe UI,system-ui,sans-serif;font-size:11.5px;font-weight:600}
+          .s{fill:#9aa7b8;font-family:Segoe UI,system-ui,sans-serif;font-size:10px}
+          .e{fill:#d4a35b;font-family:Cascadia Code,Consolas,monospace;font-size:10px}
+          .t{fill:#a78bdb;font-family:Segoe UI,system-ui,sans-serif;font-size:13px;font-weight:700}
+          .ln{stroke:#a78bdb;stroke-width:1.5;fill:none;marker-end:url(#a5)}
+        </style>
+</defs>
+<text class="t" x="20" y="28">Diagram (5) — Hybrid turbine / genset + SOFC</text>
+<rect class="bb" height="64" rx="6" width="140" x="20" y="55"></rect>
+<text class="l" text-anchor="middle" x="90" y="80">SOFC baseload</text>
+<text class="e" text-anchor="middle" x="90" y="98">DC · 55–65% LHV</text>
+<rect class="ba" height="64" rx="6" width="140" x="20" y="150"></rect>
+<text class="l" text-anchor="middle" x="90" y="175">Turbine / genset</text>
+<text class="s" text-anchor="middle" x="90" y="193">ramp · backup · ~10 s</text>
+<path class="ln" d="M160,87 H210"></path>
+<path class="ln" d="M160,182 H210"></path>
+<rect class="bp" height="64" rx="6" width="150" x="212" y="55"></rect>
+<text class="l" text-anchor="middle" x="287" y="80">Boost / rectifier</text>
+<text class="s" text-anchor="middle" x="287" y="98">align to 800 V DC</text>
+<rect class="bp" height="64" rx="6" width="150" x="212" y="150"></rect>
+<text class="l" text-anchor="middle" x="287" y="175">AC→DC or SST</text>
+<text class="s" text-anchor="middle" x="287" y="193">genset / turbine AC</text>
+<path class="ln" d="M362,87 H400"></path>
+<path class="ln" d="M362,182 H400"></path>
+<path class="ln" d="M400,87 V182"></path>
+<path class="ln" d="M400,134.5 H440"></path>
+<rect class="bp" height="70" rx="6" width="140" x="442" y="100"></rect>
+<text class="l" text-anchor="middle" x="512" y="128">Shared 800 V bus</text>
+<text class="s" text-anchor="middle" x="512" y="146">+ controls / UPS role</text>
+<text class="e" text-anchor="middle" x="512" y="162">bus ≈ 99%</text>
+<path class="ln" d="M582,135 H630"></path>
+<rect class="b" height="70" rx="6" width="130" x="632" y="100"></rect>
+<text class="l" text-anchor="middle" x="697" y="128">LLC → VRMs</text>
+<text class="e" text-anchor="middle" x="697" y="146">97.5% · 90%</text>
+<text class="s" text-anchor="middle" x="697" y="162">→ GPU / CPU</text>
+<rect class="b" height="70" rx="6" style="fill:#161b22" width="860" x="20" y="250"></rect>
+<text class="s" x="36" y="278">Hybrid rationale: SOFC for steadier efficiency and DC alignment; turbines/gensets for fast start, peak, and fade/maintenance cover. Exact split is site-specific—no single “correct” MW mix in baseline.</text>
+<text class="s" x="36" y="300">Mitsubishi Heavy spans both SOFC (MEGAMIE) and large-frame turbines / MGS gensets—illustrative of multi-hop suppliers, not an endorsement.</text>
+</svg>
+<figcaption>Figure 5 — Hybrid onsite path: <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> baseload in parallel with turbine/genset capacity into a shared 800 V architecture.</figcaption>
+</figure>
+</section>
+<section aria-labelledby="h-h2" id="hydrogen">
+<h2 id="h-h2">4. Hydrogen path math — when H<sub>2</sub> makes sense (and when it does not)</h2>
+<p><strong>Electrolysis</strong> typically consumes ~50–55 kWh of electricity per kilogram of hydrogen, while the kilogram itself stores ~33 kWh of chemical energy (lower heating value convention). Passing that H<sub>2</sub> through a fuel cell at 40–60% electrical efficiency yields a <strong>round-trip often in the 25–35% band</strong>.</p>
+<div class="callout danger">
+<div class="label">Do not do this for AI baseload</div>
+<p style="margin:0">Do <strong>not</strong> electrolyze on-site (or grid) power to make hydrogen to make power again for continuous AI halls. You burn most of the energy twice. Use H<sub>2</sub> only for stranded renewables, seasonal storage, ships/planes/trucks, or industry feedstock—not as a default wall-to-core path.</p>
+</div>
+<ul>
+<li>Global hydrogen is still ~61% <strong>Steam Methane Reforming (<abbr data-expand="Steam Methane Reforming" title="Steam Methane Reforming">SMR</abbr>)</strong> “grey” gas; low-emissions hydrogen remains under ~1% of supply (baseline share).</li>
+<li>Existing natural-gas pipes are <strong>not</strong> 100% H<sub>2</sub>-ready (embrittlement). Dedicated H<sub>2</sub> lines use lower-strength X42/X52 steel, lower pressure, ASME B31.12 practice, epoxy/polyurethane liners (not ceramics).</li>
+<li>Transmission leak class ~0.04–0.24% per 1 000 km. Compression energy ~8% per 1 000 km class. Compare: <abbr data-expand="High-Voltage Alternating Current" title="High-Voltage Alternating Current">HVAC</abbr> ~5–8%/1 000 km; <abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr> ~3.5%/1 000 km + ~1%/converter. Buried <abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr> can cost ~10× overhead; pipe often beats overhead line on <em>permitting</em>, not on electron physics.</li>
+</ul>
+<figure class="diagram" id="diagram-electrolysis-pem">
+<svg aria-labelledby="d4-title d4-desc" role="img" viewbox="0 0 980 380" xmlns="http://www.w3.org/2000/svg">
+<title id="d4-title">Electrolysis plus PEM loss trap</title>
+<desc id="d4-desc">Electricity to electrolyzer to hydrogen storage to PEM fuel cell back to electricity showing 25 to 35 percent round trip.</desc>
+<defs>
+<marker id="a4" markerheight="6" markerwidth="6" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10">
+<path d="M0,0 L10,5 L0,10 z" fill="#d47a7a"></path>
+</marker>
+<style>
+          .b{fill:#1c222b;stroke:#2a3340;stroke-width:1.2}
+          .bd{fill:#2a1c1c;stroke:#8f4a4a}
+          .l{fill:#e8eef6;font-family:Segoe UI,system-ui,sans-serif;font-size:11.5px;font-weight:600}
+          .s{fill:#9aa7b8;font-family:Segoe UI,system-ui,sans-serif;font-size:10px}
+          .e{fill:#d47a7a;font-family:Cascadia Code,Consolas,monospace;font-size:10px}
+          .t{fill:#d47a7a;font-family:Segoe UI,system-ui,sans-serif;font-size:13px;font-weight:700}
+          .ln{stroke:#d47a7a;stroke-width:1.5;fill:none;marker-end:url(#a4)}
+          .ok{fill:#7ec8a3}
+        </style>
+</defs>
+<text class="t" x="20" y="28">Diagram (4) — Electrolysis + PEM loss trap (not AI baseload)</text>
+<rect class="bd" height="70" rx="6" width="120" x="20" y="55"></rect>
+<text class="l" text-anchor="middle" x="80" y="82">Grid / RE power</text>
+<text class="s" text-anchor="middle" x="80" y="100">100% electric in</text>
+<path class="ln" d="M140,90 H180"></path>
+<rect class="bd" height="84" rx="6" width="150" x="182" y="48"></rect>
+<text class="l" text-anchor="middle" x="257" y="74">Electrolyzer</text>
+<text class="s" text-anchor="middle" x="257" y="92">~50–55 kWh / kg H₂</text>
+<text class="e" text-anchor="middle" x="257" y="110">vs ~33 kWh in kg</text>
+<path class="ln" d="M332,90 H372"></path>
+<rect class="bd" height="70" rx="6" width="120" x="374" y="55"></rect>
+<text class="l" text-anchor="middle" x="434" y="78">H₂ storage</text>
+<text class="s" text-anchor="middle" x="434" y="96">+ compress / leak</text>
+<text class="e" text-anchor="middle" x="434" y="112">+~8%/1000 km</text>
+<path class="ln" d="M494,90 H534"></path>
+<rect class="bd" height="84" rx="6" width="140" x="536" y="48"></rect>
+<text class="l" text-anchor="middle" x="606" y="74">PEM fuel cell</text>
+<text class="s" text-anchor="middle" x="606" y="92">Pt + polymer</text>
+<text class="e" text-anchor="middle" x="606" y="110">η ≈ 40–60%</text>
+<path class="ln" d="M676,90 H716"></path>
+<rect class="bd" height="70" rx="6" width="120" x="718" y="55"></rect>
+<text class="l" text-anchor="middle" x="778" y="82">Electric out</text>
+<text class="e" text-anchor="middle" x="778" y="100">≈ 25–35% RT</text>
+<rect class="b" height="180" rx="6" style="fill:#161b22" width="860" x="20" y="170"></rect>
+<text class="l" x="36" y="200">When H₂ can make sense</text>
+<text class="s" x="36" y="224">• Stranded renewables with no wire • Seasonal shifting • Ships / planes / trucks • Industry feedstock (ammonia, refining, steel)</text>
+<text class="l" x="36" y="252">When H₂ is usually wrong for AI halls</text>
+<text class="s" x="36" y="276">• Electrolyze → H₂ → PEM (or any FC) for continuous baseload • Competing with wire or pipeline NG → SOFC/CCGT on physics</text>
+<text class="s" x="36" y="304">Grey H₂ via SMR ~61% of global supply; low-emissions H₂ under ~1%. Pipes ≠ 100% H₂-ready (embrittlement). Dedicated lines: X42/X52, ASME B31.12, epoxy/PU liners.</text>
+<text class="s" x="36" y="328">Leak ~0.04–0.24%/1000 km. Electrons on HVDC still beat molecules on physics for most point-to-point power moves.</text>
+</svg>
+<figcaption>Figure 4 — Electrolysis + <abbr data-expand="Proton Exchange Membrane" title="Proton Exchange Membrane">PEM</abbr> round-trip loss trap. Round-trip often 25–35%; appropriate for niche uses, not AI baseload.</figcaption>
+</figure>
+</section>
+<section aria-labelledby="h-conv" id="conversion">
+<h2 id="h-conv">5. Site-boundary transmission and <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>→<abbr data-expand="Direct Current" title="Direct Current">DC</abbr> conversion (<abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> vs legacy)</h2>
+<h3>5.1 Legacy <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr> chain</h3>
+<p>Classic halls follow: grid <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr> → facility transformer → <strong>Uninterruptible Power Supply (<abbr data-expand="Uninterruptible Power Supply" title="Uninterruptible Power Supply">UPS</abbr>)</strong> → <strong>Power Distribution Unit (<abbr data-expand="Power Distribution Unit" title="Power Distribution Unit">PDU</abbr>)</strong> (the breaker cabinet between <abbr data-expand="Uninterruptible Power Supply" title="Uninterruptible Power Supply">UPS</abbr> and racks) → per-server <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>–<abbr data-expand="Direct Current" title="Direct Current">DC</abbr> <strong>Power Supply Unit (<abbr data-expand="Power Supply Unit" title="Power Supply Unit">PSU</abbr>)</strong> → 12 V → multiphase <strong>Voltage Regulators (<abbr data-expand="Voltage Regulators" title="Voltage Regulators">VRs</abbr>)</strong> / Voltage Regulator Modules (<abbr data-expand="Voltage Regulator Modules" title="Voltage Regulator Modules">VRMs</abbr>) to sub-1 V.</p>
+<figure class="diagram" id="diagram-legacy-ac">
+<svg aria-labelledby="d1-title d1-desc" role="img" viewbox="0 0 980 300" xmlns="http://www.w3.org/2000/svg">
+<title id="d1-title">Legacy AC chain with hop losses</title>
+<desc id="d1-desc">Grid AC to facility transformer, UPS, PDU, PSU, 12 V, VRs to GPU.</desc>
+<defs>
+<marker id="a1" markerheight="6" markerwidth="6" orient="auto-start-reverse" refx="9" refy="5" viewbox="0 0 10 10">
+<path d="M0,0 L10,5 L0,10 z" fill="#5b9fd4"></path>
+</marker>
+<style>
+          .b{fill:#1c222b;stroke:#2a3340;stroke-width:1.2}
+          .ba{fill:#1a2836;stroke:#3d6a8f}
+          .l{fill:#e8eef6;font-family:Segoe UI,system-ui,sans-serif;font-size:11px;font-weight:600}
+          .s{fill:#9aa7b8;font-family:Segoe UI,system-ui,sans-serif;font-size:9.5px}
+          .e{fill:#d4a35b;font-family:Cascadia Code,Consolas,monospace;font-size:9.5px}
+          .t{fill:#5b9fd4;font-family:Segoe UI,system-ui,sans-serif;font-size:13px;font-weight:700}
+          .ln{stroke:#5b9fd4;stroke-width:1.5;fill:none;marker-end:url(#a1)}
+        </style>
+</defs>
+<text class="t" x="20" y="28">Diagram (1) — Legacy AC chain</text>
+<rect class="ba" height="72" rx="6" width="100" x="16" y="60"></rect>
+<text class="l" text-anchor="middle" x="66" y="88">Grid AC</text>
+<text class="s" text-anchor="middle" x="66" y="106">utility feed</text>
+<path class="ln" d="M116,96 H148"></path>
+<rect class="ba" height="72" rx="6" width="110" x="150" y="60"></rect>
+<text class="l" text-anchor="middle" x="205" y="82">Facility XFMR</text>
+<text class="s" text-anchor="middle" x="205" y="100">50/60 Hz Cu-Fe</text>
+<text class="e" text-anchor="middle" x="205" y="116">~99.5%</text>
+<path class="ln" d="M260,96 H292"></path>
+<rect class="ba" height="72" rx="6" width="100" x="294" y="60"></rect>
+<text class="l" text-anchor="middle" x="344" y="82">UPS</text>
+<text class="s" text-anchor="middle" x="344" y="100">AC–DC–AC</text>
+<text class="e" text-anchor="middle" x="344" y="116">multi-hop loss</text>
+<path class="ln" d="M394,96 H426"></path>
+<rect class="ba" height="72" rx="6" width="100" x="428" y="60"></rect>
+<text class="l" text-anchor="middle" x="478" y="82">PDU</text>
+<text class="s" text-anchor="middle" x="478" y="100">breaker cabinet</text>
+<text class="s" text-anchor="middle" x="478" y="116">UPS → racks</text>
+<path class="ln" d="M528,96 H560"></path>
+<rect class="ba" height="72" rx="6" width="110" x="562" y="60"></rect>
+<text class="l" text-anchor="middle" x="617" y="82">Per-server PSU</text>
+<text class="s" text-anchor="middle" x="617" y="100">AC → 12 V DC</text>
+<text class="e" text-anchor="middle" x="617" y="116">conversion loss</text>
+<path class="ln" d="M672,96 H704"></path>
+<rect class="ba" height="72" rx="6" width="90" x="706" y="60"></rect>
+<text class="l" text-anchor="middle" x="751" y="88">12 V bus</text>
+<text class="s" text-anchor="middle" x="751" y="106">board / rack</text>
+<path class="ln" d="M796,96 H828"></path>
+<rect class="ba" height="72" rx="6" width="120" x="830" y="60"></rect>
+<text class="l" text-anchor="middle" x="890" y="82">Multiphase VRs</text>
+<text class="s" text-anchor="middle" x="890" y="100">→ sub-1 V</text>
+<text class="e" text-anchor="middle" x="890" y="116">VRM ~90%</text>
+<rect class="b" height="100" rx="6" style="fill:#161b22" width="934" x="16" y="170"></rect>
+<text class="l" x="32" y="198">Why AI halls are leaving this stack</text>
+<text class="s" x="32" y="222">Many AC↔DC hops add heat, parts, and roughly ~5% extra conversion loss versus a collapsed MV AC → ~800 V DC → 12 V → VR path (Nvidia Rubin / 800 V-class designs).</text>
+<text class="s" x="32" y="246">Headline transformer shortages refer to legacy low-frequency copper-steel units (lead times often cited 2–5 years)—not SSTs.</text>
+</svg>
+<figcaption>Figure 1 — Legacy <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr> chain: grid → facility transformer → <abbr data-expand="Uninterruptible Power Supply" title="Uninterruptible Power Supply">UPS</abbr> → <abbr data-expand="Power Distribution Unit" title="Power Distribution Unit">PDU</abbr> → <abbr data-expand="Power Supply Unit" title="Power Supply Unit">PSU</abbr> → 12 V → <abbr data-expand="Voltage Regulators" title="Voltage Regulators">VRs</abbr>.</figcaption>
+</figure>
+<h3>5.2 New AI path (~800 V) and what an <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> is</h3>
+<p>New designs (Nvidia Rubin / 800 V class): <strong>medium-voltage <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr></strong> → perimeter industrial rectifier or <strong>Solid-State Transformer (<abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>)</strong> to ~800 V <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> (or ±400 V bipolar) → <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> busway → rack/blade 800 V-to-12 V <abbr data-expand="Resonant converter topology (inductor-inductor-capacitor)" title="Resonant converter topology (inductor-inductor-capacitor)">LLC</abbr> converter (~64:1) → <abbr data-expand="Voltage Regulators" title="Voltage Regulators">VRs</abbr>.</p>
+<p>An <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> is <strong>not</strong> a 50/60 Hz copper-steel <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>–<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr> transformer. It uses <strong>Silicon Carbide (<abbr data-expand="Silicon Carbide" title="Silicon Carbide">SiC</abbr>)</strong> switches plus a small high-frequency transformer. Commercial scale for data-center <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> is roughly <strong>~2027–2029</strong>. Jefferies has estimated the US data-center <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> market could grow from tens of millions toward ~$4.3 B by 2030.</p>
+<p>Typical hop efficiencies after the site boundary: <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>/rectifier ~97%, 800 V bus ~99%, 800-to-12 V ~97.5%, <abbr data-expand="Voltage Regulator Modules" title="Voltage Regulator Modules">VRMs</abbr> ~90%.</p>
+</section>
+<section aria-labelledby="h-inhall" id="in-hall">
+<h2 id="h-inhall">6. In-hall <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> distribution to <abbr data-expand="Graphics Processing Unit" title="Graphics Processing Unit">GPU</abbr> / <abbr data-expand="Central Processing Unit" title="Central Processing Unit">CPU</abbr> voltage regulators</h2>
+<p>Once power is on an ~800 V (or ±400 V) <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> busway, distribution looks more like industrial <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> than classic branch-circuit <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>:</p>
+<ol>
+<li><strong><abbr data-expand="Direct Current" title="Direct Current">DC</abbr> busway / connectors</strong> — low-loss distribution within the hall (bus ~99% class). Connector and busway suppliers include Amphenol and peers.</li>
+<li><strong>Rack or blade 800→12 V <abbr data-expand="Resonant converter topology (inductor-inductor-capacitor)" title="Resonant converter topology (inductor-inductor-capacitor)">LLC</abbr></strong> — resonant conversion at ~64:1 ratio, ~97.5% class efficiency.</li>
+<li><strong>Multiphase <abbr data-expand="Voltage Regulator Modules" title="Voltage Regulator Modules">VRMs</abbr></strong> on the board or module — take 12 V (or intermediate rails) to core voltages below 1 V at ~90% class; heat density here is a first-order cooling problem.</li>
+</ol>
+<p>Control and power silicon for these stages includes Texas Instruments, STMicroelectronics, Infineon, and Efficient Power Conversion (EPC) where Gallium Nitride (<abbr data-expand="Gallium Nitride" title="Gallium Nitride">GaN</abbr>) appears in some stages. Collapsing the legacy <abbr data-expand="Uninterruptible Power Supply" title="Uninterruptible Power Supply">UPS</abbr>/<abbr data-expand="Power Distribution Unit" title="Power Distribution Unit">PDU</abbr>/<abbr data-expand="Power Supply Unit" title="Power Supply Unit">PSU</abbr> cascade removes redundant conversion and transfers more of the thermal budget to useful compute.</p>
+</section>
+<section aria-labelledby="h-bottle" id="bottlenecks">
+<h2 id="h-bottle">7. Bottlenecks</h2>
+<div class="grid-2">
+<div class="card">
+<h4>Transformers (legacy LF)</h4>
+<p class="muted">Low-frequency copper-steel facility and grid transformers: lead times often cited <strong>2–5 years</strong>. This is the headline shortage—not <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> high-frequency magnetics.</p>
+</div>
+<div class="card">
+<h4><abbr data-expand="Silicon Carbide" title="Silicon Carbide">SiC</abbr> wafers / <abbr data-expand="Physical Vapor Transport" title="Physical Vapor Transport">PVT</abbr> / epitaxy</h4>
+<p class="muted">Silicon Carbide device supply hinges on <strong>Physical Vapor Transport (<abbr data-expand="Physical Vapor Transport" title="Physical Vapor Transport">PVT</abbr>)</strong> crystal-growth furnaces and epitaxy reactors. Aehr (AEHR) makes wafer-level burn-in testers that <em>qualify</em> <abbr data-expand="Silicon Carbide" title="Silicon Carbide">SiC</abbr> parts—it does not grow crystals.</p>
+</div>
+<div class="card">
+<h4>Scandium (Bloom <abbr data-expand="Scandium-Stabilized Zirconia" title="Scandium-Stabilized Zirconia">ScSZ</abbr>)</h4>
+<p class="muted">Scandium oxide ~40–80 t/yr global; Bloom’s <abbr data-expand="Scandium-Stabilized Zirconia" title="Scandium-Stabilized Zirconia">ScSZ</abbr> path is comparatively exposed. Ceres and most other <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> designs avoid scandium.</p>
+</div>
+<div class="card">
+<h4>Interconnects &amp; time-to-power</h4>
+<p class="muted">Utility interconnection queues and switchgear can dominate schedule. Fuel cells often win months; a month early on 1 GW AI can be ~$1–2 B compute context.</p>
+</div>
+</div>
+<p>Additional friction: <abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr> converter-station cost/lead time for long offsite links; H<sub>2</sub> embrittlement if someone forces a molecule path; platinum group metals for <abbr data-expand="Proton Exchange Membrane" title="Proton Exchange Membrane">PEM</abbr> (niche for AI baseload); skilled labor for <abbr data-expand="Medium Voltage" title="Medium Voltage">MV</abbr> <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> commissioning as products scale ~2027–2029.</p>
+</section>
+<section aria-labelledby="h-co" id="companies">
+<h2 id="h-co">8. Company map by hop (public tickers marked)</h2>
+<p>Numbered hops from fuel/electrons to silicon. Shipping vs planned called out where the baseline distinguishes them. <span class="private">Private</span> names have no public ticker in this briefing.</p>
+<ol class="hop-list">
+<li>
+<h4>Utility / large-frame generation (offsite or campus-scale)</h4>
+<p><abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr> and large gas turbines: <strong>Mitsubishi Heavy Industries</strong> <span class="ticker">TSE: 7011</span> (M501 JAC; backlog/expansion notes in baseline). Facility switchgear and transformers still: <strong>GE Vernova</strong> <span class="ticker">GEV</span>, <strong>Eaton</strong> <span class="ticker">ETN</span>, <strong>Siemens Energy</strong> <span class="ticker">ENR.DE / SMNEY</span>, <strong>Hitachi Energy</strong> via <strong>Hitachi</strong> <span class="ticker">6501.T</span>, <strong>Schneider Electric</strong> <span class="ticker">SU.PA / SBGSY</span>, Hubbell, Powell.</p>
+</li>
+<li>
+<h4>Onsite <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr></h4>
+<p><strong>Bloom Energy</strong> <span class="ticker">NYSE: BE</span> (stationary <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> share ~75–85%; <abbr data-expand="Scandium-Stabilized Zirconia" title="Scandium-Stabilized Zirconia">ScSZ</abbr>). <strong>Ceres Power</strong> <span class="ticker">LSE: CWR</span> (SteelCell licenses). Licensees: <strong>Doosan Fuel Cell</strong> <span class="ticker">KRX: 336260</span>, Delta, Weichai. <strong>Mitsubishi Heavy</strong> <span class="ticker">TSE: 7011</span> MEGAMIE ~210 kW ~53%.</p>
+</li>
+<li>
+<h4>Onsite <abbr data-expand="Molten Carbonate Fuel Cell" title="Molten Carbonate Fuel Cell">MCFC</abbr> / <abbr data-expand="Phosphoric Acid Fuel Cell" title="Phosphoric Acid Fuel Cell">PAFC</abbr> / <abbr data-expand="Proton Exchange Membrane" title="Proton Exchange Membrane">PEM</abbr></h4>
+<p><strong>FuelCell Energy</strong> <span class="ticker">NASDAQ: FCEL</span> (<abbr data-expand="Molten Carbonate Fuel Cell" title="Molten Carbonate Fuel Cell">MCFC</abbr>; Siemens data-center partnership). <strong>HyAxiom PureCell</strong> <span class="badge private">private</span> (<abbr data-expand="Phosphoric Acid Fuel Cell" title="Phosphoric Acid Fuel Cell">PAFC</abbr>; possible Nasdaq later—uncertain). <abbr data-expand="Proton Exchange Membrane" title="Proton Exchange Membrane">PEM</abbr>: <strong>Plug Power</strong> <span class="ticker">PLUG</span>, <strong>Ballard</strong> <span class="ticker">BLDP</span>—vehicles/forklifts, not AI baseload.</p>
+</li>
+<li>
+<h4>Gensets, chillers, waste heat, edge halls</h4>
+<p><strong>Mitsubishi Heavy</strong> <span class="ticker">7011</span>: MGS diesel gensets 0.5–3.4 MW (~10 s start), 10 MW-class chillers, Turboden <abbr data-expand="Organic Rankine Cycle" title="Organic Rankine Cycle">ORC</abbr>, DIAVAULT edge halls.</p>
+</li>
+<li>
+<h4>Perimeter <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> / industrial rectifiers (~800 V)</h4>
+<p><strong>ABB</strong> (Infinitus <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>; rail heritage; large patent book—ticker often ABB on SIX/NYSE depending on listing context). <strong>Eaton</strong> <span class="ticker">ETN</span> (MVSST 2.0, IEC-certified medium-voltage <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>; Infineon <abbr data-expand="Silicon Carbide" title="Silicon Carbide">SiC</abbr> deal). <strong>Delta Electronics</strong> <span class="ticker">2308.TW</span> (production <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> in a North China AI data center since Feb 2026). <strong>Siemens Energy</strong> <span class="ticker">ENR.DE / SMNEY</span> (Reinhausen <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> partnership Aug 2026—<span class="badge planned">not fully commercial</span>). <strong>Hitachi Energy</strong> via <span class="ticker">6501.T</span> (investing). <strong>Schneider Electric</strong> <span class="ticker">SU.PA / SBGSY</span>. <strong>Vertiv</strong> <span class="ticker">VRT</span> (rack power, <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> architectures). Startups: <strong>DG Matrix</strong> (Interport ~400 kW, ST <abbr data-expand="Silicon Carbide" title="Silicon Carbide">SiC</abbr>) <span class="badge private">private</span>, <strong>Heron Power</strong> <span class="badge private">private</span>, <strong>Amperesand</strong> <span class="badge private">private</span>.</p>
+</li>
+<li>
+<h4><abbr data-expand="Silicon Carbide" title="Silicon Carbide">SiC</abbr> devices and qualification</h4>
+<p><strong>Infineon</strong> <span class="ticker">IFX / IFNNY</span>, <strong>STMicroelectronics</strong> <span class="ticker">STM</span>, <strong>Wolfspeed</strong> <span class="ticker">WOLF</span>, Navitas. <strong>Aehr Test Systems</strong> <span class="ticker">AEHR</span>—wafer-level burn-in testers; does <em>not</em> grow <abbr data-expand="Silicon Carbide" title="Silicon Carbide">SiC</abbr> crystals. Wafer bottlenecks: <abbr data-expand="Physical Vapor Transport" title="Physical Vapor Transport">PVT</abbr> furnaces and epitaxy reactors.</p>
+</li>
+<li>
+<h4>Rack / blade converters and <abbr data-expand="Voltage Regulator" title="Voltage Regulator">VR</abbr> control silicon</h4>
+<p>Texas Instruments, ST, Infineon, <strong>EPC</strong> (<abbr data-expand="Gallium Nitride" title="Gallium Nitride">GaN</abbr> in some stages). Connectors/busway: Amphenol and similar. Rack power architectures: Vertiv and peers above.</p>
+</li>
+</ol>
+<h3>Companies — compact table</h3>
+<table>
+<thead>
+<tr>
+<th>Hop / role</th>
+<th>Company</th>
+<th>Ticker</th>
+<th>Status note (baseline)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> stationary</td>
+<td>Bloom Energy</td>
+<td class="ticker">NYSE: BE</td>
+<td>~75–85% stationary <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> share; <abbr data-expand="Scandium-Stabilized Zirconia" title="Scandium-Stabilized Zirconia">ScSZ</abbr>; fade ~2.4 pts/yr</td>
+</tr>
+<tr>
+<td><abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> technology license</td>
+<td>Ceres Power</td>
+<td class="ticker">LSE: CWR</td>
+<td>SteelCell; licenses to Doosan, Delta, Weichai</td>
+</tr>
+<tr>
+<td><abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr>-NG manufacturing</td>
+<td>Doosan Fuel Cell</td>
+<td class="ticker">KRX: 336260</td>
+<td>Claims ~64%; 50 MW/yr plant</td>
+</tr>
+<tr>
+<td><abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> + turbines + gensets</td>
+<td>Mitsubishi Heavy</td>
+<td class="ticker">TSE: 7011</td>
+<td>MEGAMIE ~53%; M501 JAC; MGS gensets</td>
+</tr>
+<tr>
+<td><abbr data-expand="Molten Carbonate Fuel Cell" title="Molten Carbonate Fuel Cell">MCFC</abbr></td>
+<td>FuelCell Energy</td>
+<td class="ticker">NASDAQ: FCEL</td>
+<td>~50% elec / ~85% <abbr data-expand="Combined Heat and Power" title="Combined Heat and Power">CHP</abbr>; Siemens <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> partnership</td>
+</tr>
+<tr>
+<td><abbr data-expand="Phosphoric Acid Fuel Cell" title="Phosphoric Acid Fuel Cell">PAFC</abbr></td>
+<td>HyAxiom PureCell</td>
+<td class="private">private</td>
+<td>~43–44% elec / ~90% <abbr data-expand="Combined Heat and Power" title="Combined Heat and Power">CHP</abbr>; Nasdaq possible later</td>
+</tr>
+<tr>
+<td><abbr data-expand="Proton Exchange Membrane" title="Proton Exchange Membrane">PEM</abbr> (not AI baseload)</td>
+<td>Plug / Ballard</td>
+<td class="ticker">PLUG / BLDP</td>
+<td>Vehicles, forklifts; pure H₂</td>
+</tr>
+<tr>
+<td><abbr data-expand="Medium Voltage" title="Medium Voltage">MV</abbr> <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> / rectifiers</td>
+<td>Eaton</td>
+<td class="ticker">ETN</td>
+<td>MVSST 2.0; IEC-certified; Infineon <abbr data-expand="Silicon Carbide" title="Silicon Carbide">SiC</abbr> deal</td>
+</tr>
+<tr>
+<td>Production <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> (AI <abbr data-expand="Direct Current" title="Direct Current">DC</abbr>)</td>
+<td>Delta Electronics</td>
+<td class="ticker">2308.TW</td>
+<td>North China AI <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> since Feb 2026</td>
+</tr>
+<tr>
+<td><abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> (partnership)</td>
+<td>Siemens Energy</td>
+<td class="ticker">ENR.DE / SMNEY</td>
+<td>Reinhausen Aug 2026; not fully commercial</td>
+</tr>
+<tr>
+<td><abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> / patents</td>
+<td>ABB</td>
+<td class="ticker">ABB</td>
+<td>Infinitus <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>; rail heritage</td>
+</tr>
+<tr>
+<td><abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> investing</td>
+<td>Hitachi Energy</td>
+<td class="ticker">via 6501.T</td>
+<td>Investing; commercial detail evolving</td>
+</tr>
+<tr>
+<td>Facility power / <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> arch.</td>
+<td>Schneider / Vertiv</td>
+<td class="ticker">SU.PA / SBGSY · VRT</td>
+<td>Switchgear, rack power, <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> architectures</td>
+</tr>
+<tr>
+<td><abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> startups</td>
+<td>DG Matrix / Heron / Amperesand</td>
+<td class="private">private</td>
+<td>DG Matrix Interport ~400 kW (ST <abbr data-expand="Silicon Carbide" title="Silicon Carbide">SiC</abbr>)</td>
+</tr>
+<tr>
+<td><abbr data-expand="Silicon Carbide" title="Silicon Carbide">SiC</abbr> devices</td>
+<td>Infineon / ST / Wolfspeed / Navitas</td>
+<td class="ticker">IFX · STM · WOLF</td>
+<td>Wafer bottleneck: <abbr data-expand="Physical Vapor Transport" title="Physical Vapor Transport">PVT</abbr> + epitaxy</td>
+</tr>
+<tr>
+<td><abbr data-expand="Silicon Carbide" title="Silicon Carbide">SiC</abbr> burn-in test</td>
+<td>Aehr</td>
+<td class="ticker">AEHR</td>
+<td>Qualifies parts; does not grow crystals</td>
+</tr>
+<tr>
+<td>Legacy XFMR / switchgear</td>
+<td>GE Vernova et al.</td>
+<td class="ticker">GEV</td>
+<td>Plus Eaton, Siemens Energy, Hitachi Energy, Schneider, Hubbell, Powell</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section aria-labelledby="h-cmp" id="comparison">
+<h2 id="h-cmp">Comparison table — pathways</h2>
+<table>
+<thead>
+<tr>
+<th>Pathway</th>
+<th>Wall-to-core (modeled)</th>
+<th>Time-to-power</th>
+<th>Scarce materials / constraints</th>
+<th>Key tickers</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr> + grid + 800 V chain</td>
+<td class="eff">~51%</td>
+<td>Slow if interconnect / LF XFMR queue</td>
+<td>Turbines, HV gear, LF transformers</td>
+<td class="ticker">GEV, ETN, 7011, ENR.DE</td>
+<td>Cheapest long-run kWh when available; path stays flat over years</td>
+</tr>
+<tr>
+<td>Pipeline NG + <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> 57% + <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> chain</td>
+<td class="eff">~47%</td>
+<td>Often faster (months)</td>
+<td><abbr data-expand="Scandium-Stabilized Zirconia" title="Scandium-Stabilized Zirconia">ScSZ</abbr> scandium (Bloom); stacks</td>
+<td class="ticker">BE, CWR, 336260, 7011</td>
+<td><abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> 65% can match grid path; fade matters</td>
+</tr>
+<tr>
+<td><abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> year-5 degraded ~45%</td>
+<td class="eff">~37%</td>
+<td>Same as <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> install</td>
+<td>Stack swaps ~5.5 yr class</td>
+<td class="ticker">BE</td>
+<td>Claims vary; model gas use ~15% higher at 57% vs higher η</td>
+</tr>
+<tr>
+<td><abbr data-expand="Molten Carbonate Fuel Cell" title="Molten Carbonate Fuel Cell">MCFC</abbr> onsite</td>
+<td class="eff">~50% elec class*</td>
+<td>Site-specific</td>
+<td>Ni, steel; CO₂ handling</td>
+<td class="ticker">FCEL</td>
+<td>~85% <abbr data-expand="Combined Heat and Power" title="Combined Heat and Power">CHP</abbr> when heat used; *electrical before hall chain</td>
+</tr>
+<tr>
+<td><abbr data-expand="Phosphoric Acid Fuel Cell" title="Phosphoric Acid Fuel Cell">PAFC</abbr> onsite</td>
+<td class="eff">~43–44% elec*</td>
+<td>Site-specific</td>
+<td>Phosphoric acid systems</td>
+<td class="private">HyAxiom private</td>
+<td>~90% <abbr data-expand="Combined Heat and Power" title="Combined Heat and Power">CHP</abbr>; Nasdaq possible later</td>
+</tr>
+<tr>
+<td>Electrolysis + <abbr data-expand="Proton Exchange Membrane" title="Proton Exchange Membrane">PEM</abbr> round-trip</td>
+<td class="eff">~25–35% RT</td>
+<td>Irrelevant for baseload</td>
+<td>Pt, polymer, H₂ logistics</td>
+<td class="ticker">PLUG, BLDP</td>
+<td>Wrong for AI baseload; OK for niche mobility / storage</td>
+</tr>
+<tr>
+<td>Hybrid turbine + <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr></td>
+<td class="eff">Blend</td>
+<td>Strong (fast start + FC)</td>
+<td>Both turbine and stack chains</td>
+<td class="ticker">7011, BE, …</td>
+<td>Hedges fade and ramp; MW split site-specific</td>
+</tr>
+<tr>
+<td>Legacy <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr> multi-hop (in-hall)</td>
+<td class="eff">~5% worse vs collapsed</td>
+<td>n/a (architecture)</td>
+<td><abbr data-expand="Uninterruptible Power Supply" title="Uninterruptible Power Supply">UPS</abbr>/<abbr data-expand="Power Distribution Unit" title="Power Distribution Unit">PDU</abbr>/<abbr data-expand="Power Supply Unit" title="Power Supply Unit">PSU</abbr> parts + heat</td>
+<td class="ticker">VRT, ETN, …</td>
+<td>Being displaced by 800 V <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> designs</td>
+</tr>
+</tbody>
+</table>
+<p class="dim">*Fuel-cell electrical efficiencies above are generator-terminal class before the shared 800 V → <abbr data-expand="Resonant converter topology (inductor-inductor-capacitor)" title="Resonant converter topology (inductor-inductor-capacitor)">LLC</abbr> → <abbr data-expand="Voltage Regulator Module" title="Voltage Regulator Module">VRM</abbr> chain. Wall-to-core composites for <abbr data-expand="Molten Carbonate Fuel Cell" title="Molten Carbonate Fuel Cell">MCFC</abbr>/<abbr data-expand="Phosphoric Acid Fuel Cell" title="Phosphoric Acid Fuel Cell">PAFC</abbr> were not fully chained in the source baseline—do not invent tighter numbers.</p>
+</section>
+<section aria-labelledby="h-gloss" id="glossary">
+<h2 id="h-gloss">Glossary</h2>
+<dl class="glossary">
+<dt><abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr> / <abbr data-expand="Direct Current" title="Direct Current">DC</abbr></dt>
+<dd>Alternating Current / Direct Current.</dd>
+<dt><abbr data-expand="Alkaline Fuel Cell" title="Alkaline Fuel Cell">AFC</abbr></dt>
+<dd>Alkaline Fuel Cell — cheap but CO<sub>2</sub>-poisoned without scrubbing.</dd>
+<dt><abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr></dt>
+<dd>Combined-Cycle Gas Turbine — gas turbine plus steam bottoming cycle; ~60–64% <abbr data-expand="Lower Heating Value" title="Lower Heating Value">LHV</abbr> electrical.</dd>
+<dt><abbr data-expand="Combined Heat and Power" title="Combined Heat and Power">CHP</abbr></dt>
+<dd>Combined Heat and Power — electrical plus useful thermal output.</dd>
+<dt><abbr data-expand="Central Processing Unit" title="Central Processing Unit">CPU</abbr> / <abbr data-expand="Graphics Processing Unit" title="Graphics Processing Unit">GPU</abbr></dt>
+<dd>Central Processing Unit / Graphics Processing Unit.</dd>
+<dt><abbr data-expand="Gallium Nitride" title="Gallium Nitride">GaN</abbr></dt>
+<dd>Gallium Nitride — wide-bandgap semiconductor used in some converter stages.</dd>
+<dt><abbr data-expand="High-Voltage Alternating Current" title="High-Voltage Alternating Current">HVAC</abbr> / <abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr></dt>
+<dd>High-Voltage Alternating Current / High-Voltage Direct Current transmission.</dd>
+<dt><abbr data-expand="Lower Heating Value" title="Lower Heating Value">LHV</abbr></dt>
+<dd>Lower Heating Value — heating-value basis that excludes condensation heat of water.</dd>
+<dt><abbr data-expand="Resonant converter topology (inductor-inductor-capacitor)" title="Resonant converter topology (inductor-inductor-capacitor)">LLC</abbr></dt>
+<dd>Resonant converter topology (inductor-inductor-capacitor) used in 800→12 V stages.</dd>
+<dt><abbr data-expand="Molten Carbonate Fuel Cell" title="Molten Carbonate Fuel Cell">MCFC</abbr></dt>
+<dd>Molten Carbonate Fuel Cell.</dd>
+<dt><abbr data-expand="Medium Voltage" title="Medium Voltage">MV</abbr></dt>
+<dd>Medium Voltage — distribution class voltages into the facility perimeter.</dd>
+<dt><abbr data-expand="Organic Rankine Cycle" title="Organic Rankine Cycle">ORC</abbr></dt>
+<dd>Organic Rankine Cycle — waste-heat-to-power using an organic working fluid.</dd>
+<dt><abbr data-expand="Phosphoric Acid Fuel Cell" title="Phosphoric Acid Fuel Cell">PAFC</abbr></dt>
+<dd>Phosphoric Acid Fuel Cell.</dd>
+<dt><abbr data-expand="Power Distribution Unit" title="Power Distribution Unit">PDU</abbr></dt>
+<dd>Power Distribution Unit — breaker cabinet between <abbr data-expand="Uninterruptible Power Supply" title="Uninterruptible Power Supply">UPS</abbr> and racks.</dd>
+<dt><abbr data-expand="Proton Exchange Membrane" title="Proton Exchange Membrane">PEM</abbr></dt>
+<dd>Proton Exchange Membrane (fuel cell or electrolyzer context).</dd>
+<dt><abbr data-expand="Power Supply Unit" title="Power Supply Unit">PSU</abbr></dt>
+<dd>Power Supply Unit — per-server <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>–<abbr data-expand="Direct Current" title="Direct Current">DC</abbr> converter in legacy designs.</dd>
+<dt><abbr data-expand="Physical Vapor Transport" title="Physical Vapor Transport">PVT</abbr></dt>
+<dd>Physical Vapor Transport — <abbr data-expand="Silicon Carbide" title="Silicon Carbide">SiC</abbr> crystal-growth method; furnace-limited.</dd>
+<dt><abbr data-expand="Scandium-Stabilized Zirconia" title="Scandium-Stabilized Zirconia">ScSZ</abbr> / <abbr data-expand="Yttria-Stabilized Zirconia" title="Yttria-Stabilized Zirconia">YSZ</abbr></dt>
+<dd>Scandium-Stabilized Zirconia / Yttria-Stabilized Zirconia — <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> electrolyte ceramics.</dd>
+<dt><abbr data-expand="Silicon Carbide" title="Silicon Carbide">SiC</abbr></dt>
+<dd>Silicon Carbide — wide-bandgap switches enabling <abbr data-expand="Solid-State Transformers" title="Solid-State Transformers">SSTs</abbr> and efficient <abbr data-expand="Medium Voltage" title="Medium Voltage">MV</abbr> conversion.</dd>
+<dt><abbr data-expand="Steam Methane Reforming" title="Steam Methane Reforming">SMR</abbr></dt>
+<dd>Steam Methane Reforming — dominant grey hydrogen route (~61% of global H<sub>2</sub>).</dd>
+<dt><abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr></dt>
+<dd>Solid Oxide Fuel Cell — high-temperature ceramic fuel cell; can reform NG to <abbr data-expand="Direct Current" title="Direct Current">DC</abbr>.</dd>
+<dt><abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr></dt>
+<dd>Solid-State Transformer — <abbr data-expand="Silicon Carbide" title="Silicon Carbide">SiC</abbr> switches + high-frequency transformer; not a 50/60 Hz Cu-Fe unit.</dd>
+<dt><abbr data-expand="Uninterruptible Power Supply" title="Uninterruptible Power Supply">UPS</abbr></dt>
+<dd>Uninterruptible Power Supply.</dd>
+<dt><abbr data-expand="Voltage Regulator" title="Voltage Regulator">VR</abbr> / <abbr data-expand="Voltage Regulator Module" title="Voltage Regulator Module">VRM</abbr></dt>
+<dd>Voltage Regulator / Voltage Regulator Module — final multiphase conversion to sub-1 V.</dd>
+</dl>
+</section>
+<footer class="caveat" id="caveat">
+<strong>Not investment advice.</strong>
+  This briefing is an informational September 2026 baseline for Arman A. It is not a recommendation to buy, sell, or hold any security. Company roles, efficiencies, lead times, market-size estimates (including Jefferies <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> figures), and partnership statuses can change; <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> performance claims vary by product and duty cycle and stacks degrade (illustrative fade ~2.4 percentage points/year and swap ~5.5 years for the Bloom-class notes above). Modeled wall-to-core percentages are order-of-magnitude chain products, not guarantees. Verify primary filings and engineering datasheets before any financial or procurement decision.
+  <p class="dim" style="margin:0.75rem 0 0">Part of the <a href="../index.html">Investment Hub</a> · Electrification section · September 2026 baseline.</p>
+</footer>
+    </article>
   </main>
 
   <footer class="site-footer">
@@ -66,5 +809,6 @@
     <p>Source identifiers curated from Investment_Dashboard (read-only extract). Not investment advice.</p>
   </footer>
   <script src="../assets/site.js"></script>
+  <script src="briefing.js"></script>
 </body>
 </html>

@@ -1,0 +1,276 @@
+
+  .briefing {
+    --bg: #0b0d10;
+    --bg-elev: #12161c;
+    --bg-card: #161b22;
+    --bg-soft: #1c222b;
+    --border: #2a3340;
+    --border-soft: #232a35;
+    --text: #e8eef6;
+    --text-muted: #9aa7b8;
+    --text-dim: #6b7788;
+    --accent: #5b9fd4;
+    --accent-soft: rgba(91, 159, 212, 0.14);
+    --accent-2: #7ec8a3;
+    --accent-2-soft: rgba(126, 200, 163, 0.12);
+    --warn: #d4a35b;
+    --warn-soft: rgba(212, 163, 91, 0.14);
+    --danger: #d47a7a;
+    --danger-soft: rgba(212, 122, 122, 0.12);
+    --purple: #a78bdb;
+    --font: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    --mono: "Cascadia Code", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+    --max: 1080px;
+    --radius: 10px;
+  }
+  .briefing, .briefing *{ box-sizing: border-box; }
+  .briefing{ scroll-behavior: smooth; }
+  .briefing{
+    margin: 0;
+    font-family: var(--font);
+    background: transparent;
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 16.5px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .briefing a{ color: var(--accent); text-decoration: none; }
+  .briefing a:hover{ text-decoration: underline; }
+  .briefing .wrap{ max-width: var(--max); margin: 0 auto; padding: 0 1.25rem 4rem; }
+  .briefing .toc{
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(11, 13, 16, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 0.65rem 0;
+  }
+  .briefing .toc-inner{
+    max-width: var(--max); margin: 0 auto; padding: 0 1.25rem;
+    display: flex; flex-wrap: wrap; gap: 0.35rem 0.85rem; align-items: center;
+  }
+  .briefing .toc-label{
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--text-dim); margin-right: 0.25rem;
+  }
+  .briefing .toc a{
+    font-size: 0.8rem; color: var(--text-muted);
+    padding: 0.2rem 0.45rem; border-radius: 4px;
+  }
+  .briefing .toc a:hover{ color: var(--text); background: var(--accent-soft); text-decoration: none; }
+  .briefing header.hero{
+    padding: 2.5rem 0 1.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+  }
+  .briefing .eyebrow{
+    display: inline-block; font-size: 0.75rem; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--accent); background: var(--accent-soft);
+    padding: 0.3rem 0.7rem; border-radius: 999px; margin-bottom: 1rem;
+  }
+  .briefing h1{
+    font-size: clamp(1.7rem, 3.5vw, 2.35rem); line-height: 1.2;
+    margin: 0 0 0.75rem; font-weight: 700; letter-spacing: -0.02em;
+  }
+  .briefing .subtitle{ color: var(--text-muted); font-size: 1.05rem; max-width: 46rem; margin: 0 0 1.25rem; }
+  .briefing .meta-row{ display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .briefing .chip{
+    font-size: 0.78rem; color: var(--text-muted); background: var(--bg-soft);
+    border: 1px solid var(--border); padding: 0.3rem 0.65rem; border-radius: 6px;
+  }
+  .briefing .chip.warn{ color: var(--warn); border-color: rgba(212, 163, 91, 0.35); background: var(--warn-soft); }
+  .briefing h2{
+    font-size: 1.45rem; margin: 2.75rem 0 1rem; padding-top: 0.5rem;
+    border-top: 1px solid var(--border); letter-spacing: -0.015em;
+  }
+  .briefing h2:first-of-type{ border-top: none; }
+  .briefing h3{ font-size: 1.12rem; margin: 1.75rem 0 0.65rem; color: var(--text); }
+  .briefing h4{ font-size: 0.98rem; margin: 1.25rem 0 0.5rem; color: var(--accent); }
+  .briefing p{ margin: 0.7rem 0; color: var(--text); }
+  .briefing .lede{ font-size: 1.05rem; color: var(--text-muted); }
+  .briefing ul, .briefing ol{ margin: 0.5rem 0 1rem; padding-left: 1.35rem; color: var(--text); }
+  .briefing li{ margin: 0.35rem 0; }
+  .briefing strong{ font-weight: 600; color: #f0f4fa; }
+  .briefing code{
+    font-family: var(--mono); font-size: 0.88em; background: var(--bg-soft);
+    padding: 0.1em 0.35em; border-radius: 4px; color: var(--accent-2);
+  }
+.briefing .callout{
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-left: 3px solid var(--accent); border-radius: var(--radius);
+    padding: 1rem 1.15rem; margin: 1.25rem 0;
+  }
+  .briefing .callout.warn{ border-left-color: var(--warn); background: var(--warn-soft); }
+  .briefing .callout.danger{ border-left-color: var(--danger); background: var(--danger-soft); }
+  .briefing .callout.ok{ border-left-color: var(--accent-2); background: var(--accent-2-soft); }
+  .briefing .callout .label{
+    font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--text-dim); margin-bottom: 0.35rem;
+  }
+  .briefing .diagram{
+    background: var(--bg-elev); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1rem 0.75rem 0.85rem;
+    margin: 1.35rem 0 1.75rem; overflow-x: auto;
+  }
+  .briefing .diagram figcaption{
+    font-size: 0.82rem; color: var(--text-muted); margin-top: 0.65rem; padding: 0 0.35rem;
+  }
+  .briefing .diagram svg{ display: block; width: 100%; height: auto; min-width: 640px; }
+  .briefing .grid-2{ display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+  @media (max-width: 720px) {
+    .briefing .grid-2{ grid-template-columns: 1fr; }
+    .briefing .diagram svg{ min-width: 520px; }
+  }
+  .briefing .card{
+    background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1rem 1.1rem;
+  }
+  .briefing .card h4{ margin-top: 0; }
+  .briefing table{
+    width: 100%; border-collapse: collapse; font-size: 0.88rem;
+    margin: 1rem 0 1.5rem; background: var(--bg-card);
+    border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
+  }
+  .briefing th, .briefing td{
+    text-align: left; padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid var(--border-soft); vertical-align: top;
+  }
+  .briefing th{
+    background: var(--bg-soft); color: var(--text-muted); font-weight: 600;
+    font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .briefing tr:last-child td{ border-bottom: none; }
+  .briefing tr:hover td{ background: rgba(91, 159, 212, 0.04); }
+  .briefing .ticker{ font-family: var(--mono); font-size: 0.82em; color: var(--accent-2); white-space: nowrap; }
+  .briefing .private{ color: var(--text-dim); font-style: italic; }
+  .briefing .badge{
+    display: inline-block; font-size: 0.68rem; padding: 0.12rem 0.4rem;
+    border-radius: 4px; background: var(--accent-soft); color: var(--accent);
+    vertical-align: middle; margin-left: 0.25rem;
+  }
+  .briefing .badge.planned{ background: var(--warn-soft); color: var(--warn); }
+  .briefing .badge.private{ background: var(--bg-soft); color: var(--text-dim); font-style: normal; }
+  .briefing .hop-list{ counter-reset: hop; list-style: none; padding-left: 0; }
+  .briefing .hop-list > li{
+    counter-increment: hop; background: var(--bg-card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 1rem 1.1rem 1rem 3.2rem;
+    margin: 0.75rem 0; position: relative;
+  }
+  .briefing .hop-list > li::before{
+    content: counter(hop); position: absolute; left: 0.9rem; top: 1rem;
+    width: 1.6rem; height: 1.6rem; border-radius: 50%;
+    background: var(--accent-soft); color: var(--accent);
+    font-size: 0.82rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .briefing .hop-list h4{ margin: 0 0 0.35rem; }
+  .briefing .glossary dt{ font-weight: 600; color: var(--accent); margin-top: 0.85rem; }
+  .briefing .glossary dd{ margin: 0.2rem 0 0; color: var(--text-muted); padding-left: 0; }
+  .briefing footer.caveat{
+    margin-top: 3rem; padding: 1.25rem 1.35rem;
+    background: var(--danger-soft); border: 1px solid rgba(212, 122, 122, 0.35);
+    border-radius: var(--radius); font-size: 0.9rem; color: var(--text-muted);
+  }
+  .briefing footer.caveat strong{ color: var(--danger); }
+  .briefing .eff{ font-family: var(--mono); font-size: 0.85em; color: var(--warn); }
+  .briefing .muted{ color: var(--text-muted); }
+  .briefing .dim{ color: var(--text-dim); }
+  
+  /* Interactive abbreviations */
+  .briefing abbr[title], .briefing abbr[data-expand]{
+    text-decoration: none;
+    color: #8ec5e8;
+    border-bottom: 1px dashed rgba(91, 159, 212, 0.65);
+    cursor: help;
+    padding: 0 0.05em;
+    border-radius: 2px;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+  .briefing abbr[title]:hover, .briefing abbr[title]:focus, .briefing abbr[data-expand]:hover, .briefing abbr[data-expand]:focus{
+    background: var(--accent-soft);
+    color: #b8daf0;
+    border-bottom-color: var(--accent);
+    outline: none;
+  }
+  .briefing abbr[title]:focus-visible, .briefing abbr[data-expand]:focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+  .briefing abbr.is-open{
+    background: var(--accent-soft);
+    border-bottom-style: solid;
+    border-bottom-color: var(--accent);
+  }
+  .abbr-popover{
+    position: absolute;
+    z-index: 200;
+    max-width: min(22rem, calc(100vw - 1.5rem));
+    padding: 0.55rem 0.75rem;
+    background: #1a2330;
+    color: #e8eef6;
+    border: 1px solid #5b9fd4;
+    border-radius: 8px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+    font-size: 0.86rem;
+    line-height: 1.45;
+    pointer-events: none;
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  }
+  .abbr-popover[hidden]{ display: none !important; }
+  .abbr-popover .abbr-popover-term{
+    display: block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #5b9fd4;
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .briefing abbr[title], .briefing abbr[data-expand]{ transition: none; }
+  }
+
+  @media print {
+    .briefing{ background: #fff; color: #111; font-size: 11pt; }
+    .briefing .toc{ position: static; background: #fff; }
+    .briefing .diagram, .briefing .card, .briefing table, .briefing .callout, .briefing .hop-list > li{ background: #fff; border-color: #ccc; color: #111; }
+    .briefing a{ color: #06c; }
+    .briefing footer.caveat{ background: #fef3f3; color: #333; }
+  }
+
+/* Hub integration: non-sticky in-page TOC below site-nav; protect site-nav */
+.briefing .toc.page-toc {
+  position: static;
+  top: auto;
+  z-index: auto;
+  margin: 0 0 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elev);
+  backdrop-filter: none;
+  padding: 0.75rem 0.85rem;
+}
+.briefing .toc.page-toc .toc-inner {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+.briefing .hero {
+  padding-top: 0.5rem;
+}
+.briefing footer.caveat {
+  margin-bottom: 1rem;
+}
+/* Restore list padding against site.css universal reset */
+.briefing ul, .briefing ol {
+  padding-left: 1.35rem;
+}
+.briefing .hop-list {
+  padding-left: 0;
+}
+.briefing .glossary dd {
+  margin-left: 0;
+}
+/* Avoid fighting hub .container width */
+.briefing {
+  max-width: none;
+}
