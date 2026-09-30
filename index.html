@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investment Hub — Arman Amirzhan</title>
+  <meta name="description" content="Public investment briefing hub: electrification power map, SMR, uranium, and digests.">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Arman <span>Invest</span></a>
+      <div class="nav-links">
+        <a href="index.html" data-section="home">Hub</a>
+        <a href="electrification/index.html" data-section="electrification">Electrification</a>
+        <a href="smr/index.html" data-section="smr">SMR</a>
+        <a href="uranium/index.html" data-section="uranium">Uranium</a>
+        <a href="digests/index.html" data-section="digests">Digests</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header class="page-header">
+      <h1>Public Investment Hub</h1>
+      <p class="subtitle">Briefings on datacenter electrification, advanced nuclear (SMR), uranium / HALEU, and daily digests.</p>
+      <div class="meta-row">
+        <span>Live: <a href="https://armanamirzhan.github.io/investment_dashboard_public/">armanamirzhan.github.io/investment_dashboard_public</a></span>
+      </div>
+    </header>
+
+    <div class="card-grid">
+      <a class="card" href="electrification/index.html" style="text-decoration:none;color:inherit">
+        <span class="icon" aria-hidden="true">⚡</span>
+        <h2>Electrification</h2>
+        <p>Power Map — turbines, grid gear, utilities, and hyperscaler power demand.</p>
+        <span class="card-link">Open section →</span>
+      </a>
+      <a class="card" href="smr/index.html" style="text-decoration:none;color:inherit">
+        <span class="icon" aria-hidden="true">⚛️</span>
+        <h2>SMR</h2>
+        <p>Oklo, X-energy, NuScale, and advanced reactor developer tracker.</p>
+        <span class="card-link">Open section →</span>
+      </a>
+      <a class="card" href="uranium/index.html" style="text-decoration:none;color:inherit">
+        <span class="icon" aria-hidden="true">🪨</span>
+        <h2>Uranium</h2>
+        <p>Fuel cycle map and HALEU constraint (Cameco, Centrus).</p>
+        <span class="card-link">Open section →</span>
+      </a>
+      <a class="card" href="digests/index.html" style="text-decoration:none;color:inherit">
+        <span class="icon" aria-hidden="true">📰</span>
+        <h2>Digests</h2>
+        <p>Morning briefs and thematic investment digests.</p>
+        <span class="card-link">Open section →</span>
+      </a>
+    </div>
+
+    <section class="section">
+      <h2>About this hub</h2>
+      <p>Clean public site scaffold. Section bots own their folders; the website builder owns the hub shell (<code>index.html</code>, <code>assets/</code>). Curated company lists and trackers under <code>data/</code> were extracted read-only from the private <code>Investment_Dashboard</code> — not a full dashboard clone.</p>
+      <p>See <a href="OWNERS.md">OWNERS.md</a> for folder ownership and <a href="README.md">README.md</a> for purpose and Pages URL.</p>
+    </section>
+
+    <section class="section">
+      <h2>Shared data (seed)</h2>
+      <ul>
+        <li><code>data/companies.json</code> — full curated company set</li>
+        <li><code>data/electrification_companies.json</code> / <code>smr_companies.json</code> / <code>uranium_companies.json</code> — section subsets</li>
+        <li><code>data/nuclear_tracker.json</code>, <code>fusion_tracker.json</code>, <code>haleu_constraint.json</code></li>
+        <li><code>data/power_suppliers.json</code>, <code>hardware_suppliers.json</code>, <code>hyperscaler_buildouts.json</code></li>
+        <li><code>data/kpi_metrics.json</code>, <code>risks.json</code>, <code>meta.json</code>, <code>chart_data.json</code></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Public investment briefing hub · <a href="https://armanamirzhan.github.io/investment_dashboard_public/">armanamirzhan.github.io/investment_dashboard_public</a></p>
+    <p>Not investment advice. Identifiers curated from Investment_Dashboard (read-only).</p>
+  </footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>

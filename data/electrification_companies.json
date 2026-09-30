@@ -1,0 +1,415 @@
+[
+  {
+    "ticker": "CEG",
+    "name": "Constellation Energy",
+    "sector": "electricity",
+    "sub_sector": "Nuclear Utilities",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Constellation Energy 10-K (FY2025), Q4 2025 earnings release, 2026 business outlook presentation, and IR filings. Wall Street consensus: Strong Buy (16 Buy, 3 Hold, 1 Sell out of 20 analysts). Average 12-month price target: $381. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "High",
+    "report": "reports/CEG_Constellation.html",
+    "public": true,
+    "thesis": "World's largest private power producer (55 GW post-Calpine) with the nation's premier nuclear fleet (22 GW, 183 TWh zero-emissions generation in 2025). FY2025 revenue $25.5B (+8% YoY) with adjusted EPS of $9.39. Calpine acquisition closed Jan 7, 2026 for $16.4B, adding 23 GW of natural gas and geothermal generation, promising 20%+ EPS accretion. Guided 2026 adjusted EPS to $11.00-12.00 with 20% CAGR commitment through 2029. Key datacenter PPAs: Microsoft (Crane Clean Energy Center restart, 20-year PPA), Meta (Clinton nuclear, 1.1 GW), CyrusOne (380 MW). Stock down ~13% YTD as guidance disappointed vs Street expectations, creating potential entry point. $5B share buyback authorized.",
+    "catalysts": [
+      "Calpine integration delivering 20%+ EPS accretion \u2014 Q1 2026 EBITDA consensus $2.02B (+139% sequential)",
+      "2026 adjusted EPS guidance $11-12 with 20% CAGR commitment through 2029",
+      "Crane Clean Energy Center restart (835 MW) backed by 20-year Microsoft PPA",
+      "Nuclear license renewals: Clinton extended to 2047, Dresden to 2049/2051 \u2014 $370M invested",
+      "$5B share buyback program authorized \u2014 significant capital return"
+    ],
+    "risks": [
+      "Crane Clean Energy Center interconnection flagged for potential delay to 2031 by PJM \u2014 threatens Microsoft PPA",
+      "Calpine integration complexity: 2,300 employees, 60+ power plants, rising interest expense from $16.4B financing",
+      "2026 guidance midpoint ($11.50 EPS) below initial Street consensus ($11.73) \u2014 sent stock down 7%",
+      "Nuclear operational risk across 22 GW fleet \u2014 unplanned outages impact earnings",
+      "Regulatory and policy risk: clean energy subsidies, capacity market reforms, PJM interconnection rules"
+    ],
+    "updated": "2026-05-09",
+    "latest_revenue": "$25.5B FY2025"
+  },
+  {
+    "ticker": "VST",
+    "name": "Vistra Energy",
+    "sector": "electricity",
+    "sub_sector": "Nuclear Utilities",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Vistra 10-K and quarterly earnings. Wall Street consensus: Buy (12 Strong Buy, 1 Hold out of 13 analysts). Avg PT $234. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "High",
+    "report": "reports/VST_Vistra.html",
+    "public": true,
+    "thesis": "Diversified power generator with nuclear fleet. Comanche Peak nuclear assets positioned for datacenter PPAs.",
+    "catalysts": [
+      "Nuclear PPA opportunities",
+      "Power price tailwinds",
+      "Datacenter demand in ERCOT"
+    ],
+    "risks": [
+      "ERCOT market volatility",
+      "Regulatory changes",
+      "Nuclear operational risk"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "NEE",
+    "name": "NextEra Energy",
+    "sector": "electricity",
+    "sub_sector": "IPPs & Generators",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official NextEra Energy 10-K and quarterly earnings. Wall Street consensus: Buy (11 analysts). Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "15-20%",
+    "report": "reports/NEE_NextEra.html",
+    "public": true,
+    "thesis": "Largest US renewable energy generator with growing datacenter power supply portfolio. Solar, wind, and battery storage.",
+    "catalysts": [
+      "Largest US renewable portfolio",
+      "Growing datacenter power contracts",
+      "Battery storage deployment",
+      "IRA incentives"
+    ],
+    "risks": [
+      "Interest rate sensitivity",
+      "Renewable intermittency",
+      "Regulatory changes"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "AES",
+    "name": "AES Corporation",
+    "sector": "electricity",
+    "sub_sector": "IPPs & Generators",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official AES Corporation 10-K and quarterly earnings. Wall Street consensus: Hold (1 Buy, 8 Hold out of 9 analysts). Avg PT $16. Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "Medium",
+    "report": "reports/AES_AES_Corporation.html",
+    "public": true,
+    "thesis": "Global power company with growing renewable portfolio and datacenter energy supply contracts.",
+    "catalysts": [
+      "Datacenter PPA pipeline",
+      "Renewable energy growth",
+      "Energy storage deployment"
+    ],
+    "risks": [
+      "International exposure risk",
+      "Debt levels",
+      "Execution on renewables pipeline"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "GEV",
+    "name": "GE Vernova",
+    "sector": "electricity",
+    "sub_sector": "Gas Turbine OEMs",
+    "rating": "STRONG_BUY",
+    "rating_source": "Claude fundamental analysis based on official GE Vernova 10-K and quarterly earnings. Wall Street consensus: Strong Buy (29 Buy, 5 Hold, 1 Sell out of 35 analysts). Avg PT $944. Assessed May 2026.",
+    "emoji": "\ud83d\udfe2",
+    "exposure": "25-30%",
+    "report": "reports/GEV_GE_Vernova.html",
+    "public": true,
+    "thesis": "Critical grid infrastructure provider. $42B electrification backlog (from $9B in 2022). 20% of 100 GW gas power under contract for datacenters.",
+    "catalysts": [
+      "Electrification datacenter orders $2.4B in Q1 exceed full 2025",
+      "Raised FY2026 guidance across all metrics"
+    ],
+    "risks": [
+      "Turbine delivery lead times",
+      "Supply chain constraints",
+      "Transition risk to renewables"
+    ],
+    "updated": "2026-05-09",
+    "latest_revenue": "Q1 orders 18.3B (+71%)"
+  },
+  {
+    "ticker": "ENR.DE",
+    "name": "Siemens Energy",
+    "sector": "electricity",
+    "sub_sector": "Gas Turbine OEMs",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Siemens Energy annual report and quarterly earnings. Wall Street consensus: Buy (19 Buy, 4 Hold, 2 Sell out of 25 analysts). Avg PT \u20ac169. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "High",
+    "report": "reports/ENR_Siemens_Energy.html",
+    "public": true,
+    "thesis": "Major gas turbine OEM with growing datacenter power demand. Gamesa wind issues being resolved. Grid infrastructure exposure.",
+    "catalysts": [
+      "Gas turbine demand from datacenters",
+      "Grid equipment backlog growth",
+      "Gamesa turnaround"
+    ],
+    "risks": [
+      "Gamesa wind turbine legacy issues",
+      "Execution risk",
+      "Competition from GE Vernova"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "ETN",
+    "name": "Eaton",
+    "sector": "electricity",
+    "sub_sector": "Grid Equipment & Power Distribution",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Eaton 10-K and quarterly earnings. Wall Street consensus: Buy (22 Buy, 7 Hold, 1 Sell out of 30 analysts). Avg PT $415. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "30-35%",
+    "report": "reports/ETN_Eaton.html",
+    "public": true,
+    "thesis": "Diversified electrical infrastructure leader. $9.5B Boyd acquisition strengthens integrated power/cooling portfolio. 11-year datacenter backlog.",
+    "catalysts": [
+      "Datacenter orders +240% YoY",
+      "228 GW backlog",
+      "Raised organic growth guidance to 9-11%"
+    ],
+    "risks": [
+      "Boyd integration execution risk",
+      "Macro sensitivity in non-DC segments",
+      "Premium multiple"
+    ],
+    "updated": "2026-05-09",
+    "latest_revenue": "7.5B Q1 2026",
+    "latest_eps": 2.81
+  },
+  {
+    "ticker": "SNEXF",
+    "name": "Schneider Electric",
+    "sector": "electricity",
+    "sub_sector": "Grid Equipment & Power Distribution",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Schneider Electric annual report and quarterly earnings. Wall Street consensus: Buy (37 analysts). Avg PT \u20ac301. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "30%+",
+    "report": "reports/SU_Schneider_Electric.html",
+    "public": true,
+    "thesis": "Global leader in power management and automation for datacenters. Galaxy UPS systems, PDUs, and building management.",
+    "catalysts": [
+      "Datacenter power management demand",
+      "Edge computing deployments",
+      "Sustainability solutions",
+      "Digital twin technology"
+    ],
+    "risks": [
+      "Currency exposure",
+      "Integration complexity",
+      "Competition from Eaton/Vertiv"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "FLNC",
+    "name": "Fluence Energy",
+    "sector": "electricity",
+    "sub_sector": "Renewables & Storage",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Fluence Energy 10-K and quarterly earnings. Wall Street consensus: Hold (4 Buy, 12 Hold, 4 Sell out of 17 analysts). Avg PT $16. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "Medium",
+    "report": "reports/FLNC_Fluence.html",
+    "public": true,
+    "thesis": "Battery energy storage solutions provider. Growing demand from datacenter backup power and grid storage applications.",
+    "catalysts": [
+      "Battery storage demand from datacenters",
+      "Grid-scale storage deployments",
+      "IRA incentives"
+    ],
+    "risks": [
+      "Battery cost volatility",
+      "Competition intensifying",
+      "Project execution risk"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "TSLA",
+    "name": "Tesla Energy",
+    "sector": "electricity",
+    "sub_sector": "Renewables & Storage",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official Tesla 10-K and quarterly earnings (energy segment focus). Wall Street consensus: Hold (26 analysts). Avg PT $407. Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "Indirect",
+    "report": "reports/TSLA_Tesla_Energy.html",
+    "public": true,
+    "thesis": "Megapack utility-scale battery storage gaining traction for datacenter backup and grid stabilization. Energy segment growing rapidly.",
+    "catalysts": [
+      "Megapack production scaling",
+      "Grid storage demand growth",
+      "Energy segment revenue acceleration"
+    ],
+    "risks": [
+      "Core auto business overshadows energy",
+      "Battery supply constraints",
+      "Competition from Fluence/BYD"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "APH",
+    "name": "Amphenol",
+    "sector": "dc_hardware",
+    "sub_sector": "Connectors & Cabling",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Amphenol 10-K and quarterly earnings. Wall Street consensus: Strong Buy. Avg PT $171. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "High",
+    "report": "reports/APH_Amphenol.html",
+    "public": true,
+    "thesis": "High-quality electrical connector compounder with exceptional datacom growth. Q1 2026 revenue +49% YoY.",
+    "catalysts": [
+      "+49% YoY revenue growth Q1 2026",
+      "IT Datacom segment acceleration",
+      "AI infrastructure connector demand"
+    ],
+    "risks": [
+      "Premium valuation",
+      "Growth deceleration risk",
+      "Acquisition integration"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "VRT",
+    "name": "Vertiv",
+    "sector": "dc_hardware",
+    "sub_sector": "Cooling & Thermal",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Vertiv 10-K (FY2025), Q1 2026 earnings release (April 22, 2026), and IR filings. Wall Street consensus: Strong Buy (22 Buy, 3 Hold, 0 Sell out of 25 analysts). Average 12-month price target: $339. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "45-50%",
+    "report": "reports/VRT_Vertiv.html",
+    "public": true,
+    "thesis": "Dominant datacenter thermal management and power distribution leader riding the AI infrastructure supercycle. Q1 2026 revenue $2.65B (+30% YoY) with adjusted EPS of $1.17 (+83% YoY). FY2025 revenue reached $10.2B (+28% YoY) with $1.3B net income (+169%). Backlog surged to $15.0B (+109% YoY) with Q4 2025 book-to-bill of 2.9x driven by 252% organic orders growth. Adjusted operating margin expanded to 20.8% in Q1 2026 (+430bps YoY). Raised 2026 guidance to $13.5-14.0B revenue (+34% growth) with adj. EPS of $6.30-6.40 (+51%). Net leverage at 0.2x with $5.0B liquidity. CoolPhase Flex hybrid cooling and 800VDC power solutions position Vertiv at the center of the liquid cooling transition for 100+ kW AI racks.",
+    "catalysts": [
+      "$15.0B backlog (+109% YoY) with book-to-bill of 2.9x \u2014 orders accelerating, not decelerating",
+      "2026 guidance raised to $13.5-14.0B revenue (+34% growth), adj. EPS $6.30-6.40 (+51%)",
+      "Q1 2026 adjusted free cash flow $653M (+147% YoY) \u2014 cash generation inflecting sharply",
+      "Liquid cooling supercycle: CoolPhase Flex and 800VDC solutions for NVIDIA next-gen GPU racks",
+      "Adjusted operating margin expansion to 22.8-23.8% guided for FY2026 (+290bps vs FY2025)"
+    ],
+    "risks": [
+      "Premium valuation at ~42x forward P/E and $131B market cap \u2014 priced for perfection",
+      "Hyperscaler customer concentration \u2014 top customers drive outsized revenue share",
+      "Execution risk on 34% revenue growth with simultaneous margin expansion",
+      "STL acquisition integration risk alongside organic growth demands",
+      "Potential demand moderation if hyperscaler capex cycle decelerates"
+    ],
+    "updated": "2026-05-09",
+    "latest_revenue": "$2.65B Q1 2026"
+  },
+  {
+    "ticker": null,
+    "name": "Asetek",
+    "sector": "dc_hardware",
+    "sub_sector": "Cooling & Thermal",
+    "rating": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": "reports/ASTK_Asetek.html",
+    "public": false,
+    "thesis": "Liquid cooling specialist for AI datacenters. Direct-to-chip and rear-door heat exchanger solutions.",
+    "catalysts": [
+      "Liquid cooling adoption acceleration",
+      "AI GPU power density driving demand",
+      "OEM partnerships"
+    ],
+    "risks": [
+      "Small market cap",
+      "Competition from Vertiv/CoolIT",
+      "Scaling challenges"
+    ],
+    "updated": "2026-04-27",
+    "note": "Delisted from Oslo Stock Exchange 2024-03-26"
+  },
+  {
+    "ticker": "BE",
+    "name": "Bloom Energy",
+    "sector": "electricity",
+    "sub_sector": "Hydrogen & Fuel Cells",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Bloom Energy 10-K (FY2025), Q1 2026 earnings release, and IR filings. Wall Street consensus: Buy (20 analysts, avg PT $234). Stock up ~240% YTD 2026. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "High",
+    "report": "reports/BE_Bloom_Energy.html",
+    "public": true,
+    "thesis": "Market-leading solid oxide fuel cell (SOFC) manufacturer with dominant datacenter power positioning. Q1 2026 revenue $751M (+130% YoY) \u2014 record quarter. Oracle expanded master agreement to 2.8 GW. FY2025 revenue $2.02B (+37%). First GAAP net income achieved in Q1 2026 ($70.7M). 2026 guidance raised to $3.4-3.8B (~80% growth). Fuel flexibility (natural gas, hydrogen, biogas) and rapid deployment (55-day installation for Oracle) are key differentiators for grid-constrained datacenter sites.",
+    "catalysts": [
+      "Oracle 2.8 GW master agreement \u2014 initial 1.2 GW contracted, deployment underway",
+      "Q1 2026 revenue $751M (+130% YoY) \u2014 first GAAP profit ($70.7M net income)",
+      "2026 guidance raised to $3.4-3.8B revenue (~80% growth at midpoint)",
+      "55-day deployment speed for Oracle \u2014 month ahead of schedule",
+      "Gross margin expanded to 31.5% (+280bps YoY)"
+    ],
+    "risks": [
+      "Stock up ~240% YTD \u2014 valuation stretched at $82B market cap",
+      "Oracle customer concentration risk in near-term",
+      "Long-term debt of $2.6B vs $2.5B cash \u2014 elevated leverage",
+      "Competition from grid power, gas turbines for baseload datacenter",
+      "Hydrogen transition timeline uncertain for SOFC platform"
+    ],
+    "updated": "2026-05-09",
+    "latest_revenue": "751M Q1 2026"
+  },
+  {
+    "ticker": "PLUG",
+    "name": "Plug Power",
+    "sector": "electricity",
+    "sub_sector": "Hydrogen & Fuel Cells",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official Plug Power 10-K, Q4 2025 earnings release, and IR filings. Wall Street consensus: Hold (10 analysts, avg PT $2.75). Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "Emerging",
+    "report": "reports/PLUG_Plug_Power.html",
+    "public": true,
+    "thesis": "Hydrogen fuel cell and electrolyzer company pivoting to datacenter backup power. FY2025 revenue $710M (+13% YoY), first positive gross margin in Q4 2025. Targeting datacenter fuel cell deployments with all three hyperscalers. Cash-burn remains significant ($536M operating outflow in 2025) with only $368M unrestricted cash. Management targets positive EBITDAS by Q4 2026 and full profitability by end of 2028.",
+    "catalysts": [
+      "Datacenter pivot: LOI with Stream Data Centers for $132.5M+ asset monetization supporting DC buildout",
+      "First positive gross margin achieved Q4 2025 \u2014 inflection point",
+      "Electrolyzer sales reached $187M in FY2025, growing sequentially",
+      "$275M+ monetization of electricity rights to support datacenter build-out",
+      "Testing with all three major hyperscalers for fuel cell backup power"
+    ],
+    "risks": [
+      "Severe cash burn: $536M operating cash outflow in 2025 with only $368M cash remaining",
+      "Profitability not expected until end of 2028 \u2014 multi-year path",
+      "Stock trading near all-time lows (~$3.08) \u2014 dilution risk from capital raises",
+      "Hydrogen cost economics still unproven at datacenter scale",
+      "Competition from Bloom Energy (SOFC) and diesel generators"
+    ],
+    "updated": "2026-05-09",
+    "latest_revenue": "710M FY2025"
+  },
+  {
+    "ticker": "FCEL",
+    "name": "FuelCell Energy",
+    "sector": "electricity",
+    "sub_sector": "Hydrogen & Fuel Cells",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official FuelCell Energy 10-K (FY2025 ended Oct 31, 2025), Q1 FY2026 earnings release, and IR filings. Wall Street consensus: Hold (6 analysts, avg PT $8.24). Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "Emerging",
+    "report": "reports/FCEL_FuelCell_Energy.html",
+    "public": true,
+    "thesis": "Carbonate fuel cell manufacturer pivoting aggressively to datacenter power. Q1 FY2026 revenue $30.5M (+61% YoY). 1.5 GW datacenter pipeline with 275% growth since Feb 2025. New 12.5 MW standardized power blocks for rapid datacenter deployment. SDCL partnership for 450 MW identified projects. Tri-gen technology produces electricity, hydrogen, and heat (absorption cooling for DC thermal management). Still pre-profit with $192M operating loss in FY2025, but $379.6M cash provides runway.",
+    "catalysts": [
+      "Datacenter pipeline 1.5+ GW with 275% growth \u2014 SDCL partnership for 450 MW",
+      "New 12.5 MW standardized power block for rapid datacenter deployment (months, not years)",
+      "Q1 FY2026 revenue +61% YoY to $30.5M \u2014 accelerating growth",
+      "Tri-gen technology: electricity + hydrogen + absorption cooling for DC thermal loads",
+      "Manufacturing expansion planned: 100 MW to 350 MW capacity at Torrington, CT"
+    ],
+    "risks": [
+      "$1.17B backlog declining 10.8% \u2014 revenue recognized faster than new awards",
+      "Still deeply unprofitable: $192M operating loss in FY2025, net loss $7.42/share",
+      "Dilution risk: $56.3M raised via at-the-market stock sales in Q1 2026",
+      "Small revenue base ($158M FY2025) relative to datacenter power ambitions",
+      "Competition from Bloom Energy, natural gas generators, and grid power"
+    ],
+    "updated": "2026-05-09",
+    "latest_revenue": "158.2M FY2025 (Oct)"
+  }
+]

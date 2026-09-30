@@ -1,0 +1,121 @@
+[
+  {
+    "ticker": "SMR",
+    "name": "NuScale Power",
+    "sector": "electricity",
+    "sub_sector": "SMR Developers",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official NuScale Power 10-K and quarterly earnings. Wall Street consensus: Hold (12 analysts). Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "Pre-revenue",
+    "report": "reports/SMR_NuScale.html",
+    "public": true,
+    "thesis": "Only SMR with full NRC design certification. 77 MWe per module. Pre-revenue with minimal engineering income.",
+    "catalysts": [
+      "NRC Design Certification (achieved Jan 2023)",
+      "53% analyst upside target",
+      "Growing datacenter nuclear demand"
+    ],
+    "risks": [
+      "Pre-revenue with no commercial reactors",
+      "Idaho site cancelled, seeking new",
+      "Capital-intensive development"
+    ],
+    "updated": "2026-05-09",
+    "risk_notes": "Q1 2026 revenue miss (-96% YoY to $0.57M). Commercial reactor ops not expected until 2030."
+  },
+  {
+    "ticker": "OKLO",
+    "name": "Oklo",
+    "sector": "electricity",
+    "sub_sector": "SMR Developers",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official Oklo 10-K and quarterly earnings. Wall Street consensus: Buy (16 analysts). Avg PT $103. Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "Pre-revenue",
+    "report": "reports/OKLO_Oklo.html",
+    "public": true,
+    "thesis": "Fast reactor developer with Meta 1.2 GW commitment. Materials license approved March 2026. $2.5B cash provides 25+ year runway.",
+    "catalysts": [
+      "NRC approved Aurora Principal Design Criteria May 2026",
+      "14 GW pipeline: 12 GW Switch + 500 MW Equinix",
+      "Commercial ops targeted late 2027-early 2028"
+    ],
+    "risks": [
+      "$10.87B valuation for pre-revenue company",
+      "First power 4 years away (2030)",
+      "Design certification ongoing"
+    ],
+    "updated": "2026-05-09"
+  },
+  {
+    "ticker": null,
+    "name": "TerraPower",
+    "sector": "electricity",
+    "sub_sector": "SMR Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Pre-revenue",
+    "report": null,
+    "public": false,
+    "thesis": "Bill Gates-backed Natrium sodium-cooled reactor. 345 MWe. Construction started in Wyoming. Meta partnership.",
+    "catalysts": [
+      "Wyoming construction progress",
+      "Meta datacenter power deal",
+      "DOE funding support"
+    ],
+    "risks": [
+      "First-of-kind construction risk",
+      "Long timeline to commercial",
+      "Technology risk"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": null,
+    "name": "Kairos Power",
+    "sector": "electricity",
+    "sub_sector": "SMR Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Pre-revenue",
+    "report": null,
+    "public": false,
+    "thesis": "Fluoride salt-cooled reactor (Hermes). Construction permit for test reactor. Google agreement signed.",
+    "catalysts": [
+      "Google partnership",
+      "Hermes test reactor construction",
+      "NRC construction permit (Dec 2023)"
+    ],
+    "risks": [
+      "Novel technology risk",
+      "Long development timeline",
+      "Funding requirements"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "XE",
+    "name": "X-energy",
+    "sector": "electricity",
+    "sub_sector": "SMR Developers",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official X-energy filings. Recently IPO'd. Limited analyst coverage. Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "Pre-revenue",
+    "report": "reports/XE_X-energy.html",
+    "public": true,
+    "thesis": "HTGR (Xe-100) developer with 80 MWe per module. AWS partnership. NRC review underway.",
+    "catalysts": [
+      "AWS partnership",
+      "DOE demo project ~2028-2029",
+      "NRC review progress"
+    ],
+    "risks": [
+      "Pre-revenue",
+      "NRC approval timeline",
+      "Competition from other SMR designs"
+    ],
+    "updated": "2026-04-27"
+  }
+]
