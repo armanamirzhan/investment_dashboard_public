@@ -1,0 +1,124 @@
+{
+  "week": "2026-W40",
+  "generatedAt": "2026-09-30T17:19:41.000Z",
+  "source": "oklo-weekly-routine",
+  "gauges": {
+    "groves": {
+      "level": 2,
+      "label": "Ahead",
+      "note": "Groves Isotope Test Reactor (Lockhart, TX) achieved first criticality the night of 2026-08-05 (DOE NE release dated Aug 6; Oklo PR same day) \u2014 score Ahead. Aurora-INL is separate: DOE PDSA approved Jun 2026, limited-construction CX earlier; company still targets first commercial powerhouse ~2028 (not yet criticality/COD).",
+      "confidence": "high",
+      "citations": [
+        {
+          "title": "DOE NE \u2014 Fifth advanced reactor criticality (Groves)",
+          "url": "https://www.energy.gov/ne/articles/office-nuclear-energy-celebrates-fifth-advanced-reactor-criticality"
+        },
+        {
+          "title": "Oklo \u2014 Groves achieves first criticality",
+          "url": "https://oklo.com/newsroom/oklos-groves-reactor-achieves-first-criticality-in-under-a-year"
+        },
+        {
+          "title": "Oklo Q2 2026 10-Q (MD&A / Aurora-INL target 2028)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026054571/oklo-20260630.htm"
+        }
+      ]
+    },
+    "ppa": {
+      "level": 1,
+      "label": "LOI Signed",
+      "note": "No verified definitive site-specific binding PPA in 8-Ks through 2026-09-30. Live stack is LOI/prepay/master only: Equinix LOI + $25M ROFR liability still on BS (Jun 30 10-Q); Switch 12 GW non-binding Master Power Agreement (Dec 2024); Meta Prepayment Agreement (Jan 5, 2026) for Ohio 1.2 GW campus support \u2014 not a completed delivery PPA. Score capped at LOI Signed.",
+      "confidence": "high",
+      "citations": [
+        {
+          "title": "Oklo Q2 2026 10-Q \u2014 Equinix ROFR / Meta prepay / Switch master",
+          "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026054571/oklo-20260630.htm"
+        },
+        {
+          "title": "Oklo\u2013Meta prepayment agreement PR",
+          "url": "https://oklo.com/newsroom/oklo-meta-announce-agreement-in-support-of-1-2-gw-nuclear-energy-development-in-southern-ohio"
+        },
+        {
+          "title": "Switch \u2014 non-binding 12 GW Master Power Agreement",
+          "url": "https://www.switch.com/oklo-and-switch-form-landmark-strategic-relationship/"
+        }
+      ]
+    },
+    "haleu": {
+      "level": 0,
+      "label": "No Contract",
+      "note": "Centrus\u2013Oklo instrument remains a non-binding LOI (Centrus 8-K 2026-06-18; Oklo 10-Q: definitive supply agreement still to be negotiated; deliveries contemplated from 2029 if signed). No Oklo definitive HALEU supply 8-K found through Sep 2026 (later Centrus HALEU contracts were with Antares/Radiant, not Oklo). DOE INL 5 MT HALEU fuel award is a parallel path, not a Centrus contract. Per score map: Centrus LOI alone = 0.",
+      "confidence": "high",
+      "citations": [
+        {
+          "title": "Centrus 8-K \u2014 non-binding Oklo HALEU LOI (2026-06-18)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1065059/000162828026044360/leu-20260618.htm"
+        },
+        {
+          "title": "Oklo\u2013Centrus LOI newsroom post",
+          "url": "https://oklo.com/newsroom/oklo-centrus-sign-letter-of-intent-to-purchase-nuclear-fuel-for-aurora-powerhouse-deployment-in-"
+        },
+        {
+          "title": "Oklo Q2 2026 10-Q \u2014 Centrus LOI + DOE INL 5 MT HALEU",
+          "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026054571/oklo-20260630.htm"
+        }
+      ]
+    },
+    "cash": {
+      "level": 1,
+      "label": "In Line",
+      "note": "As of 2026-06-30: cash+marketable ~$3,006.3M ($1,644.7M cash eq + $820.5M current + $541.1M noncurrent mkt securities); H1 2026 net cash used in ops $65.5M; H1 PPE purchases $126.9M; company states liquidity sufficient for one-year post-issuance. Dilution still active: prior ~$1B ATM sold out (17,971,448 shares / ~$1B gross through Sep 10); new $1B ATM Sales Agreement filed Sep 11, 2026. Large runway but ongoing equity program \u2192 In Line, not Below Guidance.",
+      "confidence": "high",
+      "citations": [
+        {
+          "title": "Oklo Q2 2026 10-Q \u2014 liquidity / cash burn",
+          "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026054571/oklo-20260630.htm"
+        },
+        {
+          "title": "Oklo 8-K \u2014 new $1B ATM; prior $1B ATM terminated sold-out (2026-09-11)",
+          "url": "https://www.sec.gov/Archives/edgar/data/1849056/000110465926106897/tm2625056d1_8k.htm"
+        },
+        {
+          "title": "SEC submissions CIK 0001849056",
+          "url": "https://data.sec.gov/submissions/CIK0001849056.json"
+        }
+      ]
+    },
+    "nrc": {
+      "level": 1,
+      "label": "On Track",
+      "note": "PDC topical approved for Aurora Powerhouse (company PR May 2026; echoed in 10-Q). Atomic Alchemy NRC materials license (Mar 2026) is isotopes, not power. No new power COLA docketed in checked filings/newsroom through 2026-09-30. Aurora-INL advancing mainly under DOE RPP/PDSA. Topical accepted but no power COLA \u2192 On Track (not Ahead). NRC pre-app HTML page was access-denied from this host; scored from company/SEC sources.",
+      "confidence": "medium",
+      "citations": [
+        {
+          "title": "Oklo \u2014 NRC PDC topical approved (Aurora-INL)",
+          "url": "https://oklo.com/newsroom/oklos-nrc-principal-design-criteria-topical-report-approved-for-aurora-powerhouse-in-idaho"
+        },
+        {
+          "title": "Oklo Q2 2026 10-Q \u2014 licensing / DOE PDSA context",
+          "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026054571/oklo-20260630.htm"
+        },
+        {
+          "title": "NRC Aurora Powerhouse pre-application page (blocked from fetch; cite for tracker)",
+          "url": "https://www.nrc.gov/reactors/new-reactors/advanced/who-were-working-with/pre-application-activities/okla-aurora-powerhouse"
+        }
+      ]
+    },
+    "revenue": {
+      "level": 0,
+      "label": "No Revenue",
+      "note": "Q2/H1 2026 GAAP revenue $1.21M is engineering/consulting ($0.80M), manufacturing/fabrication ($0.17M), and other ($0.24M) from June 2026 ARMEC/Creative Engineers acquisitions \u2014 does not count as isotope or power revenue under the score map. No isotope product sales or power sales disclosed. Atomic Alchemy IPR&D valuation assumes purified-radium revenue potential in 2027 (assumption, not booked sales).",
+      "confidence": "high",
+      "citations": [
+        {
+          "title": "Oklo Q2 2026 10-Q \u2014 Statements of Operations / revenue disaggregation",
+          "url": "https://www.sec.gov/Archives/edgar/data/1849056/000162828026054571/oklo-20260630.htm"
+        },
+        {
+          "title": "Oklo newsroom \u2014 Q2 2026 results",
+          "url": "https://oklo.com/newsroom/oklo-publishes-second-quarter-2026-financial-results-and-business-update"
+        }
+      ]
+    }
+  },
+  "summary": "First live 2026-W40 update vs video baseline: Groves stays Ahead (now verified criticality Aug 5\u20136, Aurora-INL separate ~2028). Cash stays In Line (~$3.0B liquidity + new $1B ATM). Downgrades \u2014 PPA 2\u21921 (LOI/prepay/master only; no binding site PPA), HALEU 2\u21920 (Centrus LOI only), NRC 2\u21921 (PDC topical, no power COLA), Revenue 2\u21920 (acq eng/fab only, not isotopes/power)."
+}

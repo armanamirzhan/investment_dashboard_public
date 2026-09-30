@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SMR — Advanced Nuclear — Investment Hub</title>
-  <meta name="description" content="Small modular and advanced reactors — Oklo, X-energy, NuScale, and peers.">
+  <meta name="description" content="Small modular and advanced reactors — Oklo, X-energy, NuScale weekly gauge trackers.">
   <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
@@ -24,41 +24,50 @@
   <main class="container">
     <header class="page-header">
       <h1>SMR — Advanced Nuclear</h1>
-      <p class="subtitle">Small modular and advanced reactors — Oklo, X-energy, NuScale, and peers.</p>
-      <span class="badge">Placeholder — section bot owns this folder</span>
+      <p class="subtitle">Weekly execution gauges for small modular and advanced reactor developers — licensing, fuel, commercial offtake, and cash runway.</p>
     </header>
 
-    <div class="placeholder-note">
-      This page is a scaffold for the <strong>smr</strong> section. Content, maps, and briefings will be owned by the section bot per <a href="../OWNERS.md">OWNERS.md</a>. Shared curated identifiers live under <code>data/</code>.
+    <section class="section">
+      <h2>About</h2>
+      <p>This section tracks public advanced-nuclear developers with six-gauge weekly scorecards. Import JSON updates from the weekly routine, or edit levels and notes in-browser. History stays in localStorage on your device.</p>
+      <p>Seed names: <span class="ticker">OKLO</span> <span class="ticker">XE</span> <span class="ticker">SMR</span> <span class="ticker">TerraPower</span> <span class="ticker">Kairos</span></p>
+      <p style="font-size:12px;color:var(--text-secondary);margin-top:8px"><strong>Not investment advice.</strong> Scores and notes are research opinions based on public sources.</p>
+    </section>
+
+    <div class="card-grid">
+      <a class="card" href="oklo.html" style="text-decoration:none;color:inherit">
+        <span class="icon" aria-hidden="true">⚛️</span>
+        <h2>Oklo (OKLO)</h2>
+        <p>Six gauges: Groves criticality, PPA / offtake, HALEU fuel, cash runway, NRC licensing, revenue quality.</p>
+        <span class="card-link">Open Oklo tracker →</span>
+      </a>
+      <a class="card" href="x-energy.html" style="text-decoration:none;color:inherit">
+        <span class="icon" aria-hidden="true">🔋</span>
+        <h2>X-Energy (XE)</h2>
+        <p>Six gauges: TX-1 FOAK hardware, commercial offtake, TRISO / HALEU, liquidity, NRC / Long Mott, revenue quality.</p>
+        <span class="card-link">Open X-Energy tracker →</span>
+      </a>
+      <div class="card" style="opacity:0.72">
+        <span class="icon" aria-hidden="true">📦</span>
+        <h3>NuScale (SMR)</h3>
+        <p>Weekly gauge tracker coming later — VOYGR modules, customer backlog, and NRC / manufacturing milestones.</p>
+        <span class="card-link" style="color:var(--text-secondary)">Coming soon</span>
+      </div>
     </div>
 
-<section class="section">
-  <h2>Scope</h2>
-  <p>SMR and advanced nuclear developer tracker: licensing status, commercial timelines, and datacenter partnerships.</p>
-  <p>Seed tickers / names:</p>
-  <p>
-    <span class="ticker">OKLO</span>
-    <span class="ticker">XE</span>
-    <span class="ticker">SMR</span>
-    <span class="ticker">TerraPower</span>
-    <span class="ticker">Kairos</span>
-  </p>
-  <p class="meta-row">Data: <code>data/nuclear_tracker.json</code>, <code>data/fusion_tracker.json</code>, <code>data/smr_companies.json</code></p>
-</section>
-<section class="section">
-  <h2>Coming soon</h2>
-  <ul>
-    <li>Developer comparison cards (Oklo, X-energy focus)</li>
-    <li>NRC / licensing timeline</li>
-    <li>Hyperscaler nuclear PPA links</li>
-  </ul>
-</section>
-
+    <section class="section">
+      <h2>How to use</h2>
+      <ul>
+        <li>Open a tracker, set the ISO week, adjust gauge bands, and save — history builds on this device.</li>
+        <li>Import a weekly JSON update via file picker or paste (see schema comment in each HTML file).</li>
+        <li>Optional seed for Oklo: <code>updates/oklo-week-latest.json</code>.</li>
+      </ul>
+    </section>
   </main>
 
   <footer class="site-footer">
     <p>Public investment briefing hub · <a href="https://armanamirzhan.github.io/investment_dashboard_public/">armanamirzhan.github.io/investment_dashboard_public</a></p>
-    <p>Source identifiers curated from Investment_Dashboard (read-only extract). Not investment advice.</p>
+    <p>Not investment advice. Section owned by SMR bot per <a href="../OWNERS.md">OWNERS.md</a>.</p>
   </footer>
   <script src="../assets/site.js"></script>
 </body>

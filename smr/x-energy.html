@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Weekly X-Energy (XE) execution gauges: TX-1 FOAK, offtake, TRISO/HALEU, liquidity, NRC, revenue.">
+<title>X-Energy Six Gauges — SMR — Investment Hub</title>
+<!--
+  Weekly auto-update import schema (JSON):
+  {
+    "week": "2026-W40",                 // ISO week (YYYY-Www); sets week picker
+    "generatedAt": "ISO8601",           // shown as "Last auto-update"
+    "source": "xenergy-weekly-routine", // optional provenance string
+    "gauges": {
+      "tx1_foak_hardware"|"commercial_offtake"|"fuel_cycle_triso_haleu"|
+      "liquidity_dilution_ardp"|"nrc_long_mott"|"revenue_quality": {
+        "level": 0|1|2,                 // required: red / yellow / green band
+        "label": "optional override",   // optional display label (else uses built-in)
+        "note": "...",                  // weekly note
+        "confidence": "high|medium|low",
+        "citations": [{"title":"", "url":""}]
+      }
+    },
+    "summary": "short plain-language digest"  // shown in banner on import
+  }
+  Import via file picker or paste + Apply. Overwrites current levels/notes and
+  history entry for that week. Citations render under each gauge card.
+-->
+  <link rel="stylesheet" href="../assets/site.css">
+<style>
+  :root {
+    --bg: #0b1220;
+    --panel: #121a2b;
+    --panel-2: #182235;
+    --border: #243049;
+    --text: #e8eef9;
+    --muted: #93a0b8;
+    --blue: #14b8a6;
+    --blue-deep: #0f766e;
+    --red: #ef4444;
+    --yellow: #eab308;
+    --green: #22c55e;
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background:
+      radial-gradient(1200px 600px at 10% -10%, #12302c 0%, transparent 55%),
+      radial-gradient(900px 500px at 100% 0%, #132033 0%, transparent 50%),
+      var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+  header.tracker-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 28px 20px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  h1 {
+    margin: 0 0 6px;
+    font-size: 1.55rem;
+    letter-spacing: -.02em;
+  }
+  .sub {
+    margin: 0;
+    color: var(--muted);
+    font-size: .95rem;
+    max-width: 56ch;
+    line-height: 1.45;
+  }
+  .last-auto {
+    margin: 8px 0 0;
+    font-size: .8rem;
+    color: var(--muted);
+  }
+  .last-auto strong { color: #a7f3d0; font-weight: 600; }
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+  label.week {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: .75rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  input[type="week"], input[type="file"], textarea, select, button {
+    font: inherit;
+  }
+  input[type="week"], select {
+    background: var(--panel);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+  button {
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  button.secondary {
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+  button:hover { filter: brightness(1.08); }
+  button:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+    filter: none;
+  }
+  .banner {
+    max-width: 1200px;
+    margin: 12px auto 0;
+    padding: 0 20px;
+  }
+  .banner p {
+    margin: 0;
+    padding: 10px 14px;
+    background: rgba(20,184,166,.12);
+    border: 1px solid rgba(20,184,166,.28);
+    border-radius: 12px;
+    color: #a7f3d0;
+    font-size: .88rem;
+  }
+  .banner p.summary {
+    background: rgba(34,197,94,.1);
+    border-color: rgba(34,197,94,.28);
+    color: #bbf7d0;
+  }
+  .banner p.error {
+    background: rgba(239,68,68,.12);
+    border-color: rgba(239,68,68,.35);
+    color: #fecaca;
+  }
+  .import-panel {
+    max-width: 1200px;
+    margin: 14px auto 0;
+    padding: 0 20px;
+  }
+  .import-card {
+    background: linear-gradient(180deg, var(--panel) 0%, #0f1728 100%);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 16px 18px;
+    box-shadow: var(--shadow);
+  }
+  .import-card h3 {
+    margin: 0 0 6px;
+    font-size: .95rem;
+  }
+  .import-card .hint {
+    margin: 0 0 12px;
+    color: var(--muted);
+    font-size: .82rem;
+    line-height: 1.4;
+  }
+  .import-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .import-row input[type="file"] {
+    color: var(--muted);
+    font-size: .82rem;
+    max-width: 100%;
+  }
+  .import-card textarea {
+    width: 100%;
+    min-height: 110px;
+    resize: vertical;
+    background: var(--panel-2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .8rem;
+    line-height: 1.4;
+  }
+  .import-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+  }
+  .import-status {
+    font-size: .8rem;
+    color: var(--muted);
+  }
+  .import-status.ok { color: #86efac; }
+  .import-status.err { color: #fca5a5; }
+  .grid {
+    max-width: 1200px;
+    margin: 18px auto 28px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+  .card {
+    background: linear-gradient(180deg, var(--panel) 0%, #0f1728 100%);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .card-top {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .num {
+    flex: 0 0 auto;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    background: linear-gradient(160deg, var(--blue), var(--blue-deep));
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: .95rem;
+  }
+  .titles h2 {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.25;
+  }
+  .titles p {
+    margin: 4px 0 0;
+    color: var(--muted);
+    font-size: .86rem;
+  }
+  .vs-oklo {
+    margin: 6px 0 0;
+    font-size: .72rem;
+    color: #5eead4;
+    letter-spacing: .02em;
+  }
+  .vs-oklo .tag {
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    padding: 1px 7px;
+    border-radius: 999px;
+    border: 1px solid rgba(20,184,166,.35);
+    background: rgba(20,184,166,.12);
+    margin-right: 6px;
+  }
+  .vs-oklo .tag.replace { color: #fca5a5; border-color: rgba(239,68,68,.35); background: rgba(239,68,68,.1); }
+  .vs-oklo .tag.adapt { color: #fef08a; border-color: rgba(234,179,8,.35); background: rgba(234,179,8,.1); }
+  .vs-oklo .tag.keep { color: #bbf7d0; border-color: rgba(34,197,94,.35); background: rgba(34,197,94,.1); }
+  .conf {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: .68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    padding: 2px 7px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    vertical-align: middle;
+  }
+  .conf.high { color: #bbf7d0; border-color: rgba(34,197,94,.35); background: rgba(34,197,94,.1); }
+  .conf.medium { color: #fef08a; border-color: rgba(234,179,8,.35); background: rgba(234,179,8,.1); }
+  .conf.low { color: #fecaca; border-color: rgba(239,68,68,.35); background: rgba(239,68,68,.1); }
+  .gauge-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 14px;
+    align-items: center;
+  }
+  @media (max-width: 560px) {
+    .gauge-row { grid-template-columns: 1fr; }
+  }
+  .gauge-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+  .gauge {
+    width: 160px;
+    height: 90px;
+    position: relative;
+  }
+  .gauge svg { width: 160px; height: 90px; overflow: visible; }
+  .needle {
+    transform-origin: 80px 80px;
+    transition: transform .45s cubic-bezier(.2,.8,.2,1);
+  }
+  .status-pill {
+    font-size: .78rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+  }
+  .status-pill.red { color: #fecaca; background: rgba(239,68,68,.15); border-color: rgba(239,68,68,.35); }
+  .status-pill.yellow { color: #fef08a; background: rgba(234,179,8,.15); border-color: rgba(234,179,8,.35); }
+  .status-pill.green { color: #bbf7d0; background: rgba(34,197,94,.15); border-color: rgba(34,197,94,.35); }
+  .legend {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: .68rem;
+    color: var(--muted);
+  }
+  .legend span::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+  .legend .l-red::before { background: var(--red); }
+  .legend .l-yellow::before { background: var(--yellow); }
+  .legend .l-green::before { background: var(--green); }
+  .meta ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--muted);
+    font-size: .84rem;
+    line-height: 1.45;
+  }
+  .meta .goal {
+    margin-top: 8px;
+    color: #dbe7ff;
+    font-size: .84rem;
+    font-weight: 600;
+  }
+  .citations {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px dashed var(--border);
+  }
+  .citations h4 {
+    margin: 0 0 6px;
+    font-size: .72rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    font-weight: 600;
+  }
+  .citations ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: .8rem;
+    line-height: 1.45;
+  }
+  .citations a { color: #5eead4; }
+  .editor {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+  }
+  .editor label {
+    font-size: .72rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  textarea {
+    width: 100%;
+    min-height: 64px;
+    resize: vertical;
+    background: var(--panel-2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+  .tracker-attribution {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+    color: var(--muted);
+    font-size: .85rem;
+  }
+  .tracker-attribution a { color: #5eead4; }
+  .history {
+    max-width: 1200px;
+    margin: 0 auto 36px;
+    padding: 0 20px;
+  }
+  .history h3 { margin: 0 0 10px; font-size: 1rem; }
+  .history table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    font-size: .8rem;
+  }
+  th, td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    white-space: nowrap;
+  }
+  th { color: var(--muted); font-weight: 600; background: var(--panel-2); }
+  tr:last-child td { border-bottom: none; }
+  .dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 999px;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  .empty { color: var(--muted); padding: 14px; }
+</style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">Arman <span>Invest</span></a>
+      <div class="nav-links">
+        <a href="../index.html" data-section="home">Hub</a>
+        <a href="../electrification/index.html" data-section="electrification">Electrification</a>
+        <a href="../smr/index.html" data-section="smr">SMR</a>
+        <a href="../uranium/index.html" data-section="uranium">Uranium</a>
+        <a href="../digests/index.html" data-section="digests">Digests</a>
+      </div>
+    </div>
+  </nav>
+  <header class="tracker-header">
+    <div>
+      <h1>X-Energy Six Gauges — Weekly Tracker</h1>
+      <p class="sub">Track six execution gauges for <strong>X-Energy (Nasdaq: XE)</strong>. Update once a week; history stays on this device. Public since Apr 2026 IPO.</p>
+      <p class="last-auto" id="lastAuto">Last auto-update: <strong>never</strong></p>
+    </div>
+    <div class="controls">
+      <label class="week">Week
+        <input type="week" id="weekInput" />
+      </label>
+      <button id="saveBtn" type="button">Save this week</button>
+      <button id="exportBtn" class="secondary" type="button">Export JSON</button>
+      <button id="resetBtn" class="secondary" type="button">Reset to baseline</button>
+    </div>
+  </header>
+
+  <div class="banner disclaimer-banner">
+    <p>Research tracker for personal use — <strong>not investment advice</strong>. Scores and notes are opinions based on public sources.</p>
+  </div>
+
+  <div class="banner">
+    <p id="bannerText">Adapted from Oklo tracker — REPLACE Groves→TX-1 FOAK; ADAPT PPA/HALEU/Revenue; KEEP cash+NRC shapes. XE is public since Apr 2026.</p>
+  </div>
+
+  <section class="import-panel">
+    <div class="import-card">
+      <h3>Import weekly update</h3>
+      <p class="hint">Paste or load a JSON update from the weekly routine (see schema comment in this file / <code>update-schema.example.json</code>). Apply sets gauges, notes, citations, week history, and the summary banner.</p>
+      <div class="import-row">
+        <input type="file" id="importFile" accept="application/json,.json" />
+      </div>
+      <textarea id="importPaste" placeholder='Paste weekly update JSON here, e.g. { "week": "2026-W40", "source": "xenergy-weekly-routine", "gauges": { ... }, "summary": "..." }'></textarea>
+      <div class="import-actions">
+        <button id="importApplyBtn" type="button">Apply import</button>
+        <button id="importClearBtn" class="secondary" type="button">Clear</button>
+        <span class="import-status" id="importStatus"></span>
+      </div>
+    </div>
+  </section>
+
+  <main class="grid" id="grid"></main>
+
+  <section class="history">
+    <h3>Weekly history</h3>
+    <div id="historyTable"></div>
+  </section>
+
+  <p class="tracker-attribution">Gauges adapted for <a href="https://x-energy.com/" target="_blank" rel="noopener">X-Energy, Inc. (Nasdaq: XE)</a>. localStorage key: <code>xenergy-six-gauges-v1</code>.</p>
+
+  <footer class="site-footer">
+    <p>Public investment briefing hub · <a href="https://armanamirzhan.github.io/investment_dashboard_public/">armanamirzhan.github.io/investment_dashboard_public</a> · <a href="index.html">SMR section</a></p>
+    <p>Not investment advice. Gauge data is stored in your browser’s localStorage only — nothing is uploaded.</p>
+  </footer>
+
+
+<script>
+const STORAGE_KEY = 'xenergy-six-gauges-v1';
+
+const GAUGES = [
+  {
+    id: 'tx1_foak_hardware',
+    num: 1,
+    title: 'TX-1 / FOAK Hardware Execution',
+    subtitle: 'TRISO-X TX-1 ops → Long Mott Xe-100 FOAK criticality',
+    levels: ['Licensed / Pre-build', 'Buildout Underway', 'Fuel Ops or FOAK Critical'],
+    tracks: [
+      'TX-1 construction phase (vertical → interior → equipment → hot ops)',
+      'Company-stated commercial production window (H1 2028)',
+      'Long Mott CP issuance → construction start → first criticality/COD (ARDP FOAK)'
+    ],
+    goal: 'Goal: TX-1 producing commercial TRISO on H1 2028 path; Long Mott CPA → construction → FOAK criticality.',
+    baseline: 1,
+    decision: 'REPLACE',
+    vsOklo: 'vs Oklo Groves Criticality'
+  },
+  {
+    id: 'commercial_offtake',
+    num: 2,
+    title: 'Dow / Amazon Offtake Maturity',
+    subtitle: 'JDA & options → FID / binding offtake → operating contract',
+    levels: ['LOI / MOU Only', 'JDA / Options / CPA Path', 'FID + Binding Offtake'],
+    tracks: [
+      'Dow Long Mott: JDA status, CPA progress, Dow FID timing',
+      'Amazon + Energy Northwest Cascade: CPA filing, offtake/right-to-purchase → binding PPA',
+      'Any SEC disclosure of definitive offtake with capacity, term, price/formula'
+    ],
+    goal: 'Goal: Convert Dow Seadrift and/or Cascade Amazon pathway into FID plus binding multi-year offtake.',
+    baseline: 1,
+    decision: 'ADAPT',
+    vsOklo: 'vs Oklo First LOI → Binding PPA'
+  },
+  {
+    id: 'fuel_cycle_triso_haleu',
+    num: 3,
+    title: 'TRISO-X + HALEU Supply Stack',
+    subtitle: 'Enrichment contracts + licensed fab → commercial TRISO delivery',
+    levels: ['No Path', 'Contracted + Fab Building', 'Delivering Commercial TRISO'],
+    tracks: [
+      'Centrus definitive enrichment agreement status and any delivery milestones',
+      'General Matter (and other) enrichment agreements',
+      'DOE HALEU Availability Program material for first Dow core',
+      'TX-1/TX-2 license conditions and first commercial pebble production'
+    ],
+    goal: 'Goal: Secure and demonstrate domestic HALEU→TRISO path with actual commercial fuel deliveries.',
+    baseline: 1,
+    decision: 'ADAPT',
+    vsOklo: 'vs Oklo HALEU Centrus contract & delivery'
+  },
+  {
+    id: 'liquidity_dilution_ardp',
+    num: 4,
+    title: 'Liquidity, Burn & ARDP Cost-Share',
+    subtitle: 'Runway vs op/capex burn; equity dilution; DOE 50/50',
+    levels: ['Stressed', 'Funded / Investing', 'Fortress / Self-funding'],
+    tracks: [
+      '10-Q: cash + short-term + long-term investments (= liquidity)',
+      'Net cash used in operating activities; capex net of grant reimbursements',
+      'Shares outstanding / ATM or follow-on equity (if any)',
+      'ARDP budget-period continuation and any incremental DOE obligation'
+    ],
+    goal: 'Goal: Maintain multi-year FOAK funding (private share + ARDP) without distressed dilution; progress toward self-funding.',
+    baseline: 1,
+    decision: 'KEEP',
+    vsOklo: 'vs Oklo Cash burn & equity dilution'
+  },
+  {
+    id: 'nrc_long_mott',
+    num: 5,
+    title: 'NRC Long Mott CPA Progress',
+    subtitle: 'Part 50 construction permit for 4× Xe-100 at Seadrift',
+    levels: ['Pre-docket / Early Review', 'Advanced Review', 'CP Issued'],
+    tracks: [
+      'NRC Long Mott milestone table (Draft SE, Advanced SE, Final SE, Hearing, CP decision)',
+      'EA/FONSI status (done 2026-05-18)',
+      'Cascade / Energy Northwest CPA filing (secondary licensing pipeline)',
+      'Note: TRISO-X Part 70 already achieved — do not double-count as reactor CP'
+    ],
+    goal: 'Goal: Obtain Long Mott construction permit on NRC schedule; then advance toward OL.',
+    baseline: 1,
+    decision: 'KEEP',
+    vsOklo: 'vs Oklo NRC licensing progress'
+  },
+  {
+    id: 'revenue_quality',
+    num: 6,
+    title: 'Revenue Quality Ladder',
+    subtitle: 'ARDP/services → commercial TRISO → power/steam offtake',
+    levels: ['Pre-revenue', 'Services / Grant Income', 'Fuel or Power/Steam Revenue'],
+    tracks: [
+      '10-Q / earnings: Services revenue vs Grant income split',
+      'First commercial TRISO fuel sale (customer, volume)',
+      'First Long Mott or Cascade MWh / steam revenue'
+    ],
+    goal: 'Goal: Graduate from ARDP/services reimbursement to commercial fuel and then FOAK power/steam revenue.',
+    baseline: 1,
+    decision: 'ADAPT',
+    vsOklo: 'vs Oklo First actual revenue'
+  }
+];
+
+const LEVEL_CLASS = ['red', 'yellow', 'green'];
+const NEEDLE_DEG = [-60, 0, 60];
+const DEFAULT_BANNER = 'Adapted from Oklo tracker — REPLACE Groves→TX-1 FOAK; ADAPT PPA/HALEU/Revenue; KEEP cash+NRC shapes. XE is public since Apr 2026.';
+
+function isoWeekNow() {
+  const d = new Date();
+  const date = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+  const dayNum = date.getUTCDay() || 7;
+  date.setUTCDate(date.getUTCDate() + 4 - dayNum);
+  const yearStart = new Date(Date.UTC(date.getUTCFullYear(), 0, 1));
+  const weekNo = Math.ceil((((date - yearStart) / 86400000) + 1) / 7);
+  return `${date.getUTCFullYear()}-W${String(weekNo).padStart(2, '0')}`;
+}
+
+function loadState() {
+  try {
+    return JSON.parse(localStorage.getItem(STORAGE_KEY)) || { current: {}, history: [], lastAutoUpdate: null };
+  } catch {
+    return { current: {}, history: [], lastAutoUpdate: null };
+  }
+}
+
+function saveState(state) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+}
+
+function defaultCurrent() {
+  const out = {};
+  for (const g of GAUGES) {
+    out[g.id] = { level: g.baseline, note: '', label: null, confidence: null, citations: [] };
+  }
+  return out;
+}
+
+function normalizeGaugeEntry(raw, baseline) {
+  const level = Math.max(0, Math.min(2, Number(raw && raw.level != null ? raw.level : baseline)));
+  const citations = Array.isArray(raw && raw.citations)
+    ? raw.citations
+        .filter(c => c && (c.title || c.url))
+        .map(c => ({ title: String(c.title || c.url || ''), url: String(c.url || '') }))
+    : [];
+  let confidence = raw && raw.confidence ? String(raw.confidence).toLowerCase() : null;
+  if (confidence && !['high', 'medium', 'low'].includes(confidence)) confidence = null;
+  return {
+    level,
+    note: raw && raw.note != null ? String(raw.note) : '',
+    label: raw && raw.label != null && String(raw.label).trim() ? String(raw.label) : null,
+    confidence,
+    citations
+  };
+}
+
+let state = loadState();
+if (!state.current || !Object.keys(state.current).length) {
+  state.current = defaultCurrent();
+}
+if (!Array.isArray(state.history)) state.history = [];
+if (!('lastAutoUpdate' in state)) state.lastAutoUpdate = null;
+for (const g of GAUGES) {
+  if (!state.current[g.id]) state.current[g.id] = { level: g.baseline, note: '', label: null, confidence: null, citations: [] };
+  else {
+    state.current[g.id] = normalizeGaugeEntry(state.current[g.id], g.baseline);
+  }
+}
+
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function formatWhen(iso) {
+  if (!iso) return null;
+  try {
+    const d = new Date(iso);
+    if (Number.isNaN(d.getTime())) return String(iso);
+    return d.toLocaleString(undefined, {
+      year: 'numeric', month: 'short', day: 'numeric',
+      hour: 'numeric', minute: '2-digit'
+    });
+  } catch {
+    return String(iso);
+  }
+}
+
+function setBanner(text, kind) {
+  const el = document.getElementById('bannerText');
+  el.textContent = text || DEFAULT_BANNER;
+  el.classList.remove('summary', 'error');
+  if (kind === 'summary') el.classList.add('summary');
+  if (kind === 'error') el.classList.add('error');
+}
+
+function renderLastAuto() {
+  const el = document.getElementById('lastAuto');
+  const info = state.lastAutoUpdate;
+  if (!info || !info.generatedAt) {
+    el.innerHTML = 'Last auto-update: <strong>never</strong>';
+    return;
+  }
+  const when = formatWhen(info.generatedAt);
+  const week = info.week ? ` · week ${escapeHtml(info.week)}` : '';
+  const src = info.source ? ` · ${escapeHtml(info.source)}` : '';
+  el.innerHTML = `Last auto-update: <strong>${escapeHtml(when)}</strong>${week}${src}`;
+}
+
+function renderGaugeSvg(level) {
+  const deg = NEEDLE_DEG[level] ?? 0;
+  return `
+  <svg viewBox="0 0 160 95" aria-hidden="true">
+    <path d="M16 80 A64 64 0 0 1 58.7 24.7" fill="none" stroke="#ef4444" stroke-width="14" stroke-linecap="butt"/>
+    <path d="M58.7 24.7 A64 64 0 0 1 101.3 24.7" fill="none" stroke="#eab308" stroke-width="14" stroke-linecap="butt"/>
+    <path d="M101.3 24.7 A64 64 0 0 1 144 80" fill="none" stroke="#22c55e" stroke-width="14" stroke-linecap="butt"/>
+    <circle cx="80" cy="80" r="7" fill="#e8eef9"/>
+    <g class="needle" style="transform: rotate(${deg}deg)">
+      <line x1="80" y1="80" x2="80" y2="28" stroke="#e8eef9" stroke-width="3.5" stroke-linecap="round"/>
+      <circle cx="80" cy="80" r="4" fill="#0b1220"/>
+    </g>
+  </svg>`;
+}
+
+function renderCitations(citations) {
+  if (!citations || !citations.length) return '';
+  const items = citations.map(c => {
+    const title = escapeHtml(c.title || c.url || 'Source');
+    if (c.url) {
+      const url = escapeHtml(c.url);
+      return `<li><a href="${url}" target="_blank" rel="noopener">${title}</a></li>`;
+    }
+    return `<li>${title}</li>`;
+  }).join('');
+  return `<div class="citations"><h4>Citations</h4><ul>${items}</ul></div>`;
+}
+
+function decisionClass(decision) {
+  const d = String(decision || '').toLowerCase();
+  if (d === 'replace') return 'replace';
+  if (d === 'adapt') return 'adapt';
+  if (d === 'keep') return 'keep';
+  return '';
+}
+
+function renderCards() {
+  const grid = document.getElementById('grid');
+  grid.innerHTML = GAUGES.map(g => {
+    const cur = state.current[g.id] || normalizeGaugeEntry(null, g.baseline);
+    const level = Number(cur.level);
+    const cls = LEVEL_CLASS[level];
+    const label = cur.label || g.levels[level];
+    const confHtml = cur.confidence
+      ? `<span class="conf ${escapeHtml(cur.confidence)}" title="Confidence">${escapeHtml(cur.confidence)}</span>`
+      : '';
+    const vsHtml = `<p class="vs-oklo"><span class="tag ${decisionClass(g.decision)}">${escapeHtml(g.decision)}</span>${escapeHtml(g.vsOklo)}</p>`;
+    return `
+    <article class="card" data-id="${g.id}">
+      <div class="card-top">
+        <div class="num">${g.num}</div>
+        <div class="titles">
+          <h2>${g.title}${confHtml}</h2>
+          <p>${g.subtitle}</p>
+          ${vsHtml}
+        </div>
+      </div>
+      <div class="gauge-row">
+        <div class="gauge-wrap">
+          <div class="gauge">${renderGaugeSvg(level)}</div>
+          <span class="status-pill ${cls}">${escapeHtml(label)}</span>
+          <div class="legend">
+            <span class="l-red">${g.levels[0]}</span>
+            <span class="l-yellow">${g.levels[1]}</span>
+            <span class="l-green">${g.levels[2]}</span>
+          </div>
+        </div>
+        <div class="meta">
+          <ul>${g.tracks.map(t => `<li>${t}</li>`).join('')}</ul>
+          <div class="goal">${g.goal}</div>
+          ${renderCitations(cur.citations)}
+        </div>
+      </div>
+      <div class="editor">
+        <label for="sel-${g.id}">Status this week</label>
+        <select id="sel-${g.id}" data-id="${g.id}">
+          ${g.levels.map((name, i) => `<option value="${i}" ${i === level ? 'selected' : ''}>${name}</option>`).join('')}
+        </select>
+        <label for="note-${g.id}">Weekly note</label>
+        <textarea id="note-${g.id}" data-id="${g.id}" placeholder="What changed this week?">${escapeHtml(cur.note || '')}</textarea>
+      </div>
+    </article>`;
+  }).join('');
+
+  grid.querySelectorAll('select').forEach(sel => {
+    sel.addEventListener('change', () => {
+      const id = sel.dataset.id;
+      state.current[id].level = Number(sel.value);
+      state.current[id].label = null;
+      saveState(state);
+      renderCards();
+      bindEditors();
+    });
+  });
+  bindEditors();
+}
+
+function bindEditors() {
+  document.querySelectorAll('textarea[data-id]').forEach(ta => {
+    ta.addEventListener('input', () => {
+      state.current[ta.dataset.id].note = ta.value;
+      saveState(state);
+    });
+  });
+}
+
+function historyShortTitle(g) {
+  const map = {
+    tx1_foak_hardware: 'TX-1',
+    commercial_offtake: 'Offtake',
+    fuel_cycle_triso_haleu: 'TRISO',
+    liquidity_dilution_ardp: 'Liquidity',
+    nrc_long_mott: 'NRC',
+    revenue_quality: 'Revenue'
+  };
+  return map[g.id] || g.title.split(' ')[0];
+}
+
+function renderHistory() {
+  const el = document.getElementById('historyTable');
+  if (!state.history.length) {
+    el.innerHTML = '<div class="empty">No weekly saves yet. Set statuses and click “Save this week.”</div>';
+    return;
+  }
+  const rows = [...state.history].reverse().map(entry => {
+    const cells = GAUGES.map(g => {
+      const item = entry.gauges[g.id];
+      const level = item ? item.level : 0;
+      const cls = LEVEL_CLASS[level];
+      const color = cls === 'red' ? '#ef4444' : cls === 'yellow' ? '#eab308' : '#22c55e';
+      const label = (item && item.label) || g.levels[level];
+      return `<td><span class="dot" style="background:${color}"></span>${escapeHtml(label)}</td>`;
+    }).join('');
+    return `<tr><td>${escapeHtml(entry.week)}</td>${cells}</tr>`;
+  }).join('');
+  el.innerHTML = `
+    <table>
+      <thead>
+        <tr>
+          <th>Week</th>
+          ${GAUGES.map(g => `<th>${g.num}. ${historyShortTitle(g)}</th>`).join('')}
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+}
+
+function saveWeek() {
+  const week = document.getElementById('weekInput').value || isoWeekNow();
+  const snapshot = {
+    week,
+    savedAt: new Date().toISOString(),
+    gauges: JSON.parse(JSON.stringify(state.current))
+  };
+  const idx = state.history.findIndex(h => h.week === week);
+  if (idx >= 0) state.history[idx] = snapshot;
+  else state.history.push(snapshot);
+  state.history.sort((a, b) => a.week.localeCompare(b.week));
+  saveState(state);
+  renderHistory();
+}
+
+function setImportStatus(msg, kind) {
+  const el = document.getElementById('importStatus');
+  el.textContent = msg || '';
+  el.classList.remove('ok', 'err');
+  if (kind === 'ok') el.classList.add('ok');
+  if (kind === 'err') el.classList.add('err');
+}
+
+function applyImportPayload(payload) {
+  if (!payload || typeof payload !== 'object') {
+    throw new Error('Import must be a JSON object.');
+  }
+  if (!payload.gauges || typeof payload.gauges !== 'object') {
+    throw new Error('Missing "gauges" object.');
+  }
+  const week = payload.week || document.getElementById('weekInput').value || isoWeekNow();
+  if (!/^\d{4}-W\d{2}$/.test(week)) {
+    throw new Error('Invalid "week" — expected YYYY-Www (e.g. 2026-W40).');
+  }
+
+  const next = {};
+  for (const g of GAUGES) {
+    const raw = payload.gauges[g.id];
+    if (raw == null) {
+      next[g.id] = normalizeGaugeEntry(state.current[g.id], g.baseline);
+    } else {
+      if (raw.level == null || Number.isNaN(Number(raw.level))) {
+        throw new Error(`Gauge "${g.id}" needs a numeric level 0|1|2.`);
+      }
+      next[g.id] = normalizeGaugeEntry(raw, g.baseline);
+    }
+  }
+
+  state.current = next;
+  document.getElementById('weekInput').value = week;
+
+  const snapshot = {
+    week,
+    savedAt: new Date().toISOString(),
+    importedAt: new Date().toISOString(),
+    source: payload.source || null,
+    summary: payload.summary || null,
+    gauges: JSON.parse(JSON.stringify(state.current))
+  };
+  const idx = state.history.findIndex(h => h.week === week);
+  if (idx >= 0) state.history[idx] = snapshot;
+  else state.history.push(snapshot);
+  state.history.sort((a, b) => a.week.localeCompare(b.week));
+
+  state.lastAutoUpdate = {
+    generatedAt: payload.generatedAt || new Date().toISOString(),
+    week,
+    source: payload.source || null,
+    importedAt: new Date().toISOString()
+  };
+
+  saveState(state);
+
+  if (payload.summary) setBanner(payload.summary, 'summary');
+  else setBanner(DEFAULT_BANNER);
+
+  renderLastAuto();
+  renderCards();
+  bindEditors();
+  renderHistory();
+  return week;
+}
+
+function applyImportFromText(text) {
+  let payload;
+  try {
+    payload = JSON.parse(text);
+  } catch {
+    throw new Error('Could not parse JSON.');
+  }
+  return applyImportPayload(payload);
+}
+
+document.getElementById('weekInput').value = isoWeekNow();
+document.getElementById('saveBtn').addEventListener('click', saveWeek);
+document.getElementById('exportBtn').addEventListener('click', () => {
+  const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `xenergy-gauges-${document.getElementById('weekInput').value || 'export'}.json`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+});
+document.getElementById('resetBtn').addEventListener('click', () => {
+  if (!confirm('Reset current statuses to the gauge-map baseline (all mid / level 1)? History is kept.')) return;
+  state.current = defaultCurrent();
+  saveState(state);
+  setBanner(DEFAULT_BANNER);
+  renderCards();
+});
+
+document.getElementById('importFile').addEventListener('change', (e) => {
+  const file = e.target.files && e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    document.getElementById('importPaste').value = String(reader.result || '');
+    setImportStatus(`Loaded ${file.name}`, 'ok');
+  };
+  reader.onerror = () => setImportStatus('Failed to read file.', 'err');
+  reader.readAsText(file);
+});
+
+document.getElementById('importApplyBtn').addEventListener('click', () => {
+  const text = document.getElementById('importPaste').value.trim();
+  if (!text) {
+    setImportStatus('Paste JSON or choose a file first.', 'err');
+    return;
+  }
+  try {
+    const week = applyImportFromText(text);
+    setImportStatus(`Applied import for ${week}.`, 'ok');
+  } catch (err) {
+    setImportStatus(err.message || 'Import failed.', 'err');
+    setBanner(err.message || 'Import failed.', 'error');
+  }
+});
+
+document.getElementById('importClearBtn').addEventListener('click', () => {
+  document.getElementById('importPaste').value = '';
+  document.getElementById('importFile').value = '';
+  setImportStatus('');
+});
+
+if (state.lastAutoUpdate && state.history.length) {
+  const last = [...state.history].reverse().find(h => h.summary);
+  if (last && last.summary) setBanner(last.summary, 'summary');
+}
+
+renderLastAuto();
+renderCards();
+renderHistory();
+</script>
+  <script src="../assets/site.js"></script>
+</body>
+</html>
