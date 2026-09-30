@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Infra Digest — 2026-09-30 — Investment Hub</title>
+  <meta name="description" content="AI infrastructure daily digest for 2026-09-30.">
+  <link rel="stylesheet" href="../assets/site.css">
+  <style>
+    .digest-body h1 { font-size: 1.75rem; margin: 0 0 8px; }
+    .digest-body h2 { font-size: 1.25rem; margin: 28px 0 10px; color: var(--text-primary); }
+    .digest-body h3 { font-size: 1.05rem; margin: 20px 0 8px; color: var(--accent-cyan); }
+    .digest-body p, .digest-body li { color: var(--text-secondary); margin-bottom: 8px; }
+    .digest-body strong { color: var(--text-primary); }
+    .digest-body ul { margin: 8px 0 12px 1.2rem; }
+    .digest-body code { font-size: 0.9em; background: var(--bg-hover); padding: 1px 5px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">Arman <span>Invest</span></a>
+      <div class="nav-links">
+        <a href="../index.html" data-section="home">Hub</a>
+        <a href="../electrification/index.html" data-section="electrification">Electrification</a>
+        <a href="../smr/index.html" data-section="smr">SMR</a>
+        <a href="../uranium/index.html" data-section="uranium">Uranium</a>
+        <a href="../digests/index.html" data-section="digests">Digests</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <p style="margin-bottom:16px"><a href="index.html">← All digests</a></p>
+    <article class="section digest-body">
+<h1>AI Infra Digest — 2026-09-30</h1>
+<p>Baseline reference: <code>/workspace/ai-infra-baseline/BASELINE.md</code> (as of 2026-09-27). Coverage window ~2026-09-27 through morning 2026-09-30 (America/New_York), with emphasis on items <strong>after</strong> the 2026-09-28 and 2026-09-29 digests. No baseline promotion this run (rank order unchanged; no ≥2-quarter timeline slip/acceleration; no major plant online/cancel).</p>
+<h2>Summary (5 bullets max)</h2>
+<ul>
+<li><strong>Power / MV (medium voltage):</strong> At YOTTA 2026 (Sep 28), Schneider Electric unveiled what it calls the first fully <strong>software-defined MV switchgear</strong>, in live pilot with Equinix; claims up to <strong>3×</strong> faster ordering/manufacturing and <strong>2×</strong> faster commissioning vs conventional engineered-to-order MV. Also launched <strong>RM AirSeT 38</strong> SF₆ (sulfur hexafluoride)-free GIS (gas-insulated switchgear) to <strong>38 kV</strong> — order intake planned <strong>2027</strong>, first deliveries <strong>2028</strong>. Separately (Sep 29), <strong>Eaton + Infineon</strong> partnered on SiC (silicon carbide) devices for Eaton’s <strong>MVSST 2.0</strong> solid-state transformer targeting <strong>800 VDC</strong> AI data-center architectures (APAC platform <strong>1.25–2.5 MW</strong>, 10 kV AC → 800 VDC).</li>
+<li><strong>HBM (high bandwidth memory) pricing (secondary):</strong> TrendForce (circulated Sep 29–30) forecasts <strong>mixed HBM ASP (average selling price) +121%</strong> in <strong>2027</strong> vs 2026 on shortage + HBM4/HBM4E mix; does <strong>not</strong> mean every SKU doubles. Tightness into 2027 reinforced; wait for <strong>Micron FY26 Q4 AMC today</strong> for primary company print.</li>
+<li><strong>Fiber:</strong> AT&amp;T and Corning (GLW) signed a multi-year fiber-and-cable supply agreement valued at <strong>&gt;$3B</strong> (Sep 29) to support AT&amp;T’s path to <strong>60M</strong> fiber locations by <strong>2030</strong> — primarily telecom FTTH (fiber-to-the-home), with AI/data demand cited as a usage driver; not a CoWoS (chip on wafer on substrate) or InP (indium phosphide) capacity event.</li>
+<li><strong>Optics tape / analyst:</strong> Optics complex sold off Sep 28 with the AI-hardware group, then rebounded Sep 29 (<strong>LITE ~+7%</strong>, <strong>COHR/GLW ~+5%</strong> intraday prints in trade press) on Citi optical-circuit-switching TAM (~<strong>$11B by 2030</strong>) and a GF Securities note arguing Nvidia CPO (co-packaged optics) deployment is accelerating. Incremental PhotonLink staging (trade press Sep 29): CPO scale-out <strong>Q4 CY2026</strong>, CPO scale-up + NPO (near-packaged optics) <strong>2H 2027</strong>, chip-to-chip ~<strong>2029–2030</strong>; Nvidia named as public CPO LTA (long-term agreement) customer.</li>
+<li><strong>Calendar:</strong> Micron <strong>FY26 Q4</strong> still due <strong>Wed Sep 30 after the close</strong> (call <strong>2:30 p.m. MT / 4:30 p.m. ET</strong>) — <strong>not yet reported</strong> as of this morning-ET digest. Next primary HBM refresh trigger.</li>
+</ul>
+<h2>Deltas vs baseline (CHANGED / NEW / UNCHANGED)</h2>
+<h3>NEW</h3>
+<ul>
+<li><strong>NEW — Schneider software-defined MV switchgear + RM AirSeT 38 (YOTTA, Sep 28):</strong> First fully software-defined MV architecture claimed; Equinix colocation pilot live; White Paper 303 comparison cites up to <strong>3×</strong> faster ordering/manufacturing, <strong>2×</strong> faster commissioning, and large reductions in control wiring/terminals/copper vs conventional ETO MV. Pilots continue through <strong>2027</strong>, broader availability <strong>2028</strong>. <strong>RM AirSeT 38 Software Defined</strong> extends SF₆-free AirSeT GIS from 24 kV to <strong>38 kV</strong> for high-density AI DC MV backbones; order intake <strong>2027</strong>, first deliveries <strong>2028</strong>. Also highlighted <strong>Galaxy VXL</strong> UPS (uninterruptible power supply) up to <strong>1.25 MW</strong>/frame. Source: Schneider / PR Newswire, access 2026-09-30.</li>
+<li><strong>NEW — Eaton + Infineon SiC for MVSST 2.0 / 800 VDC (Sep 29):</strong> Infineon to supply SiC power devices for Eaton’s medium-voltage solid-state transformer platform aimed at direct MV AC → <strong>800 VDC</strong> AI DC distribution (fewer conversion stages). APAC specs cited: <strong>10 kV</strong> three-phase input, constant <strong>800 VDC</strong> output, <strong>1.25–2.5 MW</strong> configurations; efficiency <strong>&gt;98%</strong> depending on config (company claim). Exploring next-gen SST on <strong>2.3 / 3.3 kV</strong> SiC modules. <strong>No hyperscaler customer, shipment volume, or COD</strong> disclosed. Sources: DCD / Semiconductor Today / Converge Digest summarizing company statements, access 2026-09-30.</li>
+<li><strong>NEW — AT&amp;T–Corning &gt;$3B fiber/cable multi-year agreement (Sep 29):</strong> Corning to supply fiber and cable for AT&amp;T network expansion toward <strong>60 million</strong> fiber locations by end-<strong>2030</strong>; deal value <strong>more than $3 billion</strong>. AT&amp;T reiterates prior financial outlook / CapEx plan. Framed around household/data/AI usage growth — <strong>telecom access fiber</strong>, not optical-transceiver InP/EML (electro-absorption modulated laser) capacity. Sources: AT&amp;T–Corning PR Newswire; Reuters, access 2026-09-30.</li>
+<li><strong>NEW (secondary) — TrendForce HBM mixed ASP +121% in 2027 (Sep 29–30):</strong> Research firm forecasts HBM blended ASP up <strong>121%</strong> next year on continued shortage and mix shift to HBM4 (2H’26) then HBM4E (2H’27). Notes Big Tech considering <strong>8-high</strong> vs <strong>12-high</strong> stacks to manage GPU BOM (bill of materials), but cost/Gb for 8-high still <strong>10–20%</strong> higher (base-die cost). Aju Press adds Samsung P4 HBM capacity aim <strong>100–120k wafers/mo by Q1’27</strong> (secondary). Treat as <strong>channel research</strong>, not company IR. Sources: Sedaily / Aju Press citing TrendForce, access 2026-09-30.</li>
+<li><strong>NEW (incremental / trade press) — PhotonLink production staging + Nvidia CPO LTA named (RCR Wireless Sep 29, covering ECOC):</strong> Builds on 09-28 digest PhotonLink launch. Staging: CPO scale-out production ramp <strong>Q4 CY2026</strong>; CPO scale-up and NPO ramps <strong>2H 2027</strong>; chip-to-chip ~<strong>2029–2030</strong>. Julie Eng identified <strong>Nvidia</strong> as the public customer on Coherent’s CPO LTA. CEO framed PhotonLink as potentially adding <strong>~$30B</strong> addressable market by <strong>2030</strong> on top of existing ~<strong>$60B</strong> portfolio opportunity (company commentary via trade press). Source: RCR Wireless, access 2026-09-30.</li>
+<li><strong>NEW (secondary / market) — Optics tape Sep 28–29 + Citi OCS / GF CPO notes:</strong> Sep 28 AI-hardware selloff hit LITE/COHR/GLW/MRVL/VRT; Sep 29 rebound with LITE ~<strong>+7%</strong>, COHR/GLW ~<strong>+5%</strong> (intraday trade-press prints). Citi optical circuit switching market ~<strong>$11B by 2030</strong> (research cited by trade press). GF Securities Buy reiteration cited Nvidia CPO scaling faster; projected Lumentum CPO laser revenue ~<strong>$427M (2027) → $750M (2028)</strong> and NPO revenue potentially ~<strong>$2.55B in 2028</strong> — <strong>analyst estimates only</strong>. Citi PT on LITE raised to <strong>$1,400</strong> from <strong>$1,200</strong> (secondary). Sources: 24/7 Wall St.; Investing.com summary, access 2026-09-30.</li>
+</ul>
+<h3>CHANGED</h3>
+<ul>
+<li>None on ranked bottlenecks, OEM lead times, or core capacity figures from <strong>primary IR</strong> this window. TrendForce HBM ASP path is a <strong>new secondary forecast</strong> (tagged NEW above), not a revision of a company-disclosed baseline number. PhotonLink staging clarifies ECOC launch timelines already flagged 09-28 without changing baseline “large-scale CPO more 2028–2030” judgment (pluggables still dominate near-term).</li>
+</ul>
+<h3>UNCHANGED (top constraints reconfirmed or silent)</h3>
+<ul>
+<li><strong>UNCHANGED:</strong> Bottleneck rank order <strong>#1 LPT (large power transformer) / GSU (generator step-up) → #2 interconnect → #3 InP/EML → #4 HBM → #5 MV/LV (medium/low voltage) switchgear → #6 CoWoS/OSAT → #7 BTM (behind the meter) gas → #8 liquid cooling / CDU (coolant distribution unit) → #9 EUV → #10 nuclear restarts → #11 SMR FOAK → #12 GPUs relative</strong>. Schneider MV product news and Eaton SST are <strong>execution / architecture</strong> signals at ranks <strong>#5 / #1-adjacent</strong>, not a rank leapfrog of LPT lead times.</li>
+<li><strong>UNCHANGED:</strong> Eaton US DC backlog <strong>307 GW</strong>; GEV Electrification DC orders <strong>&gt;$5B H1’26</strong> / group backlog <strong>$176B</strong>; Powell <strong>$2.4B</strong>; Siemens Energy Grid <strong>€51B</strong> / group <strong>€162B</strong>; Hitachi MS plant production <strong>2029</strong>. No new primary GEV/POWL/Hitachi/Hubbell IR in this overnight/morning window.</li>
+<li><strong>UNCHANGED:</strong> Lumentum EML supply <strong>&gt;30% below</strong> demand (baseline); Nvidia <strong>$2B</strong> each into LITE/COHR (Mar 2026). Prior digests’ Coherent PhotonLink + MS “InP substrates gating / sold out 12–18 mo” and LITE ELSFP/D2D demos stand.</li>
+<li><strong>UNCHANGED:</strong> SK Hynix &amp; Micron <strong>2026 HBM sold out</strong>; HBM4 mass ship at SKH; Micron FY26 Q4 <strong>still pending</strong> (due today AMC — not printed as of morning ET).</li>
+<li><strong>UNCHANGED:</strong> TSMC CoWoS path (analyst) ~<strong>120–140 → 180–200 → ~260 kwpm</strong>; UBS Sep 22 industry YE27 ~<strong>270 kwpm</strong>; Amkor AZ <strong>early 2028</strong>; Intel EMIB-T yields ~<strong>45%</strong>. No material packaging primary IR overnight.</li>
+<li><strong>UNCHANGED:</strong> Vertiv FY26 sales guide <strong>$13.8–14.2B</strong>; LC capacity expansion <strong>+40–50%</strong>; CDU lead times often <strong>~20–26 weeks</strong>. DSX Ready / KES / Gunsan items already in 09-28/09-29 digests.</li>
+<li><strong>UNCHANGED:</strong> Crane restart target <strong>2027</strong> (FONSI already in 09-28 digest); CEG <strong>+920 MW</strong> LT nuclear PPAs (power purchase agreements) start <strong>2029–2032</strong>.</li>
+<li><strong>UNCHANGED:</strong> ASML EUV through <strong>2027</strong> nearly booked; FY26 <strong>€43–45B</strong>; <strong>+30%</strong> Low-NA capacity plan <strong>2027</strong>.</li>
+<li><strong>UNCHANGED:</strong> Utility archetype split — merchant (<strong>CEG / VST / TLN</strong>) capture PPA scarcity; vertically integrated (<strong>AEP / Entergy / Duke / Southern</strong>) capture rate-base CapEx under ROE (return on equity) caps; wires-only (<strong>NGG / ES / EXC / ED</strong>) least positioned. NEE–Dominion <strong>~$66.8B</strong> still pending (VA benefits package Sep 14; close still guided <strong>2H 2027</strong> in deal materials). No material new PJM capacity print or Exelon pipeline revision in this window.</li>
+</ul>
+<p><strong>Already covered 2026-09-28 / 2026-09-29 (do not rehash as NEW):</strong> Coherent PhotonLink launch metrics; MS ECOC InP note; Crane NRC EA/FONSI Sep 25; Lambda OK DC; Gunsan/Vertiv; Vertiv DSX Ready CDU + KES acquisition; Lumentum DWDM ELSFP + D2D demo; Samsung HBM4 ~80% yield / Counterpoint share mix.</p>
+<h2>Bottleneck watch (any rank movement?)</h2>
+<p><strong>No rank movement.</strong></p>
+<ul>
+<li>Schneider software-defined MV + RM AirSeT 38 and Eaton SiC SST <strong>reinforce</strong> elevated MV/power-architecture urgency (ranks <strong>#5</strong> and campus energization stack) but do <strong>not</strong> shorten disclosed LPT/GSU lead times (<strong>#1</strong>) or interconnection queues (<strong>#2</strong>). Broader Schneider MV availability <strong>2028</strong> and RM AirSeT deliveries <strong>2028</strong> are consistent with multi-year power easing, not a 2026–27 unlock.</li>
+<li>TrendForce <strong>+121%</strong> HBM mixed ASP <strong>tightens conviction</strong> on rank <strong>#4</strong> scarcity into 2027 without changing sold-out language — primary confirmation still awaits Micron AMC today.</li>
+<li>Optics analyst CPO/OCS notes and PhotonLink staging sit inside rank <strong>#3 InP/EML</strong> and baseline “large-scale CPO more 2028–2030” framing; they do not ease substrate/EML tightness.</li>
+<li>Corning–AT&amp;T fiber deal is <strong>access-network</strong> CapEx, not a packaging or laser-substrate relief.</li>
+</ul>
+<p>Open conflicts still live: McKinsey vs LightCounting on transceiver clear timing; Hitachi VA <strong>2028 vs 2029</strong>; AXT quarterly capacity $ targets; ASE ASX mkt-cap aggregator conflict.</p>
+<h2>Company signals</h2>
+<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px;margin:12px 0">
+<tr><th style="border:1px solid var(--border);padding:8px 10px;text-align:left;background:var(--bg-hover)">Company</th><th style="border:1px solid var(--border);padding:8px 10px;text-align:left;background:var(--bg-hover)">Signal</th><th style="border:1px solid var(--border);padding:8px 10px;text-align:left;background:var(--bg-hover)">Tag</th></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>Schneider (SBGSY)</strong></td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">YOTTA: software-defined MV switchgear (Equinix pilot); RM AirSeT 38 to 38 kV (orders ’27 / deliveries ’28); Galaxy VXL UPS</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">NEW</td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>ETN</strong></td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">Infineon SiC supply for MVSST 2.0 → 800 VDC AI DC (APAC 1.25–2.5 MW); no volume/COD</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">NEW</td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>Infineon (IFX)</strong></td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">SiC design-win into Eaton SST / 800 VDC chain</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">NEW</td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>GLW</strong></td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">AT&amp;T <strong>&gt;$3B</strong> multi-year fiber/cable agreement (Sep 29); also rode optics rebound ~+5%</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">NEW (deal)</td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>LITE / COHR</strong></td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">Sep 28 selloff → Sep 29 rebound; Citi OCS / GF CPO analyst notes (secondary); PhotonLink Nvidia CPO LTA named in trade press</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">NEW (tape + secondary)</td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>SK Hynix / Samsung</strong></td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">TrendForce HBM mixed ASP <strong>+121%</strong> for 2027 (secondary); Samsung P4 capacity commentary (secondary)</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">NEW (secondary)</td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>MU</strong></td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">FY26 Q4 <strong>Sep 30 AMC</strong> — <strong>not yet reported</strong> as of morning ET</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">UNCHANGED calendar</td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>CEG</strong></td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">Crane COD still <strong>2027</strong>; FONSI already logged 09-28</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">UNCHANGED COD</td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>GEV / POWL / SMNEY / HUBB / Hitachi Energy</strong></td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">No material primary IR delta in this morning window; GEV on YOTTA panel (presence only)</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">UNCHANGED</td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>VRT</strong></td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">No new primary overnight beyond 09-28/09-29 items</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">UNCHANGED vs prior digests</td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>ASML / TSM / AMKR / ASX / MRVL</strong></td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">No material primary IR delta; MRVL Investor Day still <strong>Oct 6</strong></td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">UNCHANGED</td></tr>
+</table></div>
+<h2>Timeline updates (2026–2029+)</h2>
+<div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:14px;margin:12px 0">
+<tr><th style="border:1px solid var(--border);padding:8px 10px;text-align:left;background:var(--bg-hover)">Item</th><th style="border:1px solid var(--border);padding:8px 10px;text-align:left;background:var(--bg-hover)">Baseline</th><th style="border:1px solid var(--border);padding:8px 10px;text-align:left;background:var(--bg-hover)">Digest update</th></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">Crane COD</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>2027</strong></td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>UNCHANGED</strong></td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">Schneider SD-MV broader avail</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">(not in baseline)</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>NEW:</strong> pilots through <strong>2027</strong>; broader avail <strong>2028</strong></td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">RM AirSeT 38 deliveries</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">(not in baseline)</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>NEW:</strong> order intake <strong>2027</strong>; first deliveries <strong>2028</strong></td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">Eaton MVSST / 800 VDC with Infineon SiC</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">(not in baseline)</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>NEW:</strong> announced Sep 29; volume/COD <strong>unavailable</strong></td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">PhotonLink / CPO–NPO ramps</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">Large-scale CPO more <strong>2028–2030</strong>; PhotonLink rev ramp Q4’26 (09-28)</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>NEW detail:</strong> CPO scale-out <strong>Q4’26</strong>; CPO scale-up + NPO <strong>2H’27</strong>; chip-to-chip <strong>2029–30</strong></td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">AT&amp;T–Corning fiber deal</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">(not in baseline)</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>NEW:</strong> <strong>&gt;$3B</strong> multi-year; AT&amp;T <strong>60M</strong> locations by <strong>2030</strong></td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">HBM mixed ASP 2027</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">Channel ASPs only (HBM3E ~$300; HBM4 ~$500–600+)</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>NEW (secondary):</strong> TrendForce blended ASP <strong>+121%</strong> YoY in 2027</td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">Micron FY26 Q4</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">Due <strong>Sep 30</strong></td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>UNCHANGED</strong> (still pending as of morning ET)</td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">Hitachi MS production</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>2029</strong></td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>UNCHANGED</strong></td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">Amkor AZ Phase 1</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>Early 2028</strong></td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>UNCHANGED</strong></td></tr>
+<tr><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">NEE–Dominion close</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left">Deal announced; VA benefits Sep 14</td><td style="border:1px solid var(--border);padding:8px 10px;text-align:left"><strong>UNCHANGED:</strong> still pending; deal materials cite <strong>2H 2027</strong> close path</td></tr>
+</table></div>
+<h2>Valuation moves (only if material)</h2>
+<p>Optics complex saw a sharp <strong>Sep 28 selloff</strong> and <strong>Sep 29 rebound</strong> (LITE ~+7%, COHR/GLW ~+5% in trade-press intraday prints; Roundhill Photonics ETF ~+4%). That is <strong>flow/sentiment</strong>, not a verified &gt;~10% multi-day market-cap regime change vs baseline §4 screens (~Sep 25–26). Citi LITE PT <strong>$1,200 → $1,400</strong> is analyst action only. <strong>Do not invent</strong> live multiples. Next natural valuation checkpoint: <strong>Micron post-print</strong> after today’s AMC call. Continue to cite baseline §4 until a material verified move.</p>
+<h2>Sources</h2>
+<p>Access date for all fetches: <strong>2026-09-30</strong>.</p>
+<p>1. Schneider Electric YOTTA MV / RM AirSeT 38 PR (2026-09-28): https://www.prnewswire.com/news-releases/schneider-electric-unveils-worlds-first-software-defined-medium-voltage-switchgear-to-expand-ai-ready-data-center-power-portfolio-302891217.html</p>
+<p>2. DCD — Infineon + Eaton SiC MVSST / 800 VDC (2026-09-29): https://www.datacenterdynamics.com/en/news/infineon-and-eaton-partner-on-silicon-carbide-based-solid-state-transformers-to-support-800vdc-power-architectures/</p>
+<p>3. Semiconductor Today — Eaton Infineon SiC SST (2026-09-29): https://www.semiconductor-today.com/news_items/2026/sep/infineon-290926.shtml</p>
+<p>4. Converge Digest — Infineon SiC for Eaton 800 VDC (2026-09-29): https://convergedigest.com/infineon-eaton-sic-800-vdc-ai-data-centers/</p>
+<p>5. AT&amp;T–Corning fiber agreement PR (2026-09-29): https://www.prnewswire.com/news-releases/att-and-corning-team-up-to-engineer-the-connected-world-with-fiber-302892879.html</p>
+<p>6. Reuters — AT&amp;T–Corning &gt;$3B fiber deal (2026-09-29): https://www.reuters.com/business/media-telecom/att-signs-over-3-billion-fiber-deal-with-corning-data-demand-surges-2026-09-29/</p>
+<p>7. Seoul Economic Daily — TrendForce HBM ASP +121% (2026-09-30): https://en.sedaily.com/finance/2026/09/30/hbm-prices-to-more-than-double-next-year-trendforce-says</p>
+<p>8. Aju Press — HBM ASP / Samsung–SKH capacity (2026-09-30): https://www.ajupress.com/view/20260930181670633</p>
+<p>9. RCR Wireless — Coherent PhotonLink staging / Nvidia CPO LTA (2026-09-29): https://rcrwireless.com/20260929/data-center-2/coherent-aidc-photonlink</p>
+<p>10. 24/7 Wall St. — LITE/COHR/GLW optics rebound + Citi OCS (2026-09-29): https://www.247wallst.com/investing/2026/09/29/lumentum-climbs-7-as-optics-selloff-reverses-a-day-after-citis-11b-switching-call-coherent-and-corning-rise-5/</p>
+<p>11. Micron Q4 date confirmation: https://investors.micron.com/news/press-release/2026/Micron-Technology-to-Report-Fiscal-Fourth-Quarter-Results-on-September-30-2026/default.aspx</p>
+<p>12. Micron Q4 call event page: https://investors.micron.com/events-and-presentations/event-details/2026/Microns-Fourth-Quarter-2026-Financial-Call/default.aspx</p>
+<p>13. Prior digests (do not double-count): <code>/workspace/ai-infra-baseline/digests/2026-09-28.md</code>, <code>/workspace/ai-infra-baseline/digests/2026-09-29.md</code></p>
+<p>14. Baseline: <code>/workspace/ai-infra-baseline/BASELINE.md</code> and <code>baseline-index.json</code> (as of 2026-09-27)</p>
+<p><strong>Source conflicts / caveats:</strong> TrendForce HBM ASP, Samsung wafer-input, GF Securities CPO revenue paths, and Citi OCS TAM are <strong>secondary / analyst</strong> — not company IR or TrendForce primary PDF fetched this run. Eaton–Infineon deal <strong>volume, ASP, and COD unavailable</strong>. Corning IR page hit Cloudflare bot challenge; used AT&amp;T–Corning PR Newswire + Reuters instead. Micron results <strong>not published</strong> as of morning America/New_York on report day — refresh after AMC.</p>
+<p><em>Figures are point-in-time. Never invent undisclosed MW, CapEx, or multiples.</em></p>
+    </article>
+    <p style="margin-top:24px;font-size:12px;color:var(--text-secondary)"><strong>Not investment advice.</strong> Deltas are vs the Sep 27, 2026 AI infra baseline maintained by AI Infra Daily Digest.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>Public investment briefing hub · <a href="https://armanamirzhan.github.io/investment_dashboard_public/">armanamirzhan.github.io/investment_dashboard_public</a></p>
+    <p>Not investment advice. Digests owned by AI Infra Daily Digest per <a href="../OWNERS.md">OWNERS.md</a>.</p>
+  </footer>
+  <script src="../assets/site.js"></script>
+</body>
+</html>
