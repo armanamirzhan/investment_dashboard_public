@@ -15,7 +15,8 @@
         {
           "name": "Jacobs",
           "ticker": "J",
-          "note": "Large EPC for semiconductor projects"
+          "note": "Large EPC for semiconductor projects",
+          "fidelity_symbol": "J"
         },
         {
           "name": "Samsung C&T",
@@ -32,7 +33,8 @@
         {
           "name": "TSMC",
           "ticker": "TSM",
-          "note": "Default advanced foundry for AI logic"
+          "note": "Default advanced foundry for AI logic",
+          "fidelity_symbol": "TSM"
         },
         {
           "name": "Samsung Foundry",
@@ -42,7 +44,8 @@
         {
           "name": "Intel Foundry",
           "ticker": "INTC",
-          "note": "Internal + external advanced logic push"
+          "note": "Internal + external advanced logic push",
+          "fidelity_symbol": "INTC"
         }
       ]
     },
@@ -59,7 +62,8 @@
         {
           "name": "Micron",
           "ticker": "MU",
-          "note": "HBM ramp / share gains"
+          "note": "HBM ramp / share gains",
+          "fidelity_symbol": "MU"
         },
         {
           "name": "Samsung Electronics",
@@ -88,34 +92,56 @@
     {
       "id": "device-power",
       "title": "What we\u2019re making: SiC / GaN power devices (SST-adjacent)",
-      "summary": "Silicon carbide and gallium nitride power devices switch and convert electricity more efficiently than plain silicon \u2014 used in datacenter power stages and in solid-state transformer (SST) style conversion. Full SST system architecture lives under Electrification; this schematic is the device fab.",
+      "summary": "Silicon carbide (SiC) and gallium nitride (GaN) power devices switch and convert electricity more efficiently than plain silicon \u2014 used in datacenter power stages and in solid-state transformer (SST) style conversion. Industry read (2026): rack-level 800\u202fV DC sidecars begin late 2026 / early 2027; native 800\u202fV racks and SST pilots gather in 2027; facility-wide HVDC / scaled SSTs more 2028\u20132029. SiC dominates high-voltage rectification and MV SST stages; GaN often wins high-frequency 800\u202fV\u2192low-voltage DC\u2013DC. Full SST system architecture lives under Electrification; this schematic is the device fab.",
       "companies": [
         {
           "name": "STMicroelectronics",
           "ticker": "STM",
-          "note": "SiC device volume leader"
+          "note": "SiC devices; NVIDIA 800\u202fV DC board collab",
+          "fidelity_symbol": "STM"
         },
         {
           "name": "onsemi",
           "ticker": "ON",
-          "note": "SiC / power semis"
+          "note": "SiC / power semis for AI DC conversion",
+          "fidelity_symbol": "ON",
+          "rating_mark": "strong"
         },
         {
           "name": "Infineon",
           "ticker": "IFX.DE",
-          "note": "SiC/GaN and silicon power"
+          "note": "SiC/GaN + silicon power; AI revenue ramp targets",
+          "fidelity_symbol": "IFNNY"
         },
         {
           "name": "Wolfspeed",
           "ticker": "WOLF",
-          "note": "SiC wafers and devices"
+          "note": "SiC wafers and devices \u2014 execution/balance-sheet risk",
+          "fidelity_symbol": "WOLF"
+        },
+        {
+          "name": "ROHM",
+          "ticker": "6963.T",
+          "note": "SiC MOSFETs; GaN partnerships",
+          "fidelity_symbol": "ROHCY",
+          "not_priced_in": true,
+          "demand_detail": "As 800\u202fV DC racks and SST pilots scale ~2027\u20132028, SiC MOSFET content per MW rises. ROHM\u2019s SiC/GaN portfolio is less crowded in US AI narratives than ON/STM/IFX, so incremental datacenter demand may still be under-reflected versus peers \u2014 orientation only, not advice."
+        },
+        {
+          "name": "Navitas",
+          "ticker": "NVTS",
+          "note": "GaN for high-frequency DC\u2013DC stages",
+          "fidelity_symbol": "NVTS",
+          "not_priced_in": true,
+          "demand_detail": "GaN is often preferred for high-frequency conversion from ~800\u202fV DC down to intermediate/low voltages inside racks. Volume follows Phase 1\u20132 800\u202fV adoption (sidecar then native racks) more than today\u2019s AC PSU mix \u2014 demand thicken ~2027+ if that path holds."
         },
         {
           "name": "Electrification (SST systems)",
           "ticker": "",
-          "note": "Cross-link: site SST and campus power path"
+          "note": "Cross-link: site SST and campus power path \u2014 do not double-count here"
         }
-      ]
+      ],
+      "scarcity": "soon"
     },
     {
       "id": "wafer",
@@ -125,12 +151,14 @@
         {
           "name": "Shin-Etsu Chemical",
           "ticker": "4063.T",
-          "note": "Leading silicon wafers"
+          "note": "Leading silicon wafers (logic/memory)",
+          "fidelity_symbol": "SHECY"
         },
         {
           "name": "SUMCO",
           "ticker": "3436.T",
-          "note": "300 mm silicon wafers"
+          "note": "300\u202fmm silicon wafers",
+          "fidelity_symbol": "SUOPY"
         },
         {
           "name": "GlobalWafers",
@@ -140,12 +168,22 @@
         {
           "name": "SK Siltron",
           "ticker": "008500.KS",
-          "note": "SiC / GaN wafer angle"
+          "note": "SiC / GaN wafer angle",
+          "fidelity_symbol": "008500.KS"
         },
         {
           "name": "Coherent (II-VI)",
           "ticker": "COHR",
-          "note": "SiC substrates / epitaxy"
+          "note": "SiC substrates / epitaxy",
+          "fidelity_symbol": "COHR",
+          "not_priced_in": true,
+          "demand_detail": "SiC substrate supply quality remains a gating item for high-voltage device ramps used in AI DC and SST paths."
+        },
+        {
+          "name": "Wolfspeed",
+          "ticker": "WOLF",
+          "note": "SiC wafer capacity (200\u202fmm pivot)",
+          "fidelity_symbol": "WOLF"
         }
       ]
     },
@@ -157,7 +195,8 @@
         {
           "name": "ASML",
           "ticker": "ASML",
-          "note": "Near-monopoly EUV scanners; High-NA roadmap"
+          "note": "Near-monopoly EUV scanners; High-NA roadmap",
+          "fidelity_symbol": "ASML"
         },
         {
           "name": "Nikon",
@@ -184,12 +223,14 @@
         {
           "name": "Applied Materials",
           "ticker": "AMAT",
-          "note": "Broad deposition / process tools"
+          "note": "Broad deposition / process tools",
+          "fidelity_symbol": "AMAT"
         },
         {
           "name": "Lam Research",
           "ticker": "LRCX",
-          "note": "Etch and deposition; HBM/3D stacks"
+          "note": "Etch and deposition; HBM/3D stacks",
+          "fidelity_symbol": "LRCX"
         },
         {
           "name": "Tokyo Electron",
@@ -199,7 +240,8 @@
         {
           "name": "ASM International",
           "ticker": "ASM",
-          "note": "ALD leadership"
+          "note": "ALD leadership",
+          "fidelity_symbol": "ASM"
         },
         {
           "name": "SCREEN / Kokusai",
@@ -216,17 +258,20 @@
         {
           "name": "Axcelis",
           "ticker": "ACLS",
-          "note": "Ion implantation systems"
+          "note": "Ion implantation systems",
+          "fidelity_symbol": "ACLS"
         },
         {
           "name": "Veeco",
           "ticker": "VECO",
-          "note": "Epitaxy / process equipment"
+          "note": "Epitaxy / process equipment",
+          "fidelity_symbol": "VECO"
         },
         {
           "name": "Entegris",
           "ticker": "ENTG",
-          "note": "CMP slurries and contamination control"
+          "note": "CMP slurries and contamination control",
+          "fidelity_symbol": "ENTG"
         },
         {
           "name": "SCREEN Holdings",
@@ -243,22 +288,26 @@
         {
           "name": "KLA",
           "ticker": "KLAC",
-          "note": "Dominant wafer process-control tools"
+          "note": "Dominant wafer process-control tools",
+          "fidelity_symbol": "KLAC"
         },
         {
           "name": "Onto Innovation",
           "ticker": "ONTO",
-          "note": "Packaging and film metrology"
+          "note": "Packaging and film metrology",
+          "fidelity_symbol": "ONTO"
         },
         {
           "name": "Camtek",
           "ticker": "CAMT",
-          "note": "Advanced packaging inspection"
+          "note": "Advanced packaging inspection",
+          "fidelity_symbol": "CAMT"
         },
         {
           "name": "Nova",
           "ticker": "NVMI",
-          "note": "Dimensional / materials metrology"
+          "note": "Dimensional / materials metrology",
+          "fidelity_symbol": "NVMI"
         }
       ]
     },
@@ -297,24 +346,29 @@
         {
           "name": "TSMC (CoWoS)",
           "ticker": "TSM",
-          "note": "In-house AI packaging choke"
+          "note": "In-house AI packaging choke",
+          "fidelity_symbol": "TSM"
         },
         {
           "name": "Amkor",
           "ticker": "AMKR",
-          "note": "OSAT advanced packaging"
+          "note": "OSAT advanced packaging",
+          "fidelity_symbol": "AMKR"
         },
         {
           "name": "ASE Technology",
           "ticker": "ASX",
-          "note": "OSAT advanced packaging / assembly"
+          "note": "OSAT advanced packaging / assembly",
+          "fidelity_symbol": "ASX"
         },
         {
           "name": "Intel (EMIB-T)",
           "ticker": "INTC",
-          "note": "Chiplet interconnect bridge path"
+          "note": "Chiplet interconnect bridge path",
+          "fidelity_symbol": "INTC"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "hbm-stack",
@@ -329,7 +383,8 @@
         {
           "name": "Micron",
           "ticker": "MU",
-          "note": "HBM stacking ramp"
+          "note": "HBM stacking ramp",
+          "fidelity_symbol": "MU"
         },
         {
           "name": "Samsung",
@@ -351,7 +406,8 @@
         {
           "name": "Photronics",
           "ticker": "PLAB",
-          "note": "Independent photomasks"
+          "note": "Independent photomasks",
+          "fidelity_symbol": "PLAB"
         },
         {
           "name": "Dai Nippon Printing (DNP)",
@@ -390,34 +446,51 @@
     {
       "id": "sic-epi",
       "title": "SiC / GaN epi & device process",
-      "summary": "Wide-bandgap power devices grow epitaxial layers on SiC or GaN wafers, then pattern power transistors and diodes. Larger wafers and higher yields are the industrial story; modules later sit in power shelves and SST-style converters.",
+      "summary": "Wide-bandgap power devices grow epitaxial layers on SiC or GaN wafers, then pattern power transistors and diodes. High-end / high-voltage SiC MOSFET capacity (especially automotive- and industrial-qualified) has stayed structurally tight even as lower-end 150\u202fmm substrate chatter turns to oversupply risk. AI datacenter and SST designs need 1,200\u202fV-class SiC for rectification/protection and higher-voltage SiC for MV SST stages \u2014 reallocating capacity from EV contracts. Larger wafers (200\u202fmm) and yields are the industrial story through 2026\u20132028.",
       "companies": [
         {
           "name": "STMicroelectronics",
           "ticker": "STM",
-          "note": "SiC devices; larger-wafer ramp"
+          "note": "SiC devices; Catania 200\u202fmm SiC ramp path",
+          "fidelity_symbol": "STM"
         },
         {
           "name": "Wolfspeed",
           "ticker": "WOLF",
-          "note": "SiC substrates and devices"
+          "note": "SiC substrates + devices; Mohawk Valley 200\u202fmm focus",
+          "fidelity_symbol": "WOLF"
         },
         {
           "name": "onsemi",
           "ticker": "ON",
-          "note": "SiC production ramps"
+          "note": "SiC production ramps; EV LTAs + AI DC interest",
+          "fidelity_symbol": "ON",
+          "rating_mark": "strong"
         },
         {
-          "name": "Infineon / ROHM",
-          "ticker": "",
-          "note": "SiC/GaN device portfolios"
+          "name": "Infineon",
+          "ticker": "IFX.DE",
+          "note": "Kulim SiC ramp; AI power targets raised",
+          "fidelity_symbol": "IFNNY"
+        },
+        {
+          "name": "ROHM",
+          "ticker": "6963.T",
+          "note": "SiC MOSFET generations",
+          "fidelity_symbol": "ROHCY",
+          "not_priced_in": true,
+          "demand_detail": "Device process capacity for SiC MOSFETs used in 800\u202fV rectification and SST front-ends is the scarce industrial ingredient. ROHM is a real SiC supplier with lighter US AI-story coverage than ON/Infineon."
         },
         {
           "name": "Coherent",
           "ticker": "COHR",
-          "note": "SiC substrates / epitaxy"
+          "note": "SiC substrates / epitaxy materials",
+          "fidelity_symbol": "COHR",
+          "not_priced_in": true,
+          "demand_detail": "Substrate and epi quality gate every SiC device fab. If SST and 800\u202fV stages pull more high-voltage SiC through 2027\u20132029, materials houses can see demand before device ASP narratives fully re-rate \u2014 orientation only."
         }
-      ]
+      ],
+      "scarcity": "now"
     },
     {
       "id": "test",
@@ -427,29 +500,49 @@
         {
           "name": "Advantest",
           "ticker": "6857.T",
-          "note": "Memory / AI-oriented ATE"
+          "note": "Memory / AI-oriented ATE",
+          "fidelity_symbol": "6857.T"
         },
         {
           "name": "Teradyne",
           "ticker": "TER",
-          "note": "Broad semiconductor ATE"
+          "note": "Broad semiconductor ATE",
+          "fidelity_symbol": "TER"
         },
         {
           "name": "FormFactor",
           "ticker": "FORM",
-          "note": "Probe cards"
+          "note": "Probe cards",
+          "fidelity_symbol": "FORM"
         },
         {
           "name": "Aehr Test Systems",
           "ticker": "AEHR",
-          "note": "Wafer/package burn-in"
+          "note": "Wafer/package burn-in \u2014 SiC and AI ASIC burn-in demand",
+          "rating_mark": "strong",
+          "fidelity_symbol": "AEHR"
         },
         {
           "name": "Cohu",
           "ticker": "COHU",
-          "note": "Handlers"
+          "note": "Handlers",
+          "fidelity_symbol": "COHU"
         }
-      ]
+      ],
+      "scarcity": "soon"
     }
-  ]
+  ],
+  "investor_lens_power_fab": {
+    "as_of": "2026-10",
+    "scope": "SiC/GaN device manufacturing for AI DC and SST-adjacent power only; SST systems owned by Electrification",
+    "ac_to_dc_read": "Rack-level 800V DC sidecars ~late 2026/early 2027; native 800V racks + SST pilots ~2027; facility HVDC / scaled SST more 2028\u20132029. Not a single-year cliff.",
+    "marks": {
+      "scarcity_now": "red thick frame \u2014 extreme demand / tight capacity now",
+      "scarcity_soon": "yellow thick frame \u2014 expected bottleneck as 800V/SST ramps",
+      "rating_strong": "dark green ticker \u2014 seed BUY with clear AI/SiC thesis (orientation)",
+      "not_priced_in": "rainbow ticker \u2014 future demand story may be under-reflected; click for timing/why",
+      "fidelity": "tickers link to Fidelity quote dashboard"
+    },
+    "disclaimer": "Educational marks for Arman\u2019s hub. Not investment advice."
+  }
 }

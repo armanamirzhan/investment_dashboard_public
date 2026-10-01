@@ -65,6 +65,25 @@
     });
   }
 
+  function fidelityHref(c) {
+    var sym = c.fidelity_symbol || c.ticker;
+    if (!sym) return "";
+    return "https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=" + encodeURIComponent(String(sym).trim());
+  }
+
+  function tickerHtml(c) {
+    if (!c.ticker) return "";
+    var classes = ["co-ticker"];
+    if (c.rating_mark === "strong") classes.push("rating-strong");
+    if (c.not_priced_in) classes.push("not-priced-in");
+    var cls = classes.join(" ");
+    var href = fidelityHref(c);
+    if (href) {
+      return ' <a class="' + cls + '" href="' + esc(href) + '" target="_blank" rel="noopener noreferrer" title="Fidelity quote">' + esc(c.ticker) + "</a>";
+    }
+    return ' <span class="' + cls + '">' + esc(c.ticker) + "</span>";
+  }
+
   function renderCompanies(companies) {
     companyList.innerHTML = "";
     if (!companies || !companies.length) {
@@ -74,9 +93,13 @@
     companiesWrap.hidden = false;
     companies.forEach(function (c) {
       var li = document.createElement("li");
+      if (c.not_priced_in) li.className = "co-not-priced-in";
       var html = "<strong>" + esc(c.name) + "</strong>";
-      if (c.ticker) html += ' <span class="co-ticker">' + esc(c.ticker) + "</span>";
+      html += tickerHtml(c);
       if (c.note) html += '<span class="co-note">' + esc(c.note) + "</span>";
+      if (c.not_priced_in && c.demand_detail) {
+        html += '<details class="co-demand"><summary>Why demand / timing</summary><p>' + esc(c.demand_detail) + "</p></details>";
+      }
       li.innerHTML = html;
       companyList.appendChild(li);
     });
@@ -133,7 +156,7 @@
           fig.classList.add("stage-panel-open");
         }
         titleEl.textContent = "Loading stage details…";
-        summaryEl.textContent = "Fetching stages.json…";
+        summaryEl.textContent = "Fetching stages.json?v=investor-1…";
         renderCompanies([]);
         panel.hidden = false;
         setActiveHotspot(id, fig);
@@ -151,7 +174,7 @@
         fig.classList.add("stage-panel-open");
       }
       titleEl.textContent = "Unknown stage";
-      summaryEl.textContent = "No entry for \"" + id + "\" in stages.json.";
+      summaryEl.textContent = "No entry for \"" + id + "\" in stages.json?v=investor-1.";
       renderCompanies([]);
       panel.hidden = false;
       setActiveHotspot(id, fig);
@@ -224,25 +247,34 @@
   function stagesJsonUrl() {
     var script = document.querySelector('script[src$="schematic.js"], script[src*="schematic.js"]');
     if (script && script.src) {
-      try { return new URL("stages.json", script.src).href; } catch (e) {}
+      try { return new URL("stages.json?v=investor-1", script.src).href; } catch (e) {}
     }
     try {
-      return new URL("stages.json", window.location.href).href;
+      return new URL("stages.json?v=investor-1", window.location.href).href;
     } catch (e) {
-      return "stages.json";
+      return "stages.json?v=investor-1";
     }
   }
 
   var jsonUrl = stagesJsonUrl();
   fetch(jsonUrl, { credentials: "same-origin", cache: "no-cache" })
     .then(function (r) {
-      if (!r.ok) throw new Error("stages.json HTTP " + r.status + " from " + jsonUrl);
+      if (!r.ok) throw new Error("stages.json?v=investor-1 HTTP " + r.status + " from " + jsonUrl);
       return r.json();
     })
     .then(function (data) {
       var list = (data && data.stages) || [];
       list.forEach(function (s) {
         if (s && s.id) stagesById[s.id] = s;
+      });
+      // Apply scarcity frame classes from stages.json?v=investor-1 onto matching hotspots
+      list.forEach(function (s) {
+        if (!s || !s.id || !s.scarcity) return;
+        var cls = s.scarcity === "now" ? "scarcity-now" : (s.scarcity === "soon" ? "scarcity-soon" : "");
+        if (!cls) return;
+        document.querySelectorAll('.stage-hotspot[data-stage="' + s.id + '"]').forEach(function (g) {
+          g.classList.add(cls);
+        });
       });
       dataReady = true;
       if (pendingId) {
@@ -255,9 +287,9 @@
       }
     })
     .catch(function (err) {
-      console.warn("Stage panel: failed to load stages.json", err);
+      console.warn("Stage panel: failed to load stages.json?v=investor-1", err);
       titleEl.textContent = "Stage details unavailable";
-      summaryEl.textContent = "Could not load stages.json (" + jsonUrl + ").";
+      summaryEl.textContent = "Could not load stages.json?v=investor-1 (" + jsonUrl + ").";
       renderCompanies([]);
       dataReady = false;
     });
@@ -301,4 +333,54 @@
       }
     });
   });
+})();
+
+(function () {
+  // Clickable rainbow company labels on figures (not-priced-in)
+  document.addEventListener("click", function (e) {
+    var t = e.target;
+    if (!t || !t.closest) return;
+    var g = t.closest("[data-company-demand]");
+    if (!g) return;
+    e.preventDefault();
+    e.stopPropagation();
+    var id = g.getAttribute("data-company-demand");
+    var detail = g.getAttribute("data-demand-detail") || "";
+    var name = g.getAttribute("data-company-name") || id;
+    var ticker = g.getAttribute("data-ticker") || "";
+    var fidelity = g.getAttribute("data-fidelity") || ticker;
+    var panel = document.getElementById("stage-panel");
+    var titleEl = document.getElementById("stage-panel-title");
+    var summaryEl = document.getElementById("stage-panel-summary");
+    var companiesWrap = document.getElementById("stage-panel-companies");
+    var companyList = document.getElementById("stage-panel-company-list");
+    if (!panel || !titleEl || !summaryEl || !companyList) return;
+    var fig = g.closest("figure.diagram");
+    if (fig) {
+      var svg = fig.querySelector("svg");
+      var caption = fig.querySelector("figcaption");
+      if (svg && panel.parentNode !== fig) {
+        if (caption) fig.insertBefore(panel, caption);
+        else fig.appendChild(panel);
+      }
+      fig.classList.add("stage-panel-open");
+    }
+    titleEl.textContent = name + (ticker ? " (" + ticker + ")" : "");
+    summaryEl.textContent = detail;
+    companyList.innerHTML = "";
+    companiesWrap.hidden = false;
+    companiesWrap.open = true;
+    var li = document.createElement("li");
+    var href = fidelity
+      ? "https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=" + encodeURIComponent(fidelity)
+      : "";
+    li.innerHTML = "<strong>" + name + "</strong>" +
+      (ticker ? (href
+        ? ' <a class="co-ticker not-priced-in" href="' + href + '" target="_blank" rel="noopener noreferrer">' + ticker + "</a>"
+        : ' <span class="co-ticker not-priced-in">' + ticker + "</span>")
+      : "") +
+      '<span class="co-note">Marked as future demand may be under-reflected — orientation only, not advice.</span>';
+    companyList.appendChild(li);
+    panel.hidden = false;
+  }, true);
 })();

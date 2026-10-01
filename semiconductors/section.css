@@ -459,3 +459,58 @@
 }
 .briefing .stage-hotspot:focus{ outline:none; }
 .briefing .stage-hotspot:focus-visible{ outline:2px solid #5b9fd4; outline-offset:2px; }
+
+/* Investor marks (shared convention with Electrification) */
+.briefing .stage-hotspot.scarcity-now .box{
+  stroke:#e25555 !important; stroke-width:3.6 !important;
+}
+.briefing .stage-hotspot.scarcity-soon .box{
+  stroke:#e6c84a !important; stroke-width:3.2 !important;
+}
+.briefing .stage-panel-companies .co-ticker{
+  color:#8a93a0; /* grey default */
+  text-decoration:none;
+}
+.briefing .stage-panel-companies a.co-ticker:hover{ text-decoration:underline; }
+.briefing .stage-panel-companies .co-ticker.rating-strong{
+  color:#146c38; font-weight:700;
+}
+.briefing .stage-panel-companies .co-ticker.not-priced-in{
+  font-weight:700;
+  background:linear-gradient(90deg,#ff6b6b,#ffd93d,#6bcb77,#4d96ff,#c77dff);
+  -webkit-background-clip:text; background-clip:text;
+  color:transparent; -webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 0 0.4px rgba(255,255,255,0.35));
+}
+.briefing .stage-panel-companies .co-demand{
+  margin-top:0.45rem; font-size:0.9rem; color:var(--text-muted);
+}
+.briefing .stage-panel-companies .co-demand summary{
+  cursor:pointer; color:#8ec5e8; list-style:none;
+}
+.briefing .stage-panel-companies .co-demand summary::-webkit-details-marker{ display:none; }
+.briefing .stage-panel-companies .co-demand p{ margin:0.35rem 0 0; }
+.briefing .investor-legend{
+  display:flex; flex-wrap:wrap; gap:0.65rem 1.1rem;
+  margin:0.75rem 0 1rem; font-size:0.82rem; color:var(--text-muted);
+}
+.briefing .investor-legend span{ display:inline-flex; align-items:center; gap:0.35rem; }
+.briefing .lg-swatch{
+  width:14px; height:14px; border-radius:3px; border:2px solid transparent; display:inline-block;
+}
+.briefing .lg-swatch.now{ border-color:#e25555; background:rgba(226,85,85,0.25); }
+.briefing .lg-swatch.soon{ border-color:#e6c84a; background:rgba(230,200,74,0.2); }
+.briefing .lg-ticker-sample{ font-family:var(--mono); font-size:0.78rem; }
+.briefing .lg-ticker-sample.strong{ color:#146c38; font-weight:700; }
+.briefing .lg-ticker-sample.grey{ color:#8a93a0; }
+.briefing .lg-ticker-sample.rainbow{
+  font-weight:700;
+  background:linear-gradient(90deg,#ff6b6b,#ffd93d,#6bcb77,#4d96ff,#c77dff);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  -webkit-text-fill-color:transparent;
+}
+.briefing .svg-co-label{ cursor:pointer; }
+.briefing .svg-co-label text.name-rainbow{
+  font-weight:700;
+  fill:url(#rainbowGrad);
+}
