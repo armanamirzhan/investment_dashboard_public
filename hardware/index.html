@@ -31,6 +31,7 @@
           <span class="toc-label">Jump</span>
           <a href="#why">Why hardware</a>
           <a href="#stack">Stack</a>
+          <a href="#scarcity">Scarcity</a>
           <a href="#layer-1">GPUs</a>
           <a href="#layer-2">CPUs</a>
           <a href="#layer-3">Memory</a>
@@ -124,6 +125,61 @@
           <li><a href="#layer-8">Cooling &amp; thermal</a> — air and liquid cooling for dense AI halls.</li>
           <li><a href="#layer-9">In-rack power modules</a> — VRMs and power stages on the board / tray (facility power → Electrification).</li>
         </ol>
+      </section>
+
+
+      <section aria-labelledby="h-scarcity" id="scarcity">
+        <h2 id="h-scarcity">Scarcity through about 2027 — packaging, HBM, then optics</h2>
+        <p class="lede">
+          Leading AI accelerators are not limited only by how many logic wafers start.
+          Through roughly 2027, two compute-adjacent bottlenecks dominate shipped GPU and ASIC volume:
+          advanced packaging capacity and
+          <a href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory">high-bandwidth memory (HBM)</a>
+          supply and yields.
+        </p>
+        <ul>
+          <li>
+            <strong>Advanced packaging (owned under Semiconductors).</strong>
+            Flows such as TSMC
+            <a href="https://en.wikipedia.org/wiki/Chip_on_wafer_on_substrate">chip-on-wafer-on-substrate (CoWoS)</a>,
+            plus
+            <a href="https://en.wikipedia.org/wiki/Outsourced_semiconductor_assembly_and_test">outsourced semiconductor assembly and test (OSAT)</a>
+            leaders Amkor and ASE, and Intel’s
+            <a href="https://en.wikipedia.org/wiki/Embedded_multi-die_interconnect_bridge">embedded multi-die interconnect bridge (EMIB)</a>-class approaches,
+            glue logic dies to HBM stacks.
+            When packaging lines are full, finished accelerators slip even if wafers are ready.
+            Full company map:
+            <a href="../semiconductors/index.html#layer-5">Semiconductors → advanced packaging</a>.
+          </li>
+          <li>
+            <strong>HBM (owned here).</strong>
+            SK Hynix, Micron, and Samsung make the stacked memory that feeds modern GPUs.
+            Capacity and yields have been tight in the AI ramp; sold-out HBM often paces how many accelerators can ship.
+            See <a href="#layer-3">Memory &amp; storage</a> below.
+            Equity prices can reflect peak-cycle earnings expectations — that is market color, not a recommendation.
+          </li>
+          <li>
+            <strong>Next pinch after packaging and HBM ease (~2027–2028): optical interconnect.</strong>
+            As electrical copper runs out of reach and power budget inside denser racks,
+            optics (transceivers,
+            <a href="https://en.wikipedia.org/wiki/Silicon_photonics">silicon photonics</a>,
+            <a href="https://en.wikipedia.org/wiki/Co-packaged_optics">co-packaged optics (CPO)</a>)
+            become the binding constraint.
+            That map lives under nested
+            <a href="photonics/index.html">Photonics</a>
+            — this parent page does not own optical company pages (Lumentum, Coherent, AXT, Corning deep-dives, Marvell optics, and peers).
+          </li>
+        </ul>
+        <div class="callout">
+          <div class="label">Boundary with sibling sections</div>
+          <p style="margin:0">
+            Packaging companies and CoWoS-class capacity →
+            <a href="../semiconductors/index.html">Semiconductors</a>.
+            HBM makers and how memory sits next to the GPU → this page.
+            Optical interconnect and data-movement stack →
+            <a href="photonics/index.html">hardware / Photonics</a>.
+          </p>
+        </div>
       </section>
 
       <section aria-labelledby="h-who" id="who">
@@ -281,15 +337,15 @@
         <ul class="company-list">
           <li>
             <span class="name">SK Hynix</span><span class="ticker">000660.KS</span>
-            <p>Leading HBM supplier to major GPU programs; HBM capacity often sold out years ahead during AI ramps.</p>
+            <p>Leading HBM supplier to major GPU programs. Through the mid-2020s AI ramp, HBM capacity and yields have often been sold out years ahead — a primary throttle on how many high-end accelerators can ship before packaging is even considered.</p>
           </li>
           <li>
             <span class="name">Samsung Electronics</span><span class="ticker">005930.KS</span>
-            <p>Largest memory maker expanding HBM share; also a major foundry — unique memory + fab combination.</p>
+            <p>Largest memory maker expanding HBM share and yields to catch the AI attach rate; also a major foundry — unique memory + fab combination. HBM competitiveness is the scarce skill for AI GPU attach, not commodity DRAM alone.</p>
           </li>
           <li>
             <span class="name">Micron Technology</span><span class="ticker">MU</span>
-            <p>US memory company ramping HBM for AI GPUs and shifting more capacity toward datacenter DRAM.</p>
+            <p>US memory company ramping HBM for AI GPUs and shifting more capacity toward datacenter DRAM. Newer HBM generations (HBM3E / HBM4-class in industry roadmaps) are yield- and capacity-constrained like peers — another gate on accelerator volume through ~2027.</p>
           </li>
         </ul>
         <p><strong>Enterprise storage systems (extraction)</strong></p>
@@ -365,6 +421,7 @@
           When copper runs out of reach or watts, links go optical —
           <a href="https://en.wikipedia.org/wiki/Optical_fiber">fiber</a>,
           transceivers, lasers, and eventually CPO.
+          After packaging and HBM capacity ease (roughly later this decade), many industry maps expect optical interconnect to become the next dominant pinch — owned under Photonics, not here.
         </p>
         <ul class="company-list">
           <li>
