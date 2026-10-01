@@ -9,15 +9,15 @@ Bot / human ownership rules for `investment_dashboard_public`. Do not commit int
 | `README.md`, `OWNERS.md` | **Website builder** | Purpose and ownership docs |
 | `data/` (shared seeds) | **Website builder** (+ section bots with prefix) | Curated JSON from private dashboard extract. Prefer prefixed files for section-only data (`electrification_*`, `smr_*`, `uranium_*`, `software_*`, `hardware_*`, `semiconductor_*`, `hyperscaler_*`) |
 | `smr/`, `uranium/`, `photonics/` (root stubs) | **Website builder** | Thin redirect pages so old bookmarks keep working |
-| `electrification/` | **Electrification / Power Map bot** | Power Map UI and briefings |
-| `electrification/smr/` | **SMR bot** | Oklo, X-energy, NuScale tracker UI |
-| `electrification/uranium/` | **Uranium bot** | Uranium / HALEU map UI |
-| `hardware/` | **AI Computation Hardware bot** | Parent section for DC computation hardware |
-| `hardware/photonics/` | **Photonics AI bot** | AI optical interconnects and data-movement stack |
-| `software/` | **AI Software bot** | AI software landscape |
-| `semiconductors/` | **Semiconductor Fabrication bot** | Fab / WFE / packaging / materials |
-| `hyperscalers/` | **Hyperscalers bot** | Cloud operators, GPU clouds, colo REITs |
-| `digests/` | **Daily Digest bot** | Digest index + dated brief HTML |
+| `electrification/` | **AI Datacenter Power Map** | Power Map UI and briefings |
+| `electrification/uranium/` | **AI Datacenter Power Map** | Uranium / nuclear fuel cycle (merged from Uranium bot) |
+| `electrification/smr/` | **Performance tracker** | Oklo, X-Energy scorecards; no new tickers until Arman asks |
+| `hardware/` | **AI Computation Hardware** | Parent section for DC computation hardware |
+| `hardware/photonics/` | **AI Computation Hardware** | AI optical interconnects (merged from Photonics AI) |
+| `software/` | **AI Software** | AI software landscape |
+| `semiconductors/` | **Semiconductor Fabrication** | Fab / WFE / packaging / materials |
+| `hyperscalers/` | **Hyperscalers** | Cloud operators, GPU clouds, colo REITs |
+| `digests/` | **AI Infra Daily Digest** | Digest index + dated brief HTML |
 
 ## Rules
 
