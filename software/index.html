@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Software — Investment Hub</title>
-  <meta name="description" content="AI software stack: model developers (foundation models / LLMs), platforms & enterprise software, infrastructure & MLOps, inference & serving, EDA / chip design software, AI security & governance, and vertical AI applications.">
+  <title>AI Software — models, platforms, MLOps &amp; apps</title>
+  <meta name="description" content="Layperson briefing on the AI software stack: foundation model developers, enterprise platforms, MLOps, inference and serving, EDA chip-design tools, AI security, and vertical applications. Not investment advice.">
   <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="section.css">
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary">
@@ -24,30 +25,305 @@
   </nav>
 
   <main class="container">
-    <header class="page-header">
-      <h1>🧠 AI Software</h1>
-      <p class="subtitle">AI software stack: model developers (foundation models / LLMs), platforms & enterprise software, infrastructure & MLOps, inference & serving, EDA / chip design software, AI security & governance, and vertical AI applications.</p>
-      <div class="meta-row">
-        <span class="chip">Section scaffold</span>
-        <span class="chip warn">Not investment advice</span>
-      </div>
-    </header>
+    <article class="briefing">
+      <nav aria-label="On this page" class="page-toc">
+        <div class="toc-inner">
+          <span class="toc-label">Jump</span>
+          <a href="#why">Why software</a>
+          <a href="#stack">Stack</a>
+          <a href="#layer-1">Models</a>
+          <a href="#layer-2">Platforms</a>
+          <a href="#layer-3">MLOps</a>
+          <a href="#layer-4">Inference</a>
+          <a href="#layer-5">EDA</a>
+          <a href="#layer-6">Security</a>
+          <a href="#layer-7">Vertical</a>
+          <a href="#related">Related</a>
+          <a href="#disclaimer">Disclaimer</a>
+        </div>
+      </nav>
 
-    <section class="section">
-      <h2>About</h2>
-      <p>AI software stack: model developers (foundation models / LLMs), platforms & enterprise software, infrastructure & MLOps, inference & serving, EDA / chip design software, AI security & governance, and vertical AI applications.</p>
-      <p style="font-size:12px;color:var(--text-secondary);margin-top:8px">Owned by <strong>AI Software</strong> per <a href="../OWNERS.md">OWNERS.md</a>. Full briefing content lands here as the section bot publishes.</p>
-    </section>
+      <header class="hero">
+        <span class="eyebrow">Technical briefing · September 2026 baseline</span>
+        <h1>AI Software — models, platforms, and apps</h1>
+        <p class="subtitle">
+          Hardware builds the factories; software decides what they run.
+          This page maps the AI software stack — from
+          <a href="https://en.wikipedia.org/wiki/Large_language_model">large language model (LLM)</a>
+          labs to enterprise platforms,
+          <a href="https://en.wikipedia.org/wiki/MLOps">MLOps</a>,
+          inference services,
+          <a href="https://en.wikipedia.org/wiki/Electronic_design_automation">electronic design automation (EDA)</a>
+          tools, security products, and vertical applications.
+        </p>
+        <div class="meta-row">
+          <span class="chip">Hub section · seven layers</span>
+          <span class="chip">Seed: data/software_companies.json</span>
+          <span class="chip warn">Not investment advice</span>
+        </div>
+      </header>
 
-    <section class="section">
-      <h2>Status</h2>
-      <p>Placeholder page — taxonomy and company seeds are staged under <code>data/</code>. Briefings and trackers will appear in this folder.</p>
-    </section>
+      <section aria-labelledby="h-why" id="why">
+        <h2 id="h-why">Why software sits on top of the AI stack</h2>
+        <p class="lede">
+          GPUs and power get most of the headlines. The software layer is where models are trained and served,
+          where enterprises plug AI into workflows, and where chip designers simulate the next accelerator.
+        </p>
+        <p>
+          Think of three jobs software does in AI:
+        </p>
+        <ul>
+          <li>
+            <strong>Create capability.</strong>
+            Foundation-model labs train and release
+            <a href="https://en.wikipedia.org/wiki/Generative_artificial_intelligence">generative AI</a>
+            systems (chat, code, images, agents) that other products call through
+            <a href="https://en.wikipedia.org/wiki/API">APIs</a>
+            or run on-premises / in a private cloud.
+          </li>
+          <li>
+            <strong>Operationalize.</strong>
+            Platforms, data tools, and MLOps products help teams label data, train, evaluate, deploy, monitor, and govern models
+            — the difference between a demo and a production system.
+          </li>
+          <li>
+            <strong>Specialize and secure.</strong>
+            Vertical apps wrap models for law, coding, sales, and other domains.
+            Security and governance tools watch for misuse, drift, and prompt attacks.
+            Separately, EDA software is the “CAD for chips” that makes AI silicon designable at all.
+          </li>
+        </ul>
+        <div class="callout">
+          <div class="label">Public vs private names on this page</div>
+          <p style="margin:0">
+            The seed list mixes publicly traded companies (tickers shown) and private firms that define a layer.
+            Blurbs say what each company does in plain language — they are orientation notes, not recommendations.
+            Valuations and market-cap figures from older extracts can go stale quickly; treat them as historical color only.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="h-stack" id="stack">
+        <h2 id="h-stack">Seven-layer map</h2>
+        <p>
+          Working top-down from “who builds the models” to “who wraps them for a job,” plus the EDA tools that sit beside silicon design.
+        </p>
+        <ol>
+          <li><a href="#layer-1">Foundation model developers</a> — labs that train frontier and open-weight LLMs and related models.</li>
+          <li><a href="#layer-2">Platforms &amp; enterprise software</a> — data, workflow, and CRM platforms adding AI features at scale.</li>
+          <li><a href="#layer-3">Infrastructure software &amp; MLOps</a> — hubs, labeling, experiment tracking, and training tooling.</li>
+          <li><a href="#layer-4">Inference &amp; serving</a> — run models fast and cheap once they exist.</li>
+          <li><a href="#layer-5">EDA / chip design software</a> — tools to design and verify AI chips (owned here; fab stays under Semiconductors).</li>
+          <li><a href="#layer-6">AI security &amp; governance</a> — detect threats, monitor models, and control risk.</li>
+          <li><a href="#layer-7">Vertical / application AI</a> — domain products (legal, coding, and similar).</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="h-who" id="who">
+        <h2 id="h-who">Who-is-who by layer</h2>
+        <p class="lede">
+          Seed names from <code>data/software_companies.json</code>, rewritten as plain “what they do” notes.
+        </p>
+
+        <h3 id="layer-1">1. Foundation model developers</h3>
+        <p class="layer-intro">
+          Organizations that train large
+          <a href="https://en.wikipedia.org/wiki/Foundation_model">foundation models</a>
+          — especially LLMs — and ship them as products, APIs, or open weights.
+          Hardware and power intensive; software IP and research talent are the scarce assets.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">OpenAI</span>
+            <p>Builds frontier generative models (the GPT family and related systems) and consumer/enterprise products such as ChatGPT; closely tied to Microsoft for cloud capacity.</p>
+          </li>
+          <li>
+            <span class="name">Anthropic</span>
+            <p>Develops the Claude model family with a safety-oriented research agenda (“constitutional AI”); backed in part by large cloud partners.</p>
+          </li>
+          <li>
+            <span class="name">xAI</span>
+            <p>Trains Grok models and is building large dedicated training capacity (Colossus); product distribution leans on the X platform.</p>
+          </li>
+          <li>
+            <span class="name">Mistral AI</span>
+            <p>French lab known for competitive open-weight and commercial LLMs; positioned as a European alternative to US frontier labs.</p>
+          </li>
+          <li>
+            <span class="name">DeepSeek</span>
+            <p>Chinese lab that has released high-performance models with an emphasis on training efficiency; important for understanding the global model race.</p>
+          </li>
+          <li>
+            <span class="name">Cohere</span>
+            <p>Enterprise-focused LLM APIs with multilingual strengths — sells to companies that want models without building a frontier lab.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-2">2. Platforms &amp; enterprise software</h3>
+        <p class="layer-intro">
+          Large software platforms that put AI into data, workflows, customer systems, and automation —
+          where most corporate AI budgets actually land.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Palantir Technologies</span><span class="ticker">PLTR</span>
+            <p>Builds data and AI platforms (Foundry, AIP) used by governments and companies to integrate messy operational data and run decision workflows on top.</p>
+          </li>
+          <li>
+            <span class="name">Salesforce</span><span class="ticker">CRM</span>
+            <p>Dominant customer-relationship platform; Einstein and Agentforce add generative and agent features inside CRM and related clouds.</p>
+          </li>
+          <li>
+            <span class="name">ServiceNow</span><span class="ticker">NOW</span>
+            <p>Enterprise workflow / IT service platform with deep AI assistants for ticket routing, knowledge, and process automation.</p>
+          </li>
+          <li>
+            <span class="name">Snowflake</span><span class="ticker">SNOW</span>
+            <p>Cloud data platform where many firms store analytics data; Cortex and related features bring LLM and ML functions closer to that data.</p>
+          </li>
+          <li>
+            <span class="name">Databricks</span>
+            <p>Lakehouse platform that unifies data engineering and machine learning (including MLflow); a common home for training and feature pipelines.</p>
+          </li>
+          <li>
+            <span class="name">UiPath</span><span class="ticker">PATH</span>
+            <p>Robotic process automation (RPA) software that scripts repetitive desktop/back-office work, increasingly combined with AI document and decision steps.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-3">3. Infrastructure software &amp; MLOps</h3>
+        <p class="layer-intro">
+          The tooling layer between “a model exists” and “a team can train, version, and ship models repeatedly” —
+          hubs, labeling, and experiment tracking.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Hugging Face</span>
+            <p>Open hub for model weights, datasets, and libraries (Transformers and friends), plus hosted inference — the default town square for open-source ML.</p>
+          </li>
+          <li>
+            <span class="name">Scale AI</span>
+            <p>Data platform focused on high-quality labeling and evaluation data for training and testing models (autonomy, LLMs, and related).</p>
+          </li>
+          <li>
+            <span class="name">Weights &amp; Biases</span>
+            <p>Experiment tracking and model-development tooling — logs runs, compares metrics, and helps teams reproduce training work.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-4">4. Inference &amp; serving platforms</h3>
+        <p class="layer-intro">
+          Once a model is trained,
+          <a href="https://en.wikipedia.org/wiki/Inference_engine">inference</a>
+          is running it for users — latency, cost per token, and reliability matter more than training FLOPs here.
+          Some players combine custom silicon with software; others are pure software / cloud APIs.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Groq</span>
+            <p>Builds a custom inference chip (language processing unit, or LPU) plus a software stack aimed at very low-latency LLM serving.</p>
+          </li>
+          <li>
+            <span class="name">Together AI</span>
+            <p>Cloud platform for running and fine-tuning open-source models with an emphasis on developer APIs and optimization.</p>
+          </li>
+          <li>
+            <span class="name">Fireworks AI</span>
+            <p>Inference API focused on fast, production serving of popular open and proprietary models.</p>
+          </li>
+        </ul>
+        <div class="callout">
+          <div class="label">Open-source inference engines</div>
+          <p style="margin:0">
+            Projects such as
+            <a href="https://en.wikipedia.org/wiki/VLLM">vLLM</a>
+            are widely used under the hood even when a commercial API sits on top.
+            They are not companies in the seed file, but they shape cost and performance for almost every serving stack.
+          </p>
+        </div>
+
+        <h3 id="layer-5">5. EDA / chip design software</h3>
+        <p class="layer-intro">
+          <a href="https://en.wikipedia.org/wiki/Electronic_design_automation">Electronic design automation (EDA)</a>
+          is the software used to design, simulate, and verify chips before they go to a foundry.
+          AI accelerators are among the hardest chips to design — so EDA demand tracks AI silicon complexity.
+          Fabrication equipment and foundries live under
+          <a href="../semiconductors/index.html">Semiconductors</a>; this layer is the design tools.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Synopsys</span><span class="ticker">SNPS</span>
+            <p>Leading EDA and semiconductor IP supplier — synthesis, verification, and related tools used across advanced logic and AI chip programs.</p>
+          </li>
+          <li>
+            <span class="name">Cadence Design Systems</span><span class="ticker">CDNS</span>
+            <p>Peer EDA leader covering digital, analog/mixed-signal, and system design/simulation flows used by chip and system companies.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-6">6. AI security &amp; governance</h3>
+        <p class="layer-intro">
+          Tools that protect systems that use AI — and increasingly protect AI systems themselves
+          (prompt injection defenses, model monitoring, access control).
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">CrowdStrike</span><span class="ticker">CRWD</span>
+            <p>Cloud-native cybersecurity platform that uses machine learning heavily for endpoint and identity threat detection; expanding into AI-era security use cases.</p>
+          </li>
+        </ul>
+        <p class="muted">
+          The broader private landscape (model testing, LLM firewalls, observability specialists) is larger than this seed;
+          expect expansion as the hub matures.
+        </p>
+
+        <h3 id="layer-7">7. Vertical / application AI</h3>
+        <p class="layer-intro">
+          Products that wrap models for a specific job — often where software margins and distribution matter more than owning a frontier lab.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Harvey</span>
+            <p>AI assistant aimed at law firms and legal workflows — research, drafting, and review inside professional practice software.</p>
+          </li>
+          <li>
+            <span class="name">Cursor</span>
+            <p>AI-native code editor that embeds coding models into the day-to-day developer workflow (completion, edits, chat over a codebase).</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section related" id="related">
+        <h2>Related on this hub</h2>
+        <p>
+          Software decides the workload;
+          <a href="../hardware/index.html">computation hardware</a>
+          runs it,
+          <a href="../semiconductors/index.html">semiconductor fabrication</a>
+          builds the chips (EDA tools above feed that chain), and
+          <a href="../hyperscalers/index.html">hyperscalers</a>
+          buy the capacity and ship cloud APIs.
+          Optics for moving bits sit under
+          <a href="../hardware/photonics/index.html">hardware / photonics</a>.
+          Weekday context:
+          <a href="../digests/index.html">AI infra digests</a>.
+        </p>
+      </section>
+
+      <footer class="caveat" id="disclaimer" aria-labelledby="h-disclaimer">
+        <p id="h-disclaimer"><strong>Not investment advice.</strong>
+          This page is an educational briefing for Arman’s public investment hub.
+          It does not recommend buying or selling any security, does not consider your objectives or risk tolerance,
+          and may be incomplete or outdated. Do your own research. Past performance and thematic narratives are not guarantees of future results.
+          Section owned by the AI Software bot per <a href="../OWNERS.md">OWNERS.md</a>.
+        </p>
+      </footer>
+    </article>
   </main>
 
   <footer class="site-footer">
     <p>Public investment briefing hub · <a href="https://armanamirzhan.github.io/investment_dashboard_public/">armanamirzhan.github.io/investment_dashboard_public</a></p>
-    <p>Not investment advice. Section owned by AI Software per <a href="../OWNERS.md">OWNERS.md</a>.</p>
+    <p>Not investment advice. Section owned by AI Software bot per <a href="../OWNERS.md">OWNERS.md</a>.</p>
   </footer>
   <script src="../assets/site.js"></script>
 </body>
