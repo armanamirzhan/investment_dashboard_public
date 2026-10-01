@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Computation Hardware — GPUs, memory, networking &amp; cooling</title>
-  <meta name="description" content="Layperson briefing on datacenter computation hardware: GPUs and AI accelerators, HBM/DRAM memory, networking, optical fiber, connectors, servers and racks, contract manufacturing, and cooling. Photonics nests here. Not investment advice.">
+  <title>Computation Hardware — GPUs, memory, networking, servers &amp; cooling</title>
+  <meta name="description" content="Layperson briefing on datacenter computation hardware from the hub extraction: GPUs and AI accelerators, server CPUs, HBM/DRAM and storage, networking, optical/fiber (Photonics nest), connectors, servers and ODMs, cooling, and in-rack power. Not investment advice.">
   <link rel="stylesheet" href="../assets/site.css">
   <link rel="stylesheet" href="section.css">
 </head>
@@ -32,35 +32,37 @@
           <a href="#why">Why hardware</a>
           <a href="#stack">Stack</a>
           <a href="#layer-1">GPUs</a>
-          <a href="#layer-2">Memory</a>
-          <a href="#layer-3">Networking</a>
-          <a href="#layer-4">Optical</a>
-          <a href="#layer-5">Connectors</a>
-          <a href="#layer-6">Servers</a>
-          <a href="#layer-7">Manufacturing</a>
+          <a href="#layer-2">CPUs</a>
+          <a href="#layer-3">Memory</a>
+          <a href="#layer-4">Networking</a>
+          <a href="#layer-5">Optical</a>
+          <a href="#layer-6">Connectors</a>
+          <a href="#layer-7">Servers</a>
           <a href="#layer-8">Cooling</a>
+          <a href="#layer-9">In-rack power</a>
           <a href="#related">Related</a>
           <a href="#disclaimer">Disclaimer</a>
         </div>
       </nav>
 
       <header class="hero">
-        <span class="eyebrow">Technical briefing · September 2026 baseline</span>
+        <span class="eyebrow">Technical briefing · September 2026 baseline · full extraction</span>
         <h1>Computation Hardware — chips, boxes, and cooling</h1>
         <p class="subtitle">
           Inside an
           <a href="https://en.wikipedia.org/wiki/Data_center">AI data center</a>,
           computation hardware is the gear that trains and runs models:
           <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit">graphics processing units (GPUs)</a>
-          and other accelerators,
+          and other accelerators, server
+          <a href="https://en.wikipedia.org/wiki/Central_processing_unit">central processing units (CPUs)</a>,
           <a href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory">high-bandwidth memory (HBM)</a>,
-          networking fabric, servers and racks, and the cooling that keeps dense racks from melting.
+          networking fabric, servers and racks, cooling, and in-rack power modules.
           Optical interconnects nest under
           <a href="photonics/index.html">Photonics</a>.
         </p>
         <div class="meta-row">
-          <span class="chip">Hub section · eight layers</span>
-          <span class="chip">Seed: data/hardware_companies.json</span>
+          <span class="chip">Hub section · nine layers</span>
+          <span class="chip">Sources: hub extraction + data/hardware_companies.json</span>
           <span class="chip warn">Not investment advice</span>
         </div>
       </header>
@@ -68,267 +70,473 @@
       <section aria-labelledby="h-why" id="why">
         <h2 id="h-why">Why hardware sits in the middle of the AI stack</h2>
         <p class="lede">
-          Hyperscalers buy megawatts and square footage.
+          Hyperscalers buy megawatts and halls.
           Software decides the workload.
           Hardware is what actually does the math — and what breaks first when clusters get denser.
         </p>
-        <p>Think of three jobs this gear does:</p>
+        <p>Three jobs this gear does:</p>
         <ul>
           <li>
             <strong>Compute.</strong>
-            GPUs,
+            Merchant GPUs, custom
             <a href="https://en.wikipedia.org/wiki/Application-specific_integrated_circuit">application-specific integrated circuits (ASICs)</a>,
-            and server
-            <a href="https://en.wikipedia.org/wiki/Central_processing_unit">central processing units (CPUs)</a>
-            train and serve models. Merchant chips (sold to many buyers) sit beside custom chips designed for one cloud.
+            and host CPUs train and serve models.
           </li>
           <li>
             <strong>Move and hold data.</strong>
-            HBM sits next to the accelerator.
-            Networking switches and cables (electrical and optical) connect thousands of GPUs into one training job.
-            Slow links waste expensive silicon.
+            HBM sits next to the accelerator; Ethernet and proprietary fabrics connect thousands of GPUs;
+            optical links take over when copper runs out of reach or power budget.
           </li>
           <li>
-            <strong>Package and cool.</strong>
-            Servers, racks, contract manufacturers, and liquid cooling turn chips into deployable capacity.
-            Power delivery from the grid to the rack is covered under
+            <strong>Package, cool, and power the rack.</strong>
+            OEMs, ODMs, liquid cooling, and board-level power modules turn chips into deployable capacity.
+            Facility power from the grid lives under
             <a href="../electrification/index.html">Electrification</a>;
-            chip factories live under
+            wafer fabs and packaging under
             <a href="../semiconductors/index.html">Semiconductors</a>.
           </li>
         </ul>
         <div class="callout">
           <div class="label">Public vs private names on this page</div>
           <p style="margin:0">
-            The seed list mixes publicly traded companies (tickers shown) and a few private specialists.
-            Blurbs say what each company does in plain language — they are orientation notes, not recommendations.
-            Figures from older extracts can go stale; treat them as historical color only.
+            Names come from the curated hub extraction and the hardware seed JSON.
+            Blurbs are plain “what they do” notes — not recommendations.
+            Roadmap labels and share figures from the extract can go stale; treat them as orientation only.
           </p>
         </div>
       </section>
 
       <section aria-labelledby="h-stack" id="stack">
-        <h2 id="h-stack">Eight-layer map</h2>
+        <h2 id="h-stack">Nine-layer map</h2>
         <p>
-          Working from the accelerator out to the rack and the cooling loop.
+          Working from the accelerator out to the rack.
           Deep optical detail lives on the nested
-          <a href="photonics/index.html">Photonics</a> page.
+          <a href="photonics/index.html">Photonics</a> page — this parent keeps a short optical/fiber orientation and cross-links.
         </p>
         <ol>
-          <li><a href="#layer-1">GPUs &amp; AI accelerators</a> — merchant GPUs, custom ASICs, and related server CPUs.</li>
-          <li><a href="#layer-2">Memory (HBM / DRAM)</a> — stacked memory that feeds accelerators, plus commodity DRAM.</li>
-          <li><a href="#layer-3">Networking</a> — Ethernet and AI fabrics that stitch GPUs into clusters.</li>
-          <li><a href="#layer-4">Optical &amp; fiber</a> — glass and preforms that carry bits between racks and buildings (full optics map → Photonics).</li>
-          <li><a href="#layer-5">Connectors &amp; cabling</a> — high-speed electrical connectors and cable assemblies.</li>
-          <li><a href="#layer-6">Servers &amp; racks</a> — OEMs that ship AI-ready systems and liquid-cooled racks.</li>
-          <li><a href="#layer-7">Contract manufacturing</a> — ODMs and electronics manufacturers that assemble white-box and branded servers.</li>
-          <li><a href="#layer-8">Cooling &amp; thermal</a> — air and liquid cooling for high-density AI halls.</li>
+          <li><a href="#layer-1">GPUs &amp; AI accelerators</a> — merchant GPUs, hyperscaler custom ASICs, private / alternative chips.</li>
+          <li><a href="#layer-2">Server CPUs</a> — x86 and Arm hosts that run the rest of the server.</li>
+          <li><a href="#layer-3">Memory &amp; storage</a> — HBM, DRAM, and enterprise storage systems.</li>
+          <li><a href="#layer-4">Networking</a> — Ethernet switches, switch ASICs, and GPU fabrics.</li>
+          <li><a href="#layer-5">Optical &amp; fiber</a> — glass and a pointer to the full Photonics map.</li>
+          <li><a href="#layer-6">Connectors &amp; cabling</a> — high-speed electrical interconnect.</li>
+          <li><a href="#layer-7">Servers, racks &amp; manufacturing</a> — OEMs and Taiwan / EMS assemblers.</li>
+          <li><a href="#layer-8">Cooling &amp; thermal</a> — air and liquid cooling for dense AI halls.</li>
+          <li><a href="#layer-9">In-rack power modules</a> — VRMs and power stages on the board / tray (facility power → Electrification).</li>
         </ol>
       </section>
 
       <section aria-labelledby="h-who" id="who">
         <h2 id="h-who">Who-is-who by layer</h2>
         <p class="lede">
-          Seed names from <code>data/hardware_companies.json</code>, rewritten as plain “what they do” notes.
+          Expanded from the Datacenter Computation Hardware extraction, aligned with <code>data/hardware_companies.json</code> where present.
         </p>
 
         <h3 id="layer-1">1. GPUs &amp; AI accelerators</h3>
         <p class="layer-intro">
-          Chips that do most of the matrix math for training and inference.
-          Merchant GPUs ship to many customers;
-          custom ASICs are designed with (or for) a single hyperscaler.
-          The same vendors often sell the host CPUs that run the rest of the server.
+          Chips that do most of the matrix math for training and
+          <a href="https://en.wikipedia.org/wiki/Inference_engine">inference</a>.
+          Merchant GPUs ship to many buyers; custom ASICs are designed with (or for) one cloud.
         </p>
+        <p><strong>Merchant GPU leaders (seed)</strong></p>
         <ul class="company-list">
           <li>
             <span class="name">NVIDIA</span><span class="ticker">NVDA</span>
             <p>
-              Dominant merchant AI GPU supplier (Blackwell and follow-ons) plus
-              <a href="https://en.wikipedia.org/wiki/CUDA">CUDA</a>
-              software and networking (InfiniBand /
-              <a href="https://en.wikipedia.org/wiki/NVLink">NVLink</a>
-              / Spectrum-X). Data-center GPUs are the core of most large training clusters today.
+              Dominant merchant AI GPU supplier (Blackwell / follow-ons such as Vera Rubin in the extract) plus
+              <a href="https://en.wikipedia.org/wiki/CUDA">CUDA</a>,
+              <a href="https://en.wikipedia.org/wiki/NVLink">NVLink</a>,
+              and Spectrum-X /
+              <a href="https://en.wikipedia.org/wiki/InfiniBand">InfiniBand</a>
+              networking. Still the default training cluster chip for most large builds.
             </p>
           </li>
           <li>
             <span class="name">AMD</span><span class="ticker">AMD</span>
             <p>
-              Credible #2 merchant AI GPU line (Instinct) plus
-              <a href="https://en.wikipedia.org/wiki/Epyc">EPYC</a>
-              server CPUs. Large multi-year GPU commitments with frontier labs and hyperscalers anchor the Instinct ramp.
-            </p>
-          </li>
-          <li>
-            <span class="name">Broadcom</span><span class="ticker">AVGO</span>
-            <p>
-              Leading designer of custom AI ASICs for hyperscalers (for example Google
-              <a href="https://en.wikipedia.org/wiki/Tensor_Processing_Unit">TPU</a>
-              and Meta MTIA programs) and of high-speed switch silicon used in AI fabrics.
+              Credible #2 merchant AI GPU line (Instinct / MI-series, Helios rack-scale in the extract) plus EPYC CPUs.
+              Large multi-year GPU commitments with labs and hyperscalers anchor share gains.
             </p>
           </li>
           <li>
             <span class="name">Intel</span><span class="ticker">INTC</span>
             <p>
-              Xeon server CPUs remain widely deployed; Gaudi AI accelerators are a smaller AI-accelerator effort beside a broader foundry and process-node turnaround story.
+              Xeon CPUs remain widely deployed; Gaudi AI accelerators are a smaller merchant-accelerator effort beside a broader process and foundry turnaround story.
             </p>
+          </li>
+          <li>
+            <span class="name">Qualcomm</span><span class="ticker">QCOM</span>
+            <p>AI200 / AI250 card and rack-scale accelerators called out in the extract for mid-decade sampling — re-entering datacenter AI silicon.</p>
+          </li>
+        </ul>
+        <p><strong>Custom ASICs &amp; hyperscaler in-house chips</strong></p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Broadcom</span><span class="ticker">AVGO</span>
+            <p>
+              Leading designer of custom AI ASICs for hyperscalers (Google
+              <a href="https://en.wikipedia.org/wiki/Tensor_Processing_Unit">Tensor Processing Unit (TPU)</a>,
+              Meta MTIA, and peers) and of high-speed switch silicon for AI fabrics.
+            </p>
+          </li>
+          <li>
+            <span class="name">Marvell</span><span class="ticker">MRVL</span>
+            <p>Custom ASICs and datacenter switch silicon — often cited as a second source beside Broadcom for hyperscaler programs.</p>
+          </li>
+          <li>
+            <span class="name">Google (Alphabet)</span><span class="ticker">GOOGL</span>
+            <p>In-house TPU line (Ironwood / 7th-gen called out in the extract) — mostly for Google Cloud and internal training, not a broad merchant GPU.</p>
+          </li>
+          <li>
+            <span class="name">Amazon / AWS</span><span class="ticker">AMZN</span>
+            <p>
+              <a href="https://en.wikipedia.org/wiki/Amazon_Web_Services">Amazon Web Services (AWS)</a>
+              Trainium training chips and Inferentia inference chips — vertical silicon for AWS customers.
+            </p>
+          </li>
+          <li>
+            <span class="name">Microsoft</span><span class="ticker">MSFT</span>
+            <p>Maia AI accelerator — primarily for Microsoft’s own cloud and Copilot-scale workloads.</p>
           </li>
         </ul>
         <p class="muted">
-          Hyperscalers also design in-house accelerators (Google TPU, Amazon Trainium, Microsoft Maia) covered mainly under
+          ASIC design houses named in the extract (Alchip, Global Unichip, MediaTek) help implement those custom chips — overlap with Semiconductors / design services.
+          Buyer context:
           <a href="../hyperscalers/index.html">Hyperscalers</a>.
-          Private merchant alternatives (Cerebras, SambaNova, Tenstorrent, and similar) appear in older landscape notes and may be added here later.
         </p>
+        <p><strong>Private / alternative accelerators (from extraction)</strong></p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Cerebras</span>
+            <p>
+              <a href="https://en.wikipedia.org/wiki/Wafer-scale_integration">Wafer-scale</a>
+              engine (WSE-3) — one giant chip per wafer for certain training / inference patterns.
+            </p>
+          </li>
+          <li>
+            <span class="name">SambaNova</span>
+            <p>Reconfigurable dataflow units aimed at agentic and inference workloads with a full software stack.</p>
+          </li>
+          <li>
+            <span class="name">Tenstorrent</span>
+            <p>RISC-V–based AI chips (Blackhole series in the extract) targeting open architectures.</p>
+          </li>
+          <li>
+            <span class="name">d-Matrix</span>
+            <p>Corsair rack-scale inference acceleration called out in the extract.</p>
+          </li>
+          <li>
+            <span class="name">Groq</span>
+            <p>
+              Language Processing Unit (LPU) inference path; the extract notes a late-2025 NVIDIA acquisition narrative — treat ownership status as time-sensitive.
+            </p>
+          </li>
+          <li>
+            <span class="name">Graphcore</span>
+            <p>Intelligence Processing Unit (IPU) line; extract notes SoftBank acquisition — again, verify current status.</p>
+          </li>
+          <li>
+            <span class="name">IBM</span><span class="ticker">IBM</span>
+            <p>Spyre accelerator called out for enterprise AI attach beside IBM’s systems business.</p>
+          </li>
+        </ul>
 
-        <h3 id="layer-2">2. Memory (HBM / DRAM)</h3>
+        <h3 id="layer-2">2. Server CPUs</h3>
         <p class="layer-intro">
-          <a href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory">High Bandwidth Memory (HBM)</a>
-          stacks DRAM dies beside the GPU die so the accelerator is not starved for data.
-          The same three memory giants also supply ordinary
-          <a href="https://en.wikipedia.org/wiki/Dynamic_random-access_memory">DRAM</a>
-          for servers.
+          The host CPU runs the operating system, networking stack, and non-GPU work.
+          x86 still dominates many racks;
+          <a href="https://en.wikipedia.org/wiki/ARM_architecture_family">Arm</a>
+          designs grow where power efficiency matters.
         </p>
         <ul class="company-list">
           <li>
+            <span class="name">AMD</span><span class="ticker">AMD</span>
+            <p>
+              <a href="https://en.wikipedia.org/wiki/Epyc">EPYC</a>
+              (Genoa / Turin and follow-ons) — strong core counts and memory bandwidth for AI hosts.
+            </p>
+          </li>
+          <li>
+            <span class="name">Intel</span><span class="ticker">INTC</span>
+            <p>Xeon 6 (Granite Rapids generation in the extract) — still large installed base; competitive pressure from AMD and Arm.</p>
+          </li>
+          <li>
+            <span class="name">Ampere Computing</span>
+            <p>Arm server CPUs (Altra / AmpereOne) for cloud efficiency; extract notes SoftBank ownership since late 2025.</p>
+          </li>
+          <li>
+            <span class="name">Arm Holdings</span>
+            <p>Architecture licensor; extract mentions AGI-class high-core Arm CPU IP aimed at AI hosts.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-3">3. Memory &amp; storage</h3>
+        <p class="layer-intro">
+          HBM stacks DRAM dies beside the GPU so the accelerator is not starved.
+          Ordinary server
+          <a href="https://en.wikipedia.org/wiki/Dynamic_random-access_memory">DRAM</a>
+          and enterprise storage (hard drives and flash arrays) sit further out.
+        </p>
+        <p><strong>HBM / DRAM (seed + extraction)</strong></p>
+        <ul class="company-list">
+          <li>
             <span class="name">SK Hynix</span><span class="ticker">000660.KS</span>
-            <p>Leading HBM supplier to major GPU programs; HBM capacity has often been sold out years ahead during AI ramps.</p>
+            <p>Leading HBM supplier to major GPU programs; HBM capacity often sold out years ahead during AI ramps.</p>
           </li>
           <li>
             <span class="name">Samsung Electronics</span><span class="ticker">005930.KS</span>
-            <p>World’s largest memory maker expanding HBM share while also running a large foundry business — unique memory + fab combination.</p>
+            <p>Largest memory maker expanding HBM share; also a major foundry — unique memory + fab combination.</p>
           </li>
           <li>
             <span class="name">Micron Technology</span><span class="ticker">MU</span>
             <p>US memory company ramping HBM for AI GPUs and shifting more capacity toward datacenter DRAM.</p>
           </li>
         </ul>
+        <p><strong>Enterprise storage systems (extraction)</strong></p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Western Digital</span><span class="ticker">WDC</span>
+            <p>Nearline hard drives that hold training datasets and cold content at scale.</p>
+          </li>
+          <li>
+            <span class="name">Seagate</span><span class="ticker">STX</span>
+            <p>
+              High-capacity enterprise hard drives, including
+              <a href="https://en.wikipedia.org/wiki/Heat-assisted_magnetic_recording">heat-assisted magnetic recording (HAMR)</a>
+              generations for denser nearline storage.
+            </p>
+          </li>
+          <li>
+            <span class="name">Pure Storage</span><span class="ticker">PSTG</span>
+            <p>All-flash arrays for fast AI data pipelines and subscriptions around flash capacity.</p>
+          </li>
+          <li>
+            <span class="name">NetApp</span><span class="ticker">NTAP</span>
+            <p>Enterprise storage and data-management platforms used beside cloud and on-prem AI clusters.</p>
+          </li>
+        </ul>
 
-        <h3 id="layer-3">3. Networking</h3>
+        <h3 id="layer-4">4. Networking</h3>
         <p class="layer-intro">
-          AI clusters need fast, lossless (or nearly lossless) networks so thousands of GPUs act like one machine.
-          Merchant switch vendors compete with silicon and full systems; GPU makers also ship proprietary fabrics.
+          AI clusters need fast fabrics so thousands of GPUs act like one machine.
+          Merchant switch vendors, switch-ASIC designers, and GPU proprietary interconnects all compete here.
         </p>
+        <p><strong>Ethernet switch systems (seed + extraction)</strong></p>
         <ul class="company-list">
           <li>
             <span class="name">Arista Networks</span><span class="ticker">ANET</span>
             <p>
               High-speed
               <a href="https://en.wikipedia.org/wiki/Ethernet">Ethernet</a>
-              switching focused on cloud and AI datacenters — strong share in hyperscaler leaf/spine fabrics and AI-oriented 400G/800G systems.
+              switching for cloud and AI datacenters — strong share in hyperscaler leaf/spine and 400G/800G AI fabrics.
             </p>
           </li>
           <li>
             <span class="name">Cisco Systems</span><span class="ticker">CSCO</span>
+            <p>Broad networking franchise plus Silicon One chips aimed at AI fabrics; Splunk expands observability around the same clusters.</p>
+          </li>
+          <li>
+            <span class="name">HPE (Juniper)</span><span class="ticker">HPE</span>
+            <p>Juniper Networks (acquired) adds Ethernet switching and related optics/routing beside HPE servers.</p>
+          </li>
+        </ul>
+        <p><strong>Switch ASICs, custom networking silicon &amp; GPU fabric</strong></p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Broadcom</span><span class="ticker">AVGO</span>
+            <p>Merchant switch ASICs and Ultra Ethernet Consortium participation — silicon inside many white-box and branded AI switches.</p>
+          </li>
+          <li>
+            <span class="name">Marvell</span><span class="ticker">MRVL</span>
+            <p>Datacenter switch and custom ASIC silicon as a multi-source alternative for hyperscalers.</p>
+          </li>
+          <li>
+            <span class="name">NVIDIA</span><span class="ticker">NVDA</span>
             <p>
-              Broad networking franchise plus Silicon One chips aimed at AI fabrics; Splunk acquisition expands observability around the same clusters.
+              InfiniBand (via Mellanox), NVLink / NVLink Fusion, and Spectrum-X Ethernet — proprietary and Ethernet paths for GPU clusters, including
+              <a href="https://en.wikipedia.org/wiki/Co-packaged_optics">co-packaged optics (CPO)</a>
+              directions that overlap Photonics.
             </p>
           </li>
         </ul>
-        <p class="muted">
-          NVIDIA (InfiniBand / Spectrum-X) and Broadcom (switch ASICs) also sit in this layer — listed above under accelerators because that is how the seed file tags them.
-        </p>
 
-        <h3 id="layer-4">4. Optical &amp; fiber</h3>
+        <h3 id="layer-5">5. Optical &amp; fiber</h3>
         <p class="layer-intro">
-          As electrical copper runs out of reach and power budget, more links inside and between halls go optical —
+          When copper runs out of reach or watts, links go optical —
           <a href="https://en.wikipedia.org/wiki/Optical_fiber">fiber</a>,
-          transceivers, and eventually
-          <a href="https://en.wikipedia.org/wiki/Co-packaged_optics">co-packaged optics (CPO)</a>.
+          transceivers, lasers, and eventually CPO.
         </p>
         <ul class="company-list">
           <li>
             <span class="name">Corning</span><span class="ticker">GLW</span>
-            <p>
-              Major maker of optical fiber and preforms; large AI-related capacity expansions and partnerships (including with GPU and hyperscaler buyers) put glass at the center of optical AI buildouts.
-            </p>
+            <p>Major maker of optical fiber and preforms; large AI-related capacity expansions and hyperscaler / GPU-ecosystem partnerships.</p>
           </li>
         </ul>
         <div class="callout">
-          <div class="label">Nested section</div>
+          <div class="label">Nested Photonics section (do not duplicate here)</div>
           <p style="margin:0">
-            Transceivers, lasers,
+            Transceivers and components (Lumentum, Coherent, Fabrinet, InnoLight, Eoptolink, and peers),
             <a href="https://en.wikipedia.org/wiki/Silicon_photonics">silicon photonics</a>,
-            DSPs, CPO, and optical materials are mapped in depth on
+            DSPs, CPO, optical networking platforms (Ciena, Nokia/Infinera, Acacia/Cisco, and peers), and photomask / optical materials
+            are mapped in depth on
             <a href="photonics/index.html">hardware / Photonics</a>
-            (owned by Photonics AI). This parent page keeps the fiber/glass seed name and points there for the rest.
+            (owned by Photonics AI). Fab photomask overlap also cross-links to
+            <a href="../semiconductors/index.html">Semiconductors</a>.
           </p>
         </div>
 
-        <h3 id="layer-5">5. Connectors &amp; cabling</h3>
+        <h3 id="layer-6">6. Connectors &amp; cabling</h3>
         <p class="layer-intro">
-          High-speed connectors and cable assemblies carry signals between boards, cages, and racks.
-          Densities and data rates rise with each GPU generation.
+          High-speed connectors and cable assemblies carry signals between boards, cages, and racks as lane rates climb (112G / 224G-class signaling in modern switch and GPU platforms).
         </p>
         <ul class="company-list">
           <li>
             <span class="name">Amphenol</span><span class="ticker">APH</span>
-            <p>
-              Large electrical connector and interconnect supplier; datacom and AI-related demand has been a standout growth area in recent quarters.
-            </p>
+            <p>Large electrical connector and interconnect supplier; datacom / AI demand has been a standout growth area (seed).</p>
+          </li>
+          <li>
+            <span class="name">TE Connectivity</span><span class="ticker">TEL</span>
+            <p>Global connector leader with high-speed backplane and datacenter products called out in the extract.</p>
+          </li>
+          <li>
+            <span class="name">Molex</span>
+            <p>High-speed I/O and CPO-related connector work (Koch Industries subsidiary) for dense switch and GPU platforms.</p>
+          </li>
+          <li>
+            <span class="name">Samtec</span>
+            <p>Specialty high-speed connectors used in datacenter and telecom gear.</p>
           </li>
         </ul>
 
-        <h3 id="layer-6">6. Servers &amp; racks</h3>
+        <h3 id="layer-7">7. Servers, racks &amp; manufacturing</h3>
         <p class="layer-intro">
-          Original equipment manufacturers (OEMs) turn chips, boards, and cooling into branded servers and full racks that enterprises and clouds can buy or lease.
+          <a href="https://en.wikipedia.org/wiki/Original_equipment_manufacturer">Original equipment manufacturers (OEMs)</a>
+          brand and support systems;
+          <a href="https://en.wikipedia.org/wiki/Original_design_manufacturer">original design manufacturers (ODMs)</a>
+          and electronics manufacturers assemble much of the volume.
         </p>
+        <p><strong>OEM system integrators (seed + extraction)</strong></p>
         <ul class="company-list">
           <li>
             <span class="name">Super Micro Computer</span><span class="ticker">SMCI</span>
-            <p>
-              AI server and rack specialist known for fast custom configurations and direct liquid cooling — often first with new NVIDIA GPU platforms.
-            </p>
+            <p>AI server and rack specialist — fast custom configs and direct liquid cooling; often first with new NVIDIA platforms.</p>
           </li>
           <li>
             <span class="name">Dell Technologies</span><span class="ticker">DELL</span>
-            <p>
-              Broad PowerEdge server line and enterprise support channels; AI servers are a growth slice of a larger infrastructure business.
-            </p>
+            <p>PowerEdge servers and enterprise channels; AI servers as a growth slice of a larger infrastructure business.</p>
           </li>
           <li>
             <span class="name">HPE</span><span class="ticker">HPE</span>
-            <p>
-              Enterprise server and AI infrastructure vendor; Juniper acquisition expands the networking portfolio beside ProLiant and related systems.
-            </p>
+            <p>ProLiant and AI infrastructure; Juniper acquisition expands networking beside servers.</p>
+          </li>
+          <li>
+            <span class="name">Lenovo</span><span class="ticker">LNVGY</span>
+            <p>ThinkSystem servers — value and volume positioning in enterprise AI boxes.</p>
           </li>
         </ul>
-
-        <h3 id="layer-7">7. Contract manufacturing</h3>
-        <p class="layer-intro">
-          Electronics manufacturing services and
-          <a href="https://en.wikipedia.org/wiki/Original_design_manufacturer">original design manufacturers (ODMs)</a>
-          assemble many of the “white box” and branded AI servers that OEMs and hyperscalers ship.
-        </p>
+        <p><strong>Contract manufacturing / ODM (seed + extraction)</strong></p>
         <ul class="company-list">
           <li>
             <span class="name">Celestica</span><span class="ticker">CLS</span>
-            <p>
-              Datacenter-focused electronics manufacturer building high-speed networking and AI server platforms for cloud and OEM customers.
-            </p>
+            <p>Datacenter-focused electronics manufacturer for high-speed networking and AI server platforms (seed).</p>
+          </li>
+          <li>
+            <span class="name">Foxconn (Hon Hai)</span><span class="ticker">2317.TW</span>
+            <p>Primary high-volume assembler for major NVIDIA rack platforms (NVL-class systems in the extract).</p>
+          </li>
+          <li>
+            <span class="name">Quanta Computer</span><span class="ticker">2382.TW</span>
+            <p>Hyperscale server ODM — large AI server assembly volumes for cloud buyers.</p>
+          </li>
+          <li>
+            <span class="name">Wistron / Wiwynn</span>
+            <p>Enterprise and hyperscale server design/assembly; Wiwynn spun toward cloud / AI racks with fast growth in the extract.</p>
+          </li>
+          <li>
+            <span class="name">Inventec / Pegatron / Compal</span>
+            <p>Additional Taiwan ODMs assembling AI and white-box servers as capacity expands outside China.</p>
           </li>
         </ul>
-        <p class="muted">
-          Large Taiwan ODMs (Foxconn, Quanta, Wistron/Wiwynn, and peers) dominate volume AI server assembly in older landscape notes; expect expansion beyond this single seed name.
-        </p>
 
         <h3 id="layer-8">8. Cooling &amp; thermal</h3>
         <p class="layer-intro">
-          Rack power densities for AI often need
+          AI rack densities often need
           <a href="https://en.wikipedia.org/wiki/Liquid_cooling">liquid cooling</a>
           (cold plates, rear-door heat exchangers, or immersion) instead of air alone.
-          Facility-scale chillers and power gear also appear under Electrification.
         </p>
         <ul class="company-list">
           <li>
             <span class="name">Vertiv</span><span class="ticker">VRT</span>
-            <p>
-              Leading thermal management and power-distribution supplier for data centers, including liquid-cooling systems sized for dense AI racks.
-            </p>
+            <p>Leading thermal management and power-distribution supplier for data centers, including liquid-cooling packages for dense AI racks (seed).</p>
           </li>
           <li>
             <span class="name">Asetek</span>
+            <p>Direct-to-chip liquid-cooling specialist for AI and high-performance computing (seed).</p>
+          </li>
+          <li>
+            <span class="name">Schneider Electric</span><span class="ticker">SU.PA</span>
+            <p>Facility and IT cooling / power management; Motivair acquisition called out for liquid-cooling technology.</p>
+          </li>
+          <li>
+            <span class="name">CoolIT Systems</span>
+            <p>Direct-liquid-cooling loops used in AI / HPC servers.</p>
+          </li>
+          <li>
+            <span class="name">nVent</span><span class="ticker">NVT</span>
+            <p>Liquid cooling and enclosure / power solutions expanding with AI densification.</p>
+          </li>
+          <li>
+            <span class="name">Delta Electronics</span><span class="ticker">2308.TW</span>
+            <p>Integrated power, cooling, and datacenter infrastructure modules.</p>
+          </li>
+          <li>
+            <span class="name">Johnson Controls / Carrier / STULZ / Rittal / Munters</span>
+            <p>Chillers, computer-room air handlers, and liquid-cooling packages that keep halls within temperature limits — more facility-facing than chip-facing.</p>
+          </li>
+          <li>
+            <span class="name">Submer / GRC / Iceotope</span>
+            <p>Immersion and specialty liquid-cooling approaches for retrofit or greenfield AI halls.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-9">9. In-rack power modules</h3>
+        <p class="layer-intro">
+          Between the rack
+          <a href="https://en.wikipedia.org/wiki/Power_distribution_unit">power distribution unit (PDU)</a>
+          and the GPU sits a chain of power stages —
+          <a href="https://en.wikipedia.org/wiki/Voltage_regulator_module">voltage regulator modules (VRMs)</a>,
+          power-management ICs, and high-density converters.
+          Building and campus power (transformers, switchgear, UPS) belongs under
+          <a href="../electrification/index.html">Electrification</a>.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Monolithic Power Systems</span><span class="ticker">MPWR</span>
+            <p>VRM / power stages widely used on AI GPU boards (including Blackwell-class platforms in industry commentary).</p>
+          </li>
+          <li>
+            <span class="name">Vicor</span><span class="ticker">VICR</span>
+            <p>High-density power modules and power-delivery boards for AI trays and racks.</p>
+          </li>
+          <li>
+            <span class="name">Renesas</span><span class="ticker">6723.T</span>
+            <p>Power-delivery modules called out in the extract for major NVIDIA GPU platforms.</p>
+          </li>
+          <li>
+            <span class="name">Texas Instruments</span><span class="ticker">TXN</span>
+            <p>Power-management ICs across servers and accelerators.</p>
+          </li>
+          <li>
+            <span class="name">Infineon</span><span class="ticker">IFX.DE</span>
             <p>
-              Specialist in direct-to-chip and related liquid-cooling loops used in AI and high-performance computing systems.
+              Power stages and
+              <a href="https://en.wikipedia.org/wiki/Silicon_carbide">silicon carbide (SiC)</a>
+              devices — overlaps Semiconductors’ power-semi map for discrete devices.
             </p>
+          </li>
+          <li>
+            <span class="name">Delta Electronics</span><span class="ticker">2308.TW</span>
+            <p>Also appears here for integrated rack power modules beside cooling.</p>
           </li>
         </ul>
       </section>
@@ -338,7 +546,7 @@
         <p>
           Computation hardware runs the workload;
           <a href="../software/index.html">AI software</a>
-          decides what runs,
+          decides what runs (including CUDA / ROCm-class stacks),
           <a href="../semiconductors/index.html">semiconductor fabrication</a>
           builds the chips,
           <a href="../hyperscalers/index.html">hyperscalers</a>
