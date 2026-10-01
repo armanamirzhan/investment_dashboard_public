@@ -281,3 +281,93 @@
   .briefing .company-list > li { padding: 0.75rem 0.85rem; }
   .briefing .page-toc { top: var(--nav-height, 56px); }
 }
+
+/* Scarcity timeline table + cards */
+.briefing .scarcity-table-wrap {
+  overflow-x: auto;
+  margin: 1.25rem 0 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-local);
+  background: var(--bg-elev);
+  -webkit-overflow-scrolling: touch;
+}
+
+.briefing .scarcity-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  min-width: 640px;
+}
+
+.briefing .scarcity-table th,
+.briefing .scarcity-table td {
+  padding: 0.7rem 0.85rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.briefing .scarcity-table thead th {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  background: var(--bg-soft);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.briefing .scarcity-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.briefing .scarcity-table tbody tr:hover td {
+  background: rgba(91, 159, 212, 0.06);
+}
+
+.briefing .scarcity-table .name {
+  font-weight: 600;
+  color: #f0f4fa;
+}
+
+.briefing .scarcity-table .ticker {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.78em;
+  font-weight: 600;
+  color: var(--accent-2);
+  background: var(--accent-2-soft);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  margin-left: 0.2rem;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.briefing .scarcity-table td:nth-child(3) {
+  color: var(--warn);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.briefing .scarcity-table td:nth-child(4) {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.briefing .scarcity-cards .badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--warn);
+  background: var(--warn-soft);
+  border: 1px solid rgba(212, 163, 91, 0.3);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  margin: 0.35rem 0 0.15rem;
+}
+
+.briefing .scarcity-cards > li {
+  border-left: 3px solid var(--warn);
+}
+

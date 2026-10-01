@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Photonics — AI optical interconnects</title>
-  <meta name="description" content="Layperson briefing on AI photonics: why optics matter as GPU clusters scale, a six-layer company map, and who does what across optical networking, components, DSPs, foundries, test, and materials. Not investment advice.">
+  <meta name="description" content="Layperson briefing on AI photonics: why optics matter as GPU clusters scale, the ~2027–2028 optical scarcity timeline, a six-layer company map, and who does what across optical networking, components, DSPs, foundries, test, and materials. Not investment advice.">
   <link rel="stylesheet" href="../../assets/site.css">
   <link rel="stylesheet" href="section.css">
 </head>
@@ -31,6 +31,7 @@
         <div class="toc-inner">
           <span class="toc-label">Jump</span>
           <a href="#why">Why optics</a>
+          <a href="#scarcity">Scarcity ~2027–28</a>
           <a href="#stack-map">Stack map</a>
           <a href="#layer-1">Platform</a>
           <a href="#layer-2">Components</a>
@@ -120,6 +121,140 @@
           who fabricates and assembles, who tests and integrates, and who supplies materials upstream.
           Private specialists (for example optical chiplet vendors) matter too; this page sticks to listed names
           you can research in public markets, with a few extras where they clearly strengthen a layer.
+          For the ~2027–2028 optical bottleneck after packaging and HBM ease, see
+          <a href="#scarcity">Scarcity timeline</a>.
+        </p>
+      </section>
+
+      <section aria-labelledby="h-scarcity" id="scarcity">
+        <h2 id="h-scarcity">Scarcity timeline ~2027–2028</h2>
+        <p class="lede">
+          After power, advanced packaging, and
+          <a href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory">high-bandwidth memory (HBM)</a>
+          ease, optical interconnects are widely expected to become the dominant bottleneck for AI clusters
+          around <strong>2027–2028</strong>. Copper runs out of runway for the bandwidth those fabrics need;
+          lasers, optical engines,
+          <a href="https://en.wikipedia.org/wiki/Indium_phosphide">indium phosphide (InP)</a>
+          wafers, fiber, and optical
+          <a href="https://en.wikipedia.org/wiki/Digital_signal_processor">digital signal processors (DSPs)</a>
+          have to scale with the clusters.
+        </p>
+        <p>
+          This is the same handoff sketched on the parent
+          <a href="../index.html#scarcity">Hardware → Scarcity</a>
+          page. The names below are the public-market points of the optical pinch — roles and how the
+          market is currently discussing “what’s priced in,” not buy or sell calls.
+        </p>
+        <div class="callout warn">
+          <div class="label">Market context, not advice</div>
+          <p style="margin:0">
+            Phrases like “priced in,” sales multiples, and “partially / largely” describe how equity narratives
+            around these tickers are often framed today. They are not recommendations, fair-value estimates,
+            or a view that any name is cheap or expensive for you.
+          </p>
+        </div>
+
+        <div class="scarcity-table-wrap" role="region" aria-label="Optical scarcity names ~2027–2028">
+          <table class="scarcity-table">
+            <thead>
+              <tr>
+                <th scope="col">Company</th>
+                <th scope="col">Role in the pinch</th>
+                <th scope="col">Shortage window</th>
+                <th scope="col">How the market often frames it</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="name">Lumentum</span> <span class="ticker">LITE</span></td>
+                <td>Lasers and optical engines for data-center / AI links</td>
+                <td>Dominant ~2027–2028</td>
+                <td>Scarcity narrative often described as priced in aggressively; ~29× sales cited as a valuation signal in market commentary — context only</td>
+              </tr>
+              <tr>
+                <td><span class="name">Coherent</span> <span class="ticker">COHR</span></td>
+                <td>Lasers and optical engines (broader photonics franchise)</td>
+                <td>Dominant ~2027–2028</td>
+                <td>Similar laser / engine story to Lumentum; narrative often treated as largely priced in — compare stories, not a ranking</td>
+              </tr>
+              <tr>
+                <td><span class="name">AXT</span> <span class="ticker">AXTI</span></td>
+                <td>Upstream InP wafers / compound substrates for lasers and detectors</td>
+                <td>Dominant ~2027–2028</td>
+                <td>Specialty materials; often called partially priced — cyclicality makes the scarcity story harder to read cleanly</td>
+              </tr>
+              <tr>
+                <td><span class="name">Corning</span> <span class="ticker">GLW</span></td>
+                <td>Optical fiber and specialty glass / materials</td>
+                <td>Dominant ~2027–2028</td>
+                <td>Broader industrial franchise; AI fiber demand is incremental — often framed as partially reflecting the theme</td>
+              </tr>
+              <tr>
+                <td><span class="name">Marvell</span> <span class="ticker">MRVL</span></td>
+                <td>Optical DSPs and connectivity silicon inside modules and fabrics</td>
+                <td>Dominant ~2027–2028</td>
+                <td>Semi-style multiple and design-win driven; optical DSP upside often described as partially to largely in the price</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ul class="company-list scarcity-cards">
+          <li>
+            <span class="name">Lumentum</span><span class="ticker">LITE</span>
+            <span class="badge">Lasers / optical engines · ~2027–28</span>
+            <p>
+              Builds the lasers and optical-engine pieces that turn electrical signals into light for high-speed
+              data-center links. As copper hits power and reach limits inside AI halls, demand for those light sources
+              is what the scarcity timeline is about. Market chatter has treated the scarcity story as priced in
+              aggressively (including ~29× sales as a signal people cite) — that is how the tape is discussed, not a recommendation.
+            </p>
+          </li>
+          <li>
+            <span class="name">Coherent</span><span class="ticker">COHR</span>
+            <span class="badge">Lasers / optical engines · ~2027–28</span>
+            <p>
+              Another major lasers-and-optics supplier spanning communications and industrial photonics.
+              In the same optical-engine scarcity window as Lumentum; commentary often calls the narrative largely
+              priced in. Useful as a peer lens on the same bottleneck, not as a “pick one” framing.
+            </p>
+          </li>
+          <li>
+            <span class="name">AXT</span><span class="ticker">AXTI</span>
+            <span class="badge">InP wafers · upstream · ~2027–28</span>
+            <p>
+              Makes compound-semiconductor substrates, including
+              <a href="https://en.wikipedia.org/wiki/Indium_phosphide">indium phosphide (InP)</a>,
+              that sit under many laser and detector epi stacks. Upstream of the module brands — if laser volume
+              must scale, wafer substrate capacity matters. Specialty materials and cyclicality often leave the
+              scarcity story only partially reflected in how the stock is discussed.
+            </p>
+          </li>
+          <li>
+            <span class="name">Corning</span><span class="ticker">GLW</span>
+            <span class="badge">Optical fiber / materials · ~2027–28</span>
+            <p>
+              Produces the optical fiber and specialty glass that carry those photons between racks, halls, and sites.
+              AI fabrics add fiber and related materials demand on top of a much broader glass and materials business,
+              so the AI-fiber theme is usually described as incremental and only partially in the price.
+            </p>
+          </li>
+          <li>
+            <span class="name">Marvell</span><span class="ticker">MRVL</span>
+            <span class="badge">Optical DSPs / connectivity silicon · ~2027–28</span>
+            <p>
+              Ships the high-speed chips — especially optical
+              <a href="https://en.wikipedia.org/wiki/Digital_signal_processor">DSPs</a>
+              and related connectivity silicon — that condition and decode signals inside optical modules and cloud fabrics.
+              Design wins and a semiconductor-style multiple dominate how people talk about it; the optical-DSP scarcity
+              angle is often called partially to largely priced in.
+            </p>
+          </li>
+        </ul>
+        <p class="muted">
+          Full layer blurbs (including these five among peers) sit in
+          <a href="#who">Who-is-who by layer</a> below. Parent hardware timeline:
+          <a href="../index.html#scarcity">packaging &amp; HBM first, then optics</a>.
         </p>
       </section>
 
@@ -192,7 +327,7 @@
         <ul class="company-list">
           <li>
             <span class="name">Lumentum</span><span class="ticker">LITE</span>
-            <p>Makes lasers, optical components, and modules used in data-center and telecom links, including high-speed transceiver building blocks and related photonics parts.</p>
+            <p>Makes lasers, optical components, and modules used in data-center and telecom links, including high-speed transceiver building blocks and related photonics parts. One of the names most often tied to the <a href="#scarcity">~2027–2028 optical scarcity</a> window for lasers and optical engines.</p>
           </li>
           <li>
             <span class="name">Applied Optoelectronics</span><span class="ticker">AAOI</span>
@@ -200,7 +335,7 @@
           </li>
           <li>
             <span class="name">Coherent</span><span class="ticker">COHR</span>
-            <p>Broad photonics supplier (lasers, materials, and optical components) spanning industrial lasers and communications optics used in networking and sensing.</p>
+            <p>Broad photonics supplier (lasers, materials, and optical components) spanning industrial lasers and communications optics used in networking and sensing. Peers with Lumentum in the lasers / optical-engine <a href="#scarcity">scarcity timeline</a>.</p>
           </li>
           <li>
             <span class="name">MACOM</span><span class="ticker">MTSI</span>
@@ -230,7 +365,7 @@
           </li>
           <li>
             <span class="name">Marvell</span><span class="ticker">MRVL</span>
-            <p>Supplies data-infrastructure silicon including electro-optics DSPs, Ethernet devices, and custom ASICs widely used in optical modules and cloud networking.</p>
+            <p>Supplies data-infrastructure silicon including electro-optics DSPs, Ethernet devices, and custom ASICs widely used in optical modules and cloud networking. Optical DSP / connectivity role in the <a href="#scarcity">~2027–2028 pinch</a> is covered in the scarcity brief above.</p>
           </li>
           <li>
             <span class="name">Astera Labs</span><span class="ticker">ALAB</span>
@@ -315,7 +450,7 @@
         <ul class="company-list">
           <li>
             <span class="name">AXT</span><span class="ticker">AXTI</span>
-            <p>Produces compound-semiconductor substrates (such as gallium arsenide and indium phosphide families) used to grow the epitaxial material for many lasers and detectors.</p>
+            <p>Produces compound-semiconductor substrates (such as gallium arsenide and indium phosphide families) used to grow the epitaxial material for many lasers and detectors. Upstream InP wafer angle in the <a href="#scarcity">scarcity timeline</a>.</p>
           </li>
           <li>
             <span class="name">Soitec</span><span class="ticker">SOI.PA</span>
@@ -331,7 +466,7 @@
           </li>
           <li>
             <span class="name">Corning</span><span class="ticker">GLW</span>
-            <p>Major producer of optical fiber and specialty glass — the physical medium for almost every photonic link between racks, buildings, and cities.</p>
+            <p>Major producer of optical fiber and specialty glass — the physical medium for almost every photonic link between racks, buildings, and cities. AI fiber demand is incremental on a broader franchise; see <a href="#scarcity">scarcity timeline</a>.</p>
           </li>
         </ul>
       </section>
