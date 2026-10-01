@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Semiconductor Fabrication — Investment Hub</title>
-  <meta name="description" content="Semiconductor fabrication chain: foundries, lithography (EUV/DUV), wafer fabrication equipment, inspection & metrology, advanced packaging (CoWoS/HBM/chiplets), test equipment, photomasks, wafers, specialty chemicals/gases, and SiC/GaN power semis.">
+  <title>Semiconductor Fabrication — foundries, equipment &amp; materials</title>
+  <meta name="description" content="Layperson briefing on semiconductor fabrication from the hub extraction: foundries, lithography, wafer fab equipment, inspection, advanced packaging, test, photomasks, wafers, chemicals and gases, fab construction, and SiC/GaN power semis. Not investment advice.">
   <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="section.css">
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary">
@@ -24,30 +25,528 @@
   </nav>
 
   <main class="container">
-    <header class="page-header">
-      <h1>🔬 Semiconductor Fabrication</h1>
-      <p class="subtitle">Semiconductor fabrication chain: foundries, lithography (EUV/DUV), wafer fabrication equipment, inspection & metrology, advanced packaging (CoWoS/HBM/chiplets), test equipment, photomasks, wafers, specialty chemicals/gases, and SiC/GaN power semis.</p>
-      <div class="meta-row">
-        <span class="chip">Section scaffold</span>
-        <span class="chip warn">Not investment advice</span>
-      </div>
-    </header>
+    <article class="briefing">
+      <nav aria-label="On this page" class="page-toc">
+        <div class="toc-inner">
+          <span class="toc-label">Jump</span>
+          <a href="#why">Why fabs</a>
+          <a href="#stack">Stack</a>
+          <a href="#layer-1">Foundries</a>
+          <a href="#layer-2">Lithography</a>
+          <a href="#layer-3">WFE</a>
+          <a href="#layer-4">Inspection</a>
+          <a href="#layer-5">Packaging</a>
+          <a href="#layer-6">Test</a>
+          <a href="#layer-7">Materials</a>
+          <a href="#layer-8">Fab build</a>
+          <a href="#layer-9">Power semis</a>
+          <a href="#related">Related</a>
+          <a href="#disclaimer">Disclaimer</a>
+        </div>
+      </nav>
 
-    <section class="section">
-      <h2>About</h2>
-      <p>Semiconductor fabrication chain: foundries, lithography (EUV/DUV), wafer fabrication equipment, inspection & metrology, advanced packaging (CoWoS/HBM/chiplets), test equipment, photomasks, wafers, specialty chemicals/gases, and SiC/GaN power semis.</p>
-      <p style="font-size:12px;color:var(--text-secondary);margin-top:8px">Owned by <strong>Semiconductor Fabrication</strong> per <a href="../OWNERS.md">OWNERS.md</a>. Full briefing content lands here as the section bot publishes.</p>
-    </section>
+      <header class="hero">
+        <span class="eyebrow">Technical briefing · from hub extraction · September 2026</span>
+        <h1>Semiconductor Fabrication — how AI chips get made</h1>
+        <p class="subtitle">
+          Before a GPU sits in a rack, it is patterned on silicon, packaged with memory, and tested.
+          This page maps the fabrication chain from the shared extraction —
+          <a href="https://en.wikipedia.org/wiki/Semiconductor_fabrication_plant">foundries</a>,
+          <a href="https://en.wikipedia.org/wiki/Photolithography">lithography</a>,
+          wafer equipment, inspection, advanced packaging, test, materials, fab construction,
+          and <a href="https://en.wikipedia.org/wiki/Silicon_carbide">silicon carbide (SiC)</a> /
+          <a href="https://en.wikipedia.org/wiki/Gallium_nitride">gallium nitride (GaN)</a> power devices.
+          Chip-design software (<a href="https://en.wikipedia.org/wiki/Electronic_design_automation">EDA</a>) lives under
+          <a href="../software/index.html">Software</a>.
+        </p>
+        <div class="meta-row">
+          <span class="chip">Hub section · nine layers</span>
+          <span class="chip">Source: hub-extraction + data/semiconductor_companies.json</span>
+          <span class="chip warn">Not investment advice</span>
+        </div>
+      </header>
 
-    <section class="section">
-      <h2>Status</h2>
-      <p>Placeholder page — taxonomy and company seeds are staged under <code>data/</code>. Briefings and trackers will appear in this folder.</p>
-    </section>
+      <section aria-labelledby="h-why" id="why">
+        <h2 id="h-why">Why fabrication sits under the AI stack</h2>
+        <p class="lede">
+          Hyperscalers order GPUs; hardware companies design them. Fabrication is the factory layer —
+          the plants, tools, and materials that turn designs into working silicon at scale.
+        </p>
+        <ul>
+          <li>
+            <strong>Print the transistors.</strong>
+            Advanced <a href="https://en.wikipedia.org/wiki/Process_node">process nodes</a>
+            (roughly how small and dense the features are) need
+            <a href="https://en.wikipedia.org/wiki/Extreme_ultraviolet_lithography">extreme ultraviolet (EUV)</a>
+            scanners, etch and deposition tools, and relentless yield control.
+          </li>
+          <li>
+            <strong>Assemble the system-in-package.</strong>
+            AI accelerators glue logic dies to
+            <a href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory">high-bandwidth memory (HBM)</a>
+            with 2.5D / 3D packaging. Capacity here — especially
+            <a href="https://en.wikipedia.org/wiki/Chip_on_wafer_on_substrate">chip-on-wafer-on-substrate (CoWoS)</a>-class flows —
+            has been as tight as leading-edge wafer starts.
+          </li>
+          <li>
+            <strong>Feed the factory.</strong>
+            Wafers, photomasks, photoresists, ultrapure gases and water, and cleanroom builders are less visible
+            than TSMC or ASML, but every advanced line depends on them.
+            Power devices (SiC/GaN) sit here too — they convert electricity efficiently inside datacenter racks
+            (see also <a href="../electrification/index.html">Electrification</a> and
+            <a href="../hardware/index.html">Hardware</a>).
+          </li>
+        </ul>
+        <div class="callout">
+          <div class="label">How this list was built</div>
+          <p style="margin:0">
+            Curated from <code>/workspace/hub-extraction-ai-sections.md</code> and the public seed
+            <code>data/semiconductor_companies.json</code>.
+            Tickers appear when the company (or clear parent) trades publicly.
+            Blurbs say what each name does — orientation only, not recommendations.
+            Old valuation and market-share snapshots in the private extract go stale; this page mostly skips them.
+            EDA and semiconductor IP stay on the <a href="../software/index.html">Software</a> map.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="h-stack" id="stack">
+        <h2 id="h-stack">Nine-layer map</h2>
+        <ol>
+          <li><a href="#layer-1">Foundries</a> — advanced and specialty contract manufacturers.</li>
+          <li><a href="#layer-2">Lithography</a> — EUV and deep-ultraviolet (DUV) pattern printers.</li>
+          <li><a href="#layer-3">Wafer fabrication equipment</a> — deposition, etch, implant, and related tools.</li>
+          <li><a href="#layer-4">Inspection &amp; metrology</a> — find defects and measure film/critical dimensions.</li>
+          <li><a href="#layer-5">Advanced packaging</a> — CoWoS-class, HBM attach, OSAT leaders.</li>
+          <li><a href="#layer-6">Test equipment</a> — automated test, handlers, probe, burn-in.</li>
+          <li><a href="#layer-7">Materials chain</a> — photomasks, wafers, chemicals, gases, ultrapure water.</li>
+          <li><a href="#layer-8">Cleanroom &amp; fab construction</a> — who builds the factories.</li>
+          <li><a href="#layer-9">SiC &amp; GaN power semis</a> — efficient power conversion silicon.</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="h-who" id="who">
+        <h2 id="h-who">Who-is-who by layer</h2>
+
+        <h3 id="layer-1">1. Foundries</h3>
+        <p class="layer-intro">
+          A <a href="https://en.wikipedia.org/wiki/Semiconductor_foundry">foundry</a>
+          manufactures chips designed by others (or by its own product divisions).
+          Leading-edge AI logic is concentrated; specialty and mature nodes still matter for power, analog, and RF parts inside every rack.
+        </p>
+        <h4>Large-scale advanced</h4>
+        <ul class="company-list">
+          <li>
+            <span class="name">TSMC</span><span class="ticker">TSM</span>
+            <p>World’s largest pure-play foundry and the default home for leading-edge AI accelerators (3&nbsp;nm / 5&nbsp;nm-class nodes). Also scales advanced packaging (CoWoS) that glues logic to HBM — often the bottleneck after wafer starts.</p>
+          </li>
+          <li>
+            <span class="name">Samsung Foundry</span>
+            <p>Advanced foundry competing at leading nodes (including 2&nbsp;nm roadmaps) with large U.S. capacity plans and CHIPS Act support. Alternative capacity to TSMC for some AI and mobile customers.</p>
+          </li>
+          <li>
+            <span class="name">Intel Foundry</span><span class="ticker">INTC</span>
+            <p>Intel’s contract-manufacturing push (process nodes such as 18A) aiming at external AI and CPU customers alongside internal products. Execution and customer trust are the story — not just CapEx.</p>
+          </li>
+          <li>
+            <span class="name">GlobalFoundries</span><span class="ticker">GFS</span>
+            <p>Specialty / mature-node foundry (roughly 14&nbsp;nm and older) for RF, analog, and power chips used across datacenter and networking gear — not a 3&nbsp;nm AI-logic competitor.</p>
+          </li>
+        </ul>
+        <h4>Mid-tier &amp; regional</h4>
+        <ul class="company-list">
+          <li>
+            <span class="name">UMC</span><span class="ticker">UMC</span>
+            <p>Taiwan foundry focused on mature nodes (often 28&nbsp;nm and older) that still ship high volumes of power-management and specialty chips.</p>
+          </li>
+          <li>
+            <span class="name">SMIC</span>
+            <p>China’s largest pure-play foundry — strategically important inside China; export controls heavily shape what nodes and tools it can use.</p>
+          </li>
+          <li>
+            <span class="name">Hua Hong Semiconductor</span>
+            <p>China foundry oriented to mature nodes; part of China’s capacity consolidation story.</p>
+          </li>
+          <li>
+            <span class="name">Tower Semiconductor</span><span class="ticker">TSEM</span>
+            <p>Specialty foundry (analog, RF, sensors, power) with a notable relationship history involving Intel capacity.</p>
+          </li>
+          <li>
+            <span class="name">DB HiTek</span><span class="ticker">000990.KS</span>
+            <p>South Korea specialty foundry — signal processing and related process technologies.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-2">2. Lithography equipment</h3>
+        <p class="layer-intro">
+          Lithography prints circuit patterns onto wafers with light.
+          <a href="https://en.wikipedia.org/wiki/Extreme_ultraviolet_lithography">EUV</a>
+          (wavelength ~13.5&nbsp;nm) is required for today’s densest logic layers;
+          <a href="https://en.wikipedia.org/wiki/Photolithography">deep ultraviolet (DUV)</a>
+          still does most of the other layers and older nodes.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">ASML</span><span class="ticker">ASML</span>
+            <p>Near-monopoly supplier of EUV scanners used for advanced AI logic. High-NA EUV is the next capability step; export controls and customer CapEx cycles matter as much as technology.</p>
+          </li>
+          <li>
+            <span class="name">Nikon</span><span class="ticker">7731.T</span>
+            <p>DUV lithography (argon fluoride immersion and dry systems) — still essential for non-EUV layers and mature capacity.</p>
+          </li>
+          <li>
+            <span class="name">Canon</span><span class="ticker">7751.T</span>
+            <p>High shipment-volume lithography for older wavelengths (i-line, KrF) used heavily on mature and specialty lines.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-3">3. Wafer fabrication equipment (WFE)</h3>
+        <p class="layer-intro">
+          After lithography, tools deposit films, etch patterns, implant dopants, and clean wafers.
+          This “wafer fab equipment” category is where Applied, Lam, Tokyo Electron, and peers earn most of their AI-cycle growth.
+        </p>
+        <h4>Deposition &amp; etch</h4>
+        <ul class="company-list">
+          <li>
+            <span class="name">Applied Materials</span><span class="ticker">AMAT</span>
+            <p>Largest broad semiconductor equipment maker — deposition, epitaxy, chemical vapor deposition (CVD), and related process tools spanning logic, DRAM, and HBM lines.</p>
+          </li>
+          <li>
+            <span class="name">Lam Research</span><span class="ticker">LRCX</span>
+            <p>Etch and deposition specialist; especially important as memory stacks get taller (3D NAND, HBM) and logic features get harder to etch cleanly.</p>
+          </li>
+          <li>
+            <span class="name">Tokyo Electron</span><span class="ticker">8035.T</span>
+            <p>Major Japanese equipment house (coater/developers, etch, deposition) tightly tied to leading foundries and memory fabs.</p>
+          </li>
+          <li>
+            <span class="name">ASM International</span><span class="ticker">ASM</span>
+            <p>Leader in
+            <a href="https://en.wikipedia.org/wiki/Atomic_layer_deposition">atomic layer deposition (ALD)</a>
+            — ultra-thin, conformal films used at advanced nodes and in memory.</p>
+          </li>
+          <li>
+            <span class="name">SCREEN Holdings</span><span class="ticker">6305.T</span>
+            <p>Cleaning, coating, and related wet-process equipment — the unglamorous steps that protect yield.</p>
+          </li>
+          <li>
+            <span class="name">Kokusai Electric</span><span class="ticker">6525.T</span>
+            <p>Epitaxy and deposition tools important for memory and advanced transistor structures.</p>
+          </li>
+        </ul>
+        <h4>Ion implant &amp; specialized</h4>
+        <ul class="company-list">
+          <li>
+            <span class="name">Axcelis Technologies</span><span class="ticker">ACLS</span>
+            <p>
+            <a href="https://en.wikipedia.org/wiki/Ion_implantation">Ion implantation</a>
+            systems that dope silicon with precise impurities. Extraction notes a planned combination with Veeco aimed at a larger U.S. WFE footprint.</p>
+          </li>
+          <li>
+            <span class="name">Veeco Instruments</span><span class="ticker">VECO</span>
+            <p>Epitaxial deposition and process equipment — complementary to implant in compound and advanced thin-film flows.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-4">4. Inspection &amp; metrology</h3>
+        <p class="layer-intro">
+          Process control finds killer defects and measures whether films and features landed where they should.
+          Without it, EUV and multi-patterning CapEx is wasted.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">KLA</span><span class="ticker">KLAC</span>
+            <p>Dominant inspection and metrology franchise for wafer process control — defect detection as nodes shrink and AI chip yields decide economics.</p>
+          </li>
+          <li>
+            <span class="name">Lasertec</span><span class="ticker">6920.T</span>
+            <p>Specialist in EUV photomask inspection — the masks themselves must be nearly perfect before they print billions of transistors.</p>
+          </li>
+          <li>
+            <span class="name">Onto Innovation</span><span class="ticker">ONTO</span>
+            <p>Metrology oriented to advanced packaging and multilayer film stacks — relevant as CoWoS / HBM complexity rises.</p>
+          </li>
+          <li>
+            <span class="name">Camtek</span><span class="ticker">CAMT</span>
+            <p>Inspection and metrology for advanced packaging lines; extracting AI/vision features into the product set.</p>
+          </li>
+          <li>
+            <span class="name">Nova</span><span class="ticker">NVMI</span>
+            <p>Dimensional and materials metrology with heavy analytics — another process-control name beside KLA.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-5">5. Advanced packaging</h3>
+        <p class="layer-intro">
+          Packaging is no longer “put the die in a plastic box.” AI parts need short, dense connections between compute and HBM.
+          Foundries do some of this in-house; specialists called
+          <a href="https://en.wikipedia.org/wiki/Outsourced_semiconductor_assembly_and_test">outsourced semiconductor assembly and test (OSAT)</a>
+          companies do the rest.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">TSMC Advanced Packaging (CoWoS)</span><span class="ticker">TSM</span>
+            <p>In-house CoWoS and related flows that integrate logic with HBM. Capacity expansions have been a recurring AI-supply story alongside wafer starts.</p>
+          </li>
+          <li>
+            <span class="name">ASE Technology</span><span class="ticker">ASX</span>
+            <p>Global OSAT leader with growing advanced packaging for AI and high-performance chips.</p>
+          </li>
+          <li>
+            <span class="name">Amkor Technology</span><span class="ticker">AMKR</span>
+            <p>Large U.S.-listed OSAT with full-spectrum packaging and expanding advanced / AI-oriented capacity (including U.S. footprint plans).</p>
+          </li>
+          <li>
+            <span class="name">JCET Group</span>
+            <p>China’s largest OSAT, investing heavily in chiplets and HBM-related packaging.</p>
+          </li>
+          <li>
+            <span class="name">Tongfu Microelectronics</span>
+            <p>China OSAT building multilayer / chiplet stacking capacity on a multi-year timeline.</p>
+          </li>
+          <li>
+            <span class="name">Powertech Technology</span><span class="ticker">6239.TW</span>
+            <p>Taiwan packaging and test house expanding 3D / AI packaging as a growth pillar.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-6">6. Semiconductor test equipment</h3>
+        <p class="layer-intro">
+          <a href="https://en.wikipedia.org/wiki/Automatic_test_equipment">Automatic test equipment (ATE)</a>
+          proves chips work before they ship. AI parts are large, hot, and expensive — bad units hurt more.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Advantest</span><span class="ticker">6857.T</span>
+            <p>Memory and AI-oriented test systems — often described as a test-industry counterpart to ASML’s lithography role.</p>
+          </li>
+          <li>
+            <span class="name">Teradyne</span><span class="ticker">TER</span>
+            <p>Broad ATE franchise across semiconductors (and other markets); a second major automatic-test platform.</p>
+          </li>
+          <li>
+            <span class="name">Cohu</span><span class="ticker">COHU</span>
+            <p>Test handlers and related equipment that move devices through the test floor.</p>
+          </li>
+          <li>
+            <span class="name">FormFactor</span><span class="ticker">FORM</span>
+            <p>
+            <a href="https://en.wikipedia.org/wiki/Probe_card">Probe cards</a>
+            and interfaces that connect testers to wafers — capacity follows advanced packaging and foundry ramps.</p>
+          </li>
+          <li>
+            <span class="name">Aehr Test Systems</span><span class="ticker">AEHR</span>
+            <p>Wafer- and package-level
+            <a href="https://en.wikipedia.org/wiki/Burn-in_(electronics)">burn-in</a>
+            specialist; extraction highlights AI / SiC-related backlog and orders.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-7">7. Materials chain — masks, wafers, chemicals, gases</h3>
+        <p class="layer-intro">
+          Silicon starts as a polished wafer; patterns live on photomasks; chemistry and gases make each process step possible.
+          Photomask / optical materials also touch
+          <a href="../hardware/photonics/index.html">hardware / photonics</a>.
+        </p>
+        <h4>Photomasks &amp; reticles</h4>
+        <ul class="company-list">
+          <li>
+            <span class="name">Photronics</span><span class="ticker">PLAB</span>
+            <p>Independent photomask manufacturer serving semiconductors, displays, and related markets.</p>
+          </li>
+          <li>
+            <span class="name">Dai Nippon Printing (DNP)</span><span class="ticker">7912.T</span>
+            <p>Advanced semiconductor photomasks including EUV mask development for leading Japanese foundry efforts.</p>
+          </li>
+          <li>
+            <span class="name">Toppan Photomasks (Tekscend)</span>
+            <p>Reticle / EUV mask manufacturing — rebranded toward advanced positioning in the extract.</p>
+          </li>
+          <li>
+            <span class="name">Hoya</span><span class="ticker">7741.T</span>
+            <p>Optical and mask blank / materials supplier feeding the photomask ecosystem.</p>
+          </li>
+        </ul>
+        <h4>Silicon wafers</h4>
+        <ul class="company-list">
+          <li>
+            <span class="name">Shin-Etsu Chemical</span><span class="ticker">4063.T</span>
+            <p>Global leader in polished silicon wafers (especially 300&nbsp;mm) — every chip starts here; also a photoresist / materials presence.</p>
+          </li>
+          <li>
+            <span class="name">SUMCO</span><span class="ticker">3436.T</span>
+            <p>Large 300&nbsp;mm wafer producer shifting mix toward high-end / AI-grade capacity.</p>
+          </li>
+          <li>
+            <span class="name">GlobalWafers</span>
+            <p>Major wafer supplier with U.S. expansion (Texas) for mature and specialty demand.</p>
+          </li>
+          <li>
+            <span class="name">Siltronic</span>
+            <p>German premium wafer producer — European capacity in a concentrated oligopoly.</p>
+          </li>
+          <li>
+            <span class="name">SK Siltron</span><span class="ticker">008500.KS</span>
+            <p>Korea wafer maker with a growing
+            <a href="https://en.wikipedia.org/wiki/Silicon_carbide">SiC</a> /
+            <a href="https://en.wikipedia.org/wiki/Gallium_nitride">GaN</a>
+            wafer angle for power devices.</p>
+          </li>
+        </ul>
+        <h4>Photoresists, CMP &amp; specialty materials</h4>
+        <ul class="company-list">
+          <li>
+            <span class="name">Tokyo Ohka Kogyo (TOK)</span><span class="ticker">4186.T</span>
+            <p>Leading EUV / DUV
+            <a href="https://en.wikipedia.org/wiki/Photoresist">photoresist</a>
+            supplier — the light-sensitive film that defines patterns.</p>
+          </li>
+          <li>
+            <span class="name">JSR</span>
+            <p>Major photoresist house; extract notes consolidation under Japanese industrial-policy structures and regional capacity plans.</p>
+          </li>
+          <li>
+            <span class="name">DuPont</span><span class="ticker">DD</span>
+            <p>Photoresists and specialty electronic materials competing in advanced patterning chemistries.</p>
+          </li>
+          <li>
+            <span class="name">Fujifilm</span><span class="ticker">4901.T</span>
+            <p>Specialty chemicals and photoresists expanding into advanced semiconductor materials.</p>
+          </li>
+          <li>
+            <span class="name">Entegris</span><span class="ticker">ENTG</span>
+            <p>Contamination control,
+            <a href="https://en.wikipedia.org/wiki/Chemical-mechanical_polishing">chemical-mechanical planarization (CMP)</a>
+            slurries (via CMC Materials), and precursors — consumables that track wafer starts and yield focus.</p>
+          </li>
+          <li>
+            <span class="name">Merck KGaA</span><span class="ticker">MRK.DE</span>
+            <p>Electronic materials portfolio (photoresists, CMP, specialty gases via Versum heritage) for advanced fabs.</p>
+          </li>
+        </ul>
+        <h4>Specialty gases &amp; ultrapure water</h4>
+        <ul class="company-list">
+          <li>
+            <span class="name">Linde</span><span class="ticker">LIN</span>
+            <p>Ultra-high-purity industrial gases and on-site plants that feed etch, deposition, and inert atmospheres.</p>
+          </li>
+          <li>
+            <span class="name">Air Liquide</span><span class="ticker">AI.PA</span>
+            <p>Specialty and bulk gases (nitrogen, argon, fluorinated compounds) for semiconductor growth regions.</p>
+          </li>
+          <li>
+            <span class="name">Air Products</span><span class="ticker">APD</span>
+            <p>Industrial gases with a large hydrogen and electronics-supply footprint.</p>
+          </li>
+          <li>
+            <span class="name">Taiyo Nippon Sanso</span><span class="ticker">4091.T</span>
+            <p>Japan’s electronics gas specialist with modular plants and Southeast Asia expansion.</p>
+          </li>
+          <li>
+            <span class="name">Ecolab / Nalco Water</span><span class="ticker">ECL</span>
+            <p>Ultrapure water treatment for fabs (including electronics water assets acquired into the portfolio).</p>
+          </li>
+          <li>
+            <span class="name">Kurita Water Industries</span><span class="ticker">6370.T</span>
+            <p>Japanese ultrapure-water specialist — process water quality is a hard limit on advanced yields.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-8">8. Cleanroom &amp; fab construction</h3>
+        <p class="layer-intro">
+          New capacity is not just tools — it is sealed
+          <a href="https://en.wikipedia.org/wiki/Cleanroom">cleanrooms</a>,
+          vibration control, chemical delivery, and multi-year
+          <a href="https://en.wikipedia.org/wiki/Engineering,_procurement,_and_construction">engineering, procurement, and construction (EPC)</a>
+          programs.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Exyte</span>
+            <p>Specialist cleanroom / high-tech facility builder with decades of semiconductor project experience (formerly M+W-related lineage).</p>
+          </li>
+          <li>
+            <span class="name">Jacobs</span><span class="ticker">J</span>
+            <p>Large EPC firm active on semiconductor facility projects worldwide.</p>
+          </li>
+          <li>
+            <span class="name">Samsung C&amp;T</span>
+            <p>Construction arm that builds Samsung’s own fabs and cleanrooms — vertical integration of factory construction.</p>
+          </li>
+        </ul>
+
+        <h3 id="layer-9">9. SiC &amp; GaN power semiconductor manufacturing</h3>
+        <p class="layer-intro">
+          AI racks draw enormous power. Wide-bandgap devices in
+          <a href="https://en.wikipedia.org/wiki/Silicon_carbide">SiC</a>
+          and
+          <a href="https://en.wikipedia.org/wiki/Gallium_nitride">GaN</a>
+          cut conversion losses versus plain silicon in power supplies and intermediate buses.
+          Device makers belong here; rack-level power architecture also appears under
+          <a href="../hardware/index.html">Hardware</a>
+          and
+          <a href="../electrification/index.html">Electrification</a>.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">STMicroelectronics</span><span class="ticker">STM</span>
+            <p>Major SiC device maker ramping larger-wafer SiC production; extraction also notes datacenter power collaborations (including high-voltage DC themes).</p>
+          </li>
+          <li>
+            <span class="name">onsemi</span><span class="ticker">ON</span>
+            <p>Power semiconductors with SiC capacity ramps aimed at automotive and increasingly datacenter conversion.</p>
+          </li>
+          <li>
+            <span class="name">Infineon</span><span class="ticker">IFX.DE</span>
+            <p>European power-semiconductor leader spanning SiC/GaN and silicon power stages used across industrial and datacenter power paths.</p>
+          </li>
+          <li>
+            <span class="name">Wolfspeed</span><span class="ticker">WOLF</span>
+            <p>SiC wafer and device specialist — long-term demand story with execution / balance-sheet risk called out in older extracts.</p>
+          </li>
+          <li>
+            <span class="name">ROHM</span><span class="ticker">6963.T</span>
+            <p>Japanese SiC MOSFET generations plus GaN partnerships (including foundry collaboration notes in the extract).</p>
+          </li>
+          <li>
+            <span class="name">Coherent (II-VI)</span><span class="ticker">COHR</span>
+            <p>SiC substrates and epitaxy — materials underneath many power-device makers’ wafers.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section related" id="related">
+        <h2>Related on this hub</h2>
+        <p>
+          Fabrication builds the chips;
+          <a href="../software/index.html">software</a>
+          designs them (EDA) and runs the models;
+          <a href="../hardware/index.html">computation hardware</a>
+          boards and racks them (optics under
+          <a href="../hardware/photonics/index.html">hardware / photonics</a>);
+          <a href="../hyperscalers/index.html">hyperscalers</a>
+          buy the capacity; and
+          <a href="../electrification/index.html">electrification</a>
+          feeds the sites.
+          Weekday context:
+          <a href="../digests/index.html">AI infra digests</a>.
+        </p>
+      </section>
+
+      <footer class="caveat" id="disclaimer" aria-labelledby="h-disclaimer">
+        <p id="h-disclaimer"><strong>Not investment advice.</strong>
+          This page is an educational briefing for Arman’s public investment hub.
+          It does not recommend buying or selling any security, does not consider your objectives or risk tolerance,
+          and may be incomplete or outdated. Do your own research. Past performance and thematic narratives are not guarantees of future results.
+          Section owned by the Semiconductor Fabrication bot per <a href="../OWNERS.md">OWNERS.md</a>.
+        </p>
+      </footer>
+    </article>
   </main>
 
   <footer class="site-footer">
     <p>Public investment briefing hub · <a href="https://armanamirzhan.github.io/investment_dashboard_public/">armanamirzhan.github.io/investment_dashboard_public</a></p>
-    <p>Not investment advice. Section owned by Semiconductor Fabrication per <a href="../OWNERS.md">OWNERS.md</a>.</p>
+    <p>Not investment advice. Section owned by Semiconductor Fabrication bot per <a href="../OWNERS.md">OWNERS.md</a>.</p>
   </footer>
   <script src="../assets/site.js"></script>
 </body>
