@@ -281,3 +281,13 @@
   .briefing .company-list > li { padding: 0.75rem 0.85rem; }
   .briefing .page-toc { top: var(--nav-height, 56px); }
 }
+
+.briefing h4 {
+  font-size: 0.95rem;
+  margin: 1.15rem 0 0.5rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
