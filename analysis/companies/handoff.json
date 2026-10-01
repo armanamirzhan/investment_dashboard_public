@@ -1,0 +1,654 @@
+{
+  "asOf": "2026-10-01",
+  "theme": "onsite-dc-800v",
+  "themeNotes": {
+    "nvidiaRackOptional": "Vera Rubin H2 2026",
+    "volume": "Rubin Ultra H2 2027",
+    "facilityWideNewHalls": "primarily 800 V DC ~2029+",
+    "necSupport": "NEC 2029 fuller U.S. code support",
+    "bottlenecks": [
+      "DC protection/switchgear",
+      "MV SST certification (UL 2877)",
+      "HV SiC (3.3kV+)",
+      "iron-core transformer lead times"
+    ]
+  },
+  "companies": [
+    {
+      "slug": "vertiv",
+      "name": "Vertiv",
+      "ticker": "VRT",
+      "exchange": "NYSE",
+      "role": "800 V DC rack sidecars, DC busway, and backup — closest pure-play rack power for NVIDIA AI factories.",
+      "stance": "Accumulate",
+      "stanceScore": 4,
+      "goldCandidate": true,
+      "rainbow": false,
+      "rainbowReason": "AI infra narrative already widely owned after multi-year rerating.",
+      "metrics": [
+        {
+          "id": "dc_ready",
+          "label": "800 VDC readiness",
+          "level": 2,
+          "note": "Portfolio planned H2 2026 commercial; PowerDirect sidecar path public."
+        },
+        {
+          "id": "design_wins",
+          "label": "Hyperscaler design-ins",
+          "level": 2,
+          "note": "NVIDIA collab; early AI-factory BoD references claimed."
+        },
+        {
+          "id": "busway",
+          "label": "Busway / distribution",
+          "level": 2,
+          "note": "PowerBar Track double-stack up to ~2–2.5 kA class."
+        },
+        {
+          "id": "backlog",
+          "label": "Backlog / lead times",
+          "level": 1,
+          "note": "AI demand strong; execution/supply still a watch item."
+        },
+        {
+          "id": "valuation",
+          "label": "Valuation vs peers",
+          "level": 1,
+          "note": "Premium AI-infra multiple after multi-year run."
+        },
+        {
+          "id": "balance",
+          "label": "Balance sheet",
+          "level": 2,
+          "note": "Scale critical-power franchise; no dilution story front-and-center."
+        }
+      ],
+      "thesis": "Vertiv builds the power gear next to the graphics processing unit (GPU) rack — sidecars, busways, and backup — so operators can feed 800 V DC into dense AI racks without ripping out the whole facility at once. Its PowerDirect 5000-class sidecar path and NVIDIA collaboration put it on the near-term rack transition (optional Vera Rubin H2 2026; volume ~Rubin Ultra H2 2027), while facility-wide DC halls remain a later (~2029+) chapter.",
+      "street": "Street leaning: Moderate Buy (MarketBeat consensus, late Sep 2026).",
+      "url": "https://armanamirzhan.github.io/investment_dashboard_public/analysis/companies/vertiv.html"
+    },
+    {
+      "slug": "eaton",
+      "name": "Eaton",
+      "ticker": "ETN",
+      "exchange": "NYSE",
+      "role": "Medium-voltage solid-state transformer (MVSST) aimed at 800 VDC halls; Infineon SiC partnership (Sep 2026).",
+      "stance": "Accumulate",
+      "stanceScore": 4,
+      "goldCandidate": true,
+      "rainbow": false,
+      "rainbowReason": "Broad industrial compounder; AI SST optionality partly reflected in multiple.",
+      "metrics": [
+        {
+          "id": "sst",
+          "label": "SST product maturity",
+          "level": 2,
+          "note": "MVSST published (~2 MW, >97% @ 800 VDC); IEC certification claimed for platform."
+        },
+        {
+          "id": "sic",
+          "label": "SiC partnership",
+          "level": 2,
+          "note": "Infineon SiC for APAC MVSST 2.0 (Sep 29, 2026)."
+        },
+        {
+          "id": "hyperscale",
+          "label": "Hyperscaler relevance",
+          "level": 1,
+          "note": "Purpose-built messaging; large deployments still ramp."
+        },
+        {
+          "id": "cert",
+          "label": "Cert / UL path",
+          "level": 1,
+          "note": "SST certification remains an industry bottleneck (UL 2877)."
+        },
+        {
+          "id": "valuation",
+          "label": "Valuation vs peers",
+          "level": 1,
+          "note": "Quality industrial premium; AI optionality not free."
+        },
+        {
+          "id": "balance",
+          "label": "Balance sheet / mix",
+          "level": 2,
+          "note": "Diversified power-management cash compounder."
+        }
+      ],
+      "thesis": "Eaton’s medium-voltage solid-state transformer (SST) converts grid AC straight toward low-voltage DC — including 800 VDC for AI halls — skipping some classic conversion stages. A September 2026 deal has Infineon supplying silicon carbide (SiC) devices for MVSST 2.0 in Asia-Pacific, with higher-voltage (2.3–3.3 kV) SiC modules on the roadmap. Certification (including UL 2877-class SST norms) and HV SiC supply remain industry bottlenecks.",
+      "street": "Street leaning: Buy (MarketBeat / stockanalysis consensus, 2026).",
+      "url": "https://armanamirzhan.github.io/investment_dashboard_public/analysis/companies/eaton.html"
+    },
+    {
+      "slug": "delta-electronics",
+      "name": "Delta Electronics",
+      "ticker": "2308.TW",
+      "exchange": "TWSE",
+      "role": "NVIDIA 800 V HVDC production path + live AI-hall SST; in-row 800 VDC power racks and CDUs.",
+      "stance": "Buy",
+      "stanceScore": 5,
+      "goldCandidate": true,
+      "rainbow": false,
+      "rainbowReason": "Theme is well telegraphed after Computex/GTC; TW multiple already reflects AI power leadership.",
+      "metrics": [
+        {
+          "id": "hvdc_ship",
+          "label": "HVDC shipment path",
+          "level": 2,
+          "note": "Small-volume NVIDIA HVDC shipments discussed; mass-ready, GPU-timed."
+        },
+        {
+          "id": "sst_live",
+          "label": "SST under AI load",
+          "level": 2,
+          "note": "Chindata North China campus SST for Meituan AI workloads."
+        },
+        {
+          "id": "rack",
+          "label": "In-row 800 VDC rack",
+          "level": 2,
+          "note": "660 kW in-row rack + BBU; MGX power shelves shown."
+        },
+        {
+          "id": "cooling",
+          "label": "Liquid cooling attach",
+          "level": 2,
+          "note": "2.4–3 MW L2L CDUs including 800 V-powered CDU."
+        },
+        {
+          "id": "valuation",
+          "label": "Valuation vs peers",
+          "level": 1,
+          "note": "AI-power premium on TWSE; still core holding for theme."
+        },
+        {
+          "id": "geo",
+          "label": "Geopolitics / China",
+          "level": 1,
+          "note": "China campus proof helps tech; US/TW export politics remain a risk."
+        }
+      ],
+      "thesis": "Delta is a Taiwan power-electronics leader shipping high-voltage DC (HVDC) rack gear into NVIDIA’s 800 V ecosystem (small-volume shipments discussed mid-2026) and showing in-row 660 kW 800 VDC power racks at GTC. It also reports a live solid-state transformer serving AI workloads at a Chindata hyperscale campus in China — rare real-world proof versus brochure SSTs. Cooling CDUs tied to 800 V rails round out a grid-to-chip stack.",
+      "street": "Street leaning: Strong Buy (stockanalysis TPE:2308 consensus).",
+      "url": "https://armanamirzhan.github.io/investment_dashboard_public/analysis/companies/delta-electronics.html"
+    },
+    {
+      "slug": "schneider-electric",
+      "name": "Schneider Electric",
+      "ticker": "SBGSY",
+      "exchange": "OTC ADR",
+      "role": "Facility MV switchgear, UPS, busway, and 800 VDC sidecar architectures for AI halls.",
+      "stance": "Accumulate",
+      "stanceScore": 3,
+      "goldCandidate": false,
+      "rainbow": false,
+      "rainbowReason": "Mega-cap electrification name; AI DC upside largely in the multiple already.",
+      "metrics": [
+        {
+          "id": "facility",
+          "label": "Facility power franchise",
+          "level": 2,
+          "note": "End-to-end MV→rack portfolio for colo/hyperscale."
+        },
+        {
+          "id": "dc_arch",
+          "label": "800 VDC architecture",
+          "level": 1,
+          "note": "White paper + sidecar; rack-level first, hall later."
+        },
+        {
+          "id": "pilot",
+          "label": "Live MV pilot",
+          "level": 2,
+          "note": "Software-defined MV switchgear pilot with Equinix (Sep 2026)."
+        },
+        {
+          "id": "avail",
+          "label": "Product availability",
+          "level": 1,
+          "note": "Broader SD-MV availability guided around 2028."
+        },
+        {
+          "id": "valuation",
+          "label": "Valuation vs peers",
+          "level": 1,
+          "note": "Quality compounder; AI is incremental not free."
+        },
+        {
+          "id": "diversify",
+          "label": "Theme purity",
+          "level": 1,
+          "note": "Huge non-DC businesses dilute pure 800 V torque."
+        }
+      ],
+      "thesis": "Schneider outfits the building: medium-voltage switchgear, UPS, track busway, and rack power — plus an 800 VDC sidecar path that keeps most upstream AC gear intact. At YOTTA 2026 it showed software-defined MV switchgear live with Equinix (broader availability guided ~2028) and SF₆-free AirSeT gear pushed to 38 kV for denser AI campuses. Best thought of as the facility systems integrator, not a pure SST chip bet.",
+      "street": "Street leaning: Strong Buy on limited ADR coverage (stockanalysis SBGSY); treat as thin sample.",
+      "url": "https://armanamirzhan.github.io/investment_dashboard_public/analysis/companies/schneider-electric.html"
+    },
+    {
+      "slug": "bloom-energy",
+      "name": "Bloom Energy",
+      "ticker": "BE",
+      "exchange": "NYSE",
+      "role": "Onsite solid-oxide fuel cells — modular primary power with native DC-friendly output for AI campuses.",
+      "stance": "Accumulate",
+      "stanceScore": 4,
+      "goldCandidate": true,
+      "rainbow": false,
+      "rainbowReason": "Oracle GW headlines already re-rated the stock; not “unpriced” upside.",
+      "metrics": [
+        {
+          "id": "wins",
+          "label": "Hyperscaler wins",
+          "level": 2,
+          "note": "Oracle up to 2.8 GW MSA; AEP, Equinix, Nebius, Brookfield also named."
+        },
+        {
+          "id": "ttp",
+          "label": "Time-to-power",
+          "level": 2,
+          "note": "Modular SOFC; Oracle site cited ~55-day deploy example."
+        },
+        {
+          "id": "dc_native",
+          "label": "DC / 800 V fit",
+          "level": 1,
+          "note": "Native DC generation helps conceptually; hall DC standards still maturing."
+        },
+        {
+          "id": "scale",
+          "label": "Manufacturing scale",
+          "level": 1,
+          "note": "GW backlog stresses factory + field ops."
+        },
+        {
+          "id": "valuation",
+          "label": "Valuation / volatility",
+          "level": 0,
+          "note": "High-beta re-rating after Oracle; easy to overpay."
+        },
+        {
+          "id": "dilution",
+          "label": "Dilution / funding",
+          "level": 1,
+          "note": "Growth capex and history of raises — watch equity needs."
+        }
+      ],
+      "thesis": "Bloom’s solid oxide fuel cells (SOFCs) make electricity on site from natural gas, biogas, or hydrogen — useful when the utility interconnection queue is the bottleneck. Output is inherently DC-friendly before conversion, which pairs conceptually with high-voltage DC halls, though today’s deployments still plug into standard facility power designs. Oracle’s expanded master agreement (up to 2.8 GW; Project Jupiter NM up to ~2.45 GW discussed) is the clearest hyperscaler signal on this list.",
+      "street": "Street leaning: Buy (stockanalysis BE consensus, ~22 analysts).",
+      "url": "https://armanamirzhan.github.io/investment_dashboard_public/analysis/companies/bloom-energy.html"
+    },
+    {
+      "slug": "infineon",
+      "name": "Infineon",
+      "ticker": "IFNNY",
+      "exchange": "OTC ADR",
+      "role": "Silicon carbide power devices for SSTs and high-voltage conversion in 800 VDC architectures.",
+      "stance": "Accumulate",
+      "stanceScore": 4,
+      "goldCandidate": false,
+      "rainbow": true,
+      "rainbowReason": "SST/HV SiC monetization still early vs auto SiC narrative; 800 V hall content may not be fully in numbers yet.",
+      "metrics": [
+        {
+          "id": "sst_wins",
+          "label": "SST design wins",
+          "level": 2,
+          "note": "Eaton MVSST 2.0 + DG Matrix SiC collaborations in 2026."
+        },
+        {
+          "id": "hv_sic",
+          "label": "HV SiC roadmap",
+          "level": 1,
+          "note": "Exploring 2.3 / 3.3 kV modules — still scarce industry-wide."
+        },
+        {
+          "id": "auto_mix",
+          "label": "Auto SiC dependency",
+          "level": 1,
+          "note": "EV SiC cycle can overshadow datacenter timing."
+        },
+        {
+          "id": "capacity",
+          "label": "Fab / capacity",
+          "level": 1,
+          "note": "SiC capacity race vs peers; utilization swings matter."
+        },
+        {
+          "id": "valuation",
+          "label": "Valuation vs peers",
+          "level": 1,
+          "note": "European semi; AI upside less hyped than US names."
+        },
+        {
+          "id": "margin",
+          "label": "Margin trajectory",
+          "level": 1,
+          "note": "SiC mix accretive long-term; near-term cyclical."
+        }
+      ],
+      "thesis": "Infineon sells the silicon carbide switches that let solid-state transformers and high-voltage converters run efficiently at medium-voltage grid levels. September 2026: SiC into Eaton’s MVSST 2.0 for 800 VDC Asia-Pacific platforms; earlier 2026: SiC with DG Matrix for SST work. Industry still needs more high-voltage SiC (3.3 kV+) and certified SST platforms before facility-wide 800 V halls (~2029+) scale.",
+      "street": "Street leaning: Overweight / Buy majority on XETR:IFX (WSJ tally); some houses Hold — mixed on AI payback timing.",
+      "url": "https://armanamirzhan.github.io/investment_dashboard_public/analysis/companies/infineon.html"
+    },
+    {
+      "slug": "ge-vernova",
+      "name": "GE Vernova",
+      "ticker": "GEV",
+      "exchange": "NYSE",
+      "role": "Transformers, switchgear, MV UPS, and NVIDIA-aligned 800 VDC reference designs (rectifier now; SST scale ~2028).",
+      "stance": "Hold",
+      "stanceScore": 3,
+      "goldCandidate": false,
+      "rainbow": false,
+      "rainbowReason": "Transformer scarcity and AI-factory narrative heavily priced after the spin/run.",
+      "metrics": [
+        {
+          "id": "xfmr",
+          "label": "Transformer bottleneck",
+          "level": 2,
+          "note": "Iron-core lead times remain a structural AI constraint."
+        },
+        {
+          "id": "ref",
+          "label": "800 VDC reference",
+          "level": 2,
+          "note": "NVIDIA-aligned white paper: rectifier now, SST later."
+        },
+        {
+          "id": "sst",
+          "label": "SST timeline",
+          "level": 1,
+          "note": "Scale-up to 5 MW+ guided ~2028 — not near-term revenue."
+        },
+        {
+          "id": "mvups",
+          "label": "MV UPS",
+          "level": 1,
+          "note": "New MV UPS for AI factories; mid-2027 shipment guide."
+        },
+        {
+          "id": "valuation",
+          "label": "Valuation vs peers",
+          "level": 0,
+          "note": "Post-spin AI/power rerating leaves thin margin of safety."
+        },
+        {
+          "id": "backlog",
+          "label": "Electrification backlog",
+          "level": 2,
+          "note": "Multi-year grid + industry backlog supports earnings."
+        }
+      ],
+      "thesis": "GE Vernova supplies the heavy electrical backbone — transformers, switchgear, and grid gear — that still gates most AI campuses while iron-core lead times stay long. With NVIDIA it published 800 VDC reference designs: mature transformer+rectifier paths deployable now, and medium-voltage SST productization toward 5 MW+ called out around 2028. Also adding MV UPS aimed at AI factories (shipments guided mid-2027).",
+      "street": "Street leaning: Buy (stockanalysis / MarketBeat GEV consensus).",
+      "url": "https://armanamirzhan.github.io/investment_dashboard_public/analysis/companies/ge-vernova.html"
+    },
+    {
+      "slug": "siemens-energy",
+      "name": "Siemens Energy",
+      "ticker": "SMNEY",
+      "exchange": "OTC ADR",
+      "role": "Grid transformers / turbines adjacency; Siemens-group SST path via Siemens+Reinhausen 36 kV→800 VDC work.",
+      "stance": "Hold",
+      "stanceScore": 2,
+      "goldCandidate": false,
+      "rainbow": false,
+      "rainbowReason": "Turbine/grid recovery already owned; SST upside sits partly in Siemens AG SI, not pure SMNEY.",
+      "metrics": [
+        {
+          "id": "grid",
+          "label": "Grid / transformer",
+          "level": 2,
+          "note": "Core electrification backlog benefits AI interconnection."
+        },
+        {
+          "id": "sst_path",
+          "label": "SST partnership path",
+          "level": 1,
+          "note": "Siemens+Reinhausen 36 kV→800 VDC SST in development."
+        },
+        {
+          "id": "entity",
+          "label": "Entity clarity",
+          "level": 0,
+          "note": "SST press sits with Siemens AG SI more than SMNEY alone."
+        },
+        {
+          "id": "turbines",
+          "label": "Onsite generation",
+          "level": 1,
+          "note": "Gas/steam turbine capability for large campuses."
+        },
+        {
+          "id": "valuation",
+          "label": "Valuation vs peers",
+          "level": 1,
+          "note": "Recovery trade advanced; less “secret” AI torque."
+        },
+        {
+          "id": "execution",
+          "label": "Execution risk",
+          "level": 1,
+          "note": "Large project industrial; GT/wind history still watched."
+        }
+      ],
+      "thesis": "Siemens Energy is the listed energy/grid company: turbines, large transformers, and transmission gear that AI campuses still need. Separately, Siemens AG with Maschinenfabrik Reinhausen announced a modular medium-voltage SST concept converting up to 36 kV AC to stable 800 V DC for AI halls — still in industrialization, not a catalog ship date. Treat SMNEY as grid/turbine exposure with group SST optionality, not a pure 800 VDC pure-play.",
+      "street": "Street leaning: Buy on Siemens Energy AG (ENR) consensus (~19 Buy / 4 Hold / 2 Sell style tallies).",
+      "url": "https://armanamirzhan.github.io/investment_dashboard_public/analysis/companies/siemens-energy.html"
+    },
+    {
+      "slug": "abb",
+      "name": "ABB",
+      "ticker": "ABB",
+      "exchange": "NYSE / SIX",
+      "role": "Infinitus 800 VDC portfolio — SST-centric conversion plus solid-state DC breakers for AI halls.",
+      "stance": "Accumulate",
+      "stanceScore": 3,
+      "goldCandidate": false,
+      "rainbow": false,
+      "rainbowReason": "Infinitus is public; large-cap automation multiple already assumes electrification growth.",
+      "metrics": [
+        {
+          "id": "infinitus",
+          "label": "Infinitus DC portfolio",
+          "level": 2,
+          "note": "Integrated 800 VDC source-to-rack story launched."
+        },
+        {
+          "id": "breaker",
+          "label": "Solid-state DC breaker",
+          "level": 2,
+          "note": "SACE Infinitus — addresses DC protection bottleneck."
+        },
+        {
+          "id": "sst",
+          "label": "SST readiness",
+          "level": 1,
+          "note": "SST central to Infinitus; full hall deployments still out years."
+        },
+        {
+          "id": "timing",
+          "label": "Commercial timing",
+          "level": 1,
+          "note": "Parts ~12 months; DC-native halls ~2–3 years guided."
+        },
+        {
+          "id": "valuation",
+          "label": "Valuation vs peers",
+          "level": 1,
+          "note": "Quality automation; Street mostly Hold."
+        },
+        {
+          "id": "mix",
+          "label": "Theme purity",
+          "level": 1,
+          "note": "Robotics/process mix dilutes pure datacenter torque."
+        }
+      ],
+      "thesis": "ABB’s Infinitus portfolio targets source-to-rack 800 V DC for AI data centers: SST-based conversion, DC distribution, and solid-state DC protection. The SACE Infinitus solid-state circuit breaker (IEC 60947-2 class messaging; high amp / ~1.25 kV DC class) matters because DC fault clearing is harder than AC. Components guided toward production within ~12 months; full DC-native halls more like 2–3 years.",
+      "street": "Street leaning: Hold (MarketBeat ABBNY average; S&P-style Hold consensus on SIX:ABBN).",
+      "url": "https://armanamirzhan.github.io/investment_dashboard_public/analysis/companies/abb.html"
+    },
+    {
+      "slug": "stmicroelectronics",
+      "name": "STMicroelectronics",
+      "ticker": "STM",
+      "exchange": "NYSE",
+      "role": "SiC/GaN power devices and 800 V→50/12/6 V conversion architectures with NVIDIA.",
+      "stance": "Accumulate",
+      "stanceScore": 3,
+      "goldCandidate": false,
+      "rainbow": true,
+      "rainbowReason": "800 V conversion content with NVIDIA is early; European semi cycle may under-price datacenter SiC/GaN mix.",
+      "metrics": [
+        {
+          "id": "nvidia",
+          "label": "NVIDIA 800 V work",
+          "level": 2,
+          "note": "Public 800 V→50/12/6 V architecture expansions in 2026."
+        },
+        {
+          "id": "sic_gan",
+          "label": "SiC / GaN mix",
+          "level": 2,
+          "note": "SiC protection + GaN high-frequency conversion demos."
+        },
+        {
+          "id": "revenue",
+          "label": "Datacenter revenue proof",
+          "level": 1,
+          "note": "Design wins early; auto/industrial still dominate mix."
+        },
+        {
+          "id": "compete",
+          "label": "Competitive intensity",
+          "level": 1,
+          "note": "Crowded vs Infineon, TI, Navitas, onsemi."
+        },
+        {
+          "id": "valuation",
+          "label": "Valuation vs peers",
+          "level": 1,
+          "note": "European semi discount vs US AI names."
+        },
+        {
+          "id": "cycle",
+          "label": "Semi cycle risk",
+          "level": 1,
+          "note": "Broad STM cyclicality can swamp theme gains."
+        }
+      ],
+      "thesis": "STMicroelectronics builds the power chips inside the conversion chain: SiC, GaN, and silicon stages that step 800 V DC down toward 50 V, 12 V, or even 6 V near the GPU. 2026 NVIDIA-collaboration announcements expand that 800 VDC portfolio and highlight hot-swap SiC protection plus high-efficiency GaN boards. This is device content, not facility gear — sensitive to semi cycles and share vs Infineon/TI/Navitas.",
+      "street": "Street leaning: Buy (TECHi / consensus-style tallies on STM).",
+      "url": "https://armanamirzhan.github.io/investment_dashboard_public/analysis/companies/stmicroelectronics.html"
+    },
+    {
+      "slug": "mitsubishi-heavy",
+      "name": "Mitsubishi Heavy",
+      "ticker": "7011.T",
+      "exchange": "TSE",
+      "role": "Onsite gas turbines / mobile gensets for time-to-power; fuel-cell demos secondary.",
+      "stance": "Hold",
+      "stanceScore": 2,
+      "goldCandidate": false,
+      "rainbow": false,
+      "rainbowReason": "Japan conglomerate multipled on defense + turbines; 800 V DC not a primary driver.",
+      "metrics": [
+        {
+          "id": "turbine",
+          "label": "Onsite turbine offer",
+          "level": 2,
+          "note": "Mobile/modular aero packages marketed for data centers."
+        },
+        {
+          "id": "scale",
+          "label": "MW scale credibility",
+          "level": 2,
+          "note": "Utility-class M701J lineage plus smaller packages."
+        },
+        {
+          "id": "dc_fit",
+          "label": "800 V DC exposure",
+          "level": 0,
+          "note": "Generation-side; little direct HVDC rack content."
+        },
+        {
+          "id": "fuelcell",
+          "label": "Fuel-cell path",
+          "level": 1,
+          "note": "Honda collab demos; not Bloom-scale contracted GW."
+        },
+        {
+          "id": "conglom",
+          "label": "Conglomerate noise",
+          "level": 1,
+          "note": "Defense, plants, aerospace dilute pure AI-power read."
+        },
+        {
+          "id": "valuation",
+          "label": "Valuation vs peers",
+          "level": 1,
+          "note": "Japan rerating + defense; not a cheap sleeper."
+        }
+      ],
+      "thesis": "Mitsubishi Heavy Industries (MHI) brings large and modular gas turbines and aero-derivative packages (e.g., FT8 / FT4000-class messaging) that campuses use when utility power is late. That solves megawatts at the fence line, not the 800 V DC rack bus — complementary to Vertiv/Delta rather than a substitute. Separate Honda/Mitsubishi hydrogen fuel-cell reuse demos (~1 MW class) are interesting but not yet GW-scale like Bloom’s SOFC book.",
+      "street": "Street leaning: Buy (stockanalysis TYO:7011 consensus).",
+      "url": "https://armanamirzhan.github.io/investment_dashboard_public/analysis/companies/mitsubishi-heavy.html"
+    },
+    {
+      "slug": "amphenol",
+      "name": "Amphenol",
+      "ticker": "APH",
+      "exchange": "NYSE",
+      "role": "High-current / HVDC connectors and busbar interconnects for rack and busway power.",
+      "stance": "Accumulate",
+      "stanceScore": 3,
+      "goldCandidate": false,
+      "rainbow": false,
+      "rainbowReason": "AI interconnect darling already; 800 V connector content is incremental not unpriced.",
+      "metrics": [
+        {
+          "id": "hvdc_conn",
+          "label": "HVDC connector offer",
+          "level": 2,
+          "note": "High-V / high-A industrial interconnects for DC distribution."
+        },
+        {
+          "id": "busbar",
+          "label": "Busbar / busway fit",
+          "level": 2,
+          "note": "RADSOK RadFin / busbar terminations for dense power."
+        },
+        {
+          "id": "design",
+          "label": "OCP / ecosystem",
+          "level": 1,
+          "note": "OCP-oriented HVDC interconnect messaging; share TBD."
+        },
+        {
+          "id": "mix",
+          "label": "AI mix visibility",
+          "level": 1,
+          "note": "Broad IT/auto/aero mix; DC AI is a slice."
+        },
+        {
+          "id": "valuation",
+          "label": "Valuation vs peers",
+          "level": 1,
+          "note": "Premium compounder after AI interconnect run."
+        },
+        {
+          "id": "margins",
+          "label": "Margin trajectory",
+          "level": 2,
+          "note": "Historically excellent connector margins and execution."
+        }
+      ],
+      "thesis": "Amphenol makes the plugs and busbar interfaces that carry high current safely — including higher-voltage DC paths as racks move toward 800 V DC. Industrial lines (RADSOK / Voltarius-class, busbar terminations) and data-center connectivity brochures emphasize touch-safe, high-amp interconnects for AI power and cooling. It is a picks-and-shovels connector bet: content grows with rack kilowatts, but ASPs are smaller than SST or sidecar systems.",
+      "street": "Street leaning: Buy (MarketBeat APH consensus, Sep 2026).",
+      "url": "https://armanamirzhan.github.io/investment_dashboard_public/analysis/companies/amphenol.html"
+    }
+  ]
+}
