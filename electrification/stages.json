@@ -7,9 +7,21 @@
       "title": "CCGT / utility gas generation",
       "summary": "Combined-cycle gas turbines convert pipeline natural gas to electricity at roughly 60–64% LHV electrical efficiency—still the cheapest long-run kWh when you can secure the machine and the interconnect. Utility-scale plants sit offsite and feed the campus over HVAC or HVDC transmission. Lead times for large-frame turbines and interconnect queues often dominate schedule more than conversion efficiency.",
       "companies": [
-        { "name": "Mitsubishi Heavy Industries", "ticker": "TSE: 7011", "note": "M501 JAC large-frame gas turbines; backlog/expansion notes in baseline" },
-        { "name": "GE Vernova", "ticker": "GEV", "note": "Gas turbines, facility switchgear and transformers" },
-        { "name": "Siemens Energy", "ticker": "ENR.DE / SMNEY", "note": "Utility generation and grid equipment" }
+        {
+          "name": "Mitsubishi Heavy Industries",
+          "ticker": "TSE: 7011",
+          "note": "M501 JAC large-frame gas turbines; backlog/expansion notes in baseline"
+        },
+        {
+          "name": "GE Vernova",
+          "ticker": "GEV",
+          "note": "Gas turbines, facility switchgear and transformers"
+        },
+        {
+          "name": "Siemens Energy",
+          "ticker": "ENR.DE / SMNEY",
+          "note": "Utility generation and grid equipment"
+        }
       ]
     },
     {
@@ -17,9 +29,21 @@
       "title": "Turbine / genset (onsite)",
       "summary": "Onsite gas turbines and diesel or gas gensets provide fast-start AC capacity inside or beside the campus fence. They trade fuel logistics for shorter interconnect waits and bridge peak, ramp, and maintenance cover. In this overview path they feed the shared site SST (same high-frequency node as offsite HVAC/HVDC landings), then land on the ~800 V DC bus.",
       "companies": [
-        { "name": "Mitsubishi Heavy Industries", "ticker": "TSE: 7011", "note": "MGS diesel gensets 0.5–3.4 MW (~10 s start); large-frame turbines" },
-        { "name": "Caterpillar", "ticker": "CAT", "note": "Industrial gensets widely used for backup and bridging capacity" },
-        { "name": "GE Vernova", "ticker": "GEV", "note": "Gas turbines and related power equipment" }
+        {
+          "name": "Mitsubishi Heavy Industries",
+          "ticker": "TSE: 7011",
+          "note": "MGS diesel gensets 0.5–3.4 MW (~10 s start); large-frame turbines"
+        },
+        {
+          "name": "Caterpillar",
+          "ticker": "CAT",
+          "note": "Industrial gensets widely used for backup and bridging capacity"
+        },
+        {
+          "name": "GE Vernova",
+          "ticker": "GEV",
+          "note": "Gas turbines and related power equipment"
+        }
       ]
     },
     {
@@ -27,10 +51,26 @@
       "title": "SOFC — solid oxide fuel cell",
       "summary": "Solid oxide fuel cells reform natural gas on-site and produce DC electricity at high operating temperature (~800 °C for stationary stacks such as Bloom-class systems). They often win on time-to-power versus waiting for a utility interconnect: a month early on a 1 GW AI campus can matter more than small efficiency gaps. Native DC output aligns with 800 V hall architectures after a boost DC–DC stage.",
       "companies": [
-        { "name": "Bloom Energy", "ticker": "NYSE: BE", "note": "~75–85% stationary SOFC share; ScSZ electrolyte path" },
-        { "name": "Ceres Power", "ticker": "LSE: CWR", "note": "SteelCell technology licenses (Doosan, Delta, Weichai)" },
-        { "name": "Mitsubishi Heavy Industries", "ticker": "TSE: 7011", "note": "MEGAMIE ~210 kW class ~53% electrical" },
-        { "name": "Doosan Fuel Cell", "ticker": "KRX: 336260", "note": "SOFC-NG manufacturing; capacity expansion notes in baseline" }
+        {
+          "name": "Bloom Energy",
+          "ticker": "NYSE: BE",
+          "note": "~75–85% stationary SOFC share; ScSZ electrolyte path"
+        },
+        {
+          "name": "Ceres Power",
+          "ticker": "LSE: CWR",
+          "note": "SteelCell technology licenses (Doosan, Delta, Weichai)"
+        },
+        {
+          "name": "Mitsubishi Heavy Industries",
+          "ticker": "TSE: 7011",
+          "note": "MEGAMIE ~210 kW class ~53% electrical"
+        },
+        {
+          "name": "Doosan Fuel Cell",
+          "ticker": "KRX: 336260",
+          "note": "SOFC-NG manufacturing; capacity expansion notes in baseline"
+        }
       ]
     },
     {
@@ -38,31 +78,133 @@
       "title": "MCFC / PAFC fuel cells",
       "summary": "Molten carbonate and phosphoric acid fuel cells are alternate onsite electrochemical paths, often discussed with combined heat and power (CHP) options. Electrical efficiency is typically lower than top SOFC claims, but CHP totals can be high where heat is usable. Like SOFC, they feed the shared DC–DC stage into the ~800 V bus in this overview—not the site SST used by AC generators.",
       "companies": [
-        { "name": "FuelCell Energy", "ticker": "NASDAQ: FCEL", "note": "MCFC; Siemens data-center partnership context in baseline" },
-        { "name": "HyAxiom PureCell", "note": "PAFC; private as of baseline—Nasdaq listing uncertain" }
+        {
+          "name": "FuelCell Energy",
+          "ticker": "NASDAQ: FCEL",
+          "note": "MCFC; Siemens data-center partnership context in baseline"
+        },
+        {
+          "name": "HyAxiom PureCell",
+          "note": "PAFC; private as of baseline—Nasdaq listing uncertain"
+        }
+      ]
+    },
+    {
+      "id": "ac-ac",
+      "title": "AC/AC step-up transformer",
+      "summary": "At the utility plant, an AC/AC step-up transformer raises generator voltage onto the high-voltage AC grid. Each transformer hop is roughly ~99.5% efficient. These are legacy low-frequency copper-steel units—the same product class behind the often-cited 2–5 year facility/grid transformer lead times—not the high-frequency SiC solid-state transformers used at the data-center perimeter.",
+      "companies": [
+        {
+          "name": "GE Vernova",
+          "ticker": "GEV",
+          "note": "Grid transformers and switchgear"
+        },
+        {
+          "name": "Siemens Energy",
+          "ticker": "ENR.DE / SMNEY",
+          "note": "Transmission and facility transformers"
+        },
+        {
+          "name": "Hitachi Energy",
+          "ticker": "6501.T",
+          "note": "via Hitachi; transformers and HV equipment"
+        },
+        {
+          "name": "Schneider Electric",
+          "ticker": "SU.PA / SBGSY",
+          "note": "Facility and distribution transformers"
+        },
+        {
+          "name": "Eaton",
+          "ticker": "ETN",
+          "note": "Power distribution and transformer-adjacent gear"
+        }
       ]
     },
     {
       "id": "hvac",
-      "title": "HVAC transmission path",
-      "summary": "High-voltage AC carries power from the utility plant to the site after an AC/AC step-up transformer. Rough order-of-magnitude loss is ~5–8% per 1 000 km class; shorter hops and transformers are far smaller (transmission often ~98.5% per ~100 km class; XFMR ~99.5% each). At the campus, HVAC lands into the shared site SST that steps toward ~800 V DC.",
+      "title": "HVAC transmission",
+      "summary": "High-voltage AC carries power from the stepped-up plant bus toward the campus. Rough order-of-magnitude loss is ~5–8% per 1 000 km class; shorter hops are far smaller (transmission often ~98.5% per ~100 km class). At the campus, HVAC lands into the shared site SST that steps toward ~800 V DC—separate from the AC/AC step-up at the utility end.",
       "companies": [
-        { "name": "GE Vernova", "ticker": "GEV", "note": "Grid transformers and switchgear" },
-        { "name": "Siemens Energy", "ticker": "ENR.DE / SMNEY", "note": "Transmission and facility power equipment" },
-        { "name": "Hitachi Energy", "ticker": "6501.T", "note": "via Hitachi; transformers and HV equipment" },
-        { "name": "Schneider Electric", "ticker": "SU.PA / SBGSY", "note": "Facility and distribution equipment" },
-        { "name": "Eaton", "ticker": "ETN", "note": "Switchgear and power distribution" }
+        {
+          "name": "GE Vernova",
+          "ticker": "GEV",
+          "note": "Grid and transmission equipment"
+        },
+        {
+          "name": "Siemens Energy",
+          "ticker": "ENR.DE / SMNEY",
+          "note": "Transmission and facility power equipment"
+        },
+        {
+          "name": "Hitachi Energy",
+          "ticker": "6501.T",
+          "note": "via Hitachi; HV transmission equipment"
+        },
+        {
+          "name": "Schneider Electric",
+          "ticker": "SU.PA / SBGSY",
+          "note": "Facility landing / distribution equipment"
+        },
+        {
+          "name": "Eaton",
+          "ticker": "ETN",
+          "note": "Switchgear and power distribution"
+        }
+      ]
+    },
+    {
+      "id": "ac-dc",
+      "title": "AC/DC converter (utility end)",
+      "summary": "For the HVDC path, an AC/DC converter station at the utility end turns high-voltage AC into high-voltage DC. Converter stations are expensive because they switch hundreds of kilovolts—a different product class from a data-center SST that lands at ~800 V. Rough budget: ~1% loss per converter station, plus the HVDC line losses downstream.",
+      "companies": [
+        {
+          "name": "Hitachi Energy",
+          "ticker": "6501.T",
+          "note": "HVDC converter systems via Hitachi"
+        },
+        {
+          "name": "Siemens Energy",
+          "ticker": "ENR.DE / SMNEY",
+          "note": "HVDC / converter-station capability"
+        },
+        {
+          "name": "GE Vernova",
+          "ticker": "GEV",
+          "note": "Grid conversion equipment"
+        },
+        {
+          "name": "ABB",
+          "ticker": "ABB",
+          "note": "HV and conversion heritage"
+        }
       ]
     },
     {
       "id": "hvdc",
-      "title": "HVDC transmission path",
-      "summary": "High-voltage DC is the alternate long-haul path: roughly ~3.5% loss per 1 000 km plus ~1% per converter station. Converter stations are expensive because they switch hundreds of kilovolts—a different product class from a data-center SST that lands at ~800 V. In this overview, HVDC still merges into the same shared site SST as HVAC before the hall bus.",
+      "title": "HVDC transmission",
+      "summary": "High-voltage DC is the long-haul alternate to HVAC: roughly ~3.5% loss per 1 000 km on the line (after the utility-end AC/DC station). Buried HVDC can cost ~10× overhead on some corridors. In this overview, HVDC still merges into the same shared site SST as HVAC before the hall bus—do not confuse the utility converter station with that site SST.",
       "companies": [
-        { "name": "Hitachi Energy", "ticker": "6501.T", "note": "HVDC systems via Hitachi" },
-        { "name": "Siemens Energy", "ticker": "ENR.DE / SMNEY", "note": "HVDC / converter-station capability" },
-        { "name": "GE Vernova", "ticker": "GEV", "note": "Grid and conversion equipment" },
-        { "name": "ABB", "ticker": "ABB", "note": "HV and conversion heritage; also SST (Infinitus)" }
+        {
+          "name": "Hitachi Energy",
+          "ticker": "6501.T",
+          "note": "HVDC systems via Hitachi"
+        },
+        {
+          "name": "Siemens Energy",
+          "ticker": "ENR.DE / SMNEY",
+          "note": "HVDC transmission capability"
+        },
+        {
+          "name": "GE Vernova",
+          "ticker": "GEV",
+          "note": "Grid and transmission equipment"
+        },
+        {
+          "name": "ABB",
+          "ticker": "ABB",
+          "note": "HVDC heritage; also SST (Infinitus)"
+        }
       ]
     },
     {
@@ -70,12 +212,36 @@
       "title": "Site SST (solid-state transformer)",
       "summary": "The shared high-frequency site SST is one node—not duplicated for HVAC vs HVDC. It takes medium-voltage AC (from offsite paths or onsite turbine/genset) and lands power toward ~800 V DC for the hall. SST products use SiC power devices and are scaling commercially through the late 2020s; they are distinct from legacy low-frequency copper-steel facility transformers (often 2–5 year lead times).",
       "companies": [
-        { "name": "Eaton", "ticker": "ETN", "note": "MVSST 2.0 IEC-certified medium-voltage SST; Infineon SiC deal" },
-        { "name": "ABB", "ticker": "ABB", "note": "Infinitus SST; rail heritage; large patent book" },
-        { "name": "Delta Electronics", "ticker": "2308.TW", "note": "Production SST in a North China AI data center (Feb 2026 baseline note)" },
-        { "name": "Siemens Energy", "ticker": "ENR.DE / SMNEY", "note": "Reinhausen SST partnership (Aug 2026)—not fully commercial in baseline" },
-        { "name": "Schneider Electric", "ticker": "SU.PA / SBGSY", "note": "Perimeter power / SST-adjacent portfolio" },
-        { "name": "Vertiv", "ticker": "VRT", "note": "Rack power and DC architectures" }
+        {
+          "name": "Eaton",
+          "ticker": "ETN",
+          "note": "MVSST 2.0 IEC-certified medium-voltage SST; Infineon SiC deal"
+        },
+        {
+          "name": "ABB",
+          "ticker": "ABB",
+          "note": "Infinitus SST; rail heritage; large patent book"
+        },
+        {
+          "name": "Delta Electronics",
+          "ticker": "2308.TW",
+          "note": "Production SST in a North China AI data center (Feb 2026 baseline note)"
+        },
+        {
+          "name": "Siemens Energy",
+          "ticker": "ENR.DE / SMNEY",
+          "note": "Reinhausen SST partnership (Aug 2026)—not fully commercial in baseline"
+        },
+        {
+          "name": "Schneider Electric",
+          "ticker": "SU.PA / SBGSY",
+          "note": "Perimeter power / SST-adjacent portfolio"
+        },
+        {
+          "name": "Vertiv",
+          "ticker": "VRT",
+          "note": "Rack power and DC architectures"
+        }
       ]
     },
     {
@@ -83,10 +249,26 @@
       "title": "DC–DC conversion (shared)",
       "summary": "Fuel-cell stacks (SOFC, MCFC/PAFC) produce DC at voltages that usually need a boost converter before the hall bus. In this overview, SOFC and MCFC/PAFC share one DC–DC stage in the same column as Site SST—both paths then land on the same ~800 V DC bus. Collapsing redundant AC–DC hops here is part of why onsite DC generation pairs well with 800 V architectures.",
       "companies": [
-        { "name": "Infineon", "ticker": "IFX / IFNNY", "note": "SiC / power devices for high-efficiency converters" },
-        { "name": "STMicroelectronics", "ticker": "STM", "note": "Power semiconductors used in DC–DC stages" },
-        { "name": "Eaton", "ticker": "ETN", "note": "Industrial power conversion / SST-adjacent products" },
-        { "name": "Vertiv", "ticker": "VRT", "note": "Data-center DC power architectures" }
+        {
+          "name": "Infineon",
+          "ticker": "IFX / IFNNY",
+          "note": "SiC / power devices for high-efficiency converters"
+        },
+        {
+          "name": "STMicroelectronics",
+          "ticker": "STM",
+          "note": "Power semiconductors used in DC–DC stages"
+        },
+        {
+          "name": "Eaton",
+          "ticker": "ETN",
+          "note": "Industrial power conversion / SST-adjacent products"
+        },
+        {
+          "name": "Vertiv",
+          "ticker": "VRT",
+          "note": "Data-center DC power architectures"
+        }
       ]
     },
     {
@@ -94,10 +276,26 @@
       "title": "~800 V DC bus",
       "summary": "Once power is on an ~800 V (or ±400 V bipolar) DC busway, distribution looks more like industrial DC than classic branch-circuit AC. Busway and connectors move power across the hall (~99% class), then rack or blade 800→12 V LLC resonant converters (~97.5% class) feed multiphase VRMs. Collapsing the legacy UPS → PDU → PSU cascade cuts heat, parts count, and roughly ~5% conversion loss versus many AC–DC hops.",
       "companies": [
-        { "name": "Vertiv", "ticker": "VRT", "note": "Rack power and DC distribution architectures" },
-        { "name": "Schneider Electric", "ticker": "SU.PA / SBGSY", "note": "Facility and hall power distribution" },
-        { "name": "Eaton", "ticker": "ETN", "note": "Busway / power distribution products" },
-        { "name": "Amphenol", "ticker": "APH", "note": "Connectors and busway peers for DC halls" }
+        {
+          "name": "Vertiv",
+          "ticker": "VRT",
+          "note": "Rack power and DC distribution architectures"
+        },
+        {
+          "name": "Schneider Electric",
+          "ticker": "SU.PA / SBGSY",
+          "note": "Facility and hall power distribution"
+        },
+        {
+          "name": "Eaton",
+          "ticker": "ETN",
+          "note": "Busway / power distribution products"
+        },
+        {
+          "name": "Amphenol",
+          "ticker": "APH",
+          "note": "Connectors and busway peers for DC halls"
+        }
       ]
     },
     {
@@ -105,11 +303,29 @@
       "title": "Silicon — GPU / CPU hall load",
       "summary": "The end of the chain: multiphase voltage regulator modules take 12 V (or intermediate rails) down to core voltages below 1 V at roughly ~90% class efficiency. Heat density at the package is a first-order cooling problem. Control and power silicon for VRMs and intermediate converters includes TI, ST, Infineon, and GaN specialists where those devices appear; the compute load itself is dominated by GPU/CPU silicon (e.g. NVIDIA-class accelerators in AI halls).",
       "companies": [
-        { "name": "NVIDIA", "ticker": "NVDA", "note": "GPU accelerators driving AI hall power density (load context)" },
-        { "name": "Infineon", "ticker": "IFX / IFNNY", "note": "Power devices for VRMs and intermediate rails" },
-        { "name": "STMicroelectronics", "ticker": "STM", "note": "Power management / conversion silicon" },
-        { "name": "Texas Instruments", "note": "VR / multiphase control silicon (common in board power)" },
-        { "name": "EPC", "note": "GaN devices in some converter stages" }
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "GPU accelerators driving AI hall power density (load context)"
+        },
+        {
+          "name": "Infineon",
+          "ticker": "IFX / IFNNY",
+          "note": "Power devices for VRMs and intermediate rails"
+        },
+        {
+          "name": "STMicroelectronics",
+          "ticker": "STM",
+          "note": "Power management / conversion silicon"
+        },
+        {
+          "name": "Texas Instruments",
+          "note": "VR / multiphase control silicon (common in board power)"
+        },
+        {
+          "name": "EPC",
+          "note": "GaN devices in some converter stages"
+        }
       ]
     }
   ]

@@ -82,7 +82,7 @@
 <figure class="diagram" id="diagram-overview">
 <svg aria-labelledby="ov-title ov-desc" role="group" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
 <title id="ov-title">Onsite versus offsite electrification overview</title>
-<desc id="ov-desc">Left generator column: offsite CCGT plus onsite turbine/genset, SOFC, and MCFC/PAFC. Offsite splits HVAC via AC/AC transformer and HVDC via AC/DC converter into a shared site SST; turbine also feeds that SST. SOFC and MCFC/PAFC share one DC-DC stage in the same column as Site SST. Both SST and DC-DC feed about 800 V DC to silicon. Major stage boxes are clickable hotspots that open a details panel.</desc>
+<desc id="ov-desc">Left generator column: offsite CCGT plus onsite turbine/genset, SOFC, and MCFC/PAFC. Offsite splits into separate AC/AC transformer, HVAC transmission, AC/DC converter, and HVDC transmission expandables into a shared site SST; turbine also feeds that SST. SOFC and MCFC/PAFC share one DC-DC stage in the same column as Site SST. Both SST and DC-DC feed about 800 V DC to silicon. Major stage boxes are clickable hotspots that open a details panel.</desc>
 <defs>
 <marker id="arrow" markerHeight="7" markerWidth="7" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
 <path d="M0,0 L10,5 L0,10 z" fill="#5b9fd4"></path>
@@ -98,8 +98,10 @@
 .title{fill:#5b9fd4;font-family:Segoe UI,system-ui,sans-serif;font-size:13px;font-weight:700}
 .lnk{stroke:#5b9fd4;stroke-width:1.6;fill:none;marker-end:url(#arrow)}
 .lnk-g{stroke:#7ec8a3;stroke-width:1.6;fill:none;marker-end:url(#arrow)}
-.stage-hotspot{cursor:pointer}
+.stage-hotspot{cursor:pointer;pointer-events:all}
+.stage-hotspot *{pointer-events:all}
 .stage-hotspot:focus{outline:none}
+.stage-hotspot:focus-visible{outline:2px solid #5b9fd4;outline-offset:2px}
 .stage-hotspot:hover .box,
 .stage-hotspot:hover .box-a,
 .stage-hotspot:hover .box-b,
@@ -120,7 +122,7 @@
 <!-- OFFSITE -->
 <text class="title" x="20" y="22">OFFSITE PATH — separate HVAC vs HVDC</text>
 <!-- Left generator column: CCGT -->
-<g class="stage-hotspot" data-stage="ccgt" tabindex="0" role="button" aria-label="CCGT / utility gas generation. Activate for stage details.">
+<g class="stage-hotspot" data-stage="ccgt" tabindex="0" role="button" aria-label="CCGT / utility gas generation. Activate for stage details." focusable="true">
 <rect class="box-a" height="52" rx="6" width="120" x="20" y="36"></rect>
 <text class="lbl" text-anchor="middle" x="80" y="58">CCGT / utility</text>
 <text class="sub" text-anchor="middle" x="80" y="74">~60–64% LHV</text>
@@ -129,21 +131,25 @@
 <path class="lnk" d="M158,62 V50 H170"></path>
 <path class="lnk" d="M158,62 V120 H170"></path>
 <text class="sub" x="170" y="32">HVAC</text>
-<g class="stage-hotspot" data-stage="hvac" tabindex="0" role="button" aria-label="HVAC transmission path. Activate for stage details.">
+<g class="stage-hotspot" data-stage="ac-ac" tabindex="0" role="button" focusable="true" aria-label="AC/AC step-up transformer. Activate for stage details.">
 <rect class="box-a" height="48" rx="6" width="122" x="170" y="34"></rect>
 <text class="lbl" text-anchor="middle" x="231" y="54">AC/AC XFMR</text>
 <text class="sub" text-anchor="middle" x="231" y="70">step-up</text>
+</g>
 <path class="lnk" d="M292,58 H308"></path>
+<g class="stage-hotspot" data-stage="hvac" tabindex="0" role="button" focusable="true" aria-label="HVAC transmission path. Activate for stage details.">
 <rect class="box-a" height="48" rx="6" width="122" x="310" y="34"></rect>
 <text class="lbl" text-anchor="middle" x="371" y="54">HVAC tx</text>
 <text class="sub" text-anchor="middle" x="371" y="70">to site</text>
 </g>
 <text class="sub" x="170" y="94">HVDC</text>
-<g class="stage-hotspot" data-stage="hvdc" tabindex="0" role="button" aria-label="HVDC transmission path. Activate for stage details.">
+<g class="stage-hotspot" data-stage="ac-dc" tabindex="0" role="button" focusable="true" aria-label="AC/DC converter utility end. Activate for stage details.">
 <rect class="box-a" height="48" rx="6" width="122" x="170" y="96"></rect>
 <text class="lbl" text-anchor="middle" x="231" y="116">AC/DC converter</text>
 <text class="sub" text-anchor="middle" x="231" y="132">utility end</text>
+</g>
 <path class="lnk" d="M292,120 H308"></path>
+<g class="stage-hotspot" data-stage="hvdc" tabindex="0" role="button" focusable="true" aria-label="HVDC transmission path. Activate for stage details.">
 <rect class="box-a" height="48" rx="6" width="122" x="310" y="96"></rect>
 <text class="lbl" text-anchor="middle" x="371" y="116">HVDC tx</text>
 <text class="sub" text-anchor="middle" x="371" y="132">to site</text>
@@ -153,7 +159,7 @@
 <path class="lnk" d="M432,120 H462"></path>
 <path class="lnk" d="M462,58 V120"></path>
 <path class="lnk" d="M462,89 H488"></path>
-<g class="stage-hotspot" data-stage="site-sst" tabindex="0" role="button" aria-label="Site solid-state transformer. Activate for stage details.">
+<g class="stage-hotspot" data-stage="site-sst" tabindex="0" role="button" aria-label="Site solid-state transformer. Activate for stage details." focusable="true">
 <rect class="box-s" height="72" rx="6" width="145" x="490" y="52"></rect>
 <text class="lbl" text-anchor="middle" x="562" y="78">Site SST</text>
 <text class="sub" text-anchor="middle" x="562" y="96">shared HF node</text>
@@ -163,7 +169,7 @@
 <text class="title" style="fill:#7ec8a3" x="20" y="168">ONSITE PATH</text>
 <text class="sub" x="125" y="168">generators (left) · turbine via shared SST · fuel cells via one DC–DC</text>
 <!-- Turbine in left generator column -->
-<g class="stage-hotspot" data-stage="turbine" tabindex="0" role="button" aria-label="Turbine or genset onsite. Activate for stage details.">
+<g class="stage-hotspot" data-stage="turbine" tabindex="0" role="button" aria-label="Turbine or genset onsite. Activate for stage details." focusable="true">
 <rect class="box-b" height="48" rx="6" width="120" x="20" y="178"></rect>
 <text class="lbl" text-anchor="middle" x="80" y="198">Turbine / genset</text>
 <text class="sub" text-anchor="middle" x="80" y="214">AC · fast start</text>
@@ -172,12 +178,12 @@
 <path class="lnk-g" d="M140,202 H462 V120"></path>
 <text class="sub" x="220" y="196">via shared SST</text>
 <!-- Fuel cells (left column) → single DC–DC (SST column) -->
-<g class="stage-hotspot" data-stage="sofc" tabindex="0" role="button" aria-label="Solid oxide fuel cell. Activate for stage details.">
+<g class="stage-hotspot" data-stage="sofc" tabindex="0" role="button" aria-label="Solid oxide fuel cell. Activate for stage details." focusable="true">
 <rect class="box-b" height="48" rx="6" width="120" x="20" y="248"></rect>
 <text class="lbl" text-anchor="middle" x="80" y="268">SOFC</text>
 <text class="sub" text-anchor="middle" x="80" y="284">NG → DC</text>
 </g>
-<g class="stage-hotspot" data-stage="mcfc-pafc" tabindex="0" role="button" aria-label="MCFC or PAFC fuel cells. Activate for stage details.">
+<g class="stage-hotspot" data-stage="mcfc-pafc" tabindex="0" role="button" aria-label="MCFC or PAFC fuel cells. Activate for stage details." focusable="true">
 <rect class="box-b" height="48" rx="6" width="120" x="20" y="310"></rect>
 <text class="lbl" text-anchor="middle" x="80" y="330">MCFC / PAFC</text>
 <text class="sub" text-anchor="middle" x="80" y="346">CHP options</text>
@@ -187,7 +193,7 @@
 <path class="lnk-g" d="M140,334 H200"></path>
 <path class="lnk-g" d="M200,272 V334"></path>
 <path class="lnk-g" d="M200,303 H488"></path>
-<g class="stage-hotspot" data-stage="dc-dc" tabindex="0" role="button" aria-label="Shared DC to DC conversion. Activate for stage details.">
+<g class="stage-hotspot" data-stage="dc-dc" tabindex="0" role="button" aria-label="Shared DC to DC conversion. Activate for stage details." focusable="true">
 <rect class="box-s" height="72" rx="6" width="145" x="490" y="268"></rect>
 <text class="lbl" text-anchor="middle" x="562" y="294">DC–DC conv</text>
 <text class="sub" text-anchor="middle" x="562" y="312">shared · boost</text>
@@ -198,7 +204,7 @@
 <path class="lnk-g" d="M635,304 H700"></path>
 <path class="lnk" d="M700,88 V304"></path>
 <path class="lnk" d="M700,196 H718"></path>
-<g class="stage-hotspot" data-stage="dc-bus" tabindex="0" role="button" aria-label="About 800 volt DC bus. Activate for stage details.">
+<g class="stage-hotspot" data-stage="dc-bus" tabindex="0" role="button" aria-label="About 800 volt DC bus. Activate for stage details." focusable="true">
 <rect class="box-c" height="96" rx="6" width="155" x="720" y="148"></rect>
 <text class="lbl" text-anchor="middle" x="797" y="176">~800 V DC bus</text>
 <text class="sub" text-anchor="middle" x="797" y="194">busway / rack</text>
@@ -206,7 +212,7 @@
 <text class="sub" text-anchor="middle" x="797" y="230">VRMs → GPU/CPU</text>
 </g>
 <path class="lnk" d="M875,196 H888"></path>
-<g class="stage-hotspot" data-stage="silicon" tabindex="0" role="button" aria-label="Silicon GPU and CPU hall load. Activate for stage details.">
+<g class="stage-hotspot" data-stage="silicon" tabindex="0" role="button" aria-label="Silicon GPU and CPU hall load. Activate for stage details." focusable="true">
 <rect class="box" height="68" rx="6" width="90" x="890" y="162"></rect>
 <text class="lbl" text-anchor="middle" x="935" y="192">Silicon</text>
 <text class="sub" text-anchor="middle" x="935" y="210">sub-1 V</text>

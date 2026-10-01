@@ -148,12 +148,14 @@
   var companiesWrap = document.getElementById("stage-panel-companies");
   var companyList = document.getElementById("stage-panel-company-list");
   var closeBtn = document.getElementById("stage-panel-close");
-  if (!panel || !titleEl || !summaryEl || !companyList || !closeBtn) return;
+  if (!panel || !titleEl || !summaryEl || !companiesWrap || !companyList || !closeBtn) return;
 
   var stagesById = {};
   var activeId = null;
   var lastFocus = null;
   var dataReady = false;
+  var pendingId = null;
+  var pendingEl = null;
 
   function esc(s) {
     return String(s == null ? "" : s)
@@ -193,6 +195,8 @@
   }
 
   function closePanel(restoreFocus) {
+    pendingId = null;
+    pendingEl = null;
     if (panel.hidden) return;
     panel.hidden = true;
     figure.classList.remove("stage-panel-open");
@@ -215,52 +219,102 @@
     setActiveHotspot(stage.id);
     activeId = stage.id;
     lastFocus = fromEl || lastFocus;
-    // Focus close control for keyboard users; keep panel in view
-    closeBtn.focus();
     try {
       panel.scrollIntoView({ block: "nearest", behavior: "smooth" });
     } catch (e) {
       panel.scrollIntoView(false);
     }
+    // Focus close after paint so hidden→visible focus works reliably
+    setTimeout(function () {
+      try { closeBtn.focus(); } catch (e) {}
+    }, 0);
   }
 
   function toggleStage(id, fromEl) {
-    if (!id || !dataReady) return;
+    if (!id) return;
+    if (!dataReady) {
+      // Queue until stages.json loads — avoids silent no-op on early clicks
+      pendingId = id;
+      pendingEl = fromEl || null;
+      if (panel.hidden) {
+        titleEl.textContent = "Loading stage details…";
+        summaryEl.textContent = "Fetching stages.json…";
+        renderCompanies([]);
+        panel.hidden = false;
+        figure.classList.add("stage-panel-open");
+        setActiveHotspot(id);
+      }
+      return;
+    }
     if (activeId === id && !panel.hidden) {
       closePanel(true);
       return;
     }
     var stage = stagesById[id];
-    if (!stage) return;
+    if (!stage) {
+      titleEl.textContent = "Unknown stage";
+      summaryEl.textContent = "No entry for \"" + id + "\" in stages.json.";
+      renderCompanies([]);
+      panel.hidden = false;
+      figure.classList.add("stage-panel-open");
+      setActiveHotspot(id);
+      activeId = id;
+      lastFocus = fromEl || lastFocus;
+      return;
+    }
     openPanel(stage, fromEl);
   }
 
   function hotspotFromEvent(e) {
     var t = e.target;
-    if (!t || !t.closest) return null;
-    return t.closest(".stage-hotspot[data-stage]");
+    if (!t) return null;
+    // SVG elements always support closest in modern browsers; fall back to parent walk
+    if (typeof t.closest === "function") {
+      return t.closest(".stage-hotspot[data-stage]");
+    }
+    var n = t;
+    while (n && n !== figure) {
+      if (n.getAttribute && n.getAttribute("data-stage") &&
+          (n.classList && n.classList.contains("stage-hotspot") ||
+           (n.getAttribute("class") || "").indexOf("stage-hotspot") !== -1)) {
+        return n;
+      }
+      n = n.parentNode;
+    }
+    return null;
   }
 
-  figure.addEventListener("click", function (e) {
+  var lastToggleAt = 0;
+  function onActivate(e) {
     var g = hotspotFromEvent(e);
     if (!g) return;
     e.preventDefault();
     e.stopPropagation();
+    // Guard against Enter/Space synthesizing a click after keydown (would open then immediately close)
+    var now = Date.now();
+    if (now - lastToggleAt < 80) return;
+    lastToggleAt = now;
     toggleStage(g.getAttribute("data-stage"), g);
+  }
+
+  // Single delegated handler on the figure (bubbles from SVG hotspot children)
+  figure.addEventListener("click", onActivate);
+  figure.addEventListener("keydown", function (e) {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    onActivate(e);
   });
 
-  figure.addEventListener("keydown", function (e) {
-    var g = hotspotFromEvent(e);
-    if (!g) return;
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      e.stopPropagation();
-      toggleStage(g.getAttribute("data-stage"), g);
-    }
+  figure.querySelectorAll(".stage-hotspot[data-stage]").forEach(function (g) {
+    g.setAttribute("aria-expanded", "false");
+    g.setAttribute("aria-controls", "stage-panel");
+    if (!g.hasAttribute("tabindex")) g.setAttribute("tabindex", "0");
+    if (!g.hasAttribute("role")) g.setAttribute("role", "button");
   });
 
   closeBtn.addEventListener("click", function (e) {
     e.preventDefault();
+    pendingId = null;
+    pendingEl = null;
     closePanel(true);
   });
 
@@ -272,16 +326,22 @@
     closePanel(true);
   }, true);
 
-  // Init aria-expanded on hotspots
-  figure.querySelectorAll(".stage-hotspot[data-stage]").forEach(function (g) {
-    g.setAttribute("aria-expanded", "false");
-    g.setAttribute("aria-controls", "stage-panel");
-  });
+  function stagesJsonUrl() {
+    var script = document.querySelector('script[src$="briefing.js"], script[src*="briefing.js"]');
+    if (script && script.src) {
+      try { return new URL("stages.json", script.src).href; } catch (e) {}
+    }
+    try {
+      return new URL("stages.json", window.location.href).href;
+    } catch (e) {
+      return "stages.json";
+    }
+  }
 
-  var jsonUrl = "stages.json";
-  fetch(jsonUrl, { credentials: "same-origin" })
+  var jsonUrl = stagesJsonUrl();
+  fetch(jsonUrl, { credentials: "same-origin", cache: "no-cache" })
     .then(function (r) {
-      if (!r.ok) throw new Error("stages.json HTTP " + r.status);
+      if (!r.ok) throw new Error("stages.json HTTP " + r.status + " from " + jsonUrl);
       return r.json();
     })
     .then(function (data) {
@@ -290,12 +350,22 @@
         if (s && s.id) stagesById[s.id] = s;
       });
       dataReady = true;
+      if (pendingId) {
+        var id = pendingId;
+        var el = pendingEl;
+        pendingId = null;
+        pendingEl = null;
+        activeId = null; // force open, not toggle-close
+        toggleStage(id, el);
+      }
     })
     .catch(function (err) {
       console.warn("Stage panel: failed to load stages.json", err);
       titleEl.textContent = "Stage details unavailable";
-      summaryEl.textContent = "Could not load stages.json. Check that the file is deployed beside this page.";
+      summaryEl.textContent = "Could not load stages.json (" + jsonUrl + "). Check that the file is deployed beside briefing.js.";
       renderCompanies([]);
       dataReady = false;
+      panel.hidden = false;
+      figure.classList.add("stage-panel-open");
     });
 })();
