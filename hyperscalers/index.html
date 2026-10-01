@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hyperscalers — cloud operators, GPU clouds &amp; colo</title>
-  <meta name="description" content="Layperson briefing on AI datacenter demand owners and capacity builders: integrated cloud operators (AWS, Azure, GCP, Meta, Oracle), GPU cloud / neocloud providers, and colocation / datacenter REITs. CapEx and power-buildout framing from the hub extraction. Not investment advice.">
+  <meta name="description" content="Layperson briefing on AI datacenter demand owners and capacity builders: integrated cloud operators (AWS, Azure, GCP, Meta, Oracle), GPU cloud / neocloud providers, and colocation / datacenter REITs. CapEx, power-buildout, PPA / offtake, and ratepayer-protection framing. Not investment advice.">
   <link rel="stylesheet" href="../assets/site.css">
   <link rel="stylesheet" href="section.css">
 </head>
@@ -35,6 +35,7 @@
           <a href="#layer-2">GPU clouds</a>
           <a href="#layer-3">Colo &amp; REITs</a>
           <a href="#layer-4">Buildouts</a>
+          <a href="#layer-5">Power &amp; PPAs</a>
           <a href="#related">Related</a>
           <a href="#disclaimer">Disclaimer</a>
         </div>
@@ -59,7 +60,7 @@
           landlords that host that demand.
         </p>
         <div class="meta-row">
-          <span class="chip">Hub section · four layers</span>
+          <span class="chip">Hub section · five layers</span>
           <span class="chip">Source: hub-extraction + data/hyperscaler_*.json</span>
           <span class="chip warn">Not investment advice</span>
         </div>
@@ -106,12 +107,13 @@
       </section>
 
       <section aria-labelledby="h-stack" id="stack">
-        <h2 id="h-stack">Four-layer map</h2>
+        <h2 id="h-stack">Five-layer map</h2>
         <ol>
           <li><a href="#layer-1">Integrated cloud operators</a> — AWS, Azure, GCP, Meta, Oracle (own/build at hyperscale CapEx).</li>
           <li><a href="#layer-2">GPU cloud providers</a> — neoclouds that specialize in rented accelerator capacity.</li>
           <li><a href="#layer-3">Colocation &amp; datacenter REITs</a> — facility owners / landlords that often host hyperscaler tenants.</li>
           <li><a href="#layer-4">Buildout tracker</a> — CapEx and gigawatt targets from the shared buildouts seed (includes xAI Colossus).</li>
+          <li><a href="#layer-5">Offtake, PPAs &amp; ratepayer protection</a> — how hyperscalers contract power and who pays for grid upgrades.</li>
         </ol>
       </section>
 
@@ -303,10 +305,75 @@
         </ul>
       </section>
 
+
+      <section aria-labelledby="h-power" id="layer-5">
+        <h2 id="h-power">5. Offtake, PPAs &amp; ratepayer protection</h2>
+        <p class="lede">
+          Hyperscalers sit on the <strong>demand and contracting</strong> side of AI power —
+          they buy scarcity under long-term contracts and increasingly face rules that keep residential
+          customers from paying for data-center-driven grid upgrades.
+          Generation, turbines, nuclear fuel, and small modular reactors live under
+          <a href="../electrification/index.html">Electrification</a>;
+          this layer is how cloud operators and GPU clouds show up as offtakers.
+        </p>
+        <ul>
+          <li>
+            <strong>Long-term power purchase agreements.</strong>
+            A
+            <a href="https://en.wikipedia.org/wiki/Power_purchase_agreement">power purchase agreement (PPA)</a>
+            is a multi-year contract to buy electricity (and sometimes capacity) at agreed terms.
+            Hyperscalers sign PPAs with merchant generators such as Constellation, Vistra, and Talen —
+            locking in megawatts at market (or negotiated) prices when clean or firm power is scarce.
+            Buildout energy badges on this page (nuclear, solar, gas, fusion) are the same idea at a glance.
+          </li>
+          <li>
+            <strong>Beneficiary-pays tariffs.</strong>
+            More than 25 utilities across 19 U.S. states have filed data-center-specific or
+            “beneficiary-pays” tariffs: the large load that causes the upgrade should cover related network costs,
+            so ordinary residential ratepayers are not stuck with the bill.
+          </li>
+          <li>
+            <strong>Ratepayer Protection Pledge.</strong>
+            The White House Ratepayer Protection Pledge (March 2026) asks hyperscalers to commit to
+            <em>build, bring, or buy</em> generation and to cover related infrastructure —
+            aligning corporate CapEx with the power system they stress.
+          </li>
+          <li>
+            <strong>Regional contrast.</strong>
+            Outcomes differ by market. In some states (for example Nebraska, New Mexico, North Dakota),
+            bills can fall as new industrial load spreads fixed costs over more kilowatt-hours.
+            In the
+            <a href="https://en.wikipedia.org/wiki/PJM_Interconnection">PJM</a>
+            capacity market, clearing prices have jumped from about $29 to $325+ per megawatt-day —
+            a shock that hits all customers in that footprint, not only data-center owners.
+          </li>
+          <li>
+            <strong>Utility-scale partnerships.</strong>
+            Large utility deals (extract example: NextEra–Dominion, framed around a ~$66.8B package)
+            are tied to Data Center Alley load (~51&nbsp;GW class) and to generation optionality under regulation —
+            another path where hyperscaler demand shapes who builds what, and who pays.
+          </li>
+        </ul>
+        <div class="callout">
+          <div class="label">Boundary with Electrification</div>
+          <p style="margin:0">
+            This page names hyperscalers as offtakers and tariff counterparties.
+            Who manufactures turbines, who runs nuclear plants, uranium / HALEU fuel, and SMR developers
+            stay under
+            <a href="../electrification/index.html">Electrification</a>
+            (including nested
+            <a href="../electrification/smr/index.html">SMR</a>
+            and
+            <a href="../electrification/uranium/index.html">uranium</a>
+            where those pages exist). Cross-link; don’t duplicate their maps here.
+          </p>
+        </div>
+      </section>
+
       <section class="section related" id="related">
         <h2>Related on this hub</h2>
         <p>
-          Hyperscalers buy and host capacity;
+          Hyperscalers buy and host capacity and contract power (PPAs, offtake, ratepayer rules above);
           <a href="../hardware/index.html">computation hardware</a>
           fills the racks (optics under
           <a href="../hardware/photonics/index.html">hardware / photonics</a>);
