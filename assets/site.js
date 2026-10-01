@@ -1,6 +1,6 @@
 (function () {
   const path = window.location.pathname.replace(/\/+$/, "") || "/";
-  const SECTION_RE = /(electrification|hardware|software|semiconductors|hyperscalers|digests|smr|uranium|photonics)(\/|$)/;
+  const SECTION_RE = /(electrification|hardware|software|semiconductors|hyperscalers|analysis|digests|smr|uranium|photonics)(\/|$)/;
   document.querySelectorAll(".site-nav .nav-links a[data-section]").forEach((a) => {
     const section = a.getAttribute("data-section");
     let active = false;

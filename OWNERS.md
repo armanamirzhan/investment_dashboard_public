@@ -11,12 +11,14 @@ Bot / human ownership rules for `investment_dashboard_public`. Do not commit int
 | `smr/`, `uranium/`, `photonics/` (root stubs) | **Website builder** | Thin redirect pages so old bookmarks keep working |
 | `electrification/` | **AI Electrification** | Power Map UI and briefings |
 | `electrification/uranium/` | **AI Electrification** | Uranium / nuclear fuel cycle (merged from Uranium bot) |
-| `electrification/smr/` | **Performance tracker** | Oklo, X-Energy scorecards; no new tickers until Arman asks |
+| `electrification/smr/` | **Performance tracker** | Oklo, X-Energy scorecards (SMR nested under Electrification) |
 | `hardware/` | **AI Computation Hardware** | Parent section for DC computation hardware |
 | `hardware/photonics/` | **AI Computation Hardware** | AI optical interconnects (merged from Photonics AI) |
 | `software/` | **AI Software** | AI software landscape |
 | `semiconductors/` | **Semiconductor Fabrication** | Fab / WFE / packaging / materials |
 | `hyperscalers/` | **Hyperscalers** | Cloud operators, GPU clouds, colo REITs |
+| `analysis/` | **Investment analysis** | Portfolio briefings (electrification focus, gold/rainbow wiring notes) |
+| `analysis/companies/` | **Performance tracker** | One-screen company scorecards |
 | `digests/` | **AI Infra Daily Digest** | Digest index + dated brief HTML |
 
 ## Rules
