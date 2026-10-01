@@ -217,25 +217,38 @@
 
   function applyStageFrames() {
     document.querySelectorAll(".stage-hotspot[data-stage]").forEach(function (g) {
-      g.classList.remove("stage-scarce", "stage-watch");
+      g.classList.remove("scarcity-now", "scarcity-soon", "stage-scarce", "stage-watch");
       var id = g.getAttribute("data-stage");
       var stage = stagesById[id];
       if (!stage || !stage.scarcity) return;
-      if (stage.scarcity === "now") g.classList.add("stage-scarce");
-      else if (stage.scarcity === "watch") g.classList.add("stage-watch");
+      if (stage.scarcity === "now") g.classList.add("scarcity-now");
+      else if (stage.scarcity === "soon" || stage.scarcity === "watch") g.classList.add("scarcity-soon");
     });
+  }
+
+  function companyMark(c) {
+    if (!c) return null;
+    if (c.not_priced_in) return "not-priced-in";
+    if (c.rating_mark === "strong" || c.mark === "rated") return "rating-strong";
+    if (c.mark === "rainbow") return "not-priced-in";
+    return null;
+  }
+
+  function companyFidelity(c) {
+    if (!c) return null;
+    return c.fidelity_symbol || c.fidelity || null;
   }
 
   function indexCompany(c) {
     if (!c) return;
     var keys = [];
-    if (c.fidelity) keys.push(String(c.fidelity).toUpperCase());
+    var fid = companyFidelity(c);
+    if (fid) keys.push(String(fid).toUpperCase());
     if (c.ticker) {
       String(c.ticker).split(/[\/·|,]/).forEach(function (part) {
         var p = part.replace(/NYSE:|NASDAQ:|LSE:|TSE:|KRX:|via/gi, "").trim();
         if (!p) return;
         keys.push(p.toUpperCase());
-        // bare symbol without exchange suffix
         var bare = p.split(".")[0].trim();
         if (bare) keys.push(bare.toUpperCase());
       });
@@ -243,9 +256,10 @@
     if (c.name) keys.push("NAME:" + c.name.toUpperCase());
     keys.forEach(function (k) {
       if (!k) return;
-      // Prefer rainbow/rated entries when merging duplicates
       var prev = companyIndex[k];
-      if (!prev || (c.mark && !prev.mark) || (c.mark === "rainbow")) {
+      var mark = companyMark(c);
+      var prevMark = companyMark(prev);
+      if (!prev || (mark && !prevMark) || mark === "not-priced-in") {
         companyIndex[k] = c;
       }
     });
@@ -272,26 +286,23 @@
   }
 
   function tickerClass(mark) {
-    if (mark === "rated") return "ticker ticker-rated";
-    if (mark === "rainbow") return "ticker ticker-rainbow";
-    return "ticker";
+    if (mark === "rating-strong" || mark === "rated") return "co-ticker rating-strong";
+    if (mark === "not-priced-in" || mark === "rainbow") return "co-ticker not-priced-in";
+    return "co-ticker";
   }
 
   function coTickerClass(mark) {
-    if (mark === "rated") return "co-ticker ticker-rated";
-    if (mark === "rainbow") return "co-ticker ticker-rainbow";
-    return "co-ticker";
+    return tickerClass(mark);
   }
 
   function renderTickerAnchor(displayTicker, fidelity, mark, extraClass) {
     var cls = extraClass || tickerClass(mark);
-    if (cls.indexOf("ticker-rated") === -1 && cls.indexOf("ticker-rainbow") === -1) {
-      if (mark === "rated") cls += " ticker-rated";
-      else if (mark === "rainbow") cls += " ticker-rainbow";
+    if (cls.indexOf("rating-strong") === -1 && cls.indexOf("not-priced-in") === -1) {
+      if (mark === "rating-strong" || mark === "rated") cls += " rating-strong";
+      else if (mark === "not-priced-in" || mark === "rainbow") cls += " not-priced-in";
     }
     var sym = fidelity || null;
     if (!sym && displayTicker) {
-      // best-effort: last alphanumeric token
       var m = String(displayTicker).match(/[A-Z]{1,5}(?![A-Z])/i);
       if (m) sym = m[0].toUpperCase();
     }
@@ -303,17 +314,24 @@
     return '<span class="' + cls + '">' + esc(displayTicker || "") + "</span>";
   }
 
-  function rainbowDetailHtml(rainbow) {
-    if (!rainbow) return "";
-    return '<div class="rainbow-detail" hidden>' +
-      "<dl>" +
-      "<dt>When demand is expected</dt><dd>" + esc(rainbow.when || "") + "</dd>" +
-      "<dt>For what</dt><dd>" + esc(rainbow.forWhat || "") + "</dd>" +
-      "<dt>Why critical</dt><dd>" + esc(rainbow.whyCritical || "") + "</dd>" +
-      "<dt>Why demand lands here</dt><dd>" + esc(rainbow.whyThere || "") + "</dd>" +
-      "</dl>" +
-      '<p class="dim" style="margin:0.4rem 0 0;font-size:0.75rem">Research taxonomy mark — not investment advice.</p>' +
-      "</div>";
+  function npiDetailHtml(c) {
+    if (!c) return "";
+    if (c.demand_when || c.demand_for || c.why_critical || c.why_there) {
+      return '<div class="npi-detail" hidden>' +
+        "<dl>" +
+        "<dt>When demand is expected</dt><dd>" + esc(c.demand_when || "") + "</dd>" +
+        "<dt>For what</dt><dd>" + esc(c.demand_for || "") + "</dd>" +
+        "<dt>Why critical</dt><dd>" + esc(c.why_critical || "") + "</dd>" +
+        "<dt>Why demand lands here</dt><dd>" + esc(c.why_there || "") + "</dd>" +
+        "</dl>" +
+        '<p class="dim" style="margin:0.4rem 0 0;font-size:0.75rem">Research taxonomy mark — not investment advice.</p>' +
+        "</div>";
+    }
+    if (c.demand_detail) {
+      return '<details class="co-demand"><summary>Why demand / timing</summary><p>' +
+        esc(c.demand_detail) + "</p></details>";
+    }
+    return "";
   }
 
   function renderCompanies(companies) {
@@ -326,42 +344,43 @@
     companiesWrap.hidden = false;
     companies.forEach(function (c, idx) {
       var li = document.createElement("li");
-      var mark = c.mark || null;
+      var mark = companyMark(c);
+      if (mark === "not-priced-in") li.className = "co-not-priced-in";
       var nameHtml;
-      if (mark === "rainbow" && c.rainbow) {
-        nameHtml = '<button type="button" class="co-name-rainbow" data-rainbow-idx="' + idx +
+      if (mark === "not-priced-in" && (c.demand_detail || c.demand_when || c.why_critical)) {
+        nameHtml = '<button type="button" class="co-name-npi co-name-rainbow" data-rainbow-idx="' + idx +
           '" aria-expanded="false">' + esc(c.name) + "</button>";
       } else {
         nameHtml = "<strong>" + esc(c.name) + "</strong>";
       }
       var html = nameHtml;
       if (c.ticker) {
-        html += " " + renderTickerAnchor(c.ticker, c.fidelity, mark, coTickerClass(mark));
+        html += " " + renderTickerAnchor(c.ticker, companyFidelity(c), mark, coTickerClass(mark));
       }
       if (c.note) html += '<span class="co-note">' + esc(c.note) + "</span>";
-      if (mark === "rainbow" && c.rainbow) html += rainbowDetailHtml(c.rainbow);
+      if (mark === "not-priced-in") html += npiDetailHtml(c);
       li.innerHTML = html;
       companyList.appendChild(li);
     });
   }
 
   function closeRainbowDetails(except) {
-    companyList.querySelectorAll(".rainbow-detail").forEach(function (d) {
+    companyList.querySelectorAll(".npi-detail, .rainbow-detail").forEach(function (d) {
       if (except && d === except) return;
       d.hidden = true;
       d.classList.remove("is-open");
     });
-    companyList.querySelectorAll(".co-name-rainbow").forEach(function (b) {
+    companyList.querySelectorAll(".co-name-npi").forEach(function (b) {
       b.setAttribute("aria-expanded", "false");
     });
   }
 
   companyList.addEventListener("click", function (e) {
-    var btn = e.target.closest && e.target.closest(".co-name-rainbow");
+    var btn = e.target.closest && e.target.closest(".co-name-npi");
     if (!btn) return;
     e.preventDefault();
     e.stopPropagation();
-    var detail = btn.parentElement && btn.parentElement.querySelector(".rainbow-detail");
+    var detail = btn.parentElement && btn.parentElement.querySelector(".npi-detail, .rainbow-detail");
     if (!detail) return;
     var opening = detail.hidden;
     closeRainbowDetails(opening ? detail : null);
@@ -413,13 +432,13 @@
       var metaByName = nameText ? lookupCompanyMeta(null, nameText) : null;
       var meta = metaByTicker;
       if (!meta) meta = metaByName;
-      else if (metaByName && metaByName.mark && !meta.mark) meta = metaByName;
-      else if (metaByName && metaByName.mark === "rainbow") meta = metaByName;
-      else if (metaByName && metaByName.fidelity && !meta.fidelity) {
-        meta = Object.assign({}, meta, { fidelity: metaByName.fidelity });
+      else if (metaByName && companyMark(metaByName) && !companyMark(meta)) meta = metaByName;
+      else if (metaByName && companyMark(metaByName) === "not-priced-in") meta = metaByName;
+      else if (metaByName && companyFidelity(metaByName) && !companyFidelity(meta)) {
+        meta = Object.assign({}, meta, { fidelity_symbol: companyFidelity(metaByName) });
       }
-      var mark = meta && meta.mark;
-      var fid = (meta && meta.fidelity) || null;
+      var mark = companyMark(meta);
+      var fid = companyFidelity(meta);
       var cls = tickerClass(mark);
       var url = fidelityUrl(fid);
       if (!url) {
@@ -474,24 +493,21 @@
       }
     });
 
-    // Rainbow expanders for company names in hop list / tables when mark is rainbow
+    // not-priced-in company-name expanders on hop lists / tables
     document.querySelectorAll(".briefing .hop-list li, .briefing table tbody tr, .briefing p").forEach(function (block) {
       if (block.getAttribute("data-rainbow-wired") === "1") return;
-      var html = block.innerHTML;
-      // Find rainbow companies by name present in this block
       Object.keys(companyIndex).forEach(function (k) {
         if (k.indexOf("NAME:") !== 0) return;
         var c = companyIndex[k];
-        if (!c || c.mark !== "rainbow" || !c.rainbow || !c.name) return;
+        if (!c || companyMark(c) !== "not-priced-in" || !c.name) return;
+        if (!(c.demand_detail || c.demand_when || c.why_critical)) return;
         var name = c.name;
-        // Skip if button already present
-        if (block.querySelector && block.querySelector('.co-name-rainbow[data-co="' + CSS.escape(name) + '"]')) return;
-        // Replace first <strong>Name</strong> or bare Name once
+        if (block.querySelector && block.querySelector('.co-name-npi[data-co="' + CSS.escape(name) + '"]')) return;
         var strongRe = new RegExp("<strong>(\\s*)" + name.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&") + "(\\s*)</strong>", "i");
         if (strongRe.test(block.innerHTML)) {
           block.innerHTML = block.innerHTML.replace(strongRe,
-            '<button type="button" class="co-name-rainbow" data-co="' + esc(name) + '" aria-expanded="false">$1' + esc(name) + "$2</button>" +
-            rainbowDetailHtml(c.rainbow)
+            '<button type="button" class="co-name-npi" data-co="' + esc(name) + '" aria-expanded="false">$1' + esc(name) + "$2</button>" +
+            npiDetailHtml(c)
           );
           block.setAttribute("data-rainbow-wired", "1");
         }
@@ -499,29 +515,36 @@
     });
   }
 
-  // Delegate rainbow toggles on the whole briefing (page + panel)
-  document.addEventListener("click", function (e) {
-    var btn = e.target.closest && e.target.closest(".briefing .co-name-rainbow");
-    if (!btn) return;
-    // Panel list has its own handler; allow both — if inside companyList, that handler already ran with stopPropagation
-    if (companyList.contains(btn)) return;
-    e.preventDefault();
-    var detail = btn.parentElement && btn.parentElement.querySelector(".rainbow-detail");
-    // If detail is sibling after button inside a paragraph, find next .rainbow-detail
+  function npiDetailFromBtn(btn) {
+    var detail = btn.parentElement && btn.parentElement.querySelector(".npi-detail, .rainbow-detail");
     if (!detail) {
       var n = btn.nextElementSibling;
-      while (n && !n.classList.contains("rainbow-detail")) n = n.nextElementSibling;
+      while (n && !(n.classList.contains("npi-detail") || n.classList.contains("rainbow-detail") || n.classList.contains("co-demand"))) {
+        n = n.nextElementSibling;
+      }
       detail = n;
     }
-    if (!detail) {
-      // insert after button if missing (table cell case)
+    return detail;
+  }
+
+  // Delegate not-priced-in toggles on the whole briefing (page + panel)
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest && e.target.closest(".briefing .co-name-npi");
+    if (!btn) return;
+    if (companyList.contains(btn)) return;
+    e.preventDefault();
+    var detail = npiDetailFromBtn(btn);
+    if (!detail) return;
+    if (detail.tagName === "DETAILS") {
+      detail.open = !detail.open;
+      btn.setAttribute("aria-expanded", detail.open ? "true" : "false");
       return;
     }
     var opening = detail.hidden || !detail.classList.contains("is-open");
-    document.querySelectorAll(".briefing .rainbow-detail.is-open").forEach(function (d) {
+    document.querySelectorAll(".briefing .npi-detail.is-open, .briefing .rainbow-detail.is-open").forEach(function (d) {
       if (d !== detail) { d.hidden = true; d.classList.remove("is-open"); }
     });
-    document.querySelectorAll(".briefing .co-name-rainbow[aria-expanded='true']").forEach(function (b) {
+    document.querySelectorAll(".briefing .co-name-npi[aria-expanded='true']").forEach(function (b) {
       if (b !== btn) b.setAttribute("aria-expanded", "false");
     });
     if (opening) {
@@ -558,8 +581,8 @@
     }
     titleEl.textContent = stage.title || stage.id;
     var scarcityNote = "";
-    if (stage.scarcity === "now") scarcityNote = " [Scarcity: extreme demand RIGHT NOW — red frame]";
-    else if (stage.scarcity === "watch") scarcityNote = " [Watch: near-term bottleneck risk — yellow frame]";
+    if (stage.scarcity === "now") scarcityNote = " [scarcity-now: extreme demand RIGHT NOW — red frame]";
+    else if (stage.scarcity === "soon" || stage.scarcity === "watch") scarcityNote = " [scarcity-soon: near-term bottleneck risk — yellow frame]";
     summaryEl.textContent = (stage.summary || "") + scarcityNote;
     renderCompanies(stage.companies || []);
     companiesWrap.open = true; // open so marks are visible

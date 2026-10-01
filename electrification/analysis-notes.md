@@ -21,6 +21,19 @@
 
 **Honest speed read:** Material sidecar volume from ~2027; facility-native 800 VDC halls scale ~2028–2030. Not an overnight forklift upgrade of the AC fleet.
 
+## Class lock (hub-wide — do not invent alternates)
+
+| Role | Exact class / field |
+|------|---------------------|
+| Scarce now (red) | hotspot `scarcity-now`; JSON `scarcity: "now"` |
+| Near-term (yellow) | hotspot `scarcity-soon`; JSON `scarcity: "soon"` |
+| Default ticker | `co-ticker` (grey) |
+| Strong rating | `rating-strong`; JSON `rating_mark: "strong"` |
+| Not priced in | `not-priced-in`; JSON `not_priced_in: true` + `demand_detail` / demand_* fields |
+| Fidelity | `fidelity_symbol` → `https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=TICKER` |
+
+Shared with Hardware and Semiconductor Fabrication.
+
 ## Scarcity frames (stages)
 
 ### Red — extreme demand / scarcity **right now**
@@ -31,7 +44,7 @@
 | `facility-xfmr` | Same product class at campus fence; headline “transformer shortage” |
 | `mv-switchgear` | Engineered MV switchgear / custom distribution; elevated lead times with transformers as schedule gate |
 
-### Yellow — near-term bottleneck watch (~2027–2029)
+### Yellow — near-term bottleneck (`scarcity-soon`) (~2027–2029)
 
 | Stage id | Rationale |
 |----------|-----------|
@@ -48,7 +61,7 @@
 
 ## Ticker marks (sparse)
 
-### Dark green — extremely good franchise / setup (few)
+### Dark green (`rating-strong`) — extremely good franchise / setup (few)
 
 | Name | Ticker | Why (one line) |
 |------|--------|----------------|
@@ -58,7 +71,7 @@
 
 **Explicitly not green (rich or narrative already loud):** VRT, GEV, POWL, BE, NVDA (load context only).
 
-### Rainbow — extreme future demand, narrative **not clearly priced**
+### Rainbow (`not-priced-in`) — extreme future demand, narrative **not clearly priced**
 
 | Name | Ticker / Fidelity | When / for what (summary) |
 |------|-------------------|---------------------------|
