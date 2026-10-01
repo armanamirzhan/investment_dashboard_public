@@ -321,12 +321,12 @@
   function stagesJsonUrl() {
     var script = document.querySelector('script[src$="schematic.js"], script[src*="schematic.js"]');
     if (script && script.src) {
-      try { return new URL("stages.json?v=investor-hw1", script.src).href; } catch (e) {}
+      try { return new URL("stages.json?v=investor-hw2", script.src).href; } catch (e) {}
     }
     try {
-      return new URL("stages.json?v=investor-hw1", window.location.href).href;
+      return new URL("stages.json?v=investor-hw2", window.location.href).href;
     } catch (e) {
-      return "stages.json?v=investor-hw1";
+      return "stages.json?v=investor-hw2";
     }
   }
 
