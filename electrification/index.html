@@ -80,9 +80,9 @@
 <h2 id="h-paths">Navigation: onsite vs offsite electrification paths</h2>
 <p>Use this overview to orient; annotated hop-loss diagrams follow in later sections.</p>
 <figure class="diagram" id="diagram-overview">
-<svg aria-labelledby="ov-title ov-desc" role="img" viewBox="0 0 1000 520" xmlns="http://www.w3.org/2000/svg">
+<svg aria-labelledby="ov-title ov-desc" role="img" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
 <title id="ov-title">Onsite versus offsite electrification overview</title>
-<desc id="ov-desc">Offsite splits HVAC via AC/AC transformer and HVDC via AC/DC converter into a shared site SST; onsite SOFC and MCFC/PAFC share a row into DC-DC converters, while turbine/genset uses the same shared high-frequency site SST; all feed about 800 V DC to silicon.</desc>
+<desc id="ov-desc">Offsite splits HVAC via AC/AC transformer and HVDC via AC/DC converter into a shared site SST. Onsite places turbine/genset at the top of the onsite path, adjacent to Site SST, with a short arrow into that shared node; SOFC and MCFC/PAFC sit below via DC-DC converters. All feed about 800 V DC to silicon.</desc>
 <defs>
 <marker id="arrow" markerHeight="7" markerWidth="7" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
 <path d="M0,0 L10,5 L0,10 z" fill="#5b9fd4"></path>
@@ -100,84 +100,87 @@
 .lnk-g{stroke:#7ec8a3;stroke-width:1.6;fill:none;marker-end:url(#arrow)}
 </style>
 </defs>
-<text class="title" x="20" y="24">OFFSITE PATH — separate HVAC vs HVDC</text>
-<rect class="box-a" height="52" rx="6" width="118" x="20" y="40"></rect>
-<text class="lbl" text-anchor="middle" x="79" y="62">CCGT / utility</text>
-<text class="sub" text-anchor="middle" x="79" y="78">~60–64% LHV</text>
-<path class="lnk" d="M138,66 H160"></path>
-<path class="lnk" d="M160,66 V50 H178"></path>
-<path class="lnk" d="M160,66 V110 H178"></path>
-<text class="sub" x="178" y="38">HVAC</text>
-<rect class="box-a" height="44" rx="6" width="118" x="178" y="42"></rect>
-<text class="lbl" text-anchor="middle" x="237" y="60">AC/AC XFMR</text>
-<text class="sub" text-anchor="middle" x="237" y="76">step-up</text>
-<path class="lnk" d="M296,64 H314"></path>
-<rect class="box-a" height="44" rx="6" width="120" x="316" y="42"></rect>
-<text class="lbl" text-anchor="middle" x="376" y="60">HVAC tx</text>
-<text class="sub" text-anchor="middle" x="376" y="76">to site</text>
-<text class="sub" x="178" y="102">HVDC</text>
-<rect class="box-a" height="44" rx="6" width="118" x="178" y="106"></rect>
-<text class="lbl" text-anchor="middle" x="237" y="124">AC/DC converter</text>
-<text class="sub" text-anchor="middle" x="237" y="140">utility end</text>
-<path class="lnk" d="M296,128 H314"></path>
-<rect class="box-a" height="44" rx="6" width="120" x="316" y="106"></rect>
-<text class="lbl" text-anchor="middle" x="376" y="124">HVDC tx</text>
-<text class="sub" text-anchor="middle" x="376" y="140">to site</text>
-<path class="lnk" d="M436,64 H470"></path>
-<path class="lnk" d="M436,128 H470"></path>
-<path class="lnk" d="M470,64 V128"></path>
-<path class="lnk" d="M470,96 H500"></path>
-<rect class="box-s" height="64" rx="6" width="130" x="502" y="64"></rect>
-<text class="lbl" text-anchor="middle" x="567" y="88">Site SST</text>
-<text class="sub" text-anchor="middle" x="567" y="104">shared HF node</text>
-<text class="sub" text-anchor="middle" x="567" y="118">→ ~800 V DC</text>
-<text class="title" style="fill:#7ec8a3" x="20" y="190">ONSITE PATH — fuel cells same row; turbine via shared SST</text>
-<rect class="box-b" height="48" rx="6" width="100" x="20" y="210"></rect>
-<text class="lbl" text-anchor="middle" x="70" y="230">SOFC</text>
-<text class="sub" text-anchor="middle" x="70" y="246">NG → DC</text>
-<path class="lnk-g" d="M120,234 H140"></path>
-<rect class="box-b" height="48" rx="6" width="118" x="142" y="210"></rect>
-<text class="lbl" text-anchor="middle" x="201" y="230">DC–DC conv</text>
-<text class="sub" text-anchor="middle" x="201" y="246">boost / XFMR</text>
-<rect class="box-b" height="48" rx="6" width="110" x="20" y="272"></rect>
-<text class="lbl" text-anchor="middle" x="75" y="292">MCFC / PAFC</text>
-<text class="sub" text-anchor="middle" x="75" y="308">CHP options</text>
-<path class="lnk-g" d="M130,296 H140"></path>
-<rect class="box-b" height="48" rx="6" width="118" x="142" y="272"></rect>
-<text class="lbl" text-anchor="middle" x="201" y="292">DC–DC conv</text>
-<text class="sub" text-anchor="middle" x="201" y="308">boost / XFMR</text>
-<rect class="box-b" height="48" rx="6" width="130" x="20" y="334"></rect>
-<text class="lbl" text-anchor="middle" x="85" y="354">Turbine / genset</text>
-<text class="sub" text-anchor="middle" x="85" y="370">AC · fast start</text>
-<path class="lnk-g" d="M150,358 H280"></path>
-<path class="lnk-g" d="M280,358 V128"></path>
-<path class="lnk-g" d="M280,128 H502"></path>
-<text class="sub" x="286" y="250">via shared</text>
-<text class="sub" x="286" y="264">Site SST (HF)</text>
-<rect class="box-b" height="48" rx="6" width="100" x="300" y="334"></rect>
-<text class="lbl" text-anchor="middle" x="350" y="354">Hybrid</text>
-<text class="sub" text-anchor="middle" x="350" y="370">blend both</text>
-<path class="lnk" d="M632,96 H668"></path>
-<path class="lnk-g" d="M260,234 H400"></path>
-<path class="lnk-g" d="M260,296 H400"></path>
-<path class="lnk-g" d="M400,234 V296"></path>
-<path class="lnk-g" d="M400,265 H668"></path>
-<path class="lnk-g" d="M668,96 V265"></path>
-<rect class="box-c" height="100" rx="6" width="150" x="670" y="130"></rect>
-<text class="lbl" text-anchor="middle" x="745" y="158">~800 V DC bus</text>
-<text class="sub" text-anchor="middle" x="745" y="176">busway / rack</text>
-<text class="sub" text-anchor="middle" x="745" y="194">800→12 V LLC</text>
-<text class="sub" text-anchor="middle" x="745" y="212">VRMs → GPU/CPU</text>
-<path class="lnk" d="M820,180 H848"></path>
-<rect class="box" height="70" rx="6" width="110" x="850" y="145"></rect>
-<text class="lbl" text-anchor="middle" x="905" y="175">Silicon</text>
-<text class="sub" text-anchor="middle" x="905" y="193">sub-1 V rails</text>
-<text class="sub" x="20" y="430">Shared Site SST: one high-frequency node for offsite HVAC/HVDC landing and onsite turbine/genset — not duplicated. Fuel cells use DC–DC (not that SST) into the same ~800 V bus.</text>
-<text class="sub" x="20" y="450">PEM + electrolyzed H₂ is shown separately (loss trap)—not a primary baseload path for AI halls.</text>
-<text class="sub" x="20" y="470">Hop efficiencies and cumulatives are annotated in diagrams (1)–(5) below.</text>
-<text class="sub" x="20" y="490">Plain SVG labels; abbreviations expanded in surrounding prose / figcaptions.</text>
+<!-- OFFSITE -->
+<text class="title" x="20" y="22">OFFSITE PATH — separate HVAC vs HVDC</text>
+<rect class="box-a" height="52" rx="6" width="120" x="20" y="36"></rect>
+<text class="lbl" text-anchor="middle" x="80" y="58">CCGT / utility</text>
+<text class="sub" text-anchor="middle" x="80" y="74">~60–64% LHV</text>
+<path class="lnk" d="M140,62 H158"></path>
+<path class="lnk" d="M158,62 V50 H170"></path>
+<path class="lnk" d="M158,62 V120 H170"></path>
+<text class="sub" x="170" y="32">HVAC</text>
+<rect class="box-a" height="48" rx="6" width="122" x="170" y="34"></rect>
+<text class="lbl" text-anchor="middle" x="231" y="54">AC/AC XFMR</text>
+<text class="sub" text-anchor="middle" x="231" y="70">step-up</text>
+<path class="lnk" d="M292,58 H308"></path>
+<rect class="box-a" height="48" rx="6" width="122" x="310" y="34"></rect>
+<text class="lbl" text-anchor="middle" x="371" y="54">HVAC tx</text>
+<text class="sub" text-anchor="middle" x="371" y="70">to site</text>
+<text class="sub" x="170" y="94">HVDC</text>
+<rect class="box-a" height="48" rx="6" width="122" x="170" y="96"></rect>
+<text class="lbl" text-anchor="middle" x="231" y="116">AC/DC converter</text>
+<text class="sub" text-anchor="middle" x="231" y="132">utility end</text>
+<path class="lnk" d="M292,120 H308"></path>
+<rect class="box-a" height="48" rx="6" width="122" x="310" y="96"></rect>
+<text class="lbl" text-anchor="middle" x="371" y="116">HVDC tx</text>
+<text class="sub" text-anchor="middle" x="371" y="132">to site</text>
+<path class="lnk" d="M432,58 H462"></path>
+<path class="lnk" d="M432,120 H462"></path>
+<path class="lnk" d="M462,58 V120"></path>
+<path class="lnk" d="M462,89 H488"></path>
+<rect class="box-s" height="72" rx="6" width="145" x="490" y="52"></rect>
+<text class="lbl" text-anchor="middle" x="562" y="78">Site SST</text>
+<text class="sub" text-anchor="middle" x="562" y="96">shared HF node</text>
+<text class="sub" text-anchor="middle" x="562" y="112">→ ~800 V DC</text>
+<!-- ONSITE: turbine on top (closest to offsite/SST), short clean arrow -->
+<text class="title" style="fill:#7ec8a3" x="20" y="168">ONSITE PATH</text>
+<text class="sub" x="125" y="168">turbine (top) via shared SST · fuel cells via DC–DC</text>
+<!-- Turbine alone on top row, just below-left of Site SST -->
+<rect class="box-b" height="48" rx="6" width="150" x="330" y="178"></rect>
+<text class="lbl" text-anchor="middle" x="405" y="198">Turbine / genset</text>
+<text class="sub" text-anchor="middle" x="405" y="214">AC · fast start</text>
+<path class="lnk-g" d="M480,202 H562 V124"></path>
+<text class="sub" x="488" y="194">via shared SST</text>
+<!-- Fuel cells below, each via DC–DC; Hybrid annotation on same band -->
+<rect class="box-b" height="48" rx="6" width="120" x="20" y="248"></rect>
+<text class="lbl" text-anchor="middle" x="80" y="268">SOFC</text>
+<text class="sub" text-anchor="middle" x="80" y="284">NG → DC</text>
+<path class="lnk-g" d="M140,272 H156"></path>
+<rect class="box-b" height="48" rx="6" width="120" x="158" y="248"></rect>
+<text class="lbl" text-anchor="middle" x="218" y="268">DC–DC conv</text>
+<text class="sub" text-anchor="middle" x="218" y="284">boost / XFMR</text>
+<rect class="box-b" height="48" rx="6" width="100" x="420" y="248"></rect>
+<text class="lbl" text-anchor="middle" x="470" y="268">Hybrid</text>
+<text class="sub" text-anchor="middle" x="470" y="284">blend both</text>
+<rect class="box-b" height="48" rx="6" width="120" x="20" y="310"></rect>
+<text class="lbl" text-anchor="middle" x="80" y="330">MCFC / PAFC</text>
+<text class="sub" text-anchor="middle" x="80" y="346">CHP options</text>
+<path class="lnk-g" d="M140,334 H156"></path>
+<rect class="box-b" height="48" rx="6" width="120" x="158" y="310"></rect>
+<text class="lbl" text-anchor="middle" x="218" y="330">DC–DC conv</text>
+<text class="sub" text-anchor="middle" x="218" y="346">boost / XFMR</text>
+<!-- Converge to 800 V bus -->
+<path class="lnk" d="M635,88 H678"></path>
+<path class="lnk-g" d="M278,272 H300"></path>
+<path class="lnk-g" d="M278,334 H300"></path>
+<path class="lnk-g" d="M300,272 V334"></path>
+<path class="lnk-g" d="M300,303 H678"></path>
+<path class="lnk-g" d="M678,88 V303"></path>
+<rect class="box-c" height="96" rx="6" width="155" x="680" y="100"></rect>
+<text class="lbl" text-anchor="middle" x="757" y="128">~800 V DC bus</text>
+<text class="sub" text-anchor="middle" x="757" y="146">busway / rack</text>
+<text class="sub" text-anchor="middle" x="757" y="164">800→12 V LLC</text>
+<text class="sub" text-anchor="middle" x="757" y="182">VRMs → GPU/CPU</text>
+<path class="lnk" d="M835,148 H858"></path>
+<rect class="box" height="68" rx="6" width="120" x="860" y="114"></rect>
+<text class="lbl" text-anchor="middle" x="920" y="144">Silicon</text>
+<text class="sub" text-anchor="middle" x="920" y="162">sub-1 V rails</text>
+<text class="sub" x="20" y="380">Shared Site SST: one high-frequency node for offsite HVAC/HVDC landing and onsite turbine/genset — not duplicated. Fuel cells use DC–DC (not that SST) into the same ~800 V bus.</text>
+<text class="sub" x="20" y="400">PEM + electrolyzed H₂ is shown separately (loss trap)—not a primary baseload path for AI halls.</text>
+<text class="sub" x="20" y="420">Hop efficiencies and cumulatives are annotated in diagrams (1)–(5) below.</text>
+<text class="sub" x="20" y="440">Plain SVG labels; abbreviations expanded in surrounding prose / figcaptions.</text>
 </svg>
-<figcaption>Figure 0 — Path overview. Offsite: utility → separate <abbr data-expand="High-Voltage Alternating Current" title="High-Voltage Alternating Current">HVAC</abbr> (<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>/<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr> transformer) vs <abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr> (<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>/<abbr data-expand="Direct Current" title="Direct Current">DC</abbr> converter) paths, both through one shared site <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>. Onsite: <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> and <abbr data-expand="Molten Carbonate Fuel Cell" title="Molten Carbonate Fuel Cell">MCFC</abbr>/<abbr data-expand="Phosphoric Acid Fuel Cell" title="Phosphoric Acid Fuel Cell">PAFC</abbr> on the same row via <abbr data-expand="Direct Current" title="Direct Current">DC</abbr>–<abbr data-expand="Direct Current" title="Direct Current">DC</abbr> converters; turbine/genset via the same shared high-frequency site <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>. All converge on ~800 V <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> feeding <abbr data-expand="Graphics Processing Unit" title="Graphics Processing Unit">GPU</abbr>/<abbr data-expand="Central Processing Unit" title="Central Processing Unit">CPU</abbr> <abbr data-expand="Voltage Regulator Modules" title="Voltage Regulator Modules">VRMs</abbr>.</figcaption>
+<figcaption>Figure 0 — Path overview. Offsite: utility → separate <abbr data-expand="High-Voltage Alternating Current" title="High-Voltage Alternating Current">HVAC</abbr> (<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>/<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr> transformer) vs <abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr> (<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>/<abbr data-expand="Direct Current" title="Direct Current">DC</abbr> converter) paths, both through one shared site <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>. Onsite: turbine/genset at the top of the onsite path (short arrow into that same shared high-frequency site <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>); <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> and <abbr data-expand="Molten Carbonate Fuel Cell" title="Molten Carbonate Fuel Cell">MCFC</abbr>/<abbr data-expand="Phosphoric Acid Fuel Cell" title="Phosphoric Acid Fuel Cell">PAFC</abbr> below via <abbr data-expand="Direct Current" title="Direct Current">DC</abbr>–<abbr data-expand="Direct Current" title="Direct Current">DC</abbr> converters. All converge on ~800 V <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> feeding <abbr data-expand="Graphics Processing Unit" title="Graphics Processing Unit">GPU</abbr>/<abbr data-expand="Central Processing Unit" title="Central Processing Unit">CPU</abbr> <abbr data-expand="Voltage Regulator Modules" title="Voltage Regulator Modules">VRMs</abbr>.</figcaption>
 </figure>
 </section>
 <section aria-labelledby="h-offsite" id="offsite">
