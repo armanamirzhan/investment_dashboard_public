@@ -1,21 +1,21 @@
 {
-  "version": "2026-10",
-  "disclaimer": "Informational October 2026 baseline. Not investment advice.",
+  "version": "2026-10-hardware-power-marks",
+  "disclaimer": "Informational October 2026 baseline. Investor marks are a study aid — not investment advice.",
   "stages": [
     {
       "id": "hall",
       "title": "AI compute hall",
-      "summary": "The room inside the data center where racks of AI servers sit. Facility power and outdoor cooling enter at the edges; this page focuses on the gear inside the hall \u2014 chips, boxes, fabrics, and liquid cooling \u2014 not the grid transformers and chillers covered under Electrification.",
+      "summary": "The room inside the data center where racks of AI servers sit. Facility power and outdoor cooling enter at the edges; this page focuses on the gear inside the hall — chips, boxes, fabrics, and liquid cooling — not the grid transformers and chillers covered under Electrification.",
       "companies": [
         {
           "name": "Equinix / Digital Realty (colo landlords)",
           "ticker": "",
-          "note": "Own many halls that host hyperscaler and neocloud racks \u2014 see Hyperscalers"
+          "note": "Own many halls that host hyperscaler and neocloud racks — see Hyperscalers"
         },
         {
-          "name": "Hyperscalers (AWS, Azure, GCP, Meta, \u2026)",
+          "name": "Hyperscalers (AWS, Azure, GCP, Meta, …)",
           "ticker": "",
-          "note": "Design and operate dedicated AI halls \u2014 see Hyperscalers section"
+          "note": "Design and operate dedicated AI halls — see Hyperscalers section"
         }
       ]
     },
@@ -49,7 +49,7 @@
     {
       "id": "server",
       "title": "Server / blade chassis",
-      "summary": "The metal box (1U\u20134U or a tray in a rack-scale system) that holds the motherboard, accelerators, memory, network cards, local storage, and power supplies. OEMs brand and support them; ODMs often design and assemble the boards.",
+      "summary": "The metal box (1U–4U or a tray in a rack-scale system) that holds the motherboard, accelerators, memory, network cards, local storage, and power supplies. OEMs brand and support them; ODMs often design and assemble the boards.",
       "companies": [
         {
           "name": "Super Micro Computer",
@@ -96,7 +96,7 @@
         {
           "name": "AMD",
           "ticker": "AMD",
-          "note": "Instinct GPUs \u2014 credible #2 merchant line"
+          "note": "Instinct GPUs — credible #2 merchant line"
         },
         {
           "name": "Intel",
@@ -113,7 +113,7 @@
     {
       "id": "asic",
       "title": "Custom AI ASICs",
-      "summary": "Application-specific integrated circuits designed with or for one hyperscaler (TPUs, Trainium, Maia, MTIA, and peers). They trade generality for efficiency at that buyer\u2019s workloads. Broadcom and Marvell often design the silicon; foundries and packaging are under Semiconductors.",
+      "summary": "Application-specific integrated circuits designed with or for one hyperscaler (TPUs, Trainium, Maia, MTIA, and peers). They trade generality for efficiency at that buyer’s workloads. Broadcom and Marvell often design the silicon; foundries and packaging are under Semiconductors.",
       "companies": [
         {
           "name": "Broadcom",
@@ -198,7 +198,7 @@
     },
     {
       "id": "hbm",
-      "title": "HBM \u2014 high-bandwidth memory",
+      "title": "HBM — high-bandwidth memory",
       "summary": "Stacked DRAM dies sitting next to the GPU or ASIC so the accelerator is not starved for data. Through roughly 2027, HBM supply and yields are a primary throttle on how many leading accelerators can ship (see Scarcity on this page).",
       "companies": [
         {
@@ -221,7 +221,7 @@
     {
       "id": "dram",
       "title": "DRAM / system RAM",
-      "summary": "Ordinary server memory on DIMMs that holds the CPU\u2019s working set, OS, and framework state. Separate from HBM on the accelerator package, but still a large BOM line as node counts grow.",
+      "summary": "Ordinary server memory on DIMMs that holds the CPU’s working set, OS, and framework state. Separate from HBM on the accelerator package, but still a large BOM line as node counts grow.",
       "companies": [
         {
           "name": "Samsung Electronics",
@@ -301,62 +301,129 @@
     },
     {
       "id": "psu",
-      "title": "Server power supplies (PSUs)",
-      "summary": "AC\u2013DC or DC\u2013DC shelves that turn rack power into the voltages the motherboard and accelerators need before board-level VRMs take over. High-wattage redundant PSUs are standard in dense AI boxes.",
+      "title": "Server / shelf power supplies (PSUs)",
+      "summary": "In-rack AC–DC CRPS shelves and emerging DC–DC / 800 VDC in-row shelves that feed motherboard and accelerator rails before board VRMs take over. Today most AI racks still ship high-wattage redundant AC PSUs; as sidecar ±400/800 VDC (~H2 2026–2027) and native 800 V racks ramp (~2028–29+), classic AC shelves are designed around. Facility SST, MV transformers, and hall DC busway live under Electrification — do not double-count here. Educational orientation only — not investment advice.",
+      "scarcity": "soon",
       "companies": [
         {
           "name": "Delta Electronics",
           "ticker": "2308.TW",
-          "note": "Server and rack power modules"
+          "fidelity_symbol": "DELTY",
+          "note": "CRPS / rack PSUs today; 800 VDC in-row and related rack-adjacent conversion on the AC→DC path",
+          "not_priced_in": true,
+          "demand_when": "~H2 2026 commercialization → 2027–2029 as sidecar and facility 800 VDC ramps",
+          "demand_for": "High-density rack / in-row power shelves and 800 VDC-adjacent conversion inside AI halls (not facility SST systems — those stay on Electrification)",
+          "why_critical": "Few vendors already ship both volume server PSUs and production-scale 800 VDC rack-adjacent conversion",
+          "why_there": "TW-listed (2308.TW → DELTY); Western AI-power tapes often underweight non-US listings even when product is live",
+          "demand_detail": "When: ~H2 2026 commercialization → 2027–2029 as sidecar and facility 800 VDC ramps. For what: High-density rack / in-row power shelves and 800 VDC-adjacent conversion inside AI halls (facility SST systems stay on Electrification). Why critical: Few vendors already ship both volume server PSUs and production-scale 800 VDC rack-adjacent conversion. Why here: TW-listed; Western AI-power narratives often underweight non-US listings. Orientation only — not advice."
         },
         {
-          "name": "Lite-On / Bel Power / Artesyn-class suppliers",
-          "ticker": "",
-          "note": "Common OEM/ODM PSU sources"
+          "name": "Advanced Energy (Artesyn)",
+          "ticker": "AEIS",
+          "fidelity_symbol": "AEIS",
+          "note": "Server / industrial power supplies and high-efficiency conversion"
+        },
+        {
+          "name": "Flex (Flex Power Modules)",
+          "ticker": "FLEX",
+          "fidelity_symbol": "FLEX",
+          "note": "Power modules and PSU adjacency for cloud / AI racks (incl. 800 V / ±400 V module paths)"
+        },
+        {
+          "name": "Bel Fuse (Bel Power)",
+          "ticker": "BELFB",
+          "fidelity_symbol": "BELFB",
+          "note": "Front-end / board-mount power supplies common in OEM/ODM racks"
+        },
+        {
+          "name": "Lite-On Technology",
+          "ticker": "2301.TW",
+          "note": "Data-center / cloud server PSU modules (TW listing; Fidelity link omitted — no reliable US ADR)"
         },
         {
           "name": "Vertiv",
           "ticker": "VRT",
-          "note": "Broader rack power distribution (overlap with cooling)"
+          "fidelity_symbol": "VRT",
+          "note": "Rack power architectures and sidecar commercialization path — narrative already loud"
+        },
+        {
+          "name": "Facility DC bus / SST / XFMR → Electrification",
+          "ticker": "",
+          "note": "Cross-link: campus transformers, switchgear, site SST, and ~800 V hall busway — do not duplicate facility scarcity on this page"
         }
       ]
     },
     {
       "id": "vrm",
-      "title": "VRMs & board power stages",
-      "summary": "Voltage regulator modules and power-management ICs on the board that feed GPUs and CPUs at precisely controlled low voltages and high currents. Distinct from facility UPS and switchgear (Electrification).",
+      "title": "VRMs & board / tray power stages",
+      "summary": "Voltage regulator modules, intermediate DC–DC modules, and power-management ICs that take shelf or 48/54 V rails down to GPU/CPU core voltages at high current. Distinct from facility UPS, switchgear, and SST systems (Electrification) and from SiC/GaN device fab (Semiconductor Fabrication). Amp-density and thermal headroom already matter on leading AI boards; 48 V and 800→intermediate module volume thickens with sidecar ~2027+. Educational orientation only — not investment advice.",
+      "scarcity": "soon",
       "companies": [
-        {
-          "name": "Monolithic Power Systems",
-          "ticker": "MPWR",
-          "note": "VRMs widely used on AI GPU boards"
-        },
         {
           "name": "Vicor",
           "ticker": "VICR",
-          "note": "High-density power modules"
+          "fidelity_symbol": "VICR",
+          "note": "High-density 800 V / ±400 V → 48/54 V modular DC–DC inside AI racks",
+          "not_priced_in": true,
+          "demand_when": "As 800 VDC / ±400 V sidecar and native racks scale from ~2027",
+          "demand_for": "High-density modular DC–DC conversion from 800 V / ±400 V down to intermediate buses inside AI racks and trays",
+          "why_critical": "Facility-level 800 V only helps if rack modules efficiently step to intermediate buses without reclaiming the copper/thermal budget",
+          "why_there": "Smaller pure-play module vendor vs megacap systems OEMs; 800 V rack-module demand narrative still early relative to loud systems names",
+          "demand_detail": "When: As 800 VDC / ±400 V sidecar and native racks scale from ~2027. For what: High-density modular DC–DC from 800 V / ±400 V → 48/54 V inside AI racks. Why critical: Facility 800 V only helps if rack modules step efficiently to intermediate buses. Why here: Smaller pure-play vs megacap systems OEMs; narrative still early. Orientation only — not advice."
+        },
+        {
+          "name": "Monolithic Power Systems",
+          "ticker": "MPWR",
+          "fidelity_symbol": "MPWR",
+          "note": "Multiphase / point-of-load power ICs widely used on AI GPU boards"
         },
         {
           "name": "Renesas",
           "ticker": "6723.T",
-          "note": "Power-delivery modules for major GPU platforms"
+          "fidelity_symbol": "RNECY",
+          "note": "Power-delivery modules called out on major NVIDIA GPU platforms"
         },
         {
           "name": "Texas Instruments",
           "ticker": "TXN",
-          "note": "Power-management ICs"
+          "fidelity_symbol": "TXN",
+          "note": "Multiphase VR / power-management ICs"
         },
         {
           "name": "Infineon",
           "ticker": "IFX.DE",
-          "note": "Power stages / SiC devices"
+          "fidelity_symbol": "IFNNY",
+          "note": "Power stages on boards; SiC/GaN device depth → Semiconductor Fabrication"
+        },
+        {
+          "name": "Flex (Flex Power Modules)",
+          "ticker": "FLEX",
+          "fidelity_symbol": "FLEX",
+          "note": "800 VDC and Diablo ±400 V DC/DC modules for trays / racks"
+        },
+        {
+          "name": "Advanced Energy",
+          "ticker": "AEIS",
+          "fidelity_symbol": "AEIS",
+          "note": "High-efficiency conversion modules adjacent to board / tray power"
+        },
+        {
+          "name": "Murata Manufacturing",
+          "ticker": "6981.T",
+          "fidelity_symbol": "MRAAY",
+          "note": "Board-level power modules / magnetics common in dense converters"
+        },
+        {
+          "name": "SiC/GaN chips → Fabrication; SST systems → Electrification",
+          "ticker": "",
+          "note": "Cross-link only — do not duplicate SST systems or SiC/GaN fab scarcity here"
         }
       ]
     },
     {
       "id": "tor",
       "title": "Top-of-rack (ToR) switch",
-      "summary": "The first network hop for servers in a rack \u2014 usually Ethernet today, sometimes InfiniBand. Concentrates many server links into fewer uplinks toward leaf/spine or GPU fabrics.",
+      "summary": "The first network hop for servers in a rack — usually Ethernet today, sometimes InfiniBand. Concentrates many server links into fewer uplinks toward leaf/spine or GPU fabrics.",
       "companies": [
         {
           "name": "Arista Networks",
@@ -410,12 +477,12 @@
     {
       "id": "inrack-optics",
       "title": "In-rack / short-reach optics",
-      "summary": "Pluggable or onboard optical modules for short hops inside a rack or between adjacent chassis when copper cannot meet density or reach. Overlaps Photonics; products are often 100G\u20131.6T-class transceivers and emerging co-packaged optics.",
+      "summary": "Pluggable or onboard optical modules for short hops inside a rack or between adjacent chassis when copper cannot meet density or reach. Overlaps Photonics; products are often 100G–1.6T-class transceivers and emerging co-packaged optics.",
       "companies": [
         {
           "name": "Lumentum",
           "ticker": "LITE",
-          "note": "Lasers / optical engines \u2014 see Photonics scarcity"
+          "note": "Lasers / optical engines — see Photonics scarcity"
         },
         {
           "name": "Coherent",
@@ -437,7 +504,7 @@
     {
       "id": "fabric",
       "title": "Between-rack fabric (leaf / spine / GPU fabric)",
-      "summary": "The network that stitches many racks into one training or inference cluster \u2014 Ethernet leaf/spine, InfiniBand, or proprietary GPU fabrics (NVLink domains extended with switches). Product lines differ from pure ToR boxes even when the brand is the same.",
+      "summary": "The network that stitches many racks into one training or inference cluster — Ethernet leaf/spine, InfiniBand, or proprietary GPU fabrics (NVLink domains extended with switches). Product lines differ from pure ToR boxes even when the brand is the same.",
       "companies": [
         {
           "name": "Arista Networks",
@@ -469,7 +536,7 @@
     {
       "id": "row-optics",
       "title": "Between-rack / row optical interconnect",
-      "summary": "Longer optical links (fiber + transceivers + optical DSPs) that span rows or halls when copper runs out of reach or power budget. Expected to become a dominant pinch around 2027\u20132028 after packaging and HBM ease \u2014 deep map under Photonics.",
+      "summary": "Longer optical links (fiber + transceivers + optical DSPs) that span rows or halls when copper runs out of reach or power budget. Expected to become a dominant pinch around 2027–2028 after packaging and HBM ease — deep map under Photonics.",
       "companies": [
         {
           "name": "Corning",
@@ -529,7 +596,7 @@
           "note": "Liquid cooling components and enclosures"
         },
         {
-          "name": "OEM/ODM thermal teams (Supermicro, Foxconn, \u2026)",
+          "name": "OEM/ODM thermal teams (Supermicro, Foxconn, …)",
           "ticker": "",
           "note": "Integrate cold plates into trays"
         }
@@ -555,7 +622,7 @@
     {
       "id": "rack-manifold",
       "title": "Rack coolant manifold",
-      "summary": "Vertical or rear manifolds that daisy-chain many servers\u2019 liquid loops to shared supply/return pipes. Often paired with rear-door heat exchangers on air-assisted racks.",
+      "summary": "Vertical or rear manifolds that daisy-chain many servers’ liquid loops to shared supply/return pipes. Often paired with rear-door heat exchangers on air-assisted racks.",
       "companies": [
         {
           "name": "Vertiv",
@@ -581,7 +648,7 @@
     },
     {
       "id": "cdu",
-      "title": "CDU \u2014 coolant distribution unit",
+      "title": "CDU — coolant distribution unit",
       "summary": "A skid that pumps and conditions facility or secondary loop coolant, controls temperature and flow, and isolates IT liquid loops from building chilled water. One CDU often serves a row or a set of high-density racks.",
       "companies": [
         {
@@ -614,7 +681,7 @@
     {
       "id": "facility-hx",
       "title": "Heat exchanger to facility cooling",
-      "summary": "Where IT coolant hands heat to building chilled water, dry coolers, or outside air systems. This is the boundary with facility HVAC covered under Electrification \u2014 still shown here so the liquid path is complete.",
+      "summary": "Where IT coolant hands heat to building chilled water, dry coolers, or outside air systems. This is the boundary with facility HVAC covered under Electrification — still shown here so the liquid path is complete.",
       "companies": [
         {
           "name": "Vertiv",
@@ -692,5 +759,23 @@
         }
       ]
     }
-  ]
+  ],
+  "taxonomy": {
+    "legend": {
+      "scarcityNow": "Hotspot class scarcity-now — red thick frame; extreme demand / scarcity right now.",
+      "scarcitySoon": "Hotspot class scarcity-soon — yellow thick frame; near-term bottleneck (~2027–2029).",
+      "coTicker": "Default ticker class co-ticker — grey.",
+      "ratingStrong": "Class rating-strong — solid dark green; extremely good franchise / setup (sparse).",
+      "notPricedIn": "Class not-priced-in — rainbow; extreme future demand not clearly priced; clickable demand details."
+    },
+    "fidelityUrlTemplate": "https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol={symbol}",
+    "classLock": {
+      "stageNow": "scarcity-now",
+      "stageSoon": "scarcity-soon",
+      "tickerDefault": "co-ticker",
+      "tickerStrong": "rating-strong",
+      "tickerRainbow": "not-priced-in"
+    },
+    "scopeNote": "Hardware owns in-rack PSU / VRM / board power only. Facility SST, XFMR, switchgear, and hall DC bus → electrification/. SiC/GaN device fab → semiconductors/."
+  }
 }

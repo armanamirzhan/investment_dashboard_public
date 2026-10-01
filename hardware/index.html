@@ -77,6 +77,19 @@
           fabrics between racks, and the liquid-cooling path out to facility heat rejection.
           Click any cell for a short explanation, then open <strong>Companies</strong> for curated names.
         </p>
+        <div class="investor-legend" aria-label="Investor mark legend">
+          <span><i class="lg-swatch now"></i> Red frame — scarce / extreme demand now</span>
+          <span><i class="lg-swatch soon"></i> Yellow frame — near-future bottleneck</span>
+          <span><span class="lg-ticker-sample strong">ETN</span> dark green — strong rating mark</span>
+          <span><span class="lg-ticker-sample grey">MPWR</span> grey — default ticker</span>
+          <span><span class="lg-ticker-sample rainbow">VICR</span> rainbow — demand may be under-reflected (click name)</span>
+        </div>
+        <p class="lede" style="font-size:0.9rem;margin-top:0">
+          In-rack power cells (PSU, VRM) use the same investor-mark tokens as
+          <a href="../electrification/index.html">Electrification</a>
+          and Fabrication. Facility SST / XFMR / DC bus stay on Electrification;
+          SiC/GaN chips stay on Fabrication. Marks are a study aid — not investment advice.
+        </p>
         <figure class="diagram" id="diagram-datacenter">
 <svg viewBox="0 0 980 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="dc-schematic-title">
 <title id="dc-schematic-title">Interactive AI datacenter hardware schematic</title>
@@ -171,12 +184,12 @@
 <text x="407.0" y="414.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">SSD</text>
 <text x="407.0" y="430.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">local</text>
 </g>
-<g class="stage-hotspot" data-stage="psu" tabindex="0" role="button" focusable="true" aria-label="PSU. Activate for stage details.">
+<g class="stage-hotspot scarcity-soon" data-stage="psu" tabindex="0" role="button" focusable="true" aria-label="PSU. Activate for stage details.">
 <rect class="box" x="68" y="444" width="140" height="36" rx="6" fill="#303030" stroke="#3d4a5c" stroke-width="1.4"/>
 <text x="138.0" y="460.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">PSU</text>
 <text x="138.0" y="474.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">shelf power</text>
 </g>
-<g class="stage-hotspot" data-stage="vrm" tabindex="0" role="button" focusable="true" aria-label="VRMs. Activate for stage details.">
+<g class="stage-hotspot scarcity-soon" data-stage="vrm" tabindex="0" role="button" focusable="true" aria-label="VRMs. Activate for stage details.">
 <rect class="box" x="220" y="444" width="120" height="36" rx="6" fill="#383028" stroke="#3d4a5c" stroke-width="1.4"/>
 <text x="280.0" y="460.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">VRMs</text>
 <text x="280.0" y="474.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">board power</text>
@@ -242,6 +255,7 @@
           <figcaption>
             Figure — AI compute hall schematic.
             <strong>Click a colored cell</strong> (or press Enter/Space when focused) for what that layer does and a curated company list.
+            Yellow frames on <strong>PSU</strong> / <strong>VRM</strong> mark near-term in-rack power bottlenecks on the AC→DC path.
             Optical deep-dive:
             <a href="photonics/index.html">Photonics</a>;
             facility power:
