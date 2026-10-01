@@ -1,0 +1,20 @@
+{
+  "asOf": "2026-10-01",
+  "source": "analysis/companies/handoff.json + Investment analysis brief",
+  "appliedTo": "electrification/stages.json (+ briefing.js/css gold name class)",
+  "gold_rating_mark_strong": [
+    {"name": "Delta Electronics", "ticker": "2308.TW", "note": "Cleared prior not_priced_in; now gold Buy"},
+    {"name": "Vertiv", "ticker": "VRT"},
+    {"name": "Eaton", "ticker": "ETN"},
+    {"name": "Bloom Energy", "ticker": "BE"}
+  ],
+  "rainbow_not_priced_in": [
+    {"name": "Infineon", "ticker": "IFX / IFNNY"},
+    {"name": "STMicroelectronics", "ticker": "STM"}
+  ],
+  "unchanged_prior_marks": [
+    "Hitachi Energy 6501.T remains rainbow",
+    "Vicor VICR remains rainbow",
+    "ABB and Amphenol retain prior rating_mark strong from Power Map taxonomy (not on this gold shortlist)"
+  ]
+}

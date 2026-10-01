@@ -350,6 +350,8 @@
       if (mark === "not-priced-in" && (c.demand_detail || c.demand_when || c.why_critical)) {
         nameHtml = '<button type="button" class="co-name-npi co-name-rainbow" data-rainbow-idx="' + idx +
           '" aria-expanded="false">' + esc(c.name) + "</button>";
+      } else if (mark === "rating-strong") {
+        nameHtml = '<strong class="co-name-gold">' + esc(c.name) + "</strong>";
       } else {
         nameHtml = "<strong>" + esc(c.name) + "</strong>";
       }

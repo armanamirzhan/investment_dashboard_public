@@ -3,9 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Investment analysis — Arman Invest Hub</title>
-  <meta name="description" content="AI infrastructure investment analysis — electrification and onsite DC focus. Not investment advice.">
+  <title>Investment analysis — Electrification &amp; onsite DC — Arman Invest Hub</title>
+  <meta name="description" content="Plain-language investment framing for AI data-center electrification and 800 volt direct current power. Public companies only. Not investment advice.">
   <link rel="stylesheet" href="../assets/site.css">
+  <style>
+    .analysis { max-width: 920px; margin: 0 auto; padding: 8px 16px 32px; }
+    .analysis h1 { font-size: 1.55rem; letter-spacing: -0.02em; margin: 0 0 6px; color: var(--text-on-dark); }
+    .lede { color: var(--text-secondary); font-size: 0.98rem; margin: 0 0 14px; line-height: 1.45; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+    .chip { font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 999px; background: rgba(76,139,245,.15); color: var(--accent-blue); }
+    .chip.warn { background: rgba(249,171,0,.12); color: var(--accent-orange); }
+    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; margin-bottom: 14px; }
+    .card h2 { font-size: 0.95rem; margin: 0 0 8px; color: var(--accent-cyan); letter-spacing: 0.02em; }
+    .card h3 { font-size: 0.85rem; margin: 12px 0 6px; color: var(--text-on-dark); }
+    .card p, .card li { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.45; }
+    .card p { margin: 0 0 8px; }
+    .card ul { margin: 0 0 8px; padding-left: 1.15rem; }
+    .card li { margin-bottom: 4px; }
+    .timeline { display: grid; gap: 8px; margin: 8px 0 4px; }
+    .tl { display: grid; grid-template-columns: 7.5rem 1fr; gap: 10px; align-items: start; }
+    .tl .when { font-size: 0.78rem; font-weight: 700; color: var(--accent-blue); padding-top: 2px; }
+    .tl .what { font-size: 0.9rem; color: var(--text-secondary); }
+    .co-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+    .co {
+      border: 1px solid var(--border); border-radius: 10px; background: rgba(0,0,0,.18);
+      overflow: hidden;
+    }
+    .co > summary {
+      list-style: none; cursor: pointer; display: flex; flex-wrap: wrap; align-items: baseline;
+      gap: 6px 10px; padding: 10px 12px; color: var(--text-primary);
+    }
+    .co > summary::-webkit-details-marker { display: none; }
+    .co > summary::after {
+      content: "Details"; margin-left: auto; font-size: 11px; color: var(--text-secondary);
+      font-weight: 600;
+    }
+    .co[open] > summary::after { content: "Hide"; }
+    .co .name { font-weight: 700; }
+    .co.gold .name { color: #f0d060; }
+    .co .ticker {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.78rem;
+      padding: 1px 7px; border-radius: 4px; background: rgba(138,147,160,.12);
+      border: 1px solid rgba(138,147,160,.35); color: #8a93a0;
+    }
+    .co.gold .ticker {
+      color: #d8f5e4; background: #0d5c2e; border-color: #0a4724; font-weight: 700;
+    }
+    .co.rainbow .ticker {
+      font-weight: 700; color: #e8eef6; border: 1px solid transparent;
+      background:
+        linear-gradient(#12161c,#12161c) padding-box,
+        linear-gradient(90deg,#ff6b6b,#ffd93d,#6bcb77,#4d96ff,#c77dff,#ff6b6b) border-box;
+      background-size: 100% 100%, 200% 100%;
+      animation: npi-shift 4s linear infinite;
+    }
+    @keyframes npi-shift { to { background-position: 0 0, 200% 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      .co.rainbow .ticker { animation: none; }
+    }
+    .tag {
+      font-size: 10px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase;
+      padding: 2px 7px; border-radius: 999px;
+    }
+    .tag.buy, .tag.accumulate { background: rgba(52,168,83,.15); color: var(--accent-green); }
+    .tag.hold { background: rgba(249,171,0,.12); color: var(--accent-orange); }
+    .tag.goldmark { background: rgba(240,208,96,.15); color: #f0d060; }
+    .tag.rainbowmark {
+      background: rgba(199,125,255,.12); color: #c77dff;
+    }
+    .co .body { padding: 0 12px 12px; border-top: 1px solid var(--border); }
+    .co .body p { margin: 10px 0 0; font-size: 0.88rem; }
+    .co .body a { color: var(--accent-cyan); }
+    .legend { font-size: 0.8rem; color: var(--text-secondary); margin-top: 10px; }
+    .legend strong.gold { color: #f0d060; }
+    .footnote { font-size: 0.78rem; color: var(--text-secondary); margin-top: 16px; line-height: 1.4; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+    .btn {
+      display: inline-block; padding: 8px 14px; border-radius: 8px; font-size: 0.88rem; font-weight: 650;
+      background: rgba(76,139,245,.18); color: var(--accent-blue); border: 1px solid rgba(76,139,245,.35);
+      text-decoration: none;
+    }
+    .btn:hover { text-decoration: none; filter: brightness(1.1); }
+  </style>
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary">
@@ -23,23 +102,172 @@
       </div>
     </div>
   </nav>
-  <main class="container">
-    <header class="page-header">
+
+  <main class="analysis">
+    <header>
       <h1>Investment analysis</h1>
-      <p class="subtitle">Portfolio framing for AI infrastructure — starting with electrification and onsite DC power. Full brief landing soon from the Investment analysis bot.</p>
+      <p class="lede">How AI factories get power — and which public companies sit on the path from the grid (or an onsite generator) to the chip. Written for a human reader. Not a recommendation to buy or sell anything.</p>
       <div class="meta-row">
-        <span>Public equities / ADRs / ETFs only</span>
-        <span class="badge">Not investment advice</span>
+        <span class="chip">As of 1 Oct 2026</span>
+        <span class="chip">Public stocks &amp; ADRs only</span>
+        <span class="chip warn">Not investment advice</span>
       </div>
     </header>
-    <section class="section">
-      <h2>Company scorecards</h2>
-      <p>One-screen public-company cards for the onsite DC / 800 V DC shortlist live now:</p>
-      <p><a class="btn" href="companies/index.html">Open company scorecards →</a></p>
+
+    <section class="card" id="electrification">
+      <h2>Electrification — what matters most</h2>
+      <p>AI halls draw so much continuous power that the old multi-step alternating-current chain wastes heat and space. The industry is moving toward higher-voltage direct current inside the building — typically about <strong>800 volts direct current</strong> on the hall bus — so fewer conversion steps sit between the utility and the graphics processors.</p>
+      <p>You can think of three overlapping moves:</p>
+      <ul>
+        <li><strong>Near the rack (now → 2027):</strong> A hybrid “power rack” or sidecar converts facility power to 800 volts direct current for dense AI rows without rebuilding the whole building. NVIDIA’s Vera Rubin platform can take this as an optional setup in the second half of 2026; broader rack use rises with Rubin Ultra from the second half of 2027.</li>
+        <li><strong>Across the hall (2027 → ~2029):</strong> Row power centers and overhead direct-current busways feed multiple megawatts per row. Direct-current breakers and certified solid-state transformers still constrain how fast this spreads.</li>
+        <li><strong>At the fence line (always):</strong> Utility interconnect queues and slow conventional transformers remain the schedule risk. Onsite fuel cells or turbines buy time-to-power when the grid is late.</li>
+      </ul>
+
+      <h3>When 800 volts direct current becomes the default for new halls</h3>
+      <div class="timeline">
+        <div class="tl"><div class="when">H2 2026</div><div class="what">Optional 800 V power racks into existing alternating-current buildings (Vera Rubin era).</div></div>
+        <div class="tl"><div class="when">H2 2027–2028</div><div class="what">Volume rack-level adoption with higher-power Rubin Ultra–class systems.</div></div>
+        <div class="tl"><div class="when">~2029+</div><div class="what">New campuses designed primarily around facility-scale 800 V direct current; U.S. electrical-code support aims fuller coverage around the 2029 code cycle.</div></div>
+      </div>
+
+      <h3>Where the rollout can stall</h3>
+      <ul>
+        <li><strong>Direct-current protection:</strong> Ordinary alternating-current breakers cannot safely clear a direct-current fault. Solid-state or direct-current-rated breakers have to ship in volume.</li>
+        <li><strong>Solid-state transformers:</strong> These power-electronics boxes can turn medium-voltage grid power straight toward 800 volts direct current, but safety certification and skilled install crews are still catching up.</li>
+        <li><strong>High-voltage silicon carbide chips:</strong> The switches inside those transformers are still scarce at the highest voltages.</li>
+        <li><strong>Old iron-core transformers:</strong> Lead times measured in years keep delaying classic grid hookups — which is why onsite generation and solid-state paths get attention.</li>
+      </ul>
+      <p>Private startups exist in this stack, but this page only tracks <strong>publicly traded</strong> names (or investable depositary receipts) you can buy in a normal brokerage account.</p>
     </section>
+
+    <section class="card" id="promising">
+      <h2>Most promising public names (this pass)</h2>
+      <p>Scorecards from Performance tracker. Names in <strong class="gold">gold</strong> are the top setups on this list. Tickers with a <strong>rainbow</strong> border flag demand that may still be early in the share price. Open a row for the short thesis; open the full one-screen card for metrics.</p>
+      <p class="legend"><strong class="gold">Gold:</strong> Delta Electronics · Vertiv · Eaton · Bloom Energy &nbsp;|&nbsp; <strong>Rainbow:</strong> Infineon · STMicroelectronics</p>
+
+      <ul class="co-list">
+        <li>
+          <details class="co gold" open>
+            <summary><span class="name">Delta Electronics</span> <span class="ticker">2308.TW</span> <span class="tag buy">Buy</span> <span class="tag goldmark">Gold</span></summary>
+            <div class="body">
+              <p>Taiwan power-electronics leader with a live solid-state transformer under AI load and an NVIDIA high-voltage direct-current production path, plus in-row 800 V racks and liquid-cooling attach. Closest “ships today” proof on this list. Geopolitics and a rich Taiwan multiple are the main caveats.</p>
+              <p><a href="companies/delta-electronics.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details class="co gold">
+            <summary><span class="name">Vertiv</span> <span class="ticker">VRT</span> <span class="tag accumulate">Accumulate</span> <span class="tag goldmark">Gold</span></summary>
+            <div class="body">
+              <p>Builds the gear next to the rack — sidecars, busways, and backup — so operators can feed 800 V direct current into dense rows without ripping out the building. Commercial portfolio aimed at the second half of 2026. Valuation already prices a lot of the AI story.</p>
+              <p><a href="companies/vertiv.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details class="co gold">
+            <summary><span class="name">Eaton</span> <span class="ticker">ETN</span> <span class="tag accumulate">Accumulate</span> <span class="tag goldmark">Gold</span></summary>
+            <div class="body">
+              <p>Medium-voltage solid-state transformer aimed at 800 V halls, with a September 2026 silicon carbide deal with Infineon. Quality industrial compounder; certification and high-voltage chip supply remain industry bottlenecks.</p>
+              <p><a href="companies/eaton.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details class="co gold">
+            <summary><span class="name">Bloom Energy</span> <span class="ticker">BE</span> <span class="tag accumulate">Accumulate</span> <span class="tag goldmark">Gold</span></summary>
+            <div class="body">
+              <p>Onsite solid-oxide fuel cells that make electricity at the campus when the utility queue is the real bottleneck. Native direct-current-friendly output pairs conceptually with high-voltage halls. Oracle-scale agreements re-rated the stock — treat volatility and dilution risk seriously.</p>
+              <p><a href="companies/bloom-energy.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details class="co rainbow">
+            <summary><span class="name">Infineon</span> <span class="ticker">IFNNY</span> <span class="tag accumulate">Accumulate</span> <span class="tag rainbowmark">Rainbow</span></summary>
+            <div class="body">
+              <p>Makes the silicon carbide switches inside solid-state transformers and high-voltage converters. Design wins with Eaton and others are real; high-voltage device supply is still scarce. Rainbow mark: early data-center content may not be fully reflected versus the auto silicon carbide narrative.</p>
+              <p><a href="companies/infineon.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details class="co rainbow">
+            <summary><span class="name">STMicroelectronics</span> <span class="ticker">STM</span> <span class="tag accumulate">Accumulate</span> <span class="tag rainbowmark">Rainbow</span></summary>
+            <div class="body">
+              <p>Power chips that step 800 V direct current down toward the voltages near the processor, including public NVIDIA collaboration work. Device content, not facility gear — sensitive to semiconductor cycles. Rainbow mark: conversion content still early in reported mix.</p>
+              <p><a href="companies/stmicroelectronics.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details class="co">
+            <summary><span class="name">Schneider Electric</span> <span class="ticker">SBGSY</span> <span class="tag accumulate">Accumulate</span></summary>
+            <div class="body">
+              <p>Facility systems — switchgear, uninterruptible power, busway, and sidecar architectures. Broad mega-cap electrification name; AI direct-current upside is incremental, not a pure-play.</p>
+              <p><a href="companies/schneider-electric.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details class="co">
+            <summary><span class="name">ABB</span> <span class="ticker">ABB</span> <span class="tag accumulate">Accumulate</span></summary>
+            <div class="body">
+              <p>Infinitus portfolio for source-to-rack 800 V direct current, including solid-state direct-current breakers that attack the protection bottleneck. Large automation mix dilutes pure data-center torque.</p>
+              <p><a href="companies/abb.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details class="co">
+            <summary><span class="name">Amphenol</span> <span class="ticker">APH</span> <span class="tag accumulate">Accumulate</span></summary>
+            <div class="body">
+              <p>Connectors and busbar interfaces for high current and higher-voltage direct current. Picks-and-shovels content that grows with rack power; already a premium interconnect compounder.</p>
+              <p><a href="companies/amphenol.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details class="co">
+            <summary><span class="name">GE Vernova</span> <span class="ticker">GEV</span> <span class="tag hold">Hold</span></summary>
+            <div class="body">
+              <p>Heavy electrical backbone — transformers and switchgear — still gates most campuses. NVIDIA-aligned 800 V reference designs exist; solid-state transformer scale is later. Post-spin rerating leaves a thinner margin of safety.</p>
+              <p><a href="companies/ge-vernova.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details class="co">
+            <summary><span class="name">Siemens Energy</span> <span class="ticker">SMNEY</span> <span class="tag hold">Hold</span></summary>
+            <div class="body">
+              <p>Grid and turbine exposure with group solid-state transformer optionality (partly sitting with Siemens AG). Treat as electrification recovery, not a pure 800 V name.</p>
+              <p><a href="companies/siemens-energy.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details class="co">
+            <summary><span class="name">Mitsubishi Heavy</span> <span class="ticker">7011.T</span> <span class="tag hold">Hold</span></summary>
+            <div class="body">
+              <p>Onsite turbines and mobile gensets for time-to-power at the fence. Complements rack direct-current vendors rather than replacing them. Conglomerate noise is high.</p>
+              <p><a href="companies/mitsubishi-heavy.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+      </ul>
+
+      <div class="actions">
+        <a class="btn" href="companies/index.html">All 12 company scorecards</a>
+        <a class="btn" href="../electrification/index.html">Open Electrification Power Map</a>
+      </div>
+    </section>
+
+    <p class="footnote"><strong>Not investment advice.</strong> Personal research for Arman A’s study hub. Ratings and gold / rainbow marks are a research framework only — not recommendations to buy, sell, or hold any security. Company pages are owned by Performance tracker; this brief by Investment analysis. Power Map company marks updated to match the 1 Oct 2026 handoff (gold names; rainbow on Infineon and STMicroelectronics; Delta moved from rainbow to gold).</p>
   </main>
+
   <footer class="site-footer">
-    <p>Not investment advice. Section owned by Investment analysis per <a href="../OWNERS.md">OWNERS.md</a>; company cards by Performance tracker.</p>
+    <p>Not investment advice. See <a href="../OWNERS.md">OWNERS.md</a>.</p>
   </footer>
   <script src="../assets/site.js"></script>
 </body>

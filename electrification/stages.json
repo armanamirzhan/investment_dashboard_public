@@ -69,7 +69,8 @@
           "name": "Bloom Energy",
           "ticker": "NYSE: BE",
           "note": "~75–85% stationary SOFC share; ScSZ electrolyte path",
-          "fidelity_symbol": "BE"
+          "fidelity_symbol": "BE",
+          "rating_mark": "strong"
         },
         {
           "name": "Ceres Power",
@@ -312,12 +313,12 @@
           "ticker": "2308.TW",
           "note": "Production SST in a North China AI data center (Feb 2026 baseline note)",
           "fidelity_symbol": "DELTY",
-          "not_priced_in": true,
           "demand_detail": "When: ~2026 H2 commercialization → 2027–2029 facility-wide 800 VDC and SST ramps For what: Production SST already in a North China AI DC; 800 VDC in-row power for Vera Rubin-class halls; SOFC-adjacent microgrids Why critical: Few vendors ship both perimeter SST and rack-adjacent 800 VDC conversion at production scale Why demand lands here: TW-listed (2308.TW); Western AI-electrification tape often underweights non-US listings even when product is live",
           "demand_when": "~2026 H2 commercialization → 2027–2029 facility-wide 800 VDC and SST ramps",
           "demand_for": "Production SST already in a North China AI DC; 800 VDC in-row power for Vera Rubin-class halls; SOFC-adjacent microgrids",
           "why_critical": "Few vendors ship both perimeter SST and rack-adjacent 800 VDC conversion at production scale",
-          "why_there": "TW-listed (2308.TW); Western AI-electrification tape often underweights non-US listings even when product is live"
+          "why_there": "TW-listed (2308.TW); Western AI-electrification tape often underweights non-US listings even when product is live",
+          "rating_mark": "strong"
         },
         {
           "name": "Siemens Energy",
@@ -335,7 +336,8 @@
           "name": "Vertiv",
           "ticker": "VRT",
           "note": "Rack power and DC architectures",
-          "fidelity_symbol": "VRT"
+          "fidelity_symbol": "VRT",
+          "rating_mark": "strong"
         },
         {
           "name": "DG Matrix",
@@ -353,13 +355,25 @@
           "name": "Infineon",
           "ticker": "IFX / IFNNY",
           "note": "SiC / power devices for high-efficiency converters",
-          "fidelity_symbol": "IFNNY"
+          "fidelity_symbol": "IFNNY",
+          "not_priced_in": true,
+          "demand_when": "As medium-voltage solid-state transformers and 800 V halls scale from ~2027 into ~2029",
+          "demand_for": "Silicon carbide switches for solid-state transformers and high-voltage conversion into 800 V DC racks",
+          "why_critical": "High-voltage silicon carbide (especially 2.3–3.3 kV class) remains scarce; without it, facility-scale solid-state transformers stay pilots",
+          "why_there": "Eaton and other solid-state transformer builders already design-in Infineon; auto silicon carbide cycles may still overshadow early data-center content in the stock",
+          "demand_detail": "When: As medium-voltage solid-state transformers and 800 V halls scale from ~2027 into ~2029 For what: Silicon carbide switches for solid-state transformers and high-voltage conversion into 800 V DC racks Why critical: High-voltage silicon carbide (especially 2.3–3.3 kV class) remains scarce; without it, facility-scale solid-state transformers stay pilots Why demand lands here: Eaton and other solid-state transformer builders already design-in Infineon; auto silicon carbide cycles may still overshadow early data-center content in the stock"
         },
         {
           "name": "STMicroelectronics",
           "ticker": "STM",
           "note": "Power semiconductors used in DC–DC stages",
-          "fidelity_symbol": "STM"
+          "fidelity_symbol": "STM",
+          "not_priced_in": true,
+          "demand_when": "As NVIDIA-class 800 V racks move from optional (2026) to volume (2027–2028)",
+          "demand_for": "Silicon carbide and gallium nitride stages that step 800 V DC down toward 50 V / 12 V / 6 V near the chip",
+          "why_critical": "Every denser rack needs more efficient high-voltage conversion chips; content grows with rack kilowatts",
+          "why_there": "Public NVIDIA 800 V conversion work is early; European semi cycles may under-price data-center mix versus U.S. AI names",
+          "demand_detail": "When: As NVIDIA-class 800 V racks move from optional (2026) to volume (2027–2028) For what: Silicon carbide and gallium nitride stages that step 800 V DC down toward 50 V / 12 V / 6 V near the chip Why critical: Every denser rack needs more efficient high-voltage conversion chips; content grows with rack kilowatts Why demand lands here: Public NVIDIA 800 V conversion work is early; European semi cycles may under-price data-center mix versus U.S. AI names"
         },
         {
           "name": "Eaton",
@@ -372,7 +386,8 @@
           "name": "Vertiv",
           "ticker": "VRT",
           "note": "Data-center DC power architectures",
-          "fidelity_symbol": "VRT"
+          "fidelity_symbol": "VRT",
+          "rating_mark": "strong"
         }
       ],
       "scarcity": null
@@ -386,7 +401,8 @@
           "name": "Vertiv",
           "ticker": "VRT",
           "note": "Rack power and DC distribution architectures",
-          "fidelity_symbol": "VRT"
+          "fidelity_symbol": "VRT",
+          "rating_mark": "strong"
         },
         {
           "name": "Schneider Electric",
@@ -438,13 +454,25 @@
           "name": "Infineon",
           "ticker": "IFX / IFNNY",
           "note": "Power devices for VRMs and intermediate rails",
-          "fidelity_symbol": "IFNNY"
+          "fidelity_symbol": "IFNNY",
+          "not_priced_in": true,
+          "demand_when": "As medium-voltage solid-state transformers and 800 V halls scale from ~2027 into ~2029",
+          "demand_for": "Silicon carbide switches for solid-state transformers and high-voltage conversion into 800 V DC racks",
+          "why_critical": "High-voltage silicon carbide (especially 2.3–3.3 kV class) remains scarce; without it, facility-scale solid-state transformers stay pilots",
+          "why_there": "Eaton and other solid-state transformer builders already design-in Infineon; auto silicon carbide cycles may still overshadow early data-center content in the stock",
+          "demand_detail": "When: As medium-voltage solid-state transformers and 800 V halls scale from ~2027 into ~2029 For what: Silicon carbide switches for solid-state transformers and high-voltage conversion into 800 V DC racks Why critical: High-voltage silicon carbide (especially 2.3–3.3 kV class) remains scarce; without it, facility-scale solid-state transformers stay pilots Why demand lands here: Eaton and other solid-state transformer builders already design-in Infineon; auto silicon carbide cycles may still overshadow early data-center content in the stock"
         },
         {
           "name": "STMicroelectronics",
           "ticker": "STM",
           "note": "Power management / conversion silicon",
-          "fidelity_symbol": "STM"
+          "fidelity_symbol": "STM",
+          "not_priced_in": true,
+          "demand_when": "As NVIDIA-class 800 V racks move from optional (2026) to volume (2027–2028)",
+          "demand_for": "Silicon carbide and gallium nitride stages that step 800 V DC down toward 50 V / 12 V / 6 V near the chip",
+          "why_critical": "Every denser rack needs more efficient high-voltage conversion chips; content grows with rack kilowatts",
+          "why_there": "Public NVIDIA 800 V conversion work is early; European semi cycles may under-price data-center mix versus U.S. AI names",
+          "demand_detail": "When: As NVIDIA-class 800 V racks move from optional (2026) to volume (2027–2028) For what: Silicon carbide and gallium nitride stages that step 800 V DC down toward 50 V / 12 V / 6 V near the chip Why critical: Every denser rack needs more efficient high-voltage conversion chips; content grows with rack kilowatts Why demand lands here: Public NVIDIA 800 V conversion work is early; European semi cycles may under-price data-center mix versus U.S. AI names"
         },
         {
           "name": "Texas Instruments",
@@ -468,19 +496,32 @@
           "name": "Vertiv",
           "ticker": "VRT",
           "note": "Rack power and DC architectures",
-          "fidelity_symbol": "VRT"
+          "fidelity_symbol": "VRT",
+          "rating_mark": "strong"
         },
         {
           "name": "Infineon",
           "ticker": "IFX / IFNNY",
           "note": "SiC / power devices for high-ratio converters",
-          "fidelity_symbol": "IFNNY"
+          "fidelity_symbol": "IFNNY",
+          "not_priced_in": true,
+          "demand_when": "As medium-voltage solid-state transformers and 800 V halls scale from ~2027 into ~2029",
+          "demand_for": "Silicon carbide switches for solid-state transformers and high-voltage conversion into 800 V DC racks",
+          "why_critical": "High-voltage silicon carbide (especially 2.3–3.3 kV class) remains scarce; without it, facility-scale solid-state transformers stay pilots",
+          "why_there": "Eaton and other solid-state transformer builders already design-in Infineon; auto silicon carbide cycles may still overshadow early data-center content in the stock",
+          "demand_detail": "When: As medium-voltage solid-state transformers and 800 V halls scale from ~2027 into ~2029 For what: Silicon carbide switches for solid-state transformers and high-voltage conversion into 800 V DC racks Why critical: High-voltage silicon carbide (especially 2.3–3.3 kV class) remains scarce; without it, facility-scale solid-state transformers stay pilots Why demand lands here: Eaton and other solid-state transformer builders already design-in Infineon; auto silicon carbide cycles may still overshadow early data-center content in the stock"
         },
         {
           "name": "STMicroelectronics",
           "ticker": "STM",
           "note": "Power semiconductors in converter stages",
-          "fidelity_symbol": "STM"
+          "fidelity_symbol": "STM",
+          "not_priced_in": true,
+          "demand_when": "As NVIDIA-class 800 V racks move from optional (2026) to volume (2027–2028)",
+          "demand_for": "Silicon carbide and gallium nitride stages that step 800 V DC down toward 50 V / 12 V / 6 V near the chip",
+          "why_critical": "Every denser rack needs more efficient high-voltage conversion chips; content grows with rack kilowatts",
+          "why_there": "Public NVIDIA 800 V conversion work is early; European semi cycles may under-price data-center mix versus U.S. AI names",
+          "demand_detail": "When: As NVIDIA-class 800 V racks move from optional (2026) to volume (2027–2028) For what: Silicon carbide and gallium nitride stages that step 800 V DC down toward 50 V / 12 V / 6 V near the chip Why critical: Every denser rack needs more efficient high-voltage conversion chips; content grows with rack kilowatts Why demand lands here: Public NVIDIA 800 V conversion work is early; European semi cycles may under-price data-center mix versus U.S. AI names"
         },
         {
           "name": "Eaton",
@@ -535,13 +576,25 @@
           "name": "Infineon",
           "ticker": "IFX / IFNNY",
           "note": "Power devices for VRMs and intermediate rails",
-          "fidelity_symbol": "IFNNY"
+          "fidelity_symbol": "IFNNY",
+          "not_priced_in": true,
+          "demand_when": "As medium-voltage solid-state transformers and 800 V halls scale from ~2027 into ~2029",
+          "demand_for": "Silicon carbide switches for solid-state transformers and high-voltage conversion into 800 V DC racks",
+          "why_critical": "High-voltage silicon carbide (especially 2.3–3.3 kV class) remains scarce; without it, facility-scale solid-state transformers stay pilots",
+          "why_there": "Eaton and other solid-state transformer builders already design-in Infineon; auto silicon carbide cycles may still overshadow early data-center content in the stock",
+          "demand_detail": "When: As medium-voltage solid-state transformers and 800 V halls scale from ~2027 into ~2029 For what: Silicon carbide switches for solid-state transformers and high-voltage conversion into 800 V DC racks Why critical: High-voltage silicon carbide (especially 2.3–3.3 kV class) remains scarce; without it, facility-scale solid-state transformers stay pilots Why demand lands here: Eaton and other solid-state transformer builders already design-in Infineon; auto silicon carbide cycles may still overshadow early data-center content in the stock"
         },
         {
           "name": "STMicroelectronics",
           "ticker": "STM",
           "note": "Power management / conversion silicon",
-          "fidelity_symbol": "STM"
+          "fidelity_symbol": "STM",
+          "not_priced_in": true,
+          "demand_when": "As NVIDIA-class 800 V racks move from optional (2026) to volume (2027–2028)",
+          "demand_for": "Silicon carbide and gallium nitride stages that step 800 V DC down toward 50 V / 12 V / 6 V near the chip",
+          "why_critical": "Every denser rack needs more efficient high-voltage conversion chips; content grows with rack kilowatts",
+          "why_there": "Public NVIDIA 800 V conversion work is early; European semi cycles may under-price data-center mix versus U.S. AI names",
+          "demand_detail": "When: As NVIDIA-class 800 V racks move from optional (2026) to volume (2027–2028) For what: Silicon carbide and gallium nitride stages that step 800 V DC down toward 50 V / 12 V / 6 V near the chip Why critical: Every denser rack needs more efficient high-voltage conversion chips; content grows with rack kilowatts Why demand lands here: Public NVIDIA 800 V conversion work is early; European semi cycles may under-price data-center mix versus U.S. AI names"
         },
         {
           "name": "EPC",
@@ -565,7 +618,8 @@
           "name": "Bloom Energy",
           "ticker": "NYSE: BE",
           "note": "SOFC systems fed by pipeline NG",
-          "fidelity_symbol": "BE"
+          "fidelity_symbol": "BE",
+          "rating_mark": "strong"
         },
         {
           "name": "FuelCell Energy",
@@ -629,7 +683,8 @@
           "name": "Bloom Energy",
           "ticker": "NYSE: BE",
           "note": "Also active in electrolyzer / H₂ adjacency in baseline notes",
-          "fidelity_symbol": "BE"
+          "fidelity_symbol": "BE",
+          "rating_mark": "strong"
         },
         {
           "name": "Ceres Power",
@@ -804,7 +859,8 @@
           "name": "Vertiv",
           "ticker": "VRT",
           "note": "Data-center UPS and rack power",
-          "fidelity_symbol": "VRT"
+          "fidelity_symbol": "VRT",
+          "rating_mark": "strong"
         },
         {
           "name": "Eaton",
@@ -838,7 +894,8 @@
           "name": "Vertiv",
           "ticker": "VRT",
           "note": "Rack PDUs and power distribution",
-          "fidelity_symbol": "VRT"
+          "fidelity_symbol": "VRT",
+          "rating_mark": "strong"
         },
         {
           "name": "Eaton",
@@ -873,18 +930,19 @@
           "ticker": "2308.TW",
           "note": "Server / data-center power supplies",
           "fidelity_symbol": "DELTY",
-          "not_priced_in": true,
           "demand_detail": "When: ~2026 H2 commercialization → 2027–2029 facility-wide 800 VDC and SST ramps For what: Production SST already in a North China AI DC; 800 VDC in-row power for Vera Rubin-class halls; SOFC-adjacent microgrids Why critical: Few vendors ship both perimeter SST and rack-adjacent 800 VDC conversion at production scale Why demand lands here: TW-listed (2308.TW); Western AI-electrification tape often underweights non-US listings even when product is live",
           "demand_when": "~2026 H2 commercialization → 2027–2029 facility-wide 800 VDC and SST ramps",
           "demand_for": "Production SST already in a North China AI DC; 800 VDC in-row power for Vera Rubin-class halls; SOFC-adjacent microgrids",
           "why_critical": "Few vendors ship both perimeter SST and rack-adjacent 800 VDC conversion at production scale",
-          "why_there": "TW-listed (2308.TW); Western AI-electrification tape often underweights non-US listings even when product is live"
+          "why_there": "TW-listed (2308.TW); Western AI-electrification tape often underweights non-US listings even when product is live",
+          "rating_mark": "strong"
         },
         {
           "name": "Vertiv",
           "ticker": "VRT",
           "note": "Rack power architectures",
-          "fidelity_symbol": "VRT"
+          "fidelity_symbol": "VRT",
+          "rating_mark": "strong"
         },
         {
           "name": "Eaton",
@@ -923,7 +981,8 @@
           "name": "Vertiv",
           "ticker": "VRT",
           "note": "Rack power distribution",
-          "fidelity_symbol": "VRT"
+          "fidelity_symbol": "VRT",
+          "rating_mark": "strong"
         },
         {
           "name": "Amphenol",
@@ -1003,7 +1062,8 @@
           "name": "Vertiv",
           "ticker": "VRT",
           "note": "Rack power + liquid cooling / CDU systems adjacent to AI halls",
-          "fidelity_symbol": "VRT"
+          "fidelity_symbol": "VRT",
+          "rating_mark": "strong"
         },
         {
           "name": "nVent",
