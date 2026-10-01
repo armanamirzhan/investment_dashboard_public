@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SMR — Advanced Nuclear — Investment Hub</title>
-  <meta name="description" content="Small modular and advanced reactors — Oklo, X-energy, NuScale weekly gauge trackers.">
+  <meta name="description" content="Plain-language briefing on small modular reactors and existing nuclear for AI power demand, plus weekly Oklo and X-Energy trackers. Not investment advice.">
   <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
@@ -12,7 +12,6 @@
     <div class="nav-inner">
       <a class="brand" href="../../index.html">Arman <span>Invest</span></a>
       <div class="nav-links">
-        
         <a href="../../index.html" data-section="home">Hub</a>
         <a href="../../electrification/index.html" data-section="electrification">Electrification</a>
         <a href="../../hardware/index.html" data-section="hardware">Hardware</a>
@@ -27,14 +26,113 @@
   <main class="container">
     <header class="page-header">
       <h1>SMR — Advanced Nuclear</h1>
-      <p class="subtitle">Weekly execution gauges for small modular and advanced reactor developers — licensing, fuel, commercial offtake, and cash runway.</p>
+      <p class="subtitle">Why nuclear shows up in the AI power story, how merchant plants and offtake contracts fit, and weekly scorecards for public reactor developers.</p>
+      <span class="badge">As of Oct 1, 2026</span>
+      <div class="meta-row">
+        <span>Nested under Electrification</span>
+        <span class="ticker">OKLO</span>
+        <span class="ticker">XE</span>
+        <span class="ticker">CEG</span>
+        <span class="ticker">SMR</span>
+      </div>
     </header>
 
-    <section class="section">
-      <h2>About</h2>
-      <p>This section tracks public advanced-nuclear developers with six-gauge weekly scorecards. Import JSON updates from the weekly routine, or edit levels and notes in-browser. History stays in localStorage on your device.</p>
-      <p>Seed names: <span class="ticker">OKLO</span> <span class="ticker">XE</span> <span class="ticker">SMR</span> <span class="ticker">TerraPower</span> <span class="ticker">Kairos</span></p>
-      <p style="font-size:12px;color:var(--text-secondary);margin-top:8px"><strong>Not investment advice.</strong> Scores and notes are research opinions based on public sources.</p>
+    <section class="section" id="emerging">
+      <h2>Emerging theme — nuclear for AI load</h2>
+      <p>
+        Near-term AI buildouts often hit nearer bottlenecks first: power equipment,
+        packaging, and
+        <a href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory">high-bandwidth memory (HBM)</a>.
+        After those, the conversation often turns to
+        <strong>24/7 clean electricity</strong> —
+        plants that run day and night without depending on weather.
+        That is where
+        <a href="https://en.wikipedia.org/wiki/Nuclear_power">nuclear power</a>
+        and
+        <a href="https://en.wikipedia.org/wiki/Small_modular_reactor">small modular reactors (SMRs)</a>
+        enter the picture.
+      </p>
+      <p>
+        An SMR is a nuclear reactor built in factory-sized modules instead of one giant custom plant.
+        The idea is shorter build times and the ability to add capacity in steps.
+        Most SMRs are still in licensing or early construction; many AI campuses that need power
+        <em>this decade</em> also look at
+        <strong>existing large reactors</strong>
+        (restarts, life extensions) and long-term
+        <a href="https://en.wikipedia.org/wiki/Power_purchase_agreement">power purchase agreements (PPAs)</a>
+        — contracts to buy electricity at agreed terms.
+      </p>
+    </section>
+
+    <section class="section" id="merchant">
+      <h2>Merchant nuclear vs regulated utilities</h2>
+      <p>
+        A
+        <a href="https://en.wikipedia.org/wiki/Public_utility">regulated utility</a>
+        usually earns a fixed allowed return set by state regulators.
+        When power is scarce, that structure often does
+        <strong>not</strong>
+        let shareholders keep “scarcity rents” the way a competitive market plant can.
+      </p>
+      <p>
+        <strong>Merchant</strong>
+        nuclear owners sell into wholesale markets or under private contracts.
+        When AI and cloud companies (often called
+        <a href="https://en.wikipedia.org/wiki/Hyperscale_computing">hyperscalers</a>)
+        sign long PPAs, that path can be cleaner for investors who want exposure to
+        contracted offtake rather than regulated rate cases alone.
+      </p>
+      <p>
+        <a href="https://en.wikipedia.org/wiki/Constellation_Energy">Constellation Energy</a>
+        (<span class="ticker">CEG</span>)
+        is a useful example of the
+        <em>existing fleet + contracts</em>
+        story: large U.S. nuclear capacity, plus deals that restart or keep plants online for
+        data-center and clean-power buyers (for example Microsoft’s Crane / Three Mile Island Unit 1 path).
+        That thesis is more about
+        <strong>AI-driven power availability</strong>
+        than about being a pure SMR equipment maker.
+        Public commentary has often noted a large re-rating from 2022 lows as AI power demand rose —
+        treat price history as context, not a forecast.
+      </p>
+      <p>
+        Utility combinations that add generation optionality near dense data-center corridors
+        (sometimes called “Data Center Alley” in Northern Virginia) also matter for the same reason:
+        more controlled supply next to load. The NextEra–Dominion combination (~$66.8B in the brief’s
+        framing) is one illustration of generation optionality aimed at that corridor (~51 GW of
+        regional demand scale in the same brief). Details change with filings — check primary sources
+        before relying on any one number.
+      </p>
+    </section>
+
+    <section class="section" id="ratepayer">
+      <h2>Ratepayer Protection Pledge (March 2026)</h2>
+      <p>
+        In March 2026 the White House published a voluntary
+        <a href="https://www.whitehouse.gov/releases/2026/03/ratepayer-protection-pledge/">Ratepayer Protection Pledge</a>.
+        In plain terms, large AI and cloud companies agree to
+        <strong>build, bring, or buy</strong>
+        the generation their data centers need, and to pay for related delivery upgrades,
+        so ordinary household bills are not the first place AI load shows up.
+      </p>
+      <p>
+        That framing is
+        <strong>supportive for nuclear and SMR offtake</strong>:
+        if hyperscalers must bring new or additive supply, long nuclear PPAs and SMR campus deals
+        become a natural matching product — alongside gas, renewables, and storage.
+        The pledge is voluntary policy signaling, not a guarantee that any one project gets built.
+      </p>
+    </section>
+
+    <section class="section" id="trackers">
+      <h2>Developer trackers</h2>
+      <p>
+        The pages below are weekly
+        <strong>execution gauges</strong>
+        for public SMR / advanced-reactor developers: licensing, fuel, offtake, cash, and revenue quality.
+        Import JSON updates or edit levels in-browser. History stays in your browser’s local storage only.
+      </p>
+      <p style="font-size:12px;color:var(--text-secondary)"><strong>Not investment advice.</strong> Scores and notes are research opinions from public sources.</p>
     </section>
 
     <div class="card-grid">
@@ -58,25 +156,19 @@
       </div>
     </div>
 
-
-    <section class="section">
-      <h2>Related — fuel cycle</h2>
-      <p>HALEU / enrichment bottlenecks for Oklo and X-Energy sit in the uranium map (Centrus <span class="ticker">LEU</span> context, natural-U supply).</p>
-      <p><a href="../uranium/index.html">Open Uranium Map →</a></p>
-    </section>
-    <section class="section">
-      <h2>How to use</h2>
+    <section class="section" id="related">
+      <h2>Related</h2>
       <ul>
-        <li>Open a tracker, set the ISO week, adjust gauge bands, and save — history builds on this device.</li>
-        <li>Import a weekly JSON update via file picker or paste (see schema comment in each HTML file).</li>
-        <li>Optional seed for Oklo: <code>updates/oklo-week-latest.json</code>.</li>
+        <li><a href="../index.html">Electrification Power Map</a> — how power reaches AI halls</li>
+        <li><a href="../uranium/index.html">Uranium Map</a> — fuel cycle, HALEU / Centrus <span class="ticker">LEU</span>, natural uranium (owned by Uranium energy map)</li>
+        <li><a href="../../digests/index.html">Digests</a> — weekday AI-infra notes, including nuclear / PPA items</li>
       </ul>
     </section>
   </main>
 
   <footer class="site-footer">
     <p>Public investment briefing hub · <a href="https://armanamirzhan.github.io/investment_dashboard_public/">armanamirzhan.github.io/investment_dashboard_public</a></p>
-    <p>Not investment advice. Section owned by SMR bot per <a href="../../OWNERS.md">OWNERS.md</a>.</p>
+    <p>Not investment advice. Section owned by SMR bot per <a href="../../OWNERS.md">OWNERS.md</a>. Uranium fuel cycle content lives under <a href="../uranium/index.html">electrification/uranium/</a>.</p>
   </footer>
   <script src="../../assets/site.js"></script>
 </body>
