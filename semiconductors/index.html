@@ -31,6 +31,7 @@
           <span class="toc-label">Jump</span>
           <a href="#why">Why fabs</a>
           <a href="#stack">Stack</a>
+          <a href="#bottlenecks">Bottlenecks</a>
           <a href="#layer-1">Foundries</a>
           <a href="#layer-2">Lithography</a>
           <a href="#layer-3">WFE</a>
@@ -61,7 +62,7 @@
         </p>
         <div class="meta-row">
           <span class="chip">Hub section · nine layers</span>
-          <span class="chip">Source: hub-extraction + data/semiconductor_companies.json</span>
+          <span class="chip">Source: hub-extraction + bottleneck brief + data/semiconductor_companies.json</span>
           <span class="chip warn">Not investment advice</span>
         </div>
       </header>
@@ -123,6 +124,84 @@
           <li><a href="#layer-8">Cleanroom &amp; fab construction</a> — who builds the factories.</li>
           <li><a href="#layer-9">SiC &amp; GaN power semis</a> — efficient power conversion silicon.</li>
         </ol>
+      </section>
+
+      <section aria-labelledby="h-bottlenecks" id="bottlenecks">
+        <h2 id="h-bottlenecks">Near-term bottlenecks (orientation)</h2>
+        <p class="lede">
+          Capacity can stay tight even when a company’s stock already reflects the story.
+          This section is a physical supply map — not a valuation call.
+        </p>
+        <h3>Advanced packaging — still tight into about 2027</h3>
+        <p>
+          AI accelerators need short, dense wiring between compute dies and
+          <a href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory">high-bandwidth memory (HBM)</a>.
+          That assembly step —
+          especially
+          <a href="https://en.wikipedia.org/wiki/Chip_on_wafer_on_substrate">chip-on-wafer-on-substrate (CoWoS)</a>-class flows —
+          has repeatedly been as scarce as leading-edge wafer starts. Industry commentary still points to
+          tightness lasting into roughly 2027 as new lines ramp.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">TSMC (CoWoS)</span><span class="ticker">TSM</span>
+            <p>Largest in-house advanced-packaging choke for AI accelerators — CoWoS and related flows that mount HBM next to logic. Expansions are underway; demand has kept the queue long.</p>
+          </li>
+          <li>
+            <span class="name">Amkor Technology</span><span class="ticker">AMKR</span>
+            <p>
+            <a href="https://en.wikipedia.org/wiki/Outsourced_semiconductor_assembly_and_test">Outsourced semiconductor assembly and test (OSAT)</a>
+            house adding advanced packaging capacity as an alternative / complement to foundry in-house lines.</p>
+          </li>
+          <li>
+            <span class="name">ASE Technology</span><span class="ticker">ASX</span>
+            <p>Global OSAT leader in advanced packaging and assembly — another path for chiplet and HBM-class packages outside a single foundry’s walls.</p>
+          </li>
+          <li>
+            <span class="name">Intel (EMIB-T)</span><span class="ticker">INTC</span>
+            <p>
+            <a href="https://en.wikipedia.org/wiki/Embedded_multi-die_interconnect_bridge">Embedded multi-die interconnect bridge (EMIB)</a>
+            and the EMIB-T generation — Intel’s chiplet packaging path for tying dies together without always using a large silicon interposer like classic CoWoS.</p>
+          </li>
+        </ul>
+        <h3>HBM — high-bandwidth memory supply into about 2027</h3>
+        <p>
+          HBM stacks are the tall memory cubes glued beside AI logic. Physical supply has been tight alongside packaging;
+          that does <em>not</em> by itself say any stock is cheap or expensive.
+          Memory makers (who also appear under
+          <a href="../hardware/index.html">Hardware</a>) include:
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">SK Hynix</span><span class="ticker">000660.KS</span>
+            <p>Historically the volume leader in HBM for AI accelerators — the memory half of many GPU packages.</p>
+          </li>
+          <li>
+            <span class="name">Micron</span><span class="ticker">MU</span>
+            <p>Ramping HBM share and capacity to serve the same AI packaging demand.</p>
+          </li>
+          <li>
+            <span class="name">Samsung Electronics</span><span class="ticker">005930.KS</span>
+            <p>Catching up / competing in HBM while also running logic foundry and packaging businesses elsewhere on this map.</p>
+          </li>
+        </ul>
+        <h3>EUV tools — High-NA as a later (roughly 2028–2029) theme</h3>
+        <p>
+          <a href="https://en.wikipedia.org/wiki/Extreme_ultraviolet_lithography">Extreme ultraviolet (EUV)</a>
+          scanners already print the densest layers of leading-edge AI logic.
+          <strong>High-NA EUV</strong> (higher numerical aperture — a finer “lens” for even denser patterns)
+          is the next tool wave. If leading-edge AI silicon stays hot, tool throughput and High-NA adoption
+          become more important later this decade — often framed around roughly 2028–2029 — while today’s EUV
+          installed base remains the near-term workhorse. See
+          <a href="#layer-2">lithography</a> for the company list (ASML and DUV peers).
+        </p>
+        <div class="callout warn">
+          <div class="label">Reminder</div>
+          <p style="margin:0">
+            Tight physical capacity is not a buy or sell signal. Multiples, earnings peaks, and “what’s priced in”
+            belong in your own research — not on this educational map.
+          </p>
+        </div>
       </section>
 
       <section aria-labelledby="h-who" id="who">
@@ -188,7 +267,7 @@
         <ul class="company-list">
           <li>
             <span class="name">ASML</span><span class="ticker">ASML</span>
-            <p>Near-monopoly supplier of EUV scanners used for advanced AI logic. High-NA EUV is the next capability step; export controls and customer CapEx cycles matter as much as technology.</p>
+            <p>Near-monopoly supplier of EUV scanners used for advanced AI logic. High-NA EUV (finer patterning) is the next capability step — more of a roughly 2028–2029 adoption story if leading-edge AI silicon stays hot; today’s EUV tools remain the near-term bottleneck. Export controls and customer CapEx cycles matter as much as technology.</p>
           </li>
           <li>
             <span class="name">Nikon</span><span class="ticker">7731.T</span>
@@ -282,6 +361,8 @@
           Foundries do some of this in-house; specialists called
           <a href="https://en.wikipedia.org/wiki/Outsourced_semiconductor_assembly_and_test">outsourced semiconductor assembly and test (OSAT)</a>
           companies do the rest.
+          Industry briefings still describe CoWoS-class capacity as tight into about 2027 — see
+          <a href="#bottlenecks">Near-term bottlenecks</a>.
         </p>
         <ul class="company-list">
           <li>
@@ -295,6 +376,12 @@
           <li>
             <span class="name">Amkor Technology</span><span class="ticker">AMKR</span>
             <p>Large U.S.-listed OSAT with full-spectrum packaging and expanding advanced / AI-oriented capacity (including U.S. footprint plans).</p>
+          </li>
+          <li>
+            <span class="name">Intel (EMIB-T)</span><span class="ticker">INTC</span>
+            <p>
+            <a href="https://en.wikipedia.org/wiki/Embedded_multi-die_interconnect_bridge">Embedded multi-die interconnect bridge (EMIB)</a>
+            / EMIB-T — Intel’s chiplet packaging approach as an alternative path to large-interposer CoWoS-style assembly.</p>
           </li>
           <li>
             <span class="name">JCET Group</span>
