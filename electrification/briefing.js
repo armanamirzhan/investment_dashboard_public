@@ -137,3 +137,165 @@
     if (!pop.hidden && openAbbr) place(openAbbr);
   });
 })();
+
+(function () {
+  var figure = document.getElementById("diagram-overview");
+  if (!figure) return;
+
+  var panel = document.getElementById("stage-panel");
+  var titleEl = document.getElementById("stage-panel-title");
+  var summaryEl = document.getElementById("stage-panel-summary");
+  var companiesWrap = document.getElementById("stage-panel-companies");
+  var companyList = document.getElementById("stage-panel-company-list");
+  var closeBtn = document.getElementById("stage-panel-close");
+  if (!panel || !titleEl || !summaryEl || !companyList || !closeBtn) return;
+
+  var stagesById = {};
+  var activeId = null;
+  var lastFocus = null;
+  var dataReady = false;
+
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function setActiveHotspot(id) {
+    figure.querySelectorAll(".stage-hotspot.is-active").forEach(function (g) {
+      g.classList.remove("is-active");
+      g.setAttribute("aria-expanded", "false");
+    });
+    if (!id) return;
+    figure.querySelectorAll('.stage-hotspot[data-stage="' + id + '"]').forEach(function (g) {
+      g.classList.add("is-active");
+      g.setAttribute("aria-expanded", "true");
+    });
+  }
+
+  function renderCompanies(companies) {
+    companyList.innerHTML = "";
+    if (!companies || !companies.length) {
+      companiesWrap.hidden = true;
+      return;
+    }
+    companiesWrap.hidden = false;
+    companies.forEach(function (c) {
+      var li = document.createElement("li");
+      var html = "<strong>" + esc(c.name) + "</strong>";
+      if (c.ticker) html += ' <span class="co-ticker">' + esc(c.ticker) + "</span>";
+      if (c.note) html += '<span class="co-note">' + esc(c.note) + "</span>";
+      li.innerHTML = html;
+      companyList.appendChild(li);
+    });
+  }
+
+  function closePanel(restoreFocus) {
+    if (panel.hidden) return;
+    panel.hidden = true;
+    figure.classList.remove("stage-panel-open");
+    setActiveHotspot(null);
+    activeId = null;
+    if (restoreFocus !== false && lastFocus && typeof lastFocus.focus === "function") {
+      try { lastFocus.focus(); } catch (e) {}
+    }
+    lastFocus = null;
+  }
+
+  function openPanel(stage, fromEl) {
+    if (!stage) return;
+    titleEl.textContent = stage.title || stage.id;
+    summaryEl.textContent = stage.summary || "";
+    renderCompanies(stage.companies || []);
+    companiesWrap.open = false;
+    panel.hidden = false;
+    figure.classList.add("stage-panel-open");
+    setActiveHotspot(stage.id);
+    activeId = stage.id;
+    lastFocus = fromEl || lastFocus;
+    // Focus close control for keyboard users; keep panel in view
+    closeBtn.focus();
+    try {
+      panel.scrollIntoView({ block: "nearest", behavior: "smooth" });
+    } catch (e) {
+      panel.scrollIntoView(false);
+    }
+  }
+
+  function toggleStage(id, fromEl) {
+    if (!id || !dataReady) return;
+    if (activeId === id && !panel.hidden) {
+      closePanel(true);
+      return;
+    }
+    var stage = stagesById[id];
+    if (!stage) return;
+    openPanel(stage, fromEl);
+  }
+
+  function hotspotFromEvent(e) {
+    var t = e.target;
+    if (!t || !t.closest) return null;
+    return t.closest(".stage-hotspot[data-stage]");
+  }
+
+  figure.addEventListener("click", function (e) {
+    var g = hotspotFromEvent(e);
+    if (!g) return;
+    e.preventDefault();
+    e.stopPropagation();
+    toggleStage(g.getAttribute("data-stage"), g);
+  });
+
+  figure.addEventListener("keydown", function (e) {
+    var g = hotspotFromEvent(e);
+    if (!g) return;
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleStage(g.getAttribute("data-stage"), g);
+    }
+  });
+
+  closeBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    closePanel(true);
+  });
+
+  // Escape closes stage panel first (capture), before abbr popover
+  document.addEventListener("keydown", function (e) {
+    if (e.key !== "Escape") return;
+    if (panel.hidden) return;
+    e.preventDefault();
+    closePanel(true);
+  }, true);
+
+  // Init aria-expanded on hotspots
+  figure.querySelectorAll(".stage-hotspot[data-stage]").forEach(function (g) {
+    g.setAttribute("aria-expanded", "false");
+    g.setAttribute("aria-controls", "stage-panel");
+  });
+
+  var jsonUrl = "stages.json";
+  fetch(jsonUrl, { credentials: "same-origin" })
+    .then(function (r) {
+      if (!r.ok) throw new Error("stages.json HTTP " + r.status);
+      return r.json();
+    })
+    .then(function (data) {
+      var list = (data && data.stages) || [];
+      list.forEach(function (s) {
+        if (s && s.id) stagesById[s.id] = s;
+      });
+      dataReady = true;
+    })
+    .catch(function (err) {
+      console.warn("Stage panel: failed to load stages.json", err);
+      titleEl.textContent = "Stage details unavailable";
+      summaryEl.textContent = "Could not load stages.json. Check that the file is deployed beside this page.";
+      renderCompanies([]);
+      dataReady = false;
+    });
+})();
