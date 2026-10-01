@@ -1,0 +1,293 @@
+/* AI Software section-local styles — pairs with ../assets/site.css */
+
+.briefing {
+  --bg-elev: #12161c;
+  --bg-card-local: #161b22;
+  --bg-soft: #1c222b;
+  --border-soft: #232a35;
+  --text: #e8eef6;
+  --text-muted: #9aa7b8;
+  --text-dim: #6b7788;
+  --accent: #5b9fd4;
+  --accent-soft: rgba(91, 159, 212, 0.14);
+  --accent-2: #7ec8a3;
+  --accent-2-soft: rgba(126, 200, 163, 0.12);
+  --warn: #d4a35b;
+  --warn-soft: rgba(212, 163, 91, 0.14);
+  --danger: #d47a7a;
+  --danger-soft: rgba(212, 122, 122, 0.12);
+  --mono: "Cascadia Code", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  --radius-local: 10px;
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 16.5px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.briefing a { color: var(--accent); text-decoration: none; }
+.briefing a:hover { text-decoration: underline; }
+
+.briefing .page-toc {
+  position: sticky;
+  top: var(--nav-height, 56px);
+  z-index: 40;
+  background: rgba(15, 17, 23, 0.94);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-local);
+  padding: 0.65rem 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.briefing .toc-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  align-items: center;
+}
+
+.briefing .toc-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin-right: 0.15rem;
+}
+
+.briefing .page-toc a {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+}
+
+.briefing .page-toc a:hover {
+  color: var(--text);
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+
+.briefing header.hero {
+  padding: 0.5rem 0 1.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.75rem;
+}
+
+.briefing .eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.briefing h1 {
+  font-size: clamp(1.65rem, 3.2vw, 2.2rem);
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-on-dark, #fff);
+}
+
+.briefing .subtitle {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 46rem;
+  margin: 0 0 1.15rem;
+}
+
+.briefing .meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0;
+}
+
+.briefing .chip {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+}
+
+.briefing .chip.warn {
+  color: var(--warn);
+  border-color: rgba(212, 163, 91, 0.35);
+  background: var(--warn-soft);
+}
+
+.briefing section {
+  margin-bottom: 0.5rem;
+}
+
+.briefing h2 {
+  font-size: 1.4rem;
+  margin: 2.4rem 0 1rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid var(--border);
+  letter-spacing: -0.015em;
+  color: var(--text-on-dark, #fff);
+  scroll-margin-top: calc(var(--nav-height, 56px) + 3.5rem);
+}
+
+.briefing #why h2,
+.briefing section:first-of-type h2 {
+  border-top: none;
+  margin-top: 1.25rem;
+}
+
+.briefing h3 {
+  font-size: 1.08rem;
+  margin: 1.5rem 0 0.6rem;
+  color: var(--text);
+  scroll-margin-top: calc(var(--nav-height, 56px) + 3.5rem);
+}
+
+.briefing p { margin: 0.7rem 0; color: var(--text); }
+.briefing .lede { font-size: 1.05rem; color: var(--text-muted); }
+
+.briefing ul, .briefing ol {
+  margin: 0.5rem 0 1rem;
+  padding-left: 1.35rem;
+  color: var(--text);
+}
+
+.briefing li { margin: 0.4rem 0; }
+.briefing strong { font-weight: 600; color: #f0f4fa; }
+
+.briefing .callout {
+  background: var(--bg-card-local);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-local);
+  padding: 1rem 1.15rem;
+  margin: 1.25rem 0;
+}
+
+.briefing .callout.warn {
+  border-left-color: var(--warn);
+  background: var(--warn-soft);
+}
+
+.briefing .callout .label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  margin-bottom: 0.35rem;
+}
+
+.briefing .stack-map {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-local);
+  padding: 0.85rem;
+  margin: 1.25rem 0 1.75rem;
+  overflow: hidden;
+}
+
+.briefing .stack-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background: #eceff3;
+}
+
+.briefing .stack-map figcaption {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  padding: 0 0.2rem;
+  line-height: 1.5;
+}
+
+.briefing .company-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.85rem 0 1.25rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.briefing .company-list > li {
+  background: var(--bg-card-local);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-local);
+  padding: 0.85rem 1rem;
+  margin: 0;
+}
+
+.briefing .company-list .name {
+  font-weight: 600;
+  color: #f0f4fa;
+}
+
+.briefing .company-list .ticker {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.78em;
+  font-weight: 600;
+  color: var(--accent-2);
+  background: var(--accent-2-soft);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  margin-left: 0.35rem;
+  vertical-align: middle;
+}
+
+.briefing .company-list p {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.briefing .layer-intro {
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.briefing .muted { color: var(--text-muted); }
+
+.briefing footer.caveat {
+  margin-top: 2.75rem;
+  padding: 1.25rem 1.35rem;
+  background: var(--danger-soft);
+  border: 1px solid rgba(212, 122, 122, 0.35);
+  border-radius: var(--radius-local);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.briefing footer.caveat strong { color: var(--danger); }
+
+.briefing abbr[title] {
+  text-decoration: none;
+  color: #8ec5e8;
+  border-bottom: 1px dashed rgba(91, 159, 212, 0.65);
+  cursor: help;
+  padding: 0 0.05em;
+}
+
+@media (max-width: 640px) {
+  .briefing { font-size: 15.5px; }
+  .briefing .company-list > li { padding: 0.75rem 0.85rem; }
+  .briefing .page-toc { top: var(--nav-height, 56px); }
+}
+
+.briefing h4 {
+  font-size: 0.95rem;
+  margin: 1.15rem 0 0.5rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}

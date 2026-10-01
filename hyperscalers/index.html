@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hyperscalers — Investment Hub</title>
-  <meta name="description" content="AI datacenter demand owners and capacity builders — integrated cloud operators (AWS, Azure, GCP, Meta, Oracle), GPU cloud providers, and colocation / datacenter REITs that host hyperscaler demand. CapEx and power-buildout framing.">
+  <title>Hyperscalers — cloud operators, GPU clouds &amp; colo</title>
+  <meta name="description" content="Layperson briefing on AI datacenter demand owners and capacity builders: integrated cloud operators (AWS, Azure, GCP, Meta, Oracle), GPU cloud / neocloud providers, and colocation / datacenter REITs. CapEx and power-buildout framing from the hub extraction. Not investment advice.">
   <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="section.css">
 </head>
 <body>
   <nav class="site-nav" aria-label="Primary">
@@ -24,30 +25,316 @@
   </nav>
 
   <main class="container">
-    <header class="page-header">
-      <h1>☁️ Hyperscalers</h1>
-      <p class="subtitle">AI datacenter demand owners and capacity builders — integrated cloud operators (AWS, Azure, GCP, Meta, Oracle), GPU cloud providers, and colocation / datacenter REITs that host hyperscaler demand. CapEx and power-buildout framing.</p>
-      <div class="meta-row">
-        <span class="chip">Section scaffold</span>
-        <span class="chip warn">Not investment advice</span>
-      </div>
-    </header>
+    <article class="briefing">
+      <nav aria-label="On this page" class="page-toc">
+        <div class="toc-inner">
+          <span class="toc-label">Jump</span>
+          <a href="#why">Why hyperscalers</a>
+          <a href="#stack">Map</a>
+          <a href="#layer-1">Cloud operators</a>
+          <a href="#layer-2">GPU clouds</a>
+          <a href="#layer-3">Colo &amp; REITs</a>
+          <a href="#layer-4">Buildouts</a>
+          <a href="#related">Related</a>
+          <a href="#disclaimer">Disclaimer</a>
+        </div>
+      </nav>
 
-    <section class="section">
-      <h2>About</h2>
-      <p>AI datacenter demand owners and capacity builders — integrated cloud operators (AWS, Azure, GCP, Meta, Oracle), GPU cloud providers, and colocation / datacenter REITs that host hyperscaler demand. CapEx and power-buildout framing.</p>
-      <p style="font-size:12px;color:var(--text-secondary);margin-top:8px">Owned by <strong>Hyperscalers</strong> per <a href="../OWNERS.md">OWNERS.md</a>. Full briefing content lands here as the section bot publishes.</p>
-    </section>
+      <header class="hero">
+        <span class="eyebrow">Technical briefing · from hub extraction · September 2026</span>
+        <h1>Hyperscalers — who builds and hosts AI capacity</h1>
+        <p class="subtitle">
+          Chips and software matter only if someone pays for floorspace, power, and clusters.
+          This page maps
+          <a href="https://en.wikipedia.org/wiki/Hyperscale_computing">hyperscale</a>
+          demand owners and capacity builders from the shared extraction —
+          integrated
+          <a href="https://en.wikipedia.org/wiki/Cloud_computing">cloud</a>
+          operators,
+          <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit">GPU</a>
+          clouds (sometimes called neoclouds), and
+          <a href="https://en.wikipedia.org/wiki/Colocation_centre">colocation</a>
+          /
+          <a href="https://en.wikipedia.org/wiki/Real_estate_investment_trust">datacenter REIT</a>
+          landlords that host that demand.
+        </p>
+        <div class="meta-row">
+          <span class="chip">Hub section · four layers</span>
+          <span class="chip">Source: hub-extraction + data/hyperscaler_*.json</span>
+          <span class="chip warn">Not investment advice</span>
+        </div>
+      </header>
 
-    <section class="section">
-      <h2>Status</h2>
-      <p>Placeholder page — taxonomy and company seeds are staged under <code>data/</code>. Briefings and trackers will appear in this folder.</p>
-    </section>
+      <section aria-labelledby="h-why" id="why">
+        <h2 id="h-why">Why hyperscalers sit in the middle of the AI stack</h2>
+        <p class="lede">
+          Foundries make chips; hardware vendors sell boxes; software vendors train models.
+          Hyperscalers are the large buyers and builders who turn those pieces into multi-gigawatt
+          <a href="https://en.wikipedia.org/wiki/Data_center">data centers</a>
+          and cloud services.
+        </p>
+        <ul>
+          <li>
+            <strong>Own and build capacity.</strong>
+            Integrated cloud operators (Amazon Web Services, Microsoft Azure, Google Cloud, Meta, Oracle)
+            spend tens to hundreds of billions of dollars a year in
+            <a href="https://en.wikipedia.org/wiki/Capital_expenditure">capital expenditure (CapEx)</a>
+            on land, power, cooling, and AI clusters.
+          </li>
+          <li>
+            <strong>Specialize in GPU rental.</strong>
+            GPU cloud providers (CoreWeave, Lambda, and peers) run dense accelerator fleets —
+            often leasing space and power from colo landlords while selling training and inference capacity to labs and enterprises.
+          </li>
+          <li>
+            <strong>Host the footprint.</strong>
+            Colocation providers and datacenter REITs own facilities and interconnection hubs;
+            in many deals the hyperscaler is a <em>tenant</em> of the colo, not the building owner.
+          </li>
+        </ul>
+        <div class="callout">
+          <div class="label">How this list was built</div>
+          <p style="margin:0">
+            Curated from <code>/workspace/hub-extraction-ai-sections.md</code>,
+            <code>data/hyperscaler_companies.json</code>, and
+            <code>data/hyperscaler_buildouts.json</code>.
+            Tickers appear when the company trades publicly.
+            CapEx and power figures are orientation snapshots from the extract — they go stale; treat them as context, not live guidance.
+            Ratings and buy/sell language from private notes are omitted on purpose.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="h-stack" id="stack">
+        <h2 id="h-stack">Four-layer map</h2>
+        <ol>
+          <li><a href="#layer-1">Integrated cloud operators</a> — AWS, Azure, GCP, Meta, Oracle (own/build at hyperscale CapEx).</li>
+          <li><a href="#layer-2">GPU cloud providers</a> — neoclouds that specialize in rented accelerator capacity.</li>
+          <li><a href="#layer-3">Colocation &amp; datacenter REITs</a> — facility owners / landlords that often host hyperscaler tenants.</li>
+          <li><a href="#layer-4">Buildout tracker</a> — CapEx and gigawatt targets from the shared buildouts seed (includes xAI Colossus).</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="h-who" id="who">
+        <h2 id="h-who">Who-is-who by layer</h2>
+
+        <h3 id="layer-1">1. Integrated cloud operators</h3>
+        <p class="layer-intro">
+          Large technology companies that own or build AI data-center capacity at massive CapEx and sell
+          <a href="https://en.wikipedia.org/wiki/Infrastructure_as_a_service">infrastructure as a service</a>,
+          platform tools, and first-party AI products. Framing here is <strong>operator / builder</strong>, not “tenant only.”
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Microsoft</span><span class="ticker">MSFT</span>
+            <p>
+              Operates
+              <a href="https://en.wikipedia.org/wiki/Microsoft_Azure">Azure</a>,
+              one of the largest cloud platforms, with a heavy AI data-center buildout and a deep partnership with OpenAI for capacity and product distribution.
+              Extract notes cite very large 2026 CapEx plans and power constraints on unfulfilled Azure orders.
+            </p>
+          </li>
+          <li>
+            <span class="name">Amazon / AWS</span><span class="ticker">AMZN</span>
+            <p>
+              <a href="https://en.wikipedia.org/wiki/Amazon_Web_Services">Amazon Web Services (AWS)</a>
+              is the long-time cloud-infrastructure leader, with a global footprint and custom AI chips (Trainium / Inferentia families)
+              alongside merchant GPUs. Extract framing: among the largest CapEx spenders directed at AI data centers.
+            </p>
+          </li>
+          <li>
+            <span class="name">Google / Alphabet</span><span class="ticker">GOOGL</span>
+            <p>
+              Runs
+              <a href="https://en.wikipedia.org/wiki/Google_Cloud_Platform">Google Cloud Platform (GCP)</a>
+              and designs
+              <a href="https://en.wikipedia.org/wiki/Tensor_Processing_Unit">Tensor Processing Units (TPUs)</a>
+              — custom silicon tightly coupled to Google’s AI stack. Extract notes highlight large CapEx guidance,
+              multi-gigawatt campus plans, and unusual energy contracts (including nuclear restart and a corporate fusion power purchase agreement).
+            </p>
+          </li>
+          <li>
+            <span class="name">Meta</span><span class="ticker">META</span>
+            <p>
+              Builds large private AI clusters for training and serving models such as
+              <a href="https://en.wikipedia.org/wiki/Llama_(language_model)">Llama</a>,
+              while also buying third-party GPU cloud capacity. Extract framing includes a multi-gigawatt Hyperion campus plan
+              and large nuclear and solar power deals.
+            </p>
+          </li>
+          <li>
+            <span class="name">Oracle</span><span class="ticker">ORCL</span>
+            <p>
+              Expanding
+              <a href="https://en.wikipedia.org/wiki/Oracle_Cloud">Oracle Cloud Infrastructure (OCI)</a>
+              aggressively, including the multi-site
+              <a href="https://en.wikipedia.org/wiki/Stargate_(AI_project)">Stargate</a>
+              AI infrastructure partnership. Extract notes emphasize high CapEx relative to revenue and a large remaining-performance-obligation backlog.
+            </p>
+          </li>
+        </ul>
+
+        <h3 id="layer-2">2. GPU cloud providers (neoclouds)</h3>
+        <p class="layer-intro">
+          Specialists that rent dense
+          <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit">GPU</a>
+          (and related accelerator) capacity for training and inference.
+          They often sit between “full hyperscaler” and “single tenant” — operating clusters while leasing buildings and megawatts from colo landlords.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">CoreWeave</span><span class="ticker">CRWV</span>
+            <p>
+              Public pure-play GPU cloud focused on AI workloads, with large contracted capacity and named enterprise / lab customers in the extract.
+              Buildout tracker lists multi-gigawatt contracted targets and high CapEx intensity.
+            </p>
+          </li>
+          <li>
+            <span class="name">Lambda</span>
+            <p>
+              Private GPU cloud aimed at AI and machine-learning teams — training and inference capacity for enterprises that do not want to build their own clusters.
+            </p>
+          </li>
+        </ul>
+        <div class="callout">
+          <div class="label">Related name outside the nine-name seed list</div>
+          <p style="margin:0">
+            <strong>xAI (Colossus)</strong> appears in the buildout tracker as a large dedicated training campus (Memphis)
+            rather than in the nine-name <code>hyperscaler_companies.json</code> set.
+            Model/product context also sits under
+            <a href="../software/index.html">Software</a>
+            (foundation-model developers). See the buildout layer below.
+          </p>
+        </div>
+
+        <h3 id="layer-3">3. Colocation &amp; datacenter REITs</h3>
+        <p class="layer-intro">
+          Facility owners and landlords. Hyperscalers frequently appear here as <strong>tenants</strong>
+          (leasing power and space) even while they self-build elsewhere.
+          These names are host infrastructure for AI workloads and interconnection, not pure “operators” in the AWS/Azure sense.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Equinix</span><span class="ticker">EQIX</span>
+            <p>
+              Largest global
+              <a href="https://en.wikipedia.org/wiki/Colocation_centre">colocation</a>
+              provider in the extract framing — hundreds of data centers across dozens of metros,
+              with interconnection that matters for AI and cloud networking.
+            </p>
+          </li>
+          <li>
+            <span class="name">Digital Realty</span><span class="ticker">DLR</span>
+            <p>
+              Major
+              <a href="https://en.wikipedia.org/wiki/Real_estate_investment_trust">datacenter REIT</a>
+              with a global portfolio and PlatformDIGITAL positioning for AI workloads.
+              Extract thesis cites leasing momentum from hyperscaler demand and a multi-gigawatt construction pipeline.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="h-build" id="layer-4">
+        <h2 id="h-build">4. Buildout tracker (CapEx &amp; power)</h2>
+        <p class="lede">
+          Snapshot from <code>data/hyperscaler_buildouts.json</code> — CapEx (billions of US dollars) and power framing in
+          <a href="https://en.wikipedia.org/wiki/Watt#Gigawatt">gigawatts (GW)</a>.
+          Figures are extract-era estimates; energy badges name the kinds of supply deals the source listed
+          (<a href="https://en.wikipedia.org/wiki/Power_purchase_agreement">power purchase agreements (PPAs)</a>, nuclear, solar, gas, fusion).
+          Cross-link power and nuclear supply chain under
+          <a href="../electrification/index.html">Electrification</a>.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Microsoft</span><span class="ticker">MSFT</span>
+            <p>
+              CapEx 2026 (extract): about $110–120B (notes also cite a higher calendar-year figure).
+              Power: roughly 2&nbsp;GW added in one recent fiscal year; ~34&nbsp;GW contracted clean energy toward 2027–2030.
+              Energy badges: nuclear PPA (Three Mile Island / Crane framing), solar.
+            </p>
+          </li>
+          <li>
+            <span class="name">Amazon / AWS</span><span class="ticker">AMZN</span>
+            <p>
+              CapEx 2026 (extract): about $200B, mostly AI data-center infrastructure.
+              Power: ~15&nbsp;GW (Q3 2025 framing) toward ~31&nbsp;GW by end of 2027.
+              Energy badges: nuclear (Susquehanna), solar, gas. Multi-gigawatt sites in Indiana and Virginia called out in the source.
+            </p>
+          </li>
+          <li>
+            <span class="name">Google / Alphabet</span><span class="ticker">GOOGL</span>
+            <p>
+              CapEx 2026 (extract): about $180–190B.
+              Power: growing fast; 2.7&nbsp;GW Michigan campus alone (2026–2028 framing); chart target ~25&nbsp;GW.
+              Energy badges: nuclear (Duane Arnold restart), large solar, fusion PPA (Commonwealth Fusion Systems).
+            </p>
+          </li>
+          <li>
+            <span class="name">Meta</span><span class="ticker">META</span>
+            <p>
+              CapEx 2026 (extract): about $125–145B.
+              Power: Hyperion campus framed at ~5&nbsp;GW by 2030; large nuclear deal book (extract: ~6.6&nbsp;GW) plus solar PPAs;
+              also expanded third-party GPU cloud contracts (e.g. CoreWeave) alongside owned clusters.
+            </p>
+          </li>
+          <li>
+            <span class="name">Oracle / Stargate</span><span class="ticker">ORCL</span>
+            <p>
+              CapEx 2026 (extract): roughly $50B class, with CapEx-to-revenue among the highest in the set.
+              Power: Stargate multi-site total framed toward ~7&nbsp;GW (2027–2029). Energy badges: grid + behind-the-meter, gas.
+            </p>
+          </li>
+          <li>
+            <span class="name">CoreWeave</span><span class="ticker">CRWV</span>
+            <p>
+              CapEx 2026 (extract): about $30–35B.
+              Power: hundreds of megawatts live across many sites, with contracted capacity framed toward multi-gigawatts by 2027 and higher long-term chart targets.
+              Energy badges: grid, gas.
+            </p>
+          </li>
+          <li>
+            <span class="name">xAI (Colossus)</span>
+            <p>
+              Dedicated training campus (Memphis) in the buildout file — CapEx extract estimate around $15B class;
+              power from hundreds of megawatts live toward ~2&nbsp;GW (2027 framing), with large on-site gas-turbine supply called out in the source.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="section related" id="related">
+        <h2>Related on this hub</h2>
+        <p>
+          Hyperscalers buy and host capacity;
+          <a href="../hardware/index.html">computation hardware</a>
+          fills the racks (optics under
+          <a href="../hardware/photonics/index.html">hardware / photonics</a>);
+          <a href="../semiconductors/index.html">semiconductor fabrication</a>
+          builds the chips;
+          <a href="../software/index.html">software</a>
+          decides the workloads; and
+          <a href="../electrification/index.html">electrification</a>
+          covers generation, grid, and nuclear fuel / SMR adjacency.
+          Weekday context:
+          <a href="../digests/index.html">AI infra digests</a>.
+        </p>
+      </section>
+
+      <footer class="caveat" id="disclaimer" aria-labelledby="h-disclaimer">
+        <p id="h-disclaimer"><strong>Not investment advice.</strong>
+          This page is an educational briefing for Arman’s public investment hub.
+          It does not recommend buying or selling any security, does not consider your objectives or risk tolerance,
+          and may be incomplete or outdated. Do your own research. Past performance and thematic narratives are not guarantees of future results.
+          Section owned by the Hyperscalers bot per <a href="../OWNERS.md">OWNERS.md</a>.
+        </p>
+      </footer>
+    </article>
   </main>
 
   <footer class="site-footer">
     <p>Public investment briefing hub · <a href="https://armanamirzhan.github.io/investment_dashboard_public/">armanamirzhan.github.io/investment_dashboard_public</a></p>
-    <p>Not investment advice. Section owned by Hyperscalers per <a href="../OWNERS.md">OWNERS.md</a>.</p>
+    <p>Not investment advice. Section owned by Hyperscalers bot per <a href="../OWNERS.md">OWNERS.md</a>.</p>
   </footer>
   <script src="../assets/site.js"></script>
 </body>
