@@ -9,8 +9,8 @@ Bot / human ownership rules for `investment_dashboard_public`. Do not commit int
 | `README.md`, `OWNERS.md` | **Website builder** | Purpose and ownership docs |
 | `data/` (shared seeds) | **Website builder** (+ section bots with prefix) | Curated JSON from private dashboard extract. Prefer prefixed files for section-only data (`electrification_*`, `smr_*`, `uranium_*`, `software_*`, `hardware_*`, `semiconductor_*`, `hyperscaler_*`) |
 | `smr/`, `uranium/`, `photonics/` (root stubs) | **Website builder** | Thin redirect pages so old bookmarks keep working |
-| `electrification/` | **AI Datacenter Power Map** | Power Map UI and briefings |
-| `electrification/uranium/` | **AI Datacenter Power Map** | Uranium / nuclear fuel cycle (merged from Uranium bot) |
+| `electrification/` | **AI Electrification** | Power Map UI and briefings |
+| `electrification/uranium/` | **AI Electrification** | Uranium / nuclear fuel cycle (merged from Uranium bot) |
 | `electrification/smr/` | **Performance tracker** | Oklo, X-Energy scorecards; no new tickers until Arman asks |
 | `hardware/` | **AI Computation Hardware** | Parent section for DC computation hardware |
 | `hardware/photonics/` | **AI Computation Hardware** | AI optical interconnects (merged from Photonics AI) |
