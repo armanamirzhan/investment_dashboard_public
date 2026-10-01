@@ -30,6 +30,7 @@
         <div class="toc-inner">
           <span class="toc-label">Jump</span>
           <a href="#why">Why hardware</a>
+          <a href="#schematic">Schematic</a>
           <a href="#stack">Stack</a>
           <a href="#scarcity">Scarcity</a>
           <a href="#layer-1">GPUs</a>
@@ -67,6 +68,189 @@
           <span class="chip warn">Not investment advice</span>
         </div>
       </header>
+
+
+      <section aria-labelledby="h-schematic" id="schematic">
+        <h2 id="h-schematic">Interactive schematic — inside an AI hall</h2>
+        <p class="lede">
+          A clickable map of computation hardware where it sits: chips inside servers, servers in racks,
+          fabrics between racks, and the liquid-cooling path out to facility heat rejection.
+          Click any cell for a short explanation, then open <strong>Companies</strong> for curated names.
+        </p>
+        <figure class="diagram" id="diagram-datacenter">
+<svg viewBox="0 0 980 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="dc-schematic-title">
+<title id="dc-schematic-title">Interactive AI datacenter hardware schematic</title>
+<rect x="12" y="12" width="956" height="616" rx="12" fill="#0f1319" stroke="#2a3340" stroke-width="1.5"/>
+<text x="32" y="40" fill="#5b9fd4" font-size="13" font-family="system-ui,sans-serif" font-weight="700">AI datacenter — computation hardware map</text>
+<text x="32" y="58" fill="#6b7788" font-size="10" font-family="system-ui,sans-serif">Click a cell for what it does · expand Companies for names · Esc closes</text>
+<g class="stage-hotspot" data-stage="hall" tabindex="0" role="button" focusable="true" aria-label="AI compute hall. Activate for stage details.">
+<rect class="box" x="720" y="28" width="220" height="36" rx="6" fill="#12161c" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="830" y="50" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">AI compute hall</text>
+</g>
+
+<g class="stage-hotspot" data-stage="facility-hx" tabindex="0" role="button" focusable="true" aria-label="Facility heat rejection. Activate for stage details.">
+<rect class="box" x="280" y="72" width="420" height="42" rx="6" fill="#1a2836" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="490.0" y="91.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Facility heat rejection</text>
+<text x="490.0" y="107.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">chillers / dry coolers → Electrification</text>
+</g>
+<g class="stage-hotspot" data-stage="cdu" tabindex="0" role="button" focusable="true" aria-label="CDU. Activate for stage details.">
+<rect class="box" x="200" y="128" width="280" height="38" rx="6" fill="#1e3a4a" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="340.0" y="145.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">CDU</text>
+<text x="340.0" y="161.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">coolant distribution unit</text>
+</g>
+<g class="stage-hotspot" data-stage="immersion" tabindex="0" role="button" focusable="true" aria-label="Immersion cooling. Activate for stage details.">
+<rect class="box" x="520" y="128" width="220" height="38" rx="6" fill="#2a2438" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="630.0" y="145.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Immersion cooling</text>
+<text x="630.0" y="161.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">optional path</text>
+</g>
+
+<!-- Rack A -->
+<g class="stage-hotspot" data-stage="rack" tabindex="0" role="button" focusable="true" aria-label="Server rack A. Activate for stage details.">
+<rect class="box" x="40" y="188" width="440" height="320" rx="6" fill="#141a22" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="260.0" y="346.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Server rack A</text>
+<text x="260.0" y="362.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">frame · power shelves · manifolds</text>
+</g>
+<g class="stage-hotspot" data-stage="tor" tabindex="0" role="button" focusable="true" aria-label="ToR switch. Activate for stage details.">
+<rect class="box" x="56" y="220" width="200" height="36" rx="6" fill="#1a3040" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="156.0" y="236.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">ToR switch</text>
+<text x="156.0" y="252.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">in-rack network hop</text>
+</g>
+<g class="stage-hotspot" data-stage="inrack-cable" tabindex="0" role="button" focusable="true" aria-label="In-rack DAC / copper. Activate for stage details.">
+<rect class="box" x="268" y="220" width="196" height="36" rx="6" fill="#243028" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="366.0" y="236.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">In-rack DAC / copper</text>
+<text x="366.0" y="252.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">short copper links</text>
+</g>
+<g class="stage-hotspot" data-stage="inrack-optics" tabindex="0" role="button" focusable="true" aria-label="In-rack / short-reach optics. Activate for stage details.">
+<rect class="box" x="56" y="264" width="408" height="32" rx="6" fill="#243040" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="260.0" y="278.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">In-rack / short-reach optics</text>
+<text x="260.0" y="294.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">pluggables · onboard · early CPO</text>
+</g>
+
+<!-- Server exploded -->
+<g class="stage-hotspot" data-stage="server" tabindex="0" role="button" focusable="true" aria-label="Server / blade. Activate for stage details.">
+<rect class="box" x="56" y="308" width="408" height="180" rx="6" fill="#182028" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="260.0" y="402.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Server / blade</text>
+</g>
+<g class="stage-hotspot" data-stage="gpu" tabindex="0" role="button" focusable="true" aria-label="GPU. Activate for stage details.">
+<rect class="box" x="68" y="340" width="90" height="48" rx="6" fill="#2a4060" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="113.0" y="362.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">GPU</text>
+<text x="113.0" y="378.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">merchant</text>
+</g>
+<g class="stage-hotspot" data-stage="asic" tabindex="0" role="button" focusable="true" aria-label="ASIC. Activate for stage details.">
+<rect class="box" x="166" y="340" width="90" height="48" rx="6" fill="#2a3858" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="211.0" y="362.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">ASIC</text>
+<text x="211.0" y="378.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">custom</text>
+</g>
+<g class="stage-hotspot" data-stage="fpga" tabindex="0" role="button" focusable="true" aria-label="FPGA. Activate for stage details.">
+<rect class="box" x="264" y="340" width="90" height="48" rx="6" fill="#2a3048" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="309.0" y="362.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">FPGA</text>
+<text x="309.0" y="378.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">offload</text>
+</g>
+<g class="stage-hotspot" data-stage="cpu" tabindex="0" role="button" focusable="true" aria-label="CPU. Activate for stage details.">
+<rect class="box" x="362" y="340" width="90" height="48" rx="6" fill="#283848" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="407.0" y="362.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">CPU</text>
+<text x="407.0" y="378.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">host</text>
+</g>
+<g class="stage-hotspot" data-stage="hbm" tabindex="0" role="button" focusable="true" aria-label="HBM. Activate for stage details.">
+<rect class="box" x="68" y="396" width="90" height="40" rx="6" fill="#3a3048" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="113.0" y="414.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">HBM</text>
+<text x="113.0" y="430.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">on-package</text>
+</g>
+<g class="stage-hotspot" data-stage="dram" tabindex="0" role="button" focusable="true" aria-label="DRAM. Activate for stage details.">
+<rect class="box" x="166" y="396" width="90" height="40" rx="6" fill="#303848" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="211.0" y="414.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">DRAM</text>
+<text x="211.0" y="430.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">DIMMs</text>
+</g>
+<g class="stage-hotspot" data-stage="nic" tabindex="0" role="button" focusable="true" aria-label="NIC / DPU. Activate for stage details.">
+<rect class="box" x="264" y="396" width="90" height="40" rx="6" fill="#204040" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="309.0" y="414.0" text-anchor="middle" fill="#e8eef6" font-size="10" font-family="system-ui,sans-serif" font-weight="600">NIC / DPU</text>
+<text x="309.0" y="430.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">fabric attach</text>
+</g>
+<g class="stage-hotspot" data-stage="storage" tabindex="0" role="button" focusable="true" aria-label="SSD. Activate for stage details.">
+<rect class="box" x="362" y="396" width="90" height="40" rx="6" fill="#283838" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="407.0" y="414.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">SSD</text>
+<text x="407.0" y="430.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">local</text>
+</g>
+<g class="stage-hotspot" data-stage="psu" tabindex="0" role="button" focusable="true" aria-label="PSU. Activate for stage details.">
+<rect class="box" x="68" y="444" width="140" height="32" rx="6" fill="#303030" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="138.0" y="458.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">PSU</text>
+<text x="138.0" y="474.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">shelf power</text>
+</g>
+<g class="stage-hotspot" data-stage="vrm" tabindex="0" role="button" focusable="true" aria-label="VRMs. Activate for stage details.">
+<rect class="box" x="220" y="444" width="120" height="32" rx="6" fill="#383028" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="280.0" y="458.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">VRMs</text>
+<text x="280.0" y="474.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">board power</text>
+</g>
+<g class="stage-hotspot" data-stage="cold-plate" tabindex="0" role="button" focusable="true" aria-label="Cold plate. Activate for stage details.">
+<rect class="box" x="352" y="444" width="100" height="32" rx="6" fill="#1e4050" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="402.0" y="458.0" text-anchor="middle" fill="#e8eef6" font-size="10" font-family="system-ui,sans-serif" font-weight="600">Cold plate</text>
+<text x="402.0" y="474.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">on chip</text>
+</g>
+
+<!-- Rack B / cooling stack -->
+<g class="stage-hotspot" data-stage="rack" tabindex="0" role="button" focusable="true" aria-label="Server rack B. Activate for stage details.">
+<rect class="box" x="500" y="188" width="220" height="200" rx="6" fill="#141a22" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="610.0" y="286.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Server rack B</text>
+<text x="610.0" y="302.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">same internals…</text>
+</g>
+<g class="stage-hotspot" data-stage="blade-loop" tabindex="0" role="button" focusable="true" aria-label="Blade / tray loop. Activate for stage details.">
+<rect class="box" x="500" y="400" width="220" height="40" rx="6" fill="#1e3848" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="610.0" y="418.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Blade / tray loop</text>
+<text x="610.0" y="434.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">hoses · QDs</text>
+</g>
+<g class="stage-hotspot" data-stage="rack-manifold" tabindex="0" role="button" focusable="true" aria-label="Rack manifold. Activate for stage details.">
+<rect class="box" x="500" y="448" width="220" height="40" rx="6" fill="#1e4050" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="610.0" y="466.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Rack manifold</text>
+<text x="610.0" y="482.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">supply / return</text>
+</g>
+
+<!-- Between racks -->
+<g class="stage-hotspot" data-stage="fabric" tabindex="0" role="button" focusable="true" aria-label="Between-rack fabric. Activate for stage details.">
+<rect class="box" x="740" y="188" width="210" height="100" rx="6" fill="#1a3048" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="845.0" y="236.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Between-rack fabric</text>
+<text x="845.0" y="252.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">leaf / spine · IB · NVLink</text>
+</g>
+<g class="stage-hotspot" data-stage="row-optics" tabindex="0" role="button" focusable="true" aria-label="Row / hall optics. Activate for stage details.">
+<rect class="box" x="740" y="300" width="210" height="100" rx="6" fill="#243050" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="845.0" y="348.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Row / hall optics</text>
+<text x="845.0" y="364.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">fiber · engines · DSPs</text>
+</g>
+<g class="stage-hotspot" data-stage="connectors" tabindex="0" role="button" focusable="true" aria-label="Connectors & cabling. Activate for stage details.">
+<rect class="box" x="740" y="412" width="210" height="76" rx="6" fill="#243028" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="845.0" y="448.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Connectors & cabling</text>
+<text x="845.0" y="464.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">Amphenol · TE · Molex…</text>
+</g>
+
+<!-- legend strip -->
+<text x="40" y="545" fill="#6b7788" font-size="10" font-family="system-ui,sans-serif">Legend zones:</text>
+<rect x="40" y="555" width="14" height="14" rx="3" fill="#2a4060"/><text x="60" y="566" fill="#9aa7b8" font-size="10" font-family="system-ui,sans-serif">Compute silicon</text>
+<rect x="170" y="555" width="14" height="14" rx="3" fill="#1a3048"/><text x="190" y="566" fill="#9aa7b8" font-size="10" font-family="system-ui,sans-serif">Networking</text>
+<rect x="280" y="555" width="14" height="14" rx="3" fill="#1e4050"/><text x="300" y="566" fill="#9aa7b8" font-size="10" font-family="system-ui,sans-serif">Liquid cooling</text>
+<rect x="400" y="555" width="14" height="14" rx="3" fill="#243050"/><text x="420" y="566" fill="#9aa7b8" font-size="10" font-family="system-ui,sans-serif">Optical / photonics</text>
+<text x="40" y="600" fill="#6b7788" font-size="10" font-family="system-ui,sans-serif">Nested deep-dive: hardware/photonics · Facility power: electrification · Packaging/HBM scarcity: #scarcity</text>
+</svg>
+          <div class="stage-panel" id="stage-panel" hidden aria-live="polite">
+            <button type="button" class="stage-panel-close" id="stage-panel-close" aria-label="Close stage panel">×</button>
+            <h3 class="stage-panel-title" id="stage-panel-title"></h3>
+            <p class="stage-panel-summary" id="stage-panel-summary"></p>
+            <details class="stage-panel-companies" id="stage-panel-companies">
+              <summary>Companies</summary>
+              <ul id="stage-panel-company-list"></ul>
+            </details>
+            <p class="stage-panel-note">Informational Oct&nbsp;2026 baseline · not investment advice.</p>
+          </div>
+          <figcaption>
+            Figure — AI compute hall schematic.
+            <strong>Click a colored cell</strong> (or press Enter/Space when focused) for what that layer does and a curated company list.
+            Optical deep-dive:
+            <a href="photonics/index.html">Photonics</a>;
+            facility power:
+            <a href="../electrification/index.html">Electrification</a>;
+            packaging / HBM scarcity:
+            <a href="#scarcity">Scarcity</a>.
+          </figcaption>
+        </figure>
+      </section>
 
       <section aria-labelledby="h-why" id="why">
         <h2 id="h-why">Why hardware sits in the middle of the AI stack</h2>
@@ -642,5 +826,6 @@
     <p>Not investment advice. Section owned by AI Computation Hardware bot per <a href="../OWNERS.md">OWNERS.md</a>.</p>
   </footer>
   <script src="../assets/site.js"></script>
+  <script src="schematic.js"></script>
 </body>
 </html>

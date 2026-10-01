@@ -1,0 +1,696 @@
+{
+  "version": "2026-10",
+  "disclaimer": "Informational October 2026 baseline. Not investment advice.",
+  "stages": [
+    {
+      "id": "hall",
+      "title": "AI compute hall",
+      "summary": "The room inside the data center where racks of AI servers sit. Facility power and outdoor cooling enter at the edges; this page focuses on the gear inside the hall \u2014 chips, boxes, fabrics, and liquid cooling \u2014 not the grid transformers and chillers covered under Electrification.",
+      "companies": [
+        {
+          "name": "Equinix / Digital Realty (colo landlords)",
+          "ticker": "",
+          "note": "Own many halls that host hyperscaler and neocloud racks \u2014 see Hyperscalers"
+        },
+        {
+          "name": "Hyperscalers (AWS, Azure, GCP, Meta, \u2026)",
+          "ticker": "",
+          "note": "Design and operate dedicated AI halls \u2014 see Hyperscalers section"
+        }
+      ]
+    },
+    {
+      "id": "rack",
+      "title": "Server rack",
+      "summary": "A tall frame that holds servers, networking, power shelves, and often liquid-cooling manifolds. AI racks can draw tens of kilowatts; liquid cooling and dense power shelves are common. Rack-scale GPU systems (for example NVIDIA NVL-class designs) treat the whole rack as one compute unit.",
+      "companies": [
+        {
+          "name": "Super Micro Computer",
+          "ticker": "SMCI",
+          "note": "AI racks and liquid-cooled rack designs"
+        },
+        {
+          "name": "Dell Technologies",
+          "ticker": "DELL",
+          "note": "PowerEdge racks and enterprise AI systems"
+        },
+        {
+          "name": "HPE",
+          "ticker": "HPE",
+          "note": "Enterprise racks and AI infrastructure"
+        },
+        {
+          "name": "Foxconn / Quanta / Wiwynn",
+          "ticker": "",
+          "note": "ODM rack and tray assembly for cloud buyers"
+        }
+      ]
+    },
+    {
+      "id": "server",
+      "title": "Server / blade chassis",
+      "summary": "The metal box (1U\u20134U or a tray in a rack-scale system) that holds the motherboard, accelerators, memory, network cards, local storage, and power supplies. OEMs brand and support them; ODMs often design and assemble the boards.",
+      "companies": [
+        {
+          "name": "Super Micro Computer",
+          "ticker": "SMCI",
+          "note": "Custom AI servers; often first with new GPU platforms"
+        },
+        {
+          "name": "Dell Technologies",
+          "ticker": "DELL",
+          "note": "PowerEdge AI servers"
+        },
+        {
+          "name": "HPE",
+          "ticker": "HPE",
+          "note": "ProLiant and AI systems"
+        },
+        {
+          "name": "Lenovo",
+          "ticker": "LNVGY",
+          "note": "ThinkSystem servers"
+        },
+        {
+          "name": "Celestica",
+          "ticker": "CLS",
+          "note": "White-box / EMS assembly"
+        },
+        {
+          "name": "Foxconn, Quanta, Wistron/Wiwynn",
+          "ticker": "",
+          "note": "High-volume ODM assemblers"
+        }
+      ]
+    },
+    {
+      "id": "gpu",
+      "title": "GPUs (graphics processing units)",
+      "summary": "Merchant accelerators that do most of the matrix math for training and inference. They sit on the board or as modules (SXM / OAM-class) next to HBM stacks. Software stacks such as CUDA make ecosystem lock-in as important as raw silicon.",
+      "companies": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Dominant merchant AI GPUs (Blackwell / follow-ons)"
+        },
+        {
+          "name": "AMD",
+          "ticker": "AMD",
+          "note": "Instinct GPUs \u2014 credible #2 merchant line"
+        },
+        {
+          "name": "Intel",
+          "ticker": "INTC",
+          "note": "Gaudi accelerators (smaller share)"
+        },
+        {
+          "name": "Qualcomm",
+          "ticker": "QCOM",
+          "note": "AI200/AI250 card/rack plans in industry roadmaps"
+        }
+      ]
+    },
+    {
+      "id": "asic",
+      "title": "Custom AI ASICs",
+      "summary": "Application-specific integrated circuits designed with or for one hyperscaler (TPUs, Trainium, Maia, MTIA, and peers). They trade generality for efficiency at that buyer\u2019s workloads. Broadcom and Marvell often design the silicon; foundries and packaging are under Semiconductors.",
+      "companies": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "note": "Custom AI ASICs for hyperscalers + switch silicon"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "note": "Custom ASICs and connectivity silicon"
+        },
+        {
+          "name": "Google (TPU)",
+          "ticker": "GOOGL",
+          "note": "In-house Tensor Processing Units"
+        },
+        {
+          "name": "Amazon (Trainium / Inferentia)",
+          "ticker": "AMZN",
+          "note": "AWS custom training and inference chips"
+        },
+        {
+          "name": "Microsoft (Maia)",
+          "ticker": "MSFT",
+          "note": "Azure / Copilot-scale accelerator"
+        },
+        {
+          "name": "Meta (MTIA)",
+          "ticker": "META",
+          "note": "Meta Training and Inference Accelerator programs"
+        }
+      ]
+    },
+    {
+      "id": "fpga",
+      "title": "FPGAs (field-programmable gate arrays)",
+      "summary": "Reconfigurable chips used for networking offload, smart NICs, prototyping, and some inference or preprocessing jobs where fixed ASICs are not ready yet. Less dominant than GPUs for large training, but important in the I/O path.",
+      "companies": [
+        {
+          "name": "AMD (Xilinx)",
+          "ticker": "AMD",
+          "note": "FPGA portfolio after Xilinx acquisition"
+        },
+        {
+          "name": "Intel (Altera)",
+          "ticker": "INTC",
+          "note": "FPGA line; smart-NIC and acceleration use cases"
+        },
+        {
+          "name": "Achronix / Lattice (specialists)",
+          "ticker": "",
+          "note": "Niche / embedded FPGA suppliers"
+        }
+      ]
+    },
+    {
+      "id": "cpu",
+      "title": "Server CPUs",
+      "summary": "Host processors that run the operating system, drivers, and non-accelerator work. x86 (AMD EPYC, Intel Xeon) still dominate many AI servers; Arm designs grow where power efficiency matters.",
+      "companies": [
+        {
+          "name": "AMD",
+          "ticker": "AMD",
+          "note": "EPYC server CPUs"
+        },
+        {
+          "name": "Intel",
+          "ticker": "INTC",
+          "note": "Xeon server CPUs"
+        },
+        {
+          "name": "Ampere Computing",
+          "ticker": "",
+          "note": "Arm server CPUs for cloud efficiency"
+        },
+        {
+          "name": "Arm Holdings",
+          "ticker": "",
+          "note": "Architecture IP licensed into server CPUs"
+        }
+      ]
+    },
+    {
+      "id": "hbm",
+      "title": "HBM \u2014 high-bandwidth memory",
+      "summary": "Stacked DRAM dies sitting next to the GPU or ASIC so the accelerator is not starved for data. Through roughly 2027, HBM supply and yields are a primary throttle on how many leading accelerators can ship (see Scarcity on this page).",
+      "companies": [
+        {
+          "name": "SK Hynix",
+          "ticker": "000660.KS",
+          "note": "Leading HBM supplier to major GPU programs"
+        },
+        {
+          "name": "Samsung Electronics",
+          "ticker": "005930.KS",
+          "note": "HBM capacity expansion / share catch-up"
+        },
+        {
+          "name": "Micron Technology",
+          "ticker": "MU",
+          "note": "HBM ramp for AI GPUs"
+        }
+      ]
+    },
+    {
+      "id": "dram",
+      "title": "DRAM / system RAM",
+      "summary": "Ordinary server memory on DIMMs that holds the CPU\u2019s working set, OS, and framework state. Separate from HBM on the accelerator package, but still a large BOM line as node counts grow.",
+      "companies": [
+        {
+          "name": "Samsung Electronics",
+          "ticker": "005930.KS",
+          "note": "Largest DRAM maker"
+        },
+        {
+          "name": "SK Hynix",
+          "ticker": "000660.KS",
+          "note": "Enterprise DRAM + HBM"
+        },
+        {
+          "name": "Micron Technology",
+          "ticker": "MU",
+          "note": "Datacenter DRAM focus"
+        }
+      ]
+    },
+    {
+      "id": "nic",
+      "title": "NICs & SmartNICs",
+      "summary": "Network interface cards that attach the server to Ethernet or InfiniBand. SmartNICs / DPUs offload encryption, virtualization, and some collective communication so CPUs and GPUs stay on useful work.",
+      "companies": [
+        {
+          "name": "NVIDIA (Mellanox / ConnectX / BlueField)",
+          "ticker": "NVDA",
+          "note": "InfiniBand and Ethernet NICs / DPUs"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "note": "Ethernet NIC silicon"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "note": "Connectivity and DPU-related silicon"
+        },
+        {
+          "name": "Intel",
+          "ticker": "INTC",
+          "note": "Ethernet NICs and IPU lines"
+        }
+      ]
+    },
+    {
+      "id": "storage",
+      "title": "Local / near-node storage",
+      "summary": "SSDs inside the server or JBOF shelves next to the rack for checkpoints, datasets, and scratch space. Bulk nearline hard drives and flash arrays deeper in the hall are listed under Memory & storage on this page.",
+      "companies": [
+        {
+          "name": "Pure Storage",
+          "ticker": "PSTG",
+          "note": "All-flash arrays for AI pipelines"
+        },
+        {
+          "name": "NetApp",
+          "ticker": "NTAP",
+          "note": "Enterprise storage platforms"
+        },
+        {
+          "name": "Western Digital",
+          "ticker": "WDC",
+          "note": "Nearline HDD capacity"
+        },
+        {
+          "name": "Seagate",
+          "ticker": "STX",
+          "note": "High-capacity enterprise HDDs"
+        },
+        {
+          "name": "Samsung / Micron / SK Hynix (NAND)",
+          "ticker": "",
+          "note": "SSD NAND suppliers"
+        }
+      ]
+    },
+    {
+      "id": "psu",
+      "title": "Server power supplies (PSUs)",
+      "summary": "AC\u2013DC or DC\u2013DC shelves that turn rack power into the voltages the motherboard and accelerators need before board-level VRMs take over. High-wattage redundant PSUs are standard in dense AI boxes.",
+      "companies": [
+        {
+          "name": "Delta Electronics",
+          "ticker": "2308.TW",
+          "note": "Server and rack power modules"
+        },
+        {
+          "name": "Lite-On / Bel Power / Artesyn-class suppliers",
+          "ticker": "",
+          "note": "Common OEM/ODM PSU sources"
+        },
+        {
+          "name": "Vertiv",
+          "ticker": "VRT",
+          "note": "Broader rack power distribution (overlap with cooling)"
+        }
+      ]
+    },
+    {
+      "id": "vrm",
+      "title": "VRMs & board power stages",
+      "summary": "Voltage regulator modules and power-management ICs on the board that feed GPUs and CPUs at precisely controlled low voltages and high currents. Distinct from facility UPS and switchgear (Electrification).",
+      "companies": [
+        {
+          "name": "Monolithic Power Systems",
+          "ticker": "MPWR",
+          "note": "VRMs widely used on AI GPU boards"
+        },
+        {
+          "name": "Vicor",
+          "ticker": "VICR",
+          "note": "High-density power modules"
+        },
+        {
+          "name": "Renesas",
+          "ticker": "6723.T",
+          "note": "Power-delivery modules for major GPU platforms"
+        },
+        {
+          "name": "Texas Instruments",
+          "ticker": "TXN",
+          "note": "Power-management ICs"
+        },
+        {
+          "name": "Infineon",
+          "ticker": "IFX.DE",
+          "note": "Power stages / SiC devices"
+        }
+      ]
+    },
+    {
+      "id": "tor",
+      "title": "Top-of-rack (ToR) switch",
+      "summary": "The first network hop for servers in a rack \u2014 usually Ethernet today, sometimes InfiniBand. Concentrates many server links into fewer uplinks toward leaf/spine or GPU fabrics.",
+      "companies": [
+        {
+          "name": "Arista Networks",
+          "ticker": "ANET",
+          "note": "High-speed Ethernet for cloud / AI"
+        },
+        {
+          "name": "Cisco Systems",
+          "ticker": "CSCO",
+          "note": "Ethernet switching + Silicon One"
+        },
+        {
+          "name": "NVIDIA (Spectrum / InfiniBand)",
+          "ticker": "NVDA",
+          "note": "Ethernet and InfiniBand ToR / leaf options"
+        },
+        {
+          "name": "HPE (Juniper)",
+          "ticker": "HPE",
+          "note": "Ethernet switching after Juniper acquisition"
+        }
+      ]
+    },
+    {
+      "id": "inrack-cable",
+      "title": "In-rack cables (DAC / copper)",
+      "summary": "Short copper cables (direct-attach copper, backplanes, and high-speed harnesses) that link servers to the ToR switch and link GPUs inside a rack-scale domain (NVLink copper domains, for example). Lowest latency for very short reaches.",
+      "companies": [
+        {
+          "name": "Amphenol",
+          "ticker": "APH",
+          "note": "High-speed connectors and cable assemblies"
+        },
+        {
+          "name": "TE Connectivity",
+          "ticker": "TEL",
+          "note": "Backplane and high-speed connectors"
+        },
+        {
+          "name": "Molex",
+          "ticker": "",
+          "note": "High-speed I/O and CPO-related connectors"
+        },
+        {
+          "name": "Samtec",
+          "ticker": "",
+          "note": "Specialty high-speed connectors"
+        }
+      ]
+    },
+    {
+      "id": "inrack-optics",
+      "title": "In-rack / short-reach optics",
+      "summary": "Pluggable or onboard optical modules for short hops inside a rack or between adjacent chassis when copper cannot meet density or reach. Overlaps Photonics; products are often 100G\u20131.6T-class transceivers and emerging co-packaged optics.",
+      "companies": [
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Lasers / optical engines \u2014 see Photonics scarcity"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Optical engines and components"
+        },
+        {
+          "name": "InnoLight / Eoptolink / Fabrinet",
+          "ticker": "",
+          "note": "Transceiver volume suppliers (Photonics map)"
+        },
+        {
+          "name": "NVIDIA / Broadcom (CPO directions)",
+          "ticker": "",
+          "note": "Co-packaged optics on switches"
+        }
+      ]
+    },
+    {
+      "id": "fabric",
+      "title": "Between-rack fabric (leaf / spine / GPU fabric)",
+      "summary": "The network that stitches many racks into one training or inference cluster \u2014 Ethernet leaf/spine, InfiniBand, or proprietary GPU fabrics (NVLink domains extended with switches). Product lines differ from pure ToR boxes even when the brand is the same.",
+      "companies": [
+        {
+          "name": "Arista Networks",
+          "ticker": "ANET",
+          "note": "AI-oriented Ethernet leaf/spine"
+        },
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "InfiniBand, Spectrum-X, NVLink Switch"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "note": "Merchant switch ASICs inside many fabrics"
+        },
+        {
+          "name": "Cisco Systems",
+          "ticker": "CSCO",
+          "note": "Leaf/spine Ethernet + Silicon One"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "note": "Switch and custom networking silicon"
+        }
+      ]
+    },
+    {
+      "id": "row-optics",
+      "title": "Between-rack / row optical interconnect",
+      "summary": "Longer optical links (fiber + transceivers + optical DSPs) that span rows or halls when copper runs out of reach or power budget. Expected to become a dominant pinch around 2027\u20132028 after packaging and HBM ease \u2014 deep map under Photonics.",
+      "companies": [
+        {
+          "name": "Corning",
+          "ticker": "GLW",
+          "note": "Optical fiber and preforms"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Lasers / optical engines"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Optical engines"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "note": "Optical DSPs / connectivity silicon"
+        },
+        {
+          "name": "AXT",
+          "ticker": "AXTI",
+          "note": "InP / compound substrates upstream of lasers"
+        },
+        {
+          "name": "Ciena / Nokia (Infinera)",
+          "ticker": "",
+          "note": "Longer-reach optical networking platforms"
+        }
+      ]
+    },
+    {
+      "id": "cold-plate",
+      "title": "Direct-to-chip cold plates",
+      "summary": "Metal plates with coolant channels mounted on GPUs and CPUs. Heat moves into liquid instead of air heatsinks. First hardware touchpoint of liquid cooling on the silicon.",
+      "companies": [
+        {
+          "name": "CoolIT Systems",
+          "ticker": "",
+          "note": "Direct liquid cooling cold plates and loops"
+        },
+        {
+          "name": "Asetek",
+          "ticker": "",
+          "note": "Direct-to-chip liquid cooling"
+        },
+        {
+          "name": "Motivair (Schneider)",
+          "ticker": "",
+          "note": "Cold plate / CDU technology"
+        },
+        {
+          "name": "nVent",
+          "ticker": "NVT",
+          "note": "Liquid cooling components and enclosures"
+        },
+        {
+          "name": "OEM/ODM thermal teams (Supermicro, Foxconn, \u2026)",
+          "ticker": "",
+          "note": "Integrate cold plates into trays"
+        }
+      ]
+    },
+    {
+      "id": "blade-loop",
+      "title": "Blade / tray coolant loop",
+      "summary": "Hoses, quick-disconnects, and manifolds that collect cold-plate loops inside one server or GPU tray and present a single pair of fittings to the rack. Leak detection and serviceability matter as much as thermal performance.",
+      "companies": [
+        {
+          "name": "CoolIT / Asetek / Boyd-class thermal suppliers",
+          "ticker": "",
+          "note": "Tray-level manifolds and QD couplings"
+        },
+        {
+          "name": "Server OEMs & ODMs",
+          "ticker": "",
+          "note": "Design the tray plumbing into shipped SKUs"
+        }
+      ]
+    },
+    {
+      "id": "rack-manifold",
+      "title": "Rack coolant manifold",
+      "summary": "Vertical or rear manifolds that daisy-chain many servers\u2019 liquid loops to shared supply/return pipes. Often paired with rear-door heat exchangers on air-assisted racks.",
+      "companies": [
+        {
+          "name": "Vertiv",
+          "ticker": "VRT",
+          "note": "Rack and row liquid-cooling packages"
+        },
+        {
+          "name": "CoolIT Systems",
+          "ticker": "",
+          "note": "Rack manifolds and CDUs"
+        },
+        {
+          "name": "nVent",
+          "ticker": "NVT",
+          "note": "Rack liquid infrastructure"
+        },
+        {
+          "name": "Rittal / STULZ",
+          "ticker": "",
+          "note": "Rack and row cooling packages"
+        }
+      ]
+    },
+    {
+      "id": "cdu",
+      "title": "CDU \u2014 coolant distribution unit",
+      "summary": "A skid that pumps and conditions facility or secondary loop coolant, controls temperature and flow, and isolates IT liquid loops from building chilled water. One CDU often serves a row or a set of high-density racks.",
+      "companies": [
+        {
+          "name": "Vertiv",
+          "ticker": "VRT",
+          "note": "CDUs and liquid cooling systems for AI densities"
+        },
+        {
+          "name": "Schneider Electric (Motivair)",
+          "ticker": "SU.PA",
+          "note": "CDU / liquid cooling after Motivair acquisition"
+        },
+        {
+          "name": "CoolIT Systems",
+          "ticker": "",
+          "note": "CDUs for direct liquid cooling"
+        },
+        {
+          "name": "nVent",
+          "ticker": "NVT",
+          "note": "Liquid cooling distribution"
+        },
+        {
+          "name": "Johnson Controls / Delta",
+          "ticker": "",
+          "note": "Facility-adjacent cooling gear"
+        }
+      ]
+    },
+    {
+      "id": "facility-hx",
+      "title": "Heat exchanger to facility cooling",
+      "summary": "Where IT coolant hands heat to building chilled water, dry coolers, or outside air systems. This is the boundary with facility HVAC covered under Electrification \u2014 still shown here so the liquid path is complete.",
+      "companies": [
+        {
+          "name": "Vertiv",
+          "ticker": "VRT",
+          "note": "Thermal rejection and facility interfaces"
+        },
+        {
+          "name": "Schneider Electric",
+          "ticker": "SU.PA",
+          "note": "Campus cooling / EcoStruxure"
+        },
+        {
+          "name": "Johnson Controls / Carrier / STULZ / Munters",
+          "ticker": "",
+          "note": "Chillers, CRAHs, hybrid cooling"
+        },
+        {
+          "name": "Alfa Laval",
+          "ticker": "",
+          "note": "Heat-exchange equipment"
+        }
+      ]
+    },
+    {
+      "id": "immersion",
+      "title": "Immersion cooling (optional path)",
+      "summary": "Servers submerged in dielectric fluid instead of (or besides) cold plates. Useful for very high densities or retrofit cases; still a smaller share than direct-to-chip liquid in most AI deployments today.",
+      "companies": [
+        {
+          "name": "Submer",
+          "ticker": "",
+          "note": "Immersion cooling systems"
+        },
+        {
+          "name": "GRC (Green Revolution Cooling)",
+          "ticker": "",
+          "note": "Immersion tanks and fluids ecosystems"
+        },
+        {
+          "name": "Iceotope",
+          "ticker": "",
+          "note": "Precision immersion / chassis-level liquid"
+        },
+        {
+          "name": "Vertiv (immersion partnerships)",
+          "ticker": "VRT",
+          "note": "Broader thermal portfolio including immersion options"
+        }
+      ]
+    },
+    {
+      "id": "connectors",
+      "title": "Connectors & high-speed cabling",
+      "summary": "Electrical connectors and cable assemblies that carry high-speed signals between boards, cages, racks, and optical modules. Densities and lane rates rise with each GPU generation.",
+      "companies": [
+        {
+          "name": "Amphenol",
+          "ticker": "APH",
+          "note": "Datacom / AI interconnect growth"
+        },
+        {
+          "name": "TE Connectivity",
+          "ticker": "TEL",
+          "note": "High-speed backplane connectors"
+        },
+        {
+          "name": "Molex",
+          "ticker": "",
+          "note": "High-speed I/O and CPO connectors"
+        },
+        {
+          "name": "Samtec",
+          "ticker": "",
+          "note": "Specialty high-speed connectors"
+        }
+      ]
+    }
+  ]
+}
