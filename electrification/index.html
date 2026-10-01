@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Electrification — Power Map — Investment Hub</title>
-  <meta name="description" content="AI data-center electrification briefing: offsite and onsite generation, hydrogen path math, SST vs legacy conversion, in-hall DC distribution, power delivery and utility regulation, bottlenecks, and company map. September 2026 baseline. Not investment advice.">
+  <meta name="description" content="AI data-center electrification briefing: offsite and onsite generation, hydrogen path math, SST vs legacy conversion, in-hall DC distribution, power delivery and utility regulation, bottlenecks, and company map. October 2026 baseline. Not investment advice.">
   <link rel="stylesheet" href="../assets/site.css">
   <link rel="stylesheet" href="briefing.css">
 </head>
@@ -37,7 +37,9 @@
 <a href="#hydrogen">Hydrogen</a>
 <a href="#conversion">Conversion</a>
 <a href="#in-hall">In-hall <abbr data-expand="Direct Current" title="Direct Current">DC</abbr></a>
+<a href="#ac-dc-pace">AC→DC pace</a>
 <a href="#bottlenecks">Bottlenecks</a>
+<a href="#taxonomy">Taxonomy</a>
 <a href="#power-delivery">Delivery / utilities</a>
 <a href="#companies">Companies</a>
 <a href="#comparison">Compare</a>
@@ -46,7 +48,7 @@
 </div>
 </nav>
 <header class="hero">
-<span class="eyebrow">Technical briefing · September 2026 baseline</span>
+<span class="eyebrow">Technical briefing · October 2026 baseline</span>
 <h1>AI Data-Center Electrification: Generators through <abbr data-expand="Graphics Processing Unit" title="Graphics Processing Unit">GPU</abbr> Voltage Regulators</h1>
 <p class="subtitle">A single-file map of how electricity reaches AI silicon—offsite Combined-Cycle Gas Turbine (<abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr>) and grid paths, onsite fuel cells and turbines, hydrogen round-trip math, Solid-State Transformer (<abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>) versus legacy Alternating Current (<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>) conversion, and in-hall Direct Current (<abbr data-expand="Direct Current" title="Direct Current">DC</abbr>) distribution to Voltage Regulators (<abbr data-expand="Voltage Regulators" title="Voltage Regulators">VRs</abbr>).</p>
 <div class="meta-row">
@@ -75,6 +77,10 @@
 </div>
 <div class="callout" id="related-smr-uranium">
 <div class="label">Nested under Electrification</div>
+<div class="callout" id="related-semi-fab">
+<div class="label">Boundary with Semiconductor Fabrication</div>
+<p style="margin:0">This Electrification page owns power <em>delivery, conversion, generation, SST systems, DC bus, utilities</em>. <a href="../semiconductors/index.html">Semiconductor Fabrication</a> owns SiC/GaN <em>device fab</em> and SST-adjacent chip process deep-dives — do not duplicate foundry analysis here.</p>
+</div>
 <p style="margin:0"><a href="smr/index.html">SMR</a> (Oklo, X-Energy, …) and <a href="uranium/index.html">Uranium / fuel cycle</a> (China demand, KAP, Namibia, HALEU) now live under this section. Old top-level <code>/smr</code> and <code>/uranium</code> URLs redirect.</p>
 </div>
 <section aria-labelledby="h-paths" id="paths-overview">
@@ -231,7 +237,7 @@
 <summary>Companies</summary>
 <ul id="stage-panel-company-list"></ul>
 </details>
-<p class="stage-panel-note">Informational Sept&nbsp;2026 baseline · not investment advice.</p>
+<p class="stage-panel-note">Informational Oct&nbsp;2026 baseline · not investment advice.</p>
 </div>
 <figcaption>Figure 0 — Path overview. <strong>Click a stage box</strong> (or press Enter/Space when focused) for a short explanation and curated companies. Left column: generators (<abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr> offsite; turbine/genset, <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr>, and <abbr data-expand="Molten Carbonate Fuel Cell" title="Molten Carbonate Fuel Cell">MCFC</abbr>/<abbr data-expand="Phosphoric Acid Fuel Cell" title="Phosphoric Acid Fuel Cell">PAFC</abbr> onsite). Offsite: utility → separate <abbr data-expand="High-Voltage Alternating Current" title="High-Voltage Alternating Current">HVAC</abbr> (<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>/<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr> transformer) vs <abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr> (<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>/<abbr data-expand="Direct Current" title="Direct Current">DC</abbr> converter) paths, both through one shared site <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>; turbine/genset also into that same <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>. Fuel cells share one <abbr data-expand="Direct Current" title="Direct Current">DC</abbr>–<abbr data-expand="Direct Current" title="Direct Current">DC</abbr> stage in the same column as Site <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>. Both land on ~800 V <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> feeding <abbr data-expand="Graphics Processing Unit" title="Graphics Processing Unit">GPU</abbr>/<abbr data-expand="Central Processing Unit" title="Central Processing Unit">CPU</abbr> <abbr data-expand="Voltage Regulator Modules" title="Voltage Regulator Modules">VRMs</abbr>.</figcaption>
 </figure>
@@ -866,6 +872,22 @@
 </ol>
 <p>Control and power silicon for these stages includes Texas Instruments, STMicroelectronics, Infineon, and Efficient Power Conversion (EPC) where Gallium Nitride (<abbr data-expand="Gallium Nitride" title="Gallium Nitride">GaN</abbr>) appears in some stages. Collapsing the legacy <abbr data-expand="Uninterruptible Power Supply" title="Uninterruptible Power Supply">UPS</abbr>/<abbr data-expand="Power Distribution Unit" title="Power Distribution Unit">PDU</abbr>/<abbr data-expand="Power Supply Unit" title="Power Supply Unit">PSU</abbr> cascade removes redundant conversion and transfers more of the thermal budget to useful compute.</p>
 </section>
+
+<section aria-labelledby="h-acdc" id="ac-dc-pace">
+<h2 id="h-acdc">5.3 How fast is the onsite AC → onsite DC (~800&nbsp;V) transition?</h2>
+<p class="lede">Public hyperscaler / Open Compute Project (<abbr data-expand="Open Compute Project" title="Open Compute Project">OCP</abbr>) / vendor timelines (as of ~Oct&nbsp;2026) describe a <strong>staged</strong> move—not a wholesale overnight replacement of facility Alternating Current (<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>). The industry belief that new AI halls will land power on ~800&nbsp;V Direct Current (<abbr data-expand="Direct Current" title="Direct Current">DC</abbr>) (or ±400&nbsp;V bipolar) with <em>no</em> classic per-server AC Power Supply Unit (<abbr data-expand="Power Supply Unit" title="Power Supply Unit">PSU</abbr>) is directionally right for <em>new high-density AI factories</em>, but the path is phased.</p>
+<div class="callout ok">
+<div class="label">Timeline synthesis (public sources)</div>
+<ul style="margin:0.35rem 0 0;padding-left:1.2rem">
+<li><strong>2025–mid 2026:</strong> NVIDIA, Google, and Microsoft drive <abbr data-expand="Open Compute Project" title="Open Compute Project">OCP</abbr> Low-Voltage Direct Current (<abbr data-expand="Low-Voltage Direct Current" title="Low-Voltage Direct Current">LVDC</abbr>) / 800&nbsp;VDC work after March&nbsp;2025 presentations; first <abbr data-expand="Low-Voltage Direct Current" title="Low-Voltage Direct Current">LVDC</abbr> white paper; MVAC→800&nbsp;VDC conversion workstream; Solid-State Transformer (<abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>) spec v0.3 shared with the community (OCP blog, Aug&nbsp;2026).</li>
+<li><strong>H2 2026 → 2027:</strong> <strong>Sidecar / side power rack</strong> path—convert existing 480&nbsp;VAC locally to ±400 or 0–800&nbsp;VDC beside the compute rack, preserving most upstream AC. Vertiv cites portfolio commercialization in H2&nbsp;2026 and deployment ramp through 2027 (PowerDirect-class 400–900&nbsp;kW sidecars). NVIDIA targets 800&nbsp;V HVDC infrastructure alongside Kyber rack-scale systems starting ~2027.</li>
+<li><strong>~2028–2029+:</strong> Facility-wide / data-hall <strong>direct Medium-Voltage Alternating Current (<abbr data-expand="Medium-Voltage Alternating Current" title="Medium-Voltage Alternating Current">MVAC</abbr>) → 800&nbsp;VDC</strong> via MW-scale transformer-rectifiers or <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> skids (OCP path&nbsp;B). This is when “no AC PSU in servers” becomes the default for purpose-built AI factories rather than a retrofit option.</li>
+</ul>
+</div>
+<p><strong>How fast in practice?</strong> Expect <em>material</em> sidecar / rack-adjacent 800&nbsp;VDC volume in new AI densification from <strong>~2027</strong>, with facility-native 800&nbsp;VDC halls scaling through <strong>~2028–2030</strong>. Existing AC halls are not forklift-upgraded overnight—OCP explicitly frames 800&nbsp;VDC as an additional deployment option that coexists with AC. “No AC PSU” applies first to 800&nbsp;VDC-native racks (power conversion moves to sidecar or perimeter), not to every legacy server in the fleet.</p>
+<p class="dim">Primary public references used for this synthesis: <a href="https://www.opencompute.org/blog/powering-the-next-era-of-ai-how-google-microsoft-and-nvidia-are-standardizing-and-accelerating-the-industry-transition-to-lvdc" rel="noopener noreferrer" target="_blank">OCP LVDC / 800&nbsp;VDC collaboration post (Google, Microsoft, NVIDIA; Aug&nbsp;2026)</a>; NVIDIA 800&nbsp;V HVDC architecture technical blog (Kyber ~2027 framing); Vertiv “practical path to 800&nbsp;VDC” commercialization notes. Dates and product names can slip—treat as industry trajectory, not a procurement schedule.</p>
+</section>
+
 <section aria-labelledby="h-bottle" id="bottlenecks">
 <h2 id="h-bottle">7. Bottlenecks</h2>
 <div class="grid-2">
@@ -885,12 +907,37 @@
 <h4>Interconnects &amp; time-to-power</h4>
 <p class="muted">Utility interconnection queues and switchgear can dominate schedule. Fuel cells often win months; a month early on 1 GW AI can be ~$1–2 B compute context.</p>
 </div>
+<div class="card">
+<h4>MV switchgear / substation gear</h4>
+<p class="muted">Engineered medium-voltage switchgear and specialty gear remain elevated lead-time items. With large power transformers, this is a binding schedule gate through ~2027 — red-framed stages on the diagrams.</p>
+</div>
+<div class="card">
+<h4>800&nbsp;VDC conversion gear (near-term watch)</h4>
+<p class="muted">Sidecar / LLC / busway / connector supply must scale with Kyber-class and OCP Diablo paths from ~2027. Yellow-framed dc-bus / llc / site-sst stages. SiC <em>device fab</em> deep-dives live under <a href="../semiconductors/index.html">Semiconductor Fabrication</a> — this page owns SST <em>systems</em> and power delivery.</p>
+</div>
 </div>
 <p>Additional friction: <abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr> converter-station cost/lead time for long offsite links; H<sub>2</sub> embrittlement if someone forces a molecule path; platinum group metals for <abbr data-expand="Proton Exchange Membrane" title="Proton Exchange Membrane">PEM</abbr> (niche for AI baseload); skilled labor for <abbr data-expand="Medium Voltage" title="Medium Voltage">MV</abbr> <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> commissioning as products scale ~2027–2029.</p>
 </section>
+
+<section aria-labelledby="h-tax" id="taxonomy">
+<h2 id="h-tax">Research taxonomy (visual marks) — not investment advice</h2>
+<p>Color frames and ticker marks on the diagrams and company lists are a <strong>personal research taxonomy</strong> for Arman&nbsp;A’s study of electrification bottlenecks. They encode scarcity timing and a sparse judgment of franchise quality / whether demand looks under-priced in public narratives as of ~Oct&nbsp;2026. <strong>They are not ratings from a broker, not buy/sell recommendations, and not investment advice.</strong></p>
+<div class="taxonomy-legend" role="list">
+<div role="listitem"><span class="swatch scarce" aria-hidden="true"></span><strong>Red frame</strong> — stage in extreme demand / scarcity <em>right now</em> (legacy Cu-Fe transformers; MV switchgear).</div>
+<div role="listitem"><span class="swatch watch" aria-hidden="true"></span><strong>Yellow frame</strong> — stage expected to bottleneck near-term (~2027–2029): SST scale-up, 800&nbsp;V bus/LLC gear, onsite SOFC/turbine capacity, cooling path, T&amp;D EPC.</div>
+<div role="listitem"><span class="swatch grey" aria-hidden="true"></span><strong>Grey ticker</strong> — default. Every ticker links to Fidelity quote research when a usable symbol exists.</div>
+<div role="listitem"><span class="swatch rated" aria-hidden="true"></span><strong>Dark green ticker</strong> — sparse “extremely good franchise / setup” marks (quality of franchise + structural role). Few on purpose.</div>
+<div role="listitem"><span class="swatch rainbow" aria-hidden="true"></span><strong>Rainbow ticker</strong> — extreme future demand expected, and public valuation narratives look <em>not yet fully priced</em>. Click the <em>company name</em> to expand: when / for what / why critical / why demand lands there.</div>
+</div>
+<div class="callout methodology-box warn">
+<div class="label">Methodology (multi-pass)</div>
+<p style="margin:0">Pass&nbsp;1 mapped the full power chain (generation → T&amp;D → site SST/DC–DC → 800&nbsp;V bus → board power → cooling → utilities) and filled company gaps (Vicor, Flex, Advanced Energy, nVent, Quanta, Modine, cooling OEMs, MV switchgear, T&amp;D EPC). Pass&nbsp;2 concentrated on delivery / 800&nbsp;V / SST. Pass&nbsp;3 deep-read hot names against scarcity evidence. Pass&nbsp;4 re-checked breadth so concentration did not orphan accurate coverage. Prefer fewer green/rainbow marks when evidence is thin. Full decision log: <a href="analysis-notes.md">analysis-notes.md</a>.</p>
+</div>
+</section>
+
 <section aria-labelledby="h-power-delivery" id="power-delivery">
 <h2 id="h-power-delivery">8. Power delivery, grid interconnection &amp; utility regulation</h2>
-<p class="lede">Even when generation exists somewhere on the system, an AI campus still needs <strong>power delivery</strong>—transformers, switchgear, electrical distribution, and interconnection work that moves megawatts from the fence to the hall. Those buildout lead times are a binding capacity constraint through roughly <strong>~2027</strong> in many market narratives. Separately, <strong>regulated utilities</strong> earn under Public Utility Commission rate frameworks, which is why most of them do not trade like pure AI-themed names even when data-center load is the growth story. Figures below are September&nbsp;2026 briefing notes—market context, not recommendations.</p>
+<p class="lede">Even when generation exists somewhere on the system, an AI campus still needs <strong>power delivery</strong>—transformers, switchgear, electrical distribution, and interconnection work that moves megawatts from the fence to the hall. Those buildout lead times are a binding capacity constraint through roughly <strong>~2027</strong> in many market narratives. Separately, <strong>regulated utilities</strong> earn under Public Utility Commission rate frameworks, which is why most of them do not trade like pure AI-themed names even when data-center load is the growth story. Figures below are October&nbsp;2026 briefing notes—market context, not recommendations.</p>
 <div class="callout">
 <div class="label">Boundary with Hyperscalers</div>
 <p style="margin:0">This section covers <em>who sells delivery gear</em> and <em>how utility regulation works</em>. Hyperscalers as offtakers, Power Purchase Agreements (<abbr data-expand="Power Purchase Agreement" title="Power Purchase Agreement">PPAs</abbr>), and the demand-side Ratepayer Protection framing live under <a href="../hyperscalers/index.html#layer-5">Hyperscalers · Offtake, PPAs &amp; ratepayer protection</a>. Cross-link; the company hop map in <a href="#companies">§9</a> still lists tickers by physical role.</p>
@@ -904,14 +951,14 @@
 <li><strong>Legacy copper-steel transformers</strong> (50/60&nbsp;Hz facility and grid units) carry multi-year lead times—often cited in the <strong>2–5&nbsp;year</strong> class on this page’s bottlenecks. That is a different product class from high-frequency Solid-State Transformers (<abbr data-expand="Solid-State Transformers" title="Solid-State Transformers">SSTs</abbr>), which are still scaling commercially toward the late 2020s.</li>
 <li><strong>Switchgear, skilled labor, and utility process</strong> sit on the critical path: studies, substation upgrades, and protection coordination cannot be skipped because silicon is ready.</li>
 </ul>
-<p>Companies often discussed in AI data-center <em>delivery</em> (who sells what in the chain). Optional valuation multiples below are rough <strong>enterprise value / sales</strong> style context from September&nbsp;2026 briefing notes—“~N× sales” means the market’s enterprise value is about N times annual sales. Qualitative “partially / largely priced in” labels are narrative judgments from those notes about how much of the AI-power story already shows up in pricing. <strong>Not investment advice</strong>; multiples move daily and are not buy/sell signals.</p>
+<p>Companies often discussed in AI data-center <em>delivery</em> (who sells what in the chain). Optional valuation multiples below are rough <strong>enterprise value / sales</strong> style context from October&nbsp;2026 briefing notes—“~N× sales” means the market’s enterprise value is about N times annual sales. Qualitative “partially / largely priced in” labels are narrative judgments from those notes about how much of the AI-power story already shows up in pricing. <strong>Not investment advice</strong>; multiples move daily and are not buy/sell signals.</p>
 <table>
 <thead>
 <tr>
 <th>Company</th>
 <th>Ticker (baseline)</th>
 <th>Role in the delivery chain</th>
-<th>Market context (~Sept&nbsp;2026 notes)</th>
+<th>Market context (~Oct&nbsp;2026 notes)</th>
 </tr>
 </thead>
 <tbody>
@@ -963,14 +1010,26 @@
 <td>Rack power and liquid-cooling systems adjacent to the power path</td>
 <td>Partially–largely (cooling + power narrative)</td>
 </tr>
+<tr>
+<td><strong>Quanta Services</strong></td>
+<td class="ticker">PWR</td>
+<td>T&amp;D / interconnect EPC — builds the physical delivery path</td>
+<td>Grid-buildout narrative; cyclicality matters</td>
+</tr>
+<tr>
+<td><strong>nVent</strong></td>
+<td class="ticker">NVT</td>
+<td>Enclosures, connection, liquid-cooling adjacency</td>
+<td>Partial AI-cooling / electrical narrative</td>
+</tr>
 </tbody>
 </table>
-<p class="dim">See also <a href="#bottlenecks">§7 Bottlenecks</a> (legacy transformer lead times) and clickable stage boxes on the path diagrams for curated hop-level company lists. Multiples and “priced in” labels: September&nbsp;2026 briefing notes only.</p>
+<p class="dim">See also <a href="#bottlenecks">§7 Bottlenecks</a> (legacy transformer lead times) and clickable stage boxes on the path diagrams for curated hop-level company lists. Multiples and “priced in” labels: October&nbsp;2026 briefing notes only.</p>
 
 <h3 id="utility-regulation">8.2 Utility regulation — why most utilities aren’t surging like pure AI names</h3>
 <p>Most U.S. electric utilities do not freely set customer prices. <strong>Public utility commissions</strong> (state regulators) approve rates in <strong>rate cases</strong>, aiming for a roughly <strong>~9–10% return on equity (<abbr data-expand="Return on Equity" title="Return on Equity">ROE</abbr>)</strong>—the allowed profit rate on the equity portion of the rate base. Commissions often <em>haircut</em> what utilities request: lower allowed <abbr data-expand="Return on Equity" title="Return on Equity">ROE</abbr>, disallowed capital, or both. That regulatory ceiling is the main reason regulated utilities usually do not re-rate like unconstrained “AI pure-play” equities even when data-center load is rising.</p>
 <div class="callout warn">
-<div class="label">2025 rate-case context (Sept&nbsp;2026 briefing notes)</div>
+<div class="label">2025 rate-case context (Oct&nbsp;2026 briefing notes)</div>
 <p style="margin:0">Industry profits around <strong>$63.1&nbsp;B</strong>, but about <strong>$3.6&nbsp;B</strong> cut from rate requests (~5× the 2021 haircut level). Disallowances in roughly <strong>~46%</strong> of cases; <abbr data-expand="Return on Equity" title="Return on Equity">ROE</abbr> haircuts often cited in the <strong>78–85 basis points</strong> range (a basis point is 0.01 percentage points). Political backdrop: <strong>36 state governor races</strong> in November&nbsp;2026 keep rate politics salient. Treat as briefing-note context, not audited totals.</p>
 </div>
 <p>Three common structures (same allowed-<abbr data-expand="Return on Equity" title="Return on Equity">ROE</abbr> logic for wires, different exposure to wholesale power prices for generation):</p>
@@ -981,7 +1040,7 @@
 </ul>
 <p><strong>Beneficiary-pays.</strong> More than <strong>25 utilities across 19 U.S. states</strong> have filed data-center-specific or beneficiary-pays tariffs: the large load that drives upgrades should cover related network costs so ordinary retail ratepayers are not stuck with the bill. The White House <strong>Ratepayer Protection Pledge</strong> (March&nbsp;2026) asks hyperscalers to <em>build, bring, or buy</em> generation (and related infrastructure) toward that same idea. Demand-side detail: <a href="../hyperscalers/index.html#layer-5">Hyperscalers §5</a>.</p>
 <p><strong>Large planned buildout example.</strong> NextEra–Dominion package framed around roughly <strong>$66.8&nbsp;B</strong> for “Data Center Alley” load on the order of <strong>~51&nbsp;GW</strong>—an illustration of utility-scale partnership size under regulation, not a forecast or recommendation.</p>
-<p class="dim">Utility, rate-case, and partnership figures in this subsection are September&nbsp;2026 briefing notes unless independently verified in primary filings. They can change with commission orders and company guidance updates.</p>
+<p class="dim">Utility, rate-case, and partnership figures in this subsection are October&nbsp;2026 briefing notes unless independently verified in primary filings. They can change with commission orders and company guidance updates.</p>
 </section>
 <section aria-labelledby="h-co" id="companies">
 <h2 id="h-co">9. Company map by hop (public tickers marked)</h2>
@@ -1013,9 +1072,16 @@
 </li>
 <li>
 <h4>Rack / blade converters and <abbr data-expand="Voltage Regulator" title="Voltage Regulator">VR</abbr> control silicon</h4>
-<p>Texas Instruments, ST, Infineon, <strong>EPC</strong> (<abbr data-expand="Gallium Nitride" title="Gallium Nitride">GaN</abbr> in some stages). Connectors/busway: Amphenol and similar. Rack power architectures: Vertiv and peers above.</p>
+<p><strong>Texas Instruments</strong> <span class="ticker">TXN</span>, ST, Infineon, <strong>Monolithic Power Systems</strong> <span class="ticker">MPWR</span>, <strong>EPC</strong> (<abbr data-expand="Gallium Nitride" title="Gallium Nitride">GaN</abbr> in some stages). High-ratio rack modules: <strong>Vicor</strong> <span class="ticker">VICR</span>, <strong>Flex</strong> <span class="ticker">FLEX</span>, <strong>Advanced Energy</strong> <span class="ticker">AEIS</span>. Connectors/busway: <strong>Amphenol</strong> <span class="ticker">APH</span>, <strong>nVent</strong> <span class="ticker">NVT</span>. Rack power architectures: Vertiv and peers above.</p>
 </li>
 </ol>
+
+<h3 class="hop-inline">Cooling power path</h3>
+<p><strong>Vertiv</strong> <span class="ticker">VRT</span> (CDU / liquid), <strong>nVent</strong> <span class="ticker">NVT</span>, <strong>Modine</strong> <span class="ticker">MOD</span>, facility plant: <strong>Trane</strong> <span class="ticker">TT</span>, <strong>Carrier</strong> <span class="ticker">CARR</span>, <strong>Johnson Controls</strong> <span class="ticker">JCI</span>. Direct-to-chip specialists such as CoolIT remain mostly private.</p>
+<h3 class="hop-inline">T&amp;D / interconnect EPC</h3>
+<p><strong>Quanta Services</strong> <span class="ticker">PWR</span>, <strong>MasTec</strong> <span class="ticker">MTZ</span>, <strong>MYR Group</strong> <span class="ticker">MYRG</span> — construction capacity that lands transformers and switchgear in the field.</p>
+<h3 class="hop-inline">MV switchgear (scarce now)</h3>
+<p><strong>Eaton</strong> <span class="ticker">ETN</span>, <strong>Powell</strong> <span class="ticker">POWL</span>, <strong>Hubbell</strong> <span class="ticker">HUBB</span>, Schneider, GE Vernova, Siemens Energy, ABB — see delivery table in <a href="#power-delivery">§8</a> and red-framed stages.</p>
 <h3>Companies — compact table</h3>
 <table>
 <thead>
@@ -1128,6 +1194,32 @@
 <td>GE Vernova et al.</td>
 <td class="ticker">GEV</td>
 <td>Plus Eaton, Siemens Energy, Hitachi Energy, Schneider, Hubbell, Powell</td>
+</tr>
+
+<tr>
+<td>Vicor</td>
+<td class="ticker">VICR</td>
+<td>800&nbsp;V / ±400&nbsp;V modular DC–DC for AI racks</td>
+</tr>
+<tr>
+<td>Flex / Advanced Energy</td>
+<td class="ticker">FLEX · AEIS</td>
+<td>800&nbsp;VDC power modules / high-efficiency conversion</td>
+</tr>
+<tr>
+<td>nVent / Modine</td>
+<td class="ticker">NVT · MOD</td>
+<td>Enclosures / busway adjacency; liquid-cooling heat rejection</td>
+</tr>
+<tr>
+<td>Quanta Services</td>
+<td class="ticker">PWR</td>
+<td>T&amp;D and electric-infrastructure EPC</td>
+</tr>
+<tr>
+<td>Powell / Hubbell</td>
+<td class="ticker">POWL · HUBB</td>
+<td>Custom switchgear / utility electrical infrastructure</td>
 </tr>
 </tbody>
 </table>
@@ -1268,9 +1360,9 @@
 </dl>
 </section>
 <footer class="caveat" id="caveat">
-<strong>Not investment advice.</strong>
-  This briefing is an informational September 2026 baseline for Arman A. It is not a recommendation to buy, sell, or hold any security. Company roles, efficiencies, lead times, power-delivery valuation multiples and utility rate-case figures (September&nbsp;2026 briefing notes), market-size estimates (including Jefferies <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> figures), and partnership statuses can change; <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> performance claims vary by product and duty cycle and stacks degrade (illustrative fade ~2.4 percentage points/year and swap ~5.5 years for the Bloom-class notes above). Modeled wall-to-core percentages are order-of-magnitude chain products, not guarantees. Verify primary filings and engineering datasheets before any financial or procurement decision.
-  <p class="dim" style="margin:0.75rem 0 0">Part of the <a href="../index.html">Investment Hub</a> · Electrification · nested <a href="smr/index.html">SMR</a> / <a href="uranium/index.html">Uranium</a> · see also <a href="../hardware/photonics/index.html">Photonics</a> · September 2026 baseline.</p>
+<p><strong>Not investment advice.</strong>
+  This briefing is an informational October&nbsp;2026 baseline for Arman&nbsp;A’s public hub. It is <strong>not</strong> a recommendation to buy, sell, or hold any security. <strong>Color frames (red/yellow) and ticker marks (grey / dark green / rainbow)</strong> are a personal research taxonomy for studying scarcity and narrative pricing — not broker ratings, not price targets, and not solicitations. Company roles, efficiencies, lead times, power-delivery valuation multiples and utility rate-case figures, market-size estimates (including Jefferies <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> figures), OCP/NVIDIA/Vertiv 800&nbsp;VDC timelines, and partnership statuses can change; <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> performance claims vary by product and duty cycle and stacks degrade (illustrative fade ~2.4&nbsp;percentage points/year and swap ~5.5&nbsp;years for the Bloom-class notes above). Modeled wall-to-core percentages are order-of-magnitude chain products, not guarantees. Fidelity quote links are convenience pointers to a third-party research UI. Verify primary filings and engineering datasheets before any financial or procurement decision.
+</p>
 </footer>
     </article>
   </main>

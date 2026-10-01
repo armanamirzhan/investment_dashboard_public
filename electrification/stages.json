@@ -1,6 +1,6 @@
 {
-  "version": "2026-09",
-  "disclaimer": "Informational September 2026 baseline. Not investment advice.",
+  "version": "2026-10",
+  "disclaimer": "Informational October 2026 research taxonomy for Arman A's study. Color ratings and marks are a personal research framework — NOT investment advice, NOT recommendations to buy, sell, or hold any security.",
   "stages": [
     {
       "id": "ccgt",
@@ -10,19 +10,29 @@
         {
           "name": "Mitsubishi Heavy Industries",
           "ticker": "TSE: 7011",
-          "note": "M501 JAC large-frame gas turbines; backlog/expansion notes in baseline"
+          "note": "M501 JAC large-frame gas turbines; backlog/expansion notes in baseline",
+          "fidelity": "MHVYF"
         },
         {
           "name": "GE Vernova",
           "ticker": "GEV",
-          "note": "Gas turbines, facility switchgear and transformers"
+          "note": "Gas turbines, facility switchgear and transformers",
+          "fidelity": "GEV"
         },
         {
           "name": "Siemens Energy",
           "ticker": "ENR.DE / SMNEY",
-          "note": "Utility generation and grid equipment"
+          "note": "Utility generation and grid equipment",
+          "fidelity": "SMNEY"
+        },
+        {
+          "name": "Caterpillar",
+          "note": "Large industrial gensets also used at utility / bridging sites",
+          "ticker": "CAT",
+          "fidelity": "CAT"
         }
-      ]
+      ],
+      "scarcity": "watch"
     },
     {
       "id": "turbine",
@@ -32,19 +42,23 @@
         {
           "name": "Mitsubishi Heavy Industries",
           "ticker": "TSE: 7011",
-          "note": "MGS diesel gensets 0.5–3.4 MW (~10 s start); large-frame turbines"
+          "note": "MGS diesel gensets 0.5–3.4 MW (~10 s start); large-frame turbines",
+          "fidelity": "MHVYF"
         },
         {
           "name": "Caterpillar",
           "ticker": "CAT",
-          "note": "Industrial gensets widely used for backup and bridging capacity"
+          "note": "Industrial gensets widely used for backup and bridging capacity",
+          "fidelity": "CAT"
         },
         {
           "name": "GE Vernova",
           "ticker": "GEV",
-          "note": "Gas turbines and related power equipment"
+          "note": "Gas turbines and related power equipment",
+          "fidelity": "GEV"
         }
-      ]
+      ],
+      "scarcity": "watch"
     },
     {
       "id": "sofc",
@@ -54,7 +68,8 @@
         {
           "name": "Bloom Energy",
           "ticker": "NYSE: BE",
-          "note": "~75–85% stationary SOFC share; ScSZ electrolyte path"
+          "note": "~75–85% stationary SOFC share; ScSZ electrolyte path",
+          "fidelity": "BE"
         },
         {
           "name": "Ceres Power",
@@ -64,14 +79,16 @@
         {
           "name": "Mitsubishi Heavy Industries",
           "ticker": "TSE: 7011",
-          "note": "MEGAMIE ~210 kW class ~53% electrical"
+          "note": "MEGAMIE ~210 kW class ~53% electrical",
+          "fidelity": "MHVYF"
         },
         {
           "name": "Doosan Fuel Cell",
           "ticker": "KRX: 336260",
           "note": "SOFC-NG manufacturing; capacity expansion notes in baseline"
         }
-      ]
+      ],
+      "scarcity": "watch"
     },
     {
       "id": "mcfc-pafc",
@@ -81,13 +98,15 @@
         {
           "name": "FuelCell Energy",
           "ticker": "NASDAQ: FCEL",
-          "note": "MCFC; Siemens data-center partnership context in baseline"
+          "note": "MCFC; Siemens data-center partnership context in baseline",
+          "fidelity": "FCEL"
         },
         {
           "name": "HyAxiom PureCell",
           "note": "PAFC; private as of baseline—Nasdaq listing uncertain"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "ac-ac",
@@ -97,29 +116,43 @@
         {
           "name": "GE Vernova",
           "ticker": "GEV",
-          "note": "Grid transformers and switchgear"
+          "note": "Grid transformers and switchgear",
+          "fidelity": "GEV"
         },
         {
           "name": "Siemens Energy",
           "ticker": "ENR.DE / SMNEY",
-          "note": "Transmission and facility transformers"
+          "note": "Transmission and facility transformers",
+          "fidelity": "SMNEY"
         },
         {
           "name": "Hitachi Energy",
           "ticker": "6501.T",
-          "note": "via Hitachi; transformers and HV equipment"
+          "note": "via Hitachi; transformers and HV equipment",
+          "fidelity": "HTHIY",
+          "mark": "rainbow",
+          "rainbow": {
+            "when": "Now through ~2028 while LPT/GSU and HVDC converter capacity remains the schedule gate",
+            "forWhat": "Large power transformers, generator step-up units, and HVDC converter stations for AI campus interconnects",
+            "whyCritical": "Without substation-class Cu-Fe gear, interconnect and campus energization slip years even when GPUs and turbines are available",
+            "whyThere": "Hitachi Energy is in the small oligopoly for LPT/HVDC; Western AI-power narratives still lean GEV/ETN/VRT — own briefing notes ~2× sales and 'less so' priced in AI-delivery stories"
+          }
         },
         {
           "name": "Schneider Electric",
           "ticker": "SU.PA / SBGSY",
-          "note": "Facility and distribution transformers"
+          "note": "Facility and distribution transformers",
+          "fidelity": "SBGSY"
         },
         {
           "name": "Eaton",
           "ticker": "ETN",
-          "note": "Power distribution and transformer-adjacent gear"
+          "note": "Power distribution and transformer-adjacent gear",
+          "fidelity": "ETN",
+          "mark": "rated"
         }
-      ]
+      ],
+      "scarcity": "now"
     },
     {
       "id": "hvac",
@@ -129,29 +162,49 @@
         {
           "name": "GE Vernova",
           "ticker": "GEV",
-          "note": "Grid and transmission equipment"
+          "note": "Grid and transmission equipment",
+          "fidelity": "GEV"
         },
         {
           "name": "Siemens Energy",
           "ticker": "ENR.DE / SMNEY",
-          "note": "Transmission and facility power equipment"
+          "note": "Transmission and facility power equipment",
+          "fidelity": "SMNEY"
         },
         {
           "name": "Hitachi Energy",
           "ticker": "6501.T",
-          "note": "via Hitachi; HV transmission equipment"
+          "note": "via Hitachi; HV transmission equipment",
+          "fidelity": "HTHIY",
+          "mark": "rainbow",
+          "rainbow": {
+            "when": "Now through ~2028 while LPT/GSU and HVDC converter capacity remains the schedule gate",
+            "forWhat": "Large power transformers, generator step-up units, and HVDC converter stations for AI campus interconnects",
+            "whyCritical": "Without substation-class Cu-Fe gear, interconnect and campus energization slip years even when GPUs and turbines are available",
+            "whyThere": "Hitachi Energy is in the small oligopoly for LPT/HVDC; Western AI-power narratives still lean GEV/ETN/VRT — own briefing notes ~2× sales and 'less so' priced in AI-delivery stories"
+          }
         },
         {
           "name": "Schneider Electric",
           "ticker": "SU.PA / SBGSY",
-          "note": "Facility landing / distribution equipment"
+          "note": "Facility landing / distribution equipment",
+          "fidelity": "SBGSY"
         },
         {
           "name": "Eaton",
           "ticker": "ETN",
-          "note": "Switchgear and power distribution"
+          "note": "Switchgear and power distribution",
+          "fidelity": "ETN",
+          "mark": "rated"
+        },
+        {
+          "name": "Quanta Services",
+          "note": "T&D construction that lands HVAC corridors",
+          "ticker": "PWR",
+          "fidelity": "PWR"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "ac-dc",
@@ -161,24 +214,37 @@
         {
           "name": "Hitachi Energy",
           "ticker": "6501.T",
-          "note": "HVDC converter systems via Hitachi"
+          "note": "HVDC converter systems via Hitachi",
+          "fidelity": "HTHIY",
+          "mark": "rainbow",
+          "rainbow": {
+            "when": "Now through ~2028 while LPT/GSU and HVDC converter capacity remains the schedule gate",
+            "forWhat": "Large power transformers, generator step-up units, and HVDC converter stations for AI campus interconnects",
+            "whyCritical": "Without substation-class Cu-Fe gear, interconnect and campus energization slip years even when GPUs and turbines are available",
+            "whyThere": "Hitachi Energy is in the small oligopoly for LPT/HVDC; Western AI-power narratives still lean GEV/ETN/VRT — own briefing notes ~2× sales and 'less so' priced in AI-delivery stories"
+          }
         },
         {
           "name": "Siemens Energy",
           "ticker": "ENR.DE / SMNEY",
-          "note": "HVDC / converter-station capability"
+          "note": "HVDC / converter-station capability",
+          "fidelity": "SMNEY"
         },
         {
           "name": "GE Vernova",
           "ticker": "GEV",
-          "note": "Grid conversion equipment"
+          "note": "Grid conversion equipment",
+          "fidelity": "GEV"
         },
         {
           "name": "ABB",
           "ticker": "ABB",
-          "note": "HV and conversion heritage"
+          "note": "HV and conversion heritage",
+          "fidelity": "ABB",
+          "mark": "rated"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "hvdc",
@@ -188,24 +254,43 @@
         {
           "name": "Hitachi Energy",
           "ticker": "6501.T",
-          "note": "HVDC systems via Hitachi"
+          "note": "HVDC systems via Hitachi",
+          "fidelity": "HTHIY",
+          "mark": "rainbow",
+          "rainbow": {
+            "when": "Now through ~2028 while LPT/GSU and HVDC converter capacity remains the schedule gate",
+            "forWhat": "Large power transformers, generator step-up units, and HVDC converter stations for AI campus interconnects",
+            "whyCritical": "Without substation-class Cu-Fe gear, interconnect and campus energization slip years even when GPUs and turbines are available",
+            "whyThere": "Hitachi Energy is in the small oligopoly for LPT/HVDC; Western AI-power narratives still lean GEV/ETN/VRT — own briefing notes ~2× sales and 'less so' priced in AI-delivery stories"
+          }
         },
         {
           "name": "Siemens Energy",
           "ticker": "ENR.DE / SMNEY",
-          "note": "HVDC transmission capability"
+          "note": "HVDC transmission capability",
+          "fidelity": "SMNEY"
         },
         {
           "name": "GE Vernova",
           "ticker": "GEV",
-          "note": "Grid and transmission equipment"
+          "note": "Grid and transmission equipment",
+          "fidelity": "GEV"
         },
         {
           "name": "ABB",
           "ticker": "ABB",
-          "note": "HVDC heritage; also SST (Infinitus)"
+          "note": "HVDC heritage; also SST (Infinitus)",
+          "fidelity": "ABB",
+          "mark": "rated"
+        },
+        {
+          "name": "Quanta Services",
+          "note": "HV / interconnect construction adjacency",
+          "ticker": "PWR",
+          "fidelity": "PWR"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "site-sst",
@@ -215,34 +300,54 @@
         {
           "name": "Eaton",
           "ticker": "ETN",
-          "note": "MVSST 2.0 IEC-certified medium-voltage SST; Infineon SiC deal"
+          "note": "MVSST 2.0 IEC-certified medium-voltage SST; Infineon SiC deal",
+          "fidelity": "ETN",
+          "mark": "rated"
         },
         {
           "name": "ABB",
           "ticker": "ABB",
-          "note": "Infinitus SST; rail heritage; large patent book"
+          "note": "Infinitus SST; rail heritage; large patent book",
+          "fidelity": "ABB",
+          "mark": "rated"
         },
         {
           "name": "Delta Electronics",
           "ticker": "2308.TW",
-          "note": "Production SST in a North China AI data center (Feb 2026 baseline note)"
+          "note": "Production SST in a North China AI data center (Feb 2026 baseline note)",
+          "fidelity": "DELTY",
+          "mark": "rainbow",
+          "rainbow": {
+            "when": "~2026 H2 commercialization → 2027–2029 facility-wide 800 VDC and SST ramps",
+            "forWhat": "Production SST already in a North China AI DC; 800 VDC in-row power for Vera Rubin-class halls; SOFC-adjacent microgrids",
+            "whyCritical": "Few vendors ship both perimeter SST and rack-adjacent 800 VDC conversion at production scale",
+            "whyThere": "TW-listed (2308.TW); Western AI-electrification tape often underweights non-US listings even when product is live"
+          }
         },
         {
           "name": "Siemens Energy",
           "ticker": "ENR.DE / SMNEY",
-          "note": "Reinhausen SST partnership (Aug 2026)—not fully commercial in baseline"
+          "note": "Reinhausen SST partnership (Aug 2026)—not fully commercial in baseline",
+          "fidelity": "SMNEY"
         },
         {
           "name": "Schneider Electric",
           "ticker": "SU.PA / SBGSY",
-          "note": "Perimeter power / SST-adjacent portfolio"
+          "note": "Perimeter power / SST-adjacent portfolio",
+          "fidelity": "SBGSY"
         },
         {
           "name": "Vertiv",
           "ticker": "VRT",
-          "note": "Rack power and DC architectures"
+          "note": "Rack power and DC architectures",
+          "fidelity": "VRT"
+        },
+        {
+          "name": "DG Matrix",
+          "note": "Interport ~400 kW SST-class; ST SiC — private"
         }
-      ]
+      ],
+      "scarcity": "watch"
     },
     {
       "id": "dc-dc",
@@ -252,24 +357,30 @@
         {
           "name": "Infineon",
           "ticker": "IFX / IFNNY",
-          "note": "SiC / power devices for high-efficiency converters"
+          "note": "SiC / power devices for high-efficiency converters",
+          "fidelity": "IFNNY"
         },
         {
           "name": "STMicroelectronics",
           "ticker": "STM",
-          "note": "Power semiconductors used in DC–DC stages"
+          "note": "Power semiconductors used in DC–DC stages",
+          "fidelity": "STM"
         },
         {
           "name": "Eaton",
           "ticker": "ETN",
-          "note": "Industrial power conversion / SST-adjacent products"
+          "note": "Industrial power conversion / SST-adjacent products",
+          "fidelity": "ETN",
+          "mark": "rated"
         },
         {
           "name": "Vertiv",
           "ticker": "VRT",
-          "note": "Data-center DC power architectures"
+          "note": "Data-center DC power architectures",
+          "fidelity": "VRT"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "dc-bus",
@@ -279,24 +390,43 @@
         {
           "name": "Vertiv",
           "ticker": "VRT",
-          "note": "Rack power and DC distribution architectures"
+          "note": "Rack power and DC distribution architectures",
+          "fidelity": "VRT"
         },
         {
           "name": "Schneider Electric",
           "ticker": "SU.PA / SBGSY",
-          "note": "Facility and hall power distribution"
+          "note": "Facility and hall power distribution",
+          "fidelity": "SBGSY"
         },
         {
           "name": "Eaton",
           "ticker": "ETN",
-          "note": "Busway / power distribution products"
+          "note": "Busway / power distribution products",
+          "fidelity": "ETN",
+          "mark": "rated"
         },
         {
           "name": "Amphenol",
           "ticker": "APH",
-          "note": "Connectors and busway peers for DC halls"
+          "note": "Connectors and busway peers for DC halls",
+          "fidelity": "APH",
+          "mark": "rated"
+        },
+        {
+          "name": "nVent",
+          "note": "Busway / enclosure / connection products for DC halls",
+          "ticker": "NVT",
+          "fidelity": "NVT"
+        },
+        {
+          "name": "Hubbell",
+          "note": "Electrical infrastructure adjacent to hall distribution",
+          "ticker": "HUBB",
+          "fidelity": "HUBB"
         }
-      ]
+      ],
+      "scarcity": "watch"
     },
     {
       "id": "silicon",
@@ -306,27 +436,33 @@
         {
           "name": "NVIDIA",
           "ticker": "NVDA",
-          "note": "GPU accelerators driving AI hall power density (load context)"
+          "note": "GPU accelerators driving AI hall power density (load context)",
+          "fidelity": "NVDA"
         },
         {
           "name": "Infineon",
           "ticker": "IFX / IFNNY",
-          "note": "Power devices for VRMs and intermediate rails"
+          "note": "Power devices for VRMs and intermediate rails",
+          "fidelity": "IFNNY"
         },
         {
           "name": "STMicroelectronics",
           "ticker": "STM",
-          "note": "Power management / conversion silicon"
+          "note": "Power management / conversion silicon",
+          "fidelity": "STM"
         },
         {
           "name": "Texas Instruments",
-          "note": "VR / multiphase control silicon (common in board power)"
+          "note": "VR / multiphase control silicon (common in board power)",
+          "ticker": "TXN",
+          "fidelity": "TXN"
         },
         {
           "name": "EPC",
           "note": "GaN devices in some converter stages"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "llc",
@@ -336,28 +472,59 @@
         {
           "name": "Vertiv",
           "ticker": "VRT",
-          "note": "Rack power and DC architectures"
+          "note": "Rack power and DC architectures",
+          "fidelity": "VRT"
         },
         {
           "name": "Infineon",
           "ticker": "IFX / IFNNY",
-          "note": "SiC / power devices for high-ratio converters"
+          "note": "SiC / power devices for high-ratio converters",
+          "fidelity": "IFNNY"
         },
         {
           "name": "STMicroelectronics",
           "ticker": "STM",
-          "note": "Power semiconductors in converter stages"
+          "note": "Power semiconductors in converter stages",
+          "fidelity": "STM"
         },
         {
           "name": "Eaton",
           "ticker": "ETN",
-          "note": "Industrial / data-center power conversion"
+          "note": "Industrial / data-center power conversion",
+          "fidelity": "ETN",
+          "mark": "rated"
         },
         {
           "name": "EPC",
           "note": "GaN devices in some converter stages"
+        },
+        {
+          "name": "Vicor",
+          "note": "High-density 800 V / ±400 V DC–DC power modules for AI racks",
+          "ticker": "VICR",
+          "fidelity": "VICR",
+          "mark": "rainbow",
+          "rainbow": {
+            "when": "As 800 VDC / ±400 V sidecar and native racks scale from ~2027",
+            "forWhat": "High-density 800 V and ±400 V → 48/54 V modular DC–DC conversion inside AI racks",
+            "whyCritical": "Facility-level 800 V only helps if rack modules efficiently step to intermediate buses without reclaiming the copper/thermal budget",
+            "whyThere": "Smaller pure-play module vendor vs Vertiv/Delta systems names; 800 V demand narrative still early relative to megacap power OEMs"
+          }
+        },
+        {
+          "name": "Flex",
+          "note": "Flex Power Modules — 800 VDC and Diablo ±400 V DC/DC modules",
+          "ticker": "FLEX",
+          "fidelity": "FLEX"
+        },
+        {
+          "name": "Advanced Energy",
+          "note": "High-efficiency power conversion systems for compute/industrial",
+          "ticker": "AEIS",
+          "fidelity": "AEIS"
         }
-      ]
+      ],
+      "scarcity": "watch"
     },
     {
       "id": "vrm",
@@ -366,23 +533,34 @@
       "companies": [
         {
           "name": "Texas Instruments",
-          "note": "VR / multiphase control silicon (common in board power)"
+          "note": "VR / multiphase control silicon (common in board power)",
+          "ticker": "TXN",
+          "fidelity": "TXN"
         },
         {
           "name": "Infineon",
           "ticker": "IFX / IFNNY",
-          "note": "Power devices for VRMs and intermediate rails"
+          "note": "Power devices for VRMs and intermediate rails",
+          "fidelity": "IFNNY"
         },
         {
           "name": "STMicroelectronics",
           "ticker": "STM",
-          "note": "Power management / conversion silicon"
+          "note": "Power management / conversion silicon",
+          "fidelity": "STM"
         },
         {
           "name": "EPC",
           "note": "GaN devices in some converter stages"
+        },
+        {
+          "name": "Monolithic Power Systems",
+          "note": "Multiphase / point-of-load power ICs widely used on AI boards",
+          "ticker": "MPWR",
+          "fidelity": "MPWR"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "pipeline-ng",
@@ -392,19 +570,23 @@
         {
           "name": "Bloom Energy",
           "ticker": "NYSE: BE",
-          "note": "SOFC systems fed by pipeline NG"
+          "note": "SOFC systems fed by pipeline NG",
+          "fidelity": "BE"
         },
         {
           "name": "FuelCell Energy",
           "ticker": "NASDAQ: FCEL",
-          "note": "MCFC systems on NG / related fuels"
+          "note": "MCFC systems on NG / related fuels",
+          "fidelity": "FCEL"
         },
         {
           "name": "Mitsubishi Heavy Industries",
           "ticker": "TSE: 7011",
-          "note": "SOFC (MEGAMIE) and gas turbines using NG"
+          "note": "SOFC (MEGAMIE) and gas turbines using NG",
+          "fidelity": "MHVYF"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "grid-re",
@@ -414,19 +596,30 @@
         {
           "name": "GE Vernova",
           "ticker": "GEV",
-          "note": "Grid and renewable generation equipment context"
+          "note": "Grid and renewable generation equipment context",
+          "fidelity": "GEV"
         },
         {
           "name": "Siemens Energy",
           "ticker": "ENR.DE / SMNEY",
-          "note": "Grid / renewables equipment"
+          "note": "Grid / renewables equipment",
+          "fidelity": "SMNEY"
         },
         {
           "name": "Hitachi Energy",
           "ticker": "6501.T",
-          "note": "via Hitachi; transmission / grid equipment"
+          "note": "via Hitachi; transmission / grid equipment",
+          "fidelity": "HTHIY",
+          "mark": "rainbow",
+          "rainbow": {
+            "when": "Now through ~2028 while LPT/GSU and HVDC converter capacity remains the schedule gate",
+            "forWhat": "Large power transformers, generator step-up units, and HVDC converter stations for AI campus interconnects",
+            "whyCritical": "Without substation-class Cu-Fe gear, interconnect and campus energization slip years even when GPUs and turbines are available",
+            "whyThere": "Hitachi Energy is in the small oligopoly for LPT/HVDC; Western AI-power narratives still lean GEV/ETN/VRT — own briefing notes ~2× sales and 'less so' priced in AI-delivery stories"
+          }
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "electrolyzer",
@@ -436,19 +629,22 @@
         {
           "name": "Plug Power",
           "ticker": "PLUG",
-          "note": "PEM electrolysis / H₂ systems (vehicles & niches)"
+          "note": "PEM electrolysis / H₂ systems (vehicles & niches)",
+          "fidelity": "PLUG"
         },
         {
           "name": "Bloom Energy",
           "ticker": "NYSE: BE",
-          "note": "Also active in electrolyzer / H₂ adjacency in baseline notes"
+          "note": "Also active in electrolyzer / H₂ adjacency in baseline notes",
+          "fidelity": "BE"
         },
         {
           "name": "Ceres Power",
           "ticker": "LSE: CWR",
           "note": "SOFC tech; H₂-related licensing context"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "h2-storage",
@@ -458,14 +654,17 @@
         {
           "name": "Plug Power",
           "ticker": "PLUG",
-          "note": "H₂ production / logistics adjacency"
+          "note": "H₂ production / logistics adjacency",
+          "fidelity": "PLUG"
         },
         {
           "name": "Ballard Power",
           "ticker": "BLDP",
-          "note": "PEM systems; H₂ supply-chain context"
+          "note": "PEM systems; H₂ supply-chain context",
+          "fidelity": "BLDP"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "pem",
@@ -475,14 +674,17 @@
         {
           "name": "Plug Power",
           "ticker": "PLUG",
-          "note": "PEM fuel cells — vehicles/forklifts, not AI baseload"
+          "note": "PEM fuel cells — vehicles/forklifts, not AI baseload",
+          "fidelity": "PLUG"
         },
         {
           "name": "Ballard Power",
           "ticker": "BLDP",
-          "note": "PEM stacks — mobility / backup niches"
+          "note": "PEM stacks — mobility / backup niches",
+          "fidelity": "BLDP"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "electric-out",
@@ -492,14 +694,17 @@
         {
           "name": "Plug Power",
           "ticker": "PLUG",
-          "note": "Illustrative PEM path participant — not an AI baseload pick"
+          "note": "Illustrative PEM path participant — not an AI baseload pick",
+          "fidelity": "PLUG"
         },
         {
           "name": "Ballard Power",
           "ticker": "BLDP",
-          "note": "Illustrative PEM path participant — not an AI baseload pick"
+          "note": "Illustrative PEM path participant — not an AI baseload pick",
+          "fidelity": "BLDP"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "grid-ac",
@@ -509,24 +714,42 @@
         {
           "name": "GE Vernova",
           "ticker": "GEV",
-          "note": "Utility / facility power equipment"
+          "note": "Utility / facility power equipment",
+          "fidelity": "GEV"
         },
         {
           "name": "Siemens Energy",
           "ticker": "ENR.DE / SMNEY",
-          "note": "Grid and facility power equipment"
+          "note": "Grid and facility power equipment",
+          "fidelity": "SMNEY"
         },
         {
           "name": "Schneider Electric",
           "ticker": "SU.PA / SBGSY",
-          "note": "Facility power and distribution"
+          "note": "Facility power and distribution",
+          "fidelity": "SBGSY"
         },
         {
           "name": "Eaton",
           "ticker": "ETN",
-          "note": "Switchgear and power distribution"
+          "note": "Switchgear and power distribution",
+          "fidelity": "ETN",
+          "mark": "rated"
+        },
+        {
+          "name": "Powell Industries",
+          "note": "Custom switchgear / distribution at campus fence",
+          "ticker": "POWL",
+          "fidelity": "POWL"
+        },
+        {
+          "name": "Hubbell",
+          "note": "Utility electrical products at the interconnect",
+          "ticker": "HUBB",
+          "fidelity": "HUBB"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "facility-xfmr",
@@ -536,29 +759,49 @@
         {
           "name": "GE Vernova",
           "ticker": "GEV",
-          "note": "Facility / grid transformers"
+          "note": "Facility / grid transformers",
+          "fidelity": "GEV"
         },
         {
           "name": "Siemens Energy",
           "ticker": "ENR.DE / SMNEY",
-          "note": "Facility transformers"
+          "note": "Facility transformers",
+          "fidelity": "SMNEY"
         },
         {
           "name": "Hitachi Energy",
           "ticker": "6501.T",
-          "note": "via Hitachi; transformers"
+          "note": "via Hitachi; transformers",
+          "fidelity": "HTHIY",
+          "mark": "rainbow",
+          "rainbow": {
+            "when": "Now through ~2028 while LPT/GSU and HVDC converter capacity remains the schedule gate",
+            "forWhat": "Large power transformers, generator step-up units, and HVDC converter stations for AI campus interconnects",
+            "whyCritical": "Without substation-class Cu-Fe gear, interconnect and campus energization slip years even when GPUs and turbines are available",
+            "whyThere": "Hitachi Energy is in the small oligopoly for LPT/HVDC; Western AI-power narratives still lean GEV/ETN/VRT — own briefing notes ~2× sales and 'less so' priced in AI-delivery stories"
+          }
         },
         {
           "name": "Schneider Electric",
           "ticker": "SU.PA / SBGSY",
-          "note": "Facility and distribution transformers"
+          "note": "Facility and distribution transformers",
+          "fidelity": "SBGSY"
         },
         {
           "name": "Eaton",
           "ticker": "ETN",
-          "note": "Transformer-adjacent power gear"
+          "note": "Transformer-adjacent power gear",
+          "fidelity": "ETN",
+          "mark": "rated"
+        },
+        {
+          "name": "Powell Industries",
+          "note": "Custom distribution gear paired with transformer yards",
+          "ticker": "POWL",
+          "fidelity": "POWL"
         }
-      ]
+      ],
+      "scarcity": "now"
     },
     {
       "id": "ups",
@@ -568,24 +811,31 @@
         {
           "name": "Vertiv",
           "ticker": "VRT",
-          "note": "Data-center UPS and rack power"
+          "note": "Data-center UPS and rack power",
+          "fidelity": "VRT"
         },
         {
           "name": "Eaton",
           "ticker": "ETN",
-          "note": "UPS and power quality products"
+          "note": "UPS and power quality products",
+          "fidelity": "ETN",
+          "mark": "rated"
         },
         {
           "name": "Schneider Electric",
           "ticker": "SU.PA / SBGSY",
-          "note": "UPS / facility power portfolio"
+          "note": "UPS / facility power portfolio",
+          "fidelity": "SBGSY"
         },
         {
           "name": "ABB",
           "ticker": "ABB",
-          "note": "UPS and power protection heritage"
+          "note": "UPS and power protection heritage",
+          "fidelity": "ABB",
+          "mark": "rated"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "pdu",
@@ -595,24 +845,31 @@
         {
           "name": "Vertiv",
           "ticker": "VRT",
-          "note": "Rack PDUs and power distribution"
+          "note": "Rack PDUs and power distribution",
+          "fidelity": "VRT"
         },
         {
           "name": "Eaton",
           "ticker": "ETN",
-          "note": "PDU / distribution products"
+          "note": "PDU / distribution products",
+          "fidelity": "ETN",
+          "mark": "rated"
         },
         {
           "name": "Schneider Electric",
           "ticker": "SU.PA / SBGSY",
-          "note": "PDU and facility distribution"
+          "note": "PDU and facility distribution",
+          "fidelity": "SBGSY"
         },
         {
           "name": "Amphenol",
           "ticker": "APH",
-          "note": "Connectors used in distribution / busway peers"
+          "note": "Connectors used in distribution / busway peers",
+          "fidelity": "APH",
+          "mark": "rated"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "psu",
@@ -622,24 +879,49 @@
         {
           "name": "Delta Electronics",
           "ticker": "2308.TW",
-          "note": "Server / data-center power supplies"
+          "note": "Server / data-center power supplies",
+          "fidelity": "DELTY",
+          "mark": "rainbow",
+          "rainbow": {
+            "when": "~2026 H2 commercialization → 2027–2029 facility-wide 800 VDC and SST ramps",
+            "forWhat": "Production SST already in a North China AI DC; 800 VDC in-row power for Vera Rubin-class halls; SOFC-adjacent microgrids",
+            "whyCritical": "Few vendors ship both perimeter SST and rack-adjacent 800 VDC conversion at production scale",
+            "whyThere": "TW-listed (2308.TW); Western AI-electrification tape often underweights non-US listings even when product is live"
+          }
         },
         {
           "name": "Vertiv",
           "ticker": "VRT",
-          "note": "Rack power architectures"
+          "note": "Rack power architectures",
+          "fidelity": "VRT"
         },
         {
           "name": "Eaton",
           "ticker": "ETN",
-          "note": "Power conversion products"
+          "note": "Power conversion products",
+          "fidelity": "ETN",
+          "mark": "rated"
         },
         {
           "name": "Schneider Electric",
           "ticker": "SU.PA / SBGSY",
-          "note": "IT power / PSU-adjacent portfolio"
+          "note": "IT power / PSU-adjacent portfolio",
+          "fidelity": "SBGSY"
+        },
+        {
+          "name": "Advanced Energy",
+          "note": "Server / industrial power supplies and conversion",
+          "ticker": "AEIS",
+          "fidelity": "AEIS"
+        },
+        {
+          "name": "Flex",
+          "note": "Power modules / PSU adjacency for cloud and AI racks",
+          "ticker": "FLEX",
+          "fidelity": "FLEX"
         }
-      ]
+      ],
+      "scarcity": null
     },
     {
       "id": "bus-12v",
@@ -649,18 +931,161 @@
         {
           "name": "Vertiv",
           "ticker": "VRT",
-          "note": "Rack power distribution"
+          "note": "Rack power distribution",
+          "fidelity": "VRT"
         },
         {
           "name": "Amphenol",
           "ticker": "APH",
-          "note": "Connectors for board/rack power"
+          "note": "Connectors for board/rack power",
+          "fidelity": "APH",
+          "mark": "rated"
         },
         {
           "name": "Texas Instruments",
-          "note": "Point-of-load / intermediate rail control silicon"
+          "note": "Point-of-load / intermediate rail control silicon",
+          "ticker": "TXN",
+          "fidelity": "TXN"
+        }
+      ],
+      "scarcity": null
+    },
+    {
+      "id": "mv-switchgear",
+      "title": "Medium-voltage switchgear / substation gear",
+      "summary": "Medium-voltage (MV) switchgear, breakers, and custom electrical distribution cabinets sit between the utility interconnect and hall power. Lead times for engineered MV gear remain elevated (often many months; GIS / specialty units longer). Alongside large power transformers, switchgear is a binding schedule item for AI campuses through ~2027 — distinct from SST high-frequency conversion.",
+      "scarcity": "now",
+      "companies": [
+        {
+          "name": "Eaton",
+          "ticker": "ETN",
+          "note": "MV switchgear capacity expansions; data-center electrical backlog",
+          "fidelity": "ETN",
+          "mark": "rated"
+        },
+        {
+          "name": "Powell Industries",
+          "ticker": "POWL",
+          "note": "Custom electrical distribution / switchgear for large campus loads",
+          "fidelity": "POWL"
+        },
+        {
+          "name": "Hubbell",
+          "ticker": "HUBB",
+          "note": "Utility and industrial electrical infrastructure adjacent to delivery",
+          "fidelity": "HUBB"
+        },
+        {
+          "name": "Schneider Electric",
+          "ticker": "SU.PA / SBGSY",
+          "note": "Facility switchgear and distribution",
+          "fidelity": "SBGSY"
+        },
+        {
+          "name": "GE Vernova",
+          "ticker": "GEV",
+          "note": "Electrification segment — transformers and switchgear for data centers",
+          "fidelity": "GEV"
+        },
+        {
+          "name": "Siemens Energy",
+          "ticker": "ENR.DE / SMNEY",
+          "note": "Grid and facility switchgear / T&D gear",
+          "fidelity": "SMNEY"
+        },
+        {
+          "name": "ABB",
+          "ticker": "ABB",
+          "note": "MV switchgear and protection heritage",
+          "fidelity": "ABB",
+          "mark": "rated"
+        }
+      ]
+    },
+    {
+      "id": "cooling",
+      "title": "Cooling power path (CDU / liquid / facility thermal)",
+      "summary": "Heat removal scales with hall electrical capacity. Coolant Distribution Units (CDUs), liquid loops, facility chillers, and rear-door or direct-to-chip cooling sit beside the power path: every megawatt of IT load needs a matched thermal path. Cooling electrical draw (pumps, chillers, CDUs) is itself a power-budget line item as racks climb toward hundreds of kW.",
+      "scarcity": "watch",
+      "companies": [
+        {
+          "name": "Vertiv",
+          "ticker": "VRT",
+          "note": "Rack power + liquid cooling / CDU systems adjacent to AI halls",
+          "fidelity": "VRT"
+        },
+        {
+          "name": "nVent",
+          "ticker": "NVT",
+          "note": "Enclosures, liquid-cooling adjacency, electrical connection products",
+          "fidelity": "NVT"
+        },
+        {
+          "name": "Modine",
+          "ticker": "MOD",
+          "note": "Data-center liquid cooling / heat-rejection products",
+          "fidelity": "MOD"
+        },
+        {
+          "name": "Trane Technologies",
+          "ticker": "TT",
+          "note": "Facility chillers and HVAC for campus thermal plants",
+          "fidelity": "TT"
+        },
+        {
+          "name": "Carrier",
+          "ticker": "CARR",
+          "note": "Facility cooling / HVAC plant gear",
+          "fidelity": "CARR"
+        },
+        {
+          "name": "Johnson Controls",
+          "ticker": "JCI",
+          "note": "Building thermal and controls for large campuses",
+          "fidelity": "JCI"
+        },
+        {
+          "name": "CoolIT Systems",
+          "note": "Direct liquid cooling — private as of baseline"
+        }
+      ]
+    },
+    {
+      "id": "epc-td",
+      "title": "T&D / interconnect EPC (construction)",
+      "summary": "Engineering, procurement, and construction (EPC) firms build transmission, substation, and campus interconnect physical works. Equipment lead times matter only if crews and EPC slots can install them. Transmission and distribution construction capacity is a quieter constraint behind transformer and switchgear shortages.",
+      "scarcity": "watch",
+      "companies": [
+        {
+          "name": "Quanta Services",
+          "ticker": "PWR",
+          "note": "Large T&D and electric infrastructure EPC — data-center interconnect adjacency",
+          "fidelity": "PWR"
+        },
+        {
+          "name": "MasTec",
+          "ticker": "MTZ",
+          "note": "Infrastructure construction including power delivery",
+          "fidelity": "MTZ"
+        },
+        {
+          "name": "MYR Group",
+          "ticker": "MYRG",
+          "note": "Electrical transmission and distribution construction",
+          "fidelity": "MYRG"
         }
       ]
     }
-  ]
+  ],
+  "taxonomy": {
+    "legend": {
+      "stageScarce": "Red thick frame — stages in extreme demand / scarcity right now (Oct 2026).",
+      "stageWatch": "Yellow thick frame — stages expected to become bottlenecks near-term (~2027–2029).",
+      "tickerDefault": "Grey — default ticker styling.",
+      "tickerRated": "Solid dark green — researched judgment of extremely good franchise quality + setup (public consensus + structural role). Sparse by design.",
+      "tickerRainbow": "Rainbow — extreme future demand / bottleneck expected, and the valuation narrative has NOT clearly priced this in yet. Click company name to expand."
+    },
+    "fidelityUrlTemplate": "https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol={symbol}",
+    "passNotes": "Multi-pass: (1) breadth power-map coverage, (2) mid concentration on delivery/800V/SST, (3) deep on hot names, (4) breadth re-check. Prefer fewer green/rainbow marks when evidence is thin."
+  }
 }

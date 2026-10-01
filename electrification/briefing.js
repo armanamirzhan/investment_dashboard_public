@@ -148,12 +148,16 @@
   if (!panel || !titleEl || !summaryEl || !companiesWrap || !companyList || !closeBtn) return;
 
   var stagesById = {};
+  var companyIndex = {}; // fidelity or ticker upper -> company meta (mark, rainbow, fidelity)
   var activeId = null;
   var activeFigure = null;
   var lastFocus = null;
   var dataReady = false;
   var pendingId = null;
   var pendingEl = null;
+  var openRainbow = null;
+
+  var FIDELITY_TMPL = "https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=";
 
   function esc(s) {
     return String(s == null ? "" : s)
@@ -161,6 +165,11 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
+  }
+
+  function fidelityUrl(symbol) {
+    if (!symbol) return null;
+    return FIDELITY_TMPL + encodeURIComponent(String(symbol).trim());
   }
 
   function hostFigureFrom(el) {
@@ -181,7 +190,6 @@
     if (activeFigure && activeFigure !== fig) {
       activeFigure.classList.remove("stage-panel-open");
     }
-    // Keep panel after the SVG, before figcaption (matches Fig 0 layout)
     var svg = fig.querySelector("svg");
     var caption = fig.querySelector("figcaption");
     if (svg && svg.nextSibling !== panel) {
@@ -207,22 +215,325 @@
     });
   }
 
+  function applyStageFrames() {
+    document.querySelectorAll(".stage-hotspot[data-stage]").forEach(function (g) {
+      g.classList.remove("stage-scarce", "stage-watch");
+      var id = g.getAttribute("data-stage");
+      var stage = stagesById[id];
+      if (!stage || !stage.scarcity) return;
+      if (stage.scarcity === "now") g.classList.add("stage-scarce");
+      else if (stage.scarcity === "watch") g.classList.add("stage-watch");
+    });
+  }
+
+  function indexCompany(c) {
+    if (!c) return;
+    var keys = [];
+    if (c.fidelity) keys.push(String(c.fidelity).toUpperCase());
+    if (c.ticker) {
+      String(c.ticker).split(/[\/·|,]/).forEach(function (part) {
+        var p = part.replace(/NYSE:|NASDAQ:|LSE:|TSE:|KRX:|via/gi, "").trim();
+        if (!p) return;
+        keys.push(p.toUpperCase());
+        // bare symbol without exchange suffix
+        var bare = p.split(".")[0].trim();
+        if (bare) keys.push(bare.toUpperCase());
+      });
+    }
+    if (c.name) keys.push("NAME:" + c.name.toUpperCase());
+    keys.forEach(function (k) {
+      if (!k) return;
+      // Prefer rainbow/rated entries when merging duplicates
+      var prev = companyIndex[k];
+      if (!prev || (c.mark && !prev.mark) || (c.mark === "rainbow")) {
+        companyIndex[k] = c;
+      }
+    });
+  }
+
+  function lookupCompanyMeta(tickerText, nameText) {
+    if (nameText) {
+      var byName = companyIndex["NAME:" + String(nameText).toUpperCase()];
+      if (byName) return byName;
+    }
+    if (!tickerText) return null;
+    var raw = String(tickerText).trim();
+    var candidates = [raw.toUpperCase()];
+    raw.split(/[\/·|,]/).forEach(function (part) {
+      var p = part.replace(/NYSE:|NASDAQ:|LSE:|TSE:|KRX:|via/gi, "").trim();
+      if (!p) return;
+      candidates.push(p.toUpperCase());
+      candidates.push(p.split(".")[0].toUpperCase());
+    });
+    for (var i = 0; i < candidates.length; i++) {
+      if (companyIndex[candidates[i]]) return companyIndex[candidates[i]];
+    }
+    return null;
+  }
+
+  function tickerClass(mark) {
+    if (mark === "rated") return "ticker ticker-rated";
+    if (mark === "rainbow") return "ticker ticker-rainbow";
+    return "ticker";
+  }
+
+  function coTickerClass(mark) {
+    if (mark === "rated") return "co-ticker ticker-rated";
+    if (mark === "rainbow") return "co-ticker ticker-rainbow";
+    return "co-ticker";
+  }
+
+  function renderTickerAnchor(displayTicker, fidelity, mark, extraClass) {
+    var cls = extraClass || tickerClass(mark);
+    if (cls.indexOf("ticker-rated") === -1 && cls.indexOf("ticker-rainbow") === -1) {
+      if (mark === "rated") cls += " ticker-rated";
+      else if (mark === "rainbow") cls += " ticker-rainbow";
+    }
+    var sym = fidelity || null;
+    if (!sym && displayTicker) {
+      // best-effort: last alphanumeric token
+      var m = String(displayTicker).match(/[A-Z]{1,5}(?![A-Z])/i);
+      if (m) sym = m[0].toUpperCase();
+    }
+    if (sym) {
+      return '<a class="' + cls + '" href="' + esc(fidelityUrl(sym)) +
+        '" target="_blank" rel="noopener noreferrer" title="Fidelity quote: ' + esc(sym) + '">' +
+        esc(displayTicker || sym) + "</a>";
+    }
+    return '<span class="' + cls + '">' + esc(displayTicker || "") + "</span>";
+  }
+
+  function rainbowDetailHtml(rainbow) {
+    if (!rainbow) return "";
+    return '<div class="rainbow-detail" hidden>' +
+      "<dl>" +
+      "<dt>When demand is expected</dt><dd>" + esc(rainbow.when || "") + "</dd>" +
+      "<dt>For what</dt><dd>" + esc(rainbow.forWhat || "") + "</dd>" +
+      "<dt>Why critical</dt><dd>" + esc(rainbow.whyCritical || "") + "</dd>" +
+      "<dt>Why demand lands here</dt><dd>" + esc(rainbow.whyThere || "") + "</dd>" +
+      "</dl>" +
+      '<p class="dim" style="margin:0.4rem 0 0;font-size:0.75rem">Research taxonomy mark — not investment advice.</p>' +
+      "</div>";
+  }
+
   function renderCompanies(companies) {
     companyList.innerHTML = "";
+    openRainbow = null;
     if (!companies || !companies.length) {
       companiesWrap.hidden = true;
       return;
     }
     companiesWrap.hidden = false;
-    companies.forEach(function (c) {
+    companies.forEach(function (c, idx) {
       var li = document.createElement("li");
-      var html = "<strong>" + esc(c.name) + "</strong>";
-      if (c.ticker) html += ' <span class="co-ticker">' + esc(c.ticker) + "</span>";
+      var mark = c.mark || null;
+      var nameHtml;
+      if (mark === "rainbow" && c.rainbow) {
+        nameHtml = '<button type="button" class="co-name-rainbow" data-rainbow-idx="' + idx +
+          '" aria-expanded="false">' + esc(c.name) + "</button>";
+      } else {
+        nameHtml = "<strong>" + esc(c.name) + "</strong>";
+      }
+      var html = nameHtml;
+      if (c.ticker) {
+        html += " " + renderTickerAnchor(c.ticker, c.fidelity, mark, coTickerClass(mark));
+      }
       if (c.note) html += '<span class="co-note">' + esc(c.note) + "</span>";
+      if (mark === "rainbow" && c.rainbow) html += rainbowDetailHtml(c.rainbow);
       li.innerHTML = html;
       companyList.appendChild(li);
     });
   }
+
+  function closeRainbowDetails(except) {
+    companyList.querySelectorAll(".rainbow-detail").forEach(function (d) {
+      if (except && d === except) return;
+      d.hidden = true;
+      d.classList.remove("is-open");
+    });
+    companyList.querySelectorAll(".co-name-rainbow").forEach(function (b) {
+      b.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  companyList.addEventListener("click", function (e) {
+    var btn = e.target.closest && e.target.closest(".co-name-rainbow");
+    if (!btn) return;
+    e.preventDefault();
+    e.stopPropagation();
+    var detail = btn.parentElement && btn.parentElement.querySelector(".rainbow-detail");
+    if (!detail) return;
+    var opening = detail.hidden;
+    closeRainbowDetails(opening ? detail : null);
+    if (opening) {
+      detail.hidden = false;
+      detail.classList.add("is-open");
+      btn.setAttribute("aria-expanded", "true");
+      openRainbow = detail;
+    } else {
+      detail.hidden = true;
+      detail.classList.remove("is-open");
+      btn.setAttribute("aria-expanded", "false");
+      openRainbow = null;
+    }
+  });
+
+  function enhancePageTickers() {
+    // Restyle .ticker nodes and turn them into Fidelity links without breaking <td class="ticker">
+    document.querySelectorAll(".briefing .ticker").forEach(function (el) {
+      if (el.getAttribute("data-tax-enhanced") === "1") return;
+      if (el.tagName === "A") { el.setAttribute("data-tax-enhanced", "1"); return; }
+      var text = (el.textContent || "").trim();
+      if (!text) return;
+      var nameText = null;
+      var row = el.closest("tr");
+      if (row) {
+        var firstCell = row.querySelector("td");
+        // Only trust first-cell name when this ticker cell is the dedicated ticker column
+        if (firstCell && (el === row.querySelector("td.ticker") || el.parentElement === row.children[1] || el.tagName === "TD")) {
+          // Prefer company cell text only if it looks like a single company (short)
+          var cellName = firstCell.textContent.replace(/\s+/g, " ").trim();
+          if (cellName && cellName.length < 60 && cellName.indexOf(",") === -1) nameText = cellName;
+        }
+      }
+      // Prefer immediate previous strong / rainbow button sibling (multi-company paragraphs)
+      if (!nameText) {
+        var prev = el.previousElementSibling;
+        while (prev && prev.tagName !== "STRONG" && !(prev.classList && prev.classList.contains("co-name-rainbow"))) {
+          // skip whitespace-only text nodes already avoided by previousElementSibling
+          if (prev.tagName === "A" || prev.tagName === "SPAN") break;
+          prev = prev.previousElementSibling;
+        }
+        if (prev && (prev.tagName === "STRONG" || (prev.classList && prev.classList.contains("co-name-rainbow")))) {
+          nameText = prev.textContent.trim();
+        }
+      }
+      // Ticker-first lookup; name only as soft hint (do not let name override a ticker-specific mark)
+      var metaByTicker = lookupCompanyMeta(text, null);
+      var metaByName = nameText ? lookupCompanyMeta(null, nameText) : null;
+      var meta = metaByTicker;
+      if (!meta) meta = metaByName;
+      else if (metaByName && metaByName.mark && !meta.mark) meta = metaByName;
+      else if (metaByName && metaByName.mark === "rainbow") meta = metaByName;
+      else if (metaByName && metaByName.fidelity && !meta.fidelity) {
+        meta = Object.assign({}, meta, { fidelity: metaByName.fidelity });
+      }
+      var mark = meta && meta.mark;
+      var fid = (meta && meta.fidelity) || null;
+      var cls = tickerClass(mark);
+      var url = fidelityUrl(fid);
+      if (!url) {
+        var parts = text.split(/[\/·|,]/);
+        for (var i = 0; i < parts.length; i++) {
+          var p = parts[i].replace(/NYSE:|NASDAQ:|LSE:|TSE:|KRX:|via/gi, "").trim();
+          if (/^[A-Z]{1,5}$/i.test(p)) { fid = p.toUpperCase(); url = fidelityUrl(fid); break; }
+        }
+        if (!url && /SMNEY/i.test(text)) { fid = "SMNEY"; url = fidelityUrl(fid); }
+        if (!url && /SBGSY/i.test(text)) { fid = "SBGSY"; url = fidelityUrl(fid); }
+        if (!url && /IFNNY/i.test(text)) { fid = "IFNNY"; url = fidelityUrl(fid); }
+        if (!url && /\bGEV\b/i.test(text)) { fid = "GEV"; url = fidelityUrl(fid); }
+        if (!url && /\bETN\b/i.test(text)) { fid = "ETN"; url = fidelityUrl(fid); }
+        if (!url && /\bVRT\b/i.test(text)) { fid = "VRT"; url = fidelityUrl(fid); }
+        if (!url && /\bAPH\b/i.test(text)) { fid = "APH"; url = fidelityUrl(fid); }
+        if (!url && /\bABB\b/i.test(text)) { fid = "ABB"; url = fidelityUrl(fid); }
+        if (!url && /\bVICR\b/i.test(text)) { fid = "VICR"; url = fidelityUrl(fid); }
+        if (!url && /\bPWR\b/i.test(text)) { fid = "PWR"; url = fidelityUrl(fid); }
+        if (!url && /6501/i.test(text)) { fid = "HTHIY"; url = fidelityUrl(fid); }
+        if (!url && /2308/i.test(text)) { fid = "DELTY"; url = fidelityUrl(fid); }
+      }
+      el.setAttribute("data-tax-enhanced", "1");
+      if (url) {
+        var a = document.createElement("a");
+        a.className = cls;
+        a.href = url;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.title = "Fidelity quote: " + (fid || text);
+        a.textContent = text;
+        a.setAttribute("data-tax-enhanced", "1");
+        // If el is a TD/TH/SPAN with class ticker, put the anchor inside; do not replace the cell
+        if (el.tagName === "TD" || el.tagName === "TH") {
+          el.className = ""; // avoid nested .ticker styling clash on cell
+          el.textContent = "";
+          el.appendChild(a);
+        } else {
+          el.replaceWith(a);
+        }
+      } else {
+        if (el.tagName === "TD" || el.tagName === "TH") {
+          var span = document.createElement("span");
+          span.className = cls;
+          span.textContent = text;
+          span.setAttribute("data-tax-enhanced", "1");
+          el.className = "";
+          el.textContent = "";
+          el.appendChild(span);
+        } else {
+          el.className = cls;
+        }
+      }
+    });
+
+    // Rainbow expanders for company names in hop list / tables when mark is rainbow
+    document.querySelectorAll(".briefing .hop-list li, .briefing table tbody tr, .briefing p").forEach(function (block) {
+      if (block.getAttribute("data-rainbow-wired") === "1") return;
+      var html = block.innerHTML;
+      // Find rainbow companies by name present in this block
+      Object.keys(companyIndex).forEach(function (k) {
+        if (k.indexOf("NAME:") !== 0) return;
+        var c = companyIndex[k];
+        if (!c || c.mark !== "rainbow" || !c.rainbow || !c.name) return;
+        var name = c.name;
+        // Skip if button already present
+        if (block.querySelector && block.querySelector('.co-name-rainbow[data-co="' + CSS.escape(name) + '"]')) return;
+        // Replace first <strong>Name</strong> or bare Name once
+        var strongRe = new RegExp("<strong>(\\s*)" + name.replace(/[.*+?^${}()|[\\]\\\\]/g, "\\$&") + "(\\s*)</strong>", "i");
+        if (strongRe.test(block.innerHTML)) {
+          block.innerHTML = block.innerHTML.replace(strongRe,
+            '<button type="button" class="co-name-rainbow" data-co="' + esc(name) + '" aria-expanded="false">$1' + esc(name) + "$2</button>" +
+            rainbowDetailHtml(c.rainbow)
+          );
+          block.setAttribute("data-rainbow-wired", "1");
+        }
+      });
+    });
+  }
+
+  // Delegate rainbow toggles on the whole briefing (page + panel)
+  document.addEventListener("click", function (e) {
+    var btn = e.target.closest && e.target.closest(".briefing .co-name-rainbow");
+    if (!btn) return;
+    // Panel list has its own handler; allow both — if inside companyList, that handler already ran with stopPropagation
+    if (companyList.contains(btn)) return;
+    e.preventDefault();
+    var detail = btn.parentElement && btn.parentElement.querySelector(".rainbow-detail");
+    // If detail is sibling after button inside a paragraph, find next .rainbow-detail
+    if (!detail) {
+      var n = btn.nextElementSibling;
+      while (n && !n.classList.contains("rainbow-detail")) n = n.nextElementSibling;
+      detail = n;
+    }
+    if (!detail) {
+      // insert after button if missing (table cell case)
+      return;
+    }
+    var opening = detail.hidden || !detail.classList.contains("is-open");
+    document.querySelectorAll(".briefing .rainbow-detail.is-open").forEach(function (d) {
+      if (d !== detail) { d.hidden = true; d.classList.remove("is-open"); }
+    });
+    document.querySelectorAll(".briefing .co-name-rainbow[aria-expanded='true']").forEach(function (b) {
+      if (b !== btn) b.setAttribute("aria-expanded", "false");
+    });
+    if (opening) {
+      detail.hidden = false;
+      detail.classList.add("is-open");
+      btn.setAttribute("aria-expanded", "true");
+    } else {
+      detail.hidden = true;
+      detail.classList.remove("is-open");
+      btn.setAttribute("aria-expanded", "false");
+    }
+  });
 
   function closePanel(restoreFocus) {
     pendingId = null;
@@ -246,9 +557,12 @@
       fig.classList.add("stage-panel-open");
     }
     titleEl.textContent = stage.title || stage.id;
-    summaryEl.textContent = stage.summary || "";
+    var scarcityNote = "";
+    if (stage.scarcity === "now") scarcityNote = " [Scarcity: extreme demand RIGHT NOW — red frame]";
+    else if (stage.scarcity === "watch") scarcityNote = " [Watch: near-term bottleneck risk — yellow frame]";
+    summaryEl.textContent = (stage.summary || "") + scarcityNote;
     renderCompanies(stage.companies || []);
-    companiesWrap.open = false;
+    companiesWrap.open = true; // open so marks are visible
     panel.hidden = false;
     setActiveHotspot(stage.id, fig);
     activeId = stage.id;
@@ -282,7 +596,6 @@
       }
       return;
     }
-    // Re-click same stage in same figure closes; same id in another figure swaps
     if (activeId === id && !panel.hidden && fig && fig === activeFigure) {
       closePanel(true);
       return;
@@ -335,7 +648,6 @@
     toggleStage(g.getAttribute("data-stage"), g);
   }
 
-  // Document-level delegation so ALL figures work (Fig 0 + efficiency diagrams)
   document.addEventListener("click", onActivate);
   document.addEventListener("keydown", function (e) {
     if (e.key !== "Enter" && e.key !== " ") return;
@@ -358,7 +670,6 @@
     closePanel(true);
   });
 
-  // Escape closes stage panel first (capture), before abbr popover
   document.addEventListener("keydown", function (e) {
     if (e.key !== "Escape") return;
     if (panel.hidden) return;
@@ -387,15 +698,23 @@
     .then(function (data) {
       var list = (data && data.stages) || [];
       list.forEach(function (s) {
-        if (s && s.id) stagesById[s.id] = s;
+        if (s && s.id) {
+          stagesById[s.id] = s;
+          (s.companies || []).forEach(indexCompany);
+        }
       });
+      if (data && data.taxonomy && data.taxonomy.fidelityUrlTemplate) {
+        // template already matches FIDELITY_TMPL default
+      }
       dataReady = true;
+      applyStageFrames();
+      enhancePageTickers();
       if (pendingId) {
         var id = pendingId;
         var el = pendingEl;
         pendingId = null;
         pendingEl = null;
-        activeId = null; // force open, not toggle-close
+        activeId = null;
         toggleStage(id, el);
       }
     })
