@@ -20,11 +20,18 @@
     .card p { margin: 0 0 8px; }
     .card ul { margin: 0 0 8px; padding-left: 1.15rem; }
     .card li { margin-bottom: 4px; }
+    .card a { color: var(--accent-cyan); }
     .timeline { display: grid; gap: 8px; margin: 8px 0 4px; }
     .tl { display: grid; grid-template-columns: 7.5rem 1fr; gap: 10px; align-items: start; }
     .tl .when { font-size: 0.78rem; font-weight: 700; color: var(--accent-blue); padding-top: 2px; }
     .tl .what { font-size: 0.9rem; color: var(--text-secondary); }
-    .co-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+    .field-nav { display: flex; flex-wrap: wrap; gap: 6px 12px; margin: 10px 0 4px; padding: 0; list-style: none; }
+    .field-nav a {
+      font-size: 0.78rem; font-weight: 650; color: var(--accent-blue);
+      text-decoration: none; padding: 2px 0;
+    }
+    .field-nav a:hover { text-decoration: underline; }
+    .co-list { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 8px; }
     .co {
       border: 1px solid var(--border); border-radius: 10px; background: rgba(0,0,0,.18);
       overflow: hidden;
@@ -74,10 +81,10 @@
     .co .body { padding: 0 12px 12px; border-top: 1px solid var(--border); }
     .co .body p { margin: 10px 0 0; font-size: 0.88rem; }
     .co .body a { color: var(--accent-cyan); }
-    .legend { font-size: 0.8rem; color: var(--text-secondary); margin-top: 10px; }
+    .legend { font-size: 0.8rem; color: var(--text-secondary); margin: 0 0 4px; }
     .legend strong.gold { color: #f0d060; }
     .footnote { font-size: 0.78rem; color: var(--text-secondary); margin-top: 16px; line-height: 1.4; }
-    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; margin-bottom: 4px; }
     .btn {
       display: inline-block; padding: 8px 14px; border-radius: 8px; font-size: 0.88rem; font-weight: 650;
       background: rgba(76,139,245,.18); color: var(--accent-blue); border: 1px solid rgba(76,139,245,.35);
@@ -116,11 +123,11 @@
 
     <section class="card" id="electrification">
       <h2>Electrification — what matters most</h2>
-      <p>AI halls draw so much continuous power that the old multi-step alternating-current chain wastes heat and space. The industry is moving toward higher-voltage direct current inside the building — typically about <strong>800 volts direct current</strong> on the hall bus — so fewer conversion steps sit between the utility and the graphics processors.</p>
+      <p>AI halls draw so much continuous power that the old multi-step <a href="https://en.wikipedia.org/wiki/Alternating_current">alternating current (AC)</a> chain wastes heat and space. The industry is moving toward higher-voltage <a href="https://en.wikipedia.org/wiki/Direct_current">direct current (DC)</a> inside the building — typically about <strong>800 volts DC</strong> on the hall bus — so fewer conversion steps sit between the utility and the <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit">graphics processing unit (GPU)</a>.</p>
       <p>You can think of three overlapping moves:</p>
       <ul>
-        <li><strong>Near the rack (now → 2027):</strong> A hybrid “power rack” or sidecar converts facility power to 800 volts direct current for dense AI rows without rebuilding the whole building. NVIDIA’s Vera Rubin platform can take this as an optional setup in the second half of 2026; broader rack use rises with Rubin Ultra from the second half of 2027.</li>
-        <li><strong>Across the hall (2027 → ~2029):</strong> Row power centers and overhead direct-current busways feed multiple megawatts per row. Direct-current breakers and certified solid-state transformers still constrain how fast this spreads.</li>
+        <li><strong>Near the rack (now → 2027):</strong> A hybrid “power rack” or sidecar converts facility power to 800 volts DC for dense AI rows without rebuilding the whole building. NVIDIA’s Vera Rubin platform can take this as an optional setup in the second half of 2026; broader rack use rises with Rubin Ultra from the second half of 2027.</li>
+        <li><strong>Across the hall (2027 → ~2029):</strong> Row power centers and overhead DC busways feed multiple megawatts per row. DC breakers and certified solid-state transformers still constrain how fast this spreads.</li>
         <li><strong>At the fence line (always):</strong> Utility interconnect queues and slow conventional transformers remain the schedule risk. Onsite fuel cells or turbines buy time-to-power when the grid is late.</li>
       </ul>
 
@@ -131,41 +138,27 @@
         <div class="tl"><div class="when">~2029+</div><div class="what">New campuses designed primarily around facility-scale 800 V direct current; U.S. electrical-code support aims fuller coverage around the 2029 code cycle.</div></div>
       </div>
 
-      <h3>Where the rollout can stall</h3>
-      <ul>
-        <li><strong>Direct-current protection:</strong> Ordinary alternating-current breakers cannot safely clear a direct-current fault. Solid-state or direct-current-rated breakers have to ship in volume.</li>
-        <li><strong>Solid-state transformers:</strong> These power-electronics boxes can turn medium-voltage grid power straight toward 800 volts direct current, but safety certification and skilled install crews are still catching up.</li>
-        <li><strong>High-voltage silicon carbide chips:</strong> The switches inside those transformers are still scarce at the highest voltages.</li>
-        <li><strong>Old iron-core transformers:</strong> Lead times measured in years keep delaying classic grid hookups — which is why onsite generation and solid-state paths get attention.</li>
+      <p>The fields below are where the rollout can stall or accelerate — each subsection explains the gear and the public names on this pass.</p>
+      <ul class="field-nav" aria-label="Jump to field">
+        <li><a href="#field-sst">Solid-state transformers</a></li>
+        <li><a href="#field-switchgear">Switchgear &amp; DC protection</a></li>
+        <li><a href="#field-sic">Silicon carbide</a></li>
+        <li><a href="#field-rack">Rack &amp; row power</a></li>
+        <li><a href="#field-connectors">Connectors</a></li>
+        <li><a href="#field-onsite">Onsite generation</a></li>
+        <li><a href="#field-facility">Facility transformers</a></li>
       </ul>
       <p>Private startups exist in this stack, but this page only tracks <strong>publicly traded</strong> names (or investable depositary receipts) you can buy in a normal brokerage account.</p>
     </section>
 
-    <section class="card" id="promising">
-      <h2>Most promising public names (this pass)</h2>
-      <p>Scorecards from Performance tracker. Names in <strong class="gold">gold</strong> are the top setups on this list. Tickers with a <strong>rainbow</strong> border flag demand that may still be early in the share price. Open a row for the short thesis; open the full one-screen card for metrics.</p>
-      <p class="legend"><strong class="gold">Gold:</strong> Delta Electronics · Vertiv · Eaton · Bloom Energy &nbsp;|&nbsp; <strong>Rainbow:</strong> Infineon · STMicroelectronics</p>
+    <p class="legend"><strong class="gold">Gold:</strong> Delta Electronics · Vertiv · Eaton · Bloom Energy &nbsp;|&nbsp; <strong>Rainbow:</strong> Infineon · STMicroelectronics — gold = top setups on this list; rainbow = demand that may still be early in the share price.</p>
 
+    <section class="card" id="field-sst">
+      <h2>Solid-state transformers</h2>
+      <p>A <a href="https://en.wikipedia.org/wiki/Solid-state_transformer">solid-state transformer (SST)</a> is a power-electronics box that can turn medium-voltage grid power toward about 800 volts <a href="https://en.wikipedia.org/wiki/Direct_current">direct current (DC)</a> with fewer classic conversion steps than a traditional iron-core <a href="https://en.wikipedia.org/wiki/Transformer">transformer</a>. Safety certification and skilled install crews still constrain how fast SSTs roll out.</p>
+      <p><a href="#ge-vernova">GE Vernova</a> and <a href="#siemens-energy">Siemens Energy</a> have later or group SST optionality — see <a href="#field-facility">Facility transformers</a>.</p>
       <ul class="co-list">
-        <li>
-          <details class="co gold" open>
-            <summary><span class="name">Delta Electronics</span> <span class="ticker">2308.TW</span> <span class="tag buy">Buy</span> <span class="tag goldmark">Gold</span></summary>
-            <div class="body">
-              <p>Taiwan power-electronics leader with a live solid-state transformer under AI load and an NVIDIA high-voltage direct-current production path, plus in-row 800 V racks and liquid-cooling attach. Closest “ships today” proof on this list. Geopolitics and a rich Taiwan multiple are the main caveats.</p>
-              <p><a href="companies/delta-electronics.html">Open one-screen scorecard →</a></p>
-            </div>
-          </details>
-        </li>
-        <li>
-          <details class="co gold">
-            <summary><span class="name">Vertiv</span> <span class="ticker">VRT</span> <span class="tag accumulate">Accumulate</span> <span class="tag goldmark">Gold</span></summary>
-            <div class="body">
-              <p>Builds the gear next to the rack — sidecars, busways, and backup — so operators can feed 800 V direct current into dense rows without ripping out the building. Commercial portfolio aimed at the second half of 2026. Valuation already prices a lot of the AI story.</p>
-              <p><a href="companies/vertiv.html">Open one-screen scorecard →</a></p>
-            </div>
-          </details>
-        </li>
-        <li>
+        <li id="eaton">
           <details class="co gold">
             <summary><span class="name">Eaton</span> <span class="ticker">ETN</span> <span class="tag accumulate">Accumulate</span> <span class="tag goldmark">Gold</span></summary>
             <div class="body">
@@ -174,43 +167,16 @@
             </div>
           </details>
         </li>
-        <li>
+        <li id="delta-electronics">
           <details class="co gold">
-            <summary><span class="name">Bloom Energy</span> <span class="ticker">BE</span> <span class="tag accumulate">Accumulate</span> <span class="tag goldmark">Gold</span></summary>
+            <summary><span class="name">Delta Electronics</span> <span class="ticker">2308.TW</span> <span class="tag buy">Buy</span> <span class="tag goldmark">Gold</span></summary>
             <div class="body">
-              <p>Onsite solid-oxide fuel cells that make electricity at the campus when the utility queue is the real bottleneck. Native direct-current-friendly output pairs conceptually with high-voltage halls. Oracle-scale agreements re-rated the stock — treat volatility and dilution risk seriously.</p>
-              <p><a href="companies/bloom-energy.html">Open one-screen scorecard →</a></p>
+              <p>Taiwan power-electronics leader with a live solid-state transformer under AI load and an NVIDIA high-voltage direct-current production path, plus in-row 800 V racks and liquid-cooling attach. Closest “ships today” proof on this list. Geopolitics and a rich Taiwan multiple are the main caveats.</p>
+              <p><a href="companies/delta-electronics.html">Open one-screen scorecard →</a></p>
             </div>
           </details>
         </li>
-        <li>
-          <details class="co rainbow">
-            <summary><span class="name">Infineon</span> <span class="ticker">IFNNY</span> <span class="tag accumulate">Accumulate</span> <span class="tag rainbowmark">Rainbow</span></summary>
-            <div class="body">
-              <p>Makes the silicon carbide switches inside solid-state transformers and high-voltage converters. Design wins with Eaton and others are real; high-voltage device supply is still scarce. Rainbow mark: early data-center content may not be fully reflected versus the auto silicon carbide narrative.</p>
-              <p><a href="companies/infineon.html">Open one-screen scorecard →</a></p>
-            </div>
-          </details>
-        </li>
-        <li>
-          <details class="co rainbow">
-            <summary><span class="name">STMicroelectronics</span> <span class="ticker">STM</span> <span class="tag accumulate">Accumulate</span> <span class="tag rainbowmark">Rainbow</span></summary>
-            <div class="body">
-              <p>Power chips that step 800 V direct current down toward the voltages near the processor, including public NVIDIA collaboration work. Device content, not facility gear — sensitive to semiconductor cycles. Rainbow mark: conversion content still early in reported mix.</p>
-              <p><a href="companies/stmicroelectronics.html">Open one-screen scorecard →</a></p>
-            </div>
-          </details>
-        </li>
-        <li>
-          <details class="co">
-            <summary><span class="name">Schneider Electric</span> <span class="ticker">SBGSY</span> <span class="tag accumulate">Accumulate</span></summary>
-            <div class="body">
-              <p>Facility systems — switchgear, uninterruptible power, busway, and sidecar architectures. Broad mega-cap electrification name; AI direct-current upside is incremental, not a pure-play.</p>
-              <p><a href="companies/schneider-electric.html">Open one-screen scorecard →</a></p>
-            </div>
-          </details>
-        </li>
-        <li>
+        <li id="abb">
           <details class="co">
             <summary><span class="name">ABB</span> <span class="ticker">ABB</span> <span class="tag accumulate">Accumulate</span></summary>
             <div class="body">
@@ -219,7 +185,73 @@
             </div>
           </details>
         </li>
-        <li>
+      </ul>
+    </section>
+
+    <section class="card" id="field-switchgear">
+      <h2>Switchgear and DC protection</h2>
+      <p><a href="https://en.wikipedia.org/wiki/Switchgear">Switchgear</a> and <a href="https://en.wikipedia.org/wiki/Circuit_breaker">circuit breakers</a> safely isolate faults so a short does not cascade through the hall. Direct-current faults are harder to clear than <a href="https://en.wikipedia.org/wiki/Alternating_current">alternating current (AC)</a> faults, so DC-rated and solid-state breakers matter for 800 V halls.</p>
+      <p><a href="#abb">ABB</a> publishes solid-state DC breakers in its Infinitus path (see SST section). <a href="#ge-vernova">GE Vernova</a>’s medium-voltage switchgear franchise sits with classic grid hookup — see <a href="#field-facility">Facility transformers</a>.</p>
+      <ul class="co-list">
+        <li id="schneider-electric">
+          <details class="co">
+            <summary><span class="name">Schneider Electric</span> <span class="ticker">SBGSY</span> <span class="tag accumulate">Accumulate</span></summary>
+            <div class="body">
+              <p>Facility systems — switchgear, uninterruptible power, busway, and sidecar architectures. Broad mega-cap electrification name; AI direct-current upside is incremental, not a pure-play.</p>
+              <p><a href="companies/schneider-electric.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card" id="field-sic">
+      <h2>Silicon carbide power devices</h2>
+      <p><a href="https://en.wikipedia.org/wiki/Silicon_carbide">Silicon carbide (SiC)</a> chips are the high-voltage switches inside solid-state transformers and converters. “SST chips” are not a separate product line — public exposure is through power-<a href="https://en.wikipedia.org/wiki/Semiconductor_device">semiconductor</a> makers. Some vendors also sell <a href="https://en.wikipedia.org/wiki/Gallium_nitride">gallium nitride (GaN)</a> devices for related conversion steps.</p>
+      <ul class="co-list">
+        <li id="infineon">
+          <details class="co rainbow">
+            <summary><span class="name">Infineon</span> <span class="ticker">IFNNY</span> <span class="tag accumulate">Accumulate</span> <span class="tag rainbowmark">Rainbow</span></summary>
+            <div class="body">
+              <p>Makes the silicon carbide switches inside solid-state transformers and high-voltage converters. Design wins with Eaton and others are real; high-voltage device supply is still scarce. Rainbow mark: early data-center content may not be fully reflected versus the auto silicon carbide narrative.</p>
+              <p><a href="companies/infineon.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+        <li id="stmicroelectronics">
+          <details class="co rainbow">
+            <summary><span class="name">STMicroelectronics</span> <span class="ticker">STM</span> <span class="tag accumulate">Accumulate</span> <span class="tag rainbowmark">Rainbow</span></summary>
+            <div class="body">
+              <p>Power chips that step 800 V direct current down toward the voltages near the processor, including public NVIDIA collaboration work. Device content, not facility gear — sensitive to semiconductor cycles. Rainbow mark: conversion content still early in reported mix.</p>
+              <p><a href="companies/stmicroelectronics.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card" id="field-rack">
+      <h2>Rack and row power</h2>
+      <p>Sidecars, in-row power racks, <a href="https://en.wikipedia.org/wiki/Busbar">busways</a>, and <a href="https://en.wikipedia.org/wiki/Uninterruptible_power_supply">uninterruptible power supplies (UPS)</a> sit near the IT load so halls can take 800 volts <a href="https://en.wikipedia.org/wiki/Direct_current">direct current (DC)</a> without rebuilding everything.</p>
+      <p><a href="#delta-electronics">Delta Electronics</a> also ships in-row 800 V racks (see <a href="#field-sst">Solid-state transformers</a>).</p>
+      <ul class="co-list">
+        <li id="vertiv">
+          <details class="co gold">
+            <summary><span class="name">Vertiv</span> <span class="ticker">VRT</span> <span class="tag accumulate">Accumulate</span> <span class="tag goldmark">Gold</span></summary>
+            <div class="body">
+              <p>Builds the gear next to the rack — sidecars, busways, and backup — so operators can feed 800 V direct current into dense rows without ripping out the building. Commercial portfolio aimed at the second half of 2026. Valuation already prices a lot of the AI story.</p>
+              <p><a href="companies/vertiv.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card" id="field-connectors">
+      <h2>Connectors and high-current interconnects</h2>
+      <p><a href="https://en.wikipedia.org/wiki/Electrical_connector">Electrical connectors</a> and <a href="https://en.wikipedia.org/wiki/Busbar">busbar</a> interfaces carry high current and higher-voltage direct current between racks, power sidecars, and distribution gear.</p>
+      <ul class="co-list">
+        <li id="amphenol">
           <details class="co">
             <summary><span class="name">Amphenol</span> <span class="ticker">APH</span> <span class="tag accumulate">Accumulate</span></summary>
             <div class="body">
@@ -228,25 +260,23 @@
             </div>
           </details>
         </li>
-        <li>
-          <details class="co">
-            <summary><span class="name">GE Vernova</span> <span class="ticker">GEV</span> <span class="tag hold">Hold</span></summary>
+      </ul>
+    </section>
+
+    <section class="card" id="field-onsite">
+      <h2>Onsite generation</h2>
+      <p><a href="https://en.wikipedia.org/wiki/Fuel_cell">Fuel cells</a> (including <a href="https://en.wikipedia.org/wiki/Solid_oxide_fuel_cell">solid-oxide fuel cells</a>) and <a href="https://en.wikipedia.org/wiki/Gas_turbine">gas turbines</a> make megawatts at the campus when the utility queue is late. They complement rack DC gear rather than replace it.</p>
+      <ul class="co-list">
+        <li id="bloom-energy">
+          <details class="co gold">
+            <summary><span class="name">Bloom Energy</span> <span class="ticker">BE</span> <span class="tag accumulate">Accumulate</span> <span class="tag goldmark">Gold</span></summary>
             <div class="body">
-              <p>Heavy electrical backbone — transformers and switchgear — still gates most campuses. NVIDIA-aligned 800 V reference designs exist; solid-state transformer scale is later. Post-spin rerating leaves a thinner margin of safety.</p>
-              <p><a href="companies/ge-vernova.html">Open one-screen scorecard →</a></p>
+              <p>Onsite solid-oxide fuel cells that make electricity at the campus when the utility queue is the real bottleneck. Native direct-current-friendly output pairs conceptually with high-voltage halls. Oracle-scale agreements re-rated the stock — treat volatility and dilution risk seriously.</p>
+              <p><a href="companies/bloom-energy.html">Open one-screen scorecard →</a></p>
             </div>
           </details>
         </li>
-        <li>
-          <details class="co">
-            <summary><span class="name">Siemens Energy</span> <span class="ticker">SMNEY</span> <span class="tag hold">Hold</span></summary>
-            <div class="body">
-              <p>Grid and turbine exposure with group solid-state transformer optionality (partly sitting with Siemens AG). Treat as electrification recovery, not a pure 800 V name.</p>
-              <p><a href="companies/siemens-energy.html">Open one-screen scorecard →</a></p>
-            </div>
-          </details>
-        </li>
-        <li>
+        <li id="mitsubishi-heavy">
           <details class="co">
             <summary><span class="name">Mitsubishi Heavy</span> <span class="ticker">7011.T</span> <span class="tag hold">Hold</span></summary>
             <div class="body">
@@ -256,14 +286,39 @@
           </details>
         </li>
       </ul>
-
-      <div class="actions">
-        <a class="btn" href="companies/index.html">All 12 company scorecards</a>
-        <a class="btn" href="../electrification/index.html">Open Electrification Power Map</a>
-      </div>
     </section>
 
-    <p class="footnote"><strong>Not investment advice.</strong> Personal research for Arman A’s study hub. Ratings and gold / rainbow marks are a research framework only — not recommendations to buy, sell, or hold any security. Company pages are owned by Performance tracker; this brief by Investment analysis. Power Map company marks updated to match the 1 Oct 2026 handoff (gold names; rainbow on Infineon and STMicroelectronics; Delta moved from rainbow to gold).</p>
+    <section class="card" id="field-facility">
+      <h2>Facility transformers and grid hookup</h2>
+      <p>Classic iron-core facility and grid <a href="https://en.wikipedia.org/wiki/Transformer">transformers</a> plus <a href="https://en.wikipedia.org/wiki/Electric_power_transmission">electric power transmission</a> interconnect still gate most campuses — lead times measured in years. Some vendors also publish later 800 V / solid-state transformer reference paths.</p>
+      <ul class="co-list">
+        <li id="ge-vernova">
+          <details class="co">
+            <summary><span class="name">GE Vernova</span> <span class="ticker">GEV</span> <span class="tag hold">Hold</span></summary>
+            <div class="body">
+              <p>Heavy electrical backbone — transformers and switchgear — still gates most campuses. NVIDIA-aligned 800 V reference designs exist; solid-state transformer scale is later. Post-spin rerating leaves a thinner margin of safety.</p>
+              <p><a href="companies/ge-vernova.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+        <li id="siemens-energy">
+          <details class="co">
+            <summary><span class="name">Siemens Energy</span> <span class="ticker">SMNEY</span> <span class="tag hold">Hold</span></summary>
+            <div class="body">
+              <p>Grid and turbine exposure with group solid-state transformer optionality (partly sitting with Siemens AG). Treat as electrification recovery, not a pure 800 V name.</p>
+              <p><a href="companies/siemens-energy.html">Open one-screen scorecard →</a></p>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </section>
+
+    <div class="actions">
+      <a class="btn" href="companies/index.html">All 12 company scorecards</a>
+      <a class="btn" href="../electrification/index.html">Open Electrification Power Map</a>
+    </div>
+
+    <p class="footnote"><strong>Not investment advice.</strong> Personal research for Arman A’s study hub. Ratings and gold / rainbow marks are a research framework only — not recommendations to buy, sell, or hold any security. Field subsections were added for clarity (gear first, then the public names on this pass). Company pages are owned by Performance tracker; this brief by Investment analysis. Power Map company marks updated to match the 1 Oct 2026 handoff (gold names; rainbow on Infineon and STMicroelectronics; Delta moved from rainbow to gold).</p>
   </main>
 
   <footer class="site-footer">
