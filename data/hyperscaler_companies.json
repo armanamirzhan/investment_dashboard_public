@@ -1,0 +1,220 @@
+[
+  {
+    "ticker": "MSFT",
+    "name": "Microsoft",
+    "sector": "hyperscaler",
+    "sub_sector": "Integrated Cloud Operators",
+    "rating": "STRONG_BUY",
+    "rating_source": "Claude fundamental analysis based on official Microsoft 10-K and quarterly earnings. Wall Street consensus: Strong Buy (37 Buy, 1 Hold out of 38 analysts). Avg PT $569. Assessed May 2026.",
+    "emoji": "\ud83d\udfe2",
+    "exposure": "Operator",
+    "report": "reports/MSFT_Microsoft.html",
+    "public": true,
+    "thesis": "Largest cloud infrastructure operator (Azure) with massive AI datacenter buildout. $80B+ annual CapEx planned. Azure AI revenue accelerating at 39% YoY.",
+    "catalysts": [
+      "$120B+ 2026 CapEx investment",
+      "Azure AI revenue acceleration",
+      "Copilot enterprise adoption",
+      "OpenAI partnership"
+    ],
+    "risks": [
+      "CapEx magnitude vs returns timing",
+      "Cloud competition intensifying",
+      "AI monetization uncertainty"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "AMZN",
+    "name": "Amazon / AWS",
+    "sector": "hyperscaler",
+    "sub_sector": "Integrated Cloud Operators",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Amazon 10-K and quarterly earnings. Wall Street consensus: Buy (41 analysts). Avg PT $306. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "Operator",
+    "report": "reports/AMZN_Amazon.html",
+    "public": true,
+    "thesis": "AWS leads cloud infrastructure with Trainium custom AI chips and massive global datacenter footprint. $200B 2026 CapEx planned.",
+    "catalysts": [
+      "Trainium AI chip deployment at scale",
+      "$200B annual CapEx for expansion",
+      "AWS AI services growth",
+      "Custom chip cost advantage"
+    ],
+    "risks": [
+      "Free cash flow compression (down 71% YoY)",
+      "Margin pressure from CapEx",
+      "Cloud market share competition"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "GOOGL",
+    "name": "Google / Alphabet",
+    "sector": "hyperscaler",
+    "sub_sector": "Integrated Cloud Operators",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Alphabet 10-K and quarterly earnings. Wall Street consensus: Strong Buy (35 analysts). Avg PT $408. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "Operator",
+    "report": "reports/GOOGL_Alphabet.html",
+    "public": true,
+    "thesis": "TPU custom silicon leader with vertically integrated AI infrastructure. GCP growing 48% YoY. $175-185B 2026 CapEx guidance.",
+    "catalysts": [
+      "Cloud revenue 0B single quarter \u2014 63% growth",
+      "Market cap passed .5T",
+      "AI demand accelerating across all segments"
+    ],
+    "risks": [
+      "Depreciation pressure from massive CapEx",
+      "Search disruption from AI",
+      "GCP execution risk"
+    ],
+    "updated": "2026-05-02"
+  },
+  {
+    "ticker": "META",
+    "name": "Meta",
+    "sector": "hyperscaler",
+    "sub_sector": "Integrated Cloud Operators",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Meta 10-K and quarterly earnings. Wall Street consensus: Buy (37 analysts). Avg PT $835. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "Operator",
+    "report": "reports/META_Meta.html",
+    "public": true,
+    "thesis": "Massive AI infrastructure investor with open-source Llama strategy. $115-135B 2026 CapEx. 5 GW Hyperion campus planned.",
+    "catalysts": [
+      "Q1 2026 earnings reported \u2014 capex raised sharply",
+      "6.6 GW nuclear energy deals signed",
+      "Prometheus AI supercluster buildout"
+    ],
+    "risks": [
+      "JPMorgan downgrade on negative FCF outlook",
+      "Capex expected to hit 02B by 2027"
+    ],
+    "updated": "2026-05-02"
+  },
+  {
+    "ticker": "ORCL",
+    "name": "Oracle",
+    "sector": "hyperscaler",
+    "sub_sector": "Integrated Cloud Operators",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official Oracle 10-K and quarterly earnings. Wall Street consensus: Buy (34 analysts). Avg PT $258. Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "Operator",
+    "report": "reports/ORCL_Oracle.html",
+    "public": true,
+    "thesis": "Aggressive OCI expansion with Stargate partnership. AI infrastructure revenue +243% YoY. $553B RPO backlog.",
+    "catalysts": [
+      "OCI +84% YoY growth",
+      "$553B RPO backlog (+325% YoY)",
+      "Innovative BYOH financing model",
+      "Multicloud database +531% growth"
+    ],
+    "risks": [
+      "Late entrant to hyperscale cloud (<5% share)",
+      "CapEx-to-revenue ratio ~86%",
+      "OCI growth sustainability"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "CRWV",
+    "name": "CoreWeave",
+    "sector": "hyperscaler",
+    "sub_sector": "GPU Cloud Providers",
+    "rating": "SELL",
+    "rating_source": "Claude fundamental analysis based on official CoreWeave S-1/10-K and quarterly earnings. Wall Street consensus: Buy (33 analysts). Avg PT $129. Assessed May 2026.",
+    "emoji": "\ud83d\udd34",
+    "exposure": "100%",
+    "report": "reports/CRWV_CoreWeave.html",
+    "public": true,
+    "thesis": "Pure-play GPU cloud provider. $66.8B backlog but $29.8B debt with 8.94x leverage. FY2025 revenue $5.13B (+168%).",
+    "catalysts": [
+      "$66.8B backlog (+342% YoY)",
+      "FY2026 revenue guidance $12-13B (+140%)",
+      "Meta + OpenAI commitments"
+    ],
+    "risks": [
+      "Debt refinancing crisis risk",
+      "Customer concentration (OpenAI+Meta = 54%)",
+      "Path to profitability uncertain",
+      "Hyperscaler competition"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": null,
+    "name": "Lambda",
+    "sector": "hyperscaler",
+    "sub_sector": "GPU Cloud Providers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "GPU Cloud",
+    "report": null,
+    "public": false,
+    "thesis": "GPU cloud provider focused on AI/ML workloads. Growing enterprise customer base for training and inference.",
+    "catalysts": [
+      "GPU cloud demand growth",
+      "Enterprise AI training workloads",
+      "Inference market expansion"
+    ],
+    "risks": [
+      "Hyperscaler competition",
+      "GPU supply access",
+      "Capital intensity"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "EQIX",
+    "name": "Equinix",
+    "sector": "hyperscaler",
+    "sub_sector": "Colocation & Datacenter REITs",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Equinix 10-K and quarterly earnings. Wall Street consensus: Strong Buy (24 analysts). Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "Datacenter REIT",
+    "report": "reports/EQIX_Equinix.html",
+    "public": true,
+    "thesis": "Largest global colocation provider with 260+ datacenters in 72 metros. Critical interconnection hub for AI workloads.",
+    "catalysts": [
+      "Record 51% EBITDA margin",
+      "46 active builds across 32 markets",
+      "8 of top 10 AI model providers expanding"
+    ],
+    "risks": [
+      "REIT structure limits reinvestment",
+      "Power availability constraints",
+      "Competition from hyperscaler self-build"
+    ],
+    "updated": "2026-05-09",
+    "latest_revenue": "2.44B Q1 2026"
+  },
+  {
+    "ticker": "DLR",
+    "name": "Digital Realty",
+    "sector": "hyperscaler",
+    "sub_sector": "Colocation & Datacenter REITs",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Digital Realty 10-K and quarterly earnings. Wall Street consensus: Buy (22 analysts). Avg PT $208. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "Datacenter REIT",
+    "report": "reports/DLR_Digital_Realty.html",
+    "public": true,
+    "thesis": "Major datacenter REIT with global portfolio. PlatformDIGITAL for AI workloads. Strong leasing momentum from hyperscaler demand.",
+    "catalysts": [
+      "Raised 2026 capex by $250M to $3.5-4.0B",
+      "Construction pipeline +60% to 1.2 GW, 61% pre-leased"
+    ],
+    "risks": [
+      "Power procurement challenges",
+      "Construction cost inflation",
+      "Interest rate sensitivity"
+    ],
+    "updated": "2026-05-09"
+  }
+]

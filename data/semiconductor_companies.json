@@ -1,0 +1,434 @@
+[
+  {
+    "ticker": "TSM",
+    "name": "TSMC",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Foundries",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official TSMC annual report and quarterly earnings. Wall Street consensus: Strong Buy (38 Buy out of 47 analysts). Avg PT $463. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "50%+",
+    "report": "reports/TSM_TSMC.html",
+    "public": true,
+    "thesis": "Sole advanced node manufacturer for AI chips. 3nm/2nm process leadership. Arizona fab expansion for US supply chain.",
+    "catalysts": [
+      "Q1 profit +58% YoY \u2014 4th consecutive record",
+      "Capex 2-56B for 2026",
+      "Advanced packaging expansion \u2014 2 new facilities planned in Arizona"
+    ],
+    "risks": [
+      "CoWoS capacity remains bottleneck",
+      "Geopolitical concerns with Taiwan"
+    ],
+    "updated": "2026-05-02"
+  },
+  {
+    "ticker": "INTC",
+    "name": "Intel Foundry Services",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Foundries",
+    "rating": "SELL",
+    "rating_source": "Claude fundamental analysis based on official Intel 10-K (foundry segment focus). Wall Street consensus: Hold (see INTC dc_hardware entry). Assessed May 2026.",
+    "emoji": "\ud83d\udd34",
+    "exposure": "Foundry",
+    "report": "reports/INTC_Intel.html",
+    "public": true,
+    "thesis": "Intel's foundry division pursuing external customers with 18A process. CHIPS Act funding. Execution challenges significant.",
+    "catalysts": [
+      "18A process node",
+      "CHIPS Act funding ($8.5B+)",
+      "External customer wins",
+      "US reshoring demand"
+    ],
+    "risks": [
+      "Process node competitiveness vs TSMC",
+      "Operating losses in foundry",
+      "Customer trust building"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "UMC",
+    "name": "UMC",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Foundries",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official UMC annual report and quarterly earnings. Wall Street consensus: Hold. Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "Mature Nodes",
+    "report": "reports/UMC_UMC.html",
+    "public": true,
+    "thesis": "Mature-node foundry serving power management, analog chips used in datacenter infrastructure.",
+    "catalysts": [
+      "Datacenter power IC demand",
+      "Mature node capacity value",
+      "Automotive + industrial"
+    ],
+    "risks": [
+      "Limited advanced node capability",
+      "Pricing pressure",
+      "China competition"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "GFS",
+    "name": "GlobalFoundries",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Foundries",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official GlobalFoundries 10-K and quarterly earnings. Wall Street consensus: Hold. Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "Specialty Nodes",
+    "report": "reports/GFS_GlobalFoundries.html",
+    "public": true,
+    "thesis": "Specialty foundry for RF, analog, and power chips used in datacenter and networking infrastructure.",
+    "catalysts": [
+      "Specialty node demand growth",
+      "US manufacturing premium",
+      "Defense/aerospace applications"
+    ],
+    "risks": [
+      "No advanced node capability",
+      "Customer concentration",
+      "Growth ceiling"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "ASML",
+    "name": "ASML",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Lithography & Equipment",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official ASML annual report and quarterly earnings. Wall Street consensus: Strong Buy (35 analysts). Avg PT $1,461. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "Critical Enabler",
+    "report": "reports/ASML_ASML.html",
+    "public": true,
+    "thesis": "Monopoly on EUV lithography systems essential for advanced AI chips. Every AI chip passes through ASML equipment.",
+    "catalysts": [
+      "Raised 2026 revenue forecast to EUR 36-40B",
+      "Planning 25% more EUV shipments",
+      "Q1 sales EUR 8.8B, net income EUR 2.8B"
+    ],
+    "risks": [
+      "Export controls to China",
+      "Customer CapEx cycles",
+      "High-NA adoption timing"
+    ],
+    "updated": "2026-05-02"
+  },
+  {
+    "ticker": "AMAT",
+    "name": "Applied Materials",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Lithography & Equipment",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Applied Materials 10-K and quarterly earnings. Wall Street consensus: Strong Buy (31 Buy, 7 Hold out of 34 analysts). Avg PT $438. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "Broad Equipment",
+    "report": "reports/AMAT_Applied_Materials.html",
+    "public": true,
+    "thesis": "Largest semiconductor equipment maker. Deposition, etch, and inspection tools critical for AI chip manufacturing.",
+    "catalysts": [
+      "ICAPS (IoT, Comm, Auto, Power, Sensors) growth",
+      "Advanced packaging equipment",
+      "Gate-all-around transistor tools"
+    ],
+    "risks": [
+      "China export restrictions",
+      "Cyclical equipment spending",
+      "Competition from Lam/Tokyo Electron"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "LRCX",
+    "name": "Lam Research",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Lithography & Equipment",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Lam Research 10-K and quarterly earnings. Wall Street consensus: Strong Buy (27 Buy, 7 Hold out of 35 analysts). Avg PT $315. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "Etch & Deposition",
+    "report": "reports/LRCX_Lam_Research.html",
+    "public": true,
+    "thesis": "Leading etch and deposition equipment provider. Critical for HBM and advanced memory manufacturing.",
+    "catalysts": [
+      "HBM manufacturing equipment demand",
+      "3D NAND layer increases",
+      "Advanced node etch complexity"
+    ],
+    "risks": [
+      "China revenue exposure",
+      "Memory CapEx cyclicality",
+      "Customer concentration"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "KLAC",
+    "name": "KLA Corporation",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Lithography & Equipment",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official KLA 10-K and quarterly earnings. Wall Street consensus: Buy (19 analysts). Avg PT $1,651. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "Inspection & Metrology",
+    "report": "reports/KLAC_KLA_Corporation.html",
+    "public": true,
+    "thesis": "Dominant semiconductor inspection and metrology equipment. Defect detection critical as AI chip yields drive profitability.",
+    "catalysts": [
+      "Advanced node defect detection demand",
+      "AI chip yield optimization",
+      "EUV inspection tools"
+    ],
+    "risks": [
+      "China export controls",
+      "Customer CapEx cycles",
+      "Competition from Applied Materials"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "8035.T",
+    "name": "Tokyo Electron",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Lithography & Equipment",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Tokyo Electron annual report and quarterly earnings. Wall Street consensus: Buy. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "Broad Equipment",
+    "report": "reports/8035T_Tokyo_Electron.html",
+    "public": true,
+    "thesis": "Major semiconductor equipment maker (coater/developer, etch, deposition). Key supplier to TSMC, Samsung, Intel fabs.",
+    "catalysts": [
+      "AI-driven fab expansion",
+      "Advanced packaging tools",
+      "Japan semiconductor renaissance"
+    ],
+    "risks": [
+      "Yen currency exposure",
+      "China restrictions",
+      "Cyclical demand"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "ASX",
+    "name": "ASE Technology",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Advanced Packaging",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official ASE Technology annual report and quarterly earnings. Wall Street consensus: Buy. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "Packaging",
+    "report": "reports/ASX_ASE_Technology.html",
+    "public": true,
+    "thesis": "Largest OSAT (outsourced assembly and test) provider. Advanced packaging critical for AI chip performance (CoWoS, 2.5D/3D).",
+    "catalysts": [
+      "Advanced packaging demand from AI chips",
+      "CoWoS capacity expansion",
+      "Chiplet packaging growth"
+    ],
+    "risks": [
+      "TSMC in-house packaging competition",
+      "Technology transition risk",
+      "Customer concentration"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "AMKR",
+    "name": "Amkor Technology",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Advanced Packaging",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official Amkor Technology 10-K and quarterly earnings. Wall Street consensus: Hold. Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "Packaging",
+    "report": "reports/AMKR_Amkor_Technology.html",
+    "public": true,
+    "thesis": "Major OSAT provider with growing advanced packaging capabilities. Apple, Qualcomm, and AI chip packaging.",
+    "catalysts": [
+      "Advanced packaging revenue growth",
+      "AI chip packaging demand",
+      "Arizona facility expansion"
+    ],
+    "risks": [
+      "Competition from ASE and TSMC",
+      "Customer concentration",
+      "Margin pressure"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "ENTG",
+    "name": "Entegris",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Materials & Chemicals",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Entegris 10-K and quarterly earnings. Wall Street consensus: Buy (9 analysts). Avg PT $142. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "Critical Materials",
+    "report": "reports/ENTG_Entegris.html",
+    "public": true,
+    "thesis": "Specialty materials and contamination control for semiconductor manufacturing. Critical consumable supplier as yields matter more.",
+    "catalysts": [
+      "Advanced node materials demand",
+      "Contamination control importance growing",
+      "CMC Materials integration"
+    ],
+    "risks": [
+      "Cyclical semiconductor spending",
+      "Competition",
+      "Integration execution"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "4063.T",
+    "name": "Shin-Etsu Chemical",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Materials & Chemicals",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Shin-Etsu Chemical annual report and quarterly earnings. Wall Street consensus: Buy. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "Silicon Wafers",
+    "report": "reports/4063T_Shin-Etsu_Chemical.html",
+    "public": true,
+    "thesis": "World's largest silicon wafer manufacturer. Every semiconductor starts with a wafer. Pricing power from oligopoly position.",
+    "catalysts": [
+      "Wafer demand from fab expansion",
+      "300mm wafer pricing power",
+      "AI chip volume growth"
+    ],
+    "risks": [
+      "Cyclical wafer demand",
+      "Capacity overinvestment risk",
+      "SUMCO competition"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "AEHR",
+    "name": "Aehr Test Systems",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Test Equipment",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official Aehr Test Systems 10-K and quarterly earnings. Limited analyst coverage (small cap). Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "15-20%",
+    "report": "reports/AEHR_Aehr_Test.html",
+    "public": true,
+    "thesis": "Niche test equipment maker with SiC wafer-level burn-in systems. Benefits from SiC adoption in datacenter power conversion.",
+    "catalysts": [
+      "SiC power device adoption in datacenters",
+      "FOX-XP multi-wafer test platform",
+      "Growing EV + DC power demand"
+    ],
+    "risks": [
+      "Small market cap ($350M)",
+      "Customer concentration",
+      "SiC adoption pace uncertainty"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "ON",
+    "name": "onsemi",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Power Semiconductors",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official onsemi 10-K and quarterly earnings. Wall Street consensus: Buy (23 analysts). Avg PT $68. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "20-25%",
+    "report": "reports/ON_onsemi.html",
+    "public": true,
+    "thesis": "Power semiconductor enabler for AI datacenter infrastructure. SiC devices for power conversion. $6B buyback authorization.",
+    "catalysts": [
+      "AI DC revenue expanding at high-teens rate",
+      "$6B share buyback",
+      "SiC adoption in datacenter power",
+      "Hyperscaler power management IC demand"
+    ],
+    "risks": [
+      "Stock momentum ahead of fundamentals",
+      "Cyclical exposure",
+      "Competition from Infineon, STM"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "IFX.DE",
+    "name": "Infineon",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Power Semiconductors",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official Infineon annual report and quarterly earnings. Wall Street consensus: Buy. Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "Medium",
+    "report": "reports/IFX_Infineon.html",
+    "public": true,
+    "thesis": "European power semiconductor leader with growing datacenter power management exposure. SiC and GaN technologies.",
+    "catalysts": [
+      "Datacenter power IC demand",
+      "SiC/GaN technology leadership",
+      "European reshoring support"
+    ],
+    "risks": [
+      "Auto market weakness",
+      "Competition from onsemi/STM",
+      "Currency exposure"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "STM",
+    "name": "STMicroelectronics",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Power Semiconductors",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official STMicroelectronics annual report and quarterly earnings. Wall Street consensus: Hold. Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "$500M+ 2026E",
+    "report": "reports/STM_STMicroelectronics.html",
+    "public": true,
+    "thesis": "Infrastructure semiconductor play with AWS partnership and NVIDIA 800V DC power collaboration. Revenue ramping $500M to $1B+ in DC.",
+    "catalysts": [
+      "AWS partnership",
+      "NVIDIA 800V power collaboration",
+      "$500M\u2192$1B+ DC revenue 2026-2027"
+    ],
+    "risks": [
+      "Extreme trailing P/E (181x)",
+      "Manufacturing inefficiency",
+      "Competition"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "WOLF",
+    "name": "Wolfspeed",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Power Semiconductors",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official Wolfspeed 10-K and quarterly earnings. Wall Street consensus: Sell (3 analysts). Avg PT $14. Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "10-15%",
+    "report": "reports/WOLF_Wolfspeed.html",
+    "public": true,
+    "thesis": "SiC wafer and device manufacturer. Mohawk Valley fab challenges but long-term SiC demand strong for datacenter power.",
+    "catalysts": [
+      "Mohawk Valley fab ramp",
+      "SiC adoption for datacenter power supplies"
+    ],
+    "risks": [
+      "Operational execution challenges",
+      "Cash burn and balance sheet stress",
+      "Competition"
+    ],
+    "updated": "2026-04-27"
+  }
+]

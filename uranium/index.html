@@ -3,130 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uranium Map — Investment Hub</title>
-  <meta name="description" content="China uranium demand, Kazatomprom/Kazakhstan offtake, and Namibia supply gap. As of Sep 30, 2026. Not investment advice.">
+  <title>Uranium — Moved</title>
+  <meta http-equiv="refresh" content="0; url=../electrification/uranium/index.html">
+  <link rel="canonical" href="https://armanamirzhan.github.io/investment_dashboard_public/electrification/uranium/index.html">
+  <meta name="robots" content="noindex">
   <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
-  <nav class="site-nav" aria-label="Primary">
-    <div class="nav-inner">
-      <a class="brand" href="../index.html">Arman <span>Invest</span></a>
-      <div class="nav-links">
-        <a href="../index.html" data-section="home">Hub</a>
-        <a href="../electrification/index.html" data-section="electrification">Electrification</a>
-        <a href="../smr/index.html" data-section="smr">SMR</a>
-        <a href="../uranium/index.html" data-section="uranium">Uranium</a>
-        <a href="../digests/index.html" data-section="digests">Digests</a>
-      </div>
-    </div>
-  </nav>
-
-  <main class="container">
+  <main class="container" style="padding:3rem 1.25rem;max-width:40rem">
     <header class="page-header">
-      <h1>Uranium Map</h1>
-      <p class="subtitle">China reactor fuel demand, Kazakhstan / Kazatomprom offtake, and the Namibia supply gap.</p>
-      <span class="badge">As of Sep 30, 2026</span>
-      <div class="meta-row">
-        <span>Analytical briefing · Not investment advice</span>
-        <span>Tickers: <span class="ticker">KAP</span> <span class="ticker">CCJ</span> <span class="ticker">LEU</span></span>
-      </div>
+      <h1>Uranium moved</h1>
+      <p class="subtitle">This section now lives under a nested hub path. Old bookmarks are redirected automatically.</p>
     </header>
-
     <section class="section">
-      <h2>Overview</h2>
-      <p>
-        China’s operable nuclear fleet is on a path from roughly <strong>~64&nbsp;GW</strong> (mid–late 2026)
-        toward the <strong>15th Five-Year Plan target of 110&nbsp;GW by 2030</strong> — about <strong>~1.8×</strong>.
-        UxC-linked estimates put China natural-uranium demand at <strong>~11.5&nbsp;ktU → ~21&nbsp;ktU by 2030</strong>
-        (~1.8×; roughly +9–10&nbsp;ktU/yr). That is the right order of magnitude for reactor fuel requirements
-        if capacity is hit; first cores, capacity factors, enrichment tails, and large stockpiles mean the
-        mapping is not a perfect 1:1.
-      </p>
-      <p>
-        <strong>Kazakhstan</strong> (Kazatomprom and Chinese equity JVs) and <strong>Namibia</strong>
-        (Chinese-operated mines) are the two primary physical pillars of China’s natural-U imports today.
-        Namibia cannot cover the full incremental +9–10&nbsp;ktU alone; KAP production does not <em>need</em>
-        a mandated +25% hike for China’s reactors to run — growth and market share are commercial choices
-        atop already-guided ~+10% into 2026.
-      </p>
-      <p class="meta-row">Data reuse: <code>data/uranium_china_demand.json</code> · Chart CSV: <code>uranium/china-nuclear-capacity.csv</code></p>
-    </section>
-
-    <div class="card-grid">
-      <a class="card" href="china-demand.html" style="text-decoration:none;color:inherit;display:block">
-        <span class="icon">⚡</span>
-        <h3>China U demand</h3>
-        <p>Fleet ~64→110&nbsp;GW; U demand ~11.5→21&nbsp;ktU; stockpile and import nuance.</p>
-        <span class="card-link">Open briefing →</span>
-      </a>
-      <a class="card" href="kazakhstan-kap.html" style="text-decoration:none;color:inherit;display:block">
-        <span class="icon">🇰🇿</span>
-        <h3>Kazakhstan / KAP</h3>
-        <p>CNUC/CNOL offtake, CGN equity JVs, and valuation drivers — analytical, not advice.</p>
-        <span class="card-link">Open briefing →</span>
-      </a>
-      <a class="card" href="namibia-supply.html" style="text-decoration:none;color:inherit;display:block">
-        <span class="icon">🇳🇦</span>
-        <h3>Namibia supply gap</h3>
-        <p>Why Namibian output cannot cover China’s full +9–10&nbsp;ktU increment alone.</p>
-        <span class="card-link">Open briefing →</span>
-      </a>
-    </div>
-
-    <section class="section">
-      <h2>China operable nuclear capacity</h2>
-      <figure style="margin:0">
-        <img
-          src="china-nuclear-capacity.png"
-          alt="China operable nuclear capacity: historical through ~64 GW in 2026, path to 110 GW official 2030 target, then aspirational mid-scenarios for 2035/2040"
-          style="width:100%;height:auto;border-radius:8px;border:1px solid var(--border);background:#0a0c12"
-        >
-        <figcaption style="font-size:12px;color:var(--text-secondary);margin-top:10px;line-height:1.5">
-          End-2025 = China Nuclear Energy Association via NNSA (62.52&nbsp;GWe rated, 59 units).
-          2026 ≈ WNA Reactor Database (~63.99&nbsp;GWe operable; ~40.9&nbsp;GWe under construction).
-          2030 = 15th Five-Year Plan official target 110&nbsp;GWe (Mar 2026; WNA/CSIS).
-          2027–2029 = illustrative interpolation (not official year-by-year targets).
-          2035/2040 = mid aspirational scenario — not firm FYP commitments.
-          Gross vs net capacity differs by source (~2–5%). Chart prepared Sep 2026.
-          <a href="china-nuclear-capacity.csv">Download CSV</a>
-        </figcaption>
-      </figure>
-    </section>
-
-    <section class="section">
-      <h2>Key takeaways</h2>
-      <ul>
-        <li><strong>Demand:</strong> ~double reactor U requirements by 2030 if 110&nbsp;GW is delivered (~11.5→~21&nbsp;ktU).</li>
-        <li><strong>KAP:</strong> Already guiding ~+10% production into 2026; a ~25% attributable lift would be a share-gain scenario, not a physical necessity.</li>
-        <li><strong>Namibia:</strong> Chinese-linked tonnes already ~6.5–7.5&nbsp;ktU; realistic country increment by ~2030 is only a few ktU — well short of +9–10.</li>
-        <li><strong>Stockpile:</strong> Large inventories (~132&nbsp;ktU est. 2022) and 2025 import surge (~27.4&nbsp;kt) mean near-term buying can diverge from reactor burn.</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Related — SMR / HALEU</h2>
-      <p>
-        Advanced reactors (Oklo, X-Energy) depend on <strong>HALEU</strong> and enrichment —
-        Centrus <span class="ticker">LEU</span> is the main US bottleneck context.
-        Weekly execution gauges (licensing, fuel, offtake, cash) live on the SMR trackers.
-      </p>
-      <p>
-        <a href="../smr/index.html">SMR hub →</a>
-        · <a href="../smr/oklo.html">Oklo →</a>
-        · <a href="../smr/x-energy.html">X-Energy →</a>
-      </p>
-    </section>
-
-    <section class="section">
-      <h2>Disclaimer</h2>
-      <p><strong>Not investment advice.</strong> Figures are compiled from public filings, WNA/UxC/customs summaries, and company disclosures as of <strong>Sep 30, 2026</strong>. Contract volumes and prices with Chinese buyers are largely confidential; scenarios are analytical frames only.</p>
+      <p>If you are not redirected, open the new page:</p>
+      <p><a class="card-link" href="../electrification/uranium/index.html">Open Uranium section →</a></p>
+      <p style="font-size:12px;color:var(--text-secondary);margin-top:1rem">Canonical: <code>/electrification/uranium/index.html</code></p>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <p>Public investment briefing hub · <a href="https://armanamirzhan.github.io/investment_dashboard_public/">armanamirzhan.github.io/investment_dashboard_public</a></p>
-    <p>Source identifiers curated from Investment_Dashboard (read-only extract). Not investment advice.</p>
-  </footer>
-  <script src="../assets/site.js"></script>
 </body>
 </html>

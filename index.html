@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Investment Hub — Arman Amirzhan</title>
-  <meta name="description" content="Public investment briefing hub: electrification power map, photonics, SMR, uranium, and digests.">
+  <meta name="description" content="Public investment briefing hub: electrification (SMR/uranium), computation hardware (photonics), AI software, semiconductors, hyperscalers, and digests.">
   <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
@@ -14,9 +14,10 @@
       <div class="nav-links">
         <a href="index.html" data-section="home">Hub</a>
         <a href="electrification/index.html" data-section="electrification">Electrification</a>
-        <a href="photonics/index.html" data-section="photonics">Photonics</a>
-        <a href="smr/index.html" data-section="smr">SMR</a>
-        <a href="uranium/index.html" data-section="uranium">Uranium</a>
+        <a href="hardware/index.html" data-section="hardware">Hardware</a>
+        <a href="software/index.html" data-section="software">Software</a>
+        <a href="semiconductors/index.html" data-section="semiconductors">Semiconductors</a>
+        <a href="hyperscalers/index.html" data-section="hyperscalers">Hyperscalers</a>
         <a href="digests/index.html" data-section="digests">Digests</a>
       </div>
     </div>
@@ -25,7 +26,7 @@
   <main class="container">
     <header class="page-header">
       <h1>Public Investment Hub</h1>
-      <p class="subtitle">Briefings on datacenter electrification, advanced nuclear (SMR), uranium / HALEU, and daily digests.</p>
+      <p class="subtitle">Briefings on AI datacenter electrification, computation hardware, software, semiconductors, hyperscalers, and daily digests.</p>
       <div class="meta-row">
         <span>Live: <a href="https://armanamirzhan.github.io/investment_dashboard_public/">armanamirzhan.github.io/investment_dashboard_public</a></span>
       </div>
@@ -35,25 +36,31 @@
       <a class="card" href="electrification/index.html" style="text-decoration:none;color:inherit">
         <span class="icon" aria-hidden="true">⚡</span>
         <h2>Electrification</h2>
-        <p>Full AI datacenter Power Map briefing — generation through GPU regulators.</p>
+        <p>Full AI datacenter Power Map — generation through GPU regulators. Nested: <strong>SMR</strong> trackers and <strong>Uranium</strong> / HALEU fuel-cycle map.</p>
         <span class="card-link">Open section →</span>
       </a>
-      <a class="card" href="photonics/index.html" style="text-decoration:none;color:inherit">
-        <span class="icon" aria-hidden="true">💡</span>
-        <h2>Photonics</h2>
-        <p>AI optical interconnects and the data-movement stack — from components and DSPs to integration and upstream supply.</p>
+      <a class="card" href="hardware/index.html" style="text-decoration:none;color:inherit">
+        <span class="icon" aria-hidden="true">🖥️</span>
+        <h2>Hardware</h2>
+        <p>Datacenter computation hardware. Nested: <strong>Photonics</strong> — optical interconnects and the data-movement stack.</p>
         <span class="card-link">Open section →</span>
       </a>
-      <a class="card" href="smr/index.html" style="text-decoration:none;color:inherit">
-        <span class="icon" aria-hidden="true">⚛️</span>
-        <h2>SMR</h2>
-        <p>Weekly gauge trackers for Oklo and X-Energy; NuScale coming soon.</p>
+      <a class="card" href="software/index.html" style="text-decoration:none;color:inherit">
+        <span class="icon" aria-hidden="true">🧠</span>
+        <h2>Software</h2>
+        <p>AI software — model developers, platforms, MLOps, inference, EDA, security, and vertical AI.</p>
         <span class="card-link">Open section →</span>
       </a>
-      <a class="card" href="uranium/index.html" style="text-decoration:none;color:inherit">
-        <span class="icon" aria-hidden="true">🪨</span>
-        <h2>Uranium</h2>
-        <p>China demand, Kazakhstan–KAP offtake, and Namibia supply briefings.</p>
+      <a class="card" href="semiconductors/index.html" style="text-decoration:none;color:inherit">
+        <span class="icon" aria-hidden="true">🔬</span>
+        <h2>Semiconductors</h2>
+        <p>Fabrication chain — foundries, lithography, WFE, packaging, test, materials, and power semis.</p>
+        <span class="card-link">Open section →</span>
+      </a>
+      <a class="card" href="hyperscalers/index.html" style="text-decoration:none;color:inherit">
+        <span class="icon" aria-hidden="true">☁️</span>
+        <h2>Hyperscalers</h2>
+        <p>Cloud operators, GPU clouds, and colo REITs — CapEx and power-buildout demand owners.</p>
         <span class="card-link">Open section →</span>
       </a>
       <a class="card" href="digests/index.html" style="text-decoration:none;color:inherit">
@@ -65,6 +72,15 @@
     </div>
 
     <section class="section">
+      <h2>Nested briefings</h2>
+      <ul>
+        <li><a href="electrification/smr/index.html">SMR</a> — Oklo / X-Energy weekly gauges (under Electrification)</li>
+        <li><a href="electrification/uranium/index.html">Uranium</a> — China demand, KAP, Namibia (under Electrification)</li>
+        <li><a href="hardware/photonics/index.html">Photonics</a> — optical interconnect stack (under Hardware)</li>
+      </ul>
+    </section>
+
+    <section class="section">
       <h2>About this hub</h2>
       <p>Clean public site scaffold. Section bots own their folders; the website builder owns the hub shell (<code>index.html</code>, <code>assets/</code>). Curated company lists and trackers under <code>data/</code> were extracted read-only from the private <code>Investment_Dashboard</code> — not a full dashboard clone.</p>
       <p>See <a href="OWNERS.md">OWNERS.md</a> for folder ownership and <a href="README.md">README.md</a> for purpose and Pages URL.</p>
@@ -74,7 +90,8 @@
       <h2>Shared data (seed)</h2>
       <ul>
         <li><code>data/companies.json</code> — full curated company set</li>
-        <li><code>data/electrification_companies.json</code> / <code>smr_companies.json</code> / <code>uranium_companies.json</code> — section subsets</li>
+        <li><code>data/electrification_companies.json</code> / <code>smr_companies.json</code> / <code>uranium_companies.json</code> — electricity subsets</li>
+        <li><code>data/software_companies.json</code> / <code>hardware_companies.json</code> / <code>semiconductor_companies.json</code> / <code>hyperscaler_companies.json</code> — sector subsets</li>
         <li><code>data/nuclear_tracker.json</code>, <code>fusion_tracker.json</code>, <code>haleu_constraint.json</code></li>
         <li><code>data/power_suppliers.json</code>, <code>hardware_suppliers.json</code>, <code>hyperscaler_buildouts.json</code></li>
         <li><code>data/kpi_metrics.json</code>, <code>risks.json</code>, <code>meta.json</code>, <code>chart_data.json</code></li>

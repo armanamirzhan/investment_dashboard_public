@@ -11,11 +11,16 @@ A clean, public-facing static site for thematic investment sections:
 | Path | Role |
 |------|------|
 | `/` (`index.html`) | Hub homepage + shared nav |
-| `photonics/` | AI optical interconnects and data-movement stack |
 | `electrification/` | Power Map (grid, turbines, utilities, DC power) |
-| `smr/` | SMR / advanced nuclear (Oklo, X-energy, peers) |
-| `uranium/` | Uranium / HALEU fuel-cycle map |
+| `electrification/smr/` | SMR / advanced nuclear (Oklo, X-energy, peers) |
+| `electrification/uranium/` | Uranium / HALEU fuel-cycle map |
+| `hardware/` | Datacenter computation hardware (parent) |
+| `hardware/photonics/` | AI optical interconnects and data-movement stack |
+| `software/` | AI software landscape |
+| `semiconductors/` | Semiconductor fabrication chain |
+| `hyperscalers/` | Hyperscaler / GPU-cloud / colo buildout |
 | `digests/` | Morning briefs and digests index |
+| `smr/`, `uranium/`, `photonics/` | Redirect stubs (legacy bookmarks) |
 | `assets/` | Shared CSS / JS |
 | `data/` | Curated JSON identifiers and trackers (seed) |
 
@@ -25,8 +30,8 @@ This is **not** a clone of the private `Investment_Dashboard`. High-value compan
 
 See [OWNERS.md](OWNERS.md). In short:
 
-- **Website builder** owns hub shell: `index.html`, `assets/`, `README.md`, `OWNERS.md`, and cross-cutting `data/` conventions.
-- **Section bots** own their folders (`electrification/`, `photonics/`, `smr/`, `uranium/`, `digests/`) and may extend section-specific data under `data/` with clear prefixes.
+- **Website builder** owns hub shell: `index.html`, `assets/`, `README.md`, `OWNERS.md`, redirect stubs, and cross-cutting `data/` conventions.
+- **Section bots** own their folders (`electrification/`, `electrification/smr/`, `electrification/uranium/`, `hardware/`, `hardware/photonics/`, `software/`, `semiconductors/`, `hyperscalers/`, `digests/`) and may extend section-specific data under `data/` with clear prefixes.
 
 ## GitHub Pages
 

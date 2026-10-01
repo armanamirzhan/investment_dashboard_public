@@ -3,17 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="Weekly X-Energy (XE) execution gauges: TX-1 FOAK, offtake, TRISO/HALEU, liquidity, NRC, revenue.">
-<title>X-Energy Six Gauges — SMR — Investment Hub</title>
+<meta name="description" content="Weekly Oklo execution gauges: Groves, PPA, HALEU, cash, NRC, revenue.">
+<title>Oklo Six Gauges — SMR — Investment Hub</title>
 <!--
   Weekly auto-update import schema (JSON):
   {
     "week": "2026-W40",                 // ISO week (YYYY-Www); sets week picker
     "generatedAt": "ISO8601",           // shown as "Last auto-update"
-    "source": "xenergy-weekly-routine", // optional provenance string
+    "source": "oklo-weekly-routine",    // optional provenance string
     "gauges": {
-      "tx1_foak_hardware"|"commercial_offtake"|"fuel_cycle_triso_haleu"|
-      "liquidity_dilution_ardp"|"nrc_long_mott"|"revenue_quality": {
+      "groves"|"ppa"|"haleu"|"cash"|"nrc"|"revenue": {
         "level": 0|1|2,                 // required: red / yellow / green band
         "label": "optional override",   // optional display label (else uses built-in)
         "note": "...",                  // weekly note
@@ -26,7 +25,7 @@
   Import via file picker or paste + Apply. Overwrites current levels/notes and
   history entry for that week. Citations render under each gauge card.
 -->
-  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="stylesheet" href="../../assets/site.css">
 <style>
   :root {
     --bg: #0b1220;
@@ -35,8 +34,8 @@
     --border: #243049;
     --text: #e8eef9;
     --muted: #93a0b8;
-    --blue: #14b8a6;
-    --blue-deep: #0f766e;
+    --blue: #3b82f6;
+    --blue-deep: #1e3a8a;
     --red: #ef4444;
     --yellow: #eab308;
     --green: #22c55e;
@@ -49,7 +48,7 @@
     flex-direction: column;
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     background:
-      radial-gradient(1200px 600px at 10% -10%, #12302c 0%, transparent 55%),
+      radial-gradient(1200px 600px at 10% -10%, #1a2744 0%, transparent 55%),
       radial-gradient(900px 500px at 100% 0%, #132033 0%, transparent 50%),
       var(--bg);
     color: var(--text);
@@ -74,7 +73,7 @@
     margin: 0;
     color: var(--muted);
     font-size: .95rem;
-    max-width: 56ch;
+    max-width: 52ch;
     line-height: 1.45;
   }
   .last-auto {
@@ -82,7 +81,7 @@
     font-size: .8rem;
     color: var(--muted);
   }
-  .last-auto strong { color: #a7f3d0; font-weight: 600; }
+  .last-auto strong { color: #c7d7f8; font-weight: 600; }
   .controls {
     display: flex;
     flex-wrap: wrap;
@@ -136,10 +135,10 @@
   .banner p {
     margin: 0;
     padding: 10px 14px;
-    background: rgba(20,184,166,.12);
-    border: 1px solid rgba(20,184,166,.28);
+    background: rgba(59,130,246,.12);
+    border: 1px solid rgba(59,130,246,.28);
     border-radius: 12px;
-    color: #a7f3d0;
+    color: #c7d7f8;
     font-size: .88rem;
   }
   .banner p.summary {
@@ -259,26 +258,6 @@
     color: var(--muted);
     font-size: .86rem;
   }
-  .vs-oklo {
-    margin: 6px 0 0;
-    font-size: .72rem;
-    color: #5eead4;
-    letter-spacing: .02em;
-  }
-  .vs-oklo .tag {
-    display: inline-block;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    padding: 1px 7px;
-    border-radius: 999px;
-    border: 1px solid rgba(20,184,166,.35);
-    background: rgba(20,184,166,.12);
-    margin-right: 6px;
-  }
-  .vs-oklo .tag.replace { color: #fca5a5; border-color: rgba(239,68,68,.35); background: rgba(239,68,68,.1); }
-  .vs-oklo .tag.adapt { color: #fef08a; border-color: rgba(234,179,8,.35); background: rgba(234,179,8,.1); }
-  .vs-oklo .tag.keep { color: #bbf7d0; border-color: rgba(34,197,94,.35); background: rgba(34,197,94,.1); }
   .conf {
     display: inline-block;
     margin-left: 8px;
@@ -382,7 +361,7 @@
     font-size: .8rem;
     line-height: 1.45;
   }
-  .citations a { color: #5eead4; }
+  .citations a { color: #93c5fd; }
   .editor {
     display: grid;
     grid-template-columns: 1fr;
@@ -413,7 +392,7 @@
     color: var(--muted);
     font-size: .85rem;
   }
-  .tracker-attribution a { color: #5eead4; }
+  .tracker-attribution a { color: #93c5fd; }
   .history {
     max-width: 1200px;
     margin: 0 auto 36px;
@@ -451,20 +430,23 @@
 <body>
   <nav class="site-nav" aria-label="Primary">
     <div class="nav-inner">
-      <a class="brand" href="../index.html">Arman <span>Invest</span></a>
+      <a class="brand" href="../../index.html">Arman <span>Invest</span></a>
       <div class="nav-links">
-        <a href="../index.html" data-section="home">Hub</a>
-        <a href="../electrification/index.html" data-section="electrification">Electrification</a>
-        <a href="../smr/index.html" data-section="smr">SMR</a>
-        <a href="../uranium/index.html" data-section="uranium">Uranium</a>
-        <a href="../digests/index.html" data-section="digests">Digests</a>
+        
+        <a href="../../index.html" data-section="home">Hub</a>
+        <a href="../../electrification/index.html" data-section="electrification">Electrification</a>
+        <a href="../../hardware/index.html" data-section="hardware">Hardware</a>
+        <a href="../../software/index.html" data-section="software">Software</a>
+        <a href="../../semiconductors/index.html" data-section="semiconductors">Semiconductors</a>
+        <a href="../../hyperscalers/index.html" data-section="hyperscalers">Hyperscalers</a>
+        <a href="../../digests/index.html" data-section="digests">Digests</a>
       </div>
     </div>
   </nav>
   <header class="tracker-header">
     <div>
-      <h1>X-Energy Six Gauges — Weekly Tracker</h1>
-      <p class="sub">Track six execution gauges for <strong>X-Energy (Nasdaq: XE)</strong>. Update once a week; history stays on this device. Public since Apr 2026 IPO.</p>
+      <h1>Oklo Six Gauges — Weekly Tracker</h1>
+      <p class="sub">Track the six execution gauges from <em>The Nuclear Power Bet Behind AI | Oklo Explained</em>. Update once a week; history stays on this device.</p>
       <p class="last-auto" id="lastAuto">Last auto-update: <strong>never</strong></p>
     </div>
     <div class="controls">
@@ -473,7 +455,7 @@
       </label>
       <button id="saveBtn" type="button">Save this week</button>
       <button id="exportBtn" class="secondary" type="button">Export JSON</button>
-      <button id="resetBtn" class="secondary" type="button">Reset to baseline</button>
+      <button id="resetBtn" class="secondary" type="button">Reset to video baseline</button>
     </div>
   </header>
 
@@ -489,7 +471,7 @@
 
 
   <div class="banner">
-    <p id="bannerText">Adapted from Oklo tracker — REPLACE Groves→TX-1 FOAK; ADAPT PPA/HALEU/Revenue; KEEP cash+NRC shapes. XE is public since Apr 2026.</p>
+    <p id="bannerText">Source slide titled these “Six Gauges to Watch Every Quarter.” This page is set up for weekly check-ins as requested. Baseline statuses match the video ending slide.</p>
   </div>
 
   <section class="import-panel">
@@ -499,7 +481,7 @@
       <div class="import-row">
         <input type="file" id="importFile" accept="application/json,.json" />
       </div>
-      <textarea id="importPaste" placeholder='Paste weekly update JSON here, e.g. { "week": "2026-W40", "source": "xenergy-weekly-routine", "gauges": { ... }, "summary": "..." }'></textarea>
+      <textarea id="importPaste" placeholder='Paste weekly update JSON here, e.g. { "week": "2026-W40", "gauges": { ... }, "summary": "..." }'></textarea>
       <div class="import-actions">
         <button id="importApplyBtn" type="button">Apply import</button>
         <button id="importClearBtn" class="secondary" type="button">Clear</button>
@@ -515,7 +497,7 @@
     <div id="historyTable"></div>
   </section>
 
-  <p class="tracker-attribution">Gauges adapted for <a href="https://x-energy.com/" target="_blank" rel="noopener">X-Energy, Inc. (Nasdaq: XE)</a>. localStorage key: <code>xenergy-six-gauges-v1</code>.</p>
+  <p class="tracker-attribution">Gauges from <a href="https://www.youtube.com/watch?v=6C2ckT1bMnI" target="_blank" rel="noopener">The Nuclear Power Bet Behind AI | Oklo Explained</a>. localStorage key: <code>oklo-six-gauges-v1</code>.</p>
 
   <footer class="site-footer">
     <p>Public investment briefing hub · <a href="https://armanamirzhan.github.io/investment_dashboard_public/">armanamirzhan.github.io/investment_dashboard_public</a> · <a href="index.html">SMR section</a></p>
@@ -524,113 +506,74 @@
 
 
 <script>
-const STORAGE_KEY = 'xenergy-six-gauges-v1';
+const STORAGE_KEY = 'oklo-six-gauges-v1';
 
 const GAUGES = [
   {
-    id: 'tx1_foak_hardware',
+    id: 'groves',
     num: 1,
-    title: 'TX-1 / FOAK Hardware Execution',
-    subtitle: 'TRISO-X TX-1 ops → Long Mott Xe-100 FOAK criticality',
-    levels: ['Licensed / Pre-build', 'Buildout Underway', 'Fuel Ops or FOAK Critical'],
-    tracks: [
-      'TX-1 construction phase (vertical → interior → equipment → hot ops)',
-      'Company-stated commercial production window (H1 2028)',
-      'Long Mott CP issuance → construction start → first criticality/COD (ARDP FOAK)'
-    ],
-    goal: 'Goal: TX-1 producing commercial TRISO on H1 2028 path; Long Mott CPA → construction → FOAK criticality.',
-    baseline: 1,
-    decision: 'REPLACE',
-    vsOklo: 'vs Oklo Groves Criticality'
+    title: 'GROVES CRITICALITY',
+    subtitle: 'The path to first fuel & first data',
+    levels: ['Behind', 'On Track', 'Ahead'],
+    tracks: ['Site preparation', 'Equipment manufacturing', 'Construction progress', 'Testing & commissioning'],
+    goal: 'Target: Criticality in 2027',
+    baseline: 2
   },
   {
-    id: 'commercial_offtake',
+    id: 'ppa',
     num: 2,
-    title: 'Dow / Amazon Offtake Maturity',
-    subtitle: 'JDA & options → FID / binding offtake → operating contract',
-    levels: ['LOI / MOU Only', 'JDA / Options / CPA Path', 'FID + Binding Offtake'],
-    tracks: [
-      'Dow Long Mott: JDA status, CPA progress, Dow FID timing',
-      'Amazon + Energy Northwest Cascade: CPA filing, offtake/right-to-purchase → binding PPA',
-      'Any SEC disclosure of definitive offtake with capacity, term, price/formula'
-    ],
-    goal: 'Goal: Convert Dow Seadrift and/or Cascade Amazon pathway into FID plus binding multi-year offtake.',
-    baseline: 1,
-    decision: 'ADAPT',
-    vsOklo: 'vs Oklo First LOI → Binding PPA'
+    title: 'FIRST LOI → BINDING PPA',
+    subtitle: 'Proving commercial demand',
+    levels: ['None', 'LOI Signed', 'PPA Executed'],
+    tracks: ['Active LOIs', 'Progress of conversion conversations', 'Contract terms (price, tenor, delivery)'],
+    goal: 'Goal: First binding PPA',
+    baseline: 2
   },
   {
-    id: 'fuel_cycle_triso_haleu',
+    id: 'haleu',
     num: 3,
-    title: 'TRISO-X + HALEU Supply Stack',
-    subtitle: 'Enrichment contracts + licensed fab → commercial TRISO delivery',
-    levels: ['No Path', 'Contracted + Fab Building', 'Delivering Commercial TRISO'],
-    tracks: [
-      'Centrus definitive enrichment agreement status and any delivery milestones',
-      'General Matter (and other) enrichment agreements',
-      'DOE HALEU Availability Program material for first Dow core',
-      'TX-1/TX-2 license conditions and first commercial pebble production'
-    ],
-    goal: 'Goal: Secure and demonstrate domestic HALEU→TRISO path with actual commercial fuel deliveries.',
-    baseline: 1,
-    decision: 'ADAPT',
-    vsOklo: 'vs Oklo HALEU Centrus contract & delivery'
+    title: 'HALEU: CENTRUS CONTRACT & DELIVERY',
+    subtitle: 'Fuel security for first reactor',
+    levels: ['No Contract', 'Contract Signed', 'Deliveries on Track'],
+    tracks: ['Definitive supply agreement', 'Quantities & pricing', 'Delivery schedule for 2029 startup', 'DOE / regulatory approvals'],
+    goal: 'Goal: On-time fuel delivery',
+    baseline: 2
   },
   {
-    id: 'liquidity_dilution_ardp',
+    id: 'cash',
     num: 4,
-    title: 'Liquidity, Burn & ARDP Cost-Share',
-    subtitle: 'Runway vs op/capex burn; equity dilution; DOE 50/50',
-    levels: ['Stressed', 'Funded / Investing', 'Fortress / Self-funding'],
-    tracks: [
-      '10-Q: cash + short-term + long-term investments (= liquidity)',
-      'Net cash used in operating activities; capex net of grant reimbursements',
-      'Shares outstanding / ATM or follow-on equity (if any)',
-      'ARDP budget-period continuation and any incremental DOE obligation'
-    ],
-    goal: 'Goal: Maintain multi-year FOAK funding (private share + ARDP) without distressed dilution; progress toward self-funding.',
-    baseline: 1,
-    decision: 'KEEP',
-    vsOklo: 'vs Oklo Cash burn & equity dilution'
+    title: 'CASH BURN & EQUITY DILUTION',
+    subtitle: 'Financial discipline matters',
+    levels: ['High Burn', 'In Line', 'Below Guidance'],
+    tracks: ['Quarterly cash burn vs. guidance', 'Cash balance & runway', 'Equity raised (YTD & planned)', 'Dilution level'],
+    goal: 'Goal: Extend runway with minimal dilution',
+    baseline: 1
   },
   {
-    id: 'nrc_long_mott',
+    id: 'nrc',
     num: 5,
-    title: 'NRC Long Mott CPA Progress',
-    subtitle: 'Part 50 construction permit for 4× Xe-100 at Seadrift',
-    levels: ['Pre-docket / Early Review', 'Advanced Review', 'CP Issued'],
-    tracks: [
-      'NRC Long Mott milestone table (Draft SE, Advanced SE, Final SE, Hearing, CP decision)',
-      'EA/FONSI status (done 2026-05-18)',
-      'Cascade / Energy Northwest CPA filing (secondary licensing pipeline)',
-      'Note: TRISO-X Part 70 already achieved — do not double-count as reactor CP'
-    ],
-    goal: 'Goal: Obtain Long Mott construction permit on NRC schedule; then advance toward OL.',
-    baseline: 1,
-    decision: 'KEEP',
-    vsOklo: 'vs Oklo NRC licensing progress'
+    title: 'NRC LICENSING PROGRESS',
+    subtitle: 'Regulatory path to deployment',
+    levels: ['Behind', 'On Track', 'Ahead'],
+    tracks: ['Combined License Application (COLA) status', 'NRC review milestones', 'Environmental reviews', 'Target license approvals'],
+    goal: 'Goal: Timely approval',
+    baseline: 2
   },
   {
-    id: 'revenue_quality',
+    id: 'revenue',
     num: 6,
-    title: 'Revenue Quality Ladder',
-    subtitle: 'ARDP/services → commercial TRISO → power/steam offtake',
-    levels: ['Pre-revenue', 'Services / Grant Income', 'Fuel or Power/Steam Revenue'],
-    tracks: [
-      '10-Q / earnings: Services revenue vs Grant income split',
-      'First commercial TRISO fuel sale (customer, volume)',
-      'First Long Mott or Cascade MWh / steam revenue'
-    ],
-    goal: 'Goal: Graduate from ARDP/services reimbursement to commercial fuel and then FOAK power/steam revenue.',
-    baseline: 1,
-    decision: 'ADAPT',
-    vsOklo: 'vs Oklo First actual revenue'
+    title: 'FIRST ACTUAL REVENUE',
+    subtitle: 'Starting with isotopes in 2025',
+    levels: ['No Revenue', 'Isotope Revenue', 'Power Revenue'],
+    tracks: ['Isotope production & sales (2025)', 'Revenue amount & growth', 'Customer pipeline', 'Transition to power sales'],
+    goal: 'Goal: First actual revenue — isotopes first, then power',
+    baseline: 2
   }
 ];
 
 const LEVEL_CLASS = ['red', 'yellow', 'green'];
 const NEEDLE_DEG = [-60, 0, 60];
-const DEFAULT_BANNER = 'Adapted from Oklo tracker — REPLACE Groves→TX-1 FOAK; ADAPT PPA/HALEU/Revenue; KEEP cash+NRC shapes. XE is public since Apr 2026.';
+const DEFAULT_BANNER = 'Source slide titled these “Six Gauges to Watch Every Quarter.” This page is set up for weekly check-ins as requested. Baseline statuses match the video ending slide.';
 
 function isoWeekNow() {
   const d = new Date();
@@ -686,6 +629,7 @@ if (!state.current || !Object.keys(state.current).length) {
 }
 if (!Array.isArray(state.history)) state.history = [];
 if (!('lastAutoUpdate' in state)) state.lastAutoUpdate = null;
+// Ensure shape for older localStorage
 for (const g of GAUGES) {
   if (!state.current[g.id]) state.current[g.id] = { level: g.baseline, note: '', label: null, confidence: null, citations: [] };
   else {
@@ -764,14 +708,6 @@ function renderCitations(citations) {
   return `<div class="citations"><h4>Citations</h4><ul>${items}</ul></div>`;
 }
 
-function decisionClass(decision) {
-  const d = String(decision || '').toLowerCase();
-  if (d === 'replace') return 'replace';
-  if (d === 'adapt') return 'adapt';
-  if (d === 'keep') return 'keep';
-  return '';
-}
-
 function renderCards() {
   const grid = document.getElementById('grid');
   grid.innerHTML = GAUGES.map(g => {
@@ -782,7 +718,6 @@ function renderCards() {
     const confHtml = cur.confidence
       ? `<span class="conf ${escapeHtml(cur.confidence)}" title="Confidence">${escapeHtml(cur.confidence)}</span>`
       : '';
-    const vsHtml = `<p class="vs-oklo"><span class="tag ${decisionClass(g.decision)}">${escapeHtml(g.decision)}</span>${escapeHtml(g.vsOklo)}</p>`;
     return `
     <article class="card" data-id="${g.id}">
       <div class="card-top">
@@ -790,7 +725,6 @@ function renderCards() {
         <div class="titles">
           <h2>${g.title}${confHtml}</h2>
           <p>${g.subtitle}</p>
-          ${vsHtml}
         </div>
       </div>
       <div class="gauge-row">
@@ -824,7 +758,7 @@ function renderCards() {
     sel.addEventListener('change', () => {
       const id = sel.dataset.id;
       state.current[id].level = Number(sel.value);
-      state.current[id].label = null;
+      state.current[id].label = null; // manual edit clears import label override
       saveState(state);
       renderCards();
       bindEditors();
@@ -840,18 +774,6 @@ function bindEditors() {
       saveState(state);
     });
   });
-}
-
-function historyShortTitle(g) {
-  const map = {
-    tx1_foak_hardware: 'TX-1',
-    commercial_offtake: 'Offtake',
-    fuel_cycle_triso_haleu: 'TRISO',
-    liquidity_dilution_ardp: 'Liquidity',
-    nrc_long_mott: 'NRC',
-    revenue_quality: 'Revenue'
-  };
-  return map[g.id] || g.title.split(' ')[0];
 }
 
 function renderHistory() {
@@ -876,7 +798,7 @@ function renderHistory() {
       <thead>
         <tr>
           <th>Week</th>
-          ${GAUGES.map(g => `<th>${g.num}. ${historyShortTitle(g)}</th>`).join('')}
+          ${GAUGES.map(g => `<th>${g.num}. ${g.title.split(' ')[0]}</th>`).join('')}
         </tr>
       </thead>
       <tbody>${rows}</tbody>
@@ -922,6 +844,7 @@ function applyImportPayload(payload) {
   for (const g of GAUGES) {
     const raw = payload.gauges[g.id];
     if (raw == null) {
+      // Keep existing if gauge omitted
       next[g.id] = normalizeGaugeEntry(state.current[g.id], g.baseline);
     } else {
       if (raw.level == null || Number.isNaN(Number(raw.level))) {
@@ -982,12 +905,12 @@ document.getElementById('exportBtn').addEventListener('click', () => {
   const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = `xenergy-gauges-${document.getElementById('weekInput').value || 'export'}.json`;
+  a.download = `oklo-gauges-${document.getElementById('weekInput').value || 'export'}.json`;
   a.click();
   URL.revokeObjectURL(a.href);
 });
 document.getElementById('resetBtn').addEventListener('click', () => {
-  if (!confirm('Reset current statuses to the gauge-map baseline (all mid / level 1)? History is kept.')) return;
+  if (!confirm('Reset current statuses to the video baseline? History is kept.')) return;
   state.current = defaultCurrent();
   saveState(state);
   setBanner(DEFAULT_BANNER);
@@ -1027,6 +950,7 @@ document.getElementById('importClearBtn').addEventListener('click', () => {
   setImportStatus('');
 });
 
+// Restore summary banner from last import if present
 if (state.lastAutoUpdate && state.history.length) {
   const last = [...state.history].reverse().find(h => h.summary);
   if (last && last.summary) setBanner(last.summary, 'summary');
@@ -1036,6 +960,6 @@ renderLastAuto();
 renderCards();
 renderHistory();
 </script>
-  <script src="../assets/site.js"></script>
+  <script src="../../assets/site.js"></script>
 </body>
 </html>

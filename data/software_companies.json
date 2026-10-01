@@ -1,0 +1,539 @@
+[
+  {
+    "ticker": null,
+    "name": "OpenAI",
+    "sector": "software",
+    "sub_sector": "AI Model Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": false,
+    "thesis": "Leading frontier AI developer (GPT-4, o1). $80B+ valuation, $3.4B+ revenue run-rate. Exclusive Microsoft infrastructure partnership.",
+    "catalysts": [
+      "GPT-5 / next-gen models",
+      "Enterprise adoption acceleration",
+      "Microsoft partnership deepening"
+    ],
+    "risks": [
+      "Heavy infrastructure costs",
+      "Regulatory scrutiny",
+      "Competition from open-source models"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": null,
+    "name": "Anthropic",
+    "sector": "software",
+    "sub_sector": "AI Model Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": false,
+    "thesis": "Constitutional AI developer behind Claude models. $20B+ valuation with significant backing from Google and Amazon.",
+    "catalysts": [
+      "Claude model improvements",
+      "Enterprise adoption",
+      "Safety-first differentiation"
+    ],
+    "risks": [
+      "Capital intensity",
+      "Competition from OpenAI/Google",
+      "Path to profitability"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": null,
+    "name": "xAI",
+    "sector": "software",
+    "sub_sector": "AI Model Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": false,
+    "thesis": "Elon Musk's AI venture developing Grok models. $24B valuation. Building massive Colossus datacenter in Memphis.",
+    "catalysts": [
+      "Grok model development",
+      "Colossus infrastructure scale",
+      "X platform integration"
+    ],
+    "risks": [
+      "Late market entry",
+      "Execution risk on infrastructure",
+      "Talent competition"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": null,
+    "name": "Mistral AI",
+    "sector": "software",
+    "sub_sector": "AI Model Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": false,
+    "thesis": "French LLM developer with competitive open models (Mistral, Mixtral). $2B valuation, strong EU backing.",
+    "catalysts": [
+      "European AI sovereignty demand",
+      "Open-weight model adoption",
+      "Enterprise partnerships"
+    ],
+    "risks": [
+      "Funding vs US competitors",
+      "Market share challenges",
+      "EU regulatory complexity"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": null,
+    "name": "DeepSeek",
+    "sector": "software",
+    "sub_sector": "AI Model Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": false,
+    "thesis": "Chinese LLM developer with high-performance models rivaling Western frontier labs. ~$5B+ estimated valuation.",
+    "catalysts": [
+      "Cost-efficient training methods",
+      "Chinese market dominance",
+      "Open-source model releases"
+    ],
+    "risks": [
+      "US-China tensions",
+      "Export controls impact",
+      "Government policy risk"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": null,
+    "name": "Cohere",
+    "sector": "software",
+    "sub_sector": "AI Model Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Enterprise AI",
+    "report": null,
+    "public": false,
+    "thesis": "Enterprise-focused LLM APIs with multilingual models. $5.5B valuation, IPO pending.",
+    "catalysts": [
+      "Enterprise AI adoption",
+      "IPO catalyst",
+      "Multilingual differentiation"
+    ],
+    "risks": [
+      "Competition from bigger labs",
+      "Enterprise sales cycle",
+      "Pricing pressure"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "PLTR",
+    "name": "Palantir Technologies",
+    "sector": "software",
+    "sub_sector": "AI Platforms & Enterprise",
+    "rating": "STRONG_BUY",
+    "rating_source": "Claude fundamental analysis based on official Palantir 10-K and Q1 2026 earnings release. Wall Street consensus: Buy (14 Buy, 4 Hold, 2 Sell out of 20 analysts). Avg PT $194. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "Core AI",
+    "report": "reports/PLTR_Palantir_Technologies.html",
+    "public": true,
+    "thesis": "AI platform leader with 85% revenue growth and 60% operating margins. US commercial acceleration at 133% YoY is exceptional. Valuation at 100x P/E is the key risk.",
+    "catalysts": [
+      "US commercial revenue +133% YoY",
+      "Raised FY guidance to $7.65-7.66B (71% growth)",
+      "FCF target $4.2-4.4B"
+    ],
+    "risks": [
+      "22% YTD decline",
+      "Multiple compression in software sector"
+    ],
+    "updated": "2026-05-09",
+    "latest_revenue": "1.63B Q1 2026"
+  },
+  {
+    "ticker": "CRM",
+    "name": "Salesforce",
+    "sector": "software",
+    "sub_sector": "AI Platforms & Enterprise",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official Salesforce 10-K and quarterly earnings. Wall Street consensus: Buy (26 Buy, 8 Hold, 1 Sell out of 35 analysts). Avg PT $283. Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "AI Integration",
+    "report": "reports/CRM_Salesforce.html",
+    "public": true,
+    "thesis": "Enterprise CRM leader with Einstein AI and Agentforce. $282B market cap, $38B+ revenue. AI features driving upsell.",
+    "catalysts": [
+      "Agentforce AI agent platform",
+      "Einstein AI monetization",
+      "Data Cloud growth"
+    ],
+    "risks": [
+      "AI feature commoditization",
+      "Enterprise spending slowdown",
+      "Competition from Microsoft"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "NOW",
+    "name": "ServiceNow",
+    "sector": "software",
+    "sub_sector": "AI Platforms & Enterprise",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official ServiceNow 10-K and quarterly earnings. Wall Street consensus: Buy (32 analysts). Avg PT $350. Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "AI Integration",
+    "report": "reports/NOW_ServiceNow.html",
+    "public": true,
+    "thesis": "Enterprise workflow platform with deep AI/ML integration. $265B market cap, $10B+ revenue. AI driving workflow automation.",
+    "catalysts": [
+      "Now Assist AI features",
+      "Platform workflow expansion",
+      "Enterprise AI adoption"
+    ],
+    "risks": [
+      "Premium valuation",
+      "Macro sensitivity",
+      "Competition intensifying"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "SNOW",
+    "name": "Snowflake",
+    "sector": "software",
+    "sub_sector": "AI Platforms & Enterprise",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official Snowflake 10-K and quarterly earnings. Wall Street consensus: Buy (37 analysts). Avg PT $233. Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "AI Data Platform",
+    "report": "reports/SNOW_Snowflake.html",
+    "public": true,
+    "thesis": "Cloud data platform enabling AI/ML workloads. $56B market cap, $3.7B revenue. Cortex AI features driving data-native AI.",
+    "catalysts": [
+      "Cortex AI platform adoption",
+      "Data sharing network growth",
+      "Consumption model upside"
+    ],
+    "risks": [
+      "Databricks competition",
+      "Consumption model volatility",
+      "Path to profitability"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": null,
+    "name": "Databricks",
+    "sector": "software",
+    "sub_sector": "AI Platforms & Enterprise",
+    "rating": null,
+    "emoji": null,
+    "exposure": "AI Data Platform",
+    "report": null,
+    "public": false,
+    "thesis": "Lakehouse platform unifying data + AI infrastructure. $43B valuation, $1B+ ARR. MLflow ecosystem leader.",
+    "catalysts": [
+      "IPO potential",
+      "Enterprise AI workload growth",
+      "Unity Catalog adoption"
+    ],
+    "risks": [
+      "Snowflake competition",
+      "Cloud provider competition",
+      "IPO timing"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "PATH",
+    "name": "UiPath",
+    "sector": "software",
+    "sub_sector": "AI Platforms & Enterprise",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official UiPath 10-K and quarterly earnings. Wall Street consensus: Hold (15 analysts). Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "AI Automation",
+    "report": "reports/PATH_UiPath.html",
+    "public": true,
+    "thesis": "RPA leader integrating AI/ML for enterprise automation. $20B market cap, $1.3B revenue.",
+    "catalysts": [
+      "AI-powered automation demand",
+      "Enterprise workflow integration",
+      "Platform expansion"
+    ],
+    "risks": [
+      "Competition from Microsoft Power Automate",
+      "Growth deceleration",
+      "Market saturation"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": null,
+    "name": "Hugging Face",
+    "sector": "software",
+    "sub_sector": "AI Infrastructure & MLOps",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI Infra",
+    "report": null,
+    "public": false,
+    "thesis": "Central hub for open-source ML models, datasets, and inference. $2B valuation. Essential infrastructure for AI development.",
+    "catalysts": [
+      "Model hub dominance",
+      "Enterprise tier growth",
+      "Inference endpoints monetization"
+    ],
+    "risks": [
+      "Monetization challenges",
+      "Competition from cloud providers",
+      "Open-source sustainability"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": null,
+    "name": "Scale AI",
+    "sector": "software",
+    "sub_sector": "AI Infrastructure & MLOps",
+    "rating": null,
+    "emoji": null,
+    "exposure": "AI Data",
+    "report": null,
+    "public": false,
+    "thesis": "Data labeling and AI platform for autonomous systems and LLM training. $7.3B valuation. Government + enterprise contracts.",
+    "catalysts": [
+      "LLM training data demand",
+      "Government AI contracts",
+      "Platform expansion"
+    ],
+    "risks": [
+      "Automated labeling competition",
+      "Customer concentration",
+      "Margin pressure"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": null,
+    "name": "Weights & Biases",
+    "sector": "software",
+    "sub_sector": "AI Infrastructure & MLOps",
+    "rating": null,
+    "emoji": null,
+    "exposure": "MLOps",
+    "report": null,
+    "public": false,
+    "thesis": "ML experiment tracking and model optimization platform. $1B+ valuation, $200M+ ARR.",
+    "catalysts": [
+      "Enterprise MLOps adoption",
+      "Platform stickiness",
+      "AI development tool demand"
+    ],
+    "risks": [
+      "Open-source alternatives",
+      "Cloud provider competition",
+      "Market size ceiling"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": null,
+    "name": "Groq",
+    "sector": "software",
+    "sub_sector": "AI Inference Platforms",
+    "rating": null,
+    "emoji": null,
+    "exposure": "AI Inference",
+    "report": null,
+    "public": false,
+    "thesis": "Inference optimization with custom LPU chip architecture. $2.8B valuation. Ultra-low latency inference.",
+    "catalysts": [
+      "LPU chip production scale",
+      "Inference demand growth",
+      "Enterprise adoption"
+    ],
+    "risks": [
+      "NVIDIA competition",
+      "Hardware production scaling",
+      "Capital requirements"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": null,
+    "name": "Together AI",
+    "sector": "software",
+    "sub_sector": "AI Inference Platforms",
+    "rating": null,
+    "emoji": null,
+    "exposure": "AI Inference",
+    "report": null,
+    "public": false,
+    "thesis": "Open-source model inference & optimization platform. $200M+ Series B funding.",
+    "catalysts": [
+      "Open-source model hosting demand",
+      "Inference cost optimization",
+      "Enterprise adoption"
+    ],
+    "risks": [
+      "Hyperscaler competition",
+      "Margin pressure",
+      "Market fragmentation"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": null,
+    "name": "Fireworks AI",
+    "sector": "software",
+    "sub_sector": "AI Inference Platforms",
+    "rating": null,
+    "emoji": null,
+    "exposure": "AI Inference",
+    "report": null,
+    "public": false,
+    "thesis": "Optimized LLM inference API platform. $130M+ Series B funding.",
+    "catalysts": [
+      "Inference optimization leadership",
+      "Enterprise API adoption",
+      "Cost efficiency"
+    ],
+    "risks": [
+      "Competition from cloud providers",
+      "Pricing pressure",
+      "Scale challenges"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "SNPS",
+    "name": "Synopsys",
+    "sector": "software",
+    "sub_sector": "EDA & Chip Design",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official Synopsys 10-K and quarterly earnings. Wall Street consensus: Strong Buy (22 Buy, 4 Hold out of 26 analysts). Avg PT $380. Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "AI Chip Design",
+    "report": "reports/SNPS_Synopsys.html",
+    "public": true,
+    "thesis": "Dominant EDA tools provider critical to AI chip design. $80B market cap, $6.6B revenue. AI-powered chip design tools.",
+    "catalysts": [
+      "AI chip design complexity driving EDA demand",
+      "Ansys acquisition synergies",
+      "IP licensing growth"
+    ],
+    "risks": [
+      "Regulatory scrutiny on Ansys deal",
+      "Customer concentration",
+      "Cyclical chip design budgets"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "CDNS",
+    "name": "Cadence Design Systems",
+    "sector": "software",
+    "sub_sector": "EDA & Chip Design",
+    "rating": "HOLD",
+    "rating_source": "Claude fundamental analysis based on official Cadence 10-K and quarterly earnings. Wall Street consensus: Strong Buy (22 Buy, 4 Hold out of 26 analysts). Avg PT $380. Assessed May 2026.",
+    "emoji": "\ud83d\udfe0",
+    "exposure": "AI Chip Design",
+    "report": "reports/CDNS_Cadence_Design_Systems.html",
+    "public": true,
+    "thesis": "Leading EDA tools for chip design, simulation, and verification. $53B market cap, $3.9B revenue.",
+    "catalysts": [
+      "AI accelerator design demand",
+      "System design expansion",
+      "Simulation workload growth"
+    ],
+    "risks": [
+      "Premium valuation",
+      "Competition from Synopsys",
+      "R&D spending pressure"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": "CRWD",
+    "name": "CrowdStrike",
+    "sector": "software",
+    "sub_sector": "AI Security",
+    "rating": "BUY",
+    "rating_source": "Claude fundamental analysis based on official CrowdStrike 10-K and quarterly earnings. Wall Street consensus: Buy (43 analysts). Assessed May 2026.",
+    "emoji": "\ud83d\udfe1",
+    "exposure": "AI Security",
+    "report": "reports/CRWD_CrowdStrike.html",
+    "public": true,
+    "thesis": "Cybersecurity leader with AI/ML-powered threat detection. $84B market cap, $3.1B revenue. Charlotte AI platform.",
+    "catalysts": [
+      "Charlotte AI adoption",
+      "Platform consolidation trend",
+      "Module cross-sell"
+    ],
+    "risks": [
+      "Outage reputation impact",
+      "Competition from Microsoft/Palo Alto",
+      "Valuation premium"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": null,
+    "name": "Harvey",
+    "sector": "software",
+    "sub_sector": "Vertical AI Applications",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Legal AI",
+    "report": null,
+    "public": false,
+    "thesis": "AI legal assistant for corporate law firms. $765M valuation. Deep integration with major law firms.",
+    "catalysts": [
+      "Law firm AI adoption",
+      "Enterprise contract expansion",
+      "Use case expansion"
+    ],
+    "risks": [
+      "Legal industry conservatism",
+      "Competition from incumbents",
+      "Regulatory risk"
+    ],
+    "updated": "2026-04-27"
+  },
+  {
+    "ticker": null,
+    "name": "Cursor",
+    "sector": "software",
+    "sub_sector": "Vertical AI Applications",
+    "rating": null,
+    "emoji": null,
+    "exposure": "AI Dev Tools",
+    "report": null,
+    "public": false,
+    "thesis": "AI-native code editor gaining rapid developer adoption. ~$100M+ valuation. Competing with GitHub Copilot.",
+    "catalysts": [
+      "Developer adoption acceleration",
+      "Enterprise tier growth",
+      "AI coding revolution"
+    ],
+    "risks": [
+      "GitHub Copilot competition",
+      "Monetization uncertainty",
+      "Platform risk"
+    ],
+    "updated": "2026-04-27"
+  }
+]
