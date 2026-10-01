@@ -327,6 +327,340 @@
           "note": "GaN devices in some converter stages"
         }
       ]
+    },
+    {
+      "id": "llc",
+      "title": "800→12 V LLC converter",
+      "summary": "Rack or blade LLC resonant converters step the ~800 V (or ±400 V bipolar) hall bus down to ~12 V at roughly a 64:1 ratio and ~97.5% class efficiency. This hop replaces much of the conversion that legacy per-server PSUs did from AC, and it is a core piece of Nvidia Rubin / 800 V-class designs. Power semiconductors (SiC/GaN where used) and magnetics dominate the bill of materials.",
+      "companies": [
+        {
+          "name": "Vertiv",
+          "ticker": "VRT",
+          "note": "Rack power and DC architectures"
+        },
+        {
+          "name": "Infineon",
+          "ticker": "IFX / IFNNY",
+          "note": "SiC / power devices for high-ratio converters"
+        },
+        {
+          "name": "STMicroelectronics",
+          "ticker": "STM",
+          "note": "Power semiconductors in converter stages"
+        },
+        {
+          "name": "Eaton",
+          "ticker": "ETN",
+          "note": "Industrial / data-center power conversion"
+        },
+        {
+          "name": "EPC",
+          "note": "GaN devices in some converter stages"
+        }
+      ]
+    },
+    {
+      "id": "vrm",
+      "title": "Multiphase VRMs / VRs",
+      "summary": "Multiphase voltage regulator modules take 12 V (or intermediate rails) down to core voltages below 1 V at roughly ~90% class efficiency. Heat density at the package is a first-order cooling problem. Control and power silicon for these stages includes TI, ST, Infineon, and GaN specialists where those devices appear.",
+      "companies": [
+        {
+          "name": "Texas Instruments",
+          "note": "VR / multiphase control silicon (common in board power)"
+        },
+        {
+          "name": "Infineon",
+          "ticker": "IFX / IFNNY",
+          "note": "Power devices for VRMs and intermediate rails"
+        },
+        {
+          "name": "STMicroelectronics",
+          "ticker": "STM",
+          "note": "Power management / conversion silicon"
+        },
+        {
+          "name": "EPC",
+          "note": "GaN devices in some converter stages"
+        }
+      ]
+    },
+    {
+      "id": "pipeline-ng",
+      "title": "Pipeline natural gas (site delivery)",
+      "summary": "Onsite SOFC and many hybrid paths start from pipeline natural gas delivered to the campus fence (~98.5% class delivery η in the annotated model). Secure fuel logistics and local gas capacity can matter as much as stack efficiency when interconnect waits dominate schedule. This is the chemical energy input before electrochemical conversion—not an electric hop.",
+      "companies": [
+        {
+          "name": "Bloom Energy",
+          "ticker": "NYSE: BE",
+          "note": "SOFC systems fed by pipeline NG"
+        },
+        {
+          "name": "FuelCell Energy",
+          "ticker": "NASDAQ: FCEL",
+          "note": "MCFC systems on NG / related fuels"
+        },
+        {
+          "name": "Mitsubishi Heavy Industries",
+          "ticker": "TSE: 7011",
+          "note": "SOFC (MEGAMIE) and gas turbines using NG"
+        }
+      ]
+    },
+    {
+      "id": "grid-re",
+      "title": "Grid / renewable electric input",
+      "summary": "In the electrolysis + PEM loss-trap diagram, this box is the 100% reference electric input—grid or renewable power before it is converted to hydrogen. Using that electricity to make H₂ and then electricity again is the round-trip the page warns against for AI baseload. Electrons on wire (HVAC/HVDC) usually beat molecules on physics for point-to-point power.",
+      "companies": [
+        {
+          "name": "GE Vernova",
+          "ticker": "GEV",
+          "note": "Grid and renewable generation equipment context"
+        },
+        {
+          "name": "Siemens Energy",
+          "ticker": "ENR.DE / SMNEY",
+          "note": "Grid / renewables equipment"
+        },
+        {
+          "name": "Hitachi Energy",
+          "ticker": "6501.T",
+          "note": "via Hitachi; transmission / grid equipment"
+        }
+      ]
+    },
+    {
+      "id": "electrolyzer",
+      "title": "Electrolyzer",
+      "summary": "Electrolysis typically consumes ~50–55 kWh of electricity per kilogram of hydrogen while the kilogram stores ~33 kWh of chemical energy (LHV convention)—about ~63% chemical efficiency in the annotated midpoint. That loss is paid before any fuel-cell conversion. Appropriate for stranded renewables or industrial feedstock paths; not a default AI hall baseload architecture.",
+      "companies": [
+        {
+          "name": "Plug Power",
+          "ticker": "PLUG",
+          "note": "PEM electrolysis / H₂ systems (vehicles & niches)"
+        },
+        {
+          "name": "Bloom Energy",
+          "ticker": "NYSE: BE",
+          "note": "Also active in electrolyzer / H₂ adjacency in baseline notes"
+        },
+        {
+          "name": "Ceres Power",
+          "ticker": "LSE: CWR",
+          "note": "SOFC tech; H₂-related licensing context"
+        }
+      ]
+    },
+    {
+      "id": "h2-storage",
+      "title": "Hydrogen storage",
+      "summary": "Compressed or stored H₂ adds compression energy (~8% per 1 000 km class in the annotated model) plus leak (~0.04–0.24% per 1 000 km). Existing natural-gas pipes are not 100% H₂-ready (embrittlement); dedicated H₂ lines use lower-strength steels and ASME B31.12 practice. Storage η ~92% in the diagram is illustrative of those compression/leak costs.",
+      "companies": [
+        {
+          "name": "Plug Power",
+          "ticker": "PLUG",
+          "note": "H₂ production / logistics adjacency"
+        },
+        {
+          "name": "Ballard Power",
+          "ticker": "BLDP",
+          "note": "PEM systems; H₂ supply-chain context"
+        }
+      ]
+    },
+    {
+      "id": "pem",
+      "title": "PEM fuel cell",
+      "summary": "Proton Exchange Membrane fuel cells use platinum and polymer membranes and require pure hydrogen. Electrical efficiency is often cited in the 40–60% band (~50% midpoint in the diagram). They fit vehicles, forklifts, and some backup niches—not multi-year AI baseload. Combined with electrolysis, round-trip often lands in the 25–35% band.",
+      "companies": [
+        {
+          "name": "Plug Power",
+          "ticker": "PLUG",
+          "note": "PEM fuel cells — vehicles/forklifts, not AI baseload"
+        },
+        {
+          "name": "Ballard Power",
+          "ticker": "BLDP",
+          "note": "PEM stacks — mobility / backup niches"
+        }
+      ]
+    },
+    {
+      "id": "electric-out",
+      "title": "Electric out (round-trip)",
+      "summary": "End of the electrolysis → H₂ → PEM chain: round-trip often ≈25–35%. Midpoint illustration: ~63% × ~92% × ~50% ≈ ~29%. Use H₂ for stranded renewables, seasonal shifting, ships/planes/trucks, or industry feedstock—not as a default wall-to-core path for continuous AI halls. Electrons on HVDC still beat molecules on physics for most point-to-point power moves.",
+      "companies": [
+        {
+          "name": "Plug Power",
+          "ticker": "PLUG",
+          "note": "Illustrative PEM path participant — not an AI baseload pick"
+        },
+        {
+          "name": "Ballard Power",
+          "ticker": "BLDP",
+          "note": "Illustrative PEM path participant — not an AI baseload pick"
+        }
+      ]
+    },
+    {
+      "id": "grid-ac",
+      "title": "Grid AC (utility feed)",
+      "summary": "Classic halls start from utility AC at the site boundary—the 100% reference in the legacy chain diagram. From here the legacy stack adds facility transformer, UPS, PDU, per-server PSU, 12 V, and multiphase VRs. New 800 V designs collapse many of those AC↔DC hops after a perimeter SST or industrial rectifier.",
+      "companies": [
+        {
+          "name": "GE Vernova",
+          "ticker": "GEV",
+          "note": "Utility / facility power equipment"
+        },
+        {
+          "name": "Siemens Energy",
+          "ticker": "ENR.DE / SMNEY",
+          "note": "Grid and facility power equipment"
+        },
+        {
+          "name": "Schneider Electric",
+          "ticker": "SU.PA / SBGSY",
+          "note": "Facility power and distribution"
+        },
+        {
+          "name": "Eaton",
+          "ticker": "ETN",
+          "note": "Switchgear and power distribution"
+        }
+      ]
+    },
+    {
+      "id": "facility-xfmr",
+      "title": "Facility transformer (legacy Cu-Fe)",
+      "summary": "Legacy 50/60 Hz copper-steel facility transformers step utility voltage toward hall distribution at ~99.5% class efficiency. These are the product class behind often-cited 2–5 year transformer lead times—not high-frequency SiC solid-state transformers. Headline shortages usually refer to this Cu-Fe fleet, not SSTs.",
+      "companies": [
+        {
+          "name": "GE Vernova",
+          "ticker": "GEV",
+          "note": "Facility / grid transformers"
+        },
+        {
+          "name": "Siemens Energy",
+          "ticker": "ENR.DE / SMNEY",
+          "note": "Facility transformers"
+        },
+        {
+          "name": "Hitachi Energy",
+          "ticker": "6501.T",
+          "note": "via Hitachi; transformers"
+        },
+        {
+          "name": "Schneider Electric",
+          "ticker": "SU.PA / SBGSY",
+          "note": "Facility and distribution transformers"
+        },
+        {
+          "name": "Eaton",
+          "ticker": "ETN",
+          "note": "Transformer-adjacent power gear"
+        }
+      ]
+    },
+    {
+      "id": "ups",
+      "title": "UPS (uninterruptible power supply)",
+      "summary": "Legacy UPS stages typically run AC–DC–AC (or equivalent multi-hop conversion) for ride-through and conditioning. Each conversion adds heat and loss; the page baseline does not publish a single UPS η product, so mid-chain cumulatives stay qualitative. Collapsing to ~800 V DC architectures shrinks or relocates much of this UPS role.",
+      "companies": [
+        {
+          "name": "Vertiv",
+          "ticker": "VRT",
+          "note": "Data-center UPS and rack power"
+        },
+        {
+          "name": "Eaton",
+          "ticker": "ETN",
+          "note": "UPS and power quality products"
+        },
+        {
+          "name": "Schneider Electric",
+          "ticker": "SU.PA / SBGSY",
+          "note": "UPS / facility power portfolio"
+        },
+        {
+          "name": "ABB",
+          "ticker": "ABB",
+          "note": "UPS and power protection heritage"
+        }
+      ]
+    },
+    {
+      "id": "pdu",
+      "title": "PDU (power distribution unit)",
+      "summary": "The PDU is the breaker cabinet between UPS and racks in the legacy AC chain—branch distribution with ~99%+ class efficiency when stated. It is a parts-and-heat node in the cascade that 800 V busway designs try to simplify. Not the same product as a per-server PSU.",
+      "companies": [
+        {
+          "name": "Vertiv",
+          "ticker": "VRT",
+          "note": "Rack PDUs and power distribution"
+        },
+        {
+          "name": "Eaton",
+          "ticker": "ETN",
+          "note": "PDU / distribution products"
+        },
+        {
+          "name": "Schneider Electric",
+          "ticker": "SU.PA / SBGSY",
+          "note": "PDU and facility distribution"
+        },
+        {
+          "name": "Amphenol",
+          "ticker": "APH",
+          "note": "Connectors used in distribution / busway peers"
+        }
+      ]
+    },
+    {
+      "id": "psu",
+      "title": "Per-server PSU (AC→12 V)",
+      "summary": "Classic per-server power supply units convert AC to 12 V DC with conversion loss at every rack. In 800 V designs, much of this work moves to shared hall LLC converters (800→12 V), cutting redundant AC–DC hops. The page baseline flags this as part of the ~5% worse conversion story versus collapsed MV AC → ~800 V DC paths.",
+      "companies": [
+        {
+          "name": "Delta Electronics",
+          "ticker": "2308.TW",
+          "note": "Server / data-center power supplies"
+        },
+        {
+          "name": "Vertiv",
+          "ticker": "VRT",
+          "note": "Rack power architectures"
+        },
+        {
+          "name": "Eaton",
+          "ticker": "ETN",
+          "note": "Power conversion products"
+        },
+        {
+          "name": "Schneider Electric",
+          "ticker": "SU.PA / SBGSY",
+          "note": "IT power / PSU-adjacent portfolio"
+        }
+      ]
+    },
+    {
+      "id": "bus-12v",
+      "title": "12 V bus (board / rack)",
+      "summary": "After the PSU (legacy) or after the 800→12 V LLC (new path), a 12 V board or rack bus feeds multiphase VRs at ~99% class distribution efficiency. It is the common intermediate before sub-1 V core rails—shared by both legacy AC and new 800 V architectures once conversion reaches 12 V.",
+      "companies": [
+        {
+          "name": "Vertiv",
+          "ticker": "VRT",
+          "note": "Rack power distribution"
+        },
+        {
+          "name": "Amphenol",
+          "ticker": "APH",
+          "note": "Connectors for board/rack power"
+        },
+        {
+          "name": "Texas Instruments",
+          "note": "Point-of-load / intermediate rail control silicon"
+        }
+      ]
     }
   ]
 }

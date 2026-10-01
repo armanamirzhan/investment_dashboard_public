@@ -139,9 +139,6 @@
 })();
 
 (function () {
-  var figure = document.getElementById("diagram-overview");
-  if (!figure) return;
-
   var panel = document.getElementById("stage-panel");
   var titleEl = document.getElementById("stage-panel-title");
   var summaryEl = document.getElementById("stage-panel-summary");
@@ -152,6 +149,7 @@
 
   var stagesById = {};
   var activeId = null;
+  var activeFigure = null;
   var lastFocus = null;
   var dataReady = false;
   var pendingId = null;
@@ -165,13 +163,45 @@
       .replace(/"/g, "&quot;");
   }
 
-  function setActiveHotspot(id) {
-    figure.querySelectorAll(".stage-hotspot.is-active").forEach(function (g) {
+  function hostFigureFrom(el) {
+    if (!el) return null;
+    if (typeof el.closest === "function") return el.closest("figure.diagram");
+    var n = el;
+    while (n) {
+      if (n.id && n.classList && n.classList.contains("diagram")) return n;
+      if (n.getAttribute && n.tagName && n.tagName.toLowerCase() === "figure" &&
+          (n.getAttribute("class") || "").indexOf("diagram") !== -1) return n;
+      n = n.parentNode;
+    }
+    return null;
+  }
+
+  function placePanelIn(fig) {
+    if (!fig) return;
+    if (activeFigure && activeFigure !== fig) {
+      activeFigure.classList.remove("stage-panel-open");
+    }
+    // Keep panel after the SVG, before figcaption (matches Fig 0 layout)
+    var svg = fig.querySelector("svg");
+    var caption = fig.querySelector("figcaption");
+    if (svg && svg.nextSibling !== panel) {
+      if (caption) fig.insertBefore(panel, caption);
+      else if (svg.nextSibling) fig.insertBefore(panel, svg.nextSibling);
+      else fig.appendChild(panel);
+    } else if (!svg) {
+      fig.appendChild(panel);
+    }
+    activeFigure = fig;
+  }
+
+  function setActiveHotspot(id, scopeEl) {
+    document.querySelectorAll(".stage-hotspot.is-active").forEach(function (g) {
       g.classList.remove("is-active");
       g.setAttribute("aria-expanded", "false");
     });
     if (!id) return;
-    figure.querySelectorAll('.stage-hotspot[data-stage="' + id + '"]').forEach(function (g) {
+    var scope = scopeEl || activeFigure || document;
+    scope.querySelectorAll('.stage-hotspot[data-stage="' + id + '"]').forEach(function (g) {
       g.classList.add("is-active");
       g.setAttribute("aria-expanded", "true");
     });
@@ -199,7 +229,7 @@
     pendingEl = null;
     if (panel.hidden) return;
     panel.hidden = true;
-    figure.classList.remove("stage-panel-open");
+    if (activeFigure) activeFigure.classList.remove("stage-panel-open");
     setActiveHotspot(null);
     activeId = null;
     if (restoreFocus !== false && lastFocus && typeof lastFocus.focus === "function") {
@@ -210,13 +240,17 @@
 
   function openPanel(stage, fromEl) {
     if (!stage) return;
+    var fig = hostFigureFrom(fromEl) || activeFigure;
+    if (fig) {
+      placePanelIn(fig);
+      fig.classList.add("stage-panel-open");
+    }
     titleEl.textContent = stage.title || stage.id;
     summaryEl.textContent = stage.summary || "";
     renderCompanies(stage.companies || []);
     companiesWrap.open = false;
     panel.hidden = false;
-    figure.classList.add("stage-panel-open");
-    setActiveHotspot(stage.id);
+    setActiveHotspot(stage.id, fig);
     activeId = stage.id;
     lastFocus = fromEl || lastFocus;
     try {
@@ -224,7 +258,6 @@
     } catch (e) {
       panel.scrollIntoView(false);
     }
-    // Focus close after paint so hidden→visible focus works reliably
     setTimeout(function () {
       try { closeBtn.focus(); } catch (e) {}
     }, 0);
@@ -232,32 +265,39 @@
 
   function toggleStage(id, fromEl) {
     if (!id) return;
+    var fig = hostFigureFrom(fromEl);
     if (!dataReady) {
-      // Queue until stages.json loads — avoids silent no-op on early clicks
       pendingId = id;
       pendingEl = fromEl || null;
       if (panel.hidden) {
+        if (fig) {
+          placePanelIn(fig);
+          fig.classList.add("stage-panel-open");
+        }
         titleEl.textContent = "Loading stage details…";
         summaryEl.textContent = "Fetching stages.json…";
         renderCompanies([]);
         panel.hidden = false;
-        figure.classList.add("stage-panel-open");
-        setActiveHotspot(id);
+        setActiveHotspot(id, fig);
       }
       return;
     }
-    if (activeId === id && !panel.hidden) {
+    // Re-click same stage in same figure closes; same id in another figure swaps
+    if (activeId === id && !panel.hidden && fig && fig === activeFigure) {
       closePanel(true);
       return;
     }
     var stage = stagesById[id];
     if (!stage) {
+      if (fig) {
+        placePanelIn(fig);
+        fig.classList.add("stage-panel-open");
+      }
       titleEl.textContent = "Unknown stage";
       summaryEl.textContent = "No entry for \"" + id + "\" in stages.json.";
       renderCompanies([]);
       panel.hidden = false;
-      figure.classList.add("stage-panel-open");
-      setActiveHotspot(id);
+      setActiveHotspot(id, fig);
       activeId = id;
       lastFocus = fromEl || lastFocus;
       return;
@@ -268,12 +308,11 @@
   function hotspotFromEvent(e) {
     var t = e.target;
     if (!t) return null;
-    // SVG elements always support closest in modern browsers; fall back to parent walk
     if (typeof t.closest === "function") {
       return t.closest(".stage-hotspot[data-stage]");
     }
     var n = t;
-    while (n && n !== figure) {
+    while (n && n !== document) {
       if (n.getAttribute && n.getAttribute("data-stage") &&
           (n.classList && n.classList.contains("stage-hotspot") ||
            (n.getAttribute("class") || "").indexOf("stage-hotspot") !== -1)) {
@@ -290,21 +329,22 @@
     if (!g) return;
     e.preventDefault();
     e.stopPropagation();
-    // Guard against Enter/Space synthesizing a click after keydown (would open then immediately close)
     var now = Date.now();
     if (now - lastToggleAt < 80) return;
     lastToggleAt = now;
     toggleStage(g.getAttribute("data-stage"), g);
   }
 
-  // Single delegated handler on the figure (bubbles from SVG hotspot children)
-  figure.addEventListener("click", onActivate);
-  figure.addEventListener("keydown", function (e) {
+  // Document-level delegation so ALL figures work (Fig 0 + efficiency diagrams)
+  document.addEventListener("click", onActivate);
+  document.addEventListener("keydown", function (e) {
     if (e.key !== "Enter" && e.key !== " ") return;
+    var g = hotspotFromEvent(e);
+    if (!g) return;
     onActivate(e);
   });
 
-  figure.querySelectorAll(".stage-hotspot[data-stage]").forEach(function (g) {
+  document.querySelectorAll(".stage-hotspot[data-stage]").forEach(function (g) {
     g.setAttribute("aria-expanded", "false");
     g.setAttribute("aria-controls", "stage-panel");
     if (!g.hasAttribute("tabindex")) g.setAttribute("tabindex", "0");
@@ -366,6 +406,6 @@
       renderCompanies([]);
       dataReady = false;
       panel.hidden = false;
-      figure.classList.add("stage-panel-open");
+      if (activeFigure) activeFigure.classList.add("stage-panel-open");
     });
 })();

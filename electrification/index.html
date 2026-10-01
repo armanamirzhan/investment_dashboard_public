@@ -245,9 +245,9 @@
 </ul>
 <p><abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr> converter stations are expensive because they switch hundreds of kilovolts down toward medium voltage—a different product class from a data-center <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> that lands at ~800 V.</p>
 <figure class="diagram" id="diagram-ccgt-sst">
-<svg aria-labelledby="d2-title d2-desc" role="img" viewBox="0 0 1000 520" xmlns="http://www.w3.org/2000/svg">
+<svg aria-labelledby="d2-title d2-desc" role="group" viewBox="0 0 1000 520" xmlns="http://www.w3.org/2000/svg">
 <title id="d2-title">CCGT plus grid plus SST 800 V path with hop losses</title>
-<desc id="d2-desc">CCGT splits into HVAC via AC/AC transformer and HVDC via AC/DC converter, both into a shared site SST, then 800 V bus, LLC, VRMs to GPU. Stage efficiencies inside cells; cumulative overall efficiency above arrows.</desc>
+<desc id="d2-desc">CCGT splits into HVAC via AC/AC transformer and HVDC via AC/DC converter, both into a shared site SST, then 800 V bus, LLC, VRMs to GPU. Stage boxes are clickable hotspots that open a details panel. Stage efficiencies inside cells; cumulative overall efficiency above arrows.</desc>
 <defs>
 <marker id="a2" markerHeight="6" markerWidth="6" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
 <path d="M0,0 L10,5 L0,10 z" fill="#5b9fd4"></path>
@@ -262,74 +262,116 @@
 .cum{fill:#7ec8a3;font-family:Cascadia Code,Consolas,monospace;font-size:9.5px;font-weight:600}
 .t{fill:#5b9fd4;font-family:Segoe UI,system-ui,sans-serif;font-size:13px;font-weight:700}
 .ln{stroke:#5b9fd4;stroke-width:1.5;fill:none;marker-end:url(#a2)}
+.stage-hotspot{cursor:pointer;pointer-events:all}
+.stage-hotspot *{pointer-events:all}
+.stage-hotspot:focus{outline:none}
+.stage-hotspot:focus-visible{outline:2px solid #5b9fd4;outline-offset:2px}
+.stage-hotspot:hover .b,
+.stage-hotspot:hover .ba,
+.stage-hotspot:hover .bb,
+.stage-hotspot:hover .bd,
+.stage-hotspot:hover .bp,
+.stage-hotspot:hover .bs,
+.stage-hotspot:focus-visible .b,
+.stage-hotspot:focus-visible .ba,
+.stage-hotspot:focus-visible .bb,
+.stage-hotspot:focus-visible .bd,
+.stage-hotspot:focus-visible .bp,
+.stage-hotspot:focus-visible .bs,
+.stage-hotspot.is-active .b,
+.stage-hotspot.is-active .ba,
+.stage-hotspot.is-active .bb,
+.stage-hotspot.is-active .bd,
+.stage-hotspot.is-active .bp,
+.stage-hotspot.is-active .bs{filter:brightness(1.22);stroke-width:2.2}
 </style>
 </defs>
 <text class="t" x="16" y="24">Diagram (2) — CCGT + grid (HVAC vs HVDC) + shared site SST → 800 V → silicon</text>
+<g class="stage-hotspot" data-stage="ccgt" tabindex="0" role="button" focusable="true" aria-label="CCGT plant. Activate for stage details.">
 <rect class="ba" height="78" rx="6" width="120" x="16" y="70"></rect>
 <text class="l" text-anchor="middle" x="76" y="94">CCGT plant</text>
 <text class="s" text-anchor="middle" x="76" y="110">natural gas</text>
 <text class="e" text-anchor="middle" x="76" y="128">η 62% LHV</text>
+</g>
 <path class="ln" d="M136,109 H156"></path>
 <text class="cum" text-anchor="middle" x="146" y="100">62%</text>
 <path class="ln" d="M156,70 H172"></path>
 <path class="ln" d="M156,148 H172"></path>
 <path class="ln" d="M156,70 V148"></path>
 <text class="s" x="176" y="48">HVAC path</text>
+<g class="stage-hotspot" data-stage="ac-ac" tabindex="0" role="button" focusable="true" aria-label="AC/AC step-up transformer. Activate for stage details.">
 <rect class="ba" height="70" rx="6" width="118" x="174" y="52"></rect>
 <text class="l" text-anchor="middle" x="233" y="74">AC/AC XFMR</text>
 <text class="s" text-anchor="middle" x="233" y="90">step-up to HV</text>
 <text class="e" text-anchor="middle" x="233" y="108">η 99.5%</text>
+</g>
 <path class="ln" d="M292,87 H310"></path>
 <text class="cum" text-anchor="middle" x="301" y="78">61.7%</text>
+<g class="stage-hotspot" data-stage="hvac" tabindex="0" role="button" focusable="true" aria-label="HVAC transmission path. Activate for stage details.">
 <rect class="ba" height="70" rx="6" width="120" x="312" y="52"></rect>
 <text class="l" text-anchor="middle" x="372" y="74">HVAC tx</text>
 <text class="s" text-anchor="middle" x="372" y="90">~100 km class</text>
 <text class="e" text-anchor="middle" x="372" y="108">η ~98.5%</text>
+</g>
 <text class="s" x="176" y="148">HVDC path</text>
+<g class="stage-hotspot" data-stage="ac-dc" tabindex="0" role="button" focusable="true" aria-label="AC/DC converter utility end. Activate for stage details.">
 <rect class="ba" height="70" rx="6" width="118" x="174" y="154"></rect>
 <text class="l" text-anchor="middle" x="233" y="176">AC/DC converter</text>
 <text class="s" text-anchor="middle" x="233" y="192">utility station</text>
 <text class="e" text-anchor="middle" x="233" y="210">η ~99%</text>
+</g>
 <path class="ln" d="M292,189 H310"></path>
 <text class="cum" text-anchor="middle" x="301" y="180">61.4%</text>
+<g class="stage-hotspot" data-stage="hvdc" tabindex="0" role="button" focusable="true" aria-label="HVDC transmission path. Activate for stage details.">
 <rect class="ba" height="70" rx="6" width="120" x="312" y="154"></rect>
 <text class="l" text-anchor="middle" x="372" y="176">HVDC tx</text>
 <text class="s" text-anchor="middle" x="372" y="192">~100 km class</text>
 <text class="e" text-anchor="middle" x="372" y="210">η ~99.65%</text>
+</g>
 <path class="ln" d="M432,87 H458"></path>
 <text class="cum" text-anchor="middle" x="445" y="78">60.8%</text>
 <path class="ln" d="M432,189 H458"></path>
 <text class="cum" text-anchor="middle" x="445" y="180">61.2%</text>
 <path class="ln" d="M458,87 V189"></path>
 <path class="ln" d="M458,138 H486"></path>
+<g class="stage-hotspot" data-stage="site-sst" tabindex="0" role="button" focusable="true" aria-label="Site solid-state transformer. Activate for stage details.">
 <rect class="bs" height="86" rx="6" width="128" x="488" y="95"></rect>
 <text class="l" text-anchor="middle" x="552" y="120">Site SST</text>
 <text class="s" text-anchor="middle" x="552" y="136">shared HF node</text>
 <text class="s" text-anchor="middle" x="552" y="150">→ ~800 V DC</text>
 <text class="e" text-anchor="middle" x="552" y="168">η ~97%</text>
+</g>
 <path class="ln" d="M616,138 H640"></path>
 <text class="cum" text-anchor="middle" x="628" y="128">~58.9%</text>
 <text class="s" text-anchor="middle" x="628" y="152">(HVAC br.)</text>
+<g class="stage-hotspot" data-stage="dc-bus" tabindex="0" role="button" focusable="true" aria-label="About 800 volt DC bus. Activate for stage details.">
 <rect class="b" height="70" rx="6" width="110" x="642" y="103"></rect>
 <text class="l" text-anchor="middle" x="697" y="126">800 V bus</text>
 <text class="s" text-anchor="middle" x="697" y="142">busway</text>
 <text class="e" text-anchor="middle" x="697" y="160">η ~99%</text>
+</g>
 <path class="ln" d="M752,138 H776"></path>
 <text class="cum" text-anchor="middle" x="764" y="128">~58.4%</text>
+<g class="stage-hotspot" data-stage="llc" tabindex="0" role="button" focusable="true" aria-label="800 to 12 volt LLC converter. Activate for stage details.">
 <rect class="b" height="70" rx="6" width="110" x="778" y="103"></rect>
 <text class="l" text-anchor="middle" x="833" y="126">800→12 LLC</text>
 <text class="s" text-anchor="middle" x="833" y="142">~64:1</text>
 <text class="e" text-anchor="middle" x="833" y="160">η ~97.5%</text>
+</g>
 <path class="ln" d="M833,173 V210"></path>
 <text class="cum" text-anchor="middle" x="860" y="200">~56.9%</text>
+<g class="stage-hotspot" data-stage="vrm" tabindex="0" role="button" focusable="true" aria-label="Multiphase voltage regulator modules. Activate for stage details.">
 <rect class="b" height="58" rx="6" width="120" x="778" y="214"></rect>
 <text class="l" text-anchor="middle" x="838" y="236">Multiphase VRMs</text>
 <text class="e" text-anchor="middle" x="838" y="254">η ~90%</text>
+</g>
 <path class="ln" d="M778,243 H720"></path>
 <text class="cum" text-anchor="middle" x="749" y="234">~51.2%</text>
+<g class="stage-hotspot" data-stage="silicon" tabindex="0" role="button" focusable="true" aria-label="Silicon GPU and CPU hall load. Activate for stage details.">
 <rect class="b" height="58" rx="6" width="110" x="608" y="214"></rect>
 <text class="l" text-anchor="middle" x="663" y="238">GPU / CPU</text>
 <text class="s" text-anchor="middle" x="663" y="254">sub-1 V rails</text>
+</g>
 <rect class="b" height="150" rx="6" style="fill:#161b22" width="968" x="16" y="300"></rect>
 <text class="l" x="32" y="326">Labeling: stage η inside each cell · cumulative overall η above each arrow (product through that hop)</text>
 <text class="s" x="32" y="350">HVAC branch (100 km class): 62% × 99.5% × 98.5% × 97% × 99% × 97.5% × 90% ≈ ~51% wall-to-core — matches comparison table.</text>
@@ -338,7 +380,7 @@
 <text class="s" x="32" y="416">Jefferies: US data-center SST market could grow from tens of millions toward ~$4.3B by 2030. SST commercial scale ~2027–2029.</text>
 <text class="s" x="32" y="438">Order-of-magnitude only; distance and exact hop stack change the product.</text>
 </svg>
-<figcaption>Figure 2 — Offsite <abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr> + split <abbr data-expand="High-Voltage Alternating Current" title="High-Voltage Alternating Current">HVAC</abbr> (<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>/<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>) vs <abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr> (<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>/<abbr data-expand="Direct Current" title="Direct Current">DC</abbr>) paths through one shared site <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>, then the 800 V chain. Stage efficiencies inside cells; cumulative overall efficiency above arrows. Wall-to-core ~51% is the modeled <abbr data-expand="High-Voltage Alternating Current" title="High-Voltage Alternating Current">HVAC</abbr> 100 km-class product for a 62% <abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr>.</figcaption>
+<figcaption>Figure 2 — Offsite <abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr> + split <abbr data-expand="High-Voltage Alternating Current" title="High-Voltage Alternating Current">HVAC</abbr> (<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>/<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>) vs <abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr> (<abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>/<abbr data-expand="Direct Current" title="Direct Current">DC</abbr>) paths through one shared site <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>, then the 800 V chain. <strong>Click a stage box</strong> for a short explanation and curated companies. Stage efficiencies inside cells; cumulative overall efficiency above arrows. Wall-to-core ~51% is the modeled <abbr data-expand="High-Voltage Alternating Current" title="High-Voltage Alternating Current">HVAC</abbr> 100 km-class product for a 62% <abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr>.</figcaption>
 </figure>
 </section>
 <section aria-labelledby="h-onsite" id="onsite">
@@ -356,9 +398,9 @@
 <p style="margin:0"><abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> claims vary by product and duty cycle. Year-5 degraded <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> at ~45% electrical can drop a modeled gas-to-chip path to ~37%, while a grid/<abbr data-expand="Combined-Cycle Gas Turbine" title="Combined-Cycle Gas Turbine">CCGT</abbr> path stays comparatively flat. At 57% <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> uses roughly ~15% more gas per core kWh versus a matched higher-efficiency case.</p>
 </div>
 <figure class="diagram" id="diagram-sofc">
-<svg aria-labelledby="d3-title d3-desc" role="img" viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg">
+<svg aria-labelledby="d3-title d3-desc" role="group" viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg">
 <title id="d3-title">Onsite SOFC path with hop losses</title>
-<desc id="d3-desc">Pipeline natural gas to SOFC DC, DC-DC boost, 800 V bus, LLC, VRMs to GPU. Stage efficiencies inside cells; cumulative overall efficiency above arrows.</desc>
+<desc id="d3-desc">Pipeline natural gas to SOFC DC, DC-DC boost, 800 V bus, LLC, VRMs to GPU. Stage boxes are clickable hotspots that open a details panel. Stage efficiencies inside cells; cumulative overall efficiency above arrows.</desc>
 <defs>
 <marker id="a3" markerHeight="6" markerWidth="6" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
 <path d="M0,0 L10,5 L0,10 z" fill="#7ec8a3"></path>
@@ -372,49 +414,85 @@
 .cum{fill:#7ec8a3;font-family:Cascadia Code,Consolas,monospace;font-size:9.5px;font-weight:600}
 .t{fill:#7ec8a3;font-family:Segoe UI,system-ui,sans-serif;font-size:13px;font-weight:700}
 .ln{stroke:#7ec8a3;stroke-width:1.5;fill:none;marker-end:url(#a3)}
+.stage-hotspot{cursor:pointer;pointer-events:all}
+.stage-hotspot *{pointer-events:all}
+.stage-hotspot:focus{outline:none}
+.stage-hotspot:focus-visible{outline:2px solid #5b9fd4;outline-offset:2px}
+.stage-hotspot:hover .b,
+.stage-hotspot:hover .ba,
+.stage-hotspot:hover .bb,
+.stage-hotspot:hover .bd,
+.stage-hotspot:hover .bp,
+.stage-hotspot:hover .bs,
+.stage-hotspot:focus-visible .b,
+.stage-hotspot:focus-visible .ba,
+.stage-hotspot:focus-visible .bb,
+.stage-hotspot:focus-visible .bd,
+.stage-hotspot:focus-visible .bp,
+.stage-hotspot:focus-visible .bs,
+.stage-hotspot.is-active .b,
+.stage-hotspot.is-active .ba,
+.stage-hotspot.is-active .bb,
+.stage-hotspot.is-active .bd,
+.stage-hotspot.is-active .bp,
+.stage-hotspot.is-active .bs{filter:brightness(1.22);stroke-width:2.2}
 </style>
 </defs>
 <text class="t" x="16" y="24">Diagram (3) — Onsite SOFC path</text>
+<g class="stage-hotspot" data-stage="pipeline-ng" tabindex="0" role="button" focusable="true" aria-label="Pipeline natural gas delivery. Activate for stage details.">
 <rect class="bb" height="78" rx="6" width="120" x="16" y="50"></rect>
 <text class="l" text-anchor="middle" x="76" y="74">Pipeline NG</text>
 <text class="s" text-anchor="middle" x="76" y="90">site delivery</text>
 <text class="e" text-anchor="middle" x="76" y="108">η ~98.5%</text>
+</g>
 <path class="ln" d="M136,89 H160"></path>
 <text class="cum" text-anchor="middle" x="148" y="80">98.5%</text>
+<g class="stage-hotspot" data-stage="sofc" tabindex="0" role="button" focusable="true" aria-label="Solid oxide fuel cell stack. Activate for stage details.">
 <rect class="bb" height="90" rx="6" width="130" x="162" y="44"></rect>
 <text class="l" text-anchor="middle" x="227" y="68">SOFC stack</text>
 <text class="s" text-anchor="middle" x="227" y="84">reform → DC</text>
 <text class="e" text-anchor="middle" x="227" y="102">η 57% LHV</text>
 <text class="s" text-anchor="middle" x="227" y="118">band 55–65%</text>
+</g>
 <path class="ln" d="M292,89 H316"></path>
 <text class="cum" text-anchor="middle" x="304" y="80">56.1%</text>
+<g class="stage-hotspot" data-stage="dc-dc" tabindex="0" role="button" focusable="true" aria-label="DC to DC boost conversion. Activate for stage details.">
 <rect class="bb" height="78" rx="6" width="120" x="318" y="50"></rect>
 <text class="l" text-anchor="middle" x="378" y="74">DC–DC boost</text>
 <text class="s" text-anchor="middle" x="378" y="90">to ~800 V</text>
 <text class="e" text-anchor="middle" x="378" y="108">η ~97%</text>
+</g>
 <path class="ln" d="M438,89 H462"></path>
 <text class="cum" text-anchor="middle" x="450" y="80">54.5%</text>
+<g class="stage-hotspot" data-stage="dc-bus" tabindex="0" role="button" focusable="true" aria-label="About 800 volt DC bus. Activate for stage details.">
 <rect class="b" height="78" rx="6" width="110" x="464" y="50"></rect>
 <text class="l" text-anchor="middle" x="519" y="74">800 V bus</text>
 <text class="s" text-anchor="middle" x="519" y="90">busway</text>
 <text class="e" text-anchor="middle" x="519" y="108">η ~99%</text>
+</g>
 <path class="ln" d="M574,89 H598"></path>
 <text class="cum" text-anchor="middle" x="586" y="80">53.9%</text>
+<g class="stage-hotspot" data-stage="llc" tabindex="0" role="button" focusable="true" aria-label="800 to 12 volt LLC converter. Activate for stage details.">
 <rect class="b" height="78" rx="6" width="120" x="600" y="50"></rect>
 <text class="l" text-anchor="middle" x="660" y="74">800→12 LLC</text>
 <text class="s" text-anchor="middle" x="660" y="90">~64:1</text>
 <text class="e" text-anchor="middle" x="660" y="108">η ~97.5%</text>
+</g>
 <path class="ln" d="M720,89 H744"></path>
 <text class="cum" text-anchor="middle" x="732" y="80">52.6%</text>
+<g class="stage-hotspot" data-stage="vrm" tabindex="0" role="button" focusable="true" aria-label="Multiphase voltage regulator modules. Activate for stage details.">
 <rect class="b" height="78" rx="6" width="110" x="746" y="50"></rect>
 <text class="l" text-anchor="middle" x="801" y="74">VRMs</text>
 <text class="s" text-anchor="middle" x="801" y="90">multiphase</text>
 <text class="e" text-anchor="middle" x="801" y="108">η ~90%</text>
+</g>
 <path class="ln" d="M856,89 H880"></path>
 <text class="cum" text-anchor="middle" x="868" y="80">~47.3%</text>
+<g class="stage-hotspot" data-stage="silicon" tabindex="0" role="button" focusable="true" aria-label="Silicon GPU and CPU hall load. Activate for stage details.">
 <rect class="b" height="78" rx="6" width="100" x="882" y="50"></rect>
 <text class="l" text-anchor="middle" x="932" y="80">GPU / CPU</text>
 <text class="s" text-anchor="middle" x="932" y="98">sub-1 V</text>
+</g>
 <rect class="b" height="140" rx="6" style="fill:#161b22" width="968" x="16" y="170"></rect>
 <text class="l" x="32" y="196">Modeled gas-to-chip (stage η in cells · cumulative above arrows)</text>
 <text class="s" x="32" y="220">Pipeline 98.5% × SOFC 57% × boost 97% × bus 99% × LLC 97.5% × VRM 90% ≈ ~47% wall-to-core.</text>
@@ -422,7 +500,7 @@
 <text class="s" x="32" y="264">SOFC at 57% uses ~15% more gas per core kWh versus a matched higher-efficiency case.</text>
 <text class="s" x="32" y="286">ScSZ (Bloom): scandium oxide ~40–80 t/yr global. Ceres / most others use YSZ or GDC+YSZ without scandium.</text>
 </svg>
-<figcaption>Figure 3 — Onsite <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> path. Native <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> plus <abbr data-expand="Direct Current" title="Direct Current">DC</abbr>–<abbr data-expand="Direct Current" title="Direct Current">DC</abbr> boost into the same 800 V hall stack used by <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>-fed sites. Stage efficiencies inside cells; cumulative overall efficiency above arrows.</figcaption>
+<figcaption>Figure 3 — Onsite <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> path. Native <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> plus <abbr data-expand="Direct Current" title="Direct Current">DC</abbr>–<abbr data-expand="Direct Current" title="Direct Current">DC</abbr> boost into the same 800 V hall stack used by <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>-fed sites. <strong>Click a stage box</strong> for a short explanation and curated companies. Stage efficiencies inside cells; cumulative overall efficiency above arrows.</figcaption>
 </figure>
 <h3>3.2 Molten Carbonate Fuel Cell (<abbr data-expand="Molten Carbonate Fuel Cell" title="Molten Carbonate Fuel Cell">MCFC</abbr>)</h3>
 <p><strong>Molten Carbonate Fuel Cell (<abbr data-expand="Molten Carbonate Fuel Cell" title="Molten Carbonate Fuel Cell">MCFC</abbr>)</strong> systems (notable public name: FuelCell Energy, NASDAQ: FCEL) typically deliver ~50% electrical / ~85% Combined Heat and Power (<abbr data-expand="Combined Heat and Power" title="Combined Heat and Power">CHP</abbr>). Construction leans on nickel and steel. They can consume carbon dioxide (CO<sub>2</sub>) as part of the cathode chemistry. Siemens has a data-center partnership context (details and commercial status may evolve—treat as partnership, not guaranteed fleet deployment).</p>
@@ -438,9 +516,9 @@
 <li><strong>Hybrid:</strong> turbines/gensets for ramp and redundancy + <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> (or other fuel cells) for steadier, higher-efficiency baseload <abbr data-expand="Direct Current" title="Direct Current">DC</abbr>. Hybrids hedge <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> fade and turbine interconnect timing.</li>
 </ul>
 <figure class="diagram" id="diagram-hybrid">
-<svg aria-labelledby="d5-title d5-desc" role="img" viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg">
+<svg aria-labelledby="d5-title d5-desc" role="group" viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg">
 <title id="d5-title">Hybrid turbine or genset plus SOFC path</title>
-<desc id="d5-desc">Parallel onsite SOFC via DC-DC and gas turbine via shared high-frequency SST into 800 V bus, LLC, VRMs. Stage efficiencies inside cells; cumulative overall efficiency above arrows on each branch.</desc>
+<desc id="d5-desc">Parallel onsite SOFC via DC-DC and gas turbine via shared high-frequency SST into 800 V bus, LLC, VRMs. Stage boxes are clickable hotspots that open a details panel. Stage efficiencies inside cells; cumulative overall efficiency above arrows on each branch.</desc>
 <defs>
 <marker id="a5" markerHeight="6" markerWidth="6" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
 <path d="M0,0 L10,5 L0,10 z" fill="#a78bdb"></path>
@@ -457,61 +535,99 @@
 .cum{fill:#7ec8a3;font-family:Cascadia Code,Consolas,monospace;font-size:9.5px;font-weight:600}
 .t{fill:#a78bdb;font-family:Segoe UI,system-ui,sans-serif;font-size:13px;font-weight:700}
 .ln{stroke:#a78bdb;stroke-width:1.5;fill:none;marker-end:url(#a5)}
+.stage-hotspot{cursor:pointer;pointer-events:all}
+.stage-hotspot *{pointer-events:all}
+.stage-hotspot:focus{outline:none}
+.stage-hotspot:focus-visible{outline:2px solid #5b9fd4;outline-offset:2px}
+.stage-hotspot:hover .b,
+.stage-hotspot:hover .ba,
+.stage-hotspot:hover .bb,
+.stage-hotspot:hover .bd,
+.stage-hotspot:hover .bp,
+.stage-hotspot:hover .bs,
+.stage-hotspot:focus-visible .b,
+.stage-hotspot:focus-visible .ba,
+.stage-hotspot:focus-visible .bb,
+.stage-hotspot:focus-visible .bd,
+.stage-hotspot:focus-visible .bp,
+.stage-hotspot:focus-visible .bs,
+.stage-hotspot.is-active .b,
+.stage-hotspot.is-active .ba,
+.stage-hotspot.is-active .bb,
+.stage-hotspot.is-active .bd,
+.stage-hotspot.is-active .bp,
+.stage-hotspot.is-active .bs{filter:brightness(1.22);stroke-width:2.2}
 </style>
 </defs>
 <text class="t" x="16" y="24">Diagram (5) — Hybrid turbine / genset + SOFC</text>
+<g class="stage-hotspot" data-stage="sofc" tabindex="0" role="button" focusable="true" aria-label="Solid oxide fuel cell baseload. Activate for stage details.">
 <rect class="bb" height="78" rx="6" width="130" x="16" y="48"></rect>
 <text class="l" text-anchor="middle" x="81" y="72">SOFC baseload</text>
 <text class="s" text-anchor="middle" x="81" y="88">NG → DC</text>
 <text class="e" text-anchor="middle" x="81" y="106">η 57% LHV</text>
+</g>
 <path class="ln" d="M146,87 H170"></path>
 <text class="cum" text-anchor="middle" x="158" y="78">57%</text>
+<g class="stage-hotspot" data-stage="dc-dc" tabindex="0" role="button" focusable="true" aria-label="DC to DC boost conversion. Activate for stage details.">
 <rect class="bb" height="78" rx="6" width="120" x="172" y="48"></rect>
 <text class="l" text-anchor="middle" x="232" y="72">DC–DC boost</text>
 <text class="s" text-anchor="middle" x="232" y="88">align to 800 V</text>
 <text class="e" text-anchor="middle" x="232" y="106">η ~97%</text>
+</g>
+<g class="stage-hotspot" data-stage="turbine" tabindex="0" role="button" focusable="true" aria-label="Turbine or genset onsite. Activate for stage details.">
 <rect class="ba" height="78" rx="6" width="130" x="16" y="150"></rect>
 <text class="l" text-anchor="middle" x="81" y="174">Turbine / genset</text>
 <text class="s" text-anchor="middle" x="81" y="190">AC · ~10 s start</text>
 <text class="e" text-anchor="middle" x="81" y="208">η site-specific</text>
+</g>
 <path class="ln" d="M146,189 H170"></path>
+<g class="stage-hotspot" data-stage="site-sst" tabindex="0" role="button" focusable="true" aria-label="Site solid-state transformer. Activate for stage details.">
 <rect class="bs" height="78" rx="6" width="120" x="172" y="150"></rect>
 <text class="l" text-anchor="middle" x="232" y="174">Site SST (HF)</text>
 <text class="s" text-anchor="middle" x="232" y="190">shared node</text>
 <text class="e" text-anchor="middle" x="232" y="208">η ~97%</text>
+</g>
 <path class="ln" d="M292,87 H330"></path>
 <text class="cum" text-anchor="middle" x="311" y="78">55.3%</text>
 <path class="ln" d="M292,189 H330"></path>
 <path class="ln" d="M330,87 V189"></path>
 <path class="ln" d="M330,138 H360"></path>
+<g class="stage-hotspot" data-stage="dc-bus" tabindex="0" role="button" focusable="true" aria-label="Shared 800 volt DC bus. Activate for stage details.">
 <rect class="bp" height="78" rx="6" width="130" x="362" y="99"></rect>
 <text class="l" text-anchor="middle" x="427" y="124">Shared 800 V bus</text>
 <text class="s" text-anchor="middle" x="427" y="140">+ controls / UPS role</text>
 <text class="e" text-anchor="middle" x="427" y="158">η ~99%</text>
+</g>
 <path class="ln" d="M492,138 H520"></path>
 <text class="cum" text-anchor="middle" x="506" y="128">~54.7%*</text>
+<g class="stage-hotspot" data-stage="llc" tabindex="0" role="button" focusable="true" aria-label="800 to 12 volt LLC converter. Activate for stage details.">
 <rect class="b" height="78" rx="6" width="120" x="522" y="99"></rect>
 <text class="l" text-anchor="middle" x="582" y="124">800→12 LLC</text>
 <text class="s" text-anchor="middle" x="582" y="140">~64:1</text>
 <text class="e" text-anchor="middle" x="582" y="158">η ~97.5%</text>
+</g>
 <path class="ln" d="M642,138 H670"></path>
 <text class="cum" text-anchor="middle" x="656" y="128">~53.4%*</text>
+<g class="stage-hotspot" data-stage="vrm" tabindex="0" role="button" focusable="true" aria-label="Multiphase voltage regulator modules. Activate for stage details.">
 <rect class="b" height="78" rx="6" width="110" x="672" y="99"></rect>
 <text class="l" text-anchor="middle" x="727" y="124">VRMs</text>
 <text class="s" text-anchor="middle" x="727" y="140">multiphase</text>
 <text class="e" text-anchor="middle" x="727" y="158">η ~90%</text>
+</g>
 <path class="ln" d="M782,138 H810"></path>
 <text class="cum" text-anchor="middle" x="796" y="128">~48%*</text>
+<g class="stage-hotspot" data-stage="silicon" tabindex="0" role="button" focusable="true" aria-label="Silicon GPU and CPU hall load. Activate for stage details.">
 <rect class="b" height="78" rx="6" width="110" x="812" y="99"></rect>
 <text class="l" text-anchor="middle" x="867" y="128">GPU / CPU</text>
 <text class="s" text-anchor="middle" x="867" y="146">sub-1 V</text>
+</g>
 <rect class="b" height="110" rx="6" style="fill:#161b22" width="968" x="16" y="260"></rect>
 <text class="s" x="32" y="286">*Cumulatives on the shared tail follow the SOFC branch (57% × 97% × …). Turbine/genset electrical η is site-specific — no single baseline MW mix.</text>
 <text class="s" x="32" y="308">Hybrid rationale: SOFC for steadier efficiency and DC alignment; turbines/gensets for fast start, peak, and fade/maintenance cover.</text>
 <text class="s" x="32" y="330">Turbine path uses the shared high-frequency Site SST (same node as offsite landing in the overview)—not the fuel-cell DC–DC.</text>
 <text class="s" x="32" y="352">Mitsubishi Heavy spans both SOFC (MEGAMIE) and large-frame turbines / MGS gensets—illustrative of multi-hop suppliers, not an endorsement.</text>
 </svg>
-<figcaption>Figure 5 — Hybrid onsite path: <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> via <abbr data-expand="Direct Current" title="Direct Current">DC</abbr>–<abbr data-expand="Direct Current" title="Direct Current">DC</abbr> in parallel with turbine/genset via shared high-frequency site <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> into a shared 800 V architecture. Stage efficiencies inside cells; cumulative overall efficiency above arrows.</figcaption>
+<figcaption>Figure 5 — Hybrid onsite path: <abbr data-expand="Solid Oxide Fuel Cell" title="Solid Oxide Fuel Cell">SOFC</abbr> via <abbr data-expand="Direct Current" title="Direct Current">DC</abbr>–<abbr data-expand="Direct Current" title="Direct Current">DC</abbr> in parallel with turbine/genset via shared high-frequency site <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> into a shared 800 V architecture. <strong>Click a stage box</strong> for a short explanation and curated companies. Stage efficiencies inside cells; cumulative overall efficiency above arrows.</figcaption>
 </figure>
 </section>
 <section aria-labelledby="h-h2" id="hydrogen">
@@ -527,9 +643,9 @@
 <li>Transmission leak class ~0.04–0.24% per 1 000 km. Compression energy ~8% per 1 000 km class. Compare: <abbr data-expand="High-Voltage Alternating Current" title="High-Voltage Alternating Current">HVAC</abbr> ~5–8%/1 000 km; <abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr> ~3.5%/1 000 km + ~1%/converter. Buried <abbr data-expand="High-Voltage Direct Current" title="High-Voltage Direct Current">HVDC</abbr> can cost ~10× overhead; pipe often beats overhead line on <em>permitting</em>, not on electron physics.</li>
 </ul>
 <figure class="diagram" id="diagram-electrolysis-pem">
-<svg aria-labelledby="d4-title d4-desc" role="img" viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg">
+<svg aria-labelledby="d4-title d4-desc" role="group" viewBox="0 0 1000 420" xmlns="http://www.w3.org/2000/svg">
 <title id="d4-title">Electrolysis plus PEM loss trap</title>
-<desc id="d4-desc">Electricity to electrolyzer to hydrogen storage to PEM fuel cell back to electricity showing 25 to 35 percent round trip. Stage efficiencies inside cells; cumulative overall efficiency above arrows.</desc>
+<desc id="d4-desc">Electricity to electrolyzer to hydrogen storage to PEM fuel cell back to electricity showing 25 to 35 percent round trip. Stage boxes are clickable hotspots that open a details panel. Stage efficiencies inside cells; cumulative overall efficiency above arrows.</desc>
 <defs>
 <marker id="a4" markerHeight="6" markerWidth="6" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
 <path d="M0,0 L10,5 L0,10 z" fill="#d47a7a"></path>
@@ -543,39 +659,71 @@
 .cum{fill:#e8a0a0;font-family:Cascadia Code,Consolas,monospace;font-size:9.5px;font-weight:600}
 .t{fill:#d47a7a;font-family:Segoe UI,system-ui,sans-serif;font-size:13px;font-weight:700}
 .ln{stroke:#d47a7a;stroke-width:1.5;fill:none;marker-end:url(#a4)}
+.stage-hotspot{cursor:pointer;pointer-events:all}
+.stage-hotspot *{pointer-events:all}
+.stage-hotspot:focus{outline:none}
+.stage-hotspot:focus-visible{outline:2px solid #5b9fd4;outline-offset:2px}
+.stage-hotspot:hover .b,
+.stage-hotspot:hover .ba,
+.stage-hotspot:hover .bb,
+.stage-hotspot:hover .bd,
+.stage-hotspot:hover .bp,
+.stage-hotspot:hover .bs,
+.stage-hotspot:focus-visible .b,
+.stage-hotspot:focus-visible .ba,
+.stage-hotspot:focus-visible .bb,
+.stage-hotspot:focus-visible .bd,
+.stage-hotspot:focus-visible .bp,
+.stage-hotspot:focus-visible .bs,
+.stage-hotspot.is-active .b,
+.stage-hotspot.is-active .ba,
+.stage-hotspot.is-active .bb,
+.stage-hotspot.is-active .bd,
+.stage-hotspot.is-active .bp,
+.stage-hotspot.is-active .bs{filter:brightness(1.22);stroke-width:2.2}
 </style>
 </defs>
 <text class="t" x="16" y="24">Diagram (4) — Electrolysis + PEM loss trap (not AI baseload)</text>
+<g class="stage-hotspot" data-stage="grid-re" tabindex="0" role="button" focusable="true" aria-label="Grid or renewable electric input. Activate for stage details.">
 <rect class="bd" height="78" rx="6" width="120" x="16" y="55"></rect>
 <text class="l" text-anchor="middle" x="76" y="80">Grid / RE power</text>
 <text class="s" text-anchor="middle" x="76" y="96">electric in</text>
 <text class="e" text-anchor="middle" x="76" y="114">η 100% ref</text>
+</g>
 <path class="ln" d="M136,94 H160"></path>
 <text class="cum" text-anchor="middle" x="148" y="85">100%</text>
+<g class="stage-hotspot" data-stage="electrolyzer" tabindex="0" role="button" focusable="true" aria-label="Electrolyzer. Activate for stage details.">
 <rect class="bd" height="90" rx="6" width="140" x="162" y="49"></rect>
 <text class="l" text-anchor="middle" x="232" y="72">Electrolyzer</text>
 <text class="s" text-anchor="middle" x="232" y="88">~50–55 kWh/kg</text>
 <text class="e" text-anchor="middle" x="232" y="106">η ~63% chem</text>
 <text class="s" text-anchor="middle" x="232" y="122">vs 33 kWh/kg</text>
+</g>
 <path class="ln" d="M302,94 H326"></path>
 <text class="cum" text-anchor="middle" x="314" y="85">~63%</text>
+<g class="stage-hotspot" data-stage="h2-storage" tabindex="0" role="button" focusable="true" aria-label="Hydrogen storage. Activate for stage details.">
 <rect class="bd" height="78" rx="6" width="120" x="328" y="55"></rect>
 <text class="l" text-anchor="middle" x="388" y="78">H₂ storage</text>
 <text class="s" text-anchor="middle" x="388" y="94">compress / leak</text>
 <text class="e" text-anchor="middle" x="388" y="112">η ~92%*</text>
+</g>
 <path class="ln" d="M448,94 H472"></path>
 <text class="cum" text-anchor="middle" x="460" y="85">~58%</text>
+<g class="stage-hotspot" data-stage="pem" tabindex="0" role="button" focusable="true" aria-label="PEM fuel cell. Activate for stage details.">
 <rect class="bd" height="90" rx="6" width="130" x="474" y="49"></rect>
 <text class="l" text-anchor="middle" x="539" y="72">PEM fuel cell</text>
 <text class="s" text-anchor="middle" x="539" y="88">Pt + polymer</text>
 <text class="e" text-anchor="middle" x="539" y="106">η 40–60%</text>
 <text class="s" text-anchor="middle" x="539" y="122">use ~50% mid</text>
+</g>
 <path class="ln" d="M604,94 H628"></path>
 <text class="cum" text-anchor="middle" x="616" y="85">~29%</text>
+<g class="stage-hotspot" data-stage="electric-out" tabindex="0" role="button" focusable="true" aria-label="Electric round-trip output. Activate for stage details.">
 <rect class="bd" height="78" rx="6" width="120" x="630" y="55"></rect>
 <text class="l" text-anchor="middle" x="690" y="80">Electric out</text>
 <text class="s" text-anchor="middle" x="690" y="96">round-trip</text>
 <text class="e" text-anchor="middle" x="690" y="114">≈ 25–35% RT</text>
+</g>
 <rect class="b" height="180" rx="6" style="fill:#161b22" width="968" x="16" y="180"></rect>
 <text class="l" x="32" y="208">When H₂ can make sense</text>
 <text class="s" x="32" y="230">• Stranded renewables with no wire • Seasonal shifting • Ships / planes / trucks • Industry feedstock (ammonia, refining, steel)</text>
@@ -585,7 +733,7 @@
 <text class="s" x="32" y="328">Grey H₂ via SMR ~61% of global supply; low-emissions H₂ under ~1%. Pipes ≠ 100% H₂-ready (embrittlement).</text>
 <text class="s" x="32" y="350">Electrons on HVDC still beat molecules on physics for most point-to-point power moves.</text>
 </svg>
-<figcaption>Figure 4 — Electrolysis + <abbr data-expand="Proton Exchange Membrane" title="Proton Exchange Membrane">PEM</abbr> round-trip loss trap. Stage efficiencies inside cells; cumulative overall efficiency above arrows. Round-trip often 25–35%; appropriate for niche uses, not AI baseload.</figcaption>
+<figcaption>Figure 4 — Electrolysis + <abbr data-expand="Proton Exchange Membrane" title="Proton Exchange Membrane">PEM</abbr> round-trip loss trap. <strong>Click a stage box</strong> for a short explanation and curated companies. Stage efficiencies inside cells; cumulative overall efficiency above arrows. Round-trip often 25–35%; appropriate for niche uses, not AI baseload.</figcaption>
 </figure>
 </section>
 <section aria-labelledby="h-conv" id="conversion">
@@ -593,9 +741,9 @@
 <h3>5.1 Legacy <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr> chain</h3>
 <p>Classic halls follow: grid <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr> → facility transformer → <strong>Uninterruptible Power Supply (<abbr data-expand="Uninterruptible Power Supply" title="Uninterruptible Power Supply">UPS</abbr>)</strong> → <strong>Power Distribution Unit (<abbr data-expand="Power Distribution Unit" title="Power Distribution Unit">PDU</abbr>)</strong> (the breaker cabinet between <abbr data-expand="Uninterruptible Power Supply" title="Uninterruptible Power Supply">UPS</abbr> and racks) → per-server <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr>–<abbr data-expand="Direct Current" title="Direct Current">DC</abbr> <strong>Power Supply Unit (<abbr data-expand="Power Supply Unit" title="Power Supply Unit">PSU</abbr>)</strong> → 12 V → multiphase <strong>Voltage Regulators (<abbr data-expand="Voltage Regulators" title="Voltage Regulators">VRs</abbr>)</strong> / Voltage Regulator Modules (<abbr data-expand="Voltage Regulator Modules" title="Voltage Regulator Modules">VRMs</abbr>) to sub-1 V.</p>
 <figure class="diagram" id="diagram-legacy-ac">
-<svg aria-labelledby="d1-title d1-desc" role="img" viewBox="0 0 1000 340" xmlns="http://www.w3.org/2000/svg">
+<svg aria-labelledby="d1-title d1-desc" role="group" viewBox="0 0 1000 340" xmlns="http://www.w3.org/2000/svg">
 <title id="d1-title">Legacy AC chain with hop losses</title>
-<desc id="d1-desc">Grid AC to facility transformer, UPS, PDU, PSU, 12 V, VRs to GPU. Stage efficiencies inside cells; cumulative notes above arrows where baseline numbers exist.</desc>
+<desc id="d1-desc">Grid AC to facility transformer, UPS, PDU, PSU, 12 V, VRs to GPU. Stage boxes are clickable hotspots that open a details panel. Stage efficiencies inside cells; cumulative notes above arrows where baseline numbers exist.</desc>
 <defs>
 <marker id="a1" markerHeight="6" markerWidth="6" orient="auto-start-reverse" refX="9" refY="5" viewBox="0 0 10 10">
 <path d="M0,0 L10,5 L0,10 z" fill="#5b9fd4"></path>
@@ -609,60 +757,98 @@
 .cum{fill:#7ec8a3;font-family:Cascadia Code,Consolas,monospace;font-size:9px;font-weight:600}
 .t{fill:#5b9fd4;font-family:Segoe UI,system-ui,sans-serif;font-size:13px;font-weight:700}
 .ln{stroke:#5b9fd4;stroke-width:1.5;fill:none;marker-end:url(#a1)}
+.stage-hotspot{cursor:pointer;pointer-events:all}
+.stage-hotspot *{pointer-events:all}
+.stage-hotspot:focus{outline:none}
+.stage-hotspot:focus-visible{outline:2px solid #5b9fd4;outline-offset:2px}
+.stage-hotspot:hover .b,
+.stage-hotspot:hover .ba,
+.stage-hotspot:hover .bb,
+.stage-hotspot:hover .bd,
+.stage-hotspot:hover .bp,
+.stage-hotspot:hover .bs,
+.stage-hotspot:focus-visible .b,
+.stage-hotspot:focus-visible .ba,
+.stage-hotspot:focus-visible .bb,
+.stage-hotspot:focus-visible .bd,
+.stage-hotspot:focus-visible .bp,
+.stage-hotspot:focus-visible .bs,
+.stage-hotspot.is-active .b,
+.stage-hotspot.is-active .ba,
+.stage-hotspot.is-active .bb,
+.stage-hotspot.is-active .bd,
+.stage-hotspot.is-active .bp,
+.stage-hotspot.is-active .bs{filter:brightness(1.22);stroke-width:2.2}
 </style>
 </defs>
 <text class="t" x="16" y="24">Diagram (1) — Legacy AC chain</text>
+<g class="stage-hotspot" data-stage="grid-ac" tabindex="0" role="button" focusable="true" aria-label="Grid AC utility feed. Activate for stage details.">
 <rect class="ba" height="78" rx="6" width="100" x="12" y="55"></rect>
 <text class="l" text-anchor="middle" x="62" y="80">Grid AC</text>
 <text class="s" text-anchor="middle" x="62" y="96">utility feed</text>
 <text class="e" text-anchor="middle" x="62" y="114">η 100% ref</text>
+</g>
 <path class="ln" d="M112,94 H132"></path>
 <text class="cum" text-anchor="middle" x="122" y="85">100%</text>
+<g class="stage-hotspot" data-stage="facility-xfmr" tabindex="0" role="button" focusable="true" aria-label="Facility transformer. Activate for stage details.">
 <rect class="ba" height="78" rx="6" width="110" x="134" y="55"></rect>
 <text class="l" text-anchor="middle" x="189" y="78">Facility XFMR</text>
 <text class="s" text-anchor="middle" x="189" y="94">50/60 Hz Cu-Fe</text>
 <text class="e" text-anchor="middle" x="189" y="112">η ~99.5%</text>
+</g>
 <path class="ln" d="M244,94 H264"></path>
 <text class="cum" text-anchor="middle" x="254" y="85">99.5%</text>
+<g class="stage-hotspot" data-stage="ups" tabindex="0" role="button" focusable="true" aria-label="Uninterruptible power supply. Activate for stage details.">
 <rect class="ba" height="78" rx="6" width="100" x="266" y="55"></rect>
 <text class="l" text-anchor="middle" x="316" y="78">UPS</text>
 <text class="s" text-anchor="middle" x="316" y="94">AC–DC–AC</text>
 <text class="e" text-anchor="middle" x="316" y="112">multi-hop</text>
+</g>
 <path class="ln" d="M366,94 H386"></path>
 <text class="cum" text-anchor="middle" x="376" y="85">↓ loss</text>
+<g class="stage-hotspot" data-stage="pdu" tabindex="0" role="button" focusable="true" aria-label="Power distribution unit. Activate for stage details.">
 <rect class="ba" height="78" rx="6" width="100" x="388" y="55"></rect>
 <text class="l" text-anchor="middle" x="438" y="78">PDU</text>
 <text class="s" text-anchor="middle" x="438" y="94">breaker cab</text>
 <text class="e" text-anchor="middle" x="438" y="112">η ~99%+</text>
+</g>
 <path class="ln" d="M488,94 H508"></path>
 <text class="cum" text-anchor="middle" x="498" y="85">↓</text>
+<g class="stage-hotspot" data-stage="psu" tabindex="0" role="button" focusable="true" aria-label="Per-server power supply unit. Activate for stage details.">
 <rect class="ba" height="78" rx="6" width="110" x="510" y="55"></rect>
 <text class="l" text-anchor="middle" x="565" y="78">Per-server PSU</text>
 <text class="s" text-anchor="middle" x="565" y="94">AC → 12 V DC</text>
 <text class="e" text-anchor="middle" x="565" y="112">conv. loss</text>
+</g>
 <path class="ln" d="M620,94 H640"></path>
 <text class="cum" text-anchor="middle" x="630" y="85">↓</text>
+<g class="stage-hotspot" data-stage="bus-12v" tabindex="0" role="button" focusable="true" aria-label="12 volt bus. Activate for stage details.">
 <rect class="ba" height="78" rx="6" width="90" x="642" y="55"></rect>
 <text class="l" text-anchor="middle" x="687" y="80">12 V bus</text>
 <text class="s" text-anchor="middle" x="687" y="96">board / rack</text>
 <text class="e" text-anchor="middle" x="687" y="114">η ~99%</text>
+</g>
 <path class="ln" d="M732,94 H752"></path>
+<g class="stage-hotspot" data-stage="vrm" tabindex="0" role="button" focusable="true" aria-label="Multiphase voltage regulators. Activate for stage details.">
 <rect class="ba" height="78" rx="6" width="120" x="754" y="55"></rect>
 <text class="l" text-anchor="middle" x="814" y="78">Multiphase VRs</text>
 <text class="s" text-anchor="middle" x="814" y="94">→ sub-1 V</text>
 <text class="e" text-anchor="middle" x="814" y="112">η ~90%</text>
+</g>
 <path class="ln" d="M874,94 H894"></path>
 <text class="cum" text-anchor="middle" x="884" y="85">~5%↓*</text>
+<g class="stage-hotspot" data-stage="silicon" tabindex="0" role="button" focusable="true" aria-label="Silicon GPU hall load. Activate for stage details.">
 <rect class="b" height="78" rx="6" width="90" x="896" y="55"></rect>
 <text class="l" text-anchor="middle" x="941" y="84">GPU</text>
 <text class="s" text-anchor="middle" x="941" y="102">core</text>
+</g>
 <rect class="b" height="110" rx="6" style="fill:#161b22" width="974" x="12" y="170"></rect>
 <text class="l" x="28" y="196">Why AI halls are leaving this stack</text>
 <text class="s" x="28" y="218">Many AC↔DC hops add heat, parts, and roughly ~5% extra conversion loss versus a collapsed MV AC → ~800 V DC → 12 V → VR path (Nvidia Rubin / 800 V-class designs).</text>
 <text class="s" x="28" y="240">*Page baseline does not publish a full UPS/PDU/PSU product chain—only XFMR ~99.5%, VRM ~90%, and the ~5% worse vs collapsed 800 V path. Cumulatives stay qualitative mid-chain.</text>
 <text class="s" x="28" y="262">Headline transformer shortages refer to legacy low-frequency copper-steel units (lead times often cited 2–5 years)—not SSTs.</text>
 </svg>
-<figcaption>Figure 1 — Legacy <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr> chain: grid → facility transformer → <abbr data-expand="Uninterruptible Power Supply" title="Uninterruptible Power Supply">UPS</abbr> → <abbr data-expand="Power Distribution Unit" title="Power Distribution Unit">PDU</abbr> → <abbr data-expand="Power Supply Unit" title="Power Supply Unit">PSU</abbr> → 12 V → <abbr data-expand="Voltage Regulators" title="Voltage Regulators">VRs</abbr>. Stage efficiencies inside cells where the baseline states them; cumulative overall efficiency above arrows (qualitative mid-chain where no published hop product exists).</figcaption>
+<figcaption>Figure 1 — Legacy <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr> chain: grid → facility transformer → <abbr data-expand="Uninterruptible Power Supply" title="Uninterruptible Power Supply">UPS</abbr> → <abbr data-expand="Power Distribution Unit" title="Power Distribution Unit">PDU</abbr> → <abbr data-expand="Power Supply Unit" title="Power Supply Unit">PSU</abbr> → 12 V → <abbr data-expand="Voltage Regulators" title="Voltage Regulators">VRs</abbr>. <strong>Click a stage box</strong> for a short explanation and curated companies. Stage efficiencies inside cells where the baseline states them; cumulative overall efficiency above arrows (qualitative mid-chain where no published hop product exists).</figcaption>
 </figure>
 <h3>5.2 New AI path (~800 V) and what an <abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr> is</h3>
 <p>New designs (Nvidia Rubin / 800 V class): <strong>medium-voltage <abbr data-expand="Alternating Current" title="Alternating Current">AC</abbr></strong> → perimeter industrial rectifier or <strong>Solid-State Transformer (<abbr data-expand="Solid-State Transformer" title="Solid-State Transformer">SST</abbr>)</strong> to ~800 V <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> (or ±400 V bipolar) → <abbr data-expand="Direct Current" title="Direct Current">DC</abbr> busway → rack/blade 800 V-to-12 V <abbr data-expand="Resonant converter topology (inductor-inductor-capacitor)" title="Resonant converter topology (inductor-inductor-capacitor)">LLC</abbr> converter (~64:1) → <abbr data-expand="Voltage Regulators" title="Voltage Regulators">VRs</abbr>.</p>

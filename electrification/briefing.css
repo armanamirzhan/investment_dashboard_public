@@ -238,7 +238,7 @@
   }
 
 
-  /* Fig 0 stage panel (click-to-expand) */
+  /* Stage panel (click-to-expand on all figures) */
   .briefing .diagram.stage-panel-open{
     border-color: rgba(91, 159, 212, 0.55);
   }
