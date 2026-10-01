@@ -1,0 +1,455 @@
+{
+  "version": "2026-10",
+  "disclaimer": "Informational October 2026 baseline. Not investment advice.",
+  "stages": [
+    {
+      "id": "fab-shell",
+      "title": "Fab / cleanroom facility",
+      "summary": "A semiconductor fabrication plant (fab) is a sealed cleanroom campus with ultra-pure water, specialty gases, vibration control, and tool bays. Different product lines (logic, memory, photonics, power) share the same idea \u2014 keep particles out and yield in \u2014 but use different wafers, tools, and packaging steps.",
+      "companies": [
+        {
+          "name": "Exyte",
+          "ticker": "",
+          "note": "Cleanroom / high-tech facility specialist"
+        },
+        {
+          "name": "Jacobs",
+          "ticker": "J",
+          "note": "Large EPC for semiconductor projects"
+        },
+        {
+          "name": "Samsung C&T",
+          "ticker": "",
+          "note": "Builds Samsung\u2019s own fabs and cleanrooms"
+        }
+      ]
+    },
+    {
+      "id": "device-logic",
+      "title": "What we\u2019re making: logic (CPU / GPU / ASIC)",
+      "summary": "Leading-edge logic chips \u2014 host CPUs, merchant GPUs, and custom AI ASICs \u2014 are patterned on advanced silicon nodes. Design happens in EDA software (Software section); this schematic is the factory path from blank wafer to packaged die.",
+      "companies": [
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "Default advanced foundry for AI logic"
+        },
+        {
+          "name": "Samsung Foundry",
+          "ticker": "",
+          "note": "Advanced-node alternative capacity"
+        },
+        {
+          "name": "Intel Foundry",
+          "ticker": "INTC",
+          "note": "Internal + external advanced logic push"
+        }
+      ]
+    },
+    {
+      "id": "device-hbm",
+      "title": "What we\u2019re making: HBM (high-bandwidth memory)",
+      "summary": "High-bandwidth memory stacks tall DRAM dies and attaches them beside AI logic with advanced packaging. The memory wafers are made in DRAM fabs; the glue step (CoWoS-class and peers) is often the choke \u2014 see Hardware scarcity and this section\u2019s packaging layer.",
+      "companies": [
+        {
+          "name": "SK Hynix",
+          "ticker": "000660.KS",
+          "note": "Historically lead HBM supplier"
+        },
+        {
+          "name": "Micron",
+          "ticker": "MU",
+          "note": "HBM ramp / share gains"
+        },
+        {
+          "name": "Samsung Electronics",
+          "ticker": "005930.KS",
+          "note": "HBM catch-up + memory capacity"
+        }
+      ]
+    },
+    {
+      "id": "device-photonics",
+      "title": "What we\u2019re making: photonics / optical components",
+      "summary": "Optical interconnect parts \u2014 lasers, modulators, detectors, and silicon photonics \u2014 use compound semiconductors and/or silicon photonics flows plus specialized photomasks and materials. Deep company maps live under Hardware \u2192 Photonics; this view is the fab-side workflow.",
+      "companies": [
+        {
+          "name": "See Hardware / Photonics",
+          "ticker": "",
+          "note": "Lumentum, Coherent, AXT, Corning, Marvell and peers \u2014 do not duplicate here"
+        },
+        {
+          "name": "Photronics / DNP / Hoya",
+          "ticker": "",
+          "note": "Photomasks and mask materials feeding lithography"
+        }
+      ]
+    },
+    {
+      "id": "device-power",
+      "title": "What we\u2019re making: SiC / GaN power devices (SST-adjacent)",
+      "summary": "Silicon carbide and gallium nitride power devices switch and convert electricity more efficiently than plain silicon \u2014 used in datacenter power stages and in solid-state transformer (SST) style conversion. Full SST system architecture lives under Electrification; this schematic is the device fab.",
+      "companies": [
+        {
+          "name": "STMicroelectronics",
+          "ticker": "STM",
+          "note": "SiC device volume leader"
+        },
+        {
+          "name": "onsemi",
+          "ticker": "ON",
+          "note": "SiC / power semis"
+        },
+        {
+          "name": "Infineon",
+          "ticker": "IFX.DE",
+          "note": "SiC/GaN and silicon power"
+        },
+        {
+          "name": "Wolfspeed",
+          "ticker": "WOLF",
+          "note": "SiC wafers and devices"
+        },
+        {
+          "name": "Electrification (SST systems)",
+          "ticker": "",
+          "note": "Cross-link: site SST and campus power path"
+        }
+      ]
+    },
+    {
+      "id": "wafer",
+      "title": "Starting wafers",
+      "summary": "Every chip starts as a polished wafer. Logic and most DRAM use silicon (often 300 mm). SiC and GaN use specialty substrates. Photonics may use indium phosphide or other compound wafers \u2014 materials houses feed the fab before lithography begins.",
+      "companies": [
+        {
+          "name": "Shin-Etsu Chemical",
+          "ticker": "4063.T",
+          "note": "Leading silicon wafers"
+        },
+        {
+          "name": "SUMCO",
+          "ticker": "3436.T",
+          "note": "300 mm silicon wafers"
+        },
+        {
+          "name": "GlobalWafers",
+          "ticker": "",
+          "note": "Silicon wafers; U.S. expansion"
+        },
+        {
+          "name": "SK Siltron",
+          "ticker": "008500.KS",
+          "note": "SiC / GaN wafer angle"
+        },
+        {
+          "name": "Coherent (II-VI)",
+          "ticker": "COHR",
+          "note": "SiC substrates / epitaxy"
+        }
+      ]
+    },
+    {
+      "id": "litho",
+      "title": "Lithography (pattern printing)",
+      "summary": "Lithography prints circuit patterns with light. Extreme ultraviolet (EUV) is required for the densest advanced-logic layers; deep ultraviolet (DUV) still does most other layers. Photomasks (reticles) carry the pattern. High-NA EUV is a later (~2028\u20132029) capability step if leading-edge AI silicon stays hot.",
+      "companies": [
+        {
+          "name": "ASML",
+          "ticker": "ASML",
+          "note": "Near-monopoly EUV scanners; High-NA roadmap"
+        },
+        {
+          "name": "Nikon",
+          "ticker": "7731.T",
+          "note": "DUV lithography"
+        },
+        {
+          "name": "Canon",
+          "ticker": "7751.T",
+          "note": "Mature-node lithography volume"
+        },
+        {
+          "name": "Lasertec",
+          "ticker": "6920.T",
+          "note": "EUV mask inspection"
+        }
+      ]
+    },
+    {
+      "id": "dep-etch",
+      "title": "Deposition & etch (WFE)",
+      "summary": "Wafer fabrication equipment deposits thin films and etches them into structures. Atomic layer deposition, chemical vapor deposition, epitaxy, and plasma etch are the workhorses for transistors, interconnects, and memory stacks.",
+      "companies": [
+        {
+          "name": "Applied Materials",
+          "ticker": "AMAT",
+          "note": "Broad deposition / process tools"
+        },
+        {
+          "name": "Lam Research",
+          "ticker": "LRCX",
+          "note": "Etch and deposition; HBM/3D stacks"
+        },
+        {
+          "name": "Tokyo Electron",
+          "ticker": "8035.T",
+          "note": "Coat/develop, etch, deposition"
+        },
+        {
+          "name": "ASM International",
+          "ticker": "ASM",
+          "note": "ALD leadership"
+        },
+        {
+          "name": "SCREEN / Kokusai",
+          "ticker": "",
+          "note": "Clean, coat, epitaxy niches"
+        }
+      ]
+    },
+    {
+      "id": "implant-cmp",
+      "title": "Implant, CMP & clean",
+      "summary": "Ion implantation dopes silicon with precise impurities. Chemical-mechanical planarization (CMP) polishes wafers flat between layers. Wet cleans remove residues so the next lithography step can succeed.",
+      "companies": [
+        {
+          "name": "Axcelis",
+          "ticker": "ACLS",
+          "note": "Ion implantation systems"
+        },
+        {
+          "name": "Veeco",
+          "ticker": "VECO",
+          "note": "Epitaxy / process equipment"
+        },
+        {
+          "name": "Entegris",
+          "ticker": "ENTG",
+          "note": "CMP slurries and contamination control"
+        },
+        {
+          "name": "SCREEN Holdings",
+          "ticker": "6305.T",
+          "note": "Wet clean and coat tools"
+        }
+      ]
+    },
+    {
+      "id": "metrology",
+      "title": "Inspection & metrology",
+      "summary": "Process control finds killer defects and measures whether films and critical dimensions landed correctly. Without it, EUV and multi-patterning CapEx is wasted.",
+      "companies": [
+        {
+          "name": "KLA",
+          "ticker": "KLAC",
+          "note": "Dominant wafer process-control tools"
+        },
+        {
+          "name": "Onto Innovation",
+          "ticker": "ONTO",
+          "note": "Packaging and film metrology"
+        },
+        {
+          "name": "Camtek",
+          "ticker": "CAMT",
+          "note": "Advanced packaging inspection"
+        },
+        {
+          "name": "Nova",
+          "ticker": "NVMI",
+          "note": "Dimensional / materials metrology"
+        }
+      ]
+    },
+    {
+      "id": "materials",
+      "title": "Consumables \u2014 resists, gases, UPW",
+      "summary": "Photoresists, specialty chemicals, ultrapure gases, and ultrapure water are continuous inputs. They look less glamorous than scanners, but every advanced line depends on them.",
+      "companies": [
+        {
+          "name": "Tokyo Ohka Kogyo (TOK)",
+          "ticker": "4186.T",
+          "note": "EUV/DUV photoresists"
+        },
+        {
+          "name": "JSR / DuPont / Fujifilm",
+          "ticker": "",
+          "note": "Photoresist and specialty chemistries"
+        },
+        {
+          "name": "Linde / Air Liquide / Air Products",
+          "ticker": "",
+          "note": "Ultra-high-purity gases"
+        },
+        {
+          "name": "Ecolab / Kurita",
+          "ticker": "",
+          "note": "Ultrapure water systems"
+        }
+      ]
+    },
+    {
+      "id": "packaging",
+      "title": "Advanced packaging (CoWoS / OSAT / EMIB)",
+      "summary": "After the die is made, advanced packaging connects logic to HBM and other chiplets with short, dense wiring. TSMC\u2019s CoWoS-class flows, OSATs (Amkor, ASE), and Intel\u2019s EMIB-T are the main AI paths. Capacity has been tight into about 2027.",
+      "companies": [
+        {
+          "name": "TSMC (CoWoS)",
+          "ticker": "TSM",
+          "note": "In-house AI packaging choke"
+        },
+        {
+          "name": "Amkor",
+          "ticker": "AMKR",
+          "note": "OSAT advanced packaging"
+        },
+        {
+          "name": "ASE Technology",
+          "ticker": "ASX",
+          "note": "OSAT advanced packaging / assembly"
+        },
+        {
+          "name": "Intel (EMIB-T)",
+          "ticker": "INTC",
+          "note": "Chiplet interconnect bridge path"
+        }
+      ]
+    },
+    {
+      "id": "hbm-stack",
+      "title": "HBM stacking & attach",
+      "summary": "HBM dies are stacked vertically (TSVs and micro-bumps) then attached next to the accelerator on an interposer or bridge. Yield and capacity here couple memory supply to packaging \u2014 physical tightness is not the same as a cheap stock.",
+      "companies": [
+        {
+          "name": "SK Hynix",
+          "ticker": "000660.KS",
+          "note": "HBM stack volume"
+        },
+        {
+          "name": "Micron",
+          "ticker": "MU",
+          "note": "HBM stacking ramp"
+        },
+        {
+          "name": "Samsung",
+          "ticker": "005930.KS",
+          "note": "HBM stacking / catch-up"
+        },
+        {
+          "name": "TSMC / ASE / Amkor",
+          "ticker": "",
+          "note": "Attach and package with logic"
+        }
+      ]
+    },
+    {
+      "id": "photomask",
+      "title": "Photomasks & optical materials",
+      "summary": "Photomasks (reticles) hold the pattern for each lithography layer. EUV masks are especially hard. Optical materials suppliers feed both mask shops and photonics component makers \u2014 see also Hardware / Photonics.",
+      "companies": [
+        {
+          "name": "Photronics",
+          "ticker": "PLAB",
+          "note": "Independent photomasks"
+        },
+        {
+          "name": "Dai Nippon Printing (DNP)",
+          "ticker": "7912.T",
+          "note": "Advanced / EUV masks"
+        },
+        {
+          "name": "Hoya",
+          "ticker": "7741.T",
+          "note": "Mask blanks / optical materials"
+        },
+        {
+          "name": "Toppan / Tekscend",
+          "ticker": "",
+          "note": "Reticle / EUV mask manufacturing"
+        }
+      ]
+    },
+    {
+      "id": "siph",
+      "title": "Silicon photonics / III\u2013V process bays",
+      "summary": "Silicon photonics integrates optical functions on silicon; many lasers and detectors still need compound-semiconductor (III\u2013V) epitaxy and specialty process tools. Finished optical engines and DSPs are mapped under Hardware / Photonics.",
+      "companies": [
+        {
+          "name": "Hardware / Photonics section",
+          "ticker": "",
+          "note": "Optical engines, fiber, DSPs \u2014 company deep-dive there"
+        },
+        {
+          "name": "Specialty epi / materials houses",
+          "ticker": "",
+          "note": "InP and related wafers (e.g. AXT class) \u2014 see Photonics"
+        }
+      ]
+    },
+    {
+      "id": "sic-epi",
+      "title": "SiC / GaN epi & device process",
+      "summary": "Wide-bandgap power devices grow epitaxial layers on SiC or GaN wafers, then pattern power transistors and diodes. Larger wafers and higher yields are the industrial story; modules later sit in power shelves and SST-style converters.",
+      "companies": [
+        {
+          "name": "STMicroelectronics",
+          "ticker": "STM",
+          "note": "SiC devices; larger-wafer ramp"
+        },
+        {
+          "name": "Wolfspeed",
+          "ticker": "WOLF",
+          "note": "SiC substrates and devices"
+        },
+        {
+          "name": "onsemi",
+          "ticker": "ON",
+          "note": "SiC production ramps"
+        },
+        {
+          "name": "Infineon / ROHM",
+          "ticker": "",
+          "note": "SiC/GaN device portfolios"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "SiC substrates / epitaxy"
+        }
+      ]
+    },
+    {
+      "id": "test",
+      "title": "Wafer & package test",
+      "summary": "Automatic test equipment proves chips work before they ship. AI parts are large and expensive \u2014 bad units hurt more. Probe cards, handlers, and burn-in systems sit at the end of the line.",
+      "companies": [
+        {
+          "name": "Advantest",
+          "ticker": "6857.T",
+          "note": "Memory / AI-oriented ATE"
+        },
+        {
+          "name": "Teradyne",
+          "ticker": "TER",
+          "note": "Broad semiconductor ATE"
+        },
+        {
+          "name": "FormFactor",
+          "ticker": "FORM",
+          "note": "Probe cards"
+        },
+        {
+          "name": "Aehr Test Systems",
+          "ticker": "AEHR",
+          "note": "Wafer/package burn-in"
+        },
+        {
+          "name": "Cohu",
+          "ticker": "COHU",
+          "note": "Handlers"
+        }
+      ]
+    }
+  ]
+}

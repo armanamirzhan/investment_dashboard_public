@@ -291,3 +291,171 @@
   text-transform: uppercase;
   font-size: 0.78rem;
 }
+/* Interactive datacenter schematic (Electrification-style hotspots) */
+.briefing .diagram{
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-local);
+  padding: 1rem 0.75rem 0.85rem;
+  margin: 1.35rem 0 1.75rem;
+  overflow-x: auto;
+}
+.briefing .diagram figcaption{
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.65rem;
+  padding: 0 0.35rem;
+  line-height: 1.5;
+}
+.briefing .diagram svg{
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 720px;
+}
+.stage-hotspot{ cursor: pointer; pointer-events: all; }
+.stage-hotspot *{ pointer-events: all; }
+.stage-hotspot:focus{ outline: none; }
+.stage-hotspot:focus-visible{ outline: 2px solid #5b9fd4; outline-offset: 2px; }
+.stage-hotspot:hover .box,
+.stage-hotspot:focus-visible .box,
+.stage-hotspot.is-active .box{
+  filter: brightness(1.22);
+  stroke-width: 2.2;
+}
+.briefing .diagram.stage-panel-open{
+  border-color: rgba(91, 159, 212, 0.55);
+}
+.briefing .stage-panel{
+  position: relative;
+  margin: 0.85rem 0.35rem 0.25rem;
+  padding: 1rem 2.5rem 0.95rem 1.1rem;
+  background: var(--bg-card-local);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-local);
+  color: var(--text);
+}
+.briefing .stage-panel[hidden]{ display: none !important; }
+.briefing .stage-panel-close{
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-soft);
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+.briefing .stage-panel-close:hover,
+.briefing .stage-panel-close:focus-visible{
+  color: var(--text);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  outline: none;
+}
+.briefing .stage-panel-close:focus-visible{
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.briefing .stage-panel-title{
+  margin: 0 0 0.45rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  padding-right: 0.5rem;
+}
+.briefing .stage-panel-summary{
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+.briefing .stage-panel-companies{
+  margin: 0 0 0.55rem;
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  background: var(--bg-soft);
+  padding: 0.35rem 0.75rem 0.45rem;
+}
+.briefing .stage-panel-companies summary{
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  padding: 0.35rem 0;
+  list-style: none;
+}
+.briefing .stage-panel-companies summary::-webkit-details-marker{ display: none; }
+.briefing .stage-panel-companies summary::before{
+  content: "▸ ";
+  color: var(--text-dim);
+}
+.briefing .stage-panel-companies[open] summary::before{ content: "▾ "; }
+.briefing .stage-panel-companies ul{
+  margin: 0.15rem 0 0.35rem;
+  padding-left: 1.1rem;
+}
+.briefing .stage-panel-companies li{
+  margin: 0.35rem 0;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+.briefing .stage-panel-companies .co-ticker{
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--accent-2);
+  background: var(--accent-2-soft);
+  border: 1px solid rgba(126, 200, 163, 0.28);
+  border-radius: 4px;
+  padding: 0.05rem 0.4rem;
+  margin-left: 0.35rem;
+  vertical-align: middle;
+}
+.briefing .stage-panel-companies .co-note{
+  display: block;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  margin-top: 0.15rem;
+}
+.briefing .stage-panel-note{
+  margin: 0;
+  font-size: 0.72rem;
+  color: var(--text-dim);
+}
+@media (max-width: 720px) {
+  .briefing .diagram svg{ min-width: 560px; }
+}
+
+/* Device schematic tabs */
+.briefing .device-tabs{
+  display:flex; flex-wrap:wrap; gap:0.45rem; margin:0 0 1rem;
+}
+.briefing .device-tab{
+  font: inherit; font-size:0.85rem; cursor:pointer;
+  color: var(--text-muted); background: var(--bg-soft);
+  border:1px solid var(--border); border-radius:999px;
+  padding:0.35rem 0.85rem;
+}
+.briefing .device-tab:hover{ color:var(--text); border-color:#5b9fd4; }
+.briefing .device-tab[aria-selected="true"]{
+  color:#f0f4fa; background: var(--accent-soft); border-color:#5b9fd4;
+}
+.briefing .device-fig[hidden]{ display:none !important; }
+.briefing .stage-hotspot{ cursor:pointer; }
+.briefing .stage-hotspot:hover .box,
+.briefing .stage-hotspot:focus-visible .box,
+.briefing .stage-hotspot.is-active .box{
+  filter:brightness(1.22); stroke-width:2.2;
+}
+.briefing .stage-hotspot:focus{ outline:none; }
+.briefing .stage-hotspot:focus-visible{ outline:2px solid #5b9fd4; outline-offset:2px; }
