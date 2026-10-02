@@ -92,6 +92,16 @@
       text-decoration: none;
     }
     .btn:hover { text-decoration: none; filter: brightness(1.1); }
+
+    .watch { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border); }
+    .watch h3 { font-size: 0.82rem; margin: 0 0 6px; color: var(--text-on-dark); }
+    .watch p.note { font-size: 0.8rem; color: var(--text-secondary); margin: 0 0 8px; }
+    .watch ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+    .watch li { font-size: 0.84rem; color: var(--text-secondary); line-height: 1.4; padding: 6px 8px; border-radius: 8px; background: rgba(0,0,0,.12); border: 1px solid rgba(138,147,160,.2); }
+    .watch .wn { font-weight: 700; color: var(--text-primary); }
+    .watch .wt { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.72rem; padding: 1px 6px; border-radius: 4px; background: rgba(138,147,160,.12); border: 1px solid rgba(138,147,160,.35); color: #8a93a0; margin: 0 4px; }
+    .quiet-link { font-size: 0.78rem; color: var(--text-secondary); }
+    .quiet-link a { color: var(--accent-blue); }
   </style>
 </head>
 <body>
@@ -117,7 +127,7 @@
       <h1>Investment analysis</h1>
       <p class="lede">How AI factories get power — and which public companies sit on the path from the grid (or an onsite generator) to the chip. Written for a human reader. Not a recommendation to buy or sell anything.</p>
       <div class="meta-row">
-        <span class="chip">As of 1 Oct 2026</span>
+        <span class="chip">As of 2 Oct 2026</span>
         <span class="chip">Public stocks &amp; ADRs only</span>
         <span class="chip warn">Not investment advice</span>
       </div>
@@ -128,17 +138,18 @@
       <p>AI halls draw so much continuous power that the old multi-step <a href="https://en.wikipedia.org/wiki/Alternating_current">alternating current (AC)</a> chain wastes heat and space. The industry is moving toward higher-voltage <a href="https://en.wikipedia.org/wiki/Direct_current">direct current (DC)</a> inside the building — typically about <strong>800 volts DC</strong> on the hall bus — so fewer conversion steps sit between the utility and the <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit">graphics processing unit (GPU)</a>.</p>
       <p>You can think of three overlapping moves:</p>
       <ul>
-        <li><strong>Near the rack (now → 2027):</strong> A hybrid “power rack” or sidecar converts facility power to 800 volts DC for dense AI rows without rebuilding the whole building. NVIDIA’s Vera Rubin platform can take this as an optional setup in the second half of 2026; broader rack use rises with Rubin Ultra from the second half of 2027.</li>
-        <li><strong>Across the hall (2027 → ~2029):</strong> Row power centers and overhead DC busways feed multiple megawatts per row. DC breakers and certified solid-state transformers still constrain how fast this spreads.</li>
-        <li><strong>At the fence line (always):</strong> Utility interconnect queues and slow conventional transformers remain the schedule risk. Onsite fuel cells or turbines buy time-to-power when the grid is late.</li>
+        <li><strong>Near the rack (2026):</strong> A ±400&nbsp;V “sidecar” / hybrid power rack is the practical path this year — feeding denser AI rows without rebuilding the hall. Native facility-wide 800&nbsp;V DC is <em>not</em> the 2026 default. NVIDIA’s Vera Rubin platform can take higher-voltage rack power as an <em>optional</em> setup.</li>
+        <li><strong>Rack-level 800&nbsp;V (2027–28):</strong> Native / broader rack-level 800&nbsp;V arrives optionally on Vera Rubin, more broadly with Rubin Ultra from 2H27, and more widely in 2028. Caveat: SemiAnalysis has reported Kyber slipping toward 2028 while NVIDIA says its roadmap is intact.</li>
+        <li><strong>Facility DC + SST (~2029+):</strong> Campus-scale direct-current distribution and solid-state transformers mainly scale after about 2029. Until then, utility interconnect queues and classic transformers remain the schedule risk; onsite fuel cells or turbines buy time-to-power when the grid is late.</li>
       </ul>
 
       <h3>When 800 volts direct current becomes the default for new halls</h3>
       <div class="timeline">
-        <div class="tl"><div class="when">H2 2026</div><div class="what">Optional 800 V power racks into existing alternating-current buildings (Vera Rubin era).</div></div>
-        <div class="tl"><div class="when">H2 2027–2028</div><div class="what">Volume rack-level adoption with higher-power Rubin Ultra–class systems.</div></div>
-        <div class="tl"><div class="when">~2029+</div><div class="what">New campuses designed primarily around facility-scale 800 V direct current; U.S. electrical-code support aims fuller coverage around the 2029 code cycle.</div></div>
+        <div class="tl"><div class="when">2026</div><div class="what">±400&nbsp;V “sidecar” / hybrid power-rack year. Vera Rubin may take higher-voltage rack power as an optional path — not native facility 800&nbsp;V as the default.</div></div>
+        <div class="tl"><div class="when">2027–28</div><div class="what">Native / broader rack-level 800&nbsp;V (optional on Vera Rubin; broader with Rubin Ultra in 2H27; wider in 2028). SemiAnalysis: Kyber may slip to 2028; NVIDIA roadmap intact.</div></div>
+        <div class="tl"><div class="when">~2029+</div><div class="what">Facility-wide DC distribution and solid-state transformer scale; U.S. electrical-code support aims fuller coverage around the 2029 code cycle.</div></div>
       </div>
+      <p class="quiet-link"><a href="../claude-summary/power.html">Claude power notes →</a></p>
 
       <p>The fields below are where the rollout can stall or accelerate — each subsection explains the gear and the public names on this pass.</p>
       <ul class="field-nav" aria-label="Jump to field">
@@ -155,11 +166,12 @@
     </section>
 
     <p class="legend"><strong class="gold">Gold:</strong> Delta Electronics · Vertiv · Eaton · Bloom Energy &nbsp;|&nbsp; <strong class="gold">Gold (SiC capacity):</strong> onsemi · Coherent &nbsp;|&nbsp; <strong>Rainbow:</strong> Infineon · STMicroelectronics — gold = top setups on this list or within the named theme; rainbow = demand that may still be early in the share price.</p>
+    <p class="legend" style="margin-top:2px;">Analysis gold/rainbow marks and Electrification Power Map marks are <strong>independent taxonomies</strong>: analysis = this brief’s shortlist; the Power Map may still show ABB/Amphenol strong, Hitachi/Vicor rainbow, etc. Analysis golds onsemi/Coherent for SiC capacity are analysis-only until Electrification wires them.</p>
 
     <section class="card" id="field-sst">
       <h2>Solid-state transformers</h2>
-      <p>A <a href="https://en.wikipedia.org/wiki/Solid-state_transformer">solid-state transformer (SST)</a> is a power-electronics box that can turn medium-voltage grid power toward about 800 volts <a href="https://en.wikipedia.org/wiki/Direct_current">direct current (DC)</a> with fewer classic conversion steps than a traditional iron-core <a href="https://en.wikipedia.org/wiki/Transformer">transformer</a>. Safety certification and skilled install crews still constrain how fast SSTs roll out.</p>
-      <p><a href="#ge-vernova">GE Vernova</a> and <a href="#siemens-energy">Siemens Energy</a> have later or group SST optionality — see <a href="#field-facility">Facility transformers</a>.</p>
+      <p>A <a href="https://en.wikipedia.org/wiki/Solid-state_transformer">solid-state transformer (SST)</a> is a power-electronics box that can turn medium-voltage grid power toward about 800 volts <a href="https://en.wikipedia.org/wiki/Direct_current">direct current (DC)</a> with fewer classic conversion steps than a traditional iron-core <a href="https://en.wikipedia.org/wiki/Transformer">transformer</a>. Commercial SST units in revenue service were still scarce (single digits as of May 2026 per Claude research); they cost about twice a classic transformer; a UL data-center certification path has only recently been opening. SSTs replace medium-to-low-voltage distribution transformers and low-voltage switchboards — <strong>not</strong> high-voltage substations — and mainly scale after about 2029.</p>
+      <p><a href="#ge-vernova">GE Vernova</a> and <a href="#siemens-energy">Siemens Energy</a> have later or group SST optionality — see <a href="#field-facility">Facility transformers</a>. <span class="quiet-link"><a href="../claude-summary/power.html">Claude power notes →</a></span></p>
       <ul class="co-list">
         <li id="eaton">
           <details class="co gold">
@@ -181,10 +193,10 @@
         </li>
         <li id="abb">
           <details class="co">
-            <summary><span class="name">ABB</span> <span class="ticker">ABB</span> <span class="tag accumulate">Accumulate</span></summary>
+            <summary><span class="name">ABB</span> <span class="ticker">ABBNY</span> <span class="tag accumulate">Accumulate</span></summary>
             <div class="body">
-              <p>Infinitus portfolio for source-to-rack 800 V direct current, including solid-state direct-current breakers that attack the protection bottleneck. Large automation mix dilutes pure data-center torque.</p>
-              <p><a href="companies/abb.html">Open one-screen scorecard →</a></p>
+              <p>Infinitus portfolio for source-to-rack 800 V direct current, including solid-state direct-current breakers that attack the protection bottleneck. Large automation mix dilutes pure data-center torque. Primary listing is SIX:ABBN; U.S. line is OTC ADR <strong>ABBNY</strong> (not a NYSE common).</p>
+              <p><a href="companies/abb.html">Open one-screen scorecard →</a> · <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=ABBNY">Fidelity quote →</a></p>
             </div>
           </details>
         </li>
@@ -206,6 +218,17 @@
           </details>
         </li>
       </ul>
+      <div class="watch">
+        <h3>Also on the radar (unscored)</h3>
+        <p class="note">Scorecards pending Performance tracker. Not Buy/Accumulate calls — research watch only.</p>
+        <ul>
+          <li><span class="wn">Hubbell</span><span class="wt">HUBB</span> — T&amp;D and data-center electrical products; MV/LV distribution strength. <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=HUBB">Fidelity →</a></li>
+          <li><span class="wn">Powell Industries</span><span class="wt">POWL</span> — Custom switchgear and electrical distribution; large backlog. <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=POWL">Fidelity →</a></li>
+          <li><span class="wn">Littelfuse</span><span class="wt">LFUS</span> — Circuit protection and DC-relevant fuses/semiconductors. <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=LFUS">Fidelity →</a></li>
+          <li><span class="wn">Siemens AG</span><span class="wt">SIEGY</span> — MV switchgear and the Reinhausen SST partnership (distinct from Siemens Energy). <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=SIEGY">Fidelity →</a></li>
+        </ul>
+        <p class="note">Eaton (ETN) is already scored under <a href="#field-sst">SST</a>. <span class="quiet-link"><a href="../claude-summary/power.html">Claude power notes →</a></span></p>
+      </div>
     </section>
 
     <section class="card" id="field-sic">
@@ -232,6 +255,15 @@
           </details>
         </li>
       </ul>
+      <div class="watch">
+        <h3>Also on the radar (unscored)</h3>
+        <p class="note">NVIDIA 800&nbsp;VDC silicon partners and related conversion names. Scorecards pending Performance tracker — not stance tags.</p>
+        <ul>
+          <li><span class="wn">onsemi</span><span class="wt">ON</span> — Device content for 800&nbsp;V conversion (also gold under <a href="#field-sic-capacity">SiC capacity</a>). <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=ON">Fidelity →</a></li>
+          <li><span class="wn">Navitas</span><span class="wt">NVTS</span> — GaN / high-voltage conversion silicon partner named on NVIDIA’s 800&nbsp;V path. <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=NVTS">Fidelity →</a></li>
+          <li><span class="wn">Monolithic Power</span><span class="wt">MPWR</span> — Power-management ICs on the NVIDIA silicon-partner list. <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=MPWR">Fidelity →</a></li>
+        </ul>
+      </div>
     </section>
 
 
@@ -245,7 +277,7 @@
             <summary><span class="name">onsemi</span> <span class="ticker">ON</span> <span class="tag accumulate">Accumulate</span> <span class="tag goldmark">Gold</span></summary>
             <div class="body">
               <p>onsemi's SiC angle here is captive capacity — growing crystals in Hudson, NH and pushing a full-chain 200&nbsp;mm hub in the Czech Republic — so auto and industrial customers get supply assurance without betting on a distressed materials pure-play. Finished MOSFETs matter commercially, but this field scores the fab/materials footprint.</p>
-              <p><a href="companies/onsemi.html">Open one-screen scorecard →</a> · <a href="https://investor.onsemi.com/">Company IR →</a> · <a href="https://www.fidelity.com/research/quote/summary?symbol=ON">Fidelity quote →</a></p>
+              <p><a href="companies/onsemi.html">Open one-screen scorecard →</a> · <a href="https://investor.onsemi.com/">Company IR →</a> · <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=ON">Fidelity quote →</a></p>
             </div>
           </details>
         </li>
@@ -254,7 +286,7 @@
             <summary><span class="name">Coherent</span> <span class="ticker">COHR</span> <span class="tag accumulate">Accumulate</span> <span class="tag goldmark">Gold</span></summary>
             <div class="body">
               <p>Coherent sells merchant SiC epitaxial wafers — including 200&nbsp;mm — so device makers can ramp without owning crystal growth. Thick epi aimed at multi-kilovolt AI-datacenter and industrial power is a capacity differentiator, but lasers and optical networking still dilute how pure the equity is to SiC wafers.</p>
-              <p><a href="companies/coherent.html">Open one-screen scorecard →</a> · <a href="https://www.coherent.com/company/investor-relations">Company IR →</a> · <a href="https://www.fidelity.com/research/quote/summary?symbol=COHR">Fidelity quote →</a></p>
+              <p><a href="companies/coherent.html">Open one-screen scorecard →</a> · <a href="https://www.coherent.com/company/investor-relations">Company IR →</a> · <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=COHR">Fidelity quote →</a></p>
             </div>
           </details>
         </li>
@@ -290,30 +322,48 @@
             <summary><span class="name">Wolfspeed</span> <span class="ticker">WOLF</span> <span class="tag avoid">Avoid</span></summary>
             <div class="body">
               <p>Wolfspeed is the clearest U.S. silicon carbide capacity story — boule/substrate into the Mohawk Valley 200&nbsp;mm fab — but Chapter&nbsp;11 emergence in September 2025, fresh-start accounting, Renesas equity, and still-low fab utilization mean the balance sheet and fill rate dominate the capacity thesis for now.</p>
-              <p><a href="companies/wolfspeed.html">Open one-screen scorecard →</a> · <a href="https://investor.wolfspeed.com/">Company IR →</a> · <a href="https://www.fidelity.com/research/quote/summary?symbol=WOLF">Fidelity quote →</a></p>
+              <p><a href="companies/wolfspeed.html">Open one-screen scorecard →</a> · <a href="https://investor.wolfspeed.com/">Company IR →</a> · <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=WOLF">Fidelity quote →</a></p>
             </div>
           </details>
         </li>
       </ul>
+      <div class="watch">
+        <h3>Also on the radar (unscored)</h3>
+        <p class="note">Substrate and epi/PVT equipment named as capacity bottlenecks. Scorecards pending Performance tracker.</p>
+        <ul>
+          <li><span class="wn">SICC</span><span class="wt">2631.HK</span> — Listed Chinese SiC substrate maker (also SHA:688234). No clean US Fidelity line; use HK quote pages.</li>
+          <li><span class="wn">Aixtron</span><span class="wt">AIXXF</span> — Epitaxy reactors (incl. SiC); primary Xetra AIXA.DE. <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=AIXXF">Fidelity (OTC) →</a></li>
+          <li><span class="wn">PVA TePla</span><span class="wt">TPE.DE</span> — Crystal-growth / PVT furnace equipment for SiC. Xetra listing; limited US OTC coverage — local quote.</li>
+        </ul>
+        <p class="quiet-link"><a href="../claude-summary/power.html">Claude power notes →</a></p>
+      </div>
       <p style="margin-top:10px;font-size:0.88rem;">Cross-links only (already on <a href="#field-sic">devices</a>): Infineon (IFNNY) and STMicroelectronics (STM) also build captive SiC fab capacity — tracked there for design-win content, not rescored here. Avoided private-only substrate houses (e.g. SK Siltron CSS).</p>
     </section>
 
 
     <section class="card" id="field-rack">
       <h2>Rack and row power</h2>
-      <p>Sidecars, in-row power racks, <a href="https://en.wikipedia.org/wiki/Busbar">busways</a>, and <a href="https://en.wikipedia.org/wiki/Uninterruptible_power_supply">uninterruptible power supplies (UPS)</a> sit near the IT load so halls can take 800 volts <a href="https://en.wikipedia.org/wiki/Direct_current">direct current (DC)</a> without rebuilding everything.</p>
-      <p><a href="#delta-electronics">Delta Electronics</a> also ships in-row 800 V racks (see <a href="#field-sst">Solid-state transformers</a>).</p>
+      <p>Sidecars, in-row power racks, <a href="https://en.wikipedia.org/wiki/Busbar">busways</a>, and <a href="https://en.wikipedia.org/wiki/Uninterruptible_power_supply">uninterruptible power supplies (UPS)</a> sit near the IT load. In <strong>2026</strong> the practical path is mostly ±400&nbsp;V hybrid / sidecar gear into existing AC buildings; native rack-level 800&nbsp;V DC broadens in 2027–28 (optional on Vera Rubin; wider with Rubin Ultra / 2028).</p>
+      <p><a href="#delta-electronics">Delta Electronics</a> also ships in-row high-voltage racks (see <a href="#field-sst">Solid-state transformers</a>). <span class="quiet-link"><a href="../claude-summary/power.html">Claude power notes →</a></span></p>
       <ul class="co-list">
         <li id="vertiv">
           <details class="co gold">
             <summary><span class="name">Vertiv</span> <span class="ticker">VRT</span> <span class="tag accumulate">Accumulate</span> <span class="tag goldmark">Gold</span></summary>
             <div class="body">
-              <p>Builds the gear next to the rack — sidecars, busways, and backup — so operators can feed 800 V direct current into dense rows without ripping out the building. Commercial portfolio aimed at the second half of 2026. Valuation already prices a lot of the AI story.</p>
+              <p>Builds the gear next to the rack — sidecars, busways, and backup — so operators can feed higher-voltage direct current into dense rows without ripping out the building. 2026 commercial push is the hybrid / sidecar year; broader native 800&nbsp;V rack adoption is a 2027–28 story. Valuation already prices a lot of the AI narrative.</p>
               <p><a href="companies/vertiv.html">Open one-screen scorecard →</a></p>
             </div>
           </details>
         </li>
       </ul>
+      <div class="watch">
+        <h3>Also on the radar (unscored)</h3>
+        <p class="note">Scorecards pending Performance tracker. Vicor is rainbow on the Power Map but unscored here.</p>
+        <ul>
+          <li><span class="wn">Vicor</span><span class="wt">VICR</span> — Dense DC-DC / VPD modules for AI racks; Power Map rainbow elsewhere. <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=VICR">Fidelity →</a></li>
+          <li><span class="wn">Lite-On</span><span class="wt">2301.TW</span> — Second rack-power vendor on NVIDIA’s power-system partner list. Taiwan listing; no clean US Fidelity line.</li>
+        </ul>
+      </div>
     </section>
 
     <section class="card" id="field-connectors">
@@ -340,7 +390,8 @@
           <details class="co gold">
             <summary><span class="name">Bloom Energy</span> <span class="ticker">BE</span> <span class="tag accumulate">Accumulate</span> <span class="tag goldmark">Gold</span></summary>
             <div class="body">
-              <p>Onsite solid-oxide fuel cells that make electricity at the campus when the utility queue is the real bottleneck. Native direct-current-friendly output pairs conceptually with high-voltage halls. Oracle-scale agreements re-rated the stock — treat volatility and dilution risk seriously.</p>
+              <p>Onsite solid-oxide fuel cells that make electricity at the campus when the utility queue is the real bottleneck. Native direct-current-friendly output pairs conceptually with high-voltage halls. Oracle-scale agreements (incl. Project Jupiter) re-rated the stock — treat volatility and dilution risk seriously.</p>
+              <p><strong>Risk (press, ~25 Sep 2026):</strong> Late-September 2026 reports said Oracle issued a force-majeure notice on Project Jupiter — the large Oracle deal this thesis cites. Framing is press/secondary (~stockanalysis / TipRanks headlines), not a court finding. Stance stays Accumulate / gold unless Performance tracker changes it.</p>
               <p><a href="companies/bloom-energy.html">Open one-screen scorecard →</a></p>
             </div>
           </details>
@@ -355,6 +406,15 @@
           </details>
         </li>
       </ul>
+      <div class="watch">
+        <h3>Also on the radar (unscored)</h3>
+        <p class="note">Genset / turbine vendors named in Claude coverage gaps. Scorecards pending Performance tracker. GEV and Siemens Energy stay scored under <a href="#field-facility">facility transformers</a>.</p>
+        <ul>
+          <li><span class="wn">Generac</span><span class="wt">GNRC</span> — Backup gensets; Amazon data-center agreement reported (multi-year deliveries into 2027–28). <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=GNRC">Fidelity →</a></li>
+          <li><span class="wn">Cummins</span><span class="wt">CMI</span> — Natural-gas generators and BESS for data-center sites. <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=CMI">Fidelity →</a></li>
+          <li><span class="wn">Caterpillar</span><span class="wt">CAT</span> — Industrial gensets / Solar Turbines optionality for campus power. <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=CAT">Fidelity →</a></li>
+        </ul>
+      </div>
     </section>
 
     <section class="card" id="field-facility">
@@ -372,22 +432,33 @@
         </li>
         <li id="siemens-energy">
           <details class="co">
-            <summary><span class="name">Siemens Energy</span> <span class="ticker">SMNEY</span> <span class="tag hold">Hold</span></summary>
+            <summary><span class="name">Siemens Energy</span> <span class="ticker">SMEGF / SMNEY</span> <span class="tag hold">Hold</span></summary>
             <div class="body">
-              <p>Grid and turbine exposure with group solid-state transformer optionality (partly sitting with Siemens AG). Treat as electrification recovery, not a pure 800 V name.</p>
-              <p><a href="companies/siemens-energy.html">Open one-screen scorecard →</a></p>
+              <p>Grid and turbine exposure with group solid-state transformer optionality (partly sitting with Siemens AG). Treat as electrification recovery, not a pure 800 V name. US OTC: prefer <strong>SMEGF</strong> when SMNEY does not quote; scorecard link unchanged.</p>
+              <p><a href="companies/siemens-energy.html">Open one-screen scorecard →</a> · <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=SMEGF">Fidelity SMEGF →</a></p>
             </div>
           </details>
         </li>
       </ul>
+      <div class="watch">
+        <h3>Also on the radar (unscored)</h3>
+        <p class="note">LPT / HVDC / cable names Claude flagged. Scorecards pending Performance tracker. Hitachi Energy holds the HVDC franchise ABB sold (2020–22).</p>
+        <ul>
+          <li><span class="wn">Hitachi</span><span class="wt">HTHIY</span> — Hitachi Energy: HVDC / large power transformers (Power Map rainbow elsewhere). <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=HTHIY">Fidelity →</a></li>
+          <li><span class="wn">HD Hyundai Electric</span><span class="wt">267260.KS</span> — Ultra-high-voltage transformers; strong US share. KRX listing — local quote.</li>
+          <li><span class="wn">Hyosung Heavy</span><span class="wt">298040.KS</span> — Large power transformers (incl. US 765&nbsp;kV capacity). KRX listing — local quote.</li>
+          <li><span class="wn">Prysmian</span><span class="wt">PRYMY</span> — High-voltage cable for interconnect. <a href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=PRYMY">Fidelity →</a></li>
+        </ul>
+        <p class="quiet-link"><a href="../claude-summary/power.html">Claude power notes →</a></p>
+      </div>
     </section>
 
     <div class="actions">
-      <a class="btn" href="companies/index.html">All 12 company scorecards</a>
+      <a class="btn" href="companies/index.html">All company scorecards</a>
       <a class="btn" href="../electrification/index.html">Open Electrification Power Map</a>
     </div>
 
-    <p class="footnote"><strong>Not investment advice.</strong> Personal research for Arman A’s study hub. Ratings and gold / rainbow marks are a research framework only — not recommendations to buy, sell, or hold any security. Field subsections were added for clarity (gear first, then the public names on this pass). Company pages are owned by Performance tracker; this brief by Investment analysis. Power Map company marks updated to match the 1 Oct 2026 handoff (gold names; rainbow on Infineon and STMicroelectronics; Delta moved from rainbow to gold).</p>
+    <p class="footnote"><strong>Not investment advice.</strong> Personal research for Arman A’s study hub. Ratings and gold / rainbow marks are a research framework only — not recommendations to buy, sell, or hold any security. Analysis marks and Power Map marks are independent (see legend). Field subsections: scored shortlist first, then “Also on the radar (unscored)” watch names. Company pages are owned by Performance tracker; this brief by Investment analysis. Claude audit pass 2 Oct 2026 (ABBNY, timing, field watch lists).</p>
   </main>
 
   <footer class="site-footer">

@@ -1,0 +1,156 @@
+{
+  "as_of": "2026-10-02",
+  "owner": "Investment analysis",
+  "purpose": "Claude audit handoff \u2014 unscored watch names added on analysis/index.html for Performance tracker scorecards",
+  "not_investment_advice": true,
+  "follow_ups": {
+    "performance_tracker": [
+      "Fix ABB\u2192ABBNY on analysis/companies/abb.html scorecard (display ticker and any NYSE claim); US OTC is ABBNY, SIX is ABBN.",
+      "Score or decline watch names listed below; do not invent Buy/Accumulate from this handoff alone.",
+      "Bloom Energy: review late-Sep 2026 Oracle force-majeure press on Project Jupiter; analysis kept Accumulate/gold with risk callout."
+    ],
+    "electrification": [
+      "Add reciprocal link from Power Map (\u00a77 / hop 6 or SiC area) to analysis/sic-burn-in.html.",
+      "ABB Power Map ticker ABB\u2192ABBNY (NOTES \u00a73.1).",
+      "Analysis golds onsemi/Coherent are analysis-only until Electrification wires them into Power Map marks."
+    ]
+  },
+  "gaps_closed": [
+    "A-142",
+    "A-143",
+    "A-144",
+    "A-145",
+    "A-146",
+    "A-147",
+    "A-148",
+    "A-149",
+    "A-150",
+    "A-151",
+    "P1-ABBNY",
+    "P2-timing-SST",
+    "P3-claude-power-links"
+  ],
+  "watch_by_field": {
+    "field-onsite": [
+      {
+        "name": "Generac",
+        "ticker": "GNRC",
+        "us_symbol": "GNRC"
+      },
+      {
+        "name": "Cummins",
+        "ticker": "CMI",
+        "us_symbol": "CMI"
+      },
+      {
+        "name": "Caterpillar",
+        "ticker": "CAT",
+        "us_symbol": "CAT"
+      }
+    ],
+    "field-switchgear": [
+      {
+        "name": "Hubbell",
+        "ticker": "HUBB",
+        "us_symbol": "HUBB"
+      },
+      {
+        "name": "Powell Industries",
+        "ticker": "POWL",
+        "us_symbol": "POWL"
+      },
+      {
+        "name": "Littelfuse",
+        "ticker": "LFUS",
+        "us_symbol": "LFUS"
+      },
+      {
+        "name": "Siemens AG",
+        "ticker": "SIEGY",
+        "us_symbol": "SIEGY",
+        "note": "MV + Reinhausen SST; distinct from Siemens Energy"
+      }
+    ],
+    "field-facility": [
+      {
+        "name": "Hitachi",
+        "ticker": "HTHIY",
+        "us_symbol": "HTHIY",
+        "note": "Hitachi Energy HVDC/LPT"
+      },
+      {
+        "name": "HD Hyundai Electric",
+        "ticker": "267260.KS",
+        "us_symbol": null
+      },
+      {
+        "name": "Hyosung Heavy",
+        "ticker": "298040.KS",
+        "us_symbol": null
+      },
+      {
+        "name": "Prysmian",
+        "ticker": "PRYMY",
+        "us_symbol": "PRYMY"
+      }
+    ],
+    "field-rack": [
+      {
+        "name": "Vicor",
+        "ticker": "VICR",
+        "us_symbol": "VICR"
+      },
+      {
+        "name": "Lite-On",
+        "ticker": "2301.TW",
+        "us_symbol": null
+      }
+    ],
+    "field-sic": [
+      {
+        "name": "onsemi",
+        "ticker": "ON",
+        "us_symbol": "ON",
+        "note": "device lane cross-link; capacity already gold"
+      },
+      {
+        "name": "Navitas",
+        "ticker": "NVTS",
+        "us_symbol": "NVTS"
+      },
+      {
+        "name": "Monolithic Power",
+        "ticker": "MPWR",
+        "us_symbol": "MPWR"
+      }
+    ],
+    "field-sic-capacity": [
+      {
+        "name": "SICC",
+        "ticker": "2631.HK",
+        "us_symbol": null,
+        "note": "also SHA:688234"
+      },
+      {
+        "name": "Aixtron",
+        "ticker": "AIXXF",
+        "us_symbol": "AIXXF",
+        "note": "Xetra AIXA.DE"
+      },
+      {
+        "name": "PVA TePla",
+        "ticker": "TPE.DE",
+        "us_symbol": null
+      }
+    ]
+  },
+  "other_fixes": [
+    "ABB display ticker ABBNY on analysis/index.html; Fidelity ABBNY; not claiming NYSE",
+    "Siemens Energy display SMEGF / SMNEY with Fidelity SMEGF",
+    "Timeline/SST framing per NOTES \u00a73.5",
+    "Mark taxonomies independence footnote (A-147)",
+    "Button 'All company scorecards' (A-148)",
+    "Fidelity URL template standardized (A-149)",
+    "sic-burn-in.html Fidelity links AEHR/COHU/TER/ATEYY + Power Map link (A-151)"
+  ]
+}
