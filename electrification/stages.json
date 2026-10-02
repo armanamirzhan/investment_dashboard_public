@@ -16,7 +16,7 @@
         {
           "name": "GE Vernova",
           "ticker": "GEV",
-          "note": "Gas turbines, facility switchgear and transformers",
+          "note": "Gas turbines, facility switchgear and transformers; Prolec GE transformer JV — GEV agreed Oct 2025 to buy remaining 50% (~$5.28B briefing note)",
           "fidelity_symbol": "GEV"
         },
         {
@@ -30,6 +30,17 @@
           "note": "Large industrial gensets also used at utility / bridging sites",
           "ticker": "CAT",
           "fidelity_symbol": "CAT"
+        },
+        {
+          "name": "Doosan Enerbility",
+          "ticker": "034020.KS",
+          "note": "Korean heavy-duty gas-turbine OEM (also SMR forgings) — Korea listing; no US Fidelity line here"
+        },
+        {
+          "name": "Argan",
+          "ticker": "AGX",
+          "note": "Builds CCGT / gas power plants (Gemma Power Systems)",
+          "fidelity_symbol": "AGX"
         }
       ],
       "scarcity": "soon"
@@ -74,6 +85,29 @@
           "ticker": "RR.L / RYCEY",
           "note": "mtu Series 4000 diesel/gas gensets — common hyperscale backup platform",
           "fidelity_symbol": "RYCEY"
+        },
+        {
+          "name": "Wärtsilä",
+          "ticker": "WRT1V.HE / WRTBY",
+          "note": "Gas reciprocating-engine prime power for off-grid AI campuses (e.g. large Texas order in Apr 2026 baseline notes)",
+          "fidelity_symbol": "WRTBY"
+        },
+        {
+          "name": "Baker Hughes",
+          "ticker": "BKR",
+          "note": "NovaLT industrial / aeroderivative gas turbines for data-center packages",
+          "fidelity_symbol": "BKR"
+        },
+        {
+          "name": "Solaris Energy Infrastructure",
+          "ticker": "SEI",
+          "note": "Behind-the-meter mobile turbine fleet (e.g. xAI Colossus context in baseline notes)",
+          "fidelity_symbol": "SEI"
+        },
+        {
+          "name": "Doosan Enerbility",
+          "ticker": "034020.KS",
+          "note": "Heavy-duty GT OEM entrant while Western large-frame backlogs are tight — Korea listing; no US Fidelity line here"
         }
       ],
       "scarcity": "soon"
@@ -86,7 +120,7 @@
         {
           "name": "Bloom Energy",
           "ticker": "NYSE: BE",
-          "note": "~75–85% stationary SOFC share; ScSZ electrolyte path",
+          "note": "~75–85% stationary SOFC share; ScSZ electrolyte path; Sep 2026 Oracle Project Jupiter force-majeure reports — green mark kept with caveat (not advice)",
           "fidelity_symbol": "BE",
           "rating_mark": "strong"
         },
@@ -118,12 +152,18 @@
         {
           "name": "FuelCell Energy",
           "ticker": "NASDAQ: FCEL",
-          "note": "MCFC; Siemens data-center partnership context in baseline",
+          "note": "MCFC; exploratory Siemens collaboration (Jul 9, 2026 — confirm Siemens AG vs Energy); first data-center power agreement noted with Q3 FY26 results (Sep 2, 2026); FY26 revenue soft and securities investigations followed — briefing caveat, not advice",
           "fidelity_symbol": "FCEL"
         },
         {
           "name": "HyAxiom PureCell",
-          "note": "PAFC; private as of baseline—Nasdaq listing uncertain"
+          "note": "Doosan Group (ex-UTC Power, 2014) — PureCell PAFC; investable exposure mainly via Doosan Fuel Cell (336260.KS). Nasdaq listing claim unverified in Oct 2026 audit.",
+          "ticker": "via Doosan Fuel Cell 336260.KS"
+        },
+        {
+          "name": "Doosan Fuel Cell",
+          "ticker": "336260.KS",
+          "note": "Primarily phosphoric-acid fuel cells (PAFC); also SOFC-NG manufacturing — Korea listing; no US Fidelity line here"
         }
       ],
       "scarcity": null
@@ -136,7 +176,7 @@
         {
           "name": "GE Vernova",
           "ticker": "GEV",
-          "note": "Grid transformers and switchgear",
+          "note": "Grid transformers and switchgear; Prolec GE transformer JV — GEV agreed Oct 2025 to buy remaining 50% (~$5.28B briefing note)",
           "fidelity_symbol": "GEV"
         },
         {
@@ -156,19 +196,6 @@
           "demand_for": "Large power transformers, generator step-up units, and HVDC converter stations for AI campus interconnects",
           "why_critical": "Without substation-class Cu-Fe gear, interconnect and campus energization slip years even when GPUs and turbines are available",
           "why_there": "Hitachi Energy is in the small oligopoly for LPT/HVDC; Western AI-power narratives still lean GEV/ETN/VRT — own briefing notes ~2× sales and 'less so' priced in AI-delivery stories"
-        },
-        {
-          "name": "Schneider Electric",
-          "ticker": "SU.PA / SBGSY",
-          "note": "Facility and distribution transformers",
-          "fidelity_symbol": "SBGSY"
-        },
-        {
-          "name": "Eaton",
-          "ticker": "ETN",
-          "note": "Power distribution and transformer-adjacent gear",
-          "fidelity_symbol": "ETN",
-          "rating_mark": "strong"
         },
         {
           "name": "HD Hyundai Electric",
@@ -247,6 +274,17 @@
           "ticker": "PRY.MI / PRYMY",
           "note": "HV/EHV and HVDC cable; US building wire via Encore Wire — cable is a stated grid bottleneck",
           "fidelity_symbol": "PRYMY"
+        },
+        {
+          "name": "Nexans",
+          "ticker": "NEX.PA / NXPRF",
+          "note": "HV / HVDC cable — European cable oligopoly with Prysmian and NKT",
+          "fidelity_symbol": "NXPRF"
+        },
+        {
+          "name": "NKT",
+          "ticker": "NKT.CO",
+          "note": "HVDC cable specialist — European cable oligopoly"
         }
       ],
       "scarcity": null
@@ -323,6 +361,17 @@
           "ticker": "PRY.MI / PRYMY",
           "note": "HV/EHV and HVDC cable; US building wire via Encore Wire — cable is a stated grid bottleneck",
           "fidelity_symbol": "PRYMY"
+        },
+        {
+          "name": "Nexans",
+          "ticker": "NEX.PA / NXPRF",
+          "note": "HVDC cable systems",
+          "fidelity_symbol": "NXPRF"
+        },
+        {
+          "name": "NKT",
+          "ticker": "NKT.CO",
+          "note": "HVDC cable specialist"
         }
       ],
       "scarcity": null
@@ -431,6 +480,24 @@
           "ticker": "ON",
           "note": "Silicon carbide and power devices for high-voltage DC conversion; NVIDIA 800 VDC silicon partner",
           "fidelity_symbol": "ON"
+        },
+        {
+          "name": "Mitsubishi Electric",
+          "ticker": "6503.T / MIELY",
+          "note": "SiC power modules — chip-to-grid framing in company materials",
+          "fidelity_symbol": "MIELY"
+        },
+        {
+          "name": "ROHM",
+          "ticker": "6963.T / ROHCY",
+          "note": "SiC power devices for high-voltage DC conversion",
+          "fidelity_symbol": "ROHCY"
+        },
+        {
+          "name": "Navitas Semiconductor",
+          "ticker": "NVTS",
+          "note": "GaN/SiC 800 VDC specialist for AI data centers",
+          "fidelity_symbol": "NVTS"
         }
       ],
       "scarcity": null
@@ -495,6 +562,31 @@
           "why_critical": "Few vendors ship both perimeter SST and rack-adjacent 800 VDC conversion at production scale",
           "why_there": "TW-listed (2308.TW); Western AI-electrification tape often underweights non-US listings even when product is live",
           "rating_mark": "strong"
+        },
+        {
+          "name": "ABB",
+          "ticker": "ABBN.SW / ABBNY",
+          "note": "SACE Infinitus solid-state DC breaker — DC fault protection on 800 V busways",
+          "fidelity_symbol": "ABBNY",
+          "rating_mark": "strong"
+        },
+        {
+          "name": "Littelfuse",
+          "ticker": "LFUS",
+          "note": "DC fuses / protection and SiC-adjacent components for 800 VDC racks",
+          "fidelity_symbol": "LFUS"
+        },
+        {
+          "name": "TE Connectivity",
+          "ticker": "TEL",
+          "note": "High-current power connectors and busbar interconnects (Amphenol peer)",
+          "fidelity_symbol": "TEL"
+        },
+        {
+          "name": "Siemens AG",
+          "ticker": "SIE.DE / SIEGY",
+          "note": "Sivacon busway / low-voltage distribution for data halls",
+          "fidelity_symbol": "SIEGY"
         }
       ],
       "scarcity": "soon"
@@ -596,10 +688,9 @@
         },
         {
           "name": "Vicor",
-          "note": "High-density 800 V / ±400 V DC–DC power modules for AI racks",
+          "note": "High-density 800 V / ±400 V DC–DC power modules for AI racks — 2026 AI OEM licensing narrative already widely discussed; rainbow mark removed in Oct 2026 audit",
           "ticker": "VICR",
           "fidelity_symbol": "VICR",
-          "not_priced_in": true,
           "demand_detail": "When: As 800 VDC / ±400 V sidecar and native racks scale from ~2027 For what: High-density 800 V and ±400 V → 48/54 V modular DC–DC conversion inside AI racks Why critical: Facility-level 800 V only helps if rack modules efficiently step to intermediate buses without reclaiming the copper/thermal budget Why demand lands here: Smaller pure-play module vendor vs Vertiv/Delta systems names; 800 V demand narrative still early relative to megacap power OEMs",
           "demand_when": "As 800 VDC / ±400 V sidecar and native racks scale from ~2027",
           "demand_for": "High-density 800 V and ±400 V → 48/54 V modular DC–DC conversion inside AI racks",
@@ -639,6 +730,47 @@
           "why_critical": "Few vendors ship both perimeter SST and rack-adjacent 800 VDC conversion at production scale",
           "why_there": "TW-listed (2308.TW); Western AI-electrification tape often underweights non-US listings even when product is live",
           "rating_mark": "strong"
+        },
+        {
+          "name": "Renesas Electronics",
+          "ticker": "6723.T / RNECY",
+          "note": "Multiphase VR controllers / power stages; NVIDIA 800 VDC silicon partner",
+          "fidelity_symbol": "RNECY"
+        },
+        {
+          "name": "Analog Devices",
+          "ticker": "ADI",
+          "note": "Hot-swap / eFuse, multiphase controllers and power modules; NVIDIA 800 VDC partner",
+          "fidelity_symbol": "ADI"
+        },
+        {
+          "name": "ROHM",
+          "ticker": "6963.T / ROHCY",
+          "note": "SiC MOSFETs; NVIDIA 800 VDC silicon partner",
+          "fidelity_symbol": "ROHCY"
+        },
+        {
+          "name": "Innoscience",
+          "ticker": "2577.HK",
+          "note": "Large GaN power-device maker; NVIDIA 800 VDC collaborator — Hong Kong listing; no US Fidelity line here"
+        },
+        {
+          "name": "Navitas Semiconductor",
+          "ticker": "NVTS",
+          "note": "GaN/SiC 800 VDC specialist for AI data centers",
+          "fidelity_symbol": "NVTS"
+        },
+        {
+          "name": "Murata Manufacturing",
+          "ticker": "6981.T / MRAAY",
+          "note": "MLCCs and power inductors/modules for VR and 800 V conversion",
+          "fidelity_symbol": "MRAAY"
+        },
+        {
+          "name": "TDK Corporation",
+          "ticker": "6762.T / TTDKY",
+          "note": "Power inductors, magnetics and capacitors for rack/board power",
+          "fidelity_symbol": "TTDKY"
         }
       ],
       "scarcity": "soon"
@@ -693,6 +825,41 @@
           "ticker": "ON",
           "note": "Power-stage silicon adjacent to point-of-load regulation",
           "fidelity_symbol": "ON"
+        },
+        {
+          "name": "Renesas Electronics",
+          "ticker": "6723.T / RNECY",
+          "note": "Multiphase VR controllers / power stages; NVIDIA 800 VDC silicon partner",
+          "fidelity_symbol": "RNECY"
+        },
+        {
+          "name": "Analog Devices",
+          "ticker": "ADI",
+          "note": "Hot-swap / eFuse, multiphase controllers and power modules; NVIDIA 800 VDC partner",
+          "fidelity_symbol": "ADI"
+        },
+        {
+          "name": "Alpha and Omega Semiconductor",
+          "ticker": "AOSL",
+          "note": "DrMOS / smart power stages; 800 VDC product notes",
+          "fidelity_symbol": "AOSL"
+        },
+        {
+          "name": "Innoscience",
+          "ticker": "2577.HK",
+          "note": "Large GaN power-device maker; NVIDIA 800 VDC collaborator — Hong Kong listing; no US Fidelity line here"
+        },
+        {
+          "name": "Murata Manufacturing",
+          "ticker": "6981.T / MRAAY",
+          "note": "MLCCs and power inductors/modules for VR and 800 V conversion",
+          "fidelity_symbol": "MRAAY"
+        },
+        {
+          "name": "TDK Corporation",
+          "ticker": "6762.T / TTDKY",
+          "note": "Power inductors, magnetics and capacitors for rack/board power",
+          "fidelity_symbol": "TTDKY"
         }
       ],
       "scarcity": null
@@ -705,14 +872,14 @@
         {
           "name": "Bloom Energy",
           "ticker": "NYSE: BE",
-          "note": "SOFC systems fed by pipeline NG",
+          "note": "SOFC systems fed by pipeline NG; Sep 2026 Oracle Project Jupiter force-majeure reports — green mark kept with caveat (not advice)",
           "fidelity_symbol": "BE",
           "rating_mark": "strong"
         },
         {
           "name": "FuelCell Energy",
           "ticker": "NASDAQ: FCEL",
-          "note": "MCFC systems on NG / related fuels",
+          "note": "MCFC; exploratory Siemens collaboration (Jul 9, 2026 — confirm Siemens AG vs Energy); first data-center power agreement noted with Q3 FY26 results (Sep 2, 2026); FY26 revenue soft and securities investigations followed — briefing caveat, not advice",
           "fidelity_symbol": "FCEL"
         },
         {
@@ -720,6 +887,30 @@
           "ticker": "TSE: 7011",
           "note": "SOFC (MEGAMIE) and gas turbines using NG",
           "fidelity_symbol": "MHVYF"
+        },
+        {
+          "name": "Williams Companies",
+          "ticker": "WMB",
+          "note": "Midstream gas; behind-the-meter gas power for data centers in baseline notes",
+          "fidelity_symbol": "WMB"
+        },
+        {
+          "name": "Kinder Morgan",
+          "ticker": "KMI",
+          "note": "Natural gas pipeline midstream — site fuel delivery adjacency",
+          "fidelity_symbol": "KMI"
+        },
+        {
+          "name": "Energy Transfer",
+          "ticker": "ET",
+          "note": "Natural gas midstream / pipeline network",
+          "fidelity_symbol": "ET"
+        },
+        {
+          "name": "EQT Corporation",
+          "ticker": "EQT",
+          "note": "Natural gas producer — Appalachian supply context for BTM generation",
+          "fidelity_symbol": "EQT"
         }
       ],
       "scarcity": null
@@ -752,6 +943,12 @@
           "demand_for": "Large power transformers, generator step-up units, and HVDC converter stations for AI campus interconnects",
           "why_critical": "Without substation-class Cu-Fe gear, interconnect and campus energization slip years even when GPUs and turbines are available",
           "why_there": "Hitachi Energy is in the small oligopoly for LPT/HVDC; Western AI-power narratives still lean GEV/ETN/VRT — own briefing notes ~2× sales and 'less so' priced in AI-delivery stories"
+        },
+        {
+          "name": "Ormat Technologies",
+          "ticker": "ORA",
+          "note": "Geothermal — firm clean power pathway sometimes discussed for data-center PPAs",
+          "fidelity_symbol": "ORA"
         }
       ],
       "scarcity": null
@@ -770,7 +967,7 @@
         {
           "name": "Bloom Energy",
           "ticker": "NYSE: BE",
-          "note": "Also active in electrolyzer / H₂ adjacency in baseline notes",
+          "note": "Also active in electrolyzer / H₂ adjacency in baseline notes; Sep 2026 Oracle Project Jupiter force-majeure reports — green mark kept with caveat (not advice)",
           "fidelity_symbol": "BE",
           "rating_mark": "strong"
         },
@@ -896,7 +1093,7 @@
         {
           "name": "GE Vernova",
           "ticker": "GEV",
-          "note": "Facility / grid transformers",
+          "note": "Facility / grid transformers; Prolec GE transformer JV — GEV agreed Oct 2025 to buy remaining 50% (~$5.28B briefing note)",
           "fidelity_symbol": "GEV"
         },
         {
@@ -920,13 +1117,13 @@
         {
           "name": "Schneider Electric",
           "ticker": "SU.PA / SBGSY",
-          "note": "Facility and distribution transformers",
+          "note": "Facility and distribution transformers / switchgear (not GSU/LPT)",
           "fidelity_symbol": "SBGSY"
         },
         {
           "name": "Eaton",
           "ticker": "ETN",
-          "note": "Transformer-adjacent power gear",
+          "note": "Facility / distribution transformer-adjacent gear (not GSU/LPT)",
           "fidelity_symbol": "ETN",
           "rating_mark": "strong"
         },
@@ -956,6 +1153,17 @@
           "ticker": "CLF",
           "note": "Grain-oriented electrical steel (GOES) — core transformer steel input; often cited as the primary US GOES producer",
           "fidelity_symbol": "CLF"
+        },
+        {
+          "name": "Hammond Power Solutions",
+          "ticker": "HPS.A.TO",
+          "note": "Dry-type / distribution transformers for facilities — North American listing; verify US OTC before Fidelity link"
+        },
+        {
+          "name": "Mitsubishi Electric",
+          "ticker": "6503.T / MIELY",
+          "note": "Transformers and facility power equipment",
+          "fidelity_symbol": "MIELY"
         }
       ],
       "scarcity": "now"
@@ -993,7 +1201,7 @@
           "rating_mark": "strong"
         },
         {
-          "name": "Tesla (Megapack)",
+          "name": "Tesla Energy (Megapack)",
           "ticker": "TSLA",
           "note": "Grid-scale / campus battery energy storage (BESS); NVIDIA DSX Ready qualifies BESS vendors for AI factories in baseline notes",
           "fidelity_symbol": "TSLA"
@@ -1014,6 +1222,18 @@
           "ticker": "via 6501.T",
           "note": "BESS / grid storage systems alongside transformers and HVDC — NVIDIA DSX Ready BESS context in baseline notes",
           "fidelity_symbol": "HTHIY"
+        },
+        {
+          "name": "Mitsubishi Electric",
+          "ticker": "6503.T / MIELY",
+          "note": "UPS systems",
+          "fidelity_symbol": "MIELY"
+        },
+        {
+          "name": "EnerSys",
+          "ticker": "ENS",
+          "note": "UPS batteries and rack battery-backup units for data centers",
+          "fidelity_symbol": "ENS"
         }
       ],
       "scarcity": null
@@ -1192,6 +1412,18 @@
           "note": "MV switchgear and protection heritage",
           "fidelity_symbol": "ABBNY",
           "rating_mark": "strong"
+        },
+        {
+          "name": "Mitsubishi Electric",
+          "ticker": "6503.T / MIELY",
+          "note": "MV switchgear",
+          "fidelity_symbol": "MIELY"
+        },
+        {
+          "name": "Hitachi Energy",
+          "ticker": "via 6501.T",
+          "note": "Grid and facility switchgear / HV equipment",
+          "fidelity_symbol": "HTHIY"
         }
       ]
     },
@@ -1241,6 +1473,17 @@
         {
           "name": "CoolIT Systems",
           "note": "Direct liquid cooling — private as of baseline"
+        },
+        {
+          "name": "Schneider Electric",
+          "ticker": "SU.PA / SBGSY",
+          "note": "Motivair liquid-cooling (control acquired Oct 2024)",
+          "fidelity_symbol": "SBGSY"
+        },
+        {
+          "name": "LG Electronics",
+          "ticker": "066570.KS",
+          "note": "CDU vendor — NVIDIA DSX Ready (Sep 2026 baseline) — Korea listing; no US Fidelity line here"
         }
       ]
     },
@@ -1267,6 +1510,68 @@
           "ticker": "MYRG",
           "note": "Electrical transmission and distribution construction",
           "fidelity_symbol": "MYRG"
+        },
+        {
+          "name": "EMCOR Group",
+          "ticker": "EME",
+          "note": "Large US electrical/mechanical contractor for data centers",
+          "fidelity_symbol": "EME"
+        },
+        {
+          "name": "Comfort Systems USA",
+          "ticker": "FIX",
+          "note": "Data-center mechanical/electrical contractor; AI-campus backlog narrative",
+          "fidelity_symbol": "FIX"
+        },
+        {
+          "name": "Primoris Services",
+          "ticker": "PRIM",
+          "note": "Utility T&D, substation and power-plant EPC",
+          "fidelity_symbol": "PRIM"
+        },
+        {
+          "name": "Argan",
+          "ticker": "AGX",
+          "note": "Gas-fired power-plant EPC (Gemma Power Systems)",
+          "fidelity_symbol": "AGX"
+        }
+      ]
+    },
+    {
+      "id": "nuclear",
+      "title": "Nuclear & merchant generation (offsite)",
+      "summary": "Firm nuclear and large merchant generation offtake for AI load — Power Purchase Agreements with existing reactors and fleets, separate from onsite turbines or fuel cells. Cross-link uranium fuel and SMR OEM pages.",
+      "scarcity": null,
+      "companies": [
+        {
+          "name": "Constellation Energy",
+          "ticker": "CEG",
+          "note": "Merchant nuclear — e.g. Calvert Cliffs Amazon PPA (Sept 2026)",
+          "fidelity_symbol": "CEG"
+        },
+        {
+          "name": "Vistra",
+          "ticker": "VST",
+          "note": "Merchant generation / nuclear offtake for data-center load",
+          "fidelity_symbol": "VST"
+        },
+        {
+          "name": "Talen Energy",
+          "ticker": "TLN",
+          "note": "Merchant nuclear / campus offtake (e.g. Susquehanna context in baseline notes)",
+          "fidelity_symbol": "TLN"
+        },
+        {
+          "name": "NRG Energy",
+          "ticker": "NRG",
+          "note": "Texas/PJM IPP contracting data-center load",
+          "fidelity_symbol": "NRG"
+        },
+        {
+          "name": "AES Corporation",
+          "ticker": "AES",
+          "note": "IPP / renewables & storage with data-center energy contracts; pending GIP/EQT take-private (>$33B) under FERC/regulatory review in Oct 2026 baseline notes",
+          "fidelity_symbol": "AES"
         }
       ]
     }

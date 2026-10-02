@@ -76,7 +76,7 @@ Shared with Hardware and Semiconductor Fabrication.
 | Name | Ticker / Fidelity | When / for what (summary) |
 |------|-------------------|---------------------------|
 | Hitachi Energy | 6501.T → HTHIY | Now–2028 LPT/GSU/HVDC capacity; oligopoly role; own briefing noted ~2× sales / less AI-delivery narrative pricing |
-| Delta Electronics | 2308.TW (no verified US OTC for Fidelity) | H2 2026–2029 SST + 800 V in-row production; TW listing often underweighted in Western AI-power tape |
+| ~~Delta Electronics~~ | 2308.TW | **Moved to green** (Oct 2026 overlay) — production SST + 800 V shelves; no verified US OTC for Fidelity |
 | Vicor | VICR | 2027+ 800 V / ±400 V modular DC–DC inside racks; smaller pure-play vs megacap systems OEMs |
 
 **Rejected rainbow candidates (priced or thin evidence):** VRT, ETN, GEV, POWL, CEG/VST (merchant power is a different tape), Bloom (volatile / ScSZ story already well-told).
@@ -133,6 +133,29 @@ Not investment advice.
 - NextEra–Dominion restated as pending acquisition (NEE / D).
 - Utility/IPP tickers on §8.2; hop 1 names GEV + Siemens Energy as large-frame turbine OEMs.
 - Compact table A-007 column fix; multi-ticker cells split for A-006; static note for stages without hotspots (A-008).
+
+Not investment advice.
+
+## Mark sync (Oct 2, 2026 audit A-025 / A-026 / A-027)
+
+- **Green (`rating-strong`)** now includes Delta, Vertiv, Bloom (with Project Jupiter force-majeure caveat on Bloom), Eaton, ABB, Amphenol — per live `stages.json` / analysis overlay. Older “explicitly not green: VRT/BE” lines above are superseded.
+- **Rainbow (`not-priced-in`):** Infineon, STMicroelectronics, Hitachi Energy (via Hitachi Ltd HTHIY). **Vicor rainbow removed** after 2026 AI OEM licensing re-rating (~YTD move already in the tape).
+- Delta Fidelity still **2308.TW only** (no DELTY).
+
+Not investment advice.
+
+## Medium/low sweep (Oct 2, 2026)
+
+Stages + Power Map + uranium hub: nuclear/merchant stage; pipeline midstream; turbine BTM/reciprocal OEMs; LPT vs facility xfmr (Schneider/Eaton off ac-ac); cable Nexans/NKT; DC protection (Littelfuse, ABB SS breaker, TE); SiC silicon/passives (ROHM, Renesas, ADI, Navitas, Innoscience, Murata, TDK); cooling Motivair/LG; EPC EME/FIX/PRIM/AGX; uranium Western list + fuel-cycle + Centrus Sep 2026 note. Vicor rainbow cleared; Bloom Jupiter caveat.
+
+Not investment advice.
+
+## C-164 placement (Oct 2, 2026)
+
+Website builder seeded master JSON. Mapped on pages:
+- **AES** — nuclear/merchant hop + §8.2 (take-private caveat)
+- **Fluence** / **Tesla Energy (Megapack)** — UPS/BESS hop + stages
+- **TerraPower** / **Kairos Power** — `electrification/smr/` private-developer list with NRC/Meta/Google notes
 
 Not investment advice.
 
