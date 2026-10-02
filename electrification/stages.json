@@ -52,10 +52,28 @@
           "fidelity_symbol": "CAT"
         },
         {
+          "name": "Cummins",
+          "ticker": "CMI",
+          "note": "Backup and prime-power gensets for data centers; 2026 natural-gas prime-power and BESS awards in baseline notes",
+          "fidelity_symbol": "CMI"
+        },
+        {
           "name": "GE Vernova",
           "ticker": "GEV",
           "note": "Gas turbines and related power equipment",
           "fidelity_symbol": "GEV"
+        },
+        {
+          "name": "Generac Holdings",
+          "ticker": "GNRC",
+          "note": "Hyperscale backup gensets; Sep 2026 Amazon data-center supply agreement (~$2.4B initial deliveries 2027–28 in briefing notes)",
+          "fidelity_symbol": "GNRC"
+        },
+        {
+          "name": "Rolls-Royce (mtu Power Systems)",
+          "ticker": "RR.L / RYCEY",
+          "note": "mtu Series 4000 diesel/gas gensets — common hyperscale backup platform",
+          "fidelity_symbol": "RYCEY"
         }
       ],
       "scarcity": "soon"
@@ -74,8 +92,9 @@
         },
         {
           "name": "Ceres Power",
-          "ticker": "LSE: CWR",
-          "note": "SteelCell technology licenses (Doosan, Delta, Weichai)"
+          "ticker": "CWR.L / CPWHF",
+          "note": "SteelCell technology licenses (Doosan, Delta, Weichai)",
+          "fidelity_symbol": "CPWHF"
         },
         {
           "name": "Mitsubishi Heavy Industries",
@@ -85,8 +104,8 @@
         },
         {
           "name": "Doosan Fuel Cell",
-          "ticker": "KRX: 336260",
-          "note": "SOFC-NG manufacturing; capacity expansion notes in baseline"
+          "ticker": "336260.KS",
+          "note": "SOFC-NG manufacturing; capacity expansion notes in baseline — Korea listing; no US Fidelity line in this map"
         }
       ],
       "scarcity": "soon"
@@ -150,6 +169,22 @@
           "note": "Power distribution and transformer-adjacent gear",
           "fidelity_symbol": "ETN",
           "rating_mark": "strong"
+        },
+        {
+          "name": "HD Hyundai Electric",
+          "ticker": "267260.KS",
+          "note": "Large share of US ultra-high-voltage transformers; Alabama plant expansion (Mar 2026 baseline note) — Korea listing; no US Fidelity line here"
+        },
+        {
+          "name": "Hyosung Heavy Industries",
+          "ticker": "298040.KS",
+          "note": "Memphis plant — key US 765 kV large power transformer source — Korea listing; no US Fidelity line here"
+        },
+        {
+          "name": "Cleveland-Cliffs",
+          "ticker": "CLF",
+          "note": "Upstream GOES for grid/facility transformers (supply-chain bottleneck context)",
+          "fidelity_symbol": "CLF"
         }
       ],
       "scarcity": "now"
@@ -201,6 +236,12 @@
           "note": "T&D construction that lands HVAC corridors",
           "ticker": "PWR",
           "fidelity_symbol": "PWR"
+        },
+        {
+          "name": "Prysmian",
+          "ticker": "PRY.MI / PRYMY",
+          "note": "HV/EHV and HVDC cable; US building wire via Encore Wire — cable is a stated grid bottleneck",
+          "fidelity_symbol": "PRYMY"
         }
       ],
       "scarcity": null
@@ -233,13 +274,6 @@
           "ticker": "GEV",
           "note": "Grid conversion equipment",
           "fidelity_symbol": "GEV"
-        },
-        {
-          "name": "ABB",
-          "ticker": "ABB",
-          "note": "HV and conversion heritage",
-          "fidelity_symbol": "ABB",
-          "rating_mark": "strong"
         }
       ],
       "scarcity": null
@@ -274,17 +308,16 @@
           "fidelity_symbol": "GEV"
         },
         {
-          "name": "ABB",
-          "ticker": "ABB",
-          "note": "HVDC heritage; also SST (Infinitus)",
-          "fidelity_symbol": "ABB",
-          "rating_mark": "strong"
-        },
-        {
           "name": "Quanta Services",
           "note": "HV / interconnect construction adjacency",
           "ticker": "PWR",
           "fidelity_symbol": "PWR"
+        },
+        {
+          "name": "Prysmian",
+          "ticker": "PRY.MI / PRYMY",
+          "note": "HV/EHV and HVDC cable; US building wire via Encore Wire — cable is a stated grid bottleneck",
+          "fidelity_symbol": "PRYMY"
         }
       ],
       "scarcity": null
@@ -303,16 +336,15 @@
         },
         {
           "name": "ABB",
-          "ticker": "ABB",
+          "ticker": "ABBN.SW / ABBNY",
           "note": "Infinitus SST; rail heritage; large patent book",
-          "fidelity_symbol": "ABB",
+          "fidelity_symbol": "ABBNY",
           "rating_mark": "strong"
         },
         {
           "name": "Delta Electronics",
           "ticker": "2308.TW",
           "note": "Production SST in a North China AI data center (Feb 2026 baseline note)",
-          "fidelity_symbol": "DELTY",
           "demand_detail": "When: ~2026 H2 commercialization → 2027–2029 facility-wide 800 VDC and SST ramps For what: Production SST already in a North China AI DC; 800 VDC in-row power for Vera Rubin-class halls; SOFC-adjacent microgrids Why critical: Few vendors ship both perimeter SST and rack-adjacent 800 VDC conversion at production scale Why demand lands here: TW-listed (2308.TW); Western AI-electrification tape often underweights non-US listings even when product is live",
           "demand_when": "~2026 H2 commercialization → 2027–2029 facility-wide 800 VDC and SST ramps",
           "demand_for": "Production SST already in a North China AI DC; 800 VDC in-row power for Vera Rubin-class halls; SOFC-adjacent microgrids",
@@ -321,10 +353,10 @@
           "rating_mark": "strong"
         },
         {
-          "name": "Siemens Energy",
-          "ticker": "ENR.DE / SMNEY",
-          "note": "Reinhausen SST partnership (Aug 2026)—not fully commercial in baseline",
-          "fidelity_symbol": "SMNEY"
+          "name": "Siemens AG",
+          "ticker": "SIE.DE / SIEGY",
+          "note": "Smart Infrastructure — Reinhausen SST partnership (Aug 2026); not fully commercial in baseline",
+          "fidelity_symbol": "SIEGY"
         },
         {
           "name": "Schneider Electric",
@@ -388,6 +420,12 @@
           "note": "Data-center DC power architectures",
           "fidelity_symbol": "VRT",
           "rating_mark": "strong"
+        },
+        {
+          "name": "onsemi",
+          "ticker": "ON",
+          "note": "Silicon carbide and power devices for high-voltage DC conversion; NVIDIA 800 VDC silicon partner",
+          "fidelity_symbol": "ON"
         }
       ],
       "scarcity": null
@@ -435,6 +473,23 @@
           "note": "Electrical infrastructure adjacent to hall distribution",
           "ticker": "HUBB",
           "fidelity_symbol": "HUBB"
+        },
+        {
+          "name": "Legrand",
+          "ticker": "LR.PA / LGRDY",
+          "note": "Starline busway; Raritan / Server Technology PDUs — white-space power distribution",
+          "fidelity_symbol": "LGRDY"
+        },
+        {
+          "name": "Delta Electronics",
+          "ticker": "2308.TW",
+          "note": "In-row / bus-adjacent 800 VDC power distribution for AI halls",
+          "demand_detail": "When: ~2026 H2 commercialization → 2027–2029 facility-wide 800 VDC and SST ramps For what: Production SST already in a North China AI DC; 800 VDC in-row power for Vera Rubin-class halls; SOFC-adjacent microgrids Why critical: Few vendors ship both perimeter SST and rack-adjacent 800 VDC conversion at production scale Why demand lands here: TW-listed (2308.TW); Western AI-electrification tape often underweights non-US listings even when product is live",
+          "demand_when": "~2026 H2 commercialization → 2027–2029 facility-wide 800 VDC and SST ramps",
+          "demand_for": "Production SST already in a North China AI DC; 800 VDC in-row power for Vera Rubin-class halls; SOFC-adjacent microgrids",
+          "why_critical": "Few vendors ship both perimeter SST and rack-adjacent 800 VDC conversion at production scale",
+          "why_there": "TW-listed (2308.TW); Western AI-electrification tape often underweights non-US listings even when product is live",
+          "rating_mark": "strong"
         }
       ],
       "scarcity": "soon"
@@ -557,6 +612,28 @@
           "note": "High-efficiency power conversion systems for compute/industrial",
           "ticker": "AEIS",
           "fidelity_symbol": "AEIS"
+        },
+        {
+          "name": "Lite-On Technology",
+          "ticker": "2301.TW",
+          "note": "AI-server power supplies / power shelves; named NVIDIA 800 VDC power-system partner — Taiwan listing; no verified US Fidelity line here"
+        },
+        {
+          "name": "onsemi",
+          "ticker": "ON",
+          "note": "SiC / power devices in rack and shelf conversion stages",
+          "fidelity_symbol": "ON"
+        },
+        {
+          "name": "Delta Electronics",
+          "ticker": "2308.TW",
+          "note": "800 VDC power shelves and in-row racks; NVIDIA 800 VDC power-system partner",
+          "demand_detail": "When: ~2026 H2 commercialization → 2027–2029 facility-wide 800 VDC and SST ramps For what: Production SST already in a North China AI DC; 800 VDC in-row power for Vera Rubin-class halls; SOFC-adjacent microgrids Why critical: Few vendors ship both perimeter SST and rack-adjacent 800 VDC conversion at production scale Why demand lands here: TW-listed (2308.TW); Western AI-electrification tape often underweights non-US listings even when product is live",
+          "demand_when": "~2026 H2 commercialization → 2027–2029 facility-wide 800 VDC and SST ramps",
+          "demand_for": "Production SST already in a North China AI DC; 800 VDC in-row power for Vera Rubin-class halls; SOFC-adjacent microgrids",
+          "why_critical": "Few vendors ship both perimeter SST and rack-adjacent 800 VDC conversion at production scale",
+          "why_there": "TW-listed (2308.TW); Western AI-electrification tape often underweights non-US listings even when product is live",
+          "rating_mark": "strong"
         }
       ],
       "scarcity": "soon"
@@ -605,6 +682,12 @@
           "note": "Multiphase / point-of-load power ICs widely used on AI boards",
           "ticker": "MPWR",
           "fidelity_symbol": "MPWR"
+        },
+        {
+          "name": "onsemi",
+          "ticker": "ON",
+          "note": "Power-stage silicon adjacent to point-of-load regulation",
+          "fidelity_symbol": "ON"
         }
       ],
       "scarcity": null
@@ -688,8 +771,9 @@
         },
         {
           "name": "Ceres Power",
-          "ticker": "LSE: CWR",
-          "note": "SOFC tech; H₂-related licensing context"
+          "ticker": "CWR.L / CPWHF",
+          "note": "SOFC tech; H₂-related licensing context",
+          "fidelity_symbol": "CPWHF"
         }
       ],
       "scarcity": null
@@ -846,6 +930,22 @@
           "note": "Custom distribution gear paired with transformer yards",
           "ticker": "POWL",
           "fidelity_symbol": "POWL"
+        },
+        {
+          "name": "HD Hyundai Electric",
+          "ticker": "267260.KS",
+          "note": "Large share of US ultra-high-voltage transformers; Alabama plant expansion (Mar 2026 baseline note) — Korea listing; no US Fidelity line here"
+        },
+        {
+          "name": "Hyosung Heavy Industries",
+          "ticker": "298040.KS",
+          "note": "Memphis plant — key US 765 kV large power transformer source — Korea listing; no US Fidelity line here"
+        },
+        {
+          "name": "Cleveland-Cliffs",
+          "ticker": "CLF",
+          "note": "Grain-oriented electrical steel (GOES) — core transformer steel input; often cited as the primary US GOES producer",
+          "fidelity_symbol": "CLF"
         }
       ],
       "scarcity": "now"
@@ -877,10 +977,28 @@
         },
         {
           "name": "ABB",
-          "ticker": "ABB",
+          "ticker": "ABBN.SW / ABBNY",
           "note": "UPS and power protection heritage",
-          "fidelity_symbol": "ABB",
+          "fidelity_symbol": "ABBNY",
           "rating_mark": "strong"
+        },
+        {
+          "name": "Tesla (Megapack)",
+          "ticker": "TSLA",
+          "note": "Grid-scale / campus battery energy storage (BESS); NVIDIA DSX Ready qualifies BESS vendors for AI factories in baseline notes",
+          "fidelity_symbol": "TSLA"
+        },
+        {
+          "name": "Fluence",
+          "ticker": "FLNC",
+          "note": "Utility- and campus-scale BESS systems (battery storage / backup energy)",
+          "fidelity_symbol": "FLNC"
+        },
+        {
+          "name": "Hitachi Energy",
+          "ticker": "via 6501.T",
+          "note": "BESS / grid storage systems alongside transformers and HVDC — NVIDIA DSX Ready BESS context in baseline notes",
+          "fidelity_symbol": "HTHIY"
         }
       ],
       "scarcity": null
@@ -929,7 +1047,6 @@
           "name": "Delta Electronics",
           "ticker": "2308.TW",
           "note": "Server / data-center power supplies",
-          "fidelity_symbol": "DELTY",
           "demand_detail": "When: ~2026 H2 commercialization → 2027–2029 facility-wide 800 VDC and SST ramps For what: Production SST already in a North China AI DC; 800 VDC in-row power for Vera Rubin-class halls; SOFC-adjacent microgrids Why critical: Few vendors ship both perimeter SST and rack-adjacent 800 VDC conversion at production scale Why demand lands here: TW-listed (2308.TW); Western AI-electrification tape often underweights non-US listings even when product is live",
           "demand_when": "~2026 H2 commercialization → 2027–2029 facility-wide 800 VDC and SST ramps",
           "demand_for": "Production SST already in a North China AI DC; 800 VDC in-row power for Vera Rubin-class halls; SOFC-adjacent microgrids",
@@ -968,6 +1085,11 @@
           "note": "Power modules / PSU adjacency for cloud and AI racks",
           "ticker": "FLEX",
           "fidelity_symbol": "FLEX"
+        },
+        {
+          "name": "Lite-On Technology",
+          "ticker": "2301.TW",
+          "note": "AI-server power supplies / power shelves; named NVIDIA 800 VDC power-system partner — Taiwan listing; no verified US Fidelity line here"
         }
       ],
       "scarcity": null
@@ -1032,6 +1154,12 @@
           "fidelity_symbol": "SBGSY"
         },
         {
+          "name": "Siemens AG",
+          "ticker": "SIE.DE / SIEGY",
+          "note": "Smart Infrastructure — MV/LV distribution switchgear and busway (facility side)",
+          "fidelity_symbol": "SIEGY"
+        },
+        {
           "name": "GE Vernova",
           "ticker": "GEV",
           "note": "Electrification segment — transformers and switchgear for data centers",
@@ -1040,14 +1168,14 @@
         {
           "name": "Siemens Energy",
           "ticker": "ENR.DE / SMNEY",
-          "note": "Grid and facility switchgear / T&D gear",
+          "note": "High-voltage transmission switchgear / T&D gear (grid side)",
           "fidelity_symbol": "SMNEY"
         },
         {
           "name": "ABB",
-          "ticker": "ABB",
+          "ticker": "ABBN.SW / ABBNY",
           "note": "MV switchgear and protection heritage",
-          "fidelity_symbol": "ABB",
+          "fidelity_symbol": "ABBNY",
           "rating_mark": "strong"
         }
       ]

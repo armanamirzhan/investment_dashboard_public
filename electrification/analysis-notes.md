@@ -76,7 +76,7 @@ Shared with Hardware and Semiconductor Fabrication.
 | Name | Ticker / Fidelity | When / for what (summary) |
 |------|-------------------|---------------------------|
 | Hitachi Energy | 6501.T → HTHIY | Now–2028 LPT/GSU/HVDC capacity; oligopoly role; own briefing noted ~2× sales / less AI-delivery narrative pricing |
-| Delta Electronics | 2308.TW → DELTY | H2 2026–2029 SST + 800 V in-row production; TW listing often underweighted in Western AI-power tape |
+| Delta Electronics | 2308.TW (no verified US OTC for Fidelity) | H2 2026–2029 SST + 800 V in-row production; TW listing often underweighted in Western AI-power tape |
 | Vicor | VICR | 2027+ 800 V / ±400 V modular DC–DC inside racks; smaller pure-play vs megacap systems OEMs |
 
 **Rejected rainbow candidates (priced or thin evidence):** VRT, ETN, GEV, POWL, CEG/VST (merchant power is a different tape), Bloom (volatile / ScSZ story already well-told).
@@ -99,9 +99,9 @@ Shared with Hardware and Semiconductor Fabrication.
 
 ### Still thin / watch
 
-- Exact US Fidelity symbols for some foreign listings (DELTY / HTHIY / MHVYF best-effort)  
+- Exact US Fidelity symbols for some foreign listings (HTHIY / MHVYF best-effort; DELTY dropped — unverified)  
 - DC busway arc-interruption product maturity (industry still early)  
-- BESS / DC UPS coupling economics on 800 V backbones (OCP mentions; company map light)  
+- BESS / DC UPS coupling economics on 800 V backbones (Tesla Megapack / Fluence / Hitachi Energy added to UPS stage Oct 2026 audit)  
 - Whether sidecar volume in 2027 is constrained by power semiconductors (Semi Fab) or by systems OEMs (here)
 
 ## Sources consulted (non-exhaustive)
@@ -111,3 +111,17 @@ Shared with Hardware and Semiconductor Fabrication.
 - Vertiv practical path to 800 VDC (sidecar → 2028–29 facility)  
 - Trade press on LPT/GSU/switchgear lead times and OEM backlogs (2026)  
 - Prior hub September 2026 electrification baseline (extended, not discarded)
+
+## Claude audit batch (Oct 2, 2026)
+
+Closed high-priority coverage-gaps on Power Map + uranium Cameco (folder-only; shared `data/` left to Website builder):
+
+- **Tickers:** ABB → ABBN.SW / ABBNY (Fidelity ABBNY); Delta Fidelity DELTY removed (keep 2308.TW unlinked); Ceres → CWR.L / CPWHF; Doosan Fuel Cell stays 336260.KS unlinked.
+- **Facts:** ABB removed from ac-dc/hvdc (Hitachi Energy owns former Power Grids HVDC); Reinhausen SST attributed to **Siemens AG** (SIE.DE / SIEGY), not Siemens Energy.
+- **Adds:** Cummins, Generac, Rolls-Royce (mtu); HD Hyundai Electric, Hyosung Heavy, Cleveland-Cliffs (GOES); Prysmian; Legrand; Lite-On; onsemi; Tesla Megapack / Fluence / Hitachi Energy on UPS/BESS hop.
+- **Cameco:** 49% Westinghouse + 49% GLE called out on `uranium/cameco.html` (+ hub blurb).
+- **Layout:** company tables wrapped in `overflow-x:auto` for phone width.
+- **Skipped:** A-154 Schneider SNEXF in shared `data/*` (Website builder).
+
+Not investment advice.
+

@@ -302,9 +302,17 @@
       else if (mark === "not-priced-in" || mark === "rainbow") cls += " not-priced-in";
     }
     var sym = fidelity || null;
+    // Only invent a Fidelity symbol from a bare US-style ticker (no exchange prefix, no dots).
+    // "LSE: CWR" / "KRX: 336260" / "2308.TW" must stay unlinked unless fidelity_symbol is set.
     if (!sym && displayTicker) {
-      var m = String(displayTicker).match(/[A-Z]{1,5}(?![A-Z])/i);
-      if (m) sym = m[0].toUpperCase();
+      var raw = String(displayTicker).trim();
+      if (!/^(NYSE|NASDAQ|LSE|TSE|KRX|TWSE|HKEX)\s*:/i.test(raw) && raw.indexOf(".") === -1) {
+        var parts = raw.split(/[\/·|,]/);
+        for (var i = 0; i < parts.length; i++) {
+          var p = parts[i].replace(/NYSE:|NASDAQ:|LSE:|TSE:|KRX:|via/gi, "").trim();
+          if (/^[A-Z]{1,5}$/i.test(p)) { sym = p.toUpperCase(); break; }
+        }
+      }
     }
     if (sym) {
       return '<a class="' + cls + '" href="' + esc(fidelityUrl(sym)) +
@@ -449,18 +457,24 @@
           var p = parts[i].replace(/NYSE:|NASDAQ:|LSE:|TSE:|KRX:|via/gi, "").trim();
           if (/^[A-Z]{1,5}$/i.test(p)) { fid = p.toUpperCase(); url = fidelityUrl(fid); break; }
         }
+        if (!url && /SIEGY/i.test(text)) { fid = "SIEGY"; url = fidelityUrl(fid); }
         if (!url && /SMNEY/i.test(text)) { fid = "SMNEY"; url = fidelityUrl(fid); }
+        if (!url && /CPWHF/i.test(text)) { fid = "CPWHF"; url = fidelityUrl(fid); }
+        if (!url && /PRYMY/i.test(text)) { fid = "PRYMY"; url = fidelityUrl(fid); }
+        if (!url && /LGRDY/i.test(text)) { fid = "LGRDY"; url = fidelityUrl(fid); }
+        if (!url && /RYCEY/i.test(text)) { fid = "RYCEY"; url = fidelityUrl(fid); }
         if (!url && /SBGSY/i.test(text)) { fid = "SBGSY"; url = fidelityUrl(fid); }
         if (!url && /IFNNY/i.test(text)) { fid = "IFNNY"; url = fidelityUrl(fid); }
         if (!url && /\bGEV\b/i.test(text)) { fid = "GEV"; url = fidelityUrl(fid); }
         if (!url && /\bETN\b/i.test(text)) { fid = "ETN"; url = fidelityUrl(fid); }
         if (!url && /\bVRT\b/i.test(text)) { fid = "VRT"; url = fidelityUrl(fid); }
         if (!url && /\bAPH\b/i.test(text)) { fid = "APH"; url = fidelityUrl(fid); }
-        if (!url && /\bABB\b/i.test(text)) { fid = "ABB"; url = fidelityUrl(fid); }
+        if (!url && /\bABBNY\b/i.test(text)) { fid = "ABBNY"; url = fidelityUrl(fid); }
+        if (!url && /\bABB\b/i.test(text) && !/ABBN\.SW/i.test(text)) { fid = "ABBNY"; url = fidelityUrl(fid); }
         if (!url && /\bVICR\b/i.test(text)) { fid = "VICR"; url = fidelityUrl(fid); }
         if (!url && /\bPWR\b/i.test(text)) { fid = "PWR"; url = fidelityUrl(fid); }
         if (!url && /6501/i.test(text)) { fid = "HTHIY"; url = fidelityUrl(fid); }
-        if (!url && /2308/i.test(text)) { fid = "DELTY"; url = fidelityUrl(fid); }
+        /* 2308.TW = Delta Taiwan — no verified US OTC (DELTY) for Fidelity; leave unlinked */
       }
       el.setAttribute("data-tax-enhanced", "1");
       if (url) {
