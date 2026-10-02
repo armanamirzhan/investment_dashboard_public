@@ -74,6 +74,7 @@
     }
     .tag.buy, .tag.accumulate { background: rgba(52,168,83,.15); color: var(--accent-green); }
     .tag.hold { background: rgba(249,171,0,.12); color: var(--accent-orange); }
+    .tag.avoid { background: rgba(220,70,70,.15); color: #ff8a8a; }
     .tag.goldmark { background: rgba(240,208,96,.15); color: #f0d060; }
     .tag.rainbowmark {
       background: rgba(199,125,255,.12); color: #c77dff;
@@ -152,7 +153,7 @@
       <p>Private startups exist in this stack, but this page only tracks <strong>publicly traded</strong> names (or investable depositary receipts) you can buy in a normal brokerage account.</p>
     </section>
 
-    <p class="legend"><strong class="gold">Gold:</strong> Delta Electronics · Vertiv · Eaton · Bloom Energy &nbsp;|&nbsp; <strong>Rainbow:</strong> Infineon · STMicroelectronics — gold = top setups on this list; rainbow = demand that may still be early in the share price.</p>
+    <p class="legend"><strong class="gold">Gold:</strong> Delta Electronics · Vertiv · Eaton · Bloom Energy &nbsp;|&nbsp; <strong class="gold">Gold (SiC capacity):</strong> onsemi · Coherent &nbsp;|&nbsp; <strong>Rainbow:</strong> Infineon · STMicroelectronics — gold = top setups on this list or within the named theme; rainbow = demand that may still be early in the share price.</p>
 
     <section class="card" id="field-sst">
       <h2>Solid-state transformers</h2>
@@ -236,65 +237,66 @@
     <section class="card" id="field-sic-capacity">
       <h2>Silicon carbide capacity (wafers &amp; fabs)</h2>
       <p>Before a <a href="https://en.wikipedia.org/wiki/Silicon_carbide">silicon carbide (SiC)</a> MOSFET ships, someone has to grow a crystal (boule), slice and polish a <a href="https://en.wikipedia.org/wiki/Wafer_(electronics)">wafer</a>, grow an <a href="https://en.wikipedia.org/wiki/Epitaxy">epitaxial</a> layer, and run device <a href="https://en.wikipedia.org/wiki/Semiconductor_fabrication">fabrication</a> at useful yield — often migrating from 150&nbsp;mm toward 200&nbsp;mm. That throughput is the capacity story: how many wafers and finished power dies the industry can actually make for EV, industrial, and AI-power converters.</p>
-      <p><strong>Three SiC lanes on this hub:</strong> <a href="#field-sic">devices</a> (Infineon / ST design wins) · <strong>this field</strong> (substrates, epi, captive fabs) · <a href="sic-burn-in.html">burn-in equipment</a> (AEHR / Cohu). Names below are a research shortlist only — no gold / rainbow / stance tags until Performance tracker scores them.</p>
+      <p><strong>Three SiC lanes on this hub:</strong> <a href="#field-sic">devices</a> (Infineon / ST design wins) · <strong>this field</strong> (substrates, epi, captive fabs) · <a href="sic-burn-in.html">burn-in equipment</a> (AEHR / Cohu). Performance tracker scores are live for this six-name capacity shortlist; gold marks the two top capacity setups this pass, and there is no rainbow call.</p>
       <ul class="co-list">
-        <li id="wolfspeed">
-          <details class="co">
-            <summary><span class="name">Wolfspeed</span> <span class="ticker">WOLF</span></summary>
+        <li id="onsemi">
+          <details class="co gold">
+            <summary><span class="name">onsemi</span> <span class="ticker">ON</span> <span class="tag accumulate">Accumulate</span> <span class="tag goldmark">Gold</span></summary>
             <div class="body">
-              <p>Vertically integrated SiC materials plus the Mohawk Valley 200&nbsp;mm device fab and the John Palmour materials center — the clearest U.S. “more wafers / more fab starts” pure-play. Belongs under capacity (substrate + fab throughput), not the device-design-win field. Caveat: emerged from Chapter&nbsp;11 in Sep&nbsp;2025 with fresh-start accounting, Renesas equity, and covenant / dilution overhang — still listed on the NYSE as WOLF after reorganization.</p>
-              <p>Scorecard pending — Performance tracker. <a href="https://investor.wolfspeed.com/">Company IR →</a> · <a href="https://www.fidelity.com/research/quote/summary?symbol=WOLF">Fidelity quote →</a></p>
+              <p>onsemi's SiC angle here is captive capacity — growing crystals in Hudson, NH and pushing a full-chain 200&nbsp;mm hub in the Czech Republic — so auto and industrial customers get supply assurance without betting on a distressed materials pure-play. Finished MOSFETs matter commercially, but this field scores the fab/materials footprint.</p>
+              <p><a href="companies/onsemi.html">Open one-screen scorecard →</a> · <a href="https://investor.onsemi.com/">Company IR →</a> · <a href="https://www.fidelity.com/research/quote/summary?symbol=ON">Fidelity quote →</a></p>
             </div>
           </details>
         </li>
         <li id="coherent">
-          <details class="co">
-            <summary><span class="name">Coherent</span> <span class="ticker">COHR</span></summary>
+          <details class="co gold">
+            <summary><span class="name">Coherent</span> <span class="ticker">COHR</span> <span class="tag accumulate">Accumulate</span> <span class="tag goldmark">Gold</span></summary>
             <div class="body">
-              <p>Merchant SiC substrates and epitaxial wafers (including 200&nbsp;mm epi shipments). Capacity / materials exposure without competing as a power-device brand — fits this field, not Infineon/STM-style design wins. Caveat: lasers, networking, and other materials dilute pure SiC torque; wafer demand still swings with EV cycles even as AI power adds a new pull.</p>
-              <p>Scorecard pending — Performance tracker. <a href="https://www.coherent.com/company/investor-relations">Company IR →</a> · <a href="https://www.fidelity.com/research/quote/summary?symbol=COHR">Fidelity quote →</a></p>
-            </div>
-          </details>
-        </li>
-        <li id="onsemi">
-          <details class="co">
-            <summary><span class="name">onsemi</span> <span class="ticker">ON</span></summary>
-            <div class="body">
-              <p>Captive end-to-end SiC: boule growth (e.g. Hudson, NH), epi, and device fabs — investment story often framed as securing wafer/fab capacity for auto, industrial, and AI power. Listed here for capacity scale, not as a substitute for the Infineon/STM device cards. Caveat: also sells finished devices (cross-theme); Czech 200&nbsp;mm expansion timing has faced incentive / strategy uncertainty after the 2024–2025 announcements.</p>
-              <p>Scorecard pending — Performance tracker. <a href="https://investor.onsemi.com/">Company IR →</a> · <a href="https://www.fidelity.com/research/quote/summary?symbol=ON">Fidelity quote →</a></p>
+              <p>Coherent sells merchant SiC epitaxial wafers — including 200&nbsp;mm — so device makers can ramp without owning crystal growth. Thick epi aimed at multi-kilovolt AI-datacenter and industrial power is a capacity differentiator, but lasers and optical networking still dilute how pure the equity is to SiC wafers.</p>
+              <p><a href="companies/coherent.html">Open one-screen scorecard →</a> · <a href="https://www.coherent.com/company/investor-relations">Company IR →</a> · <a href="https://www.fidelity.com/research/quote/summary?symbol=COHR">Fidelity quote →</a></p>
             </div>
           </details>
         </li>
         <li id="resonac">
           <details class="co">
-            <summary><span class="name">Resonac</span> <span class="ticker">SHWDY</span></summary>
+            <summary><span class="name">Resonac</span> <span class="ticker">SHWDY</span> <span class="tag accumulate">Accumulate</span></summary>
             <div class="body">
-              <p>Independent SiC epitaxial-wafer specialist (Tokyo 4004; OTC ADR SHWDY) — sells epi capacity to device makers rather than finished MOSFETs. Clear capacity/materials role. Caveat: conglomerate chemicals mix; 200&nbsp;mm ramp and China substrate competition matter; ADR liquidity is thinner than NYSE names.</p>
-              <p>Scorecard pending — Performance tracker. <a href="https://www.resonac.com/corporate/ir.html">Company IR →</a></p>
+              <p>Resonac is a merchant SiC epi specialist — it does not sell MOSFETs — so device makers buy wafers without competing with their supplier. Capacity expansion at Yamagata and 200&nbsp;mm qualification are the core story; a September 2026 300&nbsp;mm substrate demo is R&amp;D optionality, not revenue yet.</p>
+              <p><a href="companies/resonac.html">Open one-screen scorecard →</a> · <a href="https://www.resonac.com/corporate/ir.html">Company IR →</a></p>
             </div>
           </details>
         </li>
         <li id="rohm">
           <details class="co">
-            <summary><span class="name">ROHM</span> <span class="ticker">ROHCY</span></summary>
+            <summary><span class="name">ROHM</span> <span class="ticker">ROHCY</span> <span class="tag hold">Hold</span></summary>
             <div class="body">
-              <p>Owns SiCrystal (SiC substrates) plus captive SiC device fabs in Japan — vertical capacity from crystal to chip (Tokyo 6963; OTC ADR ROHCY). Belongs under capacity for the substrate + fab footprint; device content overlaps the Infineon/STM lane conceptually but is not scored there yet. Caveat: EV SiC demand softness can idle capacity; Japan ADR liquidity and conglomerate mix.</p>
-              <p>Scorecard pending — Performance tracker. <a href="https://www.rohm.com/investor-relations">Company IR →</a></p>
+              <p>ROHM owns SiCrystal substrate capacity plus captive SiC fabs — a vertical materials-to-device stack — but the investment question for this field is whether EV softness and the FY2025 impairment strand that capacity below plan. External substrate sales were cut as 6-inch oversupply hit; internal 8-inch is the recovery path.</p>
+              <p><a href="companies/rohm.html">Open one-screen scorecard →</a> · <a href="https://www.rohm.com/investor-relations">Company IR →</a></p>
             </div>
           </details>
         </li>
         <li id="disco">
           <details class="co">
-            <summary><span class="name">DISCO</span> <span class="ticker">6146.T</span></summary>
+            <summary><span class="name">DISCO</span> <span class="ticker">6146.T</span> <span class="tag hold">Hold</span></summary>
             <div class="body">
-              <p>Specialty wafering equipment — dicing, grinding, polishing — including hard SiC substrates that standard silicon tools struggle with. Capacity-enabling picks-and-shovels (Tokyo 6146), not burn-in (see <a href="sic-burn-in.html">AEHR / Cohu</a>) and not devices. Caveat: broad semi-equipment cycle; SiC is a growth slice, not the whole P&amp;L.</p>
-              <p>Scorecard pending — Performance tracker. <a href="https://www.disco.co.jp/eg/ir/">Company IR →</a></p>
+              <p>DISCO sells dicing, grinding, and polishing tools that turn SiC boules into usable wafers — a capacity enabler, not a device or burn-in name. SiC attach share is strong, but recent profit records are AI/HBM-led; treat SiC as a call option on wafer-diameter transitions, not the core equity thesis.</p>
+              <p><a href="companies/disco.html">Open one-screen scorecard →</a> · <a href="https://www.disco.co.jp/eg/ir/">Company IR →</a></p>
+            </div>
+          </details>
+        </li>
+        <li id="wolfspeed">
+          <details class="co">
+            <summary><span class="name">Wolfspeed</span> <span class="ticker">WOLF</span> <span class="tag avoid">Avoid</span></summary>
+            <div class="body">
+              <p>Wolfspeed is the clearest U.S. silicon carbide capacity story — boule/substrate into the Mohawk Valley 200&nbsp;mm fab — but Chapter&nbsp;11 emergence in September 2025, fresh-start accounting, Renesas equity, and still-low fab utilization mean the balance sheet and fill rate dominate the capacity thesis for now.</p>
+              <p><a href="companies/wolfspeed.html">Open one-screen scorecard →</a> · <a href="https://investor.wolfspeed.com/">Company IR →</a> · <a href="https://www.fidelity.com/research/quote/summary?symbol=WOLF">Fidelity quote →</a></p>
             </div>
           </details>
         </li>
       </ul>
       <p style="margin-top:10px;font-size:0.88rem;">Cross-links only (already on <a href="#field-sic">devices</a>): Infineon (IFNNY) and STMicroelectronics (STM) also build captive SiC fab capacity — tracked there for design-win content, not rescored here. Avoided private-only substrate houses (e.g. SK Siltron CSS).</p>
     </section>
+
 
     <section class="card" id="field-rack">
       <h2>Rack and row power</h2>
