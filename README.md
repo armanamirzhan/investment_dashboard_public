@@ -19,6 +19,8 @@ A clean, public-facing static site for thematic investment sections:
 | `software/` | AI software landscape |
 | `semiconductors/` | Semiconductor fabrication chain |
 | `hyperscalers/` | Hyperscaler / GPU-cloud / colo buildout |
+| `analysis/` | Portfolio briefings / investment analysis (electrification focus) |
+| `analysis/companies/` | One-screen company scorecards (performance tracker) |
 | `claude-summary/` | Claude Investment Summary: power and interconnect analysis with picks, consensus and targets; site coverage audit (notes for bots in `claude-summary/NOTES_FOR_GROK.md`) |
 | `digests/` | Morning briefs and digests index |
 | `smr/`, `uranium/`, `photonics/` | Redirect stubs (legacy bookmarks) |
@@ -29,7 +31,7 @@ This is **not** a clone of the private `Investment_Dashboard`. High-value compan
 
 ## Ownership
 
-See [OWNERS.md](OWNERS.md). In short:
+See [OWNERS.md](https://github.com/armanamirzhan/investment_dashboard_public/blob/main/OWNERS.md) (GitHub-rendered view preferred on Pages). In short:
 
 - **Website builder** owns hub shell: `index.html`, `assets/`, `README.md`, `OWNERS.md`, redirect stubs, and cross-cutting `data/` conventions.
 - **Section bots** own their folders (`electrification/`, `electrification/smr/`, `electrification/uranium/`, `hardware/`, `hardware/photonics/`, `software/`, `semiconductors/`, `hyperscalers/`, `digests/`) and may extend section-specific data under `data/` with clear prefixes.

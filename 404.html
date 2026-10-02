@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found — AI Infrastructure Hub</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <meta name="robots" content="noindex">
+</head>
+<body data-site-legend="0">
+  <main class="container" style="padding:3rem 1.25rem;max-width:40rem">
+    <header class="page-header">
+      <h1>Page not found</h1>
+      <p class="subtitle">This path is not in the public hub. Legacy bookmarks under <code>/smr/</code>, <code>/uranium/</code>, and <code>/photonics/</code> are remapped when possible.</p>
+    </header>
+    <section class="section">
+      <p id="redir-msg">Checking for a known move…</p>
+      <p><a class="card-link" href="index.html">Back to hub →</a></p>
+    </section>
+  </main>
+  <script>
+    (function () {
+      // GitHub Pages project site: path may include /investment_dashboard_public/
+      var path = location.pathname || '';
+      var map = [
+        [/^\/?smr\/?$/i, 'electrification/smr/index.html'],
+        [/^\/?smr\/.+/i, 'electrification/smr/index.html'],
+        [/^\/?uranium\/?$/i, 'electrification/uranium/index.html'],
+        [/^\/?uranium\/.+/i, 'electrification/uranium/index.html'],
+        [/^\/?photonics\/?$/i, 'hardware/photonics/index.html'],
+        [/^\/?photonics\/.+/i, 'hardware/photonics/index.html']
+      ];
+      // Strip repo prefix if present
+      var rel = path.replace(/^\/investment_dashboard_public\//, '/').replace(/^\//, '');
+      var dest = null;
+      for (var i = 0; i < map.length; i++) {
+        if (map[i][0].test(rel) || map[i][0].test(path)) {
+          dest = map[i][1];
+          break;
+        }
+      }
+      var base = path.indexOf('/investment_dashboard_public/') >= 0
+        ? '/investment_dashboard_public/'
+        : '/';
+      if (dest) {
+        var msg = document.getElementById('redir-msg');
+        if (msg) msg.textContent = 'This section moved. Redirecting to the nested hub path…';
+        location.replace(base + dest);
+      } else {
+        var msg2 = document.getElementById('redir-msg');
+        if (msg2) msg2.textContent = 'No automatic redirect for this URL. Use the hub link below.';
+      }
+    })();
+  </script>
+</body>
+</html>

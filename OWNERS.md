@@ -34,3 +34,7 @@ Bot / human ownership rules for `investment_dashboard_public`. Do not commit int
 ## Pages URL
 
 https://armanamirzhan.github.io/investment_dashboard_public/
+
+## Viewing this file on GitHub Pages
+
+GitHub Pages may serve `OWNERS.md` as `text/markdown` (raw). Prefer the [GitHub blob view](https://github.com/armanamirzhan/investment_dashboard_public/blob/main/OWNERS.md).

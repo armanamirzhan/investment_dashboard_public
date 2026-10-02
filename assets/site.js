@@ -14,8 +14,20 @@
     if (active) a.classList.add("active");
   });
 
-  // Shared visual-mark legend under sticky nav (idempotent)
+  // Shared visual-mark legend under sticky nav (idempotent).
+  // Skip when a page already provides its own legend (e.g. Claude Summary).
   if (document.querySelector(".site-legend")) return;
+  // Opt-out: body[data-site-legend="0"] or sections that do not use Analysis marks (C-157).
+  const legendAttr = document.body && document.body.getAttribute("data-site-legend");
+  if (legendAttr === "0" || legendAttr === "false") return;
+  const SKIP_LEGEND_RE = /(^|\/)(software|hyperscalers|digests)(\/|$)/;
+  // Hub home also has no Analysis marks — skip unless explicitly opted in.
+  const isHubHome =
+    !SECTION_RE.test(path) &&
+    (path.endsWith("/") || path.endsWith("index.html") || /investment_dashboard_public$/.test(path));
+  if (legendAttr !== "1" && legendAttr !== "true") {
+    if (SKIP_LEGEND_RE.test(path) || isHubHome) return;
+  }
 
   const aside = document.createElement("aside");
   aside.className = "site-legend";
