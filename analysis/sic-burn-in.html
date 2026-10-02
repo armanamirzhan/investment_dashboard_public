@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SiC burn-in — AEHR vs Cohu research note — Arman Invest Hub</title>
+  <meta name="description" content="Plain-English research note on silicon carbide burn-in equipment: Aehr Test Systems (AEHR) vs Cohu (COHU), and how they differ from Advantest/Teradyne ATE. Not investment advice.">
+  <link rel="stylesheet" href="../assets/site.css">
+  <style>
+    .analysis { max-width: 920px; margin: 0 auto; padding: 8px 16px 32px; }
+    .analysis h1 { font-size: 1.55rem; letter-spacing: -0.02em; margin: 0 0 6px; color: var(--text-on-dark); }
+    .lede { color: var(--text-secondary); font-size: 0.98rem; margin: 0 0 14px; line-height: 1.45; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+    .chip { font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 999px; background: rgba(76,139,245,.15); color: var(--accent-blue); }
+    .chip.warn { background: rgba(249,171,0,.12); color: var(--accent-orange); }
+    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; margin-bottom: 14px; }
+    .card h2 { font-size: 0.95rem; margin: 0 0 8px; color: var(--accent-cyan); letter-spacing: 0.02em; }
+    .card h3 { font-size: 0.85rem; margin: 12px 0 6px; color: var(--text-on-dark); }
+    .card p, .card li { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.45; }
+    .card p { margin: 0 0 8px; }
+    .card ul { margin: 0 0 8px; padding-left: 1.15rem; }
+    .card li { margin-bottom: 4px; }
+    .card a { color: var(--accent-cyan); }
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0 4px; }
+    .compare .box {
+      border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px;
+      background: rgba(0,0,0,.18);
+    }
+    .compare .box h3 { margin: 0 0 6px; font-size: 0.88rem; color: var(--text-on-dark); }
+    .compare .ticker {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.78rem;
+      padding: 1px 7px; border-radius: 4px; background: rgba(138,147,160,.12);
+      border: 1px solid rgba(138,147,160,.35); color: #8a93a0; margin-left: 6px;
+    }
+    .footnote { font-size: 0.78rem; color: var(--text-secondary); margin-top: 16px; line-height: 1.4; }
+    .back { font-size: 0.88rem; margin-bottom: 12px; }
+    .back a { color: var(--accent-cyan); }
+    @media (max-width: 720px) {
+      .compare { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a class="brand" href="../index.html">Arman <span>Invest</span></a>
+      <div class="nav-links">
+        <a href="../index.html" data-section="home">Hub</a>
+        <a href="../electrification/index.html" data-section="electrification">Electrification</a>
+        <a href="../hardware/index.html" data-section="hardware">Hardware</a>
+        <a href="../software/index.html" data-section="software">Software</a>
+        <a href="../semiconductors/index.html" data-section="semiconductors">Fabrication</a>
+        <a href="../hyperscalers/index.html" data-section="hyperscalers">Hyperscalers</a>
+        <a href="../analysis/index.html" data-section="analysis">Analysis</a>
+        <a href="../digests/index.html" data-section="digests">Digests</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="analysis">
+    <p class="back"><a href="index.html#field-sic">← Back to Silicon carbide (analysis)</a></p>
+    <header>
+      <h1>SiC burn-in equipment — AEHR vs Cohu</h1>
+      <p class="lede">A short research note on how <a href="https://en.wikipedia.org/wiki/Silicon_carbide">silicon carbide (SiC)</a> power chips get stress-tested before they ship, and which public equipment names sit near that step. Framing only — not a rating or recommendation.</p>
+      <div class="meta-row">
+        <span class="chip">As of 1 Oct 2026</span>
+        <span class="chip">Research watch</span>
+        <span class="chip warn">Not investment advice</span>
+      </div>
+    </header>
+
+    <section class="card" id="what-is-burn-in">
+      <h2>What burn-in is</h2>
+      <p><a href="https://en.wikipedia.org/wiki/Burn-in_(electronics)">Burn-in</a> is a reliability screen: makers run chips at elevated temperature and/or voltage for a stretch of time so weak parts fail early — before a customer installs them in a car inverter, charger, or solid-state transformer. It is not the same as a quick functional “does it turn on?” check. Think of it as a controlled stress test that weeds out infant mortality.</p>
+      <p>In a factory, burn-in sits late in the flow — after devices are patterned on the wafer (and often after they are cut into dies or packaged) — so bad units do not waste packaging cost or show up in the field.</p>
+    </section>
+
+    <section class="card" id="why-sic">
+      <h2>Why silicon carbide needs it</h2>
+      <p>SiC power devices switch higher voltages and currents than everyday silicon logic chips. Auto and industrial buyers often demand near–zero-defect reliability: a latent defect that only shows up after hours under heat and voltage can be expensive when the part sits in a traction inverter or a medium-voltage converter.</p>
+      <p>SiC wafers and dies are also costly. Catching weak dice <em>before</em> full packaging (or early enough that yield math still works) matters more than for cheap commodity chips. That is why specialty wafer-level and die-level burn-in capacity shows up in the SiC power story — alongside the device makers named on the <a href="index.html#field-sic">silicon carbide field brief</a>.</p>
+    </section>
+
+    <section class="card" id="aehr-vs-cohu">
+      <h2>AEHR vs Cohu — roles (research watch)</h2>
+      <p>Both names touch SiC stress-test capacity, but they sit in different niches. Neither is a pure “SiC device” stock like Infineon or STMicroelectronics on the analysis brief.</p>
+      <div class="compare">
+        <div class="box">
+          <h3>Aehr Test Systems <span class="ticker">AEHR</span></h3>
+          <p>Specialist in wafer-level and package/die burn-in systems (FOX family and related contactors). Public narrative and order history lean hard into multi-wafer SiC power-device production burn-in — stress many dice on a wafer in parallel before packaging. Niche equipment exposure to SiC (and other high-reliability) ramps rather than a broad test-floor franchise.</p>
+        </div>
+        <div class="box">
+          <h3>Cohu <span class="ticker">COHU</span></h3>
+          <p>Broader test-floor company best known for <a href="https://en.wikipedia.org/wiki/Automated_test_equipment">handlers</a> and related yield gear that move devices through test. Has expanded into SiC die-level burn-in / high-power stress-test handling (e.g. Neon configurations for singulated high-voltage SiC dies). SiC burn-in is an incremental wedge on a wider handler / inspection business — not the whole company.</p>
+        </div>
+      </div>
+      <p><strong>Research-watch framing:</strong> useful to understand how SiC supply scales and where bottlenecks can appear. This note does <em>not</em> assign Buy / Accumulate / Hold tags or gold / rainbow marks — those stay with Performance-tracker handoffs on the main analysis list.</p>
+    </section>
+
+    <section class="card" id="ate-nearby">
+      <h2>Nearby ATE — Advantest and Teradyne</h2>
+      <p><a href="https://en.wikipedia.org/wiki/Automated_test_equipment">Automated test equipment (ATE)</a> giants <strong>Advantest</strong> (6857.T) and <strong>Teradyne</strong> (TER) sell the big pattern-and-measure platforms that prove chips function to a test program — memory, logic, SoC, and more. They dominate general semiconductor ATE.</p>
+      <ul>
+        <li><strong>ATE (Advantest / Teradyne):</strong> electrical test systems that apply patterns and measure responses at high throughput. Central to shipping working silicon; not the same product as long-duration high-power SiC burn-in ovens / wafer contactors.</li>
+        <li><strong>Burn-in specialists / handlers (AEHR / Cohu niche):</strong> stress and move devices under heat and voltage for reliability screening. Overlap exists at the edges of a test floor, but the SiC burn-in capacity story is narrower than “owning ATE.”</li>
+      </ul>
+      <p>For a wider fab-chain map that already lists these tickers under test equipment, see the <a href="../semiconductors/index.html">Fabrication</a> section.</p>
+    </section>
+
+    <section class="card" id="scope">
+      <h2>How this fits the electrification brief</h2>
+      <p>The analysis page’s silicon carbide field focuses on <strong>power-device makers</strong> with design wins into solid-state transformers and 800 V conversion (Infineon, STMicroelectronics). Burn-in equipment is upstream of those chips — picks-and-shovels for reliable SiC volume — and was out of scope for the first shortlist. This note keeps that boundary clear while documenting the niche.</p>
+    </section>
+
+    <p class="footnote"><strong>Not investment advice.</strong> Personal research for Arman A’s study hub. Names and roles are educational framing only — not recommendations to buy, sell, or hold any security. Owned by Investment analysis under <code>analysis/</code>. Related company scorecards (device makers) are owned by Performance tracker.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>Not investment advice. See <a href="../OWNERS.md">OWNERS.md</a>.</p>
+  </footer>
+  <script src="../assets/site.js"></script>
+</body>
+</html>
