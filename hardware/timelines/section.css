@@ -1,0 +1,17 @@
+/* Local additions on top of ../section.css — CPO interactive schematics */
+.briefing .cta-banner{
+  margin: 1rem 0 1.5rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid rgba(91,159,212,0.45);
+  border-left: 3px solid var(--accent, #5b9fd4);
+  border-radius: var(--radius-local, 8px);
+  background: rgba(91,159,212,0.08);
+}
+.briefing .cta-banner a{ font-weight: 600; }
+.briefing .print-fallback{
+  font-size: 0.82rem;
+  color: var(--text-muted, #9aa7b8);
+  margin: 0.35rem 0 0;
+}
+.briefing .diagram.timeline-schematic{ margin-top: 1.1rem; }
+.briefing .diagram.timeline-schematic svg{ min-width: 720px; }

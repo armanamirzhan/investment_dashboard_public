@@ -1,0 +1,63 @@
+<svg viewBox="0 0 980 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="tl3-title">
+<title id="tl3-title">TSMC Compact Universal Photonic Engine (COUPE)</title>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#5b9fd4"/></marker></defs>
+<rect x="12" y="12" width="956" height="536" rx="12" fill="#0f1319" stroke="#2a3340" stroke-width="1.5"/>
+<text x="32" y="40" fill="#5b9fd4" font-size="14" font-family="system-ui,sans-serif" font-weight="700">TSMC Compact Universal Photonic Engine (COUPE)</text>
+<text x="32" y="58" fill="#6b7788" font-size="10.5" font-family="system-ui,sans-serif">Click a cell · Companies in the panel · Esc closes · Not investment advice</text>
+<text x="32" y="88" fill="#9aa7b8" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Foundry building block — optics beside compute</text>
+<g class="stage-hotspot scarcity-soon" data-stage="coupe-foundry" tabindex="0" role="button" focusable="true" aria-label="TSMC foundry role. Activate for stage details.">
+<rect class="box" x="32" y="100" width="280" height="72" rx="6" fill="#1e3a5a" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="172.0" y="132.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">TSMC foundry role</text>
+<text x="172.0" y="148.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">silicon photonics + advanced package</text>
+</g>
+<g class="stage-hotspot" data-stage="coupe-customer" tabindex="0" role="button" focusable="true" aria-label="Platform customers. Activate for stage details.">
+<rect class="box" x="328" y="100" width="300" height="72" rx="6" fill="#243050" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="478.0" y="132.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Platform customers</text>
+<text x="478.0" y="148.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">e.g. NVIDIA Spectrum-X Photonics</text>
+</g>
+<g class="stage-hotspot" data-stage="coupe-end" tabindex="0" role="button" focusable="true" aria-label="End state: COUPE at scale. Activate for stage details.">
+<rect class="box" x="644" y="100" width="300" height="72" rx="6" fill="#0d3d32" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="794.0" y="132.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">End state: COUPE at scale</text>
+<text x="794.0" y="148.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">optics beside dies as a standard brick</text>
+</g>
+<text x="32" y="210" fill="#9aa7b8" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Generation stepping stones</text>
+<g class="stage-hotspot scarcity-soon" data-stage="coupe-2026" tabindex="0" role="button" focusable="true" aria-label="2026 substrate CPO. Activate for stage details.">
+<rect class="box" x="32" y="224" width="220" height="100" rx="6" fill="#2a4060" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="142.0" y="270.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">2026 substrate CPO</text>
+<text x="142.0" y="286.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">200 Gb/s per lane microrings</text>
+</g>
+<line x1="260" y1="274" x2="290" y2="274" stroke="#5b9fd4" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g class="stage-hotspot scarcity-soon" data-stage="coupe-6p4" tabindex="0" role="button" focusable="true" aria-label="~2027 · 6.4 Tb/s. Activate for stage details.">
+<rect class="box" x="298" y="224" width="220" height="100" rx="6" fill="#2a4060" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="408.0" y="270.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">~2027 · 6.4 Tb/s</text>
+<text x="408.0" y="286.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">next bandwidth step</text>
+</g>
+<line x1="526" y1="274" x2="556" y2="274" stroke="#5b9fd4" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g class="stage-hotspot" data-stage="coupe-12p8" tabindex="0" role="button" focusable="true" aria-label="12.8 Tb/s on-interposer. Activate for stage details.">
+<rect class="box" x="564" y="224" width="220" height="100" rx="6" fill="#283848" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="674.0" y="270.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">12.8 Tb/s on-interposer</text>
+<text x="674.0" y="286.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">pathfinding · no firm volume date</text>
+</g>
+<line x1="792" y1="274" x2="822" y2="274" stroke="#5b9fd4" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g class="stage-hotspot" data-stage="coupe-density" tabindex="0" role="button" focusable="true" aria-label="By 2030. Activate for stage details.">
+<rect class="box" x="830" y="224" width="114" height="100" rx="6" fill="#1a3040" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="887.0" y="270.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">By 2030</text>
+<text x="887.0" y="286.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">~4 Tb/s / mm density</text>
+</g>
+<g class="stage-hotspot" data-stage="coupe-microring" tabindex="0" role="button" focusable="true" aria-label="Microring modulators. Activate for stage details.">
+<rect class="box" x="32" y="360" width="300" height="80" rx="6" fill="#243040" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="182.0" y="396.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Microring modulators</text>
+<text x="182.0" y="412.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">tiny rings that imprint data on light</text>
+</g>
+<g class="stage-hotspot" data-stage="coupe-interposer" tabindex="0" role="button" focusable="true" aria-label="On-interposer optics. Activate for stage details.">
+<rect class="box" x="348" y="360" width="300" height="80" rx="6" fill="#243040" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="498.0" y="396.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">On-interposer optics</text>
+<text x="498.0" y="412.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">optics share package with compute</text>
+</g>
+<g class="stage-hotspot" data-stage="coupe-density-goal" tabindex="0" role="button" focusable="true" aria-label="Edge density goal. Activate for stage details.">
+<rect class="box" x="664" y="360" width="280" height="80" rx="6" fill="#243040" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="804.0" y="396.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Edge density goal</text>
+<text x="804.0" y="412.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">more Tb/s per millimeter of edge</text>
+</g>
+<text x="32" y="490" fill="#6b7788" font-size="10" font-family="system-ui,sans-serif">COUPE = Compact Universal Photonic Engine. Not investment advice.</text>
+</svg>

@@ -1,0 +1,79 @@
+<svg viewBox="0 0 980 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="tl1-title">
+<title id="tl1-title">Scale-out CPO switches — optics beside the switch chip</title>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#5b9fd4"/></marker></defs>
+<rect x="12" y="12" width="956" height="596" rx="12" fill="#0f1319" stroke="#2a3340" stroke-width="1.5"/>
+<text x="32" y="40" fill="#5b9fd4" font-size="14" font-family="system-ui,sans-serif" font-weight="700">Scale-out CPO switches — optics beside the switch chip</text>
+<text x="32" y="58" fill="#6b7788" font-size="10.5" font-family="system-ui,sans-serif">Click a cell · Companies in the panel · Esc closes · Not investment advice</text>
+<text x="32" y="88" fill="#9aa7b8" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Path</text>
+<g class="stage-hotspot" data-stage="so-pluggable" tabindex="0" role="button" focusable="true" aria-label="Pluggable modules. Activate for stage details.">
+<rect class="box" x="32" y="98" width="200" height="56" rx="6" fill="#243028" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="132.0" y="122.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Pluggable modules</text>
+<text x="132.0" y="138.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">today’s faceplate optics</text>
+</g>
+<line x1="240" y1="126" x2="270" y2="126" stroke="#5b9fd4" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g class="stage-hotspot scarcity-soon" data-stage="so-cpo-package" tabindex="0" role="button" focusable="true" aria-label="CPO package. Activate for stage details.">
+<rect class="box" x="278" y="98" width="220" height="56" rx="6" fill="#1e3a4a" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="388.0" y="122.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">CPO package</text>
+<text x="388.0" y="138.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">optics next to switch ASIC</text>
+</g>
+<line x1="506" y1="126" x2="536" y2="126" stroke="#5b9fd4" stroke-width="1.6" marker-end="url(#arrow)"/>
+<g class="stage-hotspot" data-stage="so-end" tabindex="0" role="button" focusable="true" aria-label="End state: CPO default for AI scale-out. Activate for stage details.">
+<rect class="box" x="544" y="98" width="400" height="56" rx="6" fill="#0d3d32" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="744.0" y="122.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">End state: CPO default for AI scale-out</text>
+<text x="744.0" y="138.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">switches ship with co-packaged optics</text>
+</g>
+<text x="32" y="188" fill="#9aa7b8" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Inside a CPO switch package</text>
+<g class="stage-hotspot" data-stage="so-switch-asic" tabindex="0" role="button" focusable="true" aria-label="Switch ASIC. Activate for stage details.">
+<rect class="box" x="32" y="200" width="220" height="70" rx="6" fill="#2a4060" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="142.0" y="231.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Switch ASIC</text>
+<text x="142.0" y="247.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">Ethernet / InfiniBand silicon</text>
+</g>
+<g class="stage-hotspot scarcity-soon" data-stage="so-coupe" tabindex="0" role="button" focusable="true" aria-label="Photonic engine. Activate for stage details.">
+<rect class="box" x="268" y="200" width="220" height="70" rx="6" fill="#243050" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="378.0" y="231.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Photonic engine</text>
+<text x="378.0" y="247.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">TSMC COUPE-class</text>
+</g>
+<g class="stage-hotspot" data-stage="so-els-feed" tabindex="0" role="button" focusable="true" aria-label="ELS fiber feed. Activate for stage details.">
+<rect class="box" x="504" y="200" width="200" height="70" rx="6" fill="#2a3048" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="604.0" y="231.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">ELS fiber feed</text>
+<text x="604.0" y="247.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">external laser light in</text>
+</g>
+<g class="stage-hotspot" data-stage="so-ports" tabindex="0" role="button" focusable="true" aria-label="Optical ports. Activate for stage details.">
+<rect class="box" x="720" y="200" width="224" height="70" rx="6" fill="#1a3040" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="832.0" y="231.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Optical ports</text>
+<text x="832.0" y="247.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">800G-class lanes out</text>
+</g>
+<text x="32" y="308" fill="#9aa7b8" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Near-term platforms (~2026)</text>
+<g class="stage-hotspot scarcity-soon" data-stage="so-quantum-x" tabindex="0" role="button" focusable="true" aria-label="NVIDIA Quantum-X Photonics. Activate for stage details.">
+<rect class="box" x="32" y="320" width="300" height="72" rx="6" fill="#1e3a5a" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="182.0" y="352.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">NVIDIA Quantum-X Photonics</text>
+<text x="182.0" y="368.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">InfiniBand CPO · 144×800G</text>
+</g>
+<g class="stage-hotspot scarcity-soon" data-stage="so-spectrum-x" tabindex="0" role="button" focusable="true" aria-label="NVIDIA Spectrum-X Photonics. Activate for stage details.">
+<rect class="box" x="348" y="320" width="300" height="72" rx="6" fill="#1e3a5a" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="498.0" y="352.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">NVIDIA Spectrum-X Photonics</text>
+<text x="498.0" y="368.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">Ethernet CPO on TSMC COUPE</text>
+</g>
+<g class="stage-hotspot scarcity-soon" data-stage="so-bailly" tabindex="0" role="button" focusable="true" aria-label="Broadcom Bailly. Activate for stage details.">
+<rect class="box" x="664" y="320" width="280" height="72" rx="6" fill="#1e3a5a" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="804.0" y="352.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Broadcom Bailly</text>
+<text x="804.0" y="368.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">51.2 Tb/s · Delta/Micas · Meta</text>
+</g>
+<text x="32" y="428" fill="#9aa7b8" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Adoption phases</text>
+<g class="stage-hotspot" data-stage="so-mainstream" tabindex="0" role="button" focusable="true" aria-label="Becoming mainstream. Activate for stage details.">
+<rect class="box" x="32" y="440" width="300" height="64" rx="6" fill="#243040" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="182.0" y="468.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Becoming mainstream</text>
+<text x="182.0" y="484.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">2026–2028 AI scale-out nets</text>
+</g>
+<g class="stage-hotspot scarcity-soon" data-stage="so-volume" tabindex="0" role="button" focusable="true" aria-label="Volume wave. Activate for stage details.">
+<rect class="box" x="348" y="440" width="300" height="64" rx="6" fill="#243040" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="498.0" y="468.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Volume wave</text>
+<text x="498.0" y="484.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">2027–2028 shipments ramp</text>
+</g>
+<g class="stage-hotspot" data-stage="so-ramp-2030" tabindex="0" role="button" focusable="true" aria-label="Still ramping 2030. Activate for stage details.">
+<rect class="box" x="664" y="440" width="280" height="64" rx="6" fill="#243040" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="804.0" y="468.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Still ramping 2030</text>
+<text x="804.0" y="484.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">adoption past first wave</text>
+</g>
+<text x="32" y="545" fill="#6b7788" font-size="10" font-family="system-ui,sans-serif">Scale-out = linking racks through switch fabrics. Not investment advice.</text>
+</svg>

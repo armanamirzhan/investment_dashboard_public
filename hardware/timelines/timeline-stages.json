@@ -1,0 +1,1096 @@
+{
+  "version": "2026-10-cpo-schematics",
+  "disclaimer": "Informational October 2026 baseline. Company and ticker mentions are orientation only \u2014 not investment advice.",
+  "stages": [
+    {
+      "id": "so-pluggable",
+      "title": "Pluggable optical modules (today)",
+      "summary": "Today most switch optics live in removable modules on the front of the box (faceplate). They convert electricity to light and back. Easy to swap, but they burn power and take space \u2014 which gets painful as AI fabrics push higher bandwidth.",
+      "companies": [
+        {
+          "name": "Fabrinet",
+          "ticker": "FN",
+          "note": "Assembles many pluggable optical modules"
+        },
+        {
+          "name": "Cisco",
+          "ticker": "CSCO",
+          "note": "Switch platforms and optics ecosystem"
+        },
+        {
+          "name": "Arista",
+          "ticker": "ANET",
+          "note": "Ethernet switches with high-speed pluggables"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "note": "Switch silicon that often drives pluggable cages"
+        }
+      ]
+    },
+    {
+      "id": "so-cpo-package",
+      "title": "Co-packaged optics (CPO) package",
+      "summary": "Instead of optics at the faceplate, the optical engines sit next to the switch chip on the same package. Shorter electrical traces mean less power and higher bandwidth for linking AI racks (scale-out).",
+      "companies": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Quantum-X and Spectrum-X Photonics CPO platforms"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "note": "Bailly CPO switch silicon"
+        },
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "COUPE photonic engine foundry path"
+        }
+      ]
+    },
+    {
+      "id": "so-end",
+      "title": "End state \u2014 CPO default for AI scale-out",
+      "summary": "Industry maps expect co-packaged optics to become the normal way AI scale-out switches connect racks at the highest bandwidths \u2014 not a niche demo. Timing is a ramp across the late 2020s, not a single overnight flip.",
+      "companies": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Scale-out CPO switch platforms"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "note": "CPO switch ASICs"
+        },
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "Foundry packaging for photonic engines"
+        }
+      ]
+    },
+    {
+      "id": "so-switch-asic",
+      "title": "Switch ASIC",
+      "summary": "The networking brain: an Ethernet or InfiniBand chip that decides where packets go between racks. In a CPO design it still sits at the center; optics move closer to it instead of living only in front-panel modules.",
+      "companies": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Spectrum (Ethernet) and Quantum (InfiniBand) lines"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "note": "Tomahawk / Bailly-class Ethernet switch silicon"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "note": "Switch and connectivity silicon"
+        }
+      ]
+    },
+    {
+      "id": "so-coupe",
+      "title": "Photonic engine (TSMC COUPE-class)",
+      "summary": "A photonic engine turns electrical signals from the switch into light (and back). TSMC\u2019s Compact Universal Photonic Engine (COUPE) is a foundry recipe for putting that engine beside high-speed chips.",
+      "companies": [
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "COUPE silicon photonics + advanced packaging"
+        },
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Spectrum-X Photonics targets COUPE"
+        }
+      ]
+    },
+    {
+      "id": "so-els-feed",
+      "title": "External light source (ELS) fiber feed",
+      "summary": "Lasers often live off the hot switch package. Fiber brings their light into the photonic engines. That lets operators cool, share, and eventually swap lasers without tearing apart the switch package.",
+      "companies": [
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Lasers and ELS-class sources"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Lasers and photonics"
+        },
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "SuperNova multi-wavelength sources (private)"
+        }
+      ]
+    },
+    {
+      "id": "so-ports",
+      "title": "Optical ports",
+      "summary": "The fibers leaving the switch toward other racks. AI scale-out designs aim at very high lane rates (for example 800 gigabits per second class) so whole clusters can talk without copper walls.",
+      "companies": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Quantum-X Photonics: 144 ports \u00d7 800G class"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "note": "Bailly 51.2 Tb/s aggregate class"
+        },
+        {
+          "name": "Corning",
+          "ticker": "GLW",
+          "note": "Optical fiber medium"
+        }
+      ]
+    },
+    {
+      "id": "so-quantum-x",
+      "title": "NVIDIA Quantum-X Photonics",
+      "summary": "NVIDIA\u2019s InfiniBand co-packaged optics platform for AI clusters \u2014 about 144 ports at 800 gigabits per second class. Aimed at scale-out fabrics where racks must exchange huge volumes of training and inference traffic.",
+      "companies": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Quantum-X Photonics InfiniBand CPO"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Laser capacity ties discussed with NVIDIA AI optics"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Laser capacity ties discussed with NVIDIA AI optics"
+        }
+      ]
+    },
+    {
+      "id": "so-spectrum-x",
+      "title": "NVIDIA Spectrum-X Photonics",
+      "summary": "NVIDIA\u2019s Ethernet co-packaged optics path, described as riding TSMC\u2019s Compact Universal Photonic Engine (COUPE). Same idea as Quantum-X for InfiniBand, but for Ethernet AI fabrics.",
+      "companies": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Spectrum-X Photonics Ethernet CPO"
+        },
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "COUPE photonic engine"
+        }
+      ]
+    },
+    {
+      "id": "so-bailly",
+      "title": "Broadcom Bailly CPO switch",
+      "summary": "Broadcom\u2019s 51.2 terabits per second class co-packaged optics switch silicon. Platform discussions include assemblers such as Delta / Micas and validation paths with large buyers such as Meta.",
+      "companies": [
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "note": "Bailly CPO switch ASIC"
+        },
+        {
+          "name": "Delta Electronics / Micas",
+          "ticker": "",
+          "note": "System / platform assembly (Delta is listed outside typical US Fidelity symbols here)"
+        },
+        {
+          "name": "Meta",
+          "ticker": "META",
+          "note": "Validation / buyer path discussed in industry coverage"
+        }
+      ]
+    },
+    {
+      "id": "so-mainstream",
+      "title": "Becoming mainstream (2026\u20132028)",
+      "summary": "The window when co-packaged optics moves from flagship announcements into normal planning for new AI scale-out networks \u2014 still early volume, but no longer science-fair only.",
+      "companies": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "CPO switch platforms"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "note": "CPO switch silicon"
+        },
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "Photonic engine packaging"
+        }
+      ]
+    },
+    {
+      "id": "so-volume",
+      "title": "Volume wave (2027\u20132028)",
+      "summary": "The shipment ramp many industry maps mark as the first real volume wave for AI scale-out CPO \u2014 when more vendors and buyers move from trials to production orders.",
+      "companies": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Scale-out CPO ramps"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "note": "Bailly and related CPO silicon"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Laser / ELS supply for ramps"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Laser / photonics supply for ramps"
+        }
+      ]
+    },
+    {
+      "id": "so-ramp-2030",
+      "title": "Still ramping through 2030",
+      "summary": "Adoption does not stop after the first wave. Newer halls and refreshes continue taking CPO as copper and pluggable options strain at the highest AI bandwidths.",
+      "companies": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Ongoing CPO platform refresh"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "note": "Ongoing switch silicon generations"
+        },
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "COUPE density and bandwidth steps"
+        }
+      ]
+    },
+    {
+      "id": "su-gpu",
+      "title": "GPU / accelerator die",
+      "summary": "The chip that trains and runs models. Scale-up optical I/O is about linking many of these dies (or packages) tightly \u2014 today often with copper meshes; tomorrow more often with light on the package.",
+      "companies": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Leading AI GPUs and NVLink-class scale-up domains"
+        },
+        {
+          "name": "AMD",
+          "ticker": "AMD",
+          "note": "AI accelerators and scale-up fabrics"
+        },
+        {
+          "name": "Hyperscaler custom ASICs",
+          "ticker": "",
+          "note": "In-house accelerators at large cloud buyers"
+        }
+      ]
+    },
+    {
+      "id": "su-serdes",
+      "title": "Serializer/deserializer (SerDes)",
+      "summary": "High-speed electrical I/O that turns parallel chip data into fast serial streams (and back). In the optical scale-up endgame, SerDes drives a modulator instead of a long copper cable for that hop.",
+      "companies": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "On-GPU high-speed I/O"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "note": "SerDes IP in many networking chips"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "note": "Connectivity and SerDes-class silicon"
+        }
+      ]
+    },
+    {
+      "id": "su-modulator",
+      "title": "Optical modulator",
+      "summary": "A tiny device that imprints electrical bits onto a beam of light (bright/dim or phase shifts). It is how a GPU package \u201ctalks\u201d optically without putting a whole pluggable module on every link.",
+      "companies": [
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "TeraPHY optical I/O (private)"
+        },
+        {
+          "name": "Lightmatter",
+          "ticker": "",
+          "note": "Passage optical interconnect (private)"
+        },
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "Silicon photonics process for modulators"
+        }
+      ]
+    },
+    {
+      "id": "su-detector",
+      "title": "Photodetector",
+      "summary": "Turns incoming light back into electricity so the receiving GPU can read the bits. Paired with the modulator on the other end of the fiber.",
+      "companies": [
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "Integrated optical I/O (private)"
+        },
+        {
+          "name": "Lightmatter",
+          "ticker": "",
+          "note": "Optical interconnect (private)"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Detectors and photonics components"
+        }
+      ]
+    },
+    {
+      "id": "su-fiber",
+      "title": "Fiber to peer GPU",
+      "summary": "Glass fiber carries the light between GPU packages. For scale-up domains this can replace thick copper cable bundles once rates and distances make copper painful.",
+      "companies": [
+        {
+          "name": "Corning",
+          "ticker": "GLW",
+          "note": "Optical fiber"
+        },
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "Fiber-attached optical I/O (private)"
+        }
+      ]
+    },
+    {
+      "id": "su-els",
+      "title": "External light source for scale-up",
+      "summary": "The laser does not have to sit on every hot GPU package. An external light source feeds multiple optical engines, which helps cooling, serviceability, and sharing expensive laser capacity.",
+      "companies": [
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "ELS / laser supply"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Lasers and photonics"
+        },
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "SuperNova multi-wavelength sources (private)"
+        }
+      ]
+    },
+    {
+      "id": "su-end",
+      "title": "End state \u2014 optical scale-up hop",
+      "summary": "GPU SerDes drives the modulator; an external laser feeds light; detectors recover bits at the peer. No separate switch ASIC is needed for that particular GPU-to-GPU hop (scale-out switches still matter between racks).",
+      "companies": [
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "Optical I/O chiplet path (private)"
+        },
+        {
+          "name": "Lightmatter",
+          "ticker": "",
+          "note": "Optical interconnect (private)"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "note": "Celestial AI photonic fabric acquisition"
+        },
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Defines when copper vs optical wins inside its scale-up domains"
+        }
+      ]
+    },
+    {
+      "id": "su-ayar",
+      "title": "Ayar Labs (TeraPHY + SuperNova)",
+      "summary": "Private company building optical I/O chiplets (TeraPHY) and multi-wavelength light sources (SuperNova). Frequently shown at Optical Fiber Communication Conference (OFC) and Hot Chips-style venues.",
+      "companies": [
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "Private \u2014 no public ticker"
+        }
+      ]
+    },
+    {
+      "id": "su-lightmatter",
+      "title": "Lightmatter Passage",
+      "summary": "Private company working on optical interconnect approaches (Passage) aimed at moving bits with light between accelerators and packages.",
+      "companies": [
+        {
+          "name": "Lightmatter",
+          "ticker": "",
+          "note": "Private \u2014 no public ticker"
+        }
+      ]
+    },
+    {
+      "id": "su-celestial",
+      "title": "Celestial AI \u2192 Marvell",
+      "summary": "Celestial AI built photonic fabric technology for AI connectivity. After acquisition, follow the public Marvell ticker rather than a standalone Celestial listing.",
+      "companies": [
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "note": "Acquired Celestial AI photonic fabric"
+        },
+        {
+          "name": "Celestial AI",
+          "ticker": "",
+          "note": "Technology absorbed \u2014 not a separate public ticker"
+        }
+      ]
+    },
+    {
+      "id": "su-demos",
+      "title": "2025 demos (OFC / Hot Chips)",
+      "summary": "Conference showcases where optical I/O specialists demonstrate engines, light sources, and packaging ideas before they are volume products in every AI hall.",
+      "companies": [
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "TeraPHY / SuperNova demos (private)"
+        },
+        {
+          "name": "Lightmatter",
+          "ticker": "",
+          "note": "Passage demos (private)"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "note": "Celestial photonic fabric lineage"
+        }
+      ]
+    },
+    {
+      "id": "su-integration",
+      "title": "2026\u20132027 customer integration",
+      "summary": "Bring-up with real customers, packaging partners, and laser suppliers. Production for early sockets is often framed late 2026 into 2027 \u2014 still before broad volume.",
+      "companies": [
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "Customer integration (private)"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Laser ties for AI optics"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Laser ties for AI optics"
+        },
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Platform decisions on copper vs optical scale-up"
+        }
+      ]
+    },
+    {
+      "id": "su-vendor-window",
+      "title": "Vendor-optimistic volume window",
+      "summary": "Suppliers often pitch volume earlier (roughly 2027\u20132029). Treat as marketing-tilted timing until independent and buyer roadmaps agree.",
+      "companies": [
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "Optimistic volume messaging (private)"
+        },
+        {
+          "name": "Lightmatter",
+          "ticker": "",
+          "note": "Optimistic volume messaging (private)"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "note": "Photonic fabric commercialization via MRVL"
+        }
+      ]
+    },
+    {
+      "id": "su-sa-timing",
+      "title": "Analyst-style volume timing",
+      "summary": "Independent framing (for example SemiAnalysis-style notes) often keeps copper through much of near-term NVIDIA scale-up generations, with meaningful optical scale-up volume later \u2014 late 2028 into 2029 in some maps.",
+      "companies": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Copper vs optical timing inside Rubin-class scale-up narratives"
+        },
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "Optical I/O specialist (private)"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "note": "Photonic fabric path"
+        }
+      ]
+    },
+    {
+      "id": "coupe-foundry",
+      "title": "TSMC foundry role (COUPE)",
+      "summary": "Taiwan Semiconductor Manufacturing Company offers Compact Universal Photonic Engine (COUPE): a path to build silicon-photonics engines and package them beside advanced compute or switch dies.",
+      "companies": [
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "COUPE process + advanced packaging"
+        }
+      ]
+    },
+    {
+      "id": "coupe-customer",
+      "title": "Platform customers",
+      "summary": "Chip and system vendors that adopt COUPE-class engines so their switches or accelerators can ship with optics beside the die instead of only as pluggable modules.",
+      "companies": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Spectrum-X Photonics on TSMC COUPE"
+        },
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "Foundry partner"
+        }
+      ]
+    },
+    {
+      "id": "coupe-end",
+      "title": "End state \u2014 COUPE as a building block",
+      "summary": "Optics beside compute or switch dies at manufacturing scale \u2014 COUPE treated like other advanced-packaging bricks buyers can design around.",
+      "companies": [
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "COUPE at volume"
+        },
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "CPO platforms using COUPE-class engines"
+        }
+      ]
+    },
+    {
+      "id": "coupe-2026",
+      "title": "2026 substrate-level CPO",
+      "summary": "Early COUPE generation aimed at substrate-level co-packaged optics with about 200 gigabits per second per lane using microring modulators.",
+      "companies": [
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "COUPE 2026 stepping stone"
+        },
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Early COUPE platform adopter narrative"
+        }
+      ]
+    },
+    {
+      "id": "coupe-6p4",
+      "title": "~2027 \u2014 6.4 terabits per second class",
+      "summary": "Next bandwidth step on the published COUPE path \u2014 more total throughput through the photonic engine as AI fabrics demand it.",
+      "companies": [
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "COUPE bandwidth step"
+        }
+      ]
+    },
+    {
+      "id": "coupe-12p8",
+      "title": "12.8 Tb/s on-interposer (pathfinding)",
+      "summary": "Putting still-faster optics on the interposer (the wiring layer inside the package). Marked as pathfinding \u2014 interesting engineering, not a promised ship date.",
+      "companies": [
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "Pathfinding \u2014 no firm volume date"
+        }
+      ]
+    },
+    {
+      "id": "coupe-density",
+      "title": "By 2030 \u2014 edge density goal",
+      "summary": "Aim for roughly 4 terabits per second per millimeter of package edge \u2014 packing more optical bandwidth into the same physical outline beside compute.",
+      "companies": [
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "Long-range COUPE density goal"
+        }
+      ]
+    },
+    {
+      "id": "coupe-microring",
+      "title": "Microring modulators",
+      "summary": "Tiny ring-shaped devices on a silicon chip that imprint data onto light. They are a core building block in many silicon-photonics engines, including COUPE-class designs.",
+      "companies": [
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "Silicon photonics microrings in COUPE"
+        },
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "Microring-based optical I/O (private)"
+        }
+      ]
+    },
+    {
+      "id": "coupe-interposer",
+      "title": "On-interposer optics",
+      "summary": "An interposer is a fine wiring layer inside a chip package. Putting optics there means light engines share the same package neighborhood as compute dies \u2014 shorter electrical hops.",
+      "companies": [
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "Advanced packaging + photonics"
+        },
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Co-packaged platform designs"
+        }
+      ]
+    },
+    {
+      "id": "coupe-density-goal",
+      "title": "Edge density goal",
+      "summary": "How much optical bandwidth you can squeeze along each millimeter of the package edge. Higher density lets AI systems grow bandwidth without ballooning package size.",
+      "companies": [
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "COUPE density roadmap"
+        }
+      ]
+    },
+    {
+      "id": "els-arch",
+      "title": "ELS / ELSFP architecture",
+      "summary": "External light source (sometimes discussed as ELSFP-class modules) keeps lasers off the hottest packages. Roughly 30% wall-plug efficiency class is a common orientation figure for these laser systems \u2014 energy in versus light out.",
+      "companies": [
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "ELS / laser modules"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Lasers and photonics"
+        },
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "SuperNova external multi-wavelength sources (private)"
+        }
+      ]
+    },
+    {
+      "id": "els-why",
+      "title": "Why keep lasers external?",
+      "summary": "Lasers dislike heat, fail as field-replaceable parts, and are expensive to duplicate on every engine. Off-package sources can be cooled properly, shared across engines, and swapped when they age.",
+      "companies": [
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Serviceable laser / ELS products"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Laser supply ecosystem"
+        }
+      ]
+    },
+    {
+      "id": "els-end",
+      "title": "End state \u2014 swappable multi-wavelength ELS",
+      "summary": "Data-center optical engines are fed by shared, swappable multi-wavelength external light sources \u2014 hot lasers are not glued onto every co-packaged engine.",
+      "companies": [
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "ELS suppliers"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "ELS / laser suppliers"
+        },
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "Multi-wavelength SuperNova (private)"
+        }
+      ]
+    },
+    {
+      "id": "els-lumentum",
+      "title": "Lumentum",
+      "summary": "Public photonics company supplying lasers and optical engines, including capacity often discussed for AI co-packaged optics and external light sources.",
+      "companies": [
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Lasers / optical engines / ELS"
+        }
+      ]
+    },
+    {
+      "id": "els-coherent",
+      "title": "Coherent",
+      "summary": "Public photonics company with lasers and a broad optics portfolio spanning communications and industrial uses \u2014 another named supplier in AI optics laser narratives.",
+      "companies": [
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Lasers and broader photonics"
+        }
+      ]
+    },
+    {
+      "id": "els-nvidia-ties",
+      "title": "NVIDIA\u2013laser capacity ties",
+      "summary": "Industry coverage ties NVIDIA\u2019s AI optics ramps to laser capacity from suppliers such as Lumentum and Coherent around the 2026 window \u2014 lasers become a shared bottleneck story with CPO.",
+      "companies": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "AI optics platform demand"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Laser capacity"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Laser capacity"
+        }
+      ]
+    },
+    {
+      "id": "els-supernova",
+      "title": "Ayar SuperNova",
+      "summary": "Ayar Labs\u2019 multi-wavelength external light source: many colors (channels) of light from one module so one fiber can carry many data streams (wavelength-division multiplexing). Private company.",
+      "companies": [
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "SuperNova \u2014 private, no ticker"
+        }
+      ]
+    },
+    {
+      "id": "els-mw",
+      "title": "Multi-wavelength (WDM) light",
+      "summary": "Wavelength-division multiplexing sends several independent channels as different colors of light in one fiber \u2014 multiplying bandwidth without multiplying fiber count.",
+      "companies": [
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "SuperNova multi-wavelength (private)"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Multi-wavelength laser products"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "WDM / laser products"
+        }
+      ]
+    },
+    {
+      "id": "els-axt",
+      "title": "Upstream indium phosphide wafers",
+      "summary": "Many communications lasers grow on compound-semiconductor wafers such as indium phosphide (InP). Substrate makers sit upstream of laser chip factories.",
+      "companies": [
+        {
+          "name": "AXT",
+          "ticker": "AXTI",
+          "note": "Compound semiconductor substrates (InP family)"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Downstream laser / engine maker"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Downstream laser / photonics maker"
+        }
+      ]
+    },
+    {
+      "id": "std-ucie",
+      "title": "Universal Chiplet Interconnect Express (UCIe)",
+      "summary": "An industry standard for short, fast electrical links between chiplets inside a package. For optical I/O, UCIe-class bridges connect a compute die to an optical chiplet sitting beside it.",
+      "companies": [
+        {
+          "name": "Intel",
+          "ticker": "INTC",
+          "note": "UCIe consortium participant / chiplet push"
+        },
+        {
+          "name": "AMD",
+          "ticker": "AMD",
+          "note": "Chiplet architectures"
+        },
+        {
+          "name": "Arm ecosystem / others",
+          "ticker": "",
+          "note": "Broad UCIe industry participation"
+        },
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "Optical chiplets that need a die-to-die bridge (private)"
+        }
+      ]
+    },
+    {
+      "id": "std-msa",
+      "title": "Laser multi-source agreement (MSA)",
+      "summary": "A multi-source agreement lets several vendors build compatible modules \u2014 common plugs, sizes, and behaviors \u2014 so buyers are not locked to one laser supplier\u2019s proprietary shape.",
+      "companies": [
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Laser / ELS module suppliers in MSA discussions"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Laser module suppliers in MSA discussions"
+        },
+        {
+          "name": "MSA consortia",
+          "ticker": "",
+          "note": "Industry groups defining common modules"
+        }
+      ]
+    },
+    {
+      "id": "std-protocols",
+      "title": "Optical protocols (less settled)",
+      "summary": "Copper serializer/deserializer (SerDes) links have mature, widely understood protocols. Optical chiplet and CPO protocols are still catching up \u2014 more vendor-specific choices remain.",
+      "companies": [
+        {
+          "name": "NVIDIA",
+          "ticker": "NVDA",
+          "note": "Defines many AI fabric behaviors in practice"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "note": "Ethernet protocol / switch silicon influence"
+        },
+        {
+          "name": "Standards bodies",
+          "ticker": "",
+          "note": "IEEE and industry MSAs evolving optical specs"
+        }
+      ]
+    },
+    {
+      "id": "std-copper-ref",
+      "title": "Copper SerDes as the maturity reference",
+      "summary": "Engineers compare optical options to copper SerDes: cost, power, reach, and how interchangeable parts are across vendors. Copper is the \u201csettled\u201d baseline optical must match for mix-and-match comfort.",
+      "companies": [
+        {
+          "name": "Credo",
+          "ticker": "CRDO",
+          "note": "Copper retimers / connectivity"
+        },
+        {
+          "name": "Astera Labs",
+          "ticker": "ALAB",
+          "note": "Connectivity / retimers"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "note": "SerDes IP and switch silicon"
+        }
+      ]
+    },
+    {
+      "id": "std-interop",
+      "title": "Cross-vendor interoperability",
+      "summary": "The goal: mix engines, lasers, and chiplets from different suppliers the way buyers already mix copper cables and pluggables \u2014 without a full custom redesign each time.",
+      "companies": [
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "Foundry packaging that multiple customers share"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Laser side of interop"
+        },
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "Optical chiplet side (private)"
+        }
+      ]
+    },
+    {
+      "id": "std-end",
+      "title": "End state \u2014 settled optical I/O standards",
+      "summary": "UCIe-class die bridges, laser multi-source agreements, and optical protocols become as interchangeable in practice as copper SerDes links \u2014 lowering lock-in and speeding adoption.",
+      "companies": [
+        {
+          "name": "UCIe consortium members",
+          "ticker": "",
+          "note": "Chiplet electrical bridge standard"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Laser MSA participants"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Laser MSA participants"
+        },
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "Shared foundry packaging recipes"
+        }
+      ]
+    },
+    {
+      "id": "std-chiplet",
+      "title": "Optical chiplet",
+      "summary": "A small die dedicated to photonic I/O that sits beside a compute or switch die in the same package \u2014 connected electrically over a short chiplet link, optically over fiber.",
+      "companies": [
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "TeraPHY optical chiplet (private)"
+        },
+        {
+          "name": "Lightmatter",
+          "ticker": "",
+          "note": "Optical interconnect approaches (private)"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "note": "Celestial photonic fabric lineage"
+        }
+      ]
+    },
+    {
+      "id": "std-bridge",
+      "title": "Electrical bridge on package",
+      "summary": "The short UCIe-class (or similar) electrical hop between a compute die and an optical chiplet. It replaces long board traces that would otherwise fight high lane rates.",
+      "companies": [
+        {
+          "name": "Intel",
+          "ticker": "INTC",
+          "note": "UCIe / chiplet interconnect push"
+        },
+        {
+          "name": "AMD",
+          "ticker": "AMD",
+          "note": "Chiplet packaging experience"
+        },
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "Needs a die-to-die bridge to the host (private)"
+        }
+      ]
+    },
+    {
+      "id": "std-ecosystem",
+      "title": "Ecosystem bodies",
+      "summary": "Consortia and multi-source agreement groups write the paperwork that lets vendors claim compatibility. Slow, but how copper and pluggable optics became interchangeable.",
+      "companies": [
+        {
+          "name": "UCIe consortium",
+          "ticker": "",
+          "note": "Chiplet interconnect standard"
+        },
+        {
+          "name": "MSA groups",
+          "ticker": "",
+          "note": "Laser and module form-factor agreements"
+        },
+        {
+          "name": "IEEE / Ethernet bodies",
+          "ticker": "",
+          "note": "Networking protocol standards"
+        }
+      ]
+    }
+  ]
+}
