@@ -1,0 +1,89 @@
+{
+  "asOf": "2026-10-01",
+  "field": "sic-capacity",
+  "fieldId": "field-sic-capacity",
+  "title": "Silicon carbide capacity (wafers & fabs)",
+  "scope": "Substrate / boule / wafer / epi / captive fab throughput for SiC power. Not device design-wins (see field-sic Infineon/STM). Not burn-in equipment (see sic-burn-in.html AEHR/Cohu).",
+  "distinction": {
+    "devices": "analysis/index.html#field-sic — Infineon IFNNY, STMicroelectronics STM",
+    "capacity": "analysis/index.html#field-sic-capacity — this shortlist",
+    "burnIn": "analysis/sic-burn-in.html — AEHR, Cohu"
+  },
+  "framing": "Research shortlist only. No gold/rainbow/stance until Performance tracker scores. Not investment advice.",
+  "analysisUrl": "https://armanamirzhan.github.io/investment_dashboard_public/analysis/index.html#field-sic-capacity",
+  "companies": [
+    {
+      "slug": "wolfspeed",
+      "name": "Wolfspeed",
+      "ticker": "WOLF",
+      "exchange": "NYSE",
+      "role": "Vertical SiC materials + Mohawk Valley 200mm fab / JP materials center — capacity pure-play.",
+      "whyCapacityNotDevice": "Story is wafer/fab throughput and materials scale, not SST design-wins.",
+      "caveats": "Chapter 11 emergence Sep 2025; fresh-start accounting; Renesas equity; dilution/covenant overhang.",
+      "scorecard": "pending"
+    },
+    {
+      "slug": "coherent",
+      "name": "Coherent",
+      "ticker": "COHR",
+      "exchange": "NYSE",
+      "role": "Merchant SiC substrates and epitaxial wafers (incl. 200mm epi).",
+      "whyCapacityNotDevice": "Materials/epi supplier; does not compete as a power-device brand on the device field.",
+      "caveats": "Lasers/networking dilute SiC purity; EV wafer demand cyclical.",
+      "scorecard": "pending"
+    },
+    {
+      "slug": "onsemi",
+      "name": "onsemi",
+      "ticker": "ON",
+      "exchange": "Nasdaq",
+      "role": "Captive end-to-end SiC (boule → epi → fab), e.g. Hudson NH; Czech 200mm plans.",
+      "whyCapacityNotDevice": "Investment angle is captive capacity assurance; finished devices are secondary for this field.",
+      "caveats": "Also sells devices; Czech expansion timing/incentive uncertainty.",
+      "scorecard": "pending"
+    },
+    {
+      "slug": "resonac",
+      "name": "Resonac",
+      "ticker": "SHWDY",
+      "exchange": "OTC ADR (TSE 4004)",
+      "role": "Independent SiC epitaxial-wafer specialist — merchant epi capacity.",
+      "whyCapacityNotDevice": "Epi/materials only; no MOSFET design-win narrative on this hub.",
+      "caveats": "Chemicals conglomerate mix; ADR liquidity; China substrate competition.",
+      "scorecard": "pending"
+    },
+    {
+      "slug": "rohm",
+      "name": "ROHM",
+      "ticker": "ROHCY",
+      "exchange": "OTC ADR (TSE 6963)",
+      "role": "SiCrystal substrates + captive SiC device fabs — vertical capacity.",
+      "whyCapacityNotDevice": "Listed for substrate/fab footprint; not scored on Infineon/STM device field.",
+      "caveats": "EV SiC demand softness; Japan ADR liquidity; conglomerate mix.",
+      "scorecard": "pending"
+    },
+    {
+      "slug": "disco",
+      "name": "DISCO",
+      "ticker": "6146.T",
+      "exchange": "TSE",
+      "role": "SiC wafering equipment (dicing/grinding/polishing) — capacity-enabling tools.",
+      "whyCapacityNotDevice": "Equipment for wafer throughput, not devices and not burn-in (AEHR/Cohu).",
+      "caveats": "Broad semi-equipment cycle; SiC is a slice of revenue.",
+      "scorecard": "pending"
+    }
+  ],
+  "crossLinksOnly": [
+    {"name": "Infineon", "ticker": "IFNNY", "note": "Captive SiC fab capacity exists; scored under devices for design wins."},
+    {"name": "STMicroelectronics", "ticker": "STM", "note": "Catania/Singapore/Chongqing SiC hubs; scored under devices."}
+  ],
+  "sources": [
+    {"title": "Wolfspeed CFIUS clearance / Renesas equity (restructuring complete)", "url": "https://investor.wolfspeed.com/news/news-details/2026/Wolfspeed-Announces-CFIUS-Clearance-and-Completion-of-Equity-Issuance-to-Renesas-as-Part-of-Court-Approved-Restructuring/default.aspx", "date": "2026-01-30"},
+    {"title": "Wolfspeed Mohawk Valley / Building 10 / JP materials milestones", "url": "https://www.wolfspeed.com/company/news-events/news/wolfspeed-announces-key-milestones-and-operational-update/", "date": "2024"},
+    {"title": "Coherent 200 mm SiC epi-wafer production launch", "url": "https://www.coherent.com/news/press-releases/coherent-expands-silicon-carbide-epitaxial-wafer-production", "date": "2024-09-26"},
+    {"title": "onsemi Czech end-to-end SiC production announcement", "url": "https://www.onsemi.com/company/news-media/press-announcements/en/onsemi-selects-the-czech-republic-to-establish-end-to-end-silicon-carbide-production-for-advanced-power-semiconductors", "date": "2024-06-19"},
+    {"title": "Resonac SiC epi strategy + 200 mm / 300 mm substrate development", "url": "https://www.resonac.com/corporate/strategy/sic.html", "date": "2025–2026"},
+    {"title": "Resonac 300 mm SiC substrate development milestone", "url": "https://www.resonac.com/news/2026/09/15/4016.html", "date": "2026-09-15"},
+    {"title": "DQ India — SiC wafer capacity surge / Wolfspeed 200 mm pivot (industry roundup)", "url": "https://www.dqindia.com/esdm/wafer-capacity-set-to-surge-new-phase-for-sic-industry-in-2026-11187926", "date": "2026-02"}
+  ]
+}

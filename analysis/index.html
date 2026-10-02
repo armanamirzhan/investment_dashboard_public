@@ -142,7 +142,8 @@
       <ul class="field-nav" aria-label="Jump to field">
         <li><a href="#field-sst">Solid-state transformers</a></li>
         <li><a href="#field-switchgear">Switchgear &amp; DC protection</a></li>
-        <li><a href="#field-sic">Silicon carbide</a></li>
+        <li><a href="#field-sic">Silicon carbide devices</a></li>
+        <li><a href="#field-sic-capacity">SiC capacity (wafers &amp; fabs)</a></li>
         <li><a href="#field-rack">Rack &amp; row power</a></li>
         <li><a href="#field-connectors">Connectors</a></li>
         <li><a href="#field-onsite">Onsite generation</a></li>
@@ -208,7 +209,7 @@
     <section class="card" id="field-sic">
       <h2>Silicon carbide power devices</h2>
       <p><a href="https://en.wikipedia.org/wiki/Silicon_carbide">Silicon carbide (SiC)</a> chips are the high-voltage switches inside solid-state transformers and converters. “SST chips” are not a separate product line — public exposure is through power-<a href="https://en.wikipedia.org/wiki/Semiconductor_device">semiconductor</a> makers. Some vendors also sell <a href="https://en.wikipedia.org/wiki/Gallium_nitride">gallium nitride (GaN)</a> devices for related conversion steps.</p>
-      <p>Making reliable SiC also needs specialty <a href="https://en.wikipedia.org/wiki/Burn-in_(electronics)">burn-in</a> and stress-test gear — separate from the device makers below. A short research note compares Aehr Test Systems (AEHR) and Cohu (COHU) on that niche, and how they differ from Advantest / Teradyne automatic test equipment: <a href="sic-burn-in.html">SiC burn-in — AEHR vs Cohu →</a></p>
+      <p>This field is about <strong>devices</strong> (design wins and chip content). Substrate / wafer / fab <strong>capacity</strong> is tracked separately under <a href="#field-sic-capacity">Silicon carbide capacity</a>. Specialty <a href="https://en.wikipedia.org/wiki/Burn-in_(electronics)">burn-in</a> and stress-test gear is a third niche: <a href="sic-burn-in.html">SiC burn-in — AEHR vs Cohu →</a></p>
       <ul class="co-list">
         <li id="infineon">
           <details class="co rainbow">
@@ -229,6 +230,70 @@
           </details>
         </li>
       </ul>
+    </section>
+
+
+    <section class="card" id="field-sic-capacity">
+      <h2>Silicon carbide capacity (wafers &amp; fabs)</h2>
+      <p>Before a <a href="https://en.wikipedia.org/wiki/Silicon_carbide">silicon carbide (SiC)</a> MOSFET ships, someone has to grow a crystal (boule), slice and polish a <a href="https://en.wikipedia.org/wiki/Wafer_(electronics)">wafer</a>, grow an <a href="https://en.wikipedia.org/wiki/Epitaxy">epitaxial</a> layer, and run device <a href="https://en.wikipedia.org/wiki/Semiconductor_fabrication">fabrication</a> at useful yield — often migrating from 150&nbsp;mm toward 200&nbsp;mm. That throughput is the capacity story: how many wafers and finished power dies the industry can actually make for EV, industrial, and AI-power converters.</p>
+      <p><strong>Three SiC lanes on this hub:</strong> <a href="#field-sic">devices</a> (Infineon / ST design wins) · <strong>this field</strong> (substrates, epi, captive fabs) · <a href="sic-burn-in.html">burn-in equipment</a> (AEHR / Cohu). Names below are a research shortlist only — no gold / rainbow / stance tags until Performance tracker scores them.</p>
+      <ul class="co-list">
+        <li id="wolfspeed">
+          <details class="co">
+            <summary><span class="name">Wolfspeed</span> <span class="ticker">WOLF</span></summary>
+            <div class="body">
+              <p>Vertically integrated SiC materials plus the Mohawk Valley 200&nbsp;mm device fab and the John Palmour materials center — the clearest U.S. “more wafers / more fab starts” pure-play. Belongs under capacity (substrate + fab throughput), not the device-design-win field. Caveat: emerged from Chapter&nbsp;11 in Sep&nbsp;2025 with fresh-start accounting, Renesas equity, and covenant / dilution overhang — still listed on the NYSE as WOLF after reorganization.</p>
+              <p>Scorecard pending — Performance tracker. <a href="https://investor.wolfspeed.com/">Company IR →</a> · <a href="https://www.fidelity.com/research/quote/summary?symbol=WOLF">Fidelity quote →</a></p>
+            </div>
+          </details>
+        </li>
+        <li id="coherent">
+          <details class="co">
+            <summary><span class="name">Coherent</span> <span class="ticker">COHR</span></summary>
+            <div class="body">
+              <p>Merchant SiC substrates and epitaxial wafers (including 200&nbsp;mm epi shipments). Capacity / materials exposure without competing as a power-device brand — fits this field, not Infineon/STM-style design wins. Caveat: lasers, networking, and other materials dilute pure SiC torque; wafer demand still swings with EV cycles even as AI power adds a new pull.</p>
+              <p>Scorecard pending — Performance tracker. <a href="https://www.coherent.com/company/investor-relations">Company IR →</a> · <a href="https://www.fidelity.com/research/quote/summary?symbol=COHR">Fidelity quote →</a></p>
+            </div>
+          </details>
+        </li>
+        <li id="onsemi">
+          <details class="co">
+            <summary><span class="name">onsemi</span> <span class="ticker">ON</span></summary>
+            <div class="body">
+              <p>Captive end-to-end SiC: boule growth (e.g. Hudson, NH), epi, and device fabs — investment story often framed as securing wafer/fab capacity for auto, industrial, and AI power. Listed here for capacity scale, not as a substitute for the Infineon/STM device cards. Caveat: also sells finished devices (cross-theme); Czech 200&nbsp;mm expansion timing has faced incentive / strategy uncertainty after the 2024–2025 announcements.</p>
+              <p>Scorecard pending — Performance tracker. <a href="https://investor.onsemi.com/">Company IR →</a> · <a href="https://www.fidelity.com/research/quote/summary?symbol=ON">Fidelity quote →</a></p>
+            </div>
+          </details>
+        </li>
+        <li id="resonac">
+          <details class="co">
+            <summary><span class="name">Resonac</span> <span class="ticker">SHWDY</span></summary>
+            <div class="body">
+              <p>Independent SiC epitaxial-wafer specialist (Tokyo 4004; OTC ADR SHWDY) — sells epi capacity to device makers rather than finished MOSFETs. Clear capacity/materials role. Caveat: conglomerate chemicals mix; 200&nbsp;mm ramp and China substrate competition matter; ADR liquidity is thinner than NYSE names.</p>
+              <p>Scorecard pending — Performance tracker. <a href="https://www.resonac.com/corporate/ir.html">Company IR →</a></p>
+            </div>
+          </details>
+        </li>
+        <li id="rohm">
+          <details class="co">
+            <summary><span class="name">ROHM</span> <span class="ticker">ROHCY</span></summary>
+            <div class="body">
+              <p>Owns SiCrystal (SiC substrates) plus captive SiC device fabs in Japan — vertical capacity from crystal to chip (Tokyo 6963; OTC ADR ROHCY). Belongs under capacity for the substrate + fab footprint; device content overlaps the Infineon/STM lane conceptually but is not scored there yet. Caveat: EV SiC demand softness can idle capacity; Japan ADR liquidity and conglomerate mix.</p>
+              <p>Scorecard pending — Performance tracker. <a href="https://www.rohm.com/investor-relations">Company IR →</a></p>
+            </div>
+          </details>
+        </li>
+        <li id="disco">
+          <details class="co">
+            <summary><span class="name">DISCO</span> <span class="ticker">6146.T</span></summary>
+            <div class="body">
+              <p>Specialty wafering equipment — dicing, grinding, polishing — including hard SiC substrates that standard silicon tools struggle with. Capacity-enabling picks-and-shovels (Tokyo 6146), not burn-in (see <a href="sic-burn-in.html">AEHR / Cohu</a>) and not devices. Caveat: broad semi-equipment cycle; SiC is a growth slice, not the whole P&amp;L.</p>
+              <p>Scorecard pending — Performance tracker. <a href="https://www.disco.co.jp/eg/ir/">Company IR →</a></p>
+            </div>
+          </details>
+        </li>
+      </ul>
+      <p style="margin-top:10px;font-size:0.88rem;">Cross-links only (already on <a href="#field-sic">devices</a>): Infineon (IFNNY) and STMicroelectronics (STM) also build captive SiC fab capacity — tracked there for design-win content, not rescored here. Avoided private-only substrate houses (e.g. SK Siltron CSS).</p>
     </section>
 
     <section class="card" id="field-rack">
