@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-02",
+  "version": "2026-10-02b",
   "disclaimer": "Informational October 2026 baseline. Not investment advice.",
   "stages": [
     {
@@ -20,8 +20,8 @@
         },
         {
           "name": "Samsung C&T",
-          "ticker": "",
-          "note": "Builds Samsung’s own fabs and cleanrooms"
+          "ticker": "028260.KS",
+          "note": "Builds Samsung's own fabs and cleanrooms"
         }
       ]
     },
@@ -38,14 +38,25 @@
         },
         {
           "name": "Samsung Foundry",
-          "ticker": "",
-          "note": "Advanced-node alternative capacity"
+          "ticker": "005930.KS",
+          "note": "Advanced-node alternative capacity (parent Samsung Electronics)"
         },
         {
           "name": "Intel Foundry",
           "ticker": "INTC",
           "note": "Internal + external advanced logic push",
           "fidelity_symbol": "INTC"
+        },
+        {
+          "name": "SMIC",
+          "ticker": "0981.HK",
+          "note": "China's largest pure-play foundry; also 688981.SS",
+          "fidelity_symbol": "SMICY"
+        },
+        {
+          "name": "Hua Hong Semiconductor",
+          "ticker": "1347.HK",
+          "note": "China mature-node foundry; also 688347.SS"
         }
       ]
     },
@@ -74,7 +85,8 @@
         {
           "name": "SK Hynix",
           "ticker": "000660.KS",
-          "note": "Historically lead HBM supplier"
+          "note": "Historically lead HBM supplier U.S. ADR SKHY (Nasdaq since July 2026)",
+          "fidelity_symbol": "SKHY"
         },
         {
           "name": "Micron",
@@ -175,7 +187,7 @@
         {
           "name": "Wolfspeed",
           "ticker": "WOLF",
-          "note": "SiC wafers and devices — execution/balance-sheet risk",
+          "note": "SiC wafers and devices — Chapter 11 filed 2025-06-30, emerged 2025-09-29; old shares cancelled (pre-emergence price history not comparable)",
           "fidelity_symbol": "WOLF"
         },
         {
@@ -198,6 +210,11 @@
           "name": "Electrification (SST systems)",
           "ticker": "",
           "note": "Cross-link: site SST and campus power path — do not double-count here"
+        },
+        {
+          "name": "Innoscience",
+          "ticker": "2577.HK",
+          "note": "GaN IDM; named among NVIDIA 800 V DC silicon partners"
         }
       ],
       "scarcity": "soon"
@@ -221,7 +238,7 @@
         },
         {
           "name": "GlobalWafers",
-          "ticker": "",
+          "ticker": "6488.TWO",
           "note": "Silicon wafers; U.S. expansion"
         },
         {
@@ -230,7 +247,7 @@
           "note": "Unlisted / private; Doosan bought ~70.6% from SK Inc. (closed 2026-07-31). Si and SiC wafers."
         },
         {
-          "name": "Coherent (II-VI)",
+          "name": "Coherent (formerly II-VI)",
           "ticker": "COHR",
           "note": "SiC substrates / epitaxy",
           "fidelity_symbol": "COHR",
@@ -240,8 +257,13 @@
         {
           "name": "Wolfspeed",
           "ticker": "WOLF",
-          "note": "SiC wafer capacity (200 mm pivot)",
+          "note": "SiC wafers and devices — Chapter 11 filed 2025-06-30, emerged 2025-09-29; old shares cancelled (pre-emergence price history not comparable)",
           "fidelity_symbol": "WOLF"
+        },
+        {
+          "name": "Siltronic",
+          "ticker": "WAF.DE",
+          "note": "German premium silicon wafer producer"
         }
       ]
     },
@@ -259,17 +281,37 @@
         {
           "name": "Nikon",
           "ticker": "7731.T",
-          "note": "DUV lithography"
+          "note": "DUV lithography",
+          "fidelity_symbol": "NINOY"
         },
         {
           "name": "Canon",
           "ticker": "7751.T",
-          "note": "Mature-node lithography volume"
+          "note": "Mature-node lithography volume",
+          "fidelity_symbol": "CAJPY"
         },
         {
           "name": "Lasertec",
           "ticker": "6920.T",
-          "note": "EUV mask inspection"
+          "note": "EUV mask inspection",
+          "fidelity_symbol": "LSRCY"
+        },
+        {
+          "name": "Carl Zeiss SMT",
+          "ticker": "",
+          "note": "Sole maker of EUV / High-NA optics for ASML; private (ASML holds 24.9%)"
+        },
+        {
+          "name": "Cymer (ASML)",
+          "ticker": "ASML",
+          "note": "Excimer / EUV light sources inside ASML lithography tools",
+          "fidelity_symbol": "ASML"
+        },
+        {
+          "name": "Gigaphoton (Komatsu)",
+          "ticker": "6301.T",
+          "note": "DUV excimer light sources for lithography",
+          "fidelity_symbol": "KMTUY"
         }
       ]
     },
@@ -293,7 +335,8 @@
         {
           "name": "Tokyo Electron",
           "ticker": "8035.T",
-          "note": "Coat/develop, etch, deposition"
+          "note": "Coat/develop, etch, deposition",
+          "fidelity_symbol": "TELWY"
         },
         {
           "name": "ASM International",
@@ -302,9 +345,15 @@
           "fidelity_symbol": "ASMIY"
         },
         {
-          "name": "SCREEN / Kokusai",
-          "ticker": "",
-          "note": "Clean, coat, epitaxy niches"
+          "name": "SCREEN Holdings",
+          "ticker": "7735.T",
+          "note": "Clean, coat, and wet-process tools",
+          "fidelity_symbol": "DINRF"
+        },
+        {
+          "name": "Kokusai Electric",
+          "ticker": "6525.T",
+          "note": "Batch deposition / epitaxy niches"
         }
       ]
     },
@@ -314,15 +363,15 @@
       "summary": "Ion implantation dopes silicon with precise impurities. Chemical-mechanical planarization (CMP) polishes wafers flat between layers. Wet cleans remove residues so the next lithography step can succeed.",
       "companies": [
         {
-          "name": "Axcelis",
+          "name": "Axcelis Technologies",
           "ticker": "ACLS",
-          "note": "Ion implantation systems",
+          "note": "Ion implantation; merger with Veeco agreed 2025-10-01, shareholders approved Feb 2026, China SAMR pending, close guided 2H 2026 (not closed as of 2026-10-02)",
           "fidelity_symbol": "ACLS"
         },
         {
-          "name": "Veeco",
+          "name": "Veeco Instruments",
           "ticker": "VECO",
-          "note": "Epitaxy / process equipment",
+          "note": "Epitaxy / process equipment; pending combination with Axcelis (close guided 2H 2026, China SAMR pending)",
           "fidelity_symbol": "VECO"
         },
         {
@@ -336,6 +385,17 @@
           "ticker": "7735.T",
           "note": "Wet clean and coat tools",
           "fidelity_symbol": "DINRF"
+        },
+        {
+          "name": "Applied Materials",
+          "ticker": "AMAT",
+          "note": "Leads ion implant (VIISta) and CMP (Reflexion) tools alongside broad WFE franchise",
+          "fidelity_symbol": "AMAT"
+        },
+        {
+          "name": "Ebara",
+          "ticker": "6361.T",
+          "note": "Number-two chemical-mechanical planarization (CMP) tool maker"
         }
       ]
     },
@@ -367,6 +427,12 @@
           "ticker": "NVMI",
           "note": "Dimensional / materials metrology",
           "fidelity_symbol": "NVMI"
+        },
+        {
+          "name": "Lasertec",
+          "ticker": "6920.T",
+          "note": "EUV mask inspection; also SiC substrate / epi defect inspection on the power path",
+          "fidelity_symbol": "LSRCY"
         }
       ]
     },
@@ -383,7 +449,7 @@
         {
           "name": "JSR",
           "ticker": "",
-          "note": "Photoresist and specialty chemistries"
+          "note": "Private (Japan Investment Corp.) after 2024 tender offer; delisted — photoresist and specialty chemistries"
         },
         {
           "name": "Qnity Electronics",
@@ -405,6 +471,24 @@
           "name": "Ecolab / Kurita",
           "ticker": "",
           "note": "Ultrapure water systems"
+        },
+        {
+          "name": "Shin-Etsu Chemical (photoresists)",
+          "ticker": "4063.T",
+          "note": "Top-tier EUV/DUV photoresist and related materials (also wafer leader)",
+          "fidelity_symbol": "SHECY"
+        },
+        {
+          "name": "Merck KGaA",
+          "ticker": "MRK.DE",
+          "note": "Electronic materials (photoresists, CMP, specialty gases via Versum heritage)",
+          "fidelity_symbol": "MKKGY"
+        },
+        {
+          "name": "Resonac",
+          "ticker": "4004.T",
+          "note": "CMP slurries, electronic gases, packaging films (NCF/underfill)",
+          "fidelity_symbol": "SHWDY"
         }
       ]
     },
@@ -464,9 +548,46 @@
           "ticker": "2802.T",
           "note": "Near-monopoly ABF build-up film for high-end substrates",
           "fidelity_symbol": "AJINY"
+        },
+        {
+          "name": "Kinsus Interconnect",
+          "ticker": "3189.TW",
+          "note": "ABF / package substrate supplier"
+        },
+        {
+          "name": "Nan Ya PCB",
+          "ticker": "8046.TW",
+          "note": "ABF package substrate maker"
+        },
+        {
+          "name": "AT&S",
+          "ticker": "ATS.VI",
+          "note": "European high-end package substrate maker"
+        },
+        {
+          "name": "JCET Group",
+          "ticker": "600584.SS",
+          "note": "China's largest OSAT — chiplets and HBM-related packaging"
+        },
+        {
+          "name": "Tongfu Microelectronics",
+          "ticker": "002156.SZ",
+          "note": "China OSAT building multilayer / chiplet stacking capacity"
+        },
+        {
+          "name": "ASMPT",
+          "ticker": "0522.HK",
+          "note": "TC / hybrid bonders for advanced packaging",
+          "fidelity_symbol": "ASMVY"
+        },
+        {
+          "name": "Kulicke & Soffa",
+          "ticker": "KLIC",
+          "note": "Fluxless TC bonding for advanced packaging",
+          "fidelity_symbol": "KLIC"
         }
       ],
-      "scarcity": null
+      "scarcity": "now"
     },
     {
       "id": "hbm-stack",
@@ -476,7 +597,8 @@
         {
           "name": "SK Hynix",
           "ticker": "000660.KS",
-          "note": "HBM stack volume"
+          "note": "HBM stack volume U.S. ADR SKHY (Nasdaq since July 2026)",
+          "fidelity_symbol": "SKHY"
         },
         {
           "name": "Micron",
@@ -488,11 +610,6 @@
           "name": "Samsung",
           "ticker": "005930.KS",
           "note": "HBM stacking / catch-up"
-        },
-        {
-          "name": "TSMC / ASE / Amkor",
-          "ticker": "",
-          "note": "Attach and package with logic"
         },
         {
           "name": "DISCO",
@@ -510,6 +627,36 @@
           "name": "Hanmi Semiconductor",
           "ticker": "042700.KS",
           "note": "Leading HBM thermo-compression bonder supplier"
+        },
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "Attach and package HBM with logic (CoWoS-class)",
+          "fidelity_symbol": "TSM"
+        },
+        {
+          "name": "ASE Technology",
+          "ticker": "ASX",
+          "note": "OSAT attach / advanced packaging",
+          "fidelity_symbol": "ASX"
+        },
+        {
+          "name": "Amkor Technology",
+          "ticker": "AMKR",
+          "note": "OSAT attach / advanced packaging",
+          "fidelity_symbol": "AMKR"
+        },
+        {
+          "name": "ASMPT",
+          "ticker": "0522.HK",
+          "note": "Thermo-compression / hybrid bonders for HBM and advanced packaging",
+          "fidelity_symbol": "ASMVY"
+        },
+        {
+          "name": "Kulicke & Soffa",
+          "ticker": "KLIC",
+          "note": "Fluxless thermo-compression bonding for advanced packaging",
+          "fidelity_symbol": "KLIC"
         }
       ]
     },
@@ -532,7 +679,7 @@
         },
         {
           "name": "GlobalWafers",
-          "ticker": "",
+          "ticker": "6488.TWO",
           "note": "Silicon wafers for memory and logic"
         },
         {
@@ -593,7 +740,8 @@
         {
           "name": "Advantest",
           "ticker": "6857.T",
-          "note": "Memory / AI-oriented automatic test equipment"
+          "note": "Memory / AI-oriented automatic test equipment",
+          "fidelity_symbol": "ATEYY"
         },
         {
           "name": "Teradyne",
@@ -675,17 +823,25 @@
         {
           "name": "Dai Nippon Printing (DNP)",
           "ticker": "7912.T",
-          "note": "Advanced / EUV masks"
+          "note": "Advanced / EUV masks",
+          "fidelity_symbol": "DNPLY"
         },
         {
           "name": "Hoya",
           "ticker": "7741.T",
-          "note": "Mask blanks / optical materials"
+          "note": "Mask blanks / optical materials",
+          "fidelity_symbol": "HOCPY"
         },
         {
-          "name": "Toppan / Tekscend",
-          "ticker": "",
-          "note": "Reticle / EUV mask manufacturing"
+          "name": "Tekscend Photomask",
+          "ticker": "429A.T",
+          "note": "Formerly Toppan Photomask; TSE Prime listed 2025-10-16 — reticle / EUV mask manufacturing"
+        },
+        {
+          "name": "AGC",
+          "ticker": "5201.T",
+          "note": "EUV mask blanks (one of two main suppliers with Hoya)",
+          "fidelity_symbol": "ASGLY"
         }
       ]
     },
@@ -804,7 +960,29 @@
       "summary": "Lasers, modulators, and detectors are assembled into optical engines and modules — fiber attach, alignment, and hermetic packaging differ from logic CoWoS. Finished optical interconnect products are also mapped under Hardware / Photonics.",
       "companies": [
         {
-          "name": "Coherent",
+          "name": "Fabrinet",
+          "ticker": "FN",
+          "note": "Optical engine and module assembly",
+          "fidelity_symbol": "FN"
+        },
+        {
+          "name": "InnoLight",
+          "ticker": "300308.SZ",
+          "note": "Optical transceiver / engine modules"
+        },
+        {
+          "name": "TFC Optical Communications",
+          "ticker": "300394.SZ",
+          "note": "Optical components and assembly"
+        },
+        {
+          "name": "Jabil",
+          "ticker": "JBL",
+          "note": "Electronics manufacturing including optical modules",
+          "fidelity_symbol": "JBL"
+        },
+        {
+          "name": "Coherent (formerly II-VI)",
           "ticker": "COHR",
           "note": "Optical engines and laser packaging",
           "fidelity_symbol": "COHR"
@@ -814,16 +992,6 @@
           "ticker": "LITE",
           "note": "Optical module / engine assembly",
           "fidelity_symbol": "LITE"
-        },
-        {
-          "name": "Sivers Semiconductors",
-          "ticker": "SIVE",
-          "note": "InP laser-array packaging path"
-        },
-        {
-          "name": "Amkor / ASE",
-          "ticker": "",
-          "note": "OSAT capacity that can handle optical / advanced modules"
         },
         {
           "name": "See Hardware / Photonics",
@@ -838,14 +1006,28 @@
       "summary": "Opto test checks laser power, wavelength, modulation, and link bit-error rates. It is a different floor from logic automatic test equipment, though some ATE vendors overlap.",
       "companies": [
         {
-          "name": "Advantest / Teradyne",
-          "ticker": "",
-          "note": "ATE platforms adapted to high-speed / optical paths"
+          "name": "Keysight Technologies",
+          "ticker": "KEYS",
+          "note": "High-speed / optical test and measurement",
+          "fidelity_symbol": "KEYS"
         },
         {
-          "name": "Coherent / Lumentum (in-house)",
-          "ticker": "",
-          "note": "Module makers run extensive optical test"
+          "name": "Viavi Solutions",
+          "ticker": "VIAV",
+          "note": "Optical network and component test",
+          "fidelity_symbol": "VIAV"
+        },
+        {
+          "name": "FormFactor",
+          "ticker": "FORM",
+          "note": "Probe cards and wafer probe for photonic devices",
+          "fidelity_symbol": "FORM"
+        },
+        {
+          "name": "Aehr Test Systems",
+          "ticker": "AEHR",
+          "note": "Wafer/package burn-in also used on opto / compound paths",
+          "fidelity_symbol": "AEHR"
         },
         {
           "name": "See Hardware / Photonics",
@@ -860,15 +1042,27 @@
       "summary": "Fiber, specialty glasses, mask blanks, and compound-semiconductor precursors feed photonics lines. Photomask houses (Photronics, DNP, Hoya) also appear on the masks cell.",
       "companies": [
         {
-          "name": "Hoya",
-          "ticker": "7741.T",
-          "note": "Optical materials and mask blanks"
-        },
-        {
           "name": "Corning",
           "ticker": "GLW",
           "note": "Optical fiber and specialty glass",
           "fidelity_symbol": "GLW"
+        },
+        {
+          "name": "Fujikura",
+          "ticker": "5803.T",
+          "note": "Optical fiber and cable"
+        },
+        {
+          "name": "Shin-Etsu Chemical (preform)",
+          "ticker": "4063.T",
+          "note": "Optical-fiber preform materials",
+          "fidelity_symbol": "SHECY"
+        },
+        {
+          "name": "Hoya",
+          "ticker": "7741.T",
+          "note": "Optical materials and mask blanks",
+          "fidelity_symbol": "HOCPY"
         },
         {
           "name": "Photronics",
@@ -903,7 +1097,7 @@
         {
           "name": "Wolfspeed",
           "ticker": "WOLF",
-          "note": "SiC substrates + devices; Mohawk Valley 200 mm focus",
+          "note": "SiC wafers and devices — Chapter 11 filed 2025-06-30, emerged 2025-09-29; old shares cancelled (pre-emergence price history not comparable)",
           "fidelity_symbol": "WOLF"
         },
         {
@@ -934,6 +1128,12 @@
           "fidelity_symbol": "COHR",
           "not_priced_in": true,
           "demand_detail": "Substrate and epi quality gate every SiC device fab. If SST and 800 V stages pull more high-voltage SiC through 2027–2029, materials houses can see demand before device ASP narratives fully re-rate — orientation only."
+        },
+        {
+          "name": "Resonac",
+          "ticker": "4004.T",
+          "note": "Merchant SiC epitaxy and related electronic materials",
+          "fidelity_symbol": "SHWDY"
         }
       ],
       "scarcity": "now"
@@ -946,7 +1146,7 @@
         {
           "name": "Wolfspeed",
           "ticker": "WOLF",
-          "note": "SiC wafers and devices — 200 mm pivot",
+          "note": "SiC wafers and devices — Chapter 11 filed 2025-06-30, emerged 2025-09-29; old shares cancelled (pre-emergence price history not comparable)",
           "fidelity_symbol": "WOLF"
         },
         {
@@ -955,7 +1155,7 @@
           "note": "Unlisted / private SiC (and Si) wafers; Doosan bought ~70.6% (closed 2026-07-31)"
         },
         {
-          "name": "Coherent (II-VI)",
+          "name": "Coherent (formerly II-VI)",
           "ticker": "COHR",
           "note": "SiC substrates / epitaxy materials",
           "fidelity_symbol": "COHR"
@@ -970,6 +1170,11 @@
           "name": "STMicroelectronics / onsemi / Infineon",
           "ticker": "",
           "note": "Device makers that also secure substrate supply"
+        },
+        {
+          "name": "SICC (Shandong Tianyue)",
+          "ticker": "2631.HK",
+          "note": "Top-tier SiC substrate supplier; also 688234.SS"
         }
       ]
     },
@@ -999,7 +1204,8 @@
         {
           "name": "Tokyo Electron",
           "ticker": "8035.T",
-          "note": "Coat/develop, etch, deposition"
+          "note": "Coat/develop, etch, deposition",
+          "fidelity_symbol": "TELWY"
         },
         {
           "name": "Veeco",
@@ -1015,10 +1221,10 @@
       "summary": "SiC and GaN dies are packaged as discretes or power modules that sit in rack power stages and solid-state transformer conversion. Thermal design and module assembly matter as much as the bare die.",
       "companies": [
         {
-          "name": "STMicroelectronics",
-          "ticker": "STM",
-          "note": "SiC devices and modules",
-          "fidelity_symbol": "STM"
+          "name": "Infineon",
+          "ticker": "IFX.DE",
+          "note": "Power modules spanning SiC/GaN and silicon",
+          "fidelity_symbol": "IFNNY"
         },
         {
           "name": "onsemi",
@@ -1027,16 +1233,21 @@
           "fidelity_symbol": "ON"
         },
         {
-          "name": "Infineon",
-          "ticker": "IFX.DE",
-          "note": "Power modules spanning SiC/GaN and silicon",
-          "fidelity_symbol": "IFNNY"
+          "name": "STMicroelectronics",
+          "ticker": "STM",
+          "note": "SiC devices and modules",
+          "fidelity_symbol": "STM"
         },
         {
-          "name": "Wolfspeed",
-          "ticker": "WOLF",
-          "note": "SiC devices into module customers",
-          "fidelity_symbol": "WOLF"
+          "name": "Mitsubishi Electric",
+          "ticker": "6503.T",
+          "note": "SiC power modules for industrial and power conversion",
+          "fidelity_symbol": "MIELY"
+        },
+        {
+          "name": "Semikron Danfoss",
+          "ticker": "",
+          "note": "Private power-module specialist (SiC/silicon modules)"
         },
         {
           "name": "See Electrification",
@@ -1060,7 +1271,8 @@
         {
           "name": "Advantest",
           "ticker": "6857.T",
-          "note": "Automatic test equipment"
+          "note": "Automatic test equipment",
+          "fidelity_symbol": "ATEYY"
         },
         {
           "name": "Teradyne",
@@ -1109,7 +1321,7 @@
           "name": "Advantest",
           "ticker": "6857.T",
           "note": "Memory / AI-oriented ATE",
-          "fidelity_symbol": "6857.T"
+          "fidelity_symbol": "ATEYY"
         },
         {
           "name": "Teradyne",
@@ -1151,7 +1363,7 @@
     "marks": {
       "scarcity_now": "red thick frame — extreme demand / tight capacity now",
       "scarcity_soon": "yellow thick frame — expected bottleneck as 800V/SST ramps",
-      "rating_strong": "dark green ticker — seed BUY with clear AI/SiC thesis (orientation)",
+      "rating_strong": "dark green ticker — strong-franchise study mark (AI/SiC orientation only; not a buy recommendation)",
       "not_priced_in": "rainbow ticker — future demand story may be under-reflected; click for timing/why",
       "fidelity": "tickers link to Fidelity quote dashboard"
     },
