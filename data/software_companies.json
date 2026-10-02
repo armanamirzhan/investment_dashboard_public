@@ -9,18 +9,18 @@
     "exposure": "Core AI",
     "report": null,
     "public": false,
-    "thesis": "Leading frontier AI developer (GPT-4, o1). $80B+ valuation, $3.4B+ revenue run-rate. Exclusive Microsoft infrastructure partnership.",
+    "thesis": "Frontier generative models and ChatGPT/API. ~$70B ARR (late Sep 2026); multi-cloud (Microsoft + Amazon $50B completed). Seeking large private raise near ~$1.4T; no 2026 IPO. Owns Neptune.ai.",
     "catalysts": [
-      "GPT-5 / next-gen models",
-      "Enterprise adoption acceleration",
-      "Microsoft partnership deepening"
+      "Next frontier models",
+      "Multi-cloud capacity deals",
+      "Agent products"
     ],
     "risks": [
-      "Heavy infrastructure costs",
+      "Capital intensity",
       "Regulatory scrutiny",
-      "Competition from open-source models"
+      "Competition"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": null,
@@ -32,41 +32,41 @@
     "exposure": "Core AI",
     "report": null,
     "public": false,
-    "thesis": "Constitutional AI developer behind Claude models. $20B+ valuation with significant backing from Google and Amazon.",
+    "thesis": "Claude models; constitutional-AI research agenda. Confidential IPO filing reported Sep 2026 \u2014 IPO pending, no ticker yet. Large cloud backers.",
     "catalysts": [
-      "Claude model improvements",
-      "Enterprise adoption",
-      "Safety-first differentiation"
+      "IPO timing",
+      "Claude model upgrades",
+      "Enterprise adoption"
     ],
     "risks": [
       "Capital intensity",
-      "Competition from OpenAI/Google",
-      "Path to profitability"
+      "Competition",
+      "IPO market window"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
-    "ticker": null,
-    "name": "xAI",
+    "ticker": "SPCX",
+    "name": "SpaceXAI (xAI)",
     "sector": "software",
     "sub_sector": "AI Model Developers",
     "rating": null,
     "emoji": null,
     "exposure": "Core AI",
     "report": null,
-    "public": false,
-    "thesis": "Elon Musk's AI venture developing Grok models. $24B valuation. Building massive Colossus datacenter in Memphis.",
+    "public": true,
+    "thesis": "Formerly xAI; now SpaceXAI, a division of SpaceX (Nasdaq SPCX since Jun 2026). Grok models + Colossus training buildouts; X distribution.",
     "catalysts": [
-      "Grok model development",
-      "Colossus infrastructure scale",
-      "X platform integration"
+      "Grok upgrades",
+      "Colossus scale",
+      "SpaceX AI cloud rentals"
     ],
     "risks": [
-      "Late market entry",
-      "Execution risk on infrastructure",
-      "Talent competition"
+      "Integration under SpaceX",
+      "Competition",
+      "Capex intensity"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": null,
@@ -290,18 +290,17 @@
     "exposure": "Core AI Infra",
     "report": null,
     "public": false,
-    "thesis": "Central hub for open-source ML models, datasets, and inference. $2B valuation. Essential infrastructure for AI development.",
+    "thesis": "Open hub for models/datasets/libraries + hosted inference. Pending NVIDIA acquisition (~$12.9B, announced 2026-09-03); deal not closed.",
     "catalysts": [
-      "Model hub dominance",
-      "Enterprise tier growth",
-      "Inference endpoints monetization"
+      "NVIDIA deal close",
+      "Hub growth",
+      "Enterprise Hub"
     ],
     "risks": [
-      "Monetization challenges",
-      "Competition from cloud providers",
-      "Open-source sustainability"
+      "Deal failure / regulatory",
+      "Competition from other hubs"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": null,
@@ -327,27 +326,25 @@
     "updated": "2026-04-27"
   },
   {
-    "ticker": null,
-    "name": "Weights & Biases",
+    "ticker": "CRWV",
+    "name": "Weights & Biases (CoreWeave)",
     "sector": "software",
     "sub_sector": "AI Infrastructure & MLOps",
     "rating": null,
     "emoji": null,
     "exposure": "MLOps",
     "report": null,
-    "public": false,
-    "thesis": "ML experiment tracking and model optimization platform. $1B+ valuation, $200M+ ARR.",
+    "public": true,
+    "thesis": "Experiment tracking / MLOps tooling; acquired by CoreWeave (~$1.7B, 2025). Continues as W&B brand inside CoreWeave.",
     "catalysts": [
-      "Enterprise MLOps adoption",
-      "Platform stickiness",
-      "AI development tool demand"
+      "CoreWeave cloud integration",
+      "Enterprise MLOps spend"
     ],
     "risks": [
-      "Open-source alternatives",
-      "Cloud provider competition",
-      "Market size ceiling"
+      "Parent concentration",
+      "Competition from cloud-native tools"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": null,
@@ -429,18 +426,17 @@
     "exposure": "AI Chip Design",
     "report": "reports/SNPS_Synopsys.html",
     "public": true,
-    "thesis": "Dominant EDA tools provider critical to AI chip design. $80B market cap, $6.6B revenue. AI-powered chip design tools.",
+    "thesis": "Leading EDA + semiconductor IP. Ansys multiphysics simulation folded in after Jul 2025 acquisition (ANSS delisted).",
     "catalysts": [
-      "AI chip design complexity driving EDA demand",
-      "Ansys acquisition synergies",
-      "IP licensing growth"
+      "Ansys integration",
+      "AI-chip design spend",
+      "IP attach"
     ],
     "risks": [
-      "Regulatory scrutiny on Ansys deal",
-      "Customer concentration",
-      "Cyclical chip design budgets"
+      "Integration execution",
+      "Competition from Cadence/Siemens EDA"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "CDNS",
@@ -514,26 +510,290 @@
     "updated": "2026-04-27"
   },
   {
-    "ticker": null,
-    "name": "Cursor",
+    "ticker": "SPCX",
+    "name": "Cursor (SpaceX)",
     "sector": "software",
     "sub_sector": "Vertical AI Applications",
     "rating": null,
     "emoji": null,
     "exposure": "AI Dev Tools",
     "report": null,
-    "public": false,
-    "thesis": "AI-native code editor gaining rapid developer adoption. ~$100M+ valuation. Competing with GitHub Copilot.",
+    "public": true,
+    "thesis": "AI-native code editor (Anysphere); SpaceX acquisition closed Aug 2026. Parent SPCX. OpenAI cut model access after the deal.",
     "catalysts": [
-      "Developer adoption acceleration",
-      "Enterprise tier growth",
-      "AI coding revolution"
+      "SpaceX distribution",
+      "Enterprise coding agents"
     ],
     "risks": [
-      "GitHub Copilot competition",
-      "Monetization uncertainty",
-      "Platform risk"
+      "Model-provider access",
+      "Competition from Copilot / peers"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "GOOGL",
+    "name": "Google DeepMind (Alphabet)",
+    "sector": "software",
+    "sub_sector": "AI Model Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Frontier lab (Gemini) inside Alphabet; Google Cloud + consumer distribution.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "META",
+    "name": "Meta (Llama / Meta Superintelligence Labs)",
+    "sector": "software",
+    "sub_sector": "AI Model Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Leading open-weight lab (Llama) and Meta Superintelligence Labs; large AI infra buyer.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "DDOG",
+    "name": "Datadog",
+    "sector": "software",
+    "sub_sector": "AI Platforms & Enterprise",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Observability + AI observability; acquired Adaptive ML (Jul 2026).",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "MDB",
+    "name": "MongoDB",
+    "sector": "software",
+    "sub_sector": "AI Platforms & Enterprise",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Document DB + vector store for AI apps.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "ESTC",
+    "name": "Elastic",
+    "sector": "software",
+    "sub_sector": "AI Platforms & Enterprise",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Search, vector DB, and security analytics for RAG and observability.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "PANW",
+    "name": "Palo Alto Networks",
+    "sector": "software",
+    "sub_sector": "AI Security",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Largest security platform; AI-security consolidator (Protect AI, CyberArk, Chronosphere).",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "ZS",
+    "name": "Zscaler",
+    "sector": "software",
+    "sub_sector": "AI Security",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Zero-trust and AI-traffic security platform.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "NET",
+    "name": "Cloudflare",
+    "sector": "software",
+    "sub_sector": "AI Security",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Edge security, AI crawler control, Workers AI; owns Replicate.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "RXRX",
+    "name": "Recursion Pharmaceuticals",
+    "sector": "software",
+    "sub_sector": "Vertical AI Applications",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "AI drug discovery; absorbed Exscientia (EXAI delisted Nov 2024).",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "TEM",
+    "name": "Tempus AI",
+    "sector": "software",
+    "sub_sector": "Vertical AI Applications",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "AI/data platform for oncology and precision medicine. Nasdaq TEM.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "FIG",
+    "name": "Figma",
+    "sector": "software",
+    "sub_sector": "AI Platforms & Enterprise",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Collaborative design with generative/AI features. NYSE FIG.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "CBRS",
+    "name": "Cerebras Systems",
+    "sector": "software",
+    "sub_sector": "AI Inference Platforms",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Wafer-scale AI systems + software stack. Nasdaq CBRS (May 2026 IPO).",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "ARM",
+    "name": "Arm Holdings",
+    "sector": "software",
+    "sub_sector": "EDA & Chip Design",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "CPU architecture licensing + AI/ML partner tooling. Nasdaq ARM.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "2513.HK",
+    "name": "Z.ai (Zhipu AI)",
+    "sector": "software",
+    "sub_sector": "AI Model Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "ChatGLM-line models; HKEX-listed as Z.ai (2513) since Jan 2026.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
   }
 ]
