@@ -5,58 +5,54 @@
 <rect x="20" y="16" width="1480" height="768" rx="14" fill="#ffffff" stroke="#c5d0de" stroke-width="1.5"/>
 <text x="52" y="52" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="25" font-weight="700" fill="#1a2332">Scale-up optical I/O — light on the GPU package</text>
 <text x="52" y="78" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" fill="#5a6a7e">Moving bits between GPUs with on-package optics instead of copper cables for that hop</text>
-<line x1="52" y1="336" x2="1458" y2="336" stroke="#2b6cb0" stroke-width="3.5" stroke-linecap="round"/>
-<polygon points="1468,336 1452,328 1452,344" fill="#2b6cb0"/>
-<line x1="154.98181818184162" y1="327" x2="154.98181818184162" y2="345" stroke="#2b6cb0" stroke-width="2"/>
-<text x="154.98181818184162" y="366" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2025</text>
-<line x1="412.436363636387" y1="327" x2="412.436363636387" y2="345" stroke="#2b6cb0" stroke-width="2"/>
-<text x="412.436363636387" y="366" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2026</text>
-<line x1="669.8909090909325" y1="327" x2="669.8909090909325" y2="345" stroke="#2b6cb0" stroke-width="2"/>
-<text x="669.8909090909325" y="366" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2027</text>
-<line x1="927.345454545478" y1="327" x2="927.345454545478" y2="345" stroke="#2b6cb0" stroke-width="2"/>
-<text x="927.345454545478" y="366" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2028</text>
-<line x1="1184.8000000000234" y1="327" x2="1184.8000000000234" y2="345" stroke="#2b6cb0" stroke-width="2"/>
-<text x="1184.8000000000234" y="366" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2029</text>
-<line x1="1442.2545454545689" y1="327" x2="1442.2545454545689" y2="345" stroke="#2b6cb0" stroke-width="2"/>
-<text x="1442.2545454545689" y="366" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2030</text>
-<line x1="193.60000000004683" y1="336" x2="193.60000000004683" y2="241" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
-<circle cx="193.60000000004683" cy="336" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
-<rect x="59.60000000004683" y="140" width="268" height="101" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
-<text x="69.60000000004683" y="157" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2025</text>
-<text x="69.60000000004683" y="172" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Ayar Labs TeraPHY + SuperNova,</text>
-<text x="69.60000000004683" y="186.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Lightmatter Passage, Celestial AI</text>
-<text x="69.60000000004683" y="201.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">photonic fabric</text>
-<text x="69.60000000004683" y="215.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Optical Fiber Communication Conference</text>
-<text x="69.60000000004683" y="228.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">(OFC) / Hot Chips</text>
-<line x1="463.92727272730787" y1="336" x2="463.92727272730787" y2="241" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
-<circle cx="463.92727272730787" cy="336" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
-<rect x="329.92727272730787" y="168" width="268" height="73" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
-<text x="339.92727272730787" y="185" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2026</text>
-<text x="339.92727272730787" y="200" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Ayar customer integration;</text>
-<text x="339.92727272730787" y="214.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">production late 2026–2027</text>
-<text x="339.92727272730787" y="229.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">NVIDIA–Lumentum/Coherent laser ties</text>
-<rect x="669.8909090909325" y="300" width="514.9090909090909" height="12" rx="4" fill="#0d9488" opacity="0.38"/>
-<line x1="927.3454545454779" y1="336" x2="927.3454545454779" y2="241" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
-<circle cx="927.3454545454779" cy="336" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
-<rect x="793.3454545454779" y="183" width="268" height="58" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
-<text x="803.3454545454779" y="200" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2027–2029</text>
-<text x="803.3454545454779" y="215" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Vendor-optimistic window</text>
-<text x="803.3454545454779" y="229.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Suppliers pitch volume earlier</text>
-<line x1="1094.690909090956" y1="336" x2="1094.690909090956" y2="161" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
-<circle cx="1094.690909090956" cy="336" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
-<rect x="960.690909090956" y="90" width="268" height="71" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
-<text x="970.690909090956" y="107" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">Late 2028–2029</text>
-<text x="970.690909090956" y="122" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">SemiAnalysis-style volume timing</text>
-<text x="970.690909090956" y="136.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Copper through much of NVIDIA Rubin</text>
-<text x="970.690909090956" y="149.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">scale-up</text>
-<line x1="1249.1636363636599" y1="336" x2="1249.1636363636599" y2="241" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
-<circle cx="1249.1636363636599" cy="336" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
-<rect x="1115.1636363636599" y="155" width="268" height="86" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
-<text x="1125.1636363636599" y="172" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">Patel / SemiAnalysis</text>
-<text x="1125.1636363636599" y="187" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Scale-up volume late 2028; real</text>
-<text x="1125.1636363636599" y="201.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">scale 2029</text>
-<text x="1125.1636363636599" y="216.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Independent analyst framing of the</text>
-<text x="1125.1636363636599" y="229.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">ramp</text>
+<line x1="52" y1="384" x2="1458" y2="384" stroke="#2b6cb0" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="1468,384 1452,376 1452,392" fill="#2b6cb0"/>
+<line x1="154.98181818184162" y1="375" x2="154.98181818184162" y2="393" stroke="#2b6cb0" stroke-width="2"/>
+<text x="154.98181818184162" y="414" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2025</text>
+<line x1="412.436363636387" y1="375" x2="412.436363636387" y2="393" stroke="#2b6cb0" stroke-width="2"/>
+<text x="412.436363636387" y="414" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2026</text>
+<line x1="669.8909090909325" y1="375" x2="669.8909090909325" y2="393" stroke="#2b6cb0" stroke-width="2"/>
+<text x="669.8909090909325" y="414" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2027</text>
+<line x1="927.345454545478" y1="375" x2="927.345454545478" y2="393" stroke="#2b6cb0" stroke-width="2"/>
+<text x="927.345454545478" y="414" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2028</text>
+<line x1="1184.8000000000234" y1="375" x2="1184.8000000000234" y2="393" stroke="#2b6cb0" stroke-width="2"/>
+<text x="1184.8000000000234" y="414" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2029</text>
+<line x1="1442.2545454545689" y1="375" x2="1442.2545454545689" y2="393" stroke="#2b6cb0" stroke-width="2"/>
+<text x="1442.2545454545689" y="414" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2030</text>
+<line x1="193.60000000004683" y1="384" x2="193.60000000004683" y2="284" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="193.60000000004683" cy="384" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
+<rect x="59.60000000004683" y="183" width="268" height="101" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+<text x="69.60000000004683" y="200" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2025</text>
+<text x="69.60000000004683" y="215" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Ayar Labs TeraPHY + SuperNova,</text>
+<text x="69.60000000004683" y="229.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Lightmatter Passage, Celestial AI</text>
+<text x="69.60000000004683" y="244.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">photonic fabric</text>
+<text x="69.60000000004683" y="258.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Optical Fiber Communication Conference</text>
+<text x="69.60000000004683" y="271.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">(OFC) / Hot Chips</text>
+<line x1="463.92727272730787" y1="384" x2="463.92727272730787" y2="284" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="463.92727272730787" cy="384" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
+<rect x="329.92727272730787" y="198" width="268" height="86" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+<text x="339.92727272730787" y="215" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2026</text>
+<text x="339.92727272730787" y="230" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Ayar customer integration; qualify</text>
+<text x="339.92727272730787" y="244.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">2H 2027, ramp 2028</text>
+<text x="339.92727272730787" y="259.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">CEO Mar 2026; $650M raise;</text>
+<text x="339.92727272730787" y="272.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">NVIDIA–Lumentum/Coherent laser ties</text>
+<rect x="669.8909090909325" y="348" width="514.9090909090909" height="12" rx="4" fill="#0d9488" opacity="0.38"/>
+<line x1="927.3454545454779" y1="384" x2="927.3454545454779" y2="284" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="927.3454545454779" cy="384" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
+<rect x="793.3454545454779" y="226" width="268" height="58" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+<text x="803.3454545454779" y="243" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2027–2029</text>
+<text x="803.3454545454779" y="258" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Vendor-optimistic window</text>
+<text x="803.3454545454779" y="272.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Suppliers pitch volume earlier</text>
+<line x1="1159.0545454545922" y1="384" x2="1159.0545454545922" y2="284" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="1159.0545454545922" cy="384" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
+<rect x="1025.0545454545922" y="172" width="268" height="112" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+<text x="1035.0545454545922" y="189" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">Late 2028–2029</text>
+<text x="1035.0545454545922" y="204" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">SemiAnalysis-style scale-up volume</text>
+<text x="1035.0545454545922" y="218.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">(late 2028; real scale ~2029)</text>
+<text x="1035.0545454545922" y="233.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Copper through much of NVIDIA Rubin</text>
+<text x="1035.0545454545922" y="246.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">scale-up — analyst framing (e.g.</text>
+<text x="1035.0545454545922" y="259.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">SemiAnalysis / Patel-style notes,</text>
+<text x="1035.0545454545922" y="272.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">2025–2026 coverage)</text>
 <rect x="52" y="625" width="1416" height="90" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
 <text x="70" y="651" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" letter-spacing="0.08em">END STATE</text>
 <text x="70" y="675" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="600" fill="#1a2332">GPU serializer/deserializer (SerDes) drives the modulator; an external laser feeds light; no</text>

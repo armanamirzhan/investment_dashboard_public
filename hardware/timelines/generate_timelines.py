@@ -54,7 +54,7 @@ def timeline_svg(
 ) -> str:
     H = height
     pad_l, pad_r = 52, 52
-    axis_y = int(H * 0.42)
+    axis_y = int(H * 0.48)  # more headroom for title vs cards (B-136)
     end_box_y = H - 175
     usable = W - pad_l - pad_r
 
@@ -83,25 +83,24 @@ def timeline_svg(
         items.append((mx, i, m))
     items.sort(key=lambda t: t[0])
 
-    # Greedy row assignment: 3 rows above axis
-    row_last_x = [-9999.0, -9999.0, -9999.0]
-    min_gap = 260.0
+    # Greedy row assignment: 2 rows above axis (3rd row overlapped titles — B-136)
+    row_last_x = [-9999.0, -9999.0]
+    min_gap = 220.0
     row_for: dict[int, int] = {}
     for mx, i, m in items:
         placed = False
-        for r in range(3):
+        for r in range(2):
             if mx - row_last_x[r] >= min_gap:
                 row_for[i] = r
                 row_last_x[r] = mx
                 placed = True
                 break
         if not placed:
-            # pick farthest row
-            r = max(range(3), key=lambda rr: mx - row_last_x[rr])
+            r = max(range(2), key=lambda rr: mx - row_last_x[rr])
             row_for[i] = r
             row_last_x[r] = mx
 
-    row_offset = [95, 175, 255]  # distance above axis for card bottom
+    row_offset = [100, 190]  # distance above axis for card bottom
 
     parts: list[str] = []
     parts.append(
@@ -305,8 +304,8 @@ FIGURES = [
             {
                 "year": "2026",
                 "year_num": 2026.2,
-                "label": "Ayar customer integration; production late 2026–2027",
-                "detail": "NVIDIA–Lumentum/Coherent laser ties",
+                "label": "Ayar customer integration; qualify 2H 2027, ramp 2028",
+                "detail": "CEO Mar 2026; $650M raise; NVIDIA–Lumentum/Coherent laser ties",
             },
             {
                 "year": "2027–2029",
@@ -317,15 +316,9 @@ FIGURES = [
             },
             {
                 "year": "Late 2028–2029",
-                "year_num": 2028.65,
-                "label": "SemiAnalysis-style volume timing",
-                "detail": "Copper through much of NVIDIA Rubin scale-up",
-            },
-            {
-                "year": "Patel / SemiAnalysis",
-                "year_num": 2029.25,
-                "label": "Scale-up volume late 2028; real scale 2029",
-                "detail": "Independent analyst framing of the ramp",
+                "year_num": 2028.9,
+                "label": "SemiAnalysis-style scale-up volume (late 2028; real scale ~2029)",
+                "detail": "Copper through much of NVIDIA Rubin scale-up — analyst framing (e.g. SemiAnalysis / Patel-style notes, 2025–2026 coverage)",
             },
         ],
         "end_state": "GPU serializer/deserializer (SerDes) drives the modulator; an external laser feeds light; no separate switch ASIC for that hop.",
@@ -339,14 +332,20 @@ FIGURES = [
         "year_end": 2030.6,
         "milestones": [
             {
+                "year": "2025",
+                "year_num": 2025.5,
+                "label": "COUPE Gen-1 ~1.6T-class (pluggable context)",
+                "detail": "Early Compact Universal Photonic Engine demos / modules",
+            },
+            {
                 "year": "2026",
                 "year_num": 2026.2,
                 "label": "Substrate-level co-packaged optics (CPO)",
-                "detail": "200 gigabits per second per lane microrings",
+                "detail": "200 gigabits per second per lane microrings; denser engines may include 6.4T-class pathfinding",
             },
             {
-                "year": "~2027",
-                "year_num": 2027.2,
+                "year": "~2026–2027",
+                "year_num":  2026.8,
                 "label": "6.4 terabits per second",
                 "detail": "Next bandwidth step on the COUPE path",
             },

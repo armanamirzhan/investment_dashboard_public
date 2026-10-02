@@ -5,60 +5,68 @@
 <rect x="20" y="16" width="1480" height="788" rx="14" fill="#ffffff" stroke="#c5d0de" stroke-width="1.5"/>
 <text x="52" y="52" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="25" font-weight="700" fill="#1a2332">Co-packaged optics (CPO) for AI scale-out switches</text>
 <text x="52" y="78" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" fill="#5a6a7e">When optics sit next to the switch chip so AI clusters can connect racks at higher bandwidth</text>
-<line x1="52" y1="344" x2="1458" y2="344" stroke="#2b6cb0" stroke-width="3.5" stroke-linecap="round"/>
-<polygon points="1468,344 1452,336 1452,352" fill="#2b6cb0"/>
-<line x1="165.28000000002578" y1="335" x2="165.28000000002578" y2="353" stroke="#2b6cb0" stroke-width="2"/>
-<text x="165.28000000002578" y="374" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2026</text>
-<line x1="448.48000000002577" y1="335" x2="448.48000000002577" y2="353" stroke="#2b6cb0" stroke-width="2"/>
-<text x="448.48000000002577" y="374" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2027</text>
-<line x1="731.6800000000258" y1="335" x2="731.6800000000258" y2="353" stroke="#2b6cb0" stroke-width="2"/>
-<text x="731.6800000000258" y="374" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2028</text>
-<line x1="1014.8800000000257" y1="335" x2="1014.8800000000257" y2="353" stroke="#2b6cb0" stroke-width="2"/>
-<text x="1014.8800000000257" y="374" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2029</text>
-<line x1="1298.0800000000258" y1="335" x2="1298.0800000000258" y2="353" stroke="#2b6cb0" stroke-width="2"/>
-<text x="1298.0800000000258" y="374" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2030</text>
-<line x1="179.4400000000129" y1="344" x2="179.4400000000129" y2="249" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
-<circle cx="179.4400000000129" cy="344" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
-<rect x="54" y="176" width="268" height="73" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
-<text x="64" y="193" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2026</text>
-<text x="64" y="208" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">NVIDIA Quantum-X Photonics</text>
-<text x="64" y="222.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">InfiniBand CPO</text>
-<text x="64" y="237.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">144 ports, 800 gigabits per second</text>
-<line x1="363.52000000003864" y1="344" x2="363.52000000003864" y2="89" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
-<circle cx="363.52000000003864" cy="344" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
-<rect x="229.52000000003864" y="3" width="268" height="86" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
-<text x="239.52000000003864" y="20" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">H2 2026</text>
-<text x="239.52000000003864" y="35" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Spectrum-X Photonics Ethernet on</text>
-<text x="239.52000000003864" y="49.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">TSMC COUPE</text>
-<text x="239.52000000003864" y="64.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Compact Universal Photonic Engine</text>
-<text x="239.52000000003864" y="77.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">(COUPE)</text>
-<line x1="264.4" y1="344" x2="264.4" y2="169" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
-<circle cx="264.4" cy="344" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
-<rect x="130.39999999999998" y="96" width="268" height="73" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
-<text x="140.39999999999998" y="113" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2026</text>
-<text x="140.39999999999998" y="128" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Broadcom 51.2 terabits per second</text>
-<text x="140.39999999999998" y="142.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Bailly (2024)</text>
-<text x="140.39999999999998" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Delta / Micas; Meta validation</text>
-<rect x="165.28000000002578" y="308" width="566.4" height="12" rx="4" fill="#0d9488" opacity="0.38"/>
-<line x1="448.48000000002577" y1="344" x2="448.48000000002577" y2="249" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
-<circle cx="448.48000000002577" cy="344" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
-<rect x="314.48000000002577" y="189" width="268" height="60" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
-<text x="324.48000000002577" y="206" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2026–2028</text>
-<text x="324.48000000002577" y="221" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Becoming mainstream for AI scale-out</text>
-<text x="324.48000000002577" y="235.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">networking</text>
-<rect x="462.6400000000129" y="292" width="339.84000000001294" height="12" rx="4" fill="#0d9488" opacity="0.38"/>
-<line x1="632.5600000000194" y1="344" x2="632.5600000000194" y2="169" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
-<circle cx="632.5600000000194" cy="344" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
-<rect x="498.5600000000194" y="111" width="268" height="58" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
-<text x="508.5600000000194" y="128" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2027–2028</text>
-<text x="508.5600000000194" y="143" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Volume wave</text>
-<text x="508.5600000000194" y="157.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Shipments ramp across vendors</text>
-<line x1="1312.240000000013" y1="344" x2="1312.240000000013" y2="249" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
-<circle cx="1312.240000000013" cy="344" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
-<rect x="1178.240000000013" y="191" width="268" height="58" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
-<text x="1188.240000000013" y="208" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2030</text>
-<text x="1188.240000000013" y="223" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Still ramping</text>
-<text x="1188.240000000013" y="237.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Adoption continues past first wave</text>
+<line x1="52" y1="393" x2="1458" y2="393" stroke="#2b6cb0" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="1468,393 1452,385 1452,401" fill="#2b6cb0"/>
+<line x1="165.28000000002578" y1="384" x2="165.28000000002578" y2="402" stroke="#2b6cb0" stroke-width="2"/>
+<text x="165.28000000002578" y="423" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2026</text>
+<line x1="448.48000000002577" y1="384" x2="448.48000000002577" y2="402" stroke="#2b6cb0" stroke-width="2"/>
+<text x="448.48000000002577" y="423" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2027</text>
+<line x1="731.6800000000258" y1="384" x2="731.6800000000258" y2="402" stroke="#2b6cb0" stroke-width="2"/>
+<text x="731.6800000000258" y="423" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2028</text>
+<line x1="1014.8800000000257" y1="384" x2="1014.8800000000257" y2="402" stroke="#2b6cb0" stroke-width="2"/>
+<text x="1014.8800000000257" y="423" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2029</text>
+<line x1="1298.0800000000258" y1="384" x2="1298.0800000000258" y2="402" stroke="#2b6cb0" stroke-width="2"/>
+<text x="1298.0800000000258" y="423" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2030</text>
+<line x1="179.4400000000129" y1="393" x2="179.4400000000129" y2="203" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="179.4400000000129" cy="393" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
+<rect x="54" y="130" width="268" height="73" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+<text x="64" y="147" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2026</text>
+<text x="64" y="162" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">NVIDIA Quantum-X Photonics</text>
+<text x="64" y="176.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">InfiniBand CPO</text>
+<text x="64" y="191.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">144 ports, 800 gigabits per second</text>
+<line x1="363.52000000003864" y1="393" x2="363.52000000003864" y2="203" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="363.52000000003864" cy="393" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
+<rect x="229.52000000003864" y="117" width="268" height="86" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+<text x="239.52000000003864" y="134" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">H2 2026</text>
+<text x="239.52000000003864" y="149" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Spectrum-X Photonics Ethernet on</text>
+<text x="239.52000000003864" y="163.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">TSMC COUPE</text>
+<text x="239.52000000003864" y="178.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Compact Universal Photonic Engine</text>
+<text x="239.52000000003864" y="191.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">(COUPE)</text>
+<line x1="52.0" y1="393" x2="52.0" y2="293" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="52.0" cy="393" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
+<rect x="54" y="207" width="268" height="86" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+<text x="64" y="224" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2024</text>
+<text x="64" y="239" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Broadcom 51.2 terabits per second</text>
+<text x="64" y="253.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Bailly</text>
+<text x="64" y="268.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">2nd-gen CPO milestone; Delta / Micas;</text>
+<text x="64" y="281.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Meta validation</text>
+<line x1="221.92000000003864" y1="393" x2="221.92000000003864" y2="293" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="221.92000000003864" cy="393" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
+<rect x="87.92000000003864" y="222" width="268" height="71" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+<text x="97.92000000003864" y="239" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">Mar 2026</text>
+<text x="97.92000000003864" y="254" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Broadcom Tomahawk 6-Davisson 102.4T</text>
+<text x="97.92000000003864" y="268.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">3rd-gen CPO; TH6 volume from</text>
+<text x="97.92000000003864" y="281.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">~2026-03-12</text>
+<rect x="165.28000000002578" y="357" width="566.4" height="12" rx="4" fill="#0d9488" opacity="0.38"/>
+<line x1="448.48000000002577" y1="393" x2="448.48000000002577" y2="293" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="448.48000000002577" cy="393" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
+<rect x="314.48000000002577" y="233" width="268" height="60" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+<text x="324.48000000002577" y="250" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2026–2028</text>
+<text x="324.48000000002577" y="265" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Becoming mainstream for AI scale-out</text>
+<text x="324.48000000002577" y="279.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">networking</text>
+<rect x="462.6400000000129" y="341" width="339.84000000001294" height="12" rx="4" fill="#0d9488" opacity="0.38"/>
+<line x1="632.5600000000194" y1="393" x2="632.5600000000194" y2="203" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="632.5600000000194" cy="393" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
+<rect x="498.5600000000194" y="145" width="268" height="58" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+<text x="508.5600000000194" y="162" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2027–2028</text>
+<text x="508.5600000000194" y="177" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Volume wave</text>
+<text x="508.5600000000194" y="191.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Shipments ramp across vendors</text>
+<line x1="1312.240000000013" y1="393" x2="1312.240000000013" y2="293" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="1312.240000000013" cy="393" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
+<rect x="1178.240000000013" y="235" width="268" height="58" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+<text x="1188.240000000013" y="252" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2030</text>
+<text x="1188.240000000013" y="267" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Still ramping</text>
+<text x="1188.240000000013" y="281.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Adoption continues past first wave</text>
 <rect x="52" y="645" width="1416" height="68" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
 <text x="70" y="671" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" letter-spacing="0.08em">END STATE</text>
 <text x="70" y="695" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="600" fill="#1a2332">Co-packaged optics (CPO) becomes the default for AI scale-out switches.</text>

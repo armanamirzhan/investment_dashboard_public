@@ -36,6 +36,30 @@
           "name": "Eoptolink",
           "ticker": "300502.SZ",
           "note": "Top-3 AI pluggable transceiver vendor; NVIDIA CPO partner"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "fidelity_symbol": "COHR",
+          "note": "Lasers / optical engines and transceiver components"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "fidelity_symbol": "LITE",
+          "note": "Lasers / optical engines for pluggable modules"
+        },
+        {
+          "name": "Applied Optoelectronics",
+          "ticker": "AAOI",
+          "fidelity_symbol": "AAOI",
+          "note": "Fiber-optic transceivers for data-center customers"
+        },
+        {
+          "name": "Marvell (PAM4 DSP)",
+          "ticker": "MRVL",
+          "fidelity_symbol": "MRVL",
+          "note": "PAM4 DSP inside most pluggables — CPO’s removal of this DSP is core to the power story"
         }
       ]
     },
@@ -168,6 +192,12 @@
           "name": "Marvell",
           "ticker": "MRVL",
           "note": "Switch and connectivity silicon"
+        },
+        {
+          "name": "Cisco (Silicon One)",
+          "ticker": "CSCO",
+          "fidelity_symbol": "CSCO",
+          "note": "Third merchant/captive switch-silicon line with CPO demos"
         }
       ]
     },
@@ -207,6 +237,16 @@
           "name": "Ayar Labs",
           "ticker": "",
           "note": "SuperNova multi-wavelength sources (private)"
+        },
+        {
+          "name": "Sivers Semiconductors",
+          "ticker": "SIVE",
+          "note": "InP CW-DFB laser arrays for CW-WDM MSA / ELS light sources (Nasdaq Stockholm)"
+        },
+        {
+          "name": "Yuanjie Semiconductor",
+          "ticker": "688498.SS",
+          "note": "High-power CW silicon-photonics light sources"
         }
       ]
     },
@@ -228,7 +268,29 @@
         {
           "name": "Corning",
           "ticker": "GLW",
-          "note": "Optical fiber medium"
+          "note": "Optical fiber and specialty glass",
+          "fidelity_symbol": "GLW"
+        },
+        {
+          "name": "Fujikura",
+          "ticker": "5803.T",
+          "note": "High-density fiber / connectors for AI fabrics"
+        },
+        {
+          "name": "Sumitomo Electric",
+          "ticker": "5802.T",
+          "fidelity_symbol": "SMTOY",
+          "note": "Fiber, connectors and InP — NVIDIA CPO partner"
+        },
+        {
+          "name": "Furukawa Electric (OFS)",
+          "ticker": "5801.T",
+          "note": "Optical fiber and cable (OFS in the US)"
+        },
+        {
+          "name": "SENKO",
+          "ticker": "",
+          "note": "Private — optical connector partner named by NVIDIA"
         }
       ]
     },
@@ -404,11 +466,6 @@
           "note": "Bailly 51.2T (2024 CPO milestone) and Tomahawk 6-Davisson 102.4T CPO (TH6 volume since ~Mar 2026)"
         },
         {
-          "name": "Delta Electronics / Micas",
-          "ticker": "",
-          "note": "System / platform assembly (Delta is listed outside typical US Fidelity symbols here)"
-        },
-        {
           "name": "Meta",
           "ticker": "META",
           "note": "Validation / buyer path discussed in industry coverage"
@@ -418,6 +475,17 @@
           "ticker": "AVGO",
           "fidelity_symbol": "AVGO",
           "note": "102.4T 3rd-gen CPO switch class; TH6 volume shipments from ~2026-03-12"
+        },
+        {
+          "name": "Delta Electronics",
+          "ticker": "2308.TW",
+          "fidelity_symbol": "DELTY",
+          "note": "System / platform assembly path for Broadcom CPO switches (DELTY ADR — verify at Fidelity)"
+        },
+        {
+          "name": "Micas Networks",
+          "ticker": "",
+          "note": "Private — system / platform partner discussed with Bailly / Delta"
         }
       ]
     },
@@ -467,6 +535,12 @@
           "name": "Coherent",
           "ticker": "COHR",
           "note": "Laser / photonics supply for ramps"
+        },
+        {
+          "name": "Mitsubishi Electric",
+          "ticker": "6503.T",
+          "fidelity_symbol": "MIELY",
+          "note": "High-power DFB/EML laser supplier for ELS and pluggables"
         }
       ]
     },
@@ -511,6 +585,28 @@
           "name": "Hyperscaler custom ASICs",
           "ticker": "",
           "note": "In-house accelerators at large cloud buyers"
+        },
+        {
+          "name": "Broadcom",
+          "ticker": "AVGO",
+          "fidelity_symbol": "AVGO",
+          "note": "Custom AI ASICs / switch silicon for hyperscalers"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "fidelity_symbol": "MRVL",
+          "note": "Custom ASICs and connectivity for AI platforms"
+        },
+        {
+          "name": "Alchip Technologies",
+          "ticker": "3661.TW",
+          "note": "ASIC design house for hyperscaler XPUs"
+        },
+        {
+          "name": "Global Unichip (GUC)",
+          "ticker": "3443.TW",
+          "note": "TSMC-affiliated ASIC design service"
         }
       ]
     },
@@ -555,6 +651,18 @@
           "name": "TSMC",
           "ticker": "TSM",
           "note": "Silicon photonics process for modulators"
+        },
+        {
+          "name": "GlobalFoundries",
+          "ticker": "GFS",
+          "fidelity_symbol": "GFS",
+          "note": "Silicon-photonics foundry processes for modulators"
+        },
+        {
+          "name": "Tower Semiconductor",
+          "ticker": "TSEM",
+          "fidelity_symbol": "TSEM",
+          "note": "Specialty foundry with silicon-photonics offerings"
         }
       ]
     },
@@ -588,12 +696,34 @@
         {
           "name": "Corning",
           "ticker": "GLW",
-          "note": "Optical fiber"
+          "note": "Optical fiber and specialty glass",
+          "fidelity_symbol": "GLW"
         },
         {
           "name": "Ayar Labs",
           "ticker": "",
           "note": "Fiber-attached optical I/O (private)"
+        },
+        {
+          "name": "Fujikura",
+          "ticker": "5803.T",
+          "note": "High-density fiber / connectors for AI fabrics"
+        },
+        {
+          "name": "Sumitomo Electric",
+          "ticker": "5802.T",
+          "fidelity_symbol": "SMTOY",
+          "note": "Fiber, connectors and InP — NVIDIA CPO partner"
+        },
+        {
+          "name": "Furukawa Electric (OFS)",
+          "ticker": "5801.T",
+          "note": "Optical fiber and cable (OFS in the US)"
+        },
+        {
+          "name": "SENKO",
+          "ticker": "",
+          "note": "Private — optical connector partner named by NVIDIA"
         }
       ]
     },
@@ -616,6 +746,16 @@
           "name": "Ayar Labs",
           "ticker": "",
           "note": "SuperNova multi-wavelength sources (private)"
+        },
+        {
+          "name": "Sivers Semiconductors",
+          "ticker": "SIVE",
+          "note": "InP CW-DFB laser arrays for CW-WDM MSA / ELS light sources (Nasdaq Stockholm)"
+        },
+        {
+          "name": "Yuanjie Semiconductor",
+          "ticker": "688498.SS",
+          "note": "High-power CW silicon-photonics light sources"
         }
       ]
     },
@@ -654,7 +794,7 @@
         {
           "name": "Ayar Labs",
           "ticker": "",
-          "note": "Private — no public ticker"
+          "note": "TeraPHY + SuperNova — qualify 2H 2027, ramp 2028; TSMC SoIC-X / Alchip path"
         }
       ]
     },
@@ -717,7 +857,7 @@
         {
           "name": "Ayar Labs",
           "ticker": "",
-          "note": "Customer integration (private)"
+          "note": "TSMC builds Ayar PICs with SoIC-X bonding — second named COUPE-path customer besides NVIDIA"
         },
         {
           "name": "Lumentum",
@@ -733,6 +873,11 @@
           "name": "NVIDIA",
           "ticker": "NVDA",
           "note": "Platform decisions on copper vs optical scale-up"
+        },
+        {
+          "name": "Alchip Technologies",
+          "ticker": "3661.TW",
+          "note": "Packaging partner and co-developer of Ayar’s 8-TeraPHY test XPU"
         }
       ]
     },
@@ -806,6 +951,16 @@
           "name": "TSMC",
           "ticker": "TSM",
           "note": "Foundry partner"
+        },
+        {
+          "name": "Alchip Technologies",
+          "ticker": "3661.TW",
+          "note": "Packaging partner and co-developer of Ayar’s 8-TeraPHY test XPU"
+        },
+        {
+          "name": "Ayar Labs",
+          "ticker": "",
+          "note": "TSMC builds Ayar PICs with SoIC-X bonding — second named COUPE-path customer besides NVIDIA"
         }
       ]
     },
@@ -828,13 +983,14 @@
     },
     {
       "id": "coupe-2026",
-      "title": "2026 substrate-level CPO",
-      "summary": "Early COUPE generation aimed at substrate-level co-packaged optics with about 200 gigabits per second per lane using microring modulators.",
+      "title": "2026 substrate-level CPO (incl. ~6.4T-class path)",
+      "summary": "Substrate-level CPO building blocks on TSMC’s COUPE path. Industry materials often place early substrate-CPO / denser engines around 2026; treat 6.4T-class timing as pathfinding rather than a hard calendar.",
       "companies": [
         {
           "name": "TSMC",
           "ticker": "TSM",
-          "note": "COUPE 2026 stepping stone"
+          "note": "COUPE path: Gen-1 ~1.6T-class optics in a pluggable context (2025 demos); substrate-level CPO denser engines from ~2026",
+          "fidelity_symbol": "TSM"
         },
         {
           "name": "NVIDIA",
@@ -845,8 +1001,8 @@
     },
     {
       "id": "coupe-6p4",
-      "title": "~2027 — 6.4 terabits per second class",
-      "summary": "Next bandwidth step on the published COUPE path — more total throughput through the photonic engine as AI fabrics demand it.",
+      "title": "6.4 Tb/s-class COUPE path (timing soft)",
+      "summary": "6.4 Tb/s-class on-package / substrate optics on the COUPE roadmap. Some materials place this nearer the 2026 substrate-CPO wave than a hard “~2027” date — re-check against latest TSMC Technology Symposium slides.",
       "companies": [
         {
           "name": "TSMC",
@@ -994,7 +1150,8 @@
         {
           "name": "Lumentum",
           "ticker": "LITE",
-          "note": "Lasers / optical engines / ELS"
+          "note": "NVIDIA ~$4B combined laser investment (Mar 2026); 8λ DWDM ELSFP for OCI MSA (1H CY2027)",
+          "fidelity_symbol": "LITE"
         }
       ]
     },
@@ -1006,7 +1163,14 @@
         {
           "name": "Coherent",
           "ticker": "COHR",
-          "note": "Lasers and broader photonics"
+          "note": "NVIDIA ~$4B combined laser investment (Mar 2026); PhotonLink CPO/NPO (NVIDIA LTA; ramp Q4 CY2026)",
+          "fidelity_symbol": "COHR"
+        },
+        {
+          "name": "Mitsubishi Electric",
+          "ticker": "6503.T",
+          "fidelity_symbol": "MIELY",
+          "note": "High-power DFB/EML laser supplier for ELS and pluggables"
         }
       ]
     },
@@ -1018,7 +1182,8 @@
         {
           "name": "NVIDIA",
           "ticker": "NVDA",
-          "note": "AI optics platform demand"
+          "note": "Invested ~$4B combined in Lumentum + Coherent (Mar 2026) for AI laser capacity",
+          "fidelity_symbol": "NVDA"
         },
         {
           "name": "Lumentum",
@@ -1063,13 +1228,23 @@
           "name": "Coherent",
           "ticker": "COHR",
           "note": "WDM / laser products"
+        },
+        {
+          "name": "Sivers Semiconductors",
+          "ticker": "SIVE",
+          "note": "InP CW-DFB laser arrays for CW-WDM MSA / ELS light sources (Nasdaq Stockholm)"
+        },
+        {
+          "name": "Yuanjie Semiconductor",
+          "ticker": "688498.SS",
+          "note": "High-power CW silicon-photonics light sources"
         }
       ]
     },
     {
       "id": "els-axt",
       "title": "Upstream indium phosphide wafers",
-      "summary": "Many communications lasers grow on compound-semiconductor wafers such as indium phosphide (InP). Substrate makers sit upstream of laser chip factories.",
+      "summary": "Many communications lasers grow on compound-semiconductor wafers such as indium phosphide (InP). Substrate makers sit upstream of laser chip factories. Hub digests (late Sep 2026) cite Morgan Stanley: InP substrates gating / sold out 12–18 months — treat as a near-term scarcity cell.",
       "companies": [
         {
           "name": "AXT",
@@ -1097,7 +1272,8 @@
           "fidelity_symbol": "SMTOY",
           "note": "Major InP substrate, laser and fiber supplier; NVIDIA CPO partner"
         }
-      ]
+      ],
+      "scarcity": "now"
     },
     {
       "id": "std-ucie",
@@ -1123,13 +1299,37 @@
           "name": "Ayar Labs",
           "ticker": "",
           "note": "Optical chiplets that need a die-to-die bridge (private)"
+        },
+        {
+          "name": "TSMC",
+          "ticker": "TSM",
+          "fidelity_symbol": "TSM",
+          "note": "UCIe promoter / advanced packaging for optical chiplets"
+        },
+        {
+          "name": "ASE (ASX)",
+          "ticker": "ASX",
+          "fidelity_symbol": "ASX",
+          "note": "UCIe packaging ecosystem / OSAT"
+        },
+        {
+          "name": "Samsung Electronics",
+          "ticker": "SSNLF / 005930.KS",
+          "fidelity_symbol": "SSNLF",
+          "note": "UCIe promoter / foundry-packaging ecosystem"
+        },
+        {
+          "name": "Qualcomm (Alphawave)",
+          "ticker": "QCOM",
+          "fidelity_symbol": "QCOM",
+          "note": "UCIe / interconnect IP after Alphawave acquisition (Dec 2025)"
         }
       ]
     },
     {
       "id": "std-msa",
       "title": "Laser multi-source agreement (MSA)",
-      "summary": "A multi-source agreement lets several vendors build compatible modules — common plugs, sizes, and behaviors — so buyers are not locked to one laser supplier’s proprietary shape.",
+      "summary": "Laser and module multi-source agreements that let vendors mix parts. Key bodies: OCI MSA (ELSFP targets), CW-WDM MSA (multi-wavelength laser arrays), and the OIF ELSFP implementation agreement — not a vague “MSA consortia” blob.",
       "companies": [
         {
           "name": "Lumentum",
@@ -1145,6 +1345,21 @@
           "name": "MSA consortia",
           "ticker": "",
           "note": "Industry groups defining common modules"
+        },
+        {
+          "name": "OCI MSA",
+          "ticker": "",
+          "note": "Optical Connectivity Interconnect MSA — Lumentum DWDM ELSFP targets this"
+        },
+        {
+          "name": "CW-WDM MSA",
+          "ticker": "",
+          "note": "Coarse/CW-WDM multi-source agreement — Sivers InP arrays target this"
+        },
+        {
+          "name": "OIF (ELSFP)",
+          "ticker": "",
+          "note": "OIF ELSFP implementation agreement for external laser modules"
         }
       ]
     },
@@ -1189,6 +1404,12 @@
           "name": "Broadcom",
           "ticker": "AVGO",
           "note": "SerDes IP and switch silicon"
+        },
+        {
+          "name": "Marvell",
+          "ticker": "MRVL",
+          "fidelity_symbol": "MRVL",
+          "note": "SerDes / DSP / AEC reference vendor alongside Credo, Astera and Broadcom"
         }
       ]
     },
@@ -1304,6 +1525,21 @@
           "name": "IEEE / Ethernet bodies",
           "ticker": "",
           "note": "Networking protocol standards"
+        },
+        {
+          "name": "OCI MSA",
+          "ticker": "",
+          "note": "Optical Connectivity Interconnect MSA — Lumentum DWDM ELSFP targets this"
+        },
+        {
+          "name": "CW-WDM MSA",
+          "ticker": "",
+          "note": "Coarse/CW-WDM multi-source agreement — Sivers InP arrays target this"
+        },
+        {
+          "name": "OIF (ELSFP)",
+          "ticker": "",
+          "note": "OIF ELSFP implementation agreement for external laser modules"
         }
       ]
     }

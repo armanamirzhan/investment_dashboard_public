@@ -8,14 +8,21 @@
       "summary": "The room inside the data center where racks of AI servers sit. Facility power and outdoor cooling enter at the edges; this page focuses on the gear inside the hall — chips, boxes, fabrics, and liquid cooling — not the grid transformers and chillers covered under Electrification.",
       "companies": [
         {
-          "name": "Equinix / Digital Realty (colo landlords)",
-          "ticker": "",
-          "note": "Own many halls that host hyperscaler and neocloud racks — see Hyperscalers"
-        },
-        {
           "name": "Hyperscalers (AWS, Azure, GCP, Meta, …)",
           "ticker": "",
           "note": "Design and operate dedicated AI halls — see Hyperscalers section"
+        },
+        {
+          "name": "Equinix",
+          "ticker": "EQIX",
+          "fidelity_symbol": "EQIX",
+          "note": "Colocation landlord for AI / cloud halls"
+        },
+        {
+          "name": "Digital Realty",
+          "ticker": "DLR",
+          "fidelity_symbol": "DLR",
+          "note": "Colocation / wholesale data-center landlord"
         }
       ]
     },
@@ -40,9 +47,25 @@
           "note": "Enterprise racks and AI infrastructure"
         },
         {
-          "name": "Foxconn / Quanta / Wiwynn",
-          "ticker": "",
-          "note": "ODM rack and tray assembly for cloud buyers"
+          "name": "Foxconn (Hon Hai)",
+          "ticker": "2317.TW",
+          "note": "High-volume NVIDIA rack / server assembly"
+        },
+        {
+          "name": "Quanta Computer",
+          "ticker": "2382.TW",
+          "note": "Hyperscale AI server ODM"
+        },
+        {
+          "name": "Wiwynn",
+          "ticker": "6669.TW",
+          "note": "Cloud / AI rack ODM"
+        },
+        {
+          "name": "Sanmina",
+          "ticker": "SANM",
+          "fidelity_symbol": "SANM",
+          "note": "Bought ZT Systems rack-scale manufacturing from AMD (closed Oct 2025); builds AMD rack-scale systems"
         }
       ]
     },
@@ -68,8 +91,9 @@
         },
         {
           "name": "Lenovo",
-          "ticker": "LNVGY",
-          "note": "ThinkSystem servers"
+          "ticker": "0992.HK / LNVGY",
+          "note": "ThinkSystem servers",
+          "fidelity_symbol": "LNVGY"
         },
         {
           "name": "Celestica",
@@ -77,9 +101,24 @@
           "note": "White-box / EMS assembly"
         },
         {
-          "name": "Foxconn, Quanta, Wistron/Wiwynn",
-          "ticker": "",
-          "note": "High-volume ODM assemblers"
+          "name": "Foxconn (Hon Hai)",
+          "ticker": "2317.TW",
+          "note": "High-volume NVIDIA rack / server assembly"
+        },
+        {
+          "name": "Quanta Computer",
+          "ticker": "2382.TW",
+          "note": "Hyperscale AI server ODM"
+        },
+        {
+          "name": "Wistron",
+          "ticker": "3231.TW",
+          "note": "Enterprise / hyperscale server design and assembly"
+        },
+        {
+          "name": "Wiwynn",
+          "ticker": "6669.TW",
+          "note": "Cloud / AI rack ODM spun toward hyperscale"
         }
       ]
     },
@@ -149,12 +188,14 @@
         {
           "name": "Intel",
           "ticker": "INTC",
-          "note": "Gaudi accelerators (smaller share)"
+          "note": "Crescent Island inference GPU (sampling targeted 2H 2026) then Jaguar Shores — Gaudi-era framing is dated",
+          "fidelity_symbol": "INTC"
         },
         {
           "name": "Qualcomm",
           "ticker": "QCOM",
-          "note": "AI200/AI250 card/rack plans in industry roadmaps"
+          "note": "Multi-generation custom AI inference silicon + optical connectivity deal with AWS (up to ~$60B, Sep 2026); owns Alphawave (Dec 2025). AI200/AI250 card path continues beside custom AWS work.",
+          "fidelity_symbol": "QCOM"
         }
       ]
     },
@@ -226,9 +267,15 @@
           "note": "Standalone FPGA company after Silver Lake took 51% control (Sep 2025); Intel retains 49%. IPO filing reported Sep 2026 — still private as of this page."
         },
         {
-          "name": "Achronix / Lattice (specialists)",
+          "name": "Lattice Semiconductor",
+          "ticker": "LSCC",
+          "fidelity_symbol": "LSCC",
+          "note": "Low-power FPGA specialist for networking / edge / embedded"
+        },
+        {
+          "name": "Achronix",
           "ticker": "",
-          "note": "Niche / embedded FPGA suppliers"
+          "note": "Private high-end / embedded FPGA specialist"
         }
       ]
     },
@@ -248,11 +295,6 @@
           "note": "Xeon server CPUs"
         },
         {
-          "name": "Ampere Computing",
-          "ticker": "",
-          "note": "Arm server CPUs for cloud efficiency"
-        },
-        {
           "name": "Arm Holdings",
           "ticker": "ARM",
           "note": "Arm AGI CPU (up to 136 Neoverse V3 cores; Meta lead partner, Mar 2026) plus architecture IP licensed into server CPUs — no longer IP-licensor only",
@@ -263,6 +305,29 @@
           "ticker": "NVDA",
           "fidelity_symbol": "NVDA",
           "note": "Grace (GB200/GB300) and Vera (Vera Rubin) Arm host CPUs in NVIDIA rack-scale AI systems"
+        },
+        {
+          "name": "Amazon (Graviton)",
+          "ticker": "AMZN",
+          "fidelity_symbol": "AMZN",
+          "note": "AWS Graviton Arm server CPUs — large share of new AWS compute"
+        },
+        {
+          "name": "Google (Axion)",
+          "ticker": "GOOGL",
+          "fidelity_symbol": "GOOGL",
+          "note": "Google Axion Arm server CPUs for Google Cloud"
+        },
+        {
+          "name": "Microsoft (Cobalt)",
+          "ticker": "MSFT",
+          "fidelity_symbol": "MSFT",
+          "note": "Azure Cobalt Arm server CPUs"
+        },
+        {
+          "name": "Ampere Computing (SoftBank Group)",
+          "ticker": "",
+          "note": "Arm server CPUs (Altra / AmpereOne); SoftBank completed acquisition ~2025-11-25/26 — still private under SoftBank (9984.T / SFTBY)"
         }
       ]
     },
@@ -279,15 +344,17 @@
         },
         {
           "name": "Samsung Electronics",
-          "ticker": "005930.KS",
-          "note": "HBM capacity expansion / share catch-up"
+          "ticker": "SSNLF / 005930.KS",
+          "note": "HBM capacity expansion / share catch-up",
+          "fidelity_symbol": "SSNLF"
         },
         {
           "name": "Micron Technology",
           "ticker": "MU",
           "note": "HBM ramp for AI GPUs"
         }
-      ]
+      ],
+      "scarcity": "now"
     },
     {
       "id": "dram",
@@ -296,8 +363,9 @@
       "companies": [
         {
           "name": "Samsung Electronics",
-          "ticker": "005930.KS",
-          "note": "Largest DRAM maker"
+          "ticker": "SSNLF / 005930.KS",
+          "note": "Largest DRAM maker",
+          "fidelity_symbol": "SSNLF"
         },
         {
           "name": "SK Hynix",
@@ -309,6 +377,22 @@
           "name": "Micron Technology",
           "ticker": "MU",
           "note": "Datacenter DRAM focus"
+        },
+        {
+          "name": "Montage Technology",
+          "ticker": "688008.SS",
+          "note": "DDR5 RCD/data buffers, MRDIMM, PCIe retimers and CXL memory controllers"
+        },
+        {
+          "name": "Rambus",
+          "ticker": "RMBS",
+          "fidelity_symbol": "RMBS",
+          "note": "Server DIMM interface chips (RCD, PMIC, SPD hub) — gate for DDR5/MRDIMM"
+        },
+        {
+          "name": "Nanya Technology",
+          "ticker": "2408.TW",
+          "note": "Fourth-largest DRAM maker (commodity DDR4/DDR5)"
         }
       ]
     },
@@ -336,6 +420,12 @@
           "name": "Intel",
           "ticker": "INTC",
           "note": "Ethernet NICs and IPU lines"
+        },
+        {
+          "name": "AMD (Pensando / Pollara)",
+          "ticker": "AMD",
+          "fidelity_symbol": "AMD",
+          "note": "AI NIC and DPU line (Pensando / Pollara)"
         }
       ]
     },
@@ -385,6 +475,12 @@
           "ticker": "MU",
           "fidelity_symbol": "MU",
           "note": "NAND / SSD flash for datacenter"
+        },
+        {
+          "name": "Solidigm (SK hynix)",
+          "ticker": "SKHY",
+          "fidelity_symbol": "SKHY",
+          "note": "High-capacity QLC enterprise SSDs for AI data lakes (SK hynix NAND unit)"
         }
       ]
     },
@@ -427,7 +523,7 @@
         {
           "name": "Lite-On Technology",
           "ticker": "2301.TW",
-          "note": "Data-center / cloud server PSU modules (TW listing; Fidelity link omitted — no reliable US ADR)"
+          "note": "Data-center / cloud server PSU modules (TW listing; no reliable US ADR — panel shows ticker without Fidelity link)"
         },
         {
           "name": "Vertiv",
@@ -439,6 +535,11 @@
           "name": "Facility DC bus / SST / XFMR → Electrification",
           "ticker": "",
           "note": "Cross-link: campus transformers, switchgear, site SST, and ~800 V hall busway — do not duplicate facility scarcity on this page"
+        },
+        {
+          "name": "Megmeet Electrical",
+          "ticker": "002851.SZ",
+          "note": "Named NVIDIA 800 VDC power-system component partner; data-center PSUs"
         }
       ]
     },
@@ -506,6 +607,23 @@
           "name": "SiC/GaN chips → Fabrication; SST systems → Electrification",
           "ticker": "",
           "note": "Cross-link only — do not duplicate SST systems or SiC/GaN fab scarcity here"
+        },
+        {
+          "name": "Analog Devices",
+          "ticker": "ADI",
+          "fidelity_symbol": "ADI",
+          "note": "Named NVIDIA 800 VDC silicon partner; multiphase / hot-swap power"
+        },
+        {
+          "name": "Innoscience",
+          "ticker": "2577.HK",
+          "note": "GaN power ICs; named NVIDIA 800 VDC silicon partner"
+        },
+        {
+          "name": "Alpha and Omega Semiconductor",
+          "ticker": "AOSL",
+          "fidelity_symbol": "AOSL",
+          "note": "DrMOS power stages used on AI GPU/CPU boards"
         }
       ]
     },
@@ -533,6 +651,17 @@
           "name": "HPE (Juniper)",
           "ticker": "HPE",
           "note": "Ethernet switching after Juniper acquisition"
+        },
+        {
+          "name": "Accton Technology",
+          "ticker": "2345.TW",
+          "note": "Leading white-box AI Ethernet switch maker for hyperscalers"
+        },
+        {
+          "name": "Celestica",
+          "ticker": "CLS",
+          "fidelity_symbol": "CLS",
+          "note": "Merchant 800G/1.6T white-box switch builder (also AI server EMS)"
         }
       ]
     },
@@ -544,7 +673,8 @@
         {
           "name": "Amphenol",
           "ticker": "APH",
-          "note": "High-speed connectors and cable assemblies"
+          "note": "Datacom / AI interconnect; closed $10.5B CommScope CCS (fiber/structured cabling) acquisition 2026-01-12 — now spans copper and optical cabling",
+          "fidelity_symbol": "APH"
         },
         {
           "name": "TE Connectivity",
@@ -552,14 +682,9 @@
           "note": "Backplane and high-speed connectors"
         },
         {
-          "name": "Molex",
-          "ticker": "",
-          "note": "High-speed I/O and CPO-related connectors"
-        },
-        {
           "name": "Samtec",
           "ticker": "",
-          "note": "Specialty high-speed connectors"
+          "note": "Private specialty high-speed connectors"
         },
         {
           "name": "Credo Technology",
@@ -572,6 +697,21 @@
           "ticker": "ALAB",
           "fidelity_symbol": "ALAB",
           "note": "PCIe / CXL / Ethernet retimers for AI lane rates"
+        },
+        {
+          "name": "Luxshare Precision",
+          "ticker": "002475.SZ",
+          "note": "NVLink copper cable-cartridge and high-speed cable assemblies"
+        },
+        {
+          "name": "BizLink Holding",
+          "ticker": "3665.TW",
+          "note": "High-speed copper / AEC cable assemblies for AI racks"
+        },
+        {
+          "name": "Molex (Koch Industries)",
+          "ticker": "",
+          "note": "Private (Koch Industries) — high-speed I/O and CPO-related connectors"
         }
       ]
     },
@@ -617,7 +757,8 @@
           "fidelity_symbol": "SMTOY",
           "note": "InP substrates, lasers, fiber and connectors; named NVIDIA CPO partner"
         }
-      ]
+      ],
+      "scarcity": "soon"
     },
     {
       "id": "fabric",
@@ -648,6 +789,23 @@
           "name": "Marvell",
           "ticker": "MRVL",
           "note": "Switch and custom networking silicon"
+        },
+        {
+          "name": "Accton Technology",
+          "ticker": "2345.TW",
+          "note": "Leading white-box AI Ethernet switch maker for hyperscalers"
+        },
+        {
+          "name": "Celestica",
+          "ticker": "CLS",
+          "fidelity_symbol": "CLS",
+          "note": "Merchant 800G/1.6T white-box switch builder (also AI server EMS)"
+        },
+        {
+          "name": "Astera Labs (Scorpio)",
+          "ticker": "ALAB",
+          "fidelity_symbol": "ALAB",
+          "note": "PCIe / scale-up fabric switches inside AI servers"
         }
       ]
     },
@@ -682,11 +840,30 @@
           "note": "InP / compound substrates upstream of lasers"
         },
         {
-          "name": "Ciena / Nokia (Infinera)",
-          "ticker": "",
-          "note": "Longer-reach optical networking platforms"
+          "name": "Ciena",
+          "ticker": "CIEN",
+          "fidelity_symbol": "CIEN",
+          "note": "Optical transport; closed Nubis (optical/electrical AI interconnect) 2025-10-07"
+        },
+        {
+          "name": "Nokia",
+          "ticker": "NOK",
+          "fidelity_symbol": "NOK",
+          "note": "IP routing and optical systems; closed Infinera 2025-02-28"
+        },
+        {
+          "name": "Fujikura",
+          "ticker": "5803.T",
+          "note": "High-fiber-count cable and connectivity for AI data centers"
+        },
+        {
+          "name": "Sumitomo Electric",
+          "ticker": "5802.T",
+          "fidelity_symbol": "SMTOY",
+          "note": "Fiber, connectors and InP lasers; NVIDIA CPO partner"
         }
-      ]
+      ],
+      "scarcity": "soon"
     },
     {
       "id": "cold-plate",
@@ -702,12 +879,13 @@
         {
           "name": "Asetek",
           "ticker": "",
-          "note": "Direct-to-chip liquid cooling"
+          "note": "Private (CQXA Holdings; delisted Nasdaq Copenhagen Apr 2024) — direct-to-chip liquid cooling"
         },
         {
-          "name": "Motivair (Schneider)",
-          "ticker": "",
-          "note": "Cold plate / CDU technology"
+          "name": "Motivair (Schneider Electric)",
+          "ticker": "SBGSY / SU.PA",
+          "note": "Cold plate / CDU technology after Schneider’s Motivair acquisition",
+          "fidelity_symbol": "SBGSY"
         },
         {
           "name": "nVent",
@@ -729,6 +907,16 @@
           "name": "LG Electronics",
           "ticker": "066570.KS",
           "note": "NVIDIA DSX Ready CDU / liquid-cooling path (also CDU stage)"
+        },
+        {
+          "name": "Asia Vital Components (AVC)",
+          "ticker": "3017.TW",
+          "note": "Cold plates, manifolds and CDUs for NVIDIA GB-class racks"
+        },
+        {
+          "name": "Auras Technology",
+          "ticker": "3324.TWO",
+          "note": "Cold plates and liquid-cooling modules for AI servers"
         }
       ]
     },
@@ -752,12 +940,29 @@
         {
           "name": "Asetek",
           "ticker": "",
-          "note": "Direct-to-chip tray loops and QD couplings"
+          "note": "Private (CQXA Holdings; delisted Nasdaq Copenhagen Apr 2024) — direct-to-chip liquid cooling"
         },
         {
           "name": "Server OEMs & ODMs",
           "ticker": "",
           "note": "Design the tray plumbing into shipped SKUs"
+        },
+        {
+          "name": "Parker Hannifin",
+          "ticker": "PH",
+          "fidelity_symbol": "PH",
+          "note": "Quick-disconnect couplings and fluid connectors for liquid-cooled trays"
+        },
+        {
+          "name": "CPC (Dover)",
+          "ticker": "DOV",
+          "fidelity_symbol": "DOV",
+          "note": "Quick-disconnect couplings for liquid cooling (CPC under Dover)"
+        },
+        {
+          "name": "Staubli",
+          "ticker": "",
+          "note": "Private — QD couplings widely used on liquid-cooled AI trays"
         }
       ]
     },
@@ -783,9 +988,24 @@
           "note": "Rack liquid infrastructure"
         },
         {
-          "name": "Rittal / STULZ",
+          "name": "Asia Vital Components (AVC)",
+          "ticker": "3017.TW",
+          "note": "Cold plates, manifolds and CDUs for NVIDIA GB-class racks"
+        },
+        {
+          "name": "Auras Technology",
+          "ticker": "3324.TWO",
+          "note": "Cold plates and liquid-cooling modules for AI servers"
+        },
+        {
+          "name": "Rittal",
           "ticker": "",
-          "note": "Rack and row cooling packages"
+          "note": "Private — rack liquid infrastructure and enclosures"
+        },
+        {
+          "name": "STULZ",
+          "ticker": "",
+          "note": "Private — rack and row cooling packages"
         }
       ]
     },
@@ -801,8 +1021,9 @@
         },
         {
           "name": "Schneider Electric (Motivair)",
-          "ticker": "SU.PA",
-          "note": "CDU / liquid cooling after Motivair acquisition"
+          "ticker": "SBGSY / SU.PA",
+          "note": "CDU / liquid cooling after Motivair acquisition",
+          "fidelity_symbol": "SBGSY"
         },
         {
           "name": "CoolIT (Ecolab)",
@@ -814,11 +1035,6 @@
           "name": "nVent",
           "ticker": "NVT",
           "note": "Liquid cooling distribution"
-        },
-        {
-          "name": "Johnson Controls / Delta",
-          "ticker": "",
-          "note": "Facility-adjacent cooling gear"
         },
         {
           "name": "Eaton (Boyd Thermal)",
@@ -836,6 +1052,35 @@
           "ticker": "TT",
           "fidelity_symbol": "TT",
           "note": "LiquidStack CDU / liquid-cooling presence under Trane (acquisition closed 2026-03-02); facility HVAC stays on Electrification"
+        },
+        {
+          "name": "Asia Vital Components (AVC)",
+          "ticker": "3017.TW",
+          "note": "Cold plates, manifolds and CDUs for NVIDIA GB-class racks"
+        },
+        {
+          "name": "Johnson Controls",
+          "ticker": "JCI",
+          "fidelity_symbol": "JCI",
+          "note": "Facility chillers and cooling packages"
+        },
+        {
+          "name": "Delta Electronics",
+          "ticker": "2308.TW",
+          "fidelity_symbol": "DELTY",
+          "note": "Integrated power and cooling modules (DELTY ADR — verify at Fidelity)"
+        },
+        {
+          "name": "Modine (Airedale)",
+          "ticker": "MOD",
+          "fidelity_symbol": "MOD",
+          "note": "Data-center chillers and CDUs"
+        },
+        {
+          "name": "Nidec",
+          "ticker": "6594.T",
+          "fidelity_symbol": "NJDCY",
+          "note": "CDUs, pumps and fans for AI racks"
         }
       ]
     },
@@ -851,18 +1096,53 @@
         },
         {
           "name": "Schneider Electric",
-          "ticker": "SU.PA",
-          "note": "Campus cooling / EcoStruxure"
+          "ticker": "SBGSY / SU.PA",
+          "note": "Campus cooling / EcoStruxure",
+          "fidelity_symbol": "SBGSY"
         },
         {
-          "name": "Johnson Controls / Carrier / STULZ / Munters",
-          "ticker": "",
-          "note": "Chillers, CRAHs, hybrid cooling"
+          "name": "Johnson Controls",
+          "ticker": "JCI",
+          "fidelity_symbol": "JCI",
+          "note": "Facility chillers / CRAH packages"
+        },
+        {
+          "name": "Carrier",
+          "ticker": "CARR",
+          "fidelity_symbol": "CARR",
+          "note": "Facility chillers and HVAC for data halls"
+        },
+        {
+          "name": "Munters",
+          "ticker": "MTRS.ST",
+          "note": "Data-center air handlers and cooling (Nasdaq Stockholm)"
         },
         {
           "name": "Alfa Laval",
+          "ticker": "ALFA.ST",
+          "note": "Heat exchangers for facility cooling loops"
+        },
+        {
+          "name": "STULZ",
           "ticker": "",
-          "note": "Heat-exchange equipment"
+          "note": "Private — computer-room air handlers and liquid-cooling packages"
+        },
+        {
+          "name": "Rittal",
+          "ticker": "",
+          "note": "Private — rack and row cooling enclosures"
+        },
+        {
+          "name": "Modine (Airedale)",
+          "ticker": "MOD",
+          "fidelity_symbol": "MOD",
+          "note": "Data-center chillers and CDUs"
+        },
+        {
+          "name": "Trane Technologies",
+          "ticker": "TT",
+          "fidelity_symbol": "TT",
+          "note": "Chillers / heat rejection; LiquidStack immersion path"
         }
       ]
     },
@@ -907,7 +1187,8 @@
         {
           "name": "Amphenol",
           "ticker": "APH",
-          "note": "Datacom / AI interconnect growth"
+          "note": "Datacom / AI interconnect; closed $10.5B CommScope CCS (fiber/structured cabling) acquisition 2026-01-12 — now spans copper and optical cabling",
+          "fidelity_symbol": "APH"
         },
         {
           "name": "TE Connectivity",
@@ -915,14 +1196,9 @@
           "note": "High-speed backplane connectors"
         },
         {
-          "name": "Molex",
-          "ticker": "",
-          "note": "High-speed I/O and CPO connectors"
-        },
-        {
           "name": "Samtec",
           "ticker": "",
-          "note": "Specialty high-speed connectors"
+          "note": "Private specialty high-speed connectors"
         },
         {
           "name": "Credo Technology",
@@ -935,6 +1211,21 @@
           "ticker": "ALAB",
           "fidelity_symbol": "ALAB",
           "note": "PCIe / CXL / Ethernet retimers for AI lane rates"
+        },
+        {
+          "name": "Luxshare Precision",
+          "ticker": "002475.SZ",
+          "note": "NVLink copper cable-cartridge and high-speed cable assemblies"
+        },
+        {
+          "name": "BizLink Holding",
+          "ticker": "3665.TW",
+          "note": "High-speed copper / AEC cable assemblies for AI racks"
+        },
+        {
+          "name": "Molex (Koch Industries)",
+          "ticker": "",
+          "note": "Private (Koch Industries) — high-speed I/O and CPO-related connectors"
         }
       ]
     }

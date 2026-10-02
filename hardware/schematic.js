@@ -67,7 +67,16 @@
   }
 
   function fidelityHref(c) {
-    var sym = c.fidelity_symbol || c.ticker;
+    // Prefer explicit fidelity_symbol. Never build Fidelity URLs from local
+    // exchange tickers (TW/KS/T/SS/SZ/HK/PA/DE/…) — those break quote pages.
+    var sym = c.fidelity_symbol;
+    if (!sym && c.ticker) {
+      var raw = String(c.ticker).trim();
+      // Allow plain US/OTC tickers only (letters, optional digits; no dots/slashes)
+      if (/^[A-Za-z]{1,5}[0-9]?$/.test(raw) || /^[A-Za-z]{1,4}[A-Z]$/.test(raw)) {
+        sym = raw;
+      }
+    }
     if (!sym) return "";
     return "https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=" +
       encodeURIComponent(String(sym).trim());

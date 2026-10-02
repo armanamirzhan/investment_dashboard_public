@@ -53,7 +53,7 @@
       </nav>
 
       <header class="hero">
-        <span class="eyebrow">Technical briefing · September 2026 baseline · full extraction</span>
+        <span class="eyebrow">Technical briefing · October 2026 baseline · full extraction</span>
         <h1>Computation Hardware — chips, boxes, and cooling</h1>
         <p class="subtitle">
           Inside an
@@ -140,7 +140,7 @@
 <text x="366.0" y="236.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">In-rack DAC / copper</text>
 <text x="366.0" y="252.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">short copper links</text>
 </g>
-<g class="stage-hotspot" data-stage="inrack-optics" tabindex="0" role="button" focusable="true" aria-label="In-rack / short-reach optics. Activate for stage details.">
+<g class="stage-hotspot scarcity-soon" data-stage="inrack-optics" tabindex="0" role="button" focusable="true" aria-label="In-rack / short-reach optics. Activate for stage details.">
 <rect class="box" x="56" y="264" width="408" height="32" rx="6" fill="#243040" stroke="#3d4a5c" stroke-width="1.4"/>
 <text x="260.0" y="278.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">In-rack / short-reach optics</text>
 <text x="260.0" y="294.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">pluggables · onboard · early CPO</text>
@@ -171,7 +171,7 @@
 <text x="407.0" y="362.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">CPU</text>
 <text x="407.0" y="378.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">host</text>
 </g>
-<g class="stage-hotspot" data-stage="hbm" tabindex="0" role="button" focusable="true" aria-label="HBM. Activate for stage details.">
+<g class="stage-hotspot scarcity-now" data-stage="hbm" tabindex="0" role="button" focusable="true" aria-label="HBM. Activate for stage details.">
 <rect class="box" x="68" y="396" width="90" height="40" rx="6" fill="#3a3048" stroke="#3d4a5c" stroke-width="1.4"/>
 <text x="113.0" y="414.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">HBM</text>
 <text x="113.0" y="430.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">on-package</text>
@@ -235,7 +235,7 @@
 <text x="845.0" y="236.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Between-rack fabric</text>
 <text x="845.0" y="252.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">leaf / spine · IB · NVLink</text>
 </g>
-<g class="stage-hotspot" data-stage="row-optics" tabindex="0" role="button" focusable="true" aria-label="Row / hall optics. Activate for stage details.">
+<g class="stage-hotspot scarcity-soon" data-stage="row-optics" tabindex="0" role="button" focusable="true" aria-label="Row / hall optics. Activate for stage details.">
 <rect class="box" x="740" y="300" width="210" height="100" rx="6" fill="#243050" stroke="#3d4a5c" stroke-width="1.4"/>
 <text x="845.0" y="348.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Row / hall optics</text>
 <text x="845.0" y="364.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">fiber · engines · DSPs</text>
@@ -428,12 +428,16 @@
           <li>
             <span class="name">Intel</span><span class="ticker">INTC</span>
             <p>
-              Xeon CPUs remain widely deployed; Gaudi AI accelerators are a smaller merchant-accelerator effort beside a broader process and foundry turnaround story.
+              Xeon CPUs remain widely deployed. Data-center GPU path has moved on from Gaudi-only framing toward
+              <strong>Crescent Island</strong> (inference, sampling targeted 2H 2026) and then Jaguar Shores, beside the broader process and foundry turnaround story.
             </p>
           </li>
           <li>
             <span class="name">Qualcomm</span><span class="ticker">QCOM</span>
-            <p>AI200 / AI250 card and rack-scale accelerators called out in the extract for mid-decade sampling — re-entering datacenter AI silicon.</p>
+            <p>
+              Multi-generation custom AI inference silicon and optical connectivity deal with AWS (up to ~$60B, Sep 2026);
+              also owns Alphawave (Dec 2025). AI200 / AI250 card and rack-scale paths continue beside that custom AWS work.
+            </p>
           </li>
         </ul>
         <p><strong>Custom ASICs &amp; hyperscaler in-house chips</strong></p>
@@ -465,6 +469,10 @@
             <span class="name">Microsoft</span><span class="ticker">MSFT</span>
             <p>Maia AI accelerator — primarily for Microsoft’s own cloud and Copilot-scale workloads.</p>
           </li>
+          <li>
+            <span class="name">Meta</span><span class="ticker">META</span>
+            <p>Meta Training and Inference Accelerator (MTIA) programs — in-house silicon for Meta’s AI clusters.</p>
+          </li>
         </ul>
         <p><strong>ASIC design houses (TSMC ecosystem)</strong></p>
         <ul class="company-list">
@@ -487,7 +495,7 @@
           Packaging / CoWoS detail:
           <a href="../semiconductors/index.html">Semiconductors</a>.
         </p>
-        <p><strong>Listed &amp; alternative accelerators (from extraction)</strong></p>
+        <p><strong>Alternative accelerators (private unless ticker shown)</strong></p>
         <ul class="company-list">
           <li>
             <span class="name">Cerebras</span><span class="ticker">CBRS</span>
@@ -499,7 +507,8 @@
           </li>
           <li>
             <span class="name">SambaNova</span>
-            <p>Reconfigurable dataflow units aimed at agentic and inference workloads with a full software stack.</p>
+            <p>Reconfigurable dataflow units aimed at agentic and inference workloads with a full software stack.
+              Still private: Intel acquisition talks ended; Intel invested ~$350M with a multiyear partnership (early 2026).</p>
           </li>
           <li>
             <span class="name">Tenstorrent</span>
@@ -512,16 +521,25 @@
           <li>
             <span class="name">Groq</span>
             <p>
-              Language Processing Unit (LPU) inference path; the extract notes a late-2025 NVIDIA acquisition narrative — treat ownership status as time-sensitive.
+              Language Processing Unit (LPU) inference path. The Dec 2025 NVIDIA deal was a ~$20B non-exclusive license plus hiring of Groq’s founder/president —
+              Groq stays independent and continues GroqCloud (not a full acquisition).
             </p>
           </li>
           <li>
             <span class="name">Graphcore</span>
-            <p>Intelligence Processing Unit (IPU) line; extract notes SoftBank acquisition — again, verify current status.</p>
+            <p>Intelligence Processing Unit (IPU) line — SoftBank Group subsidiary since Jul 2024 (parent 9984.T / SFTBY).</p>
           </li>
           <li>
             <span class="name">IBM</span><span class="ticker">IBM</span>
             <p>Spyre accelerator called out for enterprise AI attach beside IBM’s systems business.</p>
+          </li>
+          <li>
+            <span class="name">Cambricon Technologies</span><span class="ticker">688256.SS</span>
+            <p>Largest listed China AI-accelerator designer — domestic substitution path for training and inference chips.</p>
+          </li>
+          <li>
+            <span class="name">Huawei (Ascend)</span>
+            <p>China’s largest AI accelerator line (Ascend). Private / unlisted as a standalone ticker on this page.</p>
           </li>
         </ul>
 
@@ -545,8 +563,24 @@
             <p>Xeon 6 (Granite Rapids generation in the extract) — still large installed base; competitive pressure from AMD and Arm.</p>
           </li>
           <li>
-            <span class="name">Ampere Computing</span>
-            <p>Arm server CPUs (Altra / AmpereOne) for cloud efficiency; extract notes SoftBank ownership since late 2025.</p>
+            <span class="name">Ampere Computing (SoftBank Group)</span>
+            <p>Arm server CPUs (Altra / AmpereOne) for cloud efficiency. SoftBank completed the acquisition around 25–26 Nov 2025 — still private under SoftBank (9984.T / SFTBY).</p>
+          </li>
+          <li>
+            <span class="name">Amazon (Graviton)</span><span class="ticker">AMZN</span>
+            <p>AWS Graviton Arm server CPUs — a large share of new AWS cloud CPU deployments.</p>
+          </li>
+          <li>
+            <span class="name">Google (Axion)</span><span class="ticker">GOOGL</span>
+            <p>Google Axion Arm server CPUs for Google Cloud efficiency workloads.</p>
+          </li>
+          <li>
+            <span class="name">Microsoft (Cobalt)</span><span class="ticker">MSFT</span>
+            <p>Azure Cobalt Arm server CPUs for Microsoft’s cloud fleet.</p>
+          </li>
+          <li>
+            <span class="name">Hygon Information Technology</span><span class="ticker">688041.SS</span>
+            <p>China x86 server CPU and DCU supplier for domestic cloud and AI hosts.</p>
           </li>
           <li>
             <span class="name">Arm Holdings</span><span class="ticker">ARM</span>
@@ -579,12 +613,20 @@
             <p>Leading HBM supplier to major GPU programs. Through the mid-2020s AI ramp, HBM capacity and yields have often been sold out years ahead — a primary throttle on how many high-end accelerators can ship before packaging is even considered.</p>
           </li>
           <li>
-            <span class="name">Samsung Electronics</span><span class="ticker">005930.KS</span>
+            <span class="name">Samsung Electronics</span><span class="ticker">SSNLF / 005930.KS</span>
             <p>Largest memory maker expanding HBM share and yields to catch the AI attach rate; also a major foundry — unique memory + fab combination. HBM competitiveness is the scarce skill for AI GPU attach, not commodity DRAM alone.</p>
           </li>
           <li>
             <span class="name">Micron Technology</span><span class="ticker">MU</span>
             <p>US memory company ramping HBM for AI GPUs and shifting more capacity toward datacenter DRAM. Newer HBM generations (HBM3E / HBM4-class in industry roadmaps) are yield- and capacity-constrained like peers — another gate on accelerator volume through ~2027.</p>
+          </li>
+          <li>
+            <span class="name">Nanya Technology</span><span class="ticker">2408.TW</span>
+            <p>Fourth-largest DRAM maker — commodity DDR4/DDR5 for servers and PCs (not a leading HBM supplier).</p>
+          </li>
+          <li>
+            <span class="name">CXMT (ChangXin Memory)</span>
+            <p>China DRAM / HBM entrant. Still private as of this page (IPO status time-sensitive).</p>
           </li>
         </ul>
         <p><strong>Enterprise storage systems (extraction)</strong></p>
@@ -608,6 +650,21 @@
           <li>
             <span class="name">NetApp</span><span class="ticker">NTAP</span>
             <p>Enterprise storage and data-management platforms used beside cloud and on-prem AI clusters.</p>
+          </li>
+        </ul>
+        <p><strong>Memory interface &amp; CXL</strong></p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Montage Technology</span><span class="ticker">688008.SS</span>
+            <p>DDR5 register/clock drivers and data buffers, MRDIMM parts, PCIe retimers and CXL memory controllers.</p>
+          </li>
+          <li>
+            <span class="name">Rambus</span><span class="ticker">RMBS</span>
+            <p>Server DIMM interface chips (RCD, PMIC, SPD hub) that gate DDR5 and MRDIMM platforms.</p>
+          </li>
+          <li>
+            <span class="name">Astera Labs (Leo) / Marvell (Structera)</span><span class="ticker">ALAB / MRVL</span>
+            <p>CXL memory-expansion controllers that attach more DRAM beside AI hosts without replacing the whole server.</p>
           </li>
         </ul>
         <p><strong>NAND / SSD flash</strong></p>
@@ -668,6 +725,18 @@
               directions that overlap Photonics.
             </p>
           </li>
+          <li>
+            <span class="name">Accton Technology</span><span class="ticker">2345.TW</span>
+            <p>Leading white-box AI Ethernet switch maker for hyperscalers (leaf/spine and AI fabric boxes).</p>
+          </li>
+          <li>
+            <span class="name">Celestica</span><span class="ticker">CLS</span>
+            <p>Largest merchant builder of 800G / 1.6T white-box switches — also an AI server EMS (see layer 7).</p>
+          </li>
+          <li>
+            <span class="name">Astera Labs (Scorpio)</span><span class="ticker">ALAB</span>
+            <p>PCIe / scale-up fabric switches inside AI servers — the on-board fabric that sits beside retimers.</p>
+          </li>
         </ul>
 
         <h3 id="layer-5">5. Optical &amp; fiber</h3>
@@ -682,6 +751,10 @@
             <span class="name">Corning</span><span class="ticker">GLW</span>
             <p>Major maker of optical fiber and preforms; large AI-related capacity expansions and hyperscaler / GPU-ecosystem partnerships.</p>
           </li>
+          <li>
+            <span class="name">Fujikura</span><span class="ticker">5803.T</span>
+            <p>High-fiber-count cable and connectivity supplier to hyperscalers — main AI fiber name beside Corning.</p>
+          </li>
         </ul>
         <div class="callout">
           <div class="label">Nested Photonics section (do not duplicate here)</div>
@@ -690,7 +763,8 @@
             <a href="https://en.wikipedia.org/wiki/Silicon_photonics">silicon photonics</a>,
             DSPs, CPO, optical networking platforms (Ciena, Nokia/Infinera, Acacia/Cisco, and peers), fiber (Corning, Fujikura),
             and InP substrates (AXT, JX Advanced Metals, Sumitomo Electric) — lives on
-            <a href="photonics/index.html">hardware / Photonics</a>.
+            <a href="photonics/index.html">hardware / Photonics</a>
+            (same AI Computation Hardware ownership as this parent page).
             Co-packaged optics roadmaps and NVIDIA / Broadcom partner lists:
             <a href="photonics/cpo/index.html">Photonics → CPO</a>.
             Fab photomask overlap also cross-links to
@@ -705,19 +779,11 @@
         <ul class="company-list">
           <li>
             <span class="name">Amphenol</span><span class="ticker">APH</span>
-            <p>Large electrical connector and interconnect supplier; datacom / AI demand has been a standout growth area (seed).</p>
+            <p>Large electrical connector and interconnect supplier; closed the $10.5B CommScope CCS (fiber / structured cabling) acquisition on 12 Jan 2026 — now relevant to the optical cabling layer too.</p>
           </li>
           <li>
             <span class="name">TE Connectivity</span><span class="ticker">TEL</span>
             <p>Global connector leader with high-speed backplane and datacenter products called out in the extract.</p>
-          </li>
-          <li>
-            <span class="name">Molex</span>
-            <p>High-speed I/O and CPO-related connector work (Koch Industries subsidiary) for dense switch and GPU platforms.</p>
-          </li>
-          <li>
-            <span class="name">Samtec</span>
-            <p>Specialty high-speed connectors used in datacenter and telecom gear.</p>
           </li>
           <li>
             <span class="name">Credo Technology</span><span class="ticker">CRDO</span>
@@ -726,6 +792,22 @@
           <li>
             <span class="name">Astera Labs</span><span class="ticker">ALAB</span>
             <p>PCIe / CXL / Ethernet retimers for dense AI servers — the silicon that keeps copper interconnects clean as GPU racks scale.</p>
+          </li>
+          <li>
+            <span class="name">Luxshare Precision</span><span class="ticker">002475.SZ</span>
+            <p>Major NVLink copper cable-cartridge and high-speed cable assembler for AI racks.</p>
+          </li>
+          <li>
+            <span class="name">BizLink Holding</span><span class="ticker">3665.TW</span>
+            <p>High-speed copper and active electrical cable (AEC) assemblies for AI racks.</p>
+          </li>
+          <li>
+            <span class="name">Molex (Koch Industries)</span>
+            <p>Private (Koch Industries) — high-speed I/O and CPO-related connectors for dense switch and GPU platforms.</p>
+          </li>
+          <li>
+            <span class="name">Samtec</span>
+            <p>Private specialty high-speed connectors used in datacenter and telecom gear.</p>
           </li>
         </ul>
 
@@ -751,8 +833,12 @@
             <p>ProLiant and AI infrastructure; Juniper acquisition expands networking beside servers.</p>
           </li>
           <li>
-            <span class="name">Lenovo</span><span class="ticker">LNVGY</span>
-            <p>ThinkSystem servers — value and volume positioning in enterprise AI boxes.</p>
+            <span class="name">Lenovo</span><span class="ticker">0992.HK / LNVGY</span>
+            <p>ThinkSystem servers — value and volume positioning in enterprise AI boxes (primary HK listing 0992.HK; US OTC ADR LNVGY).</p>
+          </li>
+          <li>
+            <span class="name">Inspur Electronic Information</span><span class="ticker">000977.SZ</span>
+            <p>China’s largest AI server maker for domestic cloud and enterprise buyers.</p>
           </li>
         </ul>
         <p><strong>Contract manufacturing / ODM (seed + extraction)</strong></p>
@@ -770,12 +856,32 @@
             <p>Hyperscale server ODM — large AI server assembly volumes for cloud buyers.</p>
           </li>
           <li>
-            <span class="name">Wistron / Wiwynn</span>
-            <p>Enterprise and hyperscale server design/assembly; Wiwynn spun toward cloud / AI racks with fast growth in the extract.</p>
+            <span class="name">Wistron</span><span class="ticker">3231.TW</span>
+            <p>Enterprise and hyperscale server design/assembly.</p>
           </li>
           <li>
-            <span class="name">Inventec / Pegatron / Compal</span>
-            <p>Additional Taiwan ODMs assembling AI and white-box servers as capacity expands outside China.</p>
+            <span class="name">Wiwynn</span><span class="ticker">6669.TW</span>
+            <p>Cloud / AI rack ODM spun toward hyperscale with fast growth in the extract.</p>
+          </li>
+          <li>
+            <span class="name">Inventec</span><span class="ticker">2356.TW</span>
+            <p>Taiwan ODM assembling AI and white-box servers.</p>
+          </li>
+          <li>
+            <span class="name">Pegatron</span><span class="ticker">4938.TW</span>
+            <p>Taiwan ODM assembling AI and white-box servers.</p>
+          </li>
+          <li>
+            <span class="name">Compal</span><span class="ticker">2324.TW</span>
+            <p>Taiwan ODM assembling AI and white-box servers as capacity expands outside China.</p>
+          </li>
+          <li>
+            <span class="name">Sanmina</span><span class="ticker">SANM</span>
+            <p>Bought ZT Systems’ rack-scale manufacturing from AMD (closed Oct 2025); builds AMD rack-scale systems.</p>
+          </li>
+          <li>
+            <span class="name">Jabil</span><span class="ticker">JBL</span>
+            <p>Electronics manufacturing services for AI racks, networking gear and optics.</p>
           </li>
         </ul>
 
@@ -801,12 +907,24 @@
             <p>Low-CTE T-glass / low-Dk glass cloth; reported shortages have gated substrates and high-speed PCBs.</p>
           </li>
           <li>
-            <span class="name">Taiwan Union / WUS / Gold Circuit / Victory Giant</span><span class="ticker">6274.TW / 2316.TW / 2368.TW / 300476.SZ</span>
-            <p>Additional CCL and high-layer-count PCB fabricators for AI servers and networking gear.</p>
+            <span class="name">Taiwan Union Technology (TUC)</span><span class="ticker">6274.TW</span>
+            <p>Low-loss copper-clad laminate (CCL) peer for AI server and switch boards.</p>
+          </li>
+          <li>
+            <span class="name">Victory Giant Technology</span><span class="ticker">300476.SZ</span>
+            <p>HDI / high-layer PCB supplier for AI server boards.</p>
+          </li>
+          <li>
+            <span class="name">WUS Printed Circuit</span><span class="ticker">2316.TW</span>
+            <p>High-layer-count PCBs for AI servers and networking switches.</p>
+          </li>
+          <li>
+            <span class="name">Gold Circuit Electronics</span><span class="ticker">2368.TW</span>
+            <p>AI server and networking PCB supplier.</p>
           </li>
           <li>
             <span class="name">TTM Technologies</span><span class="ticker">TTMI</span>
-            <p>US/Asia PCB manufacturer serving networking, computing, and aerospace boards.</p>
+            <p>US-listed high-layer-count PCB maker for AI, networking and aerospace boards.</p>
           </li>
         </ul>
 
@@ -823,7 +941,7 @@
           </li>
           <li>
             <span class="name">Asetek</span>
-            <p>Direct-to-chip liquid-cooling specialist for AI and high-performance computing (seed).</p>
+            <p>Private (CQXA Holdings; delisted Nasdaq Copenhagen Apr 2024) — direct-to-chip liquid-cooling specialist for AI and HPC.</p>
           </li>
           <li>
             <span class="name">Schneider Electric</span><span class="ticker">SU.PA</span>
@@ -846,6 +964,18 @@
             <p>Immersion and specialty liquid-cooling platforms; Trane completed the LiquidStack acquisition on 2 Mar 2026 (facility HVAC stays on Electrification).</p>
           </li>
           <li>
+            <span class="name">Asia Vital Components (AVC)</span><span class="ticker">3017.TW</span>
+            <p>Major cold-plate, manifold and CDU supplier for NVIDIA GB-class racks.</p>
+          </li>
+          <li>
+            <span class="name">Auras Technology</span><span class="ticker">3324.TWO</span>
+            <p>Cold plates and liquid-cooling modules for AI servers.</p>
+          </li>
+          <li>
+            <span class="name">Modine (Airedale)</span><span class="ticker">MOD</span>
+            <p>Data-center chillers and CDUs for dense AI halls.</p>
+          </li>
+          <li>
             <span class="name">nVent</span><span class="ticker">NVT</span>
             <p>Liquid cooling and enclosure / power solutions expanding with AI densification.</p>
           </li>
@@ -854,8 +984,20 @@
             <p>Integrated power, cooling, and datacenter infrastructure modules.</p>
           </li>
           <li>
-            <span class="name">Johnson Controls / Carrier / STULZ / Rittal / Munters</span>
-            <p>Chillers, computer-room air handlers, and liquid-cooling packages that keep halls within temperature limits — more facility-facing than chip-facing.</p>
+            <span class="name">Johnson Controls</span><span class="ticker">JCI</span>
+            <p>Facility chillers and cooling packages for AI halls — more facility-facing than chip-facing.</p>
+          </li>
+          <li>
+            <span class="name">Carrier</span><span class="ticker">CARR</span>
+            <p>Facility chillers and HVAC for data halls.</p>
+          </li>
+          <li>
+            <span class="name">Munters</span><span class="ticker">MTRS.ST</span>
+            <p>Data-center air handlers and cooling (Nasdaq Stockholm).</p>
+          </li>
+          <li>
+            <span class="name">STULZ / Rittal</span>
+            <p>Private — computer-room air handlers, rack enclosures and liquid-cooling packages.</p>
           </li>
           <li>
             <span class="name">Submer / GRC / Iceotope</span>
@@ -889,6 +1031,30 @@
           <li>
             <span class="name">Texas Instruments</span><span class="ticker">TXN</span>
             <p>Power-management ICs across servers and accelerators.</p>
+          </li>
+          <li>
+            <span class="name">Analog Devices</span><span class="ticker">ADI</span>
+            <p>Named NVIDIA 800 VDC silicon partner — multiphase and hot-swap power parts on AI boards.</p>
+          </li>
+          <li>
+            <span class="name">Advanced Energy</span><span class="ticker">AEIS</span>
+            <p>Server / industrial power supplies and high-efficiency conversion modules.</p>
+          </li>
+          <li>
+            <span class="name">Flex (Flex Power Modules)</span><span class="ticker">FLEX</span>
+            <p>Power modules and PSU adjacency for cloud / AI racks, including 800 V / ±400 V module paths.</p>
+          </li>
+          <li>
+            <span class="name">Bel Fuse (Bel Power)</span><span class="ticker">BELFB</span>
+            <p>Front-end and board-mount power supplies common in OEM/ODM racks.</p>
+          </li>
+          <li>
+            <span class="name">Lite-On Technology</span><span class="ticker">2301.TW</span>
+            <p>Data-center / cloud server PSU modules (Taiwan listing; no reliable US ADR for Fidelity).</p>
+          </li>
+          <li>
+            <span class="name">Murata Manufacturing</span><span class="ticker">6981.T</span>
+            <p>Board-level power modules and magnetics common in dense converters (US ADR often MRAAY).</p>
           </li>
           <li>
             <span class="name">Infineon</span><span class="ticker">IFX.DE</span>

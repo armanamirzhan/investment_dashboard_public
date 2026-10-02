@@ -13,7 +13,7 @@
 <g class="stage-hotspot scarcity-soon" data-stage="std-msa" tabindex="0" role="button" focusable="true" aria-label="Laser MSA. Activate for stage details.">
 <rect class="box" x="348" y="100" width="300" height="100" rx="6" fill="#1e3a5a" stroke="#3d4a5c" stroke-width="1.4"/>
 <text x="498.0" y="146.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Laser MSA</text>
-<text x="498.0" y="162.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">common plugs &amp;amp; modules across suppliers</text>
+<text x="498.0" y="162.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">common plugs & modules across suppliers</text>
 </g>
 <g class="stage-hotspot" data-stage="std-protocols" tabindex="0" role="button" focusable="true" aria-label="Optical protocols. Activate for stage details.">
 <rect class="box" x="664" y="100" width="280" height="100" rx="6" fill="#283848" stroke="#3d4a5c" stroke-width="1.4"/>
@@ -48,7 +48,7 @@
 <g class="stage-hotspot" data-stage="std-ecosystem" tabindex="0" role="button" focusable="true" aria-label="Ecosystem bodies. Activate for stage details.">
 <rect class="box" x="664" y="360" width="280" height="70" rx="6" fill="#1a3040" stroke="#3d4a5c" stroke-width="1.4"/>
 <text x="804.0" y="391.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Ecosystem bodies</text>
-<text x="804.0" y="407.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">consortia &amp;amp; MSA groups</text>
+<text x="804.0" y="407.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">consortia & MSA groups</text>
 </g>
 <text x="32" y="480" fill="#6b7788" font-size="10" font-family="system-ui,sans-serif">UCIe = Universal Chiplet Interconnect Express · MSA = multi-source agreement. Not investment advice.</text>
 </svg>

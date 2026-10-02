@@ -29,7 +29,7 @@
 <g class="stage-hotspot scarcity-soon" data-stage="els-coherent" tabindex="0" role="button" focusable="true" aria-label="Coherent. Activate for stage details.">
 <rect class="box" x="348" y="234" width="300" height="80" rx="6" fill="#1e3a5a" stroke="#3d4a5c" stroke-width="1.4"/>
 <text x="498.0" y="270.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Coherent</text>
-<text x="498.0" y="286.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">lasers &amp;amp; broader photonics</text>
+<text x="498.0" y="286.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">lasers & broader photonics</text>
 </g>
 <g class="stage-hotspot" data-stage="els-nvidia-ties" tabindex="0" role="button" focusable="true" aria-label="NVIDIA laser capacity ties. Activate for stage details.">
 <rect class="box" x="664" y="234" width="280" height="80" rx="6" fill="#1e3a5a" stroke="#3d4a5c" stroke-width="1.4"/>

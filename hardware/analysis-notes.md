@@ -81,3 +81,7 @@ Added explicit names that were bundled or missing: Advanced Energy (Artesyn), Fl
 - Electrification analysis-notes.md + stages (commit 572c8e3 class lock)
 - OCP / NVIDIA / Vertiv public 800 VDC sidecar → facility timeline (as summarized by Electrification)
 - Prior hardware stages.json company baseline (extended, not discarded)
+
+## Fidelity ADR notes (audit)
+
+- **Delta Electronics (2308.TW → DELTY):** Hub uses `fidelity_symbol` DELTY. Claude audit B-076 could not confirm DELTY resolves to Delta Electronics Inc. (Taiwan) on Fidelity — treat the ADR link as unverified until checked live; the TW ticker remains the primary listing.

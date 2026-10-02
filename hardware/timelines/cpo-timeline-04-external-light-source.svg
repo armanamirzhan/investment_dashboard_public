@@ -5,35 +5,35 @@
 <rect x="20" y="16" width="1480" height="688" rx="14" fill="#ffffff" stroke="#c5d0de" stroke-width="1.5"/>
 <text x="52" y="52" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="25" font-weight="700" fill="#1a2332">External light source (ELS) for co-packaged optics</text>
 <text x="52" y="78" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13.5" fill="#5a6a7e">Lasers live off the package so they can be swapped, cooled, and shared across engines</text>
-<line x1="52" y1="302" x2="1458" y2="302" stroke="#2b6cb0" stroke-width="3.5" stroke-linecap="round"/>
-<polygon points="1468,302 1452,294 1452,310" fill="#2b6cb0"/>
-<line x1="355.4285714285304" y1="293" x2="355.4285714285304" y2="311" stroke="#2b6cb0" stroke-width="2"/>
-<text x="355.4285714285304" y="332" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2026</text>
-<line x1="861.1428571428243" y1="293" x2="861.1428571428243" y2="311" stroke="#2b6cb0" stroke-width="2"/>
-<text x="861.1428571428243" y="332" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2027</text>
-<line x1="1366.8571428571183" y1="293" x2="1366.8571428571183" y2="311" stroke="#2b6cb0" stroke-width="2"/>
-<text x="1366.8571428571183" y="332" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2028</text>
-<line x1="203.7142857142652" y1="302" x2="203.7142857142652" y2="207" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
-<circle cx="203.7142857142652" cy="302" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
-<rect x="69.7142857142652" y="134" width="268" height="73" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
-<text x="79.7142857142652" y="151" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">Architecture</text>
-<text x="79.7142857142652" y="166" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">External light source (ELS) / ELSFP</text>
-<text x="79.7142857142652" y="180.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">off-package</text>
-<text x="79.7142857142652" y="195.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">~30% wall-plug efficiency</text>
-<line x1="532.4285714284872" y1="302" x2="532.4285714284872" y2="207" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
-<circle cx="532.4285714284872" cy="302" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
-<rect x="398.4285714284872" y="149" width="268" height="58" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
-<text x="408.4285714284872" y="166" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2026</text>
-<text x="408.4285714284872" y="181" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">NVIDIA–Lumentum / Coherent capacity</text>
-<text x="408.4285714284872" y="195.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Laser supply tied to AI optics ramps</text>
-<rect x="355.4285714285304" y="250" width="682.7142857142508" height="12" rx="4" fill="#0d9488" opacity="0.38"/>
-<line x1="696.7857142856558" y1="302" x2="696.7857142856558" y2="127" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
-<circle cx="696.7857142856558" cy="302" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
-<rect x="562.7857142856558" y="54" width="268" height="73" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
-<text x="572.7857142856558" y="71" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2026–2027</text>
-<text x="572.7857142856558" y="86" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Ayar SuperNova multi-wavelength</text>
-<text x="572.7857142856558" y="100.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">sources</text>
-<text x="572.7857142856558" y="115.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Many colors of light from one module</text>
+<line x1="52" y1="345" x2="1458" y2="345" stroke="#2b6cb0" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="1468,345 1452,337 1452,353" fill="#2b6cb0"/>
+<line x1="355.4285714285304" y1="336" x2="355.4285714285304" y2="354" stroke="#2b6cb0" stroke-width="2"/>
+<text x="355.4285714285304" y="375" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2026</text>
+<line x1="861.1428571428243" y1="336" x2="861.1428571428243" y2="354" stroke="#2b6cb0" stroke-width="2"/>
+<text x="861.1428571428243" y="375" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2027</text>
+<line x1="1366.8571428571183" y1="336" x2="1366.8571428571183" y2="354" stroke="#2b6cb0" stroke-width="2"/>
+<text x="1366.8571428571183" y="375" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="600" fill="#5a6a7e">2028</text>
+<line x1="203.7142857142652" y1="345" x2="203.7142857142652" y2="245" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="203.7142857142652" cy="345" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
+<rect x="69.7142857142652" y="172" width="268" height="73" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+<text x="79.7142857142652" y="189" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">Architecture</text>
+<text x="79.7142857142652" y="204" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">External light source (ELS) / ELSFP</text>
+<text x="79.7142857142652" y="218.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">off-package</text>
+<text x="79.7142857142652" y="233.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">~30% wall-plug efficiency</text>
+<line x1="532.4285714284872" y1="345" x2="532.4285714284872" y2="245" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="532.4285714284872" cy="345" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
+<rect x="398.4285714284872" y="187" width="268" height="58" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+<text x="408.4285714284872" y="204" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2026</text>
+<text x="408.4285714284872" y="219" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">NVIDIA–Lumentum / Coherent capacity</text>
+<text x="408.4285714284872" y="233.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Laser supply tied to AI optics ramps</text>
+<rect x="355.4285714285304" y="293" width="682.7142857142508" height="12" rx="4" fill="#0d9488" opacity="0.38"/>
+<line x1="696.7857142856558" y1="345" x2="696.7857142856558" y2="155" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>
+<circle cx="696.7857142856558" cy="345" r="7.5" fill="#1e40af" stroke="#fff" stroke-width="2.2"/>
+<rect x="562.7857142856558" y="82" width="268" height="73" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
+<text x="572.7857142856558" y="99" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2026–2027</text>
+<text x="572.7857142856558" y="114" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Ayar SuperNova multi-wavelength</text>
+<text x="572.7857142856558" y="128.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">sources</text>
+<text x="572.7857142856558" y="143.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Many colors of light from one module</text>
 <rect x="52" y="545" width="1416" height="90" rx="10" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
 <text x="70" y="571" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.5" font-weight="700" fill="#0d9488" letter-spacing="0.08em">END STATE</text>
 <text x="70" y="595" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="15.5" font-weight="600" fill="#1a2332">Swappable multi-wavelength external light sources (ELS) feed co-packaged optics without putting hot</text>

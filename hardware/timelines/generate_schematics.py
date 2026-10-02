@@ -10,7 +10,7 @@ FONT = "system-ui,sans-serif"
 def esc(s: str) -> str:
     return (
         str(s)
-        .replace("&", "&amp;")
+        .replace("&", "&")
         .replace("<", "&lt;")
         .replace(">", "&gt;")
         .replace('"', "&quot;")
@@ -164,7 +164,7 @@ def fig2() -> str:
 
     p.append(
         f'<text x="32" y="332" fill="#9aa7b8" font-size="11" font-family="{FONT}" '
-        f'font-weight="600">Specialists &amp; timing</text>'
+        f'font-weight="600">Specialists & timing</text>'
     )
     p.append(cell("su-ayar", 32, 344, 300, 70, "Ayar Labs TeraPHY + SuperNova", "private · OFC / Hot Chips demos", "#1e3a5a"))
     p.append(cell("su-lightmatter", 348, 344, 300, 70, "Lightmatter Passage", "private · optical interconnect", "#1e3a5a"))
@@ -248,7 +248,7 @@ def fig4() -> str:
         f'font-weight="600">Who supplies the light</text>'
     )
     p.append(cell("els-lumentum", 32, 234, 300, 80, "Lumentum", "lasers / optical engines / ELS", "#1e3a5a", scarcity="soon"))
-    p.append(cell("els-coherent", 348, 234, 300, 80, "Coherent", "lasers &amp; broader photonics", "#1e3a5a", scarcity="soon"))
+    p.append(cell("els-coherent", 348, 234, 300, 80, "Coherent", "lasers & broader photonics", "#1e3a5a", scarcity="soon"))
     p.append(cell("els-nvidia-ties", 664, 234, 280, 80, "NVIDIA laser capacity ties", "2026 supply for AI optics ramps", "#1e3a5a"))
 
     p.append(
@@ -282,7 +282,7 @@ def fig5() -> str:
         f'font-weight="600">What must settle for mix-and-match optical parts</text>'
     )
     p.append(cell("std-ucie", 32, 100, 300, 100, "UCIe", "die-to-optical-chiplet electrical bridge", "#2a4060", scarcity="soon"))
-    p.append(cell("std-msa", 348, 100, 300, 100, "Laser MSA", "common plugs &amp; modules across suppliers", "#1e3a5a", scarcity="soon"))
+    p.append(cell("std-msa", 348, 100, 300, 100, "Laser MSA", "common plugs & modules across suppliers", "#1e3a5a", scarcity="soon"))
     p.append(cell("std-protocols", 664, 100, 280, 100, "Optical protocols", "still less settled than copper SerDes", "#283848"))
 
     p.append(cell("std-copper-ref", 32, 240, 300, 80, "Copper SerDes maturity", "today’s reference for “settled”", "#243028"))
@@ -291,7 +291,7 @@ def fig5() -> str:
 
     p.append(cell("std-chiplet", 32, 360, 300, 70, "Optical chiplet", "photonic I/O die beside compute", "#1a3040"))
     p.append(cell("std-bridge", 348, 360, 300, 70, "Electrical bridge", "short UCIe-class link on package", "#1a3040"))
-    p.append(cell("std-ecosystem", 664, 360, 280, 70, "Ecosystem bodies", "consortia &amp; MSA groups", "#1a3040"))
+    p.append(cell("std-ecosystem", 664, 360, 280, 70, "Ecosystem bodies", "consortia & MSA groups", "#1a3040"))
 
     p.append(
         f'<text x="32" y="480" fill="#6b7788" font-size="10" font-family="{FONT}">'
