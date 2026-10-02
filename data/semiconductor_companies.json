@@ -13,14 +13,14 @@
     "thesis": "Sole advanced node manufacturer for AI chips. 3nm/2nm process leadership. Arizona fab expansion for US supply chain.",
     "catalysts": [
       "Q1 profit +58% YoY — 4th consecutive record",
-      "Capex 2-56B for 2026",
+      "2026 CapEx: initial guidance US$52–56B (4Q25); later raised above US$64B (Jul 2026)",
       "Advanced packaging expansion — 2 new facilities planned in Arizona"
     ],
     "risks": [
       "CoWoS capacity remains bottleneck",
       "Geopolitical concerns with Taiwan"
     ],
-    "updated": "2026-05-02"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "INTC",
@@ -46,7 +46,7 @@
       "Customer trust building"
     ],
     "updated": "2026-10-02",
-    "note": "Same parent ticker INTC as the Intel products record — intentional dual entry. Unit renamed Intel Foundry."
+    "note": "Same parent ticker INTC as the Intel products record — intentional dual entry. Unit renamed Intel Foundry (was IFS / Intel Foundry Services)."
   },
   {
     "ticker": "UMC",
@@ -172,7 +172,7 @@
     "ticker": "KLAC",
     "name": "KLA Corporation",
     "sector": "semiconductor_fab",
-    "sub_sector": "Lithography & Equipment",
+    "sub_sector": "Inspection & Metrology",
     "rating": null,
     "rating_source": null,
     "emoji": "🟡",
@@ -190,7 +190,7 @@
       "Customer CapEx cycles",
       "Competition from Applied Materials"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "8035.T",
@@ -330,11 +330,11 @@
       "Growing EV + DC power demand"
     ],
     "risks": [
-      "Small market cap ($350M)",
+      "Small-cap liquidity and volatility",
       "Customer concentration",
       "SiC adoption pace uncertainty"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "ON",
@@ -403,11 +403,11 @@
       "$500M→$1B+ DC revenue 2026-2027"
     ],
     "risks": [
-      "Extreme trailing P/E (181x)",
       "Manufacturing inefficiency",
-      "Competition"
+      "Competition",
+      "Cyclical auto/industrial exposure"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "WOLF",
@@ -420,16 +420,566 @@
     "exposure": "10-15%",
     "report": null,
     "public": true,
-    "thesis": "SiC wafer and device manufacturer. Mohawk Valley fab challenges but long-term SiC demand strong for datacenter power.",
+    "thesis": "SiC wafer and device maker emerged from Chapter 11 on 2025-09-29; old common shares cancelled and replaced by new WOLF equity (NYSE). Focus remains Mohawk Valley fab ramp and SiC for datacenter/EV power — post-reorg capital structure is the key change vs pre-filing thesis.",
     "catalysts": [
+      "Post-reorg balance sheet after 2025-09-29 emergence",
       "Mohawk Valley fab ramp",
       "SiC adoption for datacenter power supplies"
     ],
     "risks": [
-      "Operational execution challenges",
-      "Cash burn and balance sheet stress",
+      "New equity / residual dilution and share-reserve overhang",
+      "Fab yield and utilization execution",
+      "Competition from larger SiC peers (STM, onsemi, Infineon)"
+    ],
+    "updated": "2026-10-02",
+    "note": "Chapter 11 plan effective 2025-09-29; old shares cancelled. Educational research only — not advice."
+  },
+  {
+    "ticker": "ASMIY",
+    "name": "ASM International",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Lithography & Equipment",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "ALD/epitaxy equipment leader critical for advanced logic and memory gate stacks used in AI chips.",
+    "catalysts": [
+      "Advanced-node ALD intensity rising",
+      "GAA / high-k stack tool demand",
+      "HBM and logic fab expansions"
+    ],
+    "risks": [
+      "Customer CapEx cyclicality",
+      "Competition from Applied/Lam/TEL",
+      "China export controls"
+    ],
+    "updated": "2026-10-02",
+    "local_ticker": "ASM.AS",
+    "note": "Yahoo US OTC ASMIY; Euronext Amsterdam ASM.AS."
+  },
+  {
+    "ticker": "ATEYY",
+    "name": "Advantest",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Test Equipment",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Leading ATE vendor for SoC and memory test; AI HBM and advanced logic raise test intensity per wafer.",
+    "catalysts": [
+      "HBM/AI SoC test demand",
+      "High-parallelism memory testers",
+      "Japan semiconductor equipment cycle"
+    ],
+    "risks": [
+      "Memory CapEx swings",
+      "Teradyne competition",
+      "Yen and export-control exposure"
+    ],
+    "updated": "2026-10-02",
+    "local_ticker": "6857.T",
+    "note": "Yahoo US OTC ATEYY; Tokyo 6857.T."
+  },
+  {
+    "ticker": "TER",
+    "name": "Teradyne",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Test Equipment",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "US semiconductor automatic test equipment peer; AI and advanced packaging increase test content.",
+    "catalysts": [
+      "AI/HBM test intensity",
+      "System-level test growth",
+      "Industrial automation optionality"
+    ],
+    "risks": [
+      "Semiconductor CapEx cycles",
+      "Advantest competition",
+      "Customer concentration"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "DSCSY",
+    "name": "DISCO",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Advanced Packaging",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Dominant precision dicing/grinding equipment supplier; HBM and advanced packaging raise singulation demand.",
+    "catalysts": [
+      "HBM stack thinning/dicing demand",
+      "Advanced packaging capacity adds",
+      "Japan equipment cycle"
+    ],
+    "risks": [
+      "Customer CapEx timing",
+      "Yen exposure",
+      "Niche concentration"
+    ],
+    "updated": "2026-10-02",
+    "local_ticker": "6146.T",
+    "note": "Yahoo US OTC DSCSY; Tokyo 6146.T."
+  },
+  {
+    "ticker": "LSRCY",
+    "name": "Lasertec",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Inspection & Metrology",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "EUV mask inspection leader; critical yield tool as AI leading-edge nodes and mask complexity rise.",
+    "catalysts": [
+      "EUV mask inspection backlog",
+      "High-NA EUV mask complexity",
+      "Actinic inspection roadmap"
+    ],
+    "risks": [
+      "Customer concentration",
+      "Order lumpiness",
+      "Yen and export controls"
+    ],
+    "updated": "2026-10-02",
+    "local_ticker": "6920.T",
+    "note": "Yahoo US OTC LSRCY; Tokyo 6920.T."
+  },
+  {
+    "ticker": "BESIY",
+    "name": "BE Semiconductor (Besi)",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Advanced Packaging",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Advanced packaging assembly equipment (die attach/hybrid bonding) leveraged to AI chiplet and HBM flows.",
+    "catalysts": [
+      "Hybrid bonding adoption",
+      "AI advanced packaging CapEx",
+      "TSMC/OSAT tool demand"
+    ],
+    "risks": [
+      "Order cyclicality",
+      "Competition in bonding tools",
+      "Customer concentration"
+    ],
+    "updated": "2026-10-02",
+    "local_ticker": "BESI.AS",
+    "note": "Yahoo US OTC BESIY; Euronext Amsterdam BESI.AS."
+  },
+  {
+    "ticker": "ONTO",
+    "name": "Onto Innovation",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Inspection & Metrology",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Process control / metrology for advanced nodes and packaging; complements KLA in specialty inspection niches.",
+    "catalysts": [
+      "Advanced packaging metrology",
+      "Gate-all-around process control",
+      "HBM process steps"
+    ],
+    "risks": [
+      "KLA competition",
+      "Semi CapEx cycles",
+      "Customer concentration"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "CAMT",
+    "name": "Camtek",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Inspection & Metrology",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "AOI inspection for advanced packaging and HBM; benefits as AI packaging volumes rise.",
+    "catalysts": [
+      "HBM/advanced packaging AOI demand",
+      "Heterogeneous integration inspection"
+    ],
+    "risks": [
+      "Smaller scale vs KLA",
+      "Order volatility",
+      "Geopolitical/export risk"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "NVMI",
+    "name": "Nova",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Inspection & Metrology",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Dimensional and materials metrology for advanced logic/memory process control.",
+    "catalysts": [
+      "GAA and advanced DRAM metrology intensity",
+      "Materials metrology adoption"
+    ],
+    "risks": [
+      "Semi CapEx cycles",
+      "Competition from larger peers",
+      "Customer concentration"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "FORM",
+    "name": "FormFactor",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Test Equipment",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Probe cards and test interfaces for advanced logic and HBM; AI wafers raise probe complexity.",
+    "catalysts": [
+      "HBM probe-card demand",
+      "Advanced node probe complexity"
+    ],
+    "risks": [
+      "Memory cycle exposure",
+      "Customer concentration",
+      "Technology transition risk"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "ACLS",
+    "name": "Axcelis Technologies",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Lithography & Equipment",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Ion implant equipment used across logic/memory fabs including power and advanced nodes.",
+    "catalysts": [
+      "Fab capacity expansions",
+      "Power/SiC related implant demand"
+    ],
+    "risks": [
+      "Cyclical equipment spending",
+      "Competition",
+      "Customer concentration"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "VECO",
+    "name": "Veeco",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Lithography & Equipment",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Thin-film process equipment (including wet/ALD-related niches) for advanced semiconductors and compound semis.",
+    "catalysts": [
+      "Advanced packaging and compound semi tools",
+      "AI-related capacity adds"
+    ],
+    "risks": [
+      "Niche scale",
+      "Order lumpiness",
       "Competition"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "KLIC",
+    "name": "Kulicke & Soffa",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Advanced Packaging",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Semiconductor assembly/bonding equipment; advanced packaging and power device assembly exposure.",
+    "catalysts": [
+      "Advanced packaging assembly tools",
+      "Power/automotive assembly demand"
+    ],
+    "risks": [
+      "Assembly CapEx cycles",
+      "Competition from Besi/ASM Pacific",
+      "China exposure"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "PLAB",
+    "name": "Photronics",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Materials & Chemicals",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Photomask manufacturer; leading-edge and specialty masks needed as AI node and packaging complexity rises.",
+    "catalysts": [
+      "Advanced mask demand",
+      "Specialty IC mask growth"
+    ],
+    "risks": [
+      "Customer concentration",
+      "Technology node transitions",
+      "Pricing pressure"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "SOI.PA",
+    "name": "Soitec",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Materials & Chemicals",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Engineered substrates (SOI and related) used in RF, power, and specialty logic; adjacent to AI infrastructure silicon.",
+    "catalysts": [
+      "SOI content in connectivity/edge",
+      "Power/RF substrate demand"
+    ],
+    "risks": [
+      "End-market cyclicality",
+      "Customer concentration",
+      "Euro FX"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "TSEM",
+    "name": "Tower Semiconductor",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Foundries",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Specialty foundry (analog, RF, power, photonics-related) serving networking and infrastructure silicon.",
+    "catalysts": [
+      "Specialty node demand",
+      "Silicon photonics / RF capacity",
+      "Intel foundry partnership overhang resolution"
+    ],
+    "risks": [
+      "No leading-edge logic",
+      "Customer concentration",
+      "Utilization swings"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "0981.HK",
+    "name": "SMIC",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Foundries",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "China's leading foundry; mature/advanced-node domestic capacity relevant to geopolitics and supply diversification debates.",
+    "catalysts": [
+      "Domestic China fab demand",
+      "Mature-node utilization",
+      "Policy support"
+    ],
+    "risks": [
+      "US export controls",
+      "Technology gap vs TSMC",
+      "Geopolitical sanctions risk"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "3436.T",
+    "name": "SUMCO",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Materials & Chemicals",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "#2 silicon wafer supplier alongside Shin-Etsu; AI fab expansions support 300mm wafer demand.",
+    "catalysts": [
+      "300mm wafer demand from fab expansions",
+      "AI-driven wafer starts"
+    ],
+    "risks": [
+      "Wafer pricing cycles",
+      "CapEx overcapacity risk",
+      "Shin-Etsu competition"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "7735.T",
+    "name": "SCREEN Holdings",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Lithography & Equipment",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Wafer cleaning and coater/developer equipment peer to TEL in wet process tools for advanced fabs.",
+    "catalysts": [
+      "Advanced-node cleaning intensity",
+      "Japan equipment cycle"
+    ],
+    "risks": [
+      "CapEx cyclicality",
+      "Competition from TEL",
+      "China restrictions"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "6525.T",
+    "name": "Kokusai Electric",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Lithography & Equipment",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Batch deposition / thermal processing equipment used in memory and logic fabs.",
+    "catalysts": [
+      "Memory and logic deposition tools",
+      "Fab expansion cycle"
+    ],
+    "risks": [
+      "Cyclical memory CapEx",
+      "Competition",
+      "Customer concentration"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "AIXA.DE",
+    "name": "Aixtron",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Lithography & Equipment",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "MOCVD equipment for compound semiconductors (GaN/SiC epi) used in power and RF devices for infrastructure.",
+    "catalysts": [
+      "GaN/SiC epi tool demand",
+      "Power electronics buildout"
+    ],
+    "risks": [
+      "Order lumpiness",
+      "Compound-semi cycle",
+      "Competition"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "KEYS",
+    "name": "Keysight Technologies",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Test Equipment",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Electronic design/test systems used across high-speed interconnect, optical, and semiconductor validation for AI networks.",
+    "catalysts": [
+      "High-speed SerDes / optical test",
+      "AI networking validation demand"
+    ],
+    "risks": [
+      "Broad end-market cyclicality",
+      "Competition",
+      "Government/budget exposure"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "COHU",
+    "name": "Cohu",
+    "sector": "semiconductor_fab",
+    "sub_sector": "Test Equipment",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Handler and test-adjacent equipment for semiconductor back-end; AI packaging volumes can lift handler demand.",
+    "catalysts": [
+      "Back-end test handler demand",
+      "Advanced packaging volumes"
+    ],
+    "risks": [
+      "Smaller scale",
+      "Semi CapEx cycles",
+      "Customer concentration"
+    ],
+    "updated": "2026-10-02"
   }
 ]

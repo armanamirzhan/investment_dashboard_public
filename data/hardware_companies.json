@@ -111,19 +111,19 @@
     "exposure": "50%+",
     "report": null,
     "public": true,
-    "thesis": "HBM leader benefiting from AI GPU memory demand. HBM3E supply sold out through 2025-2026.",
+    "thesis": "HBM supplier benefiting from AI GPU memory demand. HBM4 in high-volume production for NVIDIA Rubin (12-Hi); HBM3E remains an important mix as platforms overlap.",
     "catalysts": [
-      "HBM3E demand exceeding supply",
-      "AI-driven memory content increase per server",
+      "HBM4 high-volume production for Rubin",
+      "AI-driven memory content per server",
       "Data center DRAM pricing power",
-      "HBM4 development"
+      "HBM3E still shipping into Blackwell-class demand"
     ],
     "risks": [
       "Memory cycle volatility",
       "HBM yield challenges",
       "Competition from Samsung, SK Hynix"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "000660.KS",
@@ -136,12 +136,12 @@
     "exposure": "50%+",
     "report": null,
     "public": true,
-    "thesis": "Leading HBM manufacturer and NVIDIA's primary HBM supplier. HBM3E production leader with strong pricing power.",
+    "thesis": "Leading HBM manufacturer and NVIDIA's primary HBM supplier. HBM4 in volume shipping (12-Hi mass shipments mid-2026; 16-Hi volume for Vera Rubin in 2H 2026) alongside ongoing HBM3E demand.",
     "catalysts": [
-      "HBM3E leadership",
+      "HBM4 volume shipments to NVIDIA (Rubin)",
+      "Continued HBM3E strength",
       "NVIDIA primary supplier status",
-      "AI memory demand growth",
-      "HBM4 early development"
+      "US ADR SKHY (Nasdaq since 2026-07-10)"
     ],
     "risks": [
       "Cyclical memory pricing",
@@ -150,7 +150,7 @@
     ],
     "updated": "2026-10-02",
     "us_symbol": "SKHY",
-    "note": "US ADR SKHY on Nasdaq since 2026-07-10 (verified Yahoo 2026-10-02). Prefer SKHY for Fidelity."
+    "note": "US ADR SKHY on Nasdaq since 2026-07-10 (Yahoo-verified 2026-10-02). Prefer SKHY for Fidelity; local KRX 000660.KS."
   },
   {
     "ticker": "005930.KS",
@@ -163,18 +163,19 @@
     "exposure": "40%+",
     "report": null,
     "public": true,
-    "thesis": "World's largest memory manufacturer catching up in HBM. Foundry + memory combination unique in industry.",
+    "thesis": "World's largest memory manufacturer scaling HBM. Foundry + memory combination unique; HBM4 qualification/ramp progressing while HBM3E remains in the mix.",
     "catalysts": [
-      "HBM3E qualification progress",
+      "HBM4 ramp / NVIDIA qualification progress",
       "Foundry + memory vertical integration",
-      "DRAM pricing recovery"
+      "DRAM pricing recovery",
+      "HBM3E still contributing to AI mix"
     ],
     "risks": [
       "HBM quality gap vs SK Hynix",
       "Foundry competitiveness vs TSMC",
       "Organizational restructuring"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "ANET",
@@ -414,11 +415,386 @@
       "OEM partnerships"
     ],
     "risks": [
-      "Small market cap",
+      "Now private / limited public disclosure",
       "Competition from Vertiv/CoolIT",
       "Scaling challenges"
     ],
     "updated": "2026-10-02",
-    "note": "Was Nasdaq Copenhagen ASTK. CQXA takeover completed Apr 2026; last trading day 2026-05-21; now private. Older Oslo-2024 delisting note obsolete."
+    "note": "Was Nasdaq Copenhagen ASTK (and earlier Oslo-listed). CQXA Holdings takeover accepted; Nasdaq Copenhagen delisting/private as of May 2026 (last trading ~2026-05-21). Older Oslo-only delisting note incomplete.",
+    "rating_source": null
+  },
+  {
+    "ticker": "MRVL",
+    "name": "Marvell Technology",
+    "sector": "dc_hardware",
+    "sub_sector": "Networking",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Custom AI accelerators, DSP, and high-speed interconnect silicon spanning AI networking, electro-optics, and CPO-related stages across the hardware map.",
+    "catalysts": [
+      "Custom AI accelerator / ASIC programs",
+      "800G/1.6T PAM4 DSP and interconnect",
+      "Cloud and AI fabric silicon design wins",
+      "CPO / optical I/O adjacency"
+    ],
+    "risks": [
+      "Customer concentration",
+      "Competition from Broadcom and merchant GPUs",
+      "Networking CapEx timing"
+    ],
+    "updated": "2026-10-02",
+    "note": "Appears across 5+ hardware/CPO stages; seed added 2026-10-02."
+  },
+  {
+    "ticker": "CRDO",
+    "name": "Credo Technology",
+    "sector": "dc_hardware",
+    "sub_sector": "Networking",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "High-speed connectivity (AECs, SerDes, optical DSPs) for AI cluster fabrics.",
+    "catalysts": [
+      "AI cluster AEC/SerDes demand",
+      "1.6T connectivity ramp"
+    ],
+    "risks": [
+      "Customer concentration",
+      "Competition from Broadcom/Marvell"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "ALAB",
+    "name": "Astera Labs",
+    "sector": "dc_hardware",
+    "sub_sector": "Networking",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Connectivity ICs (PCIe/CXL retimers and fabric) for AI server and rack-scale systems.",
+    "catalysts": [
+      "PCIe/CXL retimer attach rates",
+      "AI rack-scale fabric growth"
+    ],
+    "risks": [
+      "Customer concentration",
+      "Competition",
+      "New-product execution"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "LITE",
+    "name": "Lumentum",
+    "sector": "dc_hardware",
+    "sub_sector": "Optical & Fiber",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Lasers and optical engines for pluggable and CPO-era AI optics.",
+    "catalysts": [
+      "800G/1.6T optical demand",
+      "AI transceiver laser content"
+    ],
+    "risks": [
+      "Optical CapEx cycles",
+      "Competition from Coherent",
+      "Pricing pressure"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "COHR",
+    "name": "Coherent",
+    "sector": "dc_hardware",
+    "sub_sector": "Optical & Fiber",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Lasers, optical engines, and materials for AI pluggable optics and related photonics.",
+    "catalysts": [
+      "AI transceiver component demand",
+      "Datacom laser growth"
+    ],
+    "risks": [
+      "Cyclical photonics demand",
+      "Competition",
+      "Integration complexity"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "FN",
+    "name": "Fabrinet",
+    "sector": "dc_hardware",
+    "sub_sector": "Contract Manufacturing",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Precision optical manufacturing partner assembling many high-speed pluggable modules for AI fabrics.",
+    "catalysts": [
+      "800G/1.6T module assembly volumes",
+      "CPO/optical manufacturing content"
+    ],
+    "risks": [
+      "Customer concentration",
+      "Manufacturing execution",
+      "Thailand/geo concentration"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "TEL",
+    "name": "TE Connectivity",
+    "sector": "dc_hardware",
+    "sub_sector": "Connectors & Cabling",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "High-speed connectors and cable assemblies for AI racks and datacenter interconnect.",
+    "catalysts": [
+      "AI rack connector content growth",
+      "High-speed IO attach rates"
+    ],
+    "risks": [
+      "Industrial cyclicality",
+      "Competition from Amphenol",
+      "Auto end-market mix"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "LNVGY",
+    "name": "Lenovo",
+    "sector": "dc_hardware",
+    "sub_sector": "Servers & Racks",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Server OEM with growing AI server attach; US ADR for Hong Kong-listed Lenovo Group.",
+    "catalysts": [
+      "Enterprise AI server demand",
+      "OEM GPU server configurations"
+    ],
+    "risks": [
+      "OEM margin pressure",
+      "Competition from Dell/HPE/SMCI",
+      "PC cyclicality"
+    ],
+    "updated": "2026-10-02",
+    "note": "Yahoo US ADR LNVGY; HK 0992.HK.",
+    "local_ticker": "0992.HK"
+  },
+  {
+    "ticker": "2317.TW",
+    "name": "Foxconn (Hon Hai)",
+    "sector": "dc_hardware",
+    "sub_sector": "Contract Manufacturing",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Largest electronics EMS; major AI server and rack manufacturing partner for hyperscalers and OEMs.",
+    "catalysts": [
+      "AI server EMS volumes",
+      "Rack-scale manufacturing"
+    ],
+    "risks": [
+      "Low EMS margins",
+      "Customer concentration",
+      "Geopolitical Taiwan exposure"
+    ],
+    "updated": "2026-10-02",
+    "note": "Taiwan 2317.TW (Yahoo-verified)."
+  },
+  {
+    "ticker": "2382.TW",
+    "name": "Quanta Computer",
+    "sector": "dc_hardware",
+    "sub_sector": "Servers & Racks",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Leading ODM for cloud/AI servers and racks shipped to hyperscalers.",
+    "catalysts": [
+      "Hyperscaler AI server ODM demand",
+      "Liquid-cooled rack builds"
+    ],
+    "risks": [
+      "Customer concentration",
+      "ODM margin pressure",
+      "Taiwan geo risk"
+    ],
+    "updated": "2026-10-02",
+    "note": "Taiwan 2382.TW (Yahoo-verified)."
+  },
+  {
+    "ticker": "MPWR",
+    "name": "Monolithic Power Systems",
+    "sector": "dc_hardware",
+    "sub_sector": "GPUs & AI Accelerators",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Power-management ICs widely used on AI GPU boards and server VRMs as rack power density rises.",
+    "catalysts": [
+      "AI GPU board power IC content",
+      "Enterprise/cloud server VRM demand"
+    ],
+    "risks": [
+      "Customer concentration",
+      "Competition from TI/ADI",
+      "Cyclical semi demand"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "VICR",
+    "name": "Vicor",
+    "sector": "dc_hardware",
+    "sub_sector": "Cooling & Thermal",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "High-density power modules for AI accelerators and vertical power delivery near the GPU.",
+    "catalysts": [
+      "AI accelerator power-module attach",
+      "48V/vertical power delivery adoption"
+    ],
+    "risks": [
+      "Customer concentration",
+      "Competition from MPS and module peers",
+      "Design-win timing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "CIEN",
+    "name": "Ciena",
+    "sector": "dc_hardware",
+    "sub_sector": "Optical & Fiber",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Optical networking systems for DCI and metro/core transport feeding AI campus interconnect.",
+    "catalysts": [
+      "AI DCI bandwidth growth",
+      "WaveLogic / coherent optics upgrades"
+    ],
+    "risks": [
+      "Carrier CapEx cycles",
+      "Competition",
+      "Project timing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "AAOI",
+    "name": "Applied Optoelectronics",
+    "sector": "dc_hardware",
+    "sub_sector": "Optical & Fiber",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Optical transceiver manufacturer with exposure to datacenter pluggable demand cycles.",
+    "catalysts": [
+      "Datacenter transceiver volumes",
+      "AI optics cycle"
+    ],
+    "risks": [
+      "Customer concentration",
+      "Pricing pressure",
+      "Manufacturing execution"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "FLEX",
+    "name": "Flex",
+    "sector": "dc_hardware",
+    "sub_sector": "Contract Manufacturing",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "EMS/power-module manufacturer supporting AI server and datacenter power shelves.",
+    "catalysts": [
+      "AI server EMS demand",
+      "Power module content"
+    ],
+    "risks": [
+      "EMS margin pressure",
+      "Customer concentration",
+      "Cyclical electronics"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "NVT",
+    "name": "nVent",
+    "sector": "dc_hardware",
+    "sub_sector": "Cooling & Thermal",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Electrical connection and enclosure/cooling-adjacent infrastructure used in dense AI racks and halls.",
+    "catalysts": [
+      "AI rack power/enclosure content",
+      "Liquid cooling adjacency"
+    ],
+    "risks": [
+      "Industrial cyclicality",
+      "Competition",
+      "Project timing"
+    ],
+    "updated": "2026-10-02"
   }
 ]

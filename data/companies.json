@@ -1300,19 +1300,19 @@
     "exposure": "50%+",
     "report": null,
     "public": true,
-    "thesis": "HBM leader benefiting from AI GPU memory demand. HBM3E supply sold out through 2025-2026.",
+    "thesis": "HBM supplier benefiting from AI GPU memory demand. HBM4 in high-volume production for NVIDIA Rubin (12-Hi); HBM3E remains an important mix as platforms overlap.",
     "catalysts": [
-      "HBM3E demand exceeding supply",
-      "AI-driven memory content increase per server",
+      "HBM4 high-volume production for Rubin",
+      "AI-driven memory content per server",
       "Data center DRAM pricing power",
-      "HBM4 development"
+      "HBM3E still shipping into Blackwell-class demand"
     ],
     "risks": [
       "Memory cycle volatility",
       "HBM yield challenges",
       "Competition from Samsung, SK Hynix"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "000660.KS",
@@ -1325,12 +1325,12 @@
     "exposure": "50%+",
     "report": null,
     "public": true,
-    "thesis": "Leading HBM manufacturer and NVIDIA's primary HBM supplier. HBM3E production leader with strong pricing power.",
+    "thesis": "Leading HBM manufacturer and NVIDIA's primary HBM supplier. HBM4 in volume shipping (12-Hi mass shipments mid-2026; 16-Hi volume for Vera Rubin in 2H 2026) alongside ongoing HBM3E demand.",
     "catalysts": [
-      "HBM3E leadership",
+      "HBM4 volume shipments to NVIDIA (Rubin)",
+      "Continued HBM3E strength",
       "NVIDIA primary supplier status",
-      "AI memory demand growth",
-      "HBM4 early development"
+      "US ADR SKHY (Nasdaq since 2026-07-10)"
     ],
     "risks": [
       "Cyclical memory pricing",
@@ -1352,9 +1352,9 @@
     "exposure": "40%+",
     "report": null,
     "public": true,
-    "thesis": "World's largest memory manufacturer catching up in HBM. Foundry + memory combination unique in industry.",
+    "thesis": "World's largest memory manufacturer scaling HBM. Foundry + memory combination unique; HBM4 qualification/ramp progressing while HBM3E remains in the mix.",
     "catalysts": [
-      "HBM3E qualification progress",
+      "HBM4 ramp / NVIDIA qualification progress",
       "Foundry + memory vertical integration",
       "DRAM pricing recovery"
     ],
@@ -1363,7 +1363,7 @@
       "Foundry competitiveness vs TSMC",
       "Organizational restructuring"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "ANET",
@@ -1608,7 +1608,7 @@
       "Scaling challenges"
     ],
     "updated": "2026-10-02",
-    "note": "Was Nasdaq Copenhagen ASTK. CQXA takeover completed Apr 2026; last trading day 2026-05-21; now private. Older Oslo-2024 delisting note obsolete."
+    "note": "Was Nasdaq Copenhagen ASTK (and earlier Oslo-listed). CQXA Holdings takeover accepted; Nasdaq Copenhagen delisting/private as of May 2026 (last trading ~2026-05-21). Older Oslo-only delisting note incomplete."
   },
   {
     "ticker": "TSM",
@@ -1624,14 +1624,14 @@
     "thesis": "Sole advanced node manufacturer for AI chips. 3nm/2nm process leadership. Arizona fab expansion for US supply chain.",
     "catalysts": [
       "Q1 profit +58% YoY — 4th consecutive record",
-      "Capex 2-56B for 2026",
+      "2026 CapEx: initial guidance US$52–56B (4Q25); later raised above US$64B (Jul 2026)",
       "Advanced packaging expansion — 2 new facilities planned in Arizona"
     ],
     "risks": [
       "CoWoS capacity remains bottleneck",
       "Geopolitical concerns with Taiwan"
     ],
-    "updated": "2026-05-02"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "INTC",
@@ -1657,7 +1657,7 @@
       "Customer trust building"
     ],
     "updated": "2026-10-02",
-    "note": "Same parent ticker INTC as the Intel products record — intentional dual entry. Unit renamed Intel Foundry."
+    "note": "Same parent ticker INTC as the Intel products record — intentional dual entry. Unit renamed Intel Foundry (was IFS / Intel Foundry Services)."
   },
   {
     "ticker": "UMC",
@@ -1783,7 +1783,7 @@
     "ticker": "KLAC",
     "name": "KLA Corporation",
     "sector": "semiconductor_fab",
-    "sub_sector": "Lithography & Equipment",
+    "sub_sector": "Inspection & Metrology",
     "rating": null,
     "rating_source": null,
     "emoji": "🟡",
@@ -1801,7 +1801,7 @@
       "Customer CapEx cycles",
       "Competition from Applied Materials"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "8035.T",
@@ -1941,11 +1941,10 @@
       "Growing EV + DC power demand"
     ],
     "risks": [
-      "Small market cap ($350M)",
       "Customer concentration",
       "SiC adoption pace uncertainty"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "ON",
@@ -2014,11 +2013,10 @@
       "$500M→$1B+ DC revenue 2026-2027"
     ],
     "risks": [
-      "Extreme trailing P/E (181x)",
       "Manufacturing inefficiency",
       "Competition"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "WOLF",
@@ -2031,17 +2029,19 @@
     "exposure": "10-15%",
     "report": null,
     "public": true,
-    "thesis": "SiC wafer and device manufacturer. Mohawk Valley fab challenges but long-term SiC demand strong for datacenter power.",
+    "thesis": "SiC wafer and device maker emerged from Chapter 11 on 2025-09-29; old common shares cancelled and replaced by new WOLF equity (NYSE). Focus remains Mohawk Valley fab ramp and SiC for datacenter/EV power — post-reorg capital structure is the key change vs pre-filing thesis.",
     "catalysts": [
+      "Post-reorg balance sheet after 2025-09-29 emergence",
       "Mohawk Valley fab ramp",
       "SiC adoption for datacenter power supplies"
     ],
     "risks": [
-      "Operational execution challenges",
-      "Cash burn and balance sheet stress",
-      "Competition"
+      "New equity / residual dilution and share-reserve overhang",
+      "Fab yield and utilization execution",
+      "Competition from larger SiC peers (STM, onsemi, Infineon)"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02",
+    "note": "Chapter 11 plan effective 2025-09-29; old shares cancelled. Educational research only — not advice."
   },
   {
     "ticker": "BE",
@@ -2544,5 +2544,31 @@
     "updated": "2026-10-02",
     "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating.",
     "exchange": "KRX"
+  },
+  {
+    "ticker": "MRVL",
+    "name": "Marvell Technology",
+    "sector": "dc_hardware",
+    "sub_sector": "Networking",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Custom AI accelerators, DSP, and high-speed interconnect silicon spanning AI networking, electro-optics, and CPO-related stages across the hardware map.",
+    "catalysts": [
+      "Custom AI accelerator / ASIC programs",
+      "800G/1.6T PAM4 DSP and interconnect",
+      "Cloud and AI fabric silicon design wins",
+      "CPO / optical I/O adjacency"
+    ],
+    "risks": [
+      "Customer concentration",
+      "Competition from Broadcom and merchant GPUs",
+      "Networking CapEx timing"
+    ],
+    "updated": "2026-10-02",
+    "note": "Appears across 5+ hardware/CPO stages; seed added 2026-10-02."
   }
 ]
