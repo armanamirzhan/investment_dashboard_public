@@ -26,12 +26,6 @@
           "fidelity_symbol": "SMEGF"
         },
         {
-          "name": "Caterpillar",
-          "note": "Large industrial gensets also used at utility / bridging sites",
-          "ticker": "CAT",
-          "fidelity_symbol": "CAT"
-        },
-        {
           "name": "Doosan Enerbility",
           "ticker": "034020.KS",
           "note": "Korean heavy-duty gas-turbine OEM (also SMR forgings) — Korea listing; no US Fidelity line here"
@@ -108,6 +102,18 @@
           "name": "Doosan Enerbility",
           "ticker": "034020.KS",
           "note": "Heavy-duty GT OEM entrant while Western large-frame backlogs are tight — Korea listing; no US Fidelity line here"
+        },
+        {
+          "name": "Siemens Energy",
+          "ticker": "ENR.DE / SMEGF",
+          "fidelity_symbol": "SMEGF",
+          "note": "Industrial / aeroderivative classes (SGT-800 / SGT-A35) used for onsite data-center power — separate from large-frame CCGT role"
+        },
+        {
+          "name": "Howmet Aerospace",
+          "ticker": "HWM",
+          "fidelity_symbol": "HWM",
+          "note": "Industrial gas-turbine blade/vane castings — a supply-chain bottleneck behind 2028–2030 turbine sell-outs"
         }
       ],
       "scarcity": "soon"
@@ -140,6 +146,11 @@
           "name": "Doosan Fuel Cell",
           "ticker": "336260.KS",
           "note": "SOFC-NG manufacturing; capacity expansion notes in baseline — Korea listing; no US Fidelity line in this map"
+        },
+        {
+          "name": "Weichai Power",
+          "ticker": "2338.HK / 000338.SZ",
+          "note": "Ceres SteelCell licensee — China-market SOFC path (with Delta); primarily domestic"
         }
       ],
       "scarcity": "soon"
@@ -251,19 +262,6 @@
           "why_there": "Hitachi Energy is in the small oligopoly for LPT/HVDC; Western AI-power narratives still lean GEV/ETN/VRT — own briefing notes ~2× sales and 'less so' priced in AI-delivery stories"
         },
         {
-          "name": "Schneider Electric",
-          "ticker": "SU.PA / SBGSY",
-          "note": "Facility landing / distribution equipment",
-          "fidelity_symbol": "SBGSY"
-        },
-        {
-          "name": "Eaton",
-          "ticker": "ETN",
-          "note": "Switchgear and power distribution",
-          "fidelity_symbol": "ETN",
-          "rating_mark": "strong"
-        },
-        {
           "name": "Quanta Services",
           "note": "T&D construction that lands HVAC corridors",
           "ticker": "PWR",
@@ -285,6 +283,12 @@
           "name": "NKT",
           "ticker": "NKT.CO",
           "note": "HVDC cable specialist — European cable oligopoly"
+        },
+        {
+          "name": "Valmont Industries",
+          "ticker": "VMI",
+          "fidelity_symbol": "VMI",
+          "note": "Transmission poles and structures — physical T&D bottleneck input"
         }
       ],
       "scarcity": null
@@ -372,6 +376,21 @@
           "name": "NKT",
           "ticker": "NKT.CO",
           "note": "HVDC cable specialist"
+        },
+        {
+          "name": "NARI Technology",
+          "ticker": "600406.SS",
+          "note": "Chinese HVDC converter / grid-automation leader"
+        },
+        {
+          "name": "TBEA",
+          "ticker": "600089.SS",
+          "note": "Chinese HV transformers and converter equipment"
+        },
+        {
+          "name": "XJ Electric",
+          "ticker": "000400.SZ",
+          "note": "Chinese HVDC / substation equipment"
         }
       ],
       "scarcity": null
@@ -428,6 +447,28 @@
         {
           "name": "DG Matrix",
           "note": "Interport ~400 kW SST-class; ST SiC — private"
+        },
+        {
+          "name": "Heron Power",
+          "private": true,
+          "note": "Private medium-voltage SST startup named on the Power Map"
+        },
+        {
+          "name": "Amperesand",
+          "private": true,
+          "note": "Private SST startup named on the Power Map"
+        },
+        {
+          "name": "GE Vernova",
+          "ticker": "GEV",
+          "fidelity_symbol": "GEV",
+          "note": "NVIDIA-aligned 800 VDC reference designs (rectifier path now; MV SST around 2028 per Analysis scorecard)"
+        },
+        {
+          "name": "Hitachi Energy (via Hitachi)",
+          "ticker": "6501.T / HTHIY",
+          "fidelity_symbol": "HTHIY",
+          "note": "Listed among SST / site conversion players on the Power Map prose"
         }
       ],
       "scarcity": "soon"
@@ -587,6 +628,22 @@
           "ticker": "SIE.DE / SIEGY",
           "note": "Sivacon busway / low-voltage distribution for data halls",
           "fidelity_symbol": "SIEGY"
+        },
+        {
+          "name": "Mersen",
+          "ticker": "MRN.PA",
+          "note": "High-voltage DC fuses and busbars; also graphite consumables for SiC crystal growth"
+        },
+        {
+          "name": "Sensata Technologies",
+          "ticker": "ST",
+          "fidelity_symbol": "ST",
+          "note": "GIGAVAC high-voltage DC contactors/relays for DC distribution and BESS (NYSE: ST — not STMicro)"
+        },
+        {
+          "name": "BizLink Holding",
+          "ticker": "3665.TW",
+          "note": "Data-center power whips and server/rack power cables"
         }
       ],
       "scarcity": "soon"
@@ -633,8 +690,9 @@
           "fidelity_symbol": "TXN"
         },
         {
-          "name": "EPC",
-          "note": "GaN devices in some converter stages"
+          "name": "Efficient Power Conversion (EPC GaN)",
+          "note": "GaN devices in some converter stages Private GaN device maker — not construction EPC.",
+          "private": true
         }
       ],
       "scarcity": null
@@ -683,8 +741,9 @@
           "rating_mark": "strong"
         },
         {
-          "name": "EPC",
-          "note": "GaN devices in some converter stages"
+          "name": "Efficient Power Conversion (EPC GaN)",
+          "note": "GaN devices in some converter stages Private GaN device maker — not construction EPC.",
+          "private": true
         },
         {
           "name": "Vicor",
@@ -771,6 +830,33 @@
           "ticker": "6762.T / TTDKY",
           "note": "Power inductors, magnetics and capacitors for rack/board power",
           "fidelity_symbol": "TTDKY"
+        },
+        {
+          "name": "Megmeet Electrical",
+          "ticker": "002851.SZ",
+          "note": "Named NVIDIA 800 VDC power-system component partner"
+        },
+        {
+          "name": "Vishay Intertechnology",
+          "ticker": "VSH",
+          "note": "Passives and inductors for server power",
+          "fidelity_symbol": "VSH"
+        },
+        {
+          "name": "Yageo (KEMET)",
+          "ticker": "2327.TW",
+          "note": "MLCC / passives (KEMET) for server power"
+        },
+        {
+          "name": "Samsung Electro-Mechanics",
+          "ticker": "009150.KS",
+          "note": "MLCCs and passives for server boards"
+        },
+        {
+          "name": "Taiyo Yuden",
+          "ticker": "6976.T / TYOYY",
+          "note": "Inductors and passives for server power",
+          "fidelity_symbol": "TYOYY"
         }
       ],
       "scarcity": "soon"
@@ -811,8 +897,9 @@
           "demand_detail": "When: As NVIDIA-class 800 V racks move from optional (2026) to volume (2027–2028) For what: Silicon carbide and gallium nitride stages that step 800 V DC down toward 50 V / 12 V / 6 V near the chip Why critical: Every denser rack needs more efficient high-voltage conversion chips; content grows with rack kilowatts Why demand lands here: Public NVIDIA 800 V conversion work is early; European semi cycles may under-price data-center mix versus U.S. AI names"
         },
         {
-          "name": "EPC",
-          "note": "GaN devices in some converter stages"
+          "name": "Efficient Power Conversion (EPC GaN)",
+          "note": "GaN devices in some converter stages Private GaN device maker — not construction EPC.",
+          "private": true
         },
         {
           "name": "Monolithic Power Systems",
@@ -860,6 +947,12 @@
           "ticker": "6762.T / TTDKY",
           "note": "Power inductors, magnetics and capacitors for rack/board power",
           "fidelity_symbol": "TTDKY"
+        },
+        {
+          "name": "Vicor",
+          "ticker": "VICR",
+          "fidelity_symbol": "VICR",
+          "note": "VPD / current-multiplier modules at the VR/package stage (also listed under LLC)"
         }
       ],
       "scarcity": null
@@ -911,6 +1004,12 @@
           "ticker": "EQT",
           "note": "Natural gas producer — Appalachian supply context for BTM generation",
           "fidelity_symbol": "EQT"
+        },
+        {
+          "name": "EQT",
+          "ticker": "EQT",
+          "fidelity_symbol": "EQT",
+          "note": "Appalachian gas producer — supply deals into data-center load growth"
         }
       ],
       "scarcity": null
@@ -976,6 +1075,21 @@
           "ticker": "CWR.L / CPWHF",
           "note": "SOFC tech; H₂-related licensing context",
           "fidelity_symbol": "CPWHF"
+        },
+        {
+          "name": "thyssenkrupp nucera",
+          "ticker": "NCH2.DE",
+          "note": "Pure-play electrolyzer OEM — H2 is not an AI baseload path on this map"
+        },
+        {
+          "name": "Nel",
+          "ticker": "NEL.OL",
+          "note": "Electrolyzer OEM — listed for completeness of the H2 side-path"
+        },
+        {
+          "name": "ITM Power",
+          "ticker": "ITM.L",
+          "note": "Electrolyzer OEM — listed for completeness of the H2 side-path"
         }
       ],
       "scarcity": null
@@ -1164,6 +1278,12 @@
           "ticker": "6503.T / MIELY",
           "note": "Transformers and facility power equipment",
           "fidelity_symbol": "MIELY"
+        },
+        {
+          "name": "WEG S.A.",
+          "ticker": "WEGE3.SA / WEGZY",
+          "fidelity_symbol": "WEGZY",
+          "note": "Expanding US/Mexico transformer capacity — secondary LPT / distribution source"
         }
       ],
       "scarcity": "now"
@@ -1234,6 +1354,27 @@
           "ticker": "ENS",
           "note": "UPS batteries and rack battery-backup units for data centers",
           "fidelity_symbol": "ENS"
+        },
+        {
+          "name": "CATL",
+          "ticker": "300750.SZ / 3750.HK",
+          "note": "Dominant LFP cell supplier behind most utility-scale BESS packs"
+        },
+        {
+          "name": "Fuji Electric",
+          "ticker": "6504.T / FELTY",
+          "fidelity_symbol": "FELTY",
+          "note": "Data-center UPS, switchgear, and SiC power modules — Japan peer to Mitsubishi Electric"
+        },
+        {
+          "name": "Huawei Digital Power",
+          "private": true,
+          "note": "Large China data-center UPS / power-module / SST-class vendor (private)"
+        },
+        {
+          "name": "Kehua Data",
+          "ticker": "002335.SZ",
+          "note": "China-listed data-center UPS and power electronics"
         }
       ],
       "scarcity": null
@@ -1269,6 +1410,12 @@
           "note": "Connectors used in distribution / busway peers",
           "fidelity_symbol": "APH",
           "rating_mark": "strong"
+        },
+        {
+          "name": "Legrand (Raritan / Server Technology)",
+          "ticker": "LR.PA / LGRDY",
+          "fidelity_symbol": "LGRDY",
+          "note": "Leading rack PDU brands (Raritan / Server Technology)"
         }
       ],
       "scarcity": null
@@ -1424,6 +1571,18 @@
           "ticker": "via 6501.T",
           "note": "Grid and facility switchgear / HV equipment",
           "fidelity_symbol": "HTHIY"
+        },
+        {
+          "name": "Hitachi Energy (via Hitachi)",
+          "ticker": "6501.T / HTHIY",
+          "fidelity_symbol": "HTHIY",
+          "note": "Medium-voltage switchgear and substation gear for AI campuses"
+        },
+        {
+          "name": "Fuji Electric",
+          "ticker": "6504.T / FELTY",
+          "fidelity_symbol": "FELTY",
+          "note": "Switchgear and SiC power modules for conversion / facility gear"
         }
       ]
     },
@@ -1484,6 +1643,23 @@
           "name": "LG Electronics",
           "ticker": "066570.KS",
           "note": "CDU vendor — NVIDIA DSX Ready (Sep 2026 baseline) — Korea listing; no US Fidelity line here"
+        },
+        {
+          "name": "LiquidStack",
+          "private": true,
+          "note": "Private CDU / immersion vendor — NVIDIA DSX Ready (Sep 2026)"
+        },
+        {
+          "name": "Daikin Industries",
+          "ticker": "6367.T / DKILY",
+          "fidelity_symbol": "DKILY",
+          "note": "Large chillers (incl. AAF/McQuay data-center lines)"
+        },
+        {
+          "name": "Delta Electronics (CDUs)",
+          "ticker": "2308.TW",
+          "fidelity_symbol": "2308.TW",
+          "note": "Multi-megawatt liquid-to-liquid CDUs (2.4–3 MW class per Delta scorecard)"
         }
       ]
     },
@@ -1534,6 +1710,28 @@
           "ticker": "AGX",
           "note": "Gas-fired power-plant EPC (Gemma Power Systems)",
           "fidelity_symbol": "AGX"
+        },
+        {
+          "name": "Sterling Infrastructure",
+          "ticker": "STRL",
+          "fidelity_symbol": "STRL",
+          "note": "Data-center site development and civil/electrical contracting"
+        },
+        {
+          "name": "IES Holdings",
+          "ticker": "IESC",
+          "fidelity_symbol": "IESC",
+          "note": "Electrical contracting for data-center builds"
+        },
+        {
+          "name": "Bechtel",
+          "private": true,
+          "note": "Large private power / industrial EPC"
+        },
+        {
+          "name": "Kiewit",
+          "private": true,
+          "note": "Large private power / industrial EPC"
         }
       ]
     },

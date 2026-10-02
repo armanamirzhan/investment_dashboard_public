@@ -159,3 +159,9 @@ Website builder seeded master JSON. Mapped on pages:
 
 Not investment advice.
 
+## Low sweep (Oct 2, 2026)
+
+Closed remaining in-folder lows: EPC private badge vs construction EPC, §5.3→6.1, un-nested semi-fab callout, analysis/ cross-links, 800 V ratio nit, Hitachi on MV/SST, CAT off CCGT, Howmet/Fervo/Weichai/WEG/GOES peers, Valmont, Heron/Amperesand sync, cable/HV peers already, DC protection Mersen/Sensata/BizLink, Megmeet, Vicor on VRM, CATL, LiquidStack/Daikin/Delta CDUs, Sterling/IES/Bechtel/Kiewit, Axcelis/Soitec, electrolyzer OEMs, Fuji Electric, utility add-ons, Fermi cross-link.
+
+Not investment advice.
+
