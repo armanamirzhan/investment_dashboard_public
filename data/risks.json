@@ -6,7 +6,9 @@
     "impact": "Primary reason hyperscalers are pursuing behind-the-meter (BTM) solutions. ExxonMobil, Enchanted Rock, Solaris bypassing grid entirely.",
     "mitigation": null,
     "source": "Source: RMI, Utility Dive, ENR",
-    "updated": "2026-04-24"
+    "updated": "2026-04-24",
+    "as_of": "2026-04-24",
+    "staleness_note": "Risk item last authored 2026-04-24. Add a visible as-of on any page that renders this file; several items (e.g. Microsoft 1.5 GW freeze) may be outdated."
   },
   {
     "title": "Power Transformer Shortage",
@@ -15,7 +17,9 @@
     "impact": null,
     "mitigation": "Eaton ($340M SC plant by 2027), Siemens ($150M NC plant by 2027), Hitachi expanding VA/PA. Deficit expected to ease by 2030.",
     "source": "Source: Wood Mackenzie, POWER Magazine",
-    "updated": "2026-04-24"
+    "updated": "2026-04-24",
+    "as_of": "2026-04-24",
+    "staleness_note": "Risk item last authored 2026-04-24. Add a visible as-of on any page that renders this file; several items (e.g. Microsoft 1.5 GW freeze) may be outdated."
   },
   {
     "title": "Gas Turbine Backlog",
@@ -24,7 +28,9 @@
     "impact": "Hyperscalers using older aeroderivative models as bridge power. Order lead times pushing projects to 2028+.",
     "mitigation": null,
     "source": "Source: GE Vernova, Siemens Energy earnings",
-    "updated": "2026-04-24"
+    "updated": "2026-04-24",
+    "as_of": "2026-04-24",
+    "staleness_note": "Risk item last authored 2026-04-24. Add a visible as-of on any page that renders this file; several items (e.g. Microsoft 1.5 GW freeze) may be outdated."
   },
   {
     "title": "HALEU Fuel Scarcity",
@@ -33,7 +39,9 @@
     "impact": null,
     "mitigation": null,
     "source": "Source: DOE, NRC filings",
-    "updated": "2026-04-24"
+    "updated": "2026-04-24",
+    "as_of": "2026-04-24",
+    "staleness_note": "Risk item last authored 2026-04-24. Add a visible as-of on any page that renders this file; several items (e.g. Microsoft 1.5 GW freeze) may be outdated."
   },
   {
     "title": "Regulatory & Permitting Risk",
@@ -42,15 +50,20 @@
     "impact": null,
     "mitigation": null,
     "source": "Source: MultiState, industry reports",
-    "updated": "2026-04-24"
+    "updated": "2026-04-24",
+    "as_of": "2026-04-24",
+    "staleness_note": "Risk item last authored 2026-04-24. Add a visible as-of on any page that renders this file; several items (e.g. Microsoft 1.5 GW freeze) may be outdated."
   },
   {
     "title": "Hyperscaler Demand Pullback",
     "severity": "medium",
-    "description": "Microsoft froze 1.5 GW self-build and cancelled 2 GW leases. Only ~5 GW of promised 16 GW for 2026 actually being built. AI inference efficiency gains could reduce power needs.",
+    "description": "[Apr 2026 seed — may be stale] Microsoft froze 1.5 GW self-build and cancelled 2 GW leases. Only ~5 GW of promised 16 GW for 2026 actually being built. AI inference efficiency gains could reduce power needs. Overall hyperscaler CapEx continued to rise through mid-2026; treat pullback claims as dated.",
     "impact": null,
     "mitigation": "Overall CapEx still rising. Demand acceleration from Goldman Sachs revised up to 220% growth by 2030.",
     "source": "Source: SemiAnalysis, Benzinga",
-    "updated": "2026-04-24"
+    "updated": "2026-04-24",
+    "as_of": "2026-04-24",
+    "staleness_note": "Risk item last authored 2026-04-24. Add a visible as-of on any page that renders this file; several items (e.g. Microsoft 1.5 GW freeze) may be outdated.",
+    "updated_note": "Flagged stale 2026-10-02; not re-verified against current MSFT disclosures."
   }
 ]

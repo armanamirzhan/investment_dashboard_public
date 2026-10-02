@@ -1,7 +1,8 @@
 {
-  "title": "AI Datacenter Electricity Supply - Investment Landscape",
-  "subtitle": "Global analysis of power infrastructure for AI datacenters",
-  "last_updated": "2026-09-30 16:20 ET",
-  "sources": "Company SEC filings, earnings reports, IEA, Goldman Sachs Research, S&P Global, Wood Mackenzie, press releases",
-  "midday_last": "2026-09-30"
+  "title": "AI Infrastructure Investment Briefing Hub",
+  "subtitle": "Public educational research hub: power, hardware, software, semiconductors, hyperscalers, and digests",
+  "last_updated": "2026-10-02",
+  "data_freshness_note": "last_updated is the hub-shell refresh date. Many company seed records still carry April–May 2026 assessment dates; CapEx/backlog fields refreshed 2026-10-02 where noted. Not a claim that every record was re-underwritten.",
+  "sources": "Company SEC/IR filings, earnings reports, IEA, hub digests, Claude site audit (2026-10-02). Educational research only — not investment advice.",
+  "midday_last": "2026-10-02"
 }

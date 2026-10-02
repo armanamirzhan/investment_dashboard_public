@@ -5,10 +5,11 @@
     "segment": "Gas Turbine OEM",
     "exposure": "High - Electrification segment",
     "deals": "$2.4B DC equipment orders Q1 26 alone",
-    "backlog": "100 GW turbine backlog, targeting 110 GW by YE 26. $163B total backlog",
+    "backlog": "Group backlog $176B after Q2 2026. Electrification DC orders >$5B H1’26 (hub digests).",
     "outlook": "Rev $44.5-45.5B in 2026. Sold out through 2030. Backlog to $200B by 2027",
-    "report": "reports/GEV_GE_Vernova.html",
-    "updated": "2026-04-24"
+    "report": null,
+    "updated": "2026-10-02",
+    "source_note": "Hub digests 2026-09-28..2026-10-02"
   },
   {
     "company": "Constellation Energy",
@@ -18,7 +19,7 @@
     "deals": "Microsoft TMI (835 MW, 20yr), Meta Clinton (1.1 GW, 20yr), CyrusOne 380 MW",
     "backlog": "55 GW total capacity (post-Calpine). Largest US nuclear fleet",
     "outlook": "Rev ~$30B in 2026. 13%+ EPS growth through 2030. Calpine 20%+ EPS accretive",
-    "report": "reports/CEG_Constellation.html",
+    "report": null,
     "updated": "2026-04-24"
   },
   {
@@ -29,7 +30,7 @@
     "deals": "Meta: 2,609 MW from 3 nuclear plants. Cogentrix acquisition ($4.7B, 5.5 GW gas)",
     "backlog": "Large nuclear + gas fleet across PJM",
     "outlook": "Long-term PPA discussions with hyperscalers for new gas plants",
-    "report": "reports/VST_Vistra.html",
+    "report": null,
     "updated": "2026-04-24"
   },
   {
@@ -40,7 +41,7 @@
     "deals": "Google: Duane Arnold restart (615 MW, 25yr). Meta: 2.5 GW clean (11 PPAs). 10 GW gas in TX/PA",
     "backlog": "Largest global renewables developer",
     "outlook": "Strong contracted pipeline through 2028",
-    "report": "reports/NEE_NextEra.html",
+    "report": null,
     "updated": "2026-04-24"
   },
   {
@@ -50,9 +51,10 @@
     "exposure": "Medium-High",
     "deals": "Part of NVIDIA/Emerald AI initiative",
     "backlog": "Large renewables + storage portfolio",
-    "outlook": "Partnering on flexible AI factories as grid assets",
+    "outlook": "PENDING TAKE-PRIVATE: GIP/EQT-led (>$33B); shareholders approved Jun 2026; regulatory review ongoing.",
     "report": null,
-    "updated": "2026-04-24"
+    "updated": "2026-10-02",
+    "note": "Pending >$33B take-private. Still NYSE: AES while review ongoing."
   },
   {
     "company": "Siemens Energy",
@@ -60,10 +62,11 @@
     "segment": "Gas Turbine OEM",
     "exposure": "High - Gas Services",
     "deals": "Record gas turbine orders for DC power",
-    "backlog": "EUR 138B order backlog. Nearly doubled turbine sales: 100 to 194 units in 2025",
+    "backlog": "Group order backlog €162B (Sep 2026 digests); Grid ~€51B. US OTC: SMEGF (SMNEY did not quote 2026-10-02).",
     "outlook": "Record fiscal year. Mid-term outlook raised. Backlog extends 5+ years",
-    "report": "reports/ENR_Siemens_Energy.html",
-    "updated": "2026-04-24"
+    "report": null,
+    "updated": "2026-10-02",
+    "us_symbol": "SMEGF"
   },
   {
     "company": "Mitsubishi Power",
@@ -71,21 +74,24 @@
     "segment": "Gas Turbine OEM",
     "exposure": "High",
     "deals": "US market turbine orders",
-    "backlog": "48 turbine backlog. Doubling manufacturing capacity",
+    "backlog": "~74 unit large-frame turbine backlog (Power Map baseline); older seed said 48 — prefer dated Power Map figure.",
     "outlook": "Backlog scheduled through 2028-2030",
     "report": null,
-    "updated": "2026-04-24"
+    "updated": "2026-10-02",
+    "us_symbol": "MHVIY",
+    "note": "TODO: confirm unit backlog from primary MHI IR."
   },
   {
     "company": "ExxonMobil",
     "ticker": "XOM",
     "segment": "BTM Gas Power",
     "exposure": "New / Growing",
-    "deals": "1.5 GW dedicated gas plant (off-grid). 1.2 GW JV with NextEra",
+    "deals": "1.5 GW dedicated gas plant (BTM) in April 2026 seed. \"1.2 GW JV with NextEra\" unverified in Oct 2026 audit.",
     "backlog": "Entering DC power market",
     "outlook": "Bypasses grid queue via behind-the-meter. 2,500-acre campus in SE US",
     "report": null,
-    "updated": "2026-04-24"
+    "updated": "2026-10-02",
+    "note": "UNVERIFIED: XOM/NextEra 1.2 GW JV (A-163)."
   },
   {
     "company": "Enchanted Rock",
@@ -99,14 +105,76 @@
     "updated": "2026-04-24"
   },
   {
-    "company": "Solaris Energy Infra",
-    "ticker": null,
+    "company": "Solaris Energy Infrastructure",
+    "ticker": "SEI",
     "segment": "BTM Gas Power",
     "exposure": "Very High",
     "deals": "xAI Colossus: ~400 MW active, 1.1 GW by Q2 27",
     "backlog": "600 MW fleet currently",
     "outlook": "Primary power supplier for xAI rapid buildout",
     "report": null,
-    "updated": "2026-04-24"
+    "updated": "2026-10-02",
+    "exchange": "NYSE",
+    "note": "Public NYSE: SEI (verified Yahoo 2026-10-02)."
+  },
+  {
+    "company": "Caterpillar",
+    "ticker": "CAT",
+    "segment": "Gensets / Engines",
+    "exposure": "High - DC backup & prime power",
+    "deals": "Gensets on Electrification Power Map path.",
+    "backlog": "Not separately disclosed for DC in this seed.",
+    "outlook": "Genset OEM with Cummins/Generac/Rolls-Royce mtu.",
+    "report": null,
+    "updated": "2026-10-02",
+    "note": "Added 2026-10-02 per A-164."
+  },
+  {
+    "company": "Cummins",
+    "ticker": "CMI",
+    "segment": "Gensets / BESS",
+    "exposure": "High - gas gensets + BESS",
+    "deals": "2026 notes: BESS for large US DC; gas gens for West Texas DCs with Circe Energy.",
+    "backlog": "Not separately disclosed for DC in this seed.",
+    "outlook": "Gas genset + storage for BTM/backup.",
+    "report": null,
+    "updated": "2026-10-02",
+    "source_note": "stockanalysis CMI (audit 2026-10-02)"
+  },
+  {
+    "company": "Generac",
+    "ticker": "GNRC",
+    "segment": "Gensets / Backup power",
+    "exposure": "High - hyperscaler backup",
+    "deals": "Amazon backup-generator agreement (~$2.4B initial deliveries 2027–28, Sep 2026 press).",
+    "backlog": "Amazon portion ~$2.4B scheduled 2027–28 (secondary).",
+    "outlook": "Backup/prime-power gensets for AI campuses.",
+    "report": null,
+    "updated": "2026-10-02",
+    "source_note": "stockanalysis GNRC (audit 2026-10-02)"
+  },
+  {
+    "company": "Bloom Energy",
+    "ticker": "BE",
+    "segment": "Fuel cells (SOFC)",
+    "exposure": "Very High - stationary SOFC",
+    "deals": "Onsite SOFC for AI campuses; Oracle and other deployments in seed notes.",
+    "backlog": "See company filings.",
+    "outlook": "Stationary SOFC as BTM/onsite power.",
+    "report": null,
+    "updated": "2026-10-02",
+    "note": "Also in companies.json; added for power_suppliers fuel-cell path (A-164)."
+  },
+  {
+    "company": "Williams Companies",
+    "ticker": "WMB",
+    "segment": "BTM Gas / Midstream",
+    "exposure": "Growing - BTM gas",
+    "deals": "Jul 2026: Blackstone-led ~$5.34B for 49% of five BTM power projects (audit).",
+    "backlog": "BTM gas-power project pipeline.",
+    "outlook": "Gas midstream partner for BTM AI power.",
+    "report": null,
+    "updated": "2026-10-02",
+    "source_note": "stockanalysis WMB (audit 2026-10-02)"
   }
 ]

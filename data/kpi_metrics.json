@@ -1,21 +1,28 @@
 [
   {
     "key": "dc_capacity",
-    "label": "Total Planned DC Capacity",
-    "value": "~1,000 TWh",
-    "subtitle": "2026 projected DC electricity consumption (IEA), doubling from 2022",
-    "numeric": 1000,
+    "label": "Global DC electricity use (IEA)",
+    "value": "~415 TWh (2024)",
+    "subtitle": "IEA base case ~415 TWh in 2024, rising to ~945 TWh by 2030. Older seed labelled this \"Total Planned DC Capacity\" and used ~1,000 TWh for 2026 (top of an older range incl. crypto) — corrected 2026-10-02.",
+    "numeric": 415,
     "highlight": true,
-    "updated": "2026-04-24"
+    "updated": "2026-10-02",
+    "unit": "TWh/year",
+    "as_of": "2026-10-02",
+    "source_note": "IEA via Claude audit A-176 / Wikipedia Data center page (accessed 2026-10-02 audit).",
+    "disclaimer": "Educational research KPI seed — not investment advice."
   },
   {
     "key": "hscaler_capex",
-    "label": "2026 Hyperscaler CapEx",
-    "value": "$660-690B",
-    "subtitle": "Top 5 hyperscaler 2026E capex revised up; ~75% for AI infra (CNBC/CreditSights)",
-    "numeric": 690,
+    "label": "2026 Hyperscaler CapEx (Big 4 + Oracle)",
+    "value": "~$720–760B+",
+    "subtitle": "Big 4 alone: MSFT ~$175B CY, AMZN ~$220B, GOOGL $195–205B, META $130–145B; plus Oracle FY27 $90–95B. Older \"$660–690B top-5\" (Apr 2026) superseded.",
+    "numeric": 740,
     "highlight": true,
-    "updated": "2026-04-27"
+    "updated": "2026-10-02",
+    "as_of": "2026-10-02",
+    "source_note": "Claude NOTES_FOR_GROK §3.3 (2026-10-02).",
+    "disclaimer": "Educational research KPI seed — not investment advice."
   },
   {
     "key": "grid_queue",
@@ -24,7 +31,10 @@
     "subtitle": "Median wait: ~5 years",
     "numeric": 2600,
     "highlight": true,
-    "updated": "2026-04-24"
+    "updated": "2026-04-24",
+    "as_of": "2026-04-24",
+    "staleness_note": "Seed figure dated 2026-04-24; not re-verified 2026-10-02. Shown for continuity.",
+    "disclaimer": "Educational research KPI seed — not investment advice."
   },
   {
     "key": "transformer_lead",
@@ -33,16 +43,21 @@
     "subtitle": "30% supply deficit in 2025",
     "numeric": 128,
     "highlight": true,
-    "updated": "2026-04-24"
+    "updated": "2026-04-24",
+    "as_of": "2026-04-24",
+    "staleness_note": "Seed figure dated 2026-04-24; not re-verified 2026-10-02. Shown for continuity.",
+    "disclaimer": "Educational research KPI seed — not investment advice."
   },
   {
     "key": "gev_backlog",
     "label": "GE Vernova Turbine Backlog",
-    "value": "100 GW",
-    "subtitle": "Sold out through 2030",
-    "numeric": 100,
+    "value": "$176B group",
+    "subtitle": "GE Vernova group backlog after Q2 2026 (hub digests); turbine capacity sold out through ~2030. Older KPI showed 100 GW only.",
+    "numeric": 176,
     "highlight": false,
-    "updated": "2026-04-24"
+    "updated": "2026-10-02",
+    "as_of": "2026-10-02",
+    "disclaimer": "Educational research KPI seed — not investment advice."
   },
   {
     "key": "btm_projects",
@@ -51,6 +66,9 @@
     "subtitle": "~40 projects announced by end 2025",
     "numeric": 48,
     "highlight": false,
-    "updated": "2026-04-24"
+    "updated": "2026-04-24",
+    "as_of": "2026-04-24",
+    "staleness_note": "Seed figure dated 2026-04-24; not re-verified 2026-10-02. Shown for continuity.",
+    "disclaimer": "Educational research KPI seed — not investment advice."
   }
 ]

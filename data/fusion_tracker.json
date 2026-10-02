@@ -2,11 +2,12 @@
   {
     "company": "Commonwealth Fusion Systems (CFS)",
     "technology": "Tokamak with high-temperature superconducting magnets (SPARC)",
-    "timeline": "Magnet ring completion: Summer 2026. First plasma (SPARC): 2027. Net power demo (Q>1): 2027. Commercial plant (ARC) at James River, VA: Early 2030s.",
+    "timeline": "Magnet ring: targeted summer 2026 (may have slipped — confirm vs CFS updates). First plasma (SPARC): 2027 target. Net power demo (Q>1): 2027 target. Commercial plant (ARC) at James River, VA: early 2030s targets.",
     "dc_connection": "Google signed first-of-kind corporate fusion PPA (July 2025)",
     "funding": "$2B+ raised. Backed by Google, Bill Gates, Tiger Global",
     "source": "Source: CFS website, TechCrunch, Wikipedia",
-    "updated": "2026-04-24"
+    "updated": "2026-10-02",
+    "staleness_note": "Summer 2026 milestone window has passed; re-check CFS primary updates before citing as current."
   },
   {
     "company": "Helion Energy",
@@ -15,6 +16,16 @@
     "dc_connection": "Direct contract with Microsoft to supply fusion electricity starting 2028",
     "funding": "$577M+ raised. Backed by Sam Altman (OpenAI), $500M from Sam Altman personally",
     "source": "Source: TechCrunch (Feb 2026), Fortune",
-    "updated": "2026-04-24"
+    "updated": "2026-10-02"
+  },
+  {
+    "company": "TAE Technologies (pending TMTG / DJT merger)",
+    "technology": "Field-reversed configuration / beam-driven fusion (TAE)",
+    "timeline": "TMTG (DJT) and TAE filed Form S-4 on 2026-09-30; merger not closed as of audit — still trades as DJT until close.",
+    "dc_connection": "Listed path via pending TMTG merger would create a public fusion equity; not yet closed.",
+    "funding": "Merger announced ~$6B context (Dec 2025 / Wikipedia TAE); S-4 filed 2026-09-30.",
+    "source": "stockanalysis DJT; Wikipedia TAE Technologies; Claude audit A-178 (accessed 2026-10-02)",
+    "updated": "2026-10-02",
+    "note": "Listed fusion exposure is pending deal close — do not treat DJT as TAE equity until merger completes."
   }
 ]

@@ -104,10 +104,40 @@
   "capex_trajectory": {
     "type": "bar",
     "title": "Hyperscaler Capital Expenditure Trajectory ($B)",
-    "source": "Sources: Company earnings reports, SEC filings",
+    "source": "Sources: Company earnings / Claude NOTES 2026-10-02 (AMZN~220; GOOGL 195–205 mid 200; META 130–145 mid 137.5; MSFT CY~175; ORCL FY26 actual 55.7 — fiscal, not CY). Educational research only.",
     "full_width": true,
     "y_title": "Capital Expenditure ($B)",
-    "y_begin_zero": true
+    "y_begin_zero": true,
+    "labels": [
+      "Amazon CY2026E",
+      "Alphabet CY2026E mid",
+      "Microsoft CY2026E",
+      "Meta CY2026E mid",
+      "Oracle FY26 actual"
+    ],
+    "data": [
+      220,
+      200,
+      175,
+      137.5,
+      55.7
+    ],
+    "colors": [
+      "#F9AB00CC",
+      "#34A853CC",
+      "#4C8BF5CC",
+      "#A142F4CC",
+      "#EA4335CC"
+    ],
+    "tooltips": [
+      "~$220B calendar 2026E (raised mid-2026)",
+      "$195–205B guide; bar uses midpoint $200B",
+      "~$175B calendar 2026 reported (FY to Jun 2026 ~$115.9B)",
+      "$130–145B guide; bar uses midpoint $137.5B",
+      "FY2026 actual ~$55.7B (May YE); FY27 guide $90–95B not plotted here"
+    ],
+    "currency_note": "All bars USD billions, but Oracle is fiscal-year (May) while others are calendar-year — do not rank Oracle against CY peers on this chart alone.",
+    "updated": "2026-10-02"
   },
   "clean_energy": {
     "type": "bar",
@@ -190,65 +220,103 @@
   },
   "turbine_backlog": {
     "type": "bar",
-    "title": "Gas Turbine OEM Order Backlog Comparison",
-    "source": "Source: GE Vernova, Siemens Energy, MHI earnings reports (Q1 2026)",
+    "title": "Gas Turbine OEM Group Backlog (USD billions, converted)",
+    "source": "GEV $176B (Q2 2026 / hub digests); Siemens Energy €162B group ≈ $182B at ~1.12 USD/EUR mid-2026 illustrative FX (label both). MHI shown as unit backlog, not $B — see tooltip. As of 2026-10-02.",
     "labels": [
-      "GE Vernova",
-      "Siemens Energy",
-      "Mitsubishi Power"
+      "GE Vernova ($B)",
+      "Siemens Energy (€B→$B approx)",
+      "Mitsubishi Power (units, not $B)"
     ],
     "data": [
-      163,
-      138,
-      15
+      176,
+      182,
+      0
     ],
+    "data_alternate_units": {
+      "GE Vernova": {
+        "value": 176,
+        "unit": "USD_B",
+        "as_of": "Q2 2026"
+      },
+      "Siemens Energy": {
+        "value_eur_b": 162,
+        "value_usd_b_approx": 182,
+        "fx_note": "Illustrative ~1.12 USD/EUR; prefer citing €162B primary",
+        "as_of": "Sep 2026 digests"
+      },
+      "Mitsubishi Power": {
+        "value": 74,
+        "unit": "turbine_units",
+        "as_of": "Power Map baseline notes; older seed said 48"
+      }
+    },
     "colors": [
       "#4C8BF5CC",
       "#24C1E0CC",
       "#F9AB00CC"
     ],
     "tooltips": [
-      "$163B total / 100 GW turbines",
-      "EUR 138B total / 194 units sold in FY25",
-      "48 turbines, doubling capacity"
+      "GEV group backlog $176B after Q2 2026",
+      "Siemens Energy group €162B (≈$182B illustrative FX) — cite euros primarily",
+      "~74 large-frame turbine units (Power Map); NOT a $B backlog — excluded from $ axis comparison"
     ],
-    "y_title": "Backlog ($B / EUR B)"
+    "data_for_axis": [
+      176,
+      182,
+      0
+    ],
+    "y_title": "Backlog ($B approximate)",
+    "axis_warning": "MHI bar intentionally 0 on $ axis — compare units via tooltip / data_alternate_units. Do not mix € and $ without conversion.",
+    "updated": "2026-10-02"
   },
   "nuclear_ppas": {
     "type": "bar",
     "title": "Key Nuclear PPAs for Datacenters",
-    "source": "Source: Company announcements, press releases",
+    "source": "Company announcements / hub digests (Constellation–Amazon Calvert Cliffs 2026-09-30; Talen–Amazon Susquehanna). Freestone TX is Calpine gas — removed. Meta–TerraPower/Oklo SMR commitments are not operating PPAs — omitted here. Updated 2026-10-02.",
     "labels": [
-      "Meta-Vistra (3 plants)",
-      "Meta-Constellation (Clinton)",
-      "Microsoft-Constellation (TMI)",
-      "Google-NextEra (Duane Arnold)",
-      "CyrusOne-Constellation (Freestone)",
-      "Meta-TerraPower/Oklo (SMR future)"
+      "Meta–Vistra (3 plants)",
+      "Meta–Constellation (Clinton)",
+      "Microsoft–Constellation (TMI / Crane)",
+      "Amazon–Talen (Susquehanna)",
+      "Amazon–Constellation (Calvert Cliffs)",
+      "Google–NextEra (Duane Arnold)"
     ],
     "data": [
       2609,
       1100,
       835,
-      615,
-      380,
-      3000
+      1920,
+      690,
+      615
     ],
     "colors": [
       "#A142F4CC",
       "#A142F4AA",
       "#4C8BF5CC",
-      "#34A853CC",
+      "#F9AB00CC",
       "#24C1E0CC",
-      "#E8548C80"
+      "#34A853CC"
+    ],
+    "tooltips": [
+      "Meta–Vistra ~2,609 MW across 3 nuclear plants",
+      "Meta–Constellation Clinton ~1,100 MW, 20yr",
+      "Microsoft–Constellation TMI/Crane ~835 MW, 20yr",
+      "Amazon–Talen Susquehanna path up to ~1,680–1,920 MW by 2032 (through 2042) — bar uses upper path 1,920 MW",
+      "Amazon–Constellation Calvert Cliffs 690 MW incl. ~190 MW uprate; 20yr; online 2030–2032",
+      "Google–NextEra Duane Arnold restart ~615 MW, 25yr"
     ],
     "indexAxis": "y",
-    "x_title": "Megawatts (MW)"
+    "x_title": "Megawatts (MW)",
+    "notes": [
+      "REMOVED: CyrusOne–Constellation (Freestone) — Freestone, Texas is a Calpine natural-gas site, not nuclear.",
+      "OMITTED from this PPA chart: Meta–TerraPower/Oklo future SMR commitments (not operating nuclear PPAs)."
+    ],
+    "updated": "2026-10-02"
   },
   "sic_market": {
     "type": "doughnut",
     "title": "SiC Power Electronics Market Share (%)",
-    "source": "Source: Industry estimates, company reports (2025)",
+    "source": "Source: older industry-estimate seed (labelled 2025) — NOT re-verified against Yole/TrendForce on 2026-10-02. Conflicts with Electrification Power Map ordering (Infineon first; onsemi omitted there). Treat as illustrative only until cited.",
     "labels": [
       "STMicroelectronics (35%)",
       "onsemi (25%)",
@@ -270,7 +338,10 @@
       "#A142F4CC",
       "#9E9E9ECC"
     ],
-    "cutout": "55%"
+    "cutout": "55%",
+    "as_of": "2025 (unverified seed)",
+    "caveat": "Unsourced share split; Claude audit A-175. Prefer Power Map narrative over this doughnut until a primary share source is attached.",
+    "updated": "2026-10-02"
   },
   "lead_times": {
     "type": "bar",

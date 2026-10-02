@@ -4,7 +4,7 @@
     "name": "Microsoft",
     "capex_2024": 56,
     "capex_2025": 78,
-    "capex_2026e": 120,
+    "capex_2026e": 175,
     "current_power": "~2 GW added FY25",
     "target_power": "34 GW contracted clean",
     "target_year": "2027-2030",
@@ -17,21 +17,23 @@
       "solar"
     ],
     "detail_title": "Microsoft - Crane Clean Energy Center",
-    "detail_html": "Microsoft tracking toward $120B+ capex. $80B in unfulfilled Azure orders due to power constraints. Building worlds most powerful AI data center.",
+    "detail_html": "Microsoft CY2026 CapEx ~$175B reported (FY to Jun 2026 ~$115.9B). Claude NOTES 2026-10-02 — not investment advice.",
     "detail_source": "Source: Constellation Energy, Microsoft Azure Blog",
     "chart_current_gw": 2,
     "chart_target_gw": 34,
-    "updated": "2026-05-09",
+    "updated": "2026-10-02",
     "report": "reports/MSFT_Microsoft.html",
     "capex_2026": "110-120B",
-    "notes": "Set calendar-year 2026 capex at $190B, well above $152B consensus. $25B attributed to rising memory chip costs."
+    "notes": "Set calendar-year 2026 capex at $190B, well above $152B consensus. $25B attributed to rising memory chip costs.",
+    "capex_basis": "calendar_2026_reported_USD_B",
+    "capex_fy_note": "FY to Jun 2026 ~$115.9B; CY2026 reported ~$175B."
   },
   {
     "ticker": "AMZN",
     "name": "Amazon / AWS",
-    "capex_2024": 75,
-    "capex_2025": 100,
-    "capex_2026e": 200,
+    "capex_2024": 83.0,
+    "capex_2025": 131.8,
+    "capex_2026e": 220,
     "current_power": "~15 GW (Q3 2025)",
     "target_power": "31 GW",
     "target_year": "End 2027",
@@ -46,21 +48,22 @@
       "gas"
     ],
     "detail_title": "Amazon - Multi-GW Indiana & Virginia",
-    "detail_html": "Amazon leading hyperscalers at $200B capex in 2026. Most directed to AI datacenter infrastructure.",
+    "detail_html": "Amazon/AWS CY2026 CapEx ~$220B (raised from ~$200B Jul 2026). Claude NOTES 2026-10-02 — not investment advice.",
     "detail_source": "Source: AWS press releases, Benzinga",
     "chart_current_gw": 15,
     "chart_target_gw": 31,
-    "updated": "2026-05-09",
+    "updated": "2026-10-02",
     "report": "reports/AMZN_Amazon.html",
     "capex_2026": "200B",
-    "notes": "Projected $200B in capex for 2026, most for datacenter infrastructure."
+    "notes": "Projected $200B in capex for 2026, most for datacenter infrastructure.",
+    "capex_note": "2024~83 / 2025~131.8 corrections; 2026E ~$220B (raised Jul 2026)."
   },
   {
     "ticker": "GOOGL",
     "name": "Google / Alphabet",
-    "capex_2024": 33,
-    "capex_2025": 75,
-    "capex_2026e": 180,
+    "capex_2024": 52.5,
+    "capex_2025": 91.4,
+    "capex_2026e": 200,
     "current_power": "Growing rapidly",
     "target_power": "2.7 GW (Michigan alone)",
     "target_year": "2026-2028",
@@ -75,22 +78,24 @@
       "fusion"
     ],
     "detail_title": "Google - Nuclear + Fusion Pioneer",
-    "detail_html": "Alphabet capex now estimated at $175-185B for 2026. First corporate fusion PPA (CFS). 2.7 GW Michigan campus. Duane Arnold nuclear restart.",
+    "detail_html": "Alphabet 2026 CapEx $195–205B (raised Jul 2026). Cloud $20B in Q1 2026 (+63%). Claude NOTES 2026-10-02 — not investment advice.",
     "detail_source": "Source: Google announcements, NextEra filings",
     "chart_current_gw": 5,
     "chart_target_gw": 25,
-    "updated": "2026-05-09",
+    "updated": "2026-10-02",
     "report": "reports/GOOGL_Alphabet.html",
     "capex_2026": "180-190B",
     "notes": "Raised capex guidance by $5B to up to $190B, matching Microsoft.",
-    "power_target_gw": null
+    "power_target_gw": null,
+    "capex_2026_range": "195-205",
+    "capex_note": "2024 was wrongly 33 (~2023); 2024~52.5, 2025~91.4. 2026 guide $195–205B."
   },
   {
     "ticker": "META",
     "name": "Meta",
     "capex_2024": 37,
     "capex_2025": 72.2,
-    "capex_2026e": 125,
+    "capex_2026e": 137.5,
     "current_power": "~1.3M GPUs",
     "target_power": "5 GW (Hyperion)",
     "target_year": "2030",
@@ -103,21 +108,23 @@
       "solar"
     ],
     "detail_title": "Meta - 5 GW Hyperion (Louisiana)",
-    "detail_html": "Meta capex $115-135B for 2026. Expanded $21B CoreWeave cloud deal through 2032. NVIDIA Vera Rubin deployments planned.",
+    "detail_html": "Meta 2026 CapEx $130–145B. Claude NOTES 2026-10-02 — not investment advice.",
     "detail_source": "Source: IEEE Spectrum, Meta announcements",
     "chart_current_gw": 1.5,
     "chart_target_gw": 5,
-    "updated": "2026-05-09",
+    "updated": "2026-10-02",
     "report": "reports/META_Meta.html",
     "capex_2026": "125-145B",
-    "notes": "Increased FY projection by $10B. 6 GW AMD deal ($60B over 5yr). Nuclear agreements with Vistra, TerraPower, Oklo, Constellation."
+    "notes": "Increased FY projection by $10B. 6 GW AMD deal ($60B over 5yr). Nuclear agreements with Vistra, TerraPower, Oklo, Constellation.",
+    "capex_2026_range": "130-145",
+    "capex_note": "Guidance $130–145B (2026-07-29); supersedes older $115–135B seeds."
   },
   {
     "ticker": "ORCL",
     "name": "Oracle / Stargate",
     "capex_2024": 6.9,
     "capex_2025": 21.2,
-    "capex_2026e": 50,
+    "capex_2026e": 55.7,
     "current_power": "Growing",
     "target_power": "7 GW (Stargate total)",
     "target_year": "2027-2029",
@@ -130,14 +137,19 @@
       "gas"
     ],
     "detail_title": "Oracle/Stargate - 7 GW Multi-Site",
-    "detail_html": "Oracle targeting $50B capex in 2026. Capex-to-revenue ratio ~86%, highest among hyperscalers.",
+    "detail_html": "Oracle FY26 CapEx ~$55.7B; FY27 guide $90–95B; RPO ~$664B. Claude NOTES 2026-10-02 — not investment advice.",
     "detail_source": "Source: OpenAI blog, Oracle earnings",
     "chart_current_gw": 1,
     "chart_target_gw": 7,
-    "updated": "2026-05-07",
+    "updated": "2026-10-02",
     "report": "reports/ORCL_Oracle.html",
     "capex_2026": "~$50B",
-    "notes": "Capex-to-revenue ratio reaching 86%, highest among hyperscalers."
+    "notes": "Capex-to-revenue ratio reaching 86%, highest among hyperscalers.",
+    "capex_fy26_actual": 55.7,
+    "capex_fy27_guide": "90-95",
+    "capex_basis": "fiscal_year_May_end_USD_B",
+    "rpo_usd_b": 664,
+    "capex_note": "FY2026 actual ~$55.7B; FY2027 guide $90–95B. RPO $664B. Do not mix CY vs FY."
   },
   {
     "ticker": "CRWV",
@@ -157,16 +169,20 @@
       "gas"
     ],
     "detail_title": "CoreWeave - Rapid Scale",
-    "detail_html": "850 MW active power across 43 DCs (end 2025). Contracted 3.1 GW, virtually all online by 2027. Targeting 1.7 GW active by end-2026. $6B Pennsylvania campus (100-300 MW). Adding 5 GW more by 2030. CapEx doubling to $30-35B in 2026.",
+    "detail_html": "CoreWeave backlog $104.2B (2026-06-30). FY26 rev guide ~$12.4–13.2B. Claude NOTES 2026-10-02 — not investment advice.",
     "detail_source": "Source: CoreWeave blog, DCD",
     "chart_current_gw": 0.85,
     "chart_target_gw": 8.1,
-    "updated": "2026-04-24",
-    "report": "reports/CRWV_CoreWeave.html"
+    "updated": "2026-10-02",
+    "report": "reports/CRWV_CoreWeave.html",
+    "backlog_usd_b": 104.2,
+    "backlog_as_of": "2026-06-30",
+    "revenue_fy2026_guide": "12.4-13.2",
+    "capex_note": "Backlog $104.2B (2026-06-30), not $66.8B. Older capex_2024/25 seed fields illustrative only."
   },
   {
-    "ticker": "XAI",
-    "name": "xAI (Colossus)",
+    "ticker": "SPCX",
+    "name": "SpaceX / SpaceXAI (Colossus)",
     "capex_2024": 3,
     "capex_2025": 8,
     "capex_2026e": 15,
@@ -179,11 +195,13 @@
     "energy_types": [
       "gas"
     ],
-    "detail_title": "xAI - Colossus Memphis",
-    "detail_html": "Expanded from 250 MW to 2 GW across three buildings. Solaris Energy Infrastructure supplying ~400 MW gas turbines now, targeting 1.1 GW by Q2 2027. 200 MW live within 6 months of site acquisition. Acquired former Duke Energy plant (245 MW).",
+    "detail_title": "SpaceXAI / Colossus (Memphis) — via SpaceX (SPCX)",
+    "detail_html": "Colossus under SpaceXAI (SpaceX, SPCX). Solaris (SEI) BTM gas. Claude audit 2026-10-02 — not investment advice.",
     "detail_source": "Source: SemiAnalysis, NextBigFuture",
     "chart_current_gw": 0.45,
     "chart_target_gw": 2,
-    "updated": "2026-04-24"
+    "updated": "2026-10-02",
+    "former_ticker_note": "XAI ticker does not exist. xAI in SpaceX; Nasdaq SPCX since 2026-06-12.",
+    "capex_note": "Older \"$15B class\" CapEx stale. SpaceX S-1: xAI 2025 op. loss ~$6.4B on ~$3.2B rev (C-082). Capex columns illustrative only."
   }
 ]

@@ -32,7 +32,7 @@
     "exposure": "Core AI",
     "report": null,
     "public": false,
-    "thesis": "Claude models; constitutional-AI research agenda. Confidential IPO filing reported Sep 2026 \u2014 IPO pending, no ticker yet. Large cloud backers.",
+    "thesis": "Claude models; constitutional-AI research agenda. Confidential IPO filing reported Sep 2026 — IPO pending, no ticker yet. Large cloud backers.",
     "catalysts": [
       "IPO timing",
       "Claude model upgrades",
@@ -78,7 +78,7 @@
     "exposure": "Core AI",
     "report": null,
     "public": false,
-    "thesis": "French open-weight and commercial LLMs. Series D Sep 2026 at >\u20ac21B (~$24B) post-money.",
+    "thesis": "French open-weight and commercial LLMs. Series D Sep 2026 at >€21B (~$24B) post-money.",
     "catalysts": [
       "European AI sovereignty demand",
       "Open-weight model adoption",
@@ -144,7 +144,7 @@
     "sub_sector": "AI Platforms & Enterprise",
     "rating": null,
     "rating_source": null,
-    "emoji": "\ud83d\udfe1",
+    "emoji": "🟡",
     "exposure": "Core AI",
     "report": null,
     "public": true,
@@ -168,7 +168,7 @@
     "sub_sector": "AI Platforms & Enterprise",
     "rating": null,
     "rating_source": null,
-    "emoji": "\ud83d\udfe0",
+    "emoji": "🟠",
     "exposure": "AI Integration",
     "report": null,
     "public": true,
@@ -192,7 +192,7 @@
     "sub_sector": "AI Platforms & Enterprise",
     "rating": null,
     "rating_source": null,
-    "emoji": "\ud83d\udfe1",
+    "emoji": "🟡",
     "exposure": "AI Integration",
     "report": null,
     "public": true,
@@ -216,7 +216,7 @@
     "sub_sector": "AI Platforms & Enterprise",
     "rating": null,
     "rating_source": null,
-    "emoji": "\ud83d\udfe0",
+    "emoji": "🟠",
     "exposure": "AI Data Platform",
     "report": null,
     "public": true,
@@ -263,7 +263,7 @@
     "sub_sector": "AI Platforms & Enterprise",
     "rating": null,
     "rating_source": null,
-    "emoji": "\ud83d\udfe0",
+    "emoji": "🟠",
     "exposure": "AI Automation",
     "report": null,
     "public": true,
@@ -345,7 +345,7 @@
       "Competition from cloud-native tools"
     ],
     "updated": "2026-10-02",
-    "backlog_note": "CoreWeave backlog $104.2B per Claude NOTES 2026-10-02 (supersedes older $66.8B seed)."
+    "backlog_note": "CoreWeave backlog $104.2B as of 2026-06-30 (Claude NOTES 2026-10-02)."
   },
   {
     "ticker": null,
@@ -423,7 +423,7 @@
     "sub_sector": "EDA & Chip Design",
     "rating": null,
     "rating_source": null,
-    "emoji": "\ud83d\udfe0",
+    "emoji": "🟠",
     "exposure": "AI Chip Design",
     "report": null,
     "public": true,
@@ -446,11 +446,11 @@
     "sub_sector": "EDA & Chip Design",
     "rating": null,
     "rating_source": null,
-    "emoji": "\ud83d\udfe0",
+    "emoji": "🟠",
     "exposure": "AI Chip Design",
     "report": null,
     "public": true,
-    "thesis": "Peer EDA leader (digital, analog/mixed-signal, system design). Distinct from Synopsys \u2014 do not reuse SNPS analyst text.",
+    "thesis": "Peer EDA leader (digital, analog/mixed-signal, system design). Distinct from Synopsys — do not reuse SNPS analyst text.",
     "catalysts": [
       "AI-chip design spend",
       "System analysis attach"
@@ -468,7 +468,7 @@
     "sub_sector": "AI Security",
     "rating": null,
     "rating_source": null,
-    "emoji": "\ud83d\udfe1",
+    "emoji": "🟡",
     "exposure": "AI Security",
     "report": null,
     "public": true,
@@ -547,7 +547,7 @@
       "See page briefing"
     ],
     "updated": "2026-10-02",
-    "capex_2026_note": "Calendar 2026 guidance about $195\u2013205B (Claude NOTES 2026-10-02; Motley Fool 2026-07-30). Older thesis figures superseded."
+    "capex_2026_note": "Calendar 2026 guidance about $195–205B (Claude NOTES 2026-10-02)."
   },
   {
     "ticker": "META",
@@ -567,7 +567,7 @@
       "See page briefing"
     ],
     "updated": "2026-10-02",
-    "capex_2026_note": "Calendar 2026 guidance about $130\u2013145B (Claude NOTES 2026-10-02)."
+    "capex_2026_note": "Calendar 2026 guidance about $130–145B (Claude NOTES 2026-10-02)."
   },
   {
     "ticker": "DDOG",
@@ -814,7 +814,8 @@
     "risks": [
       "See page briefing"
     ],
-    "updated": "2026-10-02"
+    "updated": "2026-10-02",
+    "capex_2026_note": "Calendar 2026 about $175B reported; fiscal year to June 2026 about $115.9B."
   },
   {
     "ticker": "AMZN",
@@ -833,7 +834,8 @@
     "risks": [
       "See page briefing"
     ],
-    "updated": "2026-10-02"
+    "updated": "2026-10-02",
+    "capex_2026_note": "Calendar 2026 about $220B (Claude NOTES 2026-10-02)."
   },
   {
     "ticker": null,
@@ -947,7 +949,8 @@
     "risks": [
       "See page briefing"
     ],
-    "updated": "2026-10-02"
+    "updated": "2026-10-02",
+    "capex_2026_note": "Calendar 2026 about $175B reported; fiscal year to June 2026 about $115.9B."
   },
   {
     "ticker": "IBM",
@@ -1251,7 +1254,8 @@
     "risks": [
       "See page briefing"
     ],
-    "updated": "2026-10-02"
+    "updated": "2026-10-02",
+    "capex_2026_note": "Calendar 2026 guidance about $195–205B (Claude NOTES 2026-10-02)."
   },
   {
     "ticker": "OKTA",
@@ -1422,7 +1426,8 @@
     "risks": [
       "See page briefing"
     ],
-    "updated": "2026-10-02"
+    "updated": "2026-10-02",
+    "capex_2026_note": "Calendar 2026 guidance about $195–205B (Claude NOTES 2026-10-02)."
   },
   {
     "ticker": "AMZN",
@@ -1441,7 +1446,8 @@
     "risks": [
       "See page briefing"
     ],
-    "updated": "2026-10-02"
+    "updated": "2026-10-02",
+    "capex_2026_note": "Calendar 2026 about $220B (Claude NOTES 2026-10-02)."
   },
   {
     "ticker": null,

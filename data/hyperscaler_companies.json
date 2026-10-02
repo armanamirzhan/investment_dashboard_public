@@ -4,15 +4,15 @@
     "name": "Microsoft",
     "sector": "hyperscaler",
     "sub_sector": "Integrated Cloud Operators",
-    "rating": "STRONG_BUY",
-    "rating_source": "Claude fundamental analysis based on official Microsoft 10-K and quarterly earnings. Wall Street consensus: Strong Buy (37 Buy, 1 Hold out of 38 analysts). Avg PT $569. Assessed May 2026.",
-    "emoji": "\ud83d\udfe2",
+    "rating": null,
+    "rating_source": null,
+    "emoji": "🟢",
     "exposure": "Operator",
-    "report": "reports/MSFT_Microsoft.html",
+    "report": null,
     "public": true,
-    "thesis": "Largest cloud infrastructure operator (Azure) with massive AI datacenter buildout. $80B+ annual CapEx planned. Azure AI revenue accelerating at 39% YoY.",
+    "thesis": "Largest cloud infrastructure operator (Azure) with massive AI datacenter buildout. ~$175B calendar-2026 CapEx (FY to Jun 2026 was ~$115.9B). Azure AI revenue accelerating at 39% YoY.",
     "catalysts": [
-      "$120B+ 2026 CapEx investment",
+      "~$175B calendar-2026 CapEx / FY~$115.9B (Claude NOTES 2026-10-02)",
       "Azure AI revenue acceleration",
       "Copilot enterprise adoption",
       "OpenAI partnership"
@@ -22,23 +22,24 @@
       "Cloud competition intensifying",
       "AI monetization uncertainty"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02",
+    "capex_2026_note": "Calendar 2026 about $175B reported; fiscal year to June 2026 about $115.9B."
   },
   {
     "ticker": "AMZN",
     "name": "Amazon / AWS",
     "sector": "hyperscaler",
     "sub_sector": "Integrated Cloud Operators",
-    "rating": "BUY",
-    "rating_source": "Claude fundamental analysis based on official Amazon 10-K and quarterly earnings. Wall Street consensus: Buy (41 analysts). Avg PT $306. Assessed May 2026.",
-    "emoji": "\ud83d\udfe1",
+    "rating": null,
+    "rating_source": null,
+    "emoji": "🟡",
     "exposure": "Operator",
-    "report": "reports/AMZN_Amazon.html",
+    "report": null,
     "public": true,
-    "thesis": "AWS leads cloud infrastructure with Trainium custom AI chips and massive global datacenter footprint. $200B 2026 CapEx planned.",
+    "thesis": "AWS leads cloud infrastructure with Trainium custom AI chips and massive global datacenter footprint. ~$220B 2026 CapEx planned (raised mid-2026).",
     "catalysts": [
       "Trainium AI chip deployment at scale",
-      "$200B annual CapEx for expansion",
+      "~$220B 2026 CapEx guidance (raised mid-2026)",
       "AWS AI services growth",
       "Custom chip cost advantage"
     ],
@@ -47,23 +48,24 @@
       "Margin pressure from CapEx",
       "Cloud market share competition"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02",
+    "capex_2026_note": "Calendar 2026 about $220B (Claude NOTES 2026-10-02)."
   },
   {
     "ticker": "GOOGL",
     "name": "Google / Alphabet",
     "sector": "hyperscaler",
     "sub_sector": "Integrated Cloud Operators",
-    "rating": "BUY",
-    "rating_source": "Claude fundamental analysis based on official Alphabet 10-K and quarterly earnings. Wall Street consensus: Strong Buy (35 analysts). Avg PT $408. Assessed May 2026.",
-    "emoji": "\ud83d\udfe1",
+    "rating": null,
+    "rating_source": null,
+    "emoji": "🟡",
     "exposure": "Operator",
-    "report": "reports/GOOGL_Alphabet.html",
+    "report": null,
     "public": true,
-    "thesis": "TPU custom silicon leader with vertically integrated AI infrastructure. GCP growing 48% YoY. $175-185B 2026 CapEx guidance.",
+    "thesis": "TPU custom silicon leader with vertically integrated AI infrastructure. Google Cloud +63% YoY in Q1 2026 (GCP faster than Cloud overall). $195–205B 2026 CapEx guidance (raised Jul 2026).",
     "catalysts": [
-      "Cloud revenue 0B single quarter \u2014 63% growth",
-      "Market cap passed .5T",
+      "Cloud revenue $20B single quarter — 63% growth (Alphabet Q1 2026 earnings)",
+      "Market cap passed $2.5T (May 2026 seed catalyst; later ~$4.5T post Q1 rally — historical mark)",
       "AI demand accelerating across all segments"
     ],
     "risks": [
@@ -71,46 +73,49 @@
       "Search disruption from AI",
       "GCP execution risk"
     ],
-    "updated": "2026-05-02"
+    "updated": "2026-10-02",
+    "capex_2026_note": "Calendar 2026 guidance about $195–205B (Claude NOTES 2026-10-02)."
   },
   {
     "ticker": "META",
     "name": "Meta",
     "sector": "hyperscaler",
     "sub_sector": "Integrated Cloud Operators",
-    "rating": "BUY",
-    "rating_source": "Claude fundamental analysis based on official Meta 10-K and quarterly earnings. Wall Street consensus: Buy (37 analysts). Avg PT $835. Assessed May 2026.",
-    "emoji": "\ud83d\udfe1",
+    "rating": null,
+    "rating_source": null,
+    "emoji": "🟡",
     "exposure": "Operator",
-    "report": "reports/META_Meta.html",
+    "report": null,
     "public": true,
-    "thesis": "Massive AI infrastructure investor with open-source Llama strategy. $115-135B 2026 CapEx. 5 GW Hyperion campus planned.",
+    "thesis": "Massive AI infrastructure investor with open-source Llama strategy. $130–145B 2026 CapEx (Claude NOTES 2026-10-02). 5 GW Hyperion campus planned.",
     "catalysts": [
-      "Q1 2026 earnings reported \u2014 capex raised sharply",
+      "Q1 2026 earnings reported — capex raised sharply",
       "6.6 GW nuclear energy deals signed",
       "Prometheus AI supercluster buildout"
     ],
     "risks": [
       "JPMorgan downgrade on negative FCF outlook",
-      "Capex expected to hit 02B by 2027"
+      "Capex expected to hit ~$200B by 2027 (restored from shell-corrupted \"02B\"; directional, not a precise guide)"
     ],
-    "updated": "2026-05-02"
+    "updated": "2026-10-02",
+    "capex_2026_note": "Calendar 2026 guidance about $130–145B (Claude NOTES 2026-10-02)."
   },
   {
     "ticker": "ORCL",
     "name": "Oracle",
     "sector": "hyperscaler",
     "sub_sector": "Integrated Cloud Operators",
-    "rating": "HOLD",
-    "rating_source": "Claude fundamental analysis based on official Oracle 10-K and quarterly earnings. Wall Street consensus: Buy (34 analysts). Avg PT $258. Assessed May 2026.",
-    "emoji": "\ud83d\udfe0",
+    "rating": null,
+    "rating_source": null,
+    "emoji": "🟠",
     "exposure": "Operator",
-    "report": "reports/ORCL_Oracle.html",
+    "report": null,
     "public": true,
-    "thesis": "Aggressive OCI expansion with Stargate partnership. AI infrastructure revenue +243% YoY. $553B RPO backlog.",
+    "thesis": "Aggressive OCI expansion with Stargate partnership. AI infrastructure revenue +243% YoY. $664B remaining performance obligations (RPO).",
     "catalysts": [
+      "FY2026 CapEx actual ~$55.7B; FY2027 guide $90–95B",
       "OCI +84% YoY growth",
-      "$553B RPO backlog (+325% YoY)",
+      "$664B RPO (Claude NOTES 2026-10-02)",
       "Innovative BYOH financing model",
       "Multicloud database +531% growth"
     ],
@@ -119,23 +124,25 @@
       "CapEx-to-revenue ratio ~86%",
       "OCI growth sustainability"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02",
+    "capex_fy26_note": "FY2026 (May YE) CapEx actual about $55.7B.",
+    "capex_fy27_note": "FY2027 CapEx guide $90–95B; RPO about $664B."
   },
   {
     "ticker": "CRWV",
     "name": "CoreWeave",
     "sector": "hyperscaler",
     "sub_sector": "GPU Cloud Providers",
-    "rating": "SELL",
-    "rating_source": "Claude fundamental analysis based on official CoreWeave S-1/10-K and quarterly earnings. Wall Street consensus: Buy (33 analysts). Avg PT $129. Assessed May 2026.",
-    "emoji": "\ud83d\udd34",
+    "rating": null,
+    "rating_source": null,
+    "emoji": "🔴",
     "exposure": "100%",
-    "report": "reports/CRWV_CoreWeave.html",
+    "report": null,
     "public": true,
-    "thesis": "Pure-play GPU cloud provider. $66.8B backlog but $29.8B debt with 8.94x leverage. FY2025 revenue $5.13B (+168%).",
+    "thesis": "Pure-play GPU cloud provider. $104.2B backlog but $29.8B debt with 8.94x leverage. FY2025 revenue $5.13B (+168%).",
     "catalysts": [
-      "$66.8B backlog (+342% YoY)",
-      "FY2026 revenue guidance $12-13B (+140%)",
+      "$104.2B backlog as of 2026-06-30",
+      "FY2026 revenue guidance $12.4–13.2B (raised)",
       "Meta + OpenAI commitments"
     ],
     "risks": [
@@ -144,7 +151,8 @@
       "Path to profitability uncertain",
       "Hyperscaler competition"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02",
+    "backlog_note": "CoreWeave backlog $104.2B as of 2026-06-30 (Claude NOTES 2026-10-02)."
   },
   {
     "ticker": null,
@@ -174,11 +182,11 @@
     "name": "Equinix",
     "sector": "hyperscaler",
     "sub_sector": "Colocation & Datacenter REITs",
-    "rating": "BUY",
-    "rating_source": "Claude fundamental analysis based on official Equinix 10-K and quarterly earnings. Wall Street consensus: Strong Buy (24 analysts). Assessed May 2026.",
-    "emoji": "\ud83d\udfe1",
+    "rating": null,
+    "rating_source": null,
+    "emoji": "🟡",
     "exposure": "Datacenter REIT",
-    "report": "reports/EQIX_Equinix.html",
+    "report": null,
     "public": true,
     "thesis": "Largest global colocation provider with 260+ datacenters in 72 metros. Critical interconnection hub for AI workloads.",
     "catalysts": [
@@ -199,11 +207,11 @@
     "name": "Digital Realty",
     "sector": "hyperscaler",
     "sub_sector": "Colocation & Datacenter REITs",
-    "rating": "BUY",
-    "rating_source": "Claude fundamental analysis based on official Digital Realty 10-K and quarterly earnings. Wall Street consensus: Buy (22 analysts). Avg PT $208. Assessed May 2026.",
-    "emoji": "\ud83d\udfe1",
+    "rating": null,
+    "rating_source": null,
+    "emoji": "🟡",
     "exposure": "Datacenter REIT",
-    "report": "reports/DLR_Digital_Realty.html",
+    "report": null,
     "public": true,
     "thesis": "Major datacenter REIT with global portfolio. PlatformDIGITAL for AI workloads. Strong leasing momentum from hyperscaler demand.",
     "catalysts": [
@@ -216,5 +224,420 @@
       "Interest rate sensitivity"
     ],
     "updated": "2026-05-09"
+  },
+  {
+    "ticker": "9988.HK",
+    "name": "Alibaba Cloud (Alibaba Group)",
+    "sector": "hyperscaler",
+    "sub_sector": "Integrated Cloud Operators",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "China's largest cloud; Cloud & AI revenue +45% YoY with heavy AI capex (Claude audit C-101).",
+    "catalysts": [
+      "Cloud & AI revenue +45% YoY (audit)",
+      "Heavy China AI infrastructure spend"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating.",
+    "us_symbol": "BABA",
+    "exchange": "HKEX"
+  },
+  {
+    "ticker": "0700.HK",
+    "name": "Tencent Cloud (Tencent Holdings)",
+    "sector": "hyperscaler",
+    "sub_sector": "Integrated Cloud Operators",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Major Chinese hyperscaler with rising AI capex (Claude audit C-102).",
+    "catalysts": [
+      "Rising China AI capex"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating.",
+    "us_symbol": "TCEHY",
+    "exchange": "HKEX"
+  },
+  {
+    "ticker": "9888.HK",
+    "name": "Baidu AI Cloud",
+    "sector": "hyperscaler",
+    "sub_sector": "Integrated Cloud Operators",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium-High",
+    "report": null,
+    "public": true,
+    "thesis": "Chinese AI cloud with Kunlun custom chips (Claude audit C-103).",
+    "catalysts": [
+      "Kunlun chips",
+      "Baidu AI Cloud demand"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating.",
+    "us_symbol": "BIDU",
+    "exchange": "HKEX"
+  },
+  {
+    "ticker": null,
+    "name": "ByteDance / Volcano Engine",
+    "sector": "hyperscaler",
+    "sub_sector": "Integrated Cloud Operators",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": false,
+    "thesis": "Large Asian AI infrastructure spender; ~$29.6B AI loan cited Sep 2026 (Claude audit C-104). Private.",
+    "catalysts": [
+      "Large AI infrastructure spend (2026 briefing notes)"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating.",
+    "note": "Private. Seed only — page placement owned by Hyperscalers bot."
+  },
+  {
+    "ticker": "NBIS",
+    "name": "Nebius Group",
+    "sector": "hyperscaler",
+    "sub_sector": "GPU Cloud Providers",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Listed neocloud; $27B five-year Meta deal (2026-09-30) and raised year-end contracted-power target of 5 GW (C-106).",
+    "catalysts": [
+      "$27B five-year Meta deal (2026-09-30)",
+      "Contracted power target 5 GW YE 2026"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating."
+  },
+  {
+    "ticker": "IREN",
+    "name": "IREN",
+    "sector": "hyperscaler",
+    "sub_sector": "GPU Cloud Providers",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Listed neocloud with a $9.7B Microsoft AI-cloud contract; 2026 ARR target about $4B contracted (C-108).",
+    "catalysts": [
+      "$9.7B Microsoft AI-cloud contract",
+      "2026 ARR target ~$4B contracted"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating."
+  },
+  {
+    "ticker": null,
+    "name": "Crusoe",
+    "sector": "hyperscaler",
+    "sub_sector": "GPU Cloud Providers",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": false,
+    "thesis": "Vertically integrated AI infrastructure developer/cloud (Stargate Abilene developer). Raised $3.9B at $30.9B valuation Sep 2026 (C-107). Private.",
+    "catalysts": [
+      "$3.9B raise at $30.9B valuation (Sep 2026)",
+      "Stargate Abilene developer"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating.",
+    "note": "Private. Stargate Abilene developer — page placement owned by Hyperscalers bot."
+  },
+  {
+    "ticker": null,
+    "name": "Fluidstack",
+    "sector": "hyperscaler",
+    "sub_sector": "GPU Cloud Providers",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": false,
+    "thesis": "Anthropic's primary infrastructure partner and Google TPU test bed; valued at $18B Sep 2026 (C-115). Private.",
+    "catalysts": [
+      "Anthropic primary infra partner",
+      "$18B valuation (Sep 2026)"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating.",
+    "note": "Private. Seed only."
+  },
+  {
+    "ticker": null,
+    "name": "Nscale",
+    "sector": "hyperscaler",
+    "sub_sector": "GPU Cloud Providers",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Growing",
+    "report": null,
+    "public": false,
+    "thesis": "UK neocloud; $3.36B pre-IPO financing; NYSE IPO filing targeting $30–35B; buying Anyscale (C-116). Private pre-IPO.",
+    "catalysts": [
+      "$3.36B pre-IPO financing",
+      "Anyscale acquisition path"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating.",
+    "note": "Pre-IPO / private as of audit. Seed only."
+  },
+  {
+    "ticker": "APLD",
+    "name": "Applied Digital",
+    "sector": "hyperscaler",
+    "sub_sector": "GPU Cloud Providers",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "AI campus landlord (CoreWeave at Polaris Forge, ND) with a new 210 MW customer campus (C-109).",
+    "catalysts": [
+      "CoreWeave Polaris Forge host",
+      "210 MW customer campus"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating."
+  },
+  {
+    "ticker": "CIFR",
+    "name": "Cipher Digital (formerly Cipher Mining)",
+    "sector": "hyperscaler",
+    "sub_sector": "GPU Cloud Providers",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Miner-turned AI landlord; Fluidstack Barber Lake lease extended to 20 years; contracted revenue >$9B (C-110).",
+    "catalysts": [
+      "Fluidstack Barber Lake 20-year lease",
+      "Contracted revenue >$9B"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating."
+  },
+  {
+    "ticker": "WULF",
+    "name": "TeraWulf",
+    "sector": "hyperscaler",
+    "sub_sector": "GPU Cloud Providers",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "Miner-turned AI landlord; ~$19B 20-year Anthropic lease plus Fluidstack campuses (C-111).",
+    "catalysts": [
+      "~$19B 20-year Anthropic lease",
+      "Fluidstack campuses"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating."
+  },
+  {
+    "ticker": "CORZ",
+    "name": "Core Scientific",
+    "sector": "hyperscaler",
+    "sub_sector": "GPU Cloud Providers",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "High",
+    "report": null,
+    "public": true,
+    "thesis": "CoreWeave host; holders rejected CoreWeave's $9B takeover (Oct 2025). >500 MW AMD deal (Jul 2026) (C-112).",
+    "catalysts": [
+      ">500 MW AMD deal (Jul 2026)",
+      "CoreWeave hosting"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating."
+  },
+  {
+    "ticker": "IRM",
+    "name": "Iron Mountain",
+    "sector": "hyperscaler",
+    "sub_sector": "Colocation & Datacenter REITs",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Listed data-center REIT segment targeting a 300 MW pipeline (C-118).",
+    "catalysts": [
+      "~300 MW DC pipeline target"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating."
+  },
+  {
+    "ticker": "AMT",
+    "name": "American Tower (CoreSite)",
+    "sector": "hyperscaler",
+    "sub_sector": "Colocation & Datacenter REITs",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "CoreSite interconnection colo business with record leasing (C-119).",
+    "catalysts": [
+      "CoreSite colo leasing"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating."
+  },
+  {
+    "ticker": "030200.KS",
+    "name": "KT Cloud (KT Corp)",
+    "sector": "hyperscaler",
+    "sub_sector": "Integrated Cloud Operators",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Korean cloud and colo operator (DBO on Gunsan AI data-center site) (digest/audit C-144).",
+    "catalysts": [
+      "Gunsan AI DC DBO role"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating.",
+    "us_symbol": "KT",
+    "exchange": "KRX"
+  },
+  {
+    "ticker": "005090.KS",
+    "name": "SGC Energy",
+    "sector": "hyperscaler",
+    "sub_sector": "Integrated Cloud Operators",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Medium",
+    "report": null,
+    "public": true,
+    "thesis": "Developer of the 60→300 MW Gunsan AI data center (digest/audit C-145).",
+    "catalysts": [
+      "Gunsan AI DC 60→300 MW path"
+    ],
+    "risks": [
+      "Execution and financing risk",
+      "Customer concentration",
+      "Power and interconnect constraints"
+    ],
+    "updated": "2026-10-02",
+    "seed_note": "Seeded 2026-10-02 by Website builder from Claude Hyperscalers audit (shared-data handoff). Educational research seed — not a rating.",
+    "exchange": "KRX"
   }
 ]
