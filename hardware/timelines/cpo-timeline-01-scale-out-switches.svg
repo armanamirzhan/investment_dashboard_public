@@ -37,7 +37,7 @@
 <rect x="130.39999999999998" y="96" width="268" height="73" rx="8" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2"/>
 <text x="140.39999999999998" y="113" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11.5" font-weight="700" fill="#2b6cb0">2026</text>
 <text x="140.39999999999998" y="128" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Broadcom 51.2 terabits per second</text>
-<text x="140.39999999999998" y="142.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Bailly</text>
+<text x="140.39999999999998" y="142.5" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="12.2" font-weight="600" fill="#1a2332">Bailly (2024)</text>
 <text x="140.39999999999998" y="157.0" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#5a6a7e">Delta / Micas; Meta validation</text>
 <rect x="165.28000000002578" y="308" width="566.4" height="12" rx="4" fill="#0d9488" opacity="0.38"/>
 <line x1="448.48000000002577" y1="344" x2="448.48000000002577" y2="249" stroke="#1e40af" stroke-width="1.4" stroke-dasharray="3 3"/>

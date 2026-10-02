@@ -44,6 +44,7 @@
           <a href="timelines/index.html">CPO schematics</a>
           <a href="#layer-6">Connectors</a>
           <a href="#layer-7">Servers</a>
+          <a href="#layer-7b">PCBs</a>
           <a href="#layer-8">Cooling</a>
           <a href="#layer-9">In-rack power</a>
           <a href="#related">Related</a>
@@ -191,19 +192,24 @@
 <text x="407.0" y="430.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">local</text>
 </g>
 <g class="stage-hotspot scarcity-soon" data-stage="psu" tabindex="0" role="button" focusable="true" aria-label="PSU. Activate for stage details.">
-<rect class="box" x="68" y="444" width="140" height="36" rx="6" fill="#303030" stroke="#3d4a5c" stroke-width="1.4"/>
-<text x="138.0" y="460.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">PSU</text>
-<text x="138.0" y="474.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">shelf power</text>
+<rect class="box" x="68" y="444" width="92" height="36" rx="6" fill="#303030" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="114.0" y="460.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">PSU</text>
+<text x="114.0" y="474.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">shelf power</text>
 </g>
 <g class="stage-hotspot scarcity-soon" data-stage="vrm" tabindex="0" role="button" focusable="true" aria-label="VRMs. Activate for stage details.">
-<rect class="box" x="220" y="444" width="120" height="36" rx="6" fill="#383028" stroke="#3d4a5c" stroke-width="1.4"/>
-<text x="280.0" y="460.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">VRMs</text>
-<text x="280.0" y="474.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">board power</text>
+<rect class="box" x="168" y="444" width="84" height="36" rx="6" fill="#383028" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="210.0" y="460.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">VRMs</text>
+<text x="210.0" y="474.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">board power</text>
+</g>
+<g class="stage-hotspot" data-stage="pcb" tabindex="0" role="button" focusable="true" aria-label="Motherboard / PCB. Activate for stage details.">
+<rect class="box" x="260" y="444" width="96" height="36" rx="6" fill="#2a3830" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="308.0" y="460.0" text-anchor="middle" fill="#e8eef6" font-size="11" font-family="system-ui,sans-serif" font-weight="600">PCB</text>
+<text x="308.0" y="474.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">laminate · foil</text>
 </g>
 <g class="stage-hotspot" data-stage="cold-plate" tabindex="0" role="button" focusable="true" aria-label="Cold plate. Activate for stage details.">
-<rect class="box" x="352" y="444" width="100" height="32" rx="6" fill="#1e4050" stroke="#3d4a5c" stroke-width="1.4"/>
-<text x="402.0" y="458.0" text-anchor="middle" fill="#e8eef6" font-size="10" font-family="system-ui,sans-serif" font-weight="600">Cold plate</text>
-<text x="402.0" y="474.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">on chip</text>
+<rect class="box" x="364" y="444" width="88" height="36" rx="6" fill="#1e4050" stroke="#3d4a5c" stroke-width="1.4"/>
+<text x="408.0" y="460.0" text-anchor="middle" fill="#e8eef6" font-size="10" font-family="system-ui,sans-serif" font-weight="600">Cold plate</text>
+<text x="408.0" y="474.0" text-anchor="middle" fill="#9aa7b8" font-size="9" font-family="system-ui,sans-serif">on chip</text>
 </g>
 
 <!-- Rack B / cooling stack -->
@@ -326,6 +332,7 @@
           <li><a href="#layer-5">Optical &amp; fiber</a> — glass and a pointer to the full Photonics map (<a href="photonics/cpo/index.html">CPO deep-dive</a>).</li>
           <li><a href="#layer-6">Connectors &amp; cabling</a> — high-speed electrical interconnect.</li>
           <li><a href="#layer-7">Servers, racks &amp; manufacturing</a> — OEMs and Taiwan / EMS assemblers.</li>
+          <li><a href="#layer-7b">PCBs, laminates &amp; copper foil</a> — motherboard materials under every AI board.</li>
           <li><a href="#layer-8">Cooling &amp; thermal</a> — air and liquid cooling for dense AI halls.</li>
           <li><a href="#layer-9">In-rack power modules</a> — VRMs and power stages on the board / tray (facility power → Electrification).</li>
         </ol>
@@ -459,18 +466,35 @@
             <p>Maia AI accelerator — primarily for Microsoft’s own cloud and Copilot-scale workloads.</p>
           </li>
         </ul>
-        <p class="muted">
-          ASIC design houses named in the extract (Alchip, Global Unichip, MediaTek) help implement those custom chips — overlap with Semiconductors / design services.
-          Buyer context:
-          <a href="../hyperscalers/index.html">Hyperscalers</a>.
-        </p>
-        <p><strong>Private / alternative accelerators (from extraction)</strong></p>
+        <p><strong>ASIC design houses (TSMC ecosystem)</strong></p>
         <ul class="company-list">
           <li>
-            <span class="name">Cerebras</span>
+            <span class="name">MediaTek</span><span class="ticker">2454.TW</span>
+            <p>Custom AI ASIC partner on hyperscaler programs (including Google TPU work) — design house overlap with Semiconductors.</p>
+          </li>
+          <li>
+            <span class="name">Alchip Technologies</span><span class="ticker">3661.TW</span>
+            <p>TSMC-ecosystem ASIC design house for hyperscaler accelerators; also appears in advanced packaging / optical I/O partner coverage.</p>
+          </li>
+          <li>
+            <span class="name">Global Unichip (GUC)</span><span class="ticker">3443.TW</span>
+            <p>TSMC-affiliated ASIC design service with CoWoS / HBM integration for custom AI silicon.</p>
+          </li>
+        </ul>
+        <p class="muted">
+          Buyer context:
+          <a href="../hyperscalers/index.html">Hyperscalers</a>.
+          Packaging / CoWoS detail:
+          <a href="../semiconductors/index.html">Semiconductors</a>.
+        </p>
+        <p><strong>Listed &amp; alternative accelerators (from extraction)</strong></p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Cerebras</span><span class="ticker">CBRS</span>
             <p>
               <a href="https://en.wikipedia.org/wiki/Wafer-scale_integration">Wafer-scale</a>
               engine (WSE-3) — one giant chip per wafer for certain training / inference patterns.
+              Listed on Nasdaq as CBRS since May 2026 (IPO priced 13 May 2026).
             </p>
           </li>
           <li>
@@ -525,8 +549,19 @@
             <p>Arm server CPUs (Altra / AmpereOne) for cloud efficiency; extract notes SoftBank ownership since late 2025.</p>
           </li>
           <li>
-            <span class="name">Arm Holdings</span>
-            <p>Architecture licensor; extract mentions AGI-class high-core Arm CPU IP aimed at AI hosts.</p>
+            <span class="name">Arm Holdings</span><span class="ticker">ARM</span>
+            <p>
+              Architecture IP still licensed widely, but Arm also launched its own
+              <strong>Arm AGI CPU</strong> (up to 136 Neoverse V3 cores; Meta as lead partner, Mar 2026) —
+              no longer a licensor-only story for AI hosts.
+            </p>
+          </li>
+          <li>
+            <span class="name">NVIDIA (Grace / Vera)</span><span class="ticker">NVDA</span>
+            <p>
+              Grace (GB200 / GB300) and Vera (Vera Rubin) are the Arm host CPUs inside NVIDIA rack-scale AI systems —
+              the largest Arm AI host CPU line by cluster volume.
+            </p>
           </li>
         </ul>
 
@@ -540,7 +575,7 @@
         <p><strong>HBM / DRAM (seed + extraction)</strong></p>
         <ul class="company-list">
           <li>
-            <span class="name">SK Hynix</span><span class="ticker">000660.KS</span>
+            <span class="name">SK Hynix</span><span class="ticker">SKHY / 000660.KS</span>
             <p>Leading HBM supplier to major GPU programs. Through the mid-2020s AI ramp, HBM capacity and yields have often been sold out years ahead — a primary throttle on how many high-end accelerators can ship before packaging is even considered.</p>
           </li>
           <li>
@@ -573,6 +608,21 @@
           <li>
             <span class="name">NetApp</span><span class="ticker">NTAP</span>
             <p>Enterprise storage and data-management platforms used beside cloud and on-prem AI clusters.</p>
+          </li>
+        </ul>
+        <p><strong>NAND / SSD flash</strong></p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Sandisk</span><span class="ticker">SNDK</span>
+            <p>NAND / SSD flash spun from Western Digital (Feb 2025); WDC remains the nearline HDD franchise above.</p>
+          </li>
+          <li>
+            <span class="name">Kioxia Holdings</span><span class="ticker">285A.T</span>
+            <p>Top-3 NAND maker (Sandisk JV); listed on TSE Prime since Dec 2024.</p>
+          </li>
+          <li>
+            <span class="name">Samsung Electronics / Micron</span><span class="ticker">005930.KS / MU</span>
+            <p>Also supply datacenter NAND / SSD flash alongside their DRAM and HBM businesses.</p>
           </li>
         </ul>
 
@@ -636,12 +686,12 @@
         <div class="callout">
           <div class="label">Nested Photonics section (do not duplicate here)</div>
           <p style="margin:0">
-            Transceivers and components (Lumentum, Coherent, Fabrinet, InnoLight, Eoptolink, and peers),
+            Deep optical who-is-who — lasers and transceivers (Lumentum, Coherent, InnoLight, Eoptolink, Sumitomo Electric, Sivers, and peers),
             <a href="https://en.wikipedia.org/wiki/Silicon_photonics">silicon photonics</a>,
-            DSPs, CPO, optical networking platforms (Ciena, Nokia/Infinera, Acacia/Cisco, and peers), and photomask / optical materials
-            are mapped in depth on
-            <a href="photonics/index.html">hardware / Photonics</a>
-            (owned by Photonics AI). Co-packaged optics roadmaps and optical-I/O endgame:
+            DSPs, CPO, optical networking platforms (Ciena, Nokia/Infinera, Acacia/Cisco, and peers), fiber (Corning, Fujikura),
+            and InP substrates (AXT, JX Advanced Metals, Sumitomo Electric) — lives on
+            <a href="photonics/index.html">hardware / Photonics</a>.
+            Co-packaged optics roadmaps and NVIDIA / Broadcom partner lists:
             <a href="photonics/cpo/index.html">Photonics → CPO</a>.
             Fab photomask overlap also cross-links to
             <a href="../semiconductors/index.html">Semiconductors</a>.
@@ -668,6 +718,14 @@
           <li>
             <span class="name">Samtec</span>
             <p>Specialty high-speed connectors used in datacenter and telecom gear.</p>
+          </li>
+          <li>
+            <span class="name">Credo Technology</span><span class="ticker">CRDO</span>
+            <p>Active electrical cables (AECs) and retimers that keep in-rack and scale-up copper links working at AI lane rates.</p>
+          </li>
+          <li>
+            <span class="name">Astera Labs</span><span class="ticker">ALAB</span>
+            <p>PCIe / CXL / Ethernet retimers for dense AI servers — the silicon that keeps copper interconnects clean as GPU racks scale.</p>
           </li>
         </ul>
 
@@ -721,6 +779,37 @@
           </li>
         </ul>
 
+        <h3 id="layer-7b">7b. PCBs, laminates &amp; copper foil</h3>
+        <p class="layer-intro">
+          Every AI server and switch board sits on a
+          <a href="https://en.wikipedia.org/wiki/Printed_circuit_board">printed circuit board (PCB)</a>
+          built from low-loss
+          <a href="https://en.wikipedia.org/wiki/Copper-clad_laminate">copper-clad laminate (CCL)</a>,
+          specialty glass cloth, and ultra-smooth copper foil. These materials are supply-tight as lane rates climb.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Elite Material (EMC)</span><span class="ticker">2383.TW</span>
+            <p>Leading low-loss copper-clad laminate supplier for AI server and switch boards.</p>
+          </li>
+          <li>
+            <span class="name">Mitsui Kinzoku</span><span class="ticker">5706.T</span>
+            <p>HVLP / carrier copper foil for high-speed laminates — a supply-tight input under CCL makers.</p>
+          </li>
+          <li>
+            <span class="name">Nitto Boseki (Nittobo)</span><span class="ticker">3110.T</span>
+            <p>Low-CTE T-glass / low-Dk glass cloth; reported shortages have gated substrates and high-speed PCBs.</p>
+          </li>
+          <li>
+            <span class="name">Taiwan Union / WUS / Gold Circuit / Victory Giant</span><span class="ticker">6274.TW / 2316.TW / 2368.TW / 300476.SZ</span>
+            <p>Additional CCL and high-layer-count PCB fabricators for AI servers and networking gear.</p>
+          </li>
+          <li>
+            <span class="name">TTM Technologies</span><span class="ticker">TTMI</span>
+            <p>US/Asia PCB manufacturer serving networking, computing, and aerospace boards.</p>
+          </li>
+        </ul>
+
         <h3 id="layer-8">8. Cooling &amp; thermal</h3>
         <p class="layer-intro">
           AI rack densities often need
@@ -741,8 +830,20 @@
             <p>Facility and IT cooling / power management; Motivair acquisition called out for liquid-cooling technology.</p>
           </li>
           <li>
-            <span class="name">CoolIT Systems</span>
-            <p>Direct-liquid-cooling loops used in AI / HPC servers.</p>
+            <span class="name">CoolIT (Ecolab)</span><span class="ticker">ECL</span>
+            <p>Direct-liquid-cooling cold plates, loops, manifolds and CDUs — Ecolab closed its ~$4.75B CoolIT acquisition on 2 Jul 2026.</p>
+          </li>
+          <li>
+            <span class="name">Eaton (Boyd Thermal)</span><span class="ticker">ETN</span>
+            <p>Cold plates, CDUs and liquid loops after Eaton’s $9.5B Boyd Thermal deal (announced Nov 2025, completed Mar 2026).</p>
+          </li>
+          <li>
+            <span class="name">LG Electronics</span><span class="ticker">066570.KS</span>
+            <p>Named among the first NVIDIA DSX Ready CDU vendors for AI liquid-cooling racks.</p>
+          </li>
+          <li>
+            <span class="name">LiquidStack (Trane Technologies)</span><span class="ticker">TT</span>
+            <p>Immersion and specialty liquid-cooling platforms; Trane completed the LiquidStack acquisition on 2 Mar 2026 (facility HVAC stays on Electrification).</p>
           </li>
           <li>
             <span class="name">nVent</span><span class="ticker">NVT</span>

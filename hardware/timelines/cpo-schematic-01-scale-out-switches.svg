@@ -54,10 +54,10 @@
 <text x="498.0" y="352.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">NVIDIA Spectrum-X Photonics</text>
 <text x="498.0" y="368.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">Ethernet CPO on TSMC COUPE</text>
 </g>
-<g class="stage-hotspot scarcity-soon" data-stage="so-bailly" tabindex="0" role="button" focusable="true" aria-label="Broadcom Bailly. Activate for stage details.">
+<g class="stage-hotspot scarcity-soon" data-stage="so-bailly" tabindex="0" role="button" focusable="true" aria-label="Broadcom Bailly → Davisson. Activate for stage details.">
 <rect class="box" x="664" y="320" width="280" height="72" rx="6" fill="#1e3a5a" stroke="#3d4a5c" stroke-width="1.4"/>
-<text x="804.0" y="352.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Broadcom Bailly</text>
-<text x="804.0" y="368.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">51.2 Tb/s · Delta/Micas · Meta</text>
+<text x="804.0" y="352.0" text-anchor="middle" fill="#e8eef6" font-size="12" font-family="system-ui,sans-serif" font-weight="600">Broadcom Bailly → Davisson</text>
+<text x="804.0" y="368.0" text-anchor="middle" fill="#9aa7b8" font-size="9.5" font-family="system-ui,sans-serif">51.2T (2024) · 102.4T TH6-Davisson</text>
 </g>
 <text x="32" y="428" fill="#9aa7b8" font-size="11" font-family="system-ui,sans-serif" font-weight="600">Adoption phases</text>
 <g class="stage-hotspot" data-stage="so-mainstream" tabindex="0" role="button" focusable="true" aria-label="Becoming mainstream. Activate for stage details.">

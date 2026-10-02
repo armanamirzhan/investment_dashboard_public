@@ -254,10 +254,16 @@ FIGURES = [
                 "detail": "Compact Universal Photonic Engine (COUPE)",
             },
             {
-                "year": "2026",
-                "year_num": 2026.35,
+                "year": "2024",
+                "year_num": 2024.5,
                 "label": "Broadcom 51.2 terabits per second Bailly",
-                "detail": "Delta / Micas; Meta validation",
+                "detail": "2nd-gen CPO milestone; Delta / Micas; Meta validation",
+            },
+            {
+                "year": "Mar 2026",
+                "year_num": 2026.2,
+                "label": "Broadcom Tomahawk 6-Davisson 102.4T",
+                "detail": "3rd-gen CPO; TH6 volume from ~2026-03-12",
             },
             {
                 "year": "2026–2028",

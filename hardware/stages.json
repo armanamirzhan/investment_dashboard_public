@@ -84,6 +84,54 @@
       ]
     },
     {
+      "id": "pcb",
+      "title": "Motherboard / PCB materials",
+      "summary": "High-speed server and switch boards need low-loss copper-clad laminates (CCL), specialty glass cloth, and ultra-smooth copper foil. These materials sit under every AI motherboard and switch PCB — supply-tight inputs as lane rates climb.",
+      "companies": [
+        {
+          "name": "Elite Material (EMC)",
+          "ticker": "2383.TW",
+          "note": "Leading low-loss copper-clad laminate (CCL) for AI server and switch boards"
+        },
+        {
+          "name": "Mitsui Kinzoku",
+          "ticker": "5706.T",
+          "note": "HVLP / carrier copper foil for high-speed laminates (supply-tight input)"
+        },
+        {
+          "name": "Nitto Boseki (Nittobo)",
+          "ticker": "3110.T",
+          "note": "Low-CTE T-glass / low-Dk glass cloth; reported shortage gating substrates and high-speed PCBs"
+        },
+        {
+          "name": "Taiwan Union Technology (TUC)",
+          "ticker": "6274.TW",
+          "note": "High-speed CCL peer for AI server / switch boards"
+        },
+        {
+          "name": "Victory Giant Technology",
+          "ticker": "300476.SZ",
+          "note": "AI server / switch PCB fabricator"
+        },
+        {
+          "name": "WUS Printed Circuit",
+          "ticker": "2316.TW",
+          "note": "High-layer-count PCBs for networking and servers"
+        },
+        {
+          "name": "Gold Circuit Electronics",
+          "ticker": "2368.TW",
+          "note": "Server and networking PCB supplier"
+        },
+        {
+          "name": "TTM Technologies",
+          "ticker": "TTMI",
+          "fidelity_symbol": "TTMI",
+          "note": "US/Asia PCB manufacturer for aerospace, networking and computing"
+        }
+      ]
+    },
+    {
       "id": "gpu",
       "title": "GPUs (graphics processing units)",
       "summary": "Merchant accelerators that do most of the matrix math for training and inference. They sit on the board or as modules (SXM / OAM-class) next to HBM stacks. Software stacks such as CUDA make ecosystem lock-in as important as raw silicon.",
@@ -144,6 +192,21 @@
           "name": "Meta (MTIA)",
           "ticker": "META",
           "note": "Meta Training and Inference Accelerator programs"
+        },
+        {
+          "name": "MediaTek",
+          "ticker": "2454.TW",
+          "note": "Custom AI ASIC partner (Google TPU program and peers)"
+        },
+        {
+          "name": "Alchip Technologies",
+          "ticker": "3661.TW",
+          "note": "TSMC-ecosystem ASIC design house for hyperscaler accelerators"
+        },
+        {
+          "name": "Global Unichip (GUC)",
+          "ticker": "3443.TW",
+          "note": "TSMC-affiliated ASIC design service with CoWoS/HBM integration"
         }
       ]
     },
@@ -158,9 +221,9 @@
           "note": "FPGA portfolio after Xilinx acquisition"
         },
         {
-          "name": "Intel (Altera)",
-          "ticker": "INTC",
-          "note": "FPGA line; smart-NIC and acceleration use cases"
+          "name": "Altera (Silver Lake 51% / Intel 49%)",
+          "ticker": "",
+          "note": "Standalone FPGA company after Silver Lake took 51% control (Sep 2025); Intel retains 49%. IPO filing reported Sep 2026 — still private as of this page."
         },
         {
           "name": "Achronix / Lattice (specialists)",
@@ -191,8 +254,15 @@
         },
         {
           "name": "Arm Holdings",
-          "ticker": "",
-          "note": "Architecture IP licensed into server CPUs"
+          "ticker": "ARM",
+          "note": "Arm AGI CPU (up to 136 Neoverse V3 cores; Meta lead partner, Mar 2026) plus architecture IP licensed into server CPUs — no longer IP-licensor only",
+          "fidelity_symbol": "ARM"
+        },
+        {
+          "name": "NVIDIA (Grace / Vera)",
+          "ticker": "NVDA",
+          "fidelity_symbol": "NVDA",
+          "note": "Grace (GB200/GB300) and Vera (Vera Rubin) Arm host CPUs in NVIDIA rack-scale AI systems"
         }
       ]
     },
@@ -203,8 +273,9 @@
       "companies": [
         {
           "name": "SK Hynix",
-          "ticker": "000660.KS",
-          "note": "Leading HBM supplier to major GPU programs"
+          "ticker": "SKHY / 000660.KS",
+          "note": "Leading HBM supplier to major GPU programs (US ADR SKHY)",
+          "fidelity_symbol": "SKHY"
         },
         {
           "name": "Samsung Electronics",
@@ -230,8 +301,9 @@
         },
         {
           "name": "SK Hynix",
-          "ticker": "000660.KS",
-          "note": "Enterprise DRAM + HBM"
+          "ticker": "SKHY / 000660.KS",
+          "note": "Enterprise DRAM + HBM (US ADR SKHY)",
+          "fidelity_symbol": "SKHY"
         },
         {
           "name": "Micron Technology",
@@ -293,9 +365,26 @@
           "note": "High-capacity enterprise HDDs"
         },
         {
-          "name": "Samsung / Micron / SK Hynix (NAND)",
-          "ticker": "",
-          "note": "SSD NAND suppliers"
+          "name": "Sandisk",
+          "ticker": "SNDK",
+          "fidelity_symbol": "SNDK",
+          "note": "NAND / SSD flash spun from Western Digital (Feb 2025); WDC remains HDD-focused"
+        },
+        {
+          "name": "Kioxia Holdings",
+          "ticker": "285A.T",
+          "note": "Top-3 NAND maker (Sandisk JV); TSE Prime since Dec 2024"
+        },
+        {
+          "name": "Samsung Electronics (NAND)",
+          "ticker": "005930.KS",
+          "note": "NAND / SSD flash alongside DRAM and HBM"
+        },
+        {
+          "name": "Micron Technology (NAND)",
+          "ticker": "MU",
+          "fidelity_symbol": "MU",
+          "note": "NAND / SSD flash for datacenter"
         }
       ]
     },
@@ -471,6 +560,18 @@
           "name": "Samtec",
           "ticker": "",
           "note": "Specialty high-speed connectors"
+        },
+        {
+          "name": "Credo Technology",
+          "ticker": "CRDO",
+          "fidelity_symbol": "CRDO",
+          "note": "Active electrical cables (AECs) and retimers for in-rack / scale-up copper"
+        },
+        {
+          "name": "Astera Labs",
+          "ticker": "ALAB",
+          "fidelity_symbol": "ALAB",
+          "note": "PCIe / CXL / Ethernet retimers for AI lane rates"
         }
       ]
     },
@@ -490,14 +591,31 @@
           "note": "Optical engines and components"
         },
         {
-          "name": "InnoLight / Eoptolink / Fabrinet",
-          "ticker": "",
-          "note": "Transceiver volume suppliers (Photonics map)"
+          "name": "InnoLight (Zhongji Innolight)",
+          "ticker": "300308.SZ",
+          "note": "Largest 800G/1.6T transceiver supplier; NVIDIA CPO partner. On the US DoD 1260H list as of 8 Jun 2026 (procurement limits from 30 Jun 2026; goods containing its products from 30 Jun 2027)."
+        },
+        {
+          "name": "Eoptolink",
+          "ticker": "300502.SZ",
+          "note": "Top-3 AI transceiver supplier; named NVIDIA CPO partner"
+        },
+        {
+          "name": "Fabrinet",
+          "ticker": "FN",
+          "fidelity_symbol": "FN",
+          "note": "Precision optical module assembly / manufacturing partner"
         },
         {
           "name": "NVIDIA / Broadcom (CPO directions)",
           "ticker": "",
           "note": "Co-packaged optics on switches"
+        },
+        {
+          "name": "Sumitomo Electric",
+          "ticker": "5802.T",
+          "fidelity_symbol": "SMTOY",
+          "note": "InP substrates, lasers, fiber and connectors; named NVIDIA CPO partner"
         }
       ]
     },
@@ -576,9 +694,10 @@
       "summary": "Metal plates with coolant channels mounted on GPUs and CPUs. Heat moves into liquid instead of air heatsinks. First hardware touchpoint of liquid cooling on the silicon.",
       "companies": [
         {
-          "name": "CoolIT Systems",
-          "ticker": "",
-          "note": "Direct liquid cooling cold plates and loops"
+          "name": "CoolIT (Ecolab)",
+          "ticker": "ECL",
+          "fidelity_symbol": "ECL",
+          "note": "Direct liquid cooling cold plates and loops — Ecolab closed ~$4.75B CoolIT acquisition Jul 2026"
         },
         {
           "name": "Asetek",
@@ -599,6 +718,17 @@
           "name": "OEM/ODM thermal teams (Supermicro, Foxconn, …)",
           "ticker": "",
           "note": "Integrate cold plates into trays"
+        },
+        {
+          "name": "Eaton (Boyd Thermal)",
+          "ticker": "ETN",
+          "fidelity_symbol": "ETN",
+          "note": "Cold plates, CDUs and liquid loops after Eaton’s $9.5B Boyd Thermal deal (closed Mar 2026)"
+        },
+        {
+          "name": "LG Electronics",
+          "ticker": "066570.KS",
+          "note": "NVIDIA DSX Ready CDU / liquid-cooling path (also CDU stage)"
         }
       ]
     },
@@ -608,9 +738,21 @@
       "summary": "Hoses, quick-disconnects, and manifolds that collect cold-plate loops inside one server or GPU tray and present a single pair of fittings to the rack. Leak detection and serviceability matter as much as thermal performance.",
       "companies": [
         {
-          "name": "CoolIT / Asetek / Boyd-class thermal suppliers",
+          "name": "CoolIT (Ecolab)",
+          "ticker": "ECL",
+          "fidelity_symbol": "ECL",
+          "note": "Tray-level manifolds, QD couplings and liquid loops (Ecolab / CoolIT)"
+        },
+        {
+          "name": "Eaton (Boyd Thermal)",
+          "ticker": "ETN",
+          "fidelity_symbol": "ETN",
+          "note": "Tray-level liquid loops and thermal hardware (Boyd Thermal under Eaton)"
+        },
+        {
+          "name": "Asetek",
           "ticker": "",
-          "note": "Tray-level manifolds and QD couplings"
+          "note": "Direct-to-chip tray loops and QD couplings"
         },
         {
           "name": "Server OEMs & ODMs",
@@ -630,9 +772,10 @@
           "note": "Rack and row liquid-cooling packages"
         },
         {
-          "name": "CoolIT Systems",
-          "ticker": "",
-          "note": "Rack manifolds and CDUs"
+          "name": "CoolIT (Ecolab)",
+          "ticker": "ECL",
+          "fidelity_symbol": "ECL",
+          "note": "Rack manifolds and CDUs (Ecolab / CoolIT)"
         },
         {
           "name": "nVent",
@@ -662,9 +805,10 @@
           "note": "CDU / liquid cooling after Motivair acquisition"
         },
         {
-          "name": "CoolIT Systems",
-          "ticker": "",
-          "note": "CDUs for direct liquid cooling"
+          "name": "CoolIT (Ecolab)",
+          "ticker": "ECL",
+          "fidelity_symbol": "ECL",
+          "note": "CDUs for direct liquid cooling (Ecolab / CoolIT)"
         },
         {
           "name": "nVent",
@@ -675,6 +819,23 @@
           "name": "Johnson Controls / Delta",
           "ticker": "",
           "note": "Facility-adjacent cooling gear"
+        },
+        {
+          "name": "Eaton (Boyd Thermal)",
+          "ticker": "ETN",
+          "fidelity_symbol": "ETN",
+          "note": "CDUs and liquid distribution after Boyd Thermal acquisition"
+        },
+        {
+          "name": "LG Electronics",
+          "ticker": "066570.KS",
+          "note": "Named among first NVIDIA DSX Ready CDU vendors for AI liquid-cooling racks"
+        },
+        {
+          "name": "LiquidStack (Trane Technologies)",
+          "ticker": "TT",
+          "fidelity_symbol": "TT",
+          "note": "LiquidStack CDU / liquid-cooling presence under Trane (acquisition closed 2026-03-02); facility HVAC stays on Electrification"
         }
       ]
     },
@@ -729,6 +890,12 @@
           "name": "Vertiv (immersion partnerships)",
           "ticker": "VRT",
           "note": "Broader thermal portfolio including immersion options"
+        },
+        {
+          "name": "LiquidStack (Trane Technologies)",
+          "ticker": "TT",
+          "fidelity_symbol": "TT",
+          "note": "Immersion and specialty liquid-cooling platforms after Trane completed LiquidStack acquisition 2026-03-02"
         }
       ]
     },
@@ -756,6 +923,18 @@
           "name": "Samtec",
           "ticker": "",
           "note": "Specialty high-speed connectors"
+        },
+        {
+          "name": "Credo Technology",
+          "ticker": "CRDO",
+          "fidelity_symbol": "CRDO",
+          "note": "Active electrical cables (AECs) and retimers for in-rack / scale-up copper"
+        },
+        {
+          "name": "Astera Labs",
+          "ticker": "ALAB",
+          "fidelity_symbol": "ALAB",
+          "note": "PCIe / CXL / Ethernet retimers for AI lane rates"
         }
       ]
     }

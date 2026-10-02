@@ -119,7 +119,7 @@ def fig1() -> str:
     )
     p.append(cell("so-quantum-x", 32, 320, 300, 72, "NVIDIA Quantum-X Photonics", "InfiniBand CPO · 144×800G", "#1e3a5a", scarcity="soon"))
     p.append(cell("so-spectrum-x", 348, 320, 300, 72, "NVIDIA Spectrum-X Photonics", "Ethernet CPO on TSMC COUPE", "#1e3a5a", scarcity="soon"))
-    p.append(cell("so-bailly", 664, 320, 280, 72, "Broadcom Bailly", "51.2 Tb/s · Delta/Micas · Meta", "#1e3a5a", scarcity="soon"))
+    p.append(cell("so-bailly", 664, 320, 280, 72, "Broadcom Bailly → Davisson", "51.2T (2024) · 102.4T TH6-Davisson", "#1e3a5a", scarcity="soon"))
 
     # Phase cells
     p.append(
