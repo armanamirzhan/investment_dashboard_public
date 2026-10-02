@@ -1,11 +1,11 @@
 {
-  "version": "2026-10",
+  "version": "2026-10-02",
   "disclaimer": "Informational October 2026 baseline. Not investment advice.",
   "stages": [
     {
       "id": "fab-shell",
       "title": "Fab / cleanroom facility",
-      "summary": "A semiconductor fabrication plant (fab) is a sealed cleanroom campus with ultra-pure water, specialty gases, vibration control, and tool bays. Different product lines (logic, memory, photonics, power) share the same idea \u2014 keep particles out and yield in \u2014 but use different wafers, tools, and packaging steps.",
+      "summary": "A semiconductor fabrication plant (fab) is a sealed cleanroom campus with ultra-pure water, specialty gases, vibration control, and tool bays. Different product lines (logic, memory, photonics, power) share the same idea — keep particles out and yield in — but use different wafers, tools, and packaging steps.",
       "companies": [
         {
           "name": "Exyte",
@@ -21,14 +21,14 @@
         {
           "name": "Samsung C&T",
           "ticker": "",
-          "note": "Builds Samsung\u2019s own fabs and cleanrooms"
+          "note": "Builds Samsung’s own fabs and cleanrooms"
         }
       ]
     },
     {
       "id": "device-logic",
-      "title": "What we\u2019re making: logic (CPU / GPU / ASIC)",
-      "summary": "Leading-edge logic chips \u2014 host CPUs, merchant GPUs, and custom AI ASICs \u2014 are patterned on advanced silicon nodes. Design happens in EDA software (Software section); this schematic is the factory path from blank wafer to packaged die.",
+      "title": "What we’re making: logic (CPU / GPU / ASIC)",
+      "summary": "Leading-edge logic chips — host CPUs, merchant GPUs, and custom AI ASICs — are patterned on advanced silicon nodes. Design happens in EDA software (Software section); this schematic is the factory path from blank wafer to packaged die.",
       "companies": [
         {
           "name": "TSMC",
@@ -50,9 +50,26 @@
       ]
     },
     {
+      "id": "ship-dies",
+      "title": "Ship finished logic dies",
+      "summary": "After packaging and test, logic dies ship to accelerator and system makers. The company list for what those boards become lives under Computation Hardware — this cell is just the fab hand-off.",
+      "companies": [
+        {
+          "name": "TSMC / Samsung / Intel Foundry",
+          "ticker": "",
+          "note": "Foundries that release finished wafers/dies"
+        },
+        {
+          "name": "See Hardware section",
+          "ticker": "",
+          "note": "Accelerator and rack OEMs — do not double-count here"
+        }
+      ]
+    },
+    {
       "id": "device-hbm",
-      "title": "What we\u2019re making: HBM (high-bandwidth memory)",
-      "summary": "High-bandwidth memory stacks tall DRAM dies and attaches them beside AI logic with advanced packaging. The memory wafers are made in DRAM fabs; the glue step (CoWoS-class and peers) is often the choke \u2014 see Hardware scarcity and this section\u2019s packaging layer.",
+      "title": "What we’re making: HBM (high-bandwidth memory)",
+      "summary": "High-bandwidth memory stacks tall DRAM dies and attaches them beside AI logic with advanced packaging. The memory wafers are made in DRAM fabs; the glue step (CoWoS-class and peers) is often the choke — see Hardware scarcity and this section’s packaging layer.",
       "companies": [
         {
           "name": "SK Hynix",
@@ -74,13 +91,55 @@
     },
     {
       "id": "device-photonics",
-      "title": "What we\u2019re making: photonics / optical components",
-      "summary": "Optical interconnect parts \u2014 lasers, modulators, detectors, and silicon photonics \u2014 use compound semiconductors and/or silicon photonics flows plus specialized photomasks and materials. Deep company maps live under Hardware \u2192 Photonics; this view is the fab-side workflow.",
+      "title": "What we're making: photonics / optical components",
+      "summary": "Optical interconnect parts — lasers, modulators, detectors, and silicon photonics — use compound semiconductors and/or silicon photonics flows plus specialized photomasks and materials. Foundries and optical-component makers below are the fab-side who-is-who; deeper company maps also live under Hardware → Photonics.",
       "companies": [
         {
-          "name": "See Hardware / Photonics",
-          "ticker": "",
-          "note": "Lumentum, Coherent, AXT, Corning, Marvell and peers \u2014 do not duplicate here"
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "Silicon photonics / CoWoS-adjacent optical path capacity",
+          "fidelity_symbol": "TSM"
+        },
+        {
+          "name": "GlobalFoundries",
+          "ticker": "GFS",
+          "note": "Silicon photonics foundry offerings",
+          "fidelity_symbol": "GFS"
+        },
+        {
+          "name": "Tower Semiconductor",
+          "ticker": "TSEM",
+          "note": "Specialty / photonics-capable foundry",
+          "fidelity_symbol": "TSEM"
+        },
+        {
+          "name": "Intel",
+          "ticker": "INTC",
+          "note": "Silicon photonics and optical I/O development",
+          "fidelity_symbol": "INTC"
+        },
+        {
+          "name": "STMicroelectronics",
+          "ticker": "STM",
+          "note": "Silicon photonics and optical components",
+          "fidelity_symbol": "STM"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Lasers, optics, and compound materials",
+          "fidelity_symbol": "COHR"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Optical engines and laser components",
+          "fidelity_symbol": "LITE"
+        },
+        {
+          "name": "Sivers Semiconductors",
+          "ticker": "SIVE",
+          "note": "Indium phosphide laser arrays (Nasdaq Stockholm)"
         },
         {
           "name": "Photronics / DNP / Hoya",
@@ -91,13 +150,13 @@
     },
     {
       "id": "device-power",
-      "title": "What we\u2019re making: SiC / GaN power devices (SST-adjacent)",
-      "summary": "Silicon carbide (SiC) and gallium nitride (GaN) power devices switch and convert electricity more efficiently than plain silicon \u2014 used in datacenter power stages and in solid-state transformer (SST) style conversion. Industry read (2026): rack-level 800\u202fV DC sidecars begin late 2026 / early 2027; native 800\u202fV racks and SST pilots gather in 2027; facility-wide HVDC / scaled SSTs more 2028\u20132029. SiC dominates high-voltage rectification and MV SST stages; GaN often wins high-frequency 800\u202fV\u2192low-voltage DC\u2013DC. Full SST system architecture lives under Electrification; this schematic is the device fab.",
+      "title": "What we’re making: SiC / GaN power devices (SST-adjacent)",
+      "summary": "Silicon carbide (SiC) and gallium nitride (GaN) power devices switch and convert electricity more efficiently than plain silicon — used in datacenter power stages and in solid-state transformer (SST) style conversion. Industry read (2026): rack-level 800 V DC sidecars begin late 2026 / early 2027; native 800 V racks and SST pilots gather in 2027; facility-wide HVDC / scaled SSTs more 2028–2029. SiC dominates high-voltage rectification and MV SST stages; GaN often wins high-frequency 800 V→low-voltage DC–DC. Full SST system architecture lives under Electrification; this schematic is the device fab.",
       "companies": [
         {
           "name": "STMicroelectronics",
           "ticker": "STM",
-          "note": "SiC devices; NVIDIA 800\u202fV DC board collab",
+          "note": "SiC devices; NVIDIA 800 V DC board collab",
           "fidelity_symbol": "STM"
         },
         {
@@ -116,7 +175,7 @@
         {
           "name": "Wolfspeed",
           "ticker": "WOLF",
-          "note": "SiC wafers and devices \u2014 execution/balance-sheet risk",
+          "note": "SiC wafers and devices — execution/balance-sheet risk",
           "fidelity_symbol": "WOLF"
         },
         {
@@ -125,20 +184,20 @@
           "note": "SiC MOSFETs; GaN partnerships",
           "fidelity_symbol": "ROHCY",
           "not_priced_in": true,
-          "demand_detail": "As 800\u202fV DC racks and SST pilots scale ~2027\u20132028, SiC MOSFET content per MW rises. ROHM\u2019s SiC/GaN portfolio is less crowded in US AI narratives than ON/STM/IFX, so incremental datacenter demand may still be under-reflected versus peers \u2014 orientation only, not advice."
+          "demand_detail": "As 800 V DC racks and SST pilots scale ~2027–2028, SiC MOSFET content per MW rises. ROHM’s SiC/GaN portfolio is less crowded in US AI narratives than ON/STM/IFX, so incremental datacenter demand may still be under-reflected versus peers — orientation only, not advice."
         },
         {
           "name": "Navitas",
           "ticker": "NVTS",
-          "note": "GaN for high-frequency DC\u2013DC stages",
+          "note": "GaN for high-frequency DC–DC stages",
           "fidelity_symbol": "NVTS",
           "not_priced_in": true,
-          "demand_detail": "GaN is often preferred for high-frequency conversion from ~800\u202fV DC down to intermediate/low voltages inside racks. Volume follows Phase 1\u20132 800\u202fV adoption (sidecar then native racks) more than today\u2019s AC PSU mix \u2014 demand thicken ~2027+ if that path holds."
+          "demand_detail": "GaN is often preferred for high-frequency conversion from ~800 V DC down to intermediate/low voltages inside racks. Volume follows Phase 1–2 800 V adoption (sidecar then native racks) more than today’s AC PSU mix — demand thicken ~2027+ if that path holds."
         },
         {
           "name": "Electrification (SST systems)",
           "ticker": "",
-          "note": "Cross-link: site SST and campus power path \u2014 do not double-count here"
+          "note": "Cross-link: site SST and campus power path — do not double-count here"
         }
       ],
       "scarcity": "soon"
@@ -146,7 +205,7 @@
     {
       "id": "wafer",
       "title": "Starting wafers",
-      "summary": "Every chip starts as a polished wafer. Logic and most DRAM use silicon (often 300 mm). SiC and GaN use specialty substrates. Photonics may use indium phosphide or other compound wafers \u2014 materials houses feed the fab before lithography begins.",
+      "summary": "Every chip starts as a polished wafer. Logic and most DRAM use silicon (often 300 mm). SiC and GaN use specialty substrates. Photonics may use indium phosphide or other compound wafers — materials houses feed the fab before lithography begins.",
       "companies": [
         {
           "name": "Shin-Etsu Chemical",
@@ -157,7 +216,7 @@
         {
           "name": "SUMCO",
           "ticker": "3436.T",
-          "note": "300\u202fmm silicon wafers",
+          "note": "300 mm silicon wafers",
           "fidelity_symbol": "SUOPY"
         },
         {
@@ -167,9 +226,8 @@
         },
         {
           "name": "SK Siltron",
-          "ticker": "008500.KS",
-          "note": "SiC / GaN wafer angle",
-          "fidelity_symbol": "008500.KS"
+          "ticker": "",
+          "note": "Unlisted / private; Doosan bought ~70.6% from SK Inc. (closed 2026-07-31). Si and SiC wafers."
         },
         {
           "name": "Coherent (II-VI)",
@@ -182,7 +240,7 @@
         {
           "name": "Wolfspeed",
           "ticker": "WOLF",
-          "note": "SiC wafer capacity (200\u202fmm pivot)",
+          "note": "SiC wafer capacity (200 mm pivot)",
           "fidelity_symbol": "WOLF"
         }
       ]
@@ -190,7 +248,7 @@
     {
       "id": "litho",
       "title": "Lithography (pattern printing)",
-      "summary": "Lithography prints circuit patterns with light. Extreme ultraviolet (EUV) is required for the densest advanced-logic layers; deep ultraviolet (DUV) still does most other layers. Photomasks (reticles) carry the pattern. High-NA EUV is a later (~2028\u20132029) capability step if leading-edge AI silicon stays hot.",
+      "summary": "Lithography prints circuit patterns with light. Extreme ultraviolet (EUV) is required for the densest advanced-logic layers; deep ultraviolet (DUV) still does most other layers. Photomasks (reticles) carry the pattern. High-NA EUV is a later (~2028–2029) capability step if leading-edge AI silicon stays hot.",
       "companies": [
         {
           "name": "ASML",
@@ -239,9 +297,9 @@
         },
         {
           "name": "ASM International",
-          "ticker": "ASM",
-          "note": "ALD leadership",
-          "fidelity_symbol": "ASM"
+          "ticker": "ASM.AS",
+          "note": "ALD leadership (US ADR ASMIY)",
+          "fidelity_symbol": "ASMIY"
         },
         {
           "name": "SCREEN / Kokusai",
@@ -275,8 +333,9 @@
         },
         {
           "name": "SCREEN Holdings",
-          "ticker": "6305.T",
-          "note": "Wet clean and coat tools"
+          "ticker": "7735.T",
+          "note": "Wet clean and coat tools",
+          "fidelity_symbol": "DINRF"
         }
       ]
     },
@@ -313,7 +372,7 @@
     },
     {
       "id": "materials",
-      "title": "Consumables \u2014 resists, gases, UPW",
+      "title": "Consumables — resists, gases, UPW",
       "summary": "Photoresists, specialty chemicals, ultrapure gases, and ultrapure water are continuous inputs. They look less glamorous than scanners, but every advanced line depends on them.",
       "companies": [
         {
@@ -322,9 +381,20 @@
           "note": "EUV/DUV photoresists"
         },
         {
-          "name": "JSR / DuPont / Fujifilm",
+          "name": "JSR",
           "ticker": "",
           "note": "Photoresist and specialty chemistries"
+        },
+        {
+          "name": "Qnity Electronics",
+          "ticker": "Q",
+          "note": "Ex-DuPont electronics materials; spun off 2025-11-01",
+          "fidelity_symbol": "Q"
+        },
+        {
+          "name": "Fujifilm",
+          "ticker": "4901.T",
+          "note": "Specialty chemicals and photoresists"
         },
         {
           "name": "Linde / Air Liquide / Air Products",
@@ -341,7 +411,7 @@
     {
       "id": "packaging",
       "title": "Advanced packaging (CoWoS / OSAT / EMIB)",
-      "summary": "After the die is made, advanced packaging connects logic to HBM and other chiplets with short, dense wiring. TSMC\u2019s CoWoS-class flows, OSATs (Amkor, ASE), and Intel\u2019s EMIB-T are the main AI paths. Capacity has been tight into about 2027.",
+      "summary": "After the die is made, advanced packaging connects logic to HBM and other chiplets with short, dense wiring. TSMC’s CoWoS-class flows, OSATs (Amkor, ASE), and Intel’s EMIB-T are the main AI paths. Capacity has been tight into about 2027.",
       "companies": [
         {
           "name": "TSMC (CoWoS)",
@@ -366,6 +436,34 @@
           "ticker": "INTC",
           "note": "Chiplet interconnect bridge path",
           "fidelity_symbol": "INTC"
+        },
+        {
+          "name": "BE Semiconductor (Besi)",
+          "ticker": "BESI.AS",
+          "note": "Hybrid-bonding leader (HBM4E / SoIC)",
+          "fidelity_symbol": "BESIY"
+        },
+        {
+          "name": "DISCO",
+          "ticker": "6146.T",
+          "note": "Grinders / dicers for thinning and advanced packaging",
+          "fidelity_symbol": "DSCSY"
+        },
+        {
+          "name": "Ibiden",
+          "ticker": "4062.T",
+          "note": "Leading ABF package substrate maker for high-end GPU packages"
+        },
+        {
+          "name": "Unimicron",
+          "ticker": "3037.TW",
+          "note": "Largest ABF substrate maker"
+        },
+        {
+          "name": "Ajinomoto (ABF film)",
+          "ticker": "2802.T",
+          "note": "Near-monopoly ABF build-up film for high-end substrates",
+          "fidelity_symbol": "AJINY"
         }
       ],
       "scarcity": null
@@ -373,7 +471,7 @@
     {
       "id": "hbm-stack",
       "title": "HBM stacking & attach",
-      "summary": "HBM dies are stacked vertically (TSVs and micro-bumps) then attached next to the accelerator on an interposer or bridge. Yield and capacity here couple memory supply to packaging \u2014 physical tightness is not the same as a cheap stock.",
+      "summary": "HBM dies are stacked vertically (TSVs and micro-bumps) then attached next to the accelerator on an interposer or bridge. Yield and capacity here couple memory supply to packaging — physical tightness is not the same as a cheap stock.",
       "companies": [
         {
           "name": "SK Hynix",
@@ -395,13 +493,178 @@
           "name": "TSMC / ASE / Amkor",
           "ticker": "",
           "note": "Attach and package with logic"
+        },
+        {
+          "name": "DISCO",
+          "ticker": "6146.T",
+          "note": "Near-monopoly grinders/dicers for HBM thinning",
+          "fidelity_symbol": "DSCSY"
+        },
+        {
+          "name": "BE Semiconductor (Besi)",
+          "ticker": "BESI.AS",
+          "note": "Hybrid bonding for HBM / SoIC stacks",
+          "fidelity_symbol": "BESIY"
+        },
+        {
+          "name": "Hanmi Semiconductor",
+          "ticker": "042700.KS",
+          "note": "Leading HBM thermo-compression bonder supplier"
+        }
+      ]
+    },
+    {
+      "id": "hbm-wafer",
+      "title": "DRAM / HBM starting wafers",
+      "summary": "High-bandwidth memory starts as DRAM wafers made in memory fabs on polished silicon (often 300 mm). The wafer houses feed memory makers; the scarce step later is stacking and attaching HBM next to AI logic.",
+      "companies": [
+        {
+          "name": "Shin-Etsu Chemical",
+          "ticker": "4063.T",
+          "note": "Leading silicon wafers for memory fabs",
+          "fidelity_symbol": "SHECY"
+        },
+        {
+          "name": "SUMCO",
+          "ticker": "3436.T",
+          "note": "300 mm silicon wafers",
+          "fidelity_symbol": "SUOPY"
+        },
+        {
+          "name": "GlobalWafers",
+          "ticker": "",
+          "note": "Silicon wafers for memory and logic"
+        },
+        {
+          "name": "SK Hynix / Micron / Samsung",
+          "ticker": "",
+          "note": "Memory makers that consume wafers into HBM"
+        }
+      ]
+    },
+    {
+      "id": "hbm-packaging",
+      "title": "HBM attach to logic (CoWoS-class)",
+      "summary": "Stacked HBM is attached beside the accelerator on an interposer or bridge (CoWoS-class and peers). This attach step has been a physical choke into about 2027 — separate from the memory wafer itself.",
+      "companies": [
+        {
+          "name": "TSMC (CoWoS)",
+          "ticker": "TSM",
+          "note": "In-house AI packaging choke for HBM attach",
+          "fidelity_symbol": "TSM"
+        },
+        {
+          "name": "Amkor",
+          "ticker": "AMKR",
+          "note": "OSAT advanced packaging / HBM attach",
+          "fidelity_symbol": "AMKR"
+        },
+        {
+          "name": "ASE Technology",
+          "ticker": "ASX",
+          "note": "OSAT advanced packaging / assembly",
+          "fidelity_symbol": "ASX"
+        },
+        {
+          "name": "Intel (EMIB-T)",
+          "ticker": "INTC",
+          "note": "Chiplet interconnect bridge path",
+          "fidelity_symbol": "INTC"
+        },
+        {
+          "name": "BE Semiconductor (Besi)",
+          "ticker": "BESI.AS",
+          "note": "Hybrid-bonding tools for advanced stacks",
+          "fidelity_symbol": "BESIY"
+        },
+        {
+          "name": "DISCO",
+          "ticker": "6146.T",
+          "note": "Thinning / dicing ahead of attach",
+          "fidelity_symbol": "DSCSY"
+        }
+      ]
+    },
+    {
+      "id": "hbm-test",
+      "title": "Memory / HBM test",
+      "summary": "Automatic test and burn-in prove DRAM stacks and attached HBM before they ship into AI packages. Memory-oriented testers and probe cards dominate this step.",
+      "companies": [
+        {
+          "name": "Advantest",
+          "ticker": "6857.T",
+          "note": "Memory / AI-oriented automatic test equipment"
+        },
+        {
+          "name": "Teradyne",
+          "ticker": "TER",
+          "note": "Broad semiconductor ATE",
+          "fidelity_symbol": "TER"
+        },
+        {
+          "name": "Aehr Test Systems",
+          "ticker": "AEHR",
+          "note": "Wafer/package burn-in",
+          "fidelity_symbol": "AEHR"
+        },
+        {
+          "name": "FormFactor",
+          "ticker": "FORM",
+          "note": "Probe cards",
+          "fidelity_symbol": "FORM"
+        }
+      ]
+    },
+    {
+      "id": "hbm-materials",
+      "title": "HBM / DRAM consumables",
+      "summary": "Photoresists, chemical-mechanical planarization slurries, specialty gases, and related consumables feed DRAM and HBM process lines just as they feed logic — continuous inputs that track wafer starts.",
+      "companies": [
+        {
+          "name": "Tokyo Ohka Kogyo (TOK)",
+          "ticker": "4186.T",
+          "note": "Photoresists for memory lithography"
+        },
+        {
+          "name": "Qnity Electronics",
+          "ticker": "Q",
+          "note": "Specialty electronic materials (ex-DuPont)",
+          "fidelity_symbol": "Q"
+        },
+        {
+          "name": "Entegris",
+          "ticker": "ENTG",
+          "note": "CMP slurries and contamination control",
+          "fidelity_symbol": "ENTG"
+        },
+        {
+          "name": "Linde / Air Liquide / Air Products",
+          "ticker": "",
+          "note": "Ultra-high-purity gases"
+        }
+      ]
+    },
+    {
+      "id": "hbm-outbound",
+      "title": "To AI packages",
+      "summary": "Finished HBM stacks leave the memory/packaging flow into AI accelerator packages. System-level scarcity (how many GPUs can be built) is mapped under Computation Hardware.",
+      "companies": [
+        {
+          "name": "SK Hynix / Micron / Samsung",
+          "ticker": "",
+          "note": "HBM suppliers shipping into AI packages"
+        },
+        {
+          "name": "See Hardware scarcity map",
+          "ticker": "",
+          "note": "Rack-side memory and packaging bottlenecks"
         }
       ]
     },
     {
       "id": "photomask",
       "title": "Photomasks & optical materials",
-      "summary": "Photomasks (reticles) hold the pattern for each lithography layer. EUV masks are especially hard. Optical materials suppliers feed both mask shops and photonics component makers \u2014 see also Hardware / Photonics.",
+      "summary": "Photomasks (reticles) hold the pattern for each lithography layer. EUV masks are especially hard. Optical materials suppliers feed both mask shops and photonics component makers — see also Hardware / Photonics.",
       "companies": [
         {
           "name": "Photronics",
@@ -428,36 +691,219 @@
     },
     {
       "id": "siph",
-      "title": "Silicon photonics / III\u2013V process bays",
-      "summary": "Silicon photonics integrates optical functions on silicon; many lasers and detectors still need compound-semiconductor (III\u2013V) epitaxy and specialty process tools. Finished optical engines and DSPs are mapped under Hardware / Photonics.",
+      "title": "Silicon photonics / III–V process bays",
+      "summary": "Silicon photonics integrates optical functions on silicon; many lasers and detectors still need compound-semiconductor (III–V) epitaxy and specialty process tools. Foundries run silicon-photonics flows; III–V specialists grow indium phosphide and related epi.",
       "companies": [
         {
-          "name": "Hardware / Photonics section",
-          "ticker": "",
-          "note": "Optical engines, fiber, DSPs \u2014 company deep-dive there"
+          "name": "TSMC",
+          "ticker": "TSM",
+          "note": "Advanced silicon photonics foundry capacity",
+          "fidelity_symbol": "TSM"
         },
         {
-          "name": "Specialty epi / materials houses",
+          "name": "GlobalFoundries",
+          "ticker": "GFS",
+          "note": "Silicon photonics process platforms",
+          "fidelity_symbol": "GFS"
+        },
+        {
+          "name": "Tower Semiconductor",
+          "ticker": "TSEM",
+          "note": "Specialty analog / photonics foundry",
+          "fidelity_symbol": "TSEM"
+        },
+        {
+          "name": "Intel Foundry",
+          "ticker": "INTC",
+          "note": "Silicon photonics process and packaging path",
+          "fidelity_symbol": "INTC"
+        },
+        {
+          "name": "STMicroelectronics",
+          "ticker": "STM",
+          "note": "Silicon photonics device flows",
+          "fidelity_symbol": "STM"
+        },
+        {
+          "name": "WIN Semiconductors",
+          "ticker": "3105.TWO",
+          "note": "Compound-semiconductor foundry (GaAs / related)"
+        },
+        {
+          "name": "LandMark Optoelectronics",
+          "ticker": "3081.TWO",
+          "note": "Epitaxial wafers for optoelectronics"
+        },
+        {
+          "name": "Visual Photonics Epitaxy (VPEC)",
+          "ticker": "2455.TW",
+          "note": "III–V epi wafers for lasers and detectors"
+        },
+        {
+          "name": "IQE",
+          "ticker": "IQE.L",
+          "note": "Compound-semiconductor epitaxy wafers"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "III–V materials and laser components",
+          "fidelity_symbol": "COHR"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Optical engines using III–V lasers",
+          "fidelity_symbol": "LITE"
+        },
+        {
+          "name": "Sivers Semiconductors",
+          "ticker": "SIVE",
+          "note": "InP laser-array maker"
+        }
+      ]
+    },
+    {
+      "id": "photonics-wafer",
+      "title": "Silicon / indium phosphide / SOI wafers (photonics)",
+      "summary": "Photonics starts on silicon, silicon-on-insulator (SOI), or compound wafers such as indium phosphide (InP). Substrate quality gates laser and modulator yields before any foundry patterning begins.",
+      "companies": [
+        {
+          "name": "AXT",
+          "ticker": "AXTI",
+          "note": "Indium phosphide and compound substrates",
+          "fidelity_symbol": "AXTI"
+        },
+        {
+          "name": "Sumitomo Electric",
+          "ticker": "5802.T",
+          "note": "Compound-semiconductor wafers / materials",
+          "fidelity_symbol": "SMTOY"
+        },
+        {
+          "name": "JX Advanced Metals",
+          "ticker": "5016.T",
+          "note": "Compound materials / InP-related supply"
+        },
+        {
+          "name": "Soitec",
+          "ticker": "SOI.PA",
+          "note": "Silicon-on-insulator (SOI) wafers for photonics and RF",
+          "fidelity_symbol": "SLOIF"
+        },
+        {
+          "name": "Shin-Etsu / SUMCO",
           "ticker": "",
-          "note": "InP and related wafers (e.g. AXT class) \u2014 see Photonics"
+          "note": "Silicon wafers when the flow is silicon photonics"
+        }
+      ]
+    },
+    {
+      "id": "photonics-packaging",
+      "title": "Optical assembly & packaging",
+      "summary": "Lasers, modulators, and detectors are assembled into optical engines and modules — fiber attach, alignment, and hermetic packaging differ from logic CoWoS. Finished optical interconnect products are also mapped under Hardware / Photonics.",
+      "companies": [
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "Optical engines and laser packaging",
+          "fidelity_symbol": "COHR"
+        },
+        {
+          "name": "Lumentum",
+          "ticker": "LITE",
+          "note": "Optical module / engine assembly",
+          "fidelity_symbol": "LITE"
+        },
+        {
+          "name": "Sivers Semiconductors",
+          "ticker": "SIVE",
+          "note": "InP laser-array packaging path"
+        },
+        {
+          "name": "Amkor / ASE",
+          "ticker": "",
+          "note": "OSAT capacity that can handle optical / advanced modules"
+        },
+        {
+          "name": "See Hardware / Photonics",
+          "ticker": "",
+          "note": "Full optical-interconnect company map"
+        }
+      ]
+    },
+    {
+      "id": "photonics-test",
+      "title": "Optical / link test",
+      "summary": "Opto test checks laser power, wavelength, modulation, and link bit-error rates. It is a different floor from logic automatic test equipment, though some ATE vendors overlap.",
+      "companies": [
+        {
+          "name": "Advantest / Teradyne",
+          "ticker": "",
+          "note": "ATE platforms adapted to high-speed / optical paths"
+        },
+        {
+          "name": "Coherent / Lumentum (in-house)",
+          "ticker": "",
+          "note": "Module makers run extensive optical test"
+        },
+        {
+          "name": "See Hardware / Photonics",
+          "ticker": "",
+          "note": "Optical interconnect test context"
+        }
+      ]
+    },
+    {
+      "id": "photonics-materials",
+      "title": "Optical materials & specialty inputs",
+      "summary": "Fiber, specialty glasses, mask blanks, and compound-semiconductor precursors feed photonics lines. Photomask houses (Photronics, DNP, Hoya) also appear on the masks cell.",
+      "companies": [
+        {
+          "name": "Hoya",
+          "ticker": "7741.T",
+          "note": "Optical materials and mask blanks"
+        },
+        {
+          "name": "Corning",
+          "ticker": "GLW",
+          "note": "Optical fiber and specialty glass",
+          "fidelity_symbol": "GLW"
+        },
+        {
+          "name": "Photronics",
+          "ticker": "PLAB",
+          "note": "Photomasks for patterning",
+          "fidelity_symbol": "PLAB"
+        },
+        {
+          "name": "AXT / Sumitomo Electric",
+          "ticker": "",
+          "note": "Compound substrate / materials supply"
         }
       ]
     },
     {
       "id": "sic-epi",
       "title": "SiC / GaN epi & device process",
-      "summary": "Wide-bandgap power devices grow epitaxial layers on SiC or GaN wafers, then pattern power transistors and diodes. High-end / high-voltage SiC MOSFET capacity (especially automotive- and industrial-qualified) has stayed structurally tight even as lower-end 150\u202fmm substrate chatter turns to oversupply risk. AI datacenter and SST designs need 1,200\u202fV-class SiC for rectification/protection and higher-voltage SiC for MV SST stages \u2014 reallocating capacity from EV contracts. Larger wafers (200\u202fmm) and yields are the industrial story through 2026\u20132028.",
+      "summary": "Wide-bandgap power devices grow epitaxial layers on SiC or GaN wafers, then pattern power transistors and diodes. High-end / high-voltage SiC MOSFET capacity (especially automotive- and industrial-qualified) has stayed structurally tight even as lower-end 150 mm substrate chatter turns to oversupply risk. AI datacenter and SST designs need 1,200 V-class SiC for rectification/protection and higher-voltage SiC for MV SST stages — reallocating capacity from EV contracts. Larger wafers (200 mm) and yields are the industrial story through 2026–2028.",
       "companies": [
+        {
+          "name": "Aixtron",
+          "ticker": "AIXA.DE",
+          "note": "SiC / GaN epitaxy reactors that gate device ramps",
+          "fidelity_symbol": "AIXXF"
+        },
         {
           "name": "STMicroelectronics",
           "ticker": "STM",
-          "note": "SiC devices; Catania 200\u202fmm SiC ramp path",
+          "note": "SiC devices; Catania 200 mm SiC ramp path",
           "fidelity_symbol": "STM"
         },
         {
           "name": "Wolfspeed",
           "ticker": "WOLF",
-          "note": "SiC substrates + devices; Mohawk Valley 200\u202fmm focus",
+          "note": "SiC substrates + devices; Mohawk Valley 200 mm focus",
           "fidelity_symbol": "WOLF"
         },
         {
@@ -479,7 +925,7 @@
           "note": "SiC MOSFET generations",
           "fidelity_symbol": "ROHCY",
           "not_priced_in": true,
-          "demand_detail": "Device process capacity for SiC MOSFETs used in 800\u202fV rectification and SST front-ends is the scarce industrial ingredient. ROHM is a real SiC supplier with lighter US AI-story coverage than ON/Infineon."
+          "demand_detail": "Device process capacity for SiC MOSFETs used in 800 V rectification and SST front-ends is the scarce industrial ingredient. ROHM is a real SiC supplier with lighter US AI-story coverage than ON/Infineon."
         },
         {
           "name": "Coherent",
@@ -487,15 +933,177 @@
           "note": "SiC substrates / epitaxy materials",
           "fidelity_symbol": "COHR",
           "not_priced_in": true,
-          "demand_detail": "Substrate and epi quality gate every SiC device fab. If SST and 800\u202fV stages pull more high-voltage SiC through 2027\u20132029, materials houses can see demand before device ASP narratives fully re-rate \u2014 orientation only."
+          "demand_detail": "Substrate and epi quality gate every SiC device fab. If SST and 800 V stages pull more high-voltage SiC through 2027–2029, materials houses can see demand before device ASP narratives fully re-rate — orientation only."
         }
       ],
       "scarcity": "now"
     },
     {
+      "id": "sic-wafer",
+      "title": "SiC / GaN wafers & substrates",
+      "summary": "Wide-bandgap power devices start on silicon carbide (SiC) or gallium nitride (GaN) substrates — not ordinary silicon. Substrate diameter (150 mm → 200 mm) and quality gate every device ramp used in AI direct-current conversion and solid-state transformer paths.",
+      "companies": [
+        {
+          "name": "Wolfspeed",
+          "ticker": "WOLF",
+          "note": "SiC wafers and devices — 200 mm pivot",
+          "fidelity_symbol": "WOLF"
+        },
+        {
+          "name": "SK Siltron",
+          "ticker": "",
+          "note": "Unlisted / private SiC (and Si) wafers; Doosan bought ~70.6% (closed 2026-07-31)"
+        },
+        {
+          "name": "Coherent (II-VI)",
+          "ticker": "COHR",
+          "note": "SiC substrates / epitaxy materials",
+          "fidelity_symbol": "COHR"
+        },
+        {
+          "name": "DISCO",
+          "ticker": "6146.T",
+          "note": "Near-monopoly grinders/dicers for SiC wafering",
+          "fidelity_symbol": "DSCSY"
+        },
+        {
+          "name": "STMicroelectronics / onsemi / Infineon",
+          "ticker": "",
+          "note": "Device makers that also secure substrate supply"
+        }
+      ]
+    },
+    {
+      "id": "power-wfe",
+      "title": "Power wafer fabrication equipment (SiC / GaN)",
+      "summary": "Power device lines need epitaxy reactors and process tools tuned for silicon carbide and gallium nitride — not the same shopping list as leading-edge logic etch/deposition for AI GPUs. Epitaxy tool lead times can gate SiC/GaN device ramps.",
+      "companies": [
+        {
+          "name": "Aixtron",
+          "ticker": "AIXA.DE",
+          "note": "SiC / GaN epitaxy reactors (G10-class and peers)",
+          "fidelity_symbol": "AIXXF"
+        },
+        {
+          "name": "Applied Materials",
+          "ticker": "AMAT",
+          "note": "Deposition / process tools used on power lines",
+          "fidelity_symbol": "AMAT"
+        },
+        {
+          "name": "Lam Research",
+          "ticker": "LRCX",
+          "note": "Etch tools used across power device flows",
+          "fidelity_symbol": "LRCX"
+        },
+        {
+          "name": "Tokyo Electron",
+          "ticker": "8035.T",
+          "note": "Coat/develop, etch, deposition"
+        },
+        {
+          "name": "Veeco",
+          "ticker": "VECO",
+          "note": "Epitaxy / process equipment",
+          "fidelity_symbol": "VECO"
+        }
+      ]
+    },
+    {
+      "id": "power-packaging",
+      "title": "Power modules & discrete packaging",
+      "summary": "SiC and GaN dies are packaged as discretes or power modules that sit in rack power stages and solid-state transformer conversion. Thermal design and module assembly matter as much as the bare die.",
+      "companies": [
+        {
+          "name": "STMicroelectronics",
+          "ticker": "STM",
+          "note": "SiC devices and modules",
+          "fidelity_symbol": "STM"
+        },
+        {
+          "name": "onsemi",
+          "ticker": "ON",
+          "note": "SiC / power modules for conversion",
+          "fidelity_symbol": "ON"
+        },
+        {
+          "name": "Infineon",
+          "ticker": "IFX.DE",
+          "note": "Power modules spanning SiC/GaN and silicon",
+          "fidelity_symbol": "IFNNY"
+        },
+        {
+          "name": "Wolfspeed",
+          "ticker": "WOLF",
+          "note": "SiC devices into module customers",
+          "fidelity_symbol": "WOLF"
+        },
+        {
+          "name": "See Electrification",
+          "ticker": "",
+          "note": "SST and rack power architecture — systems side"
+        }
+      ]
+    },
+    {
+      "id": "power-test",
+      "title": "Power device test & burn-in",
+      "summary": "Wide-bandgap power parts need thorough wafer and package burn-in and test before they sit in high-voltage AI power paths. Burn-in capacity can tighten as SiC/GaN volumes rise with 800 V direct-current and solid-state transformer ramps.",
+      "companies": [
+        {
+          "name": "Aehr Test Systems",
+          "ticker": "AEHR",
+          "note": "Wafer/package burn-in — SiC and power demand",
+          "fidelity_symbol": "AEHR",
+          "rating_mark": "strong"
+        },
+        {
+          "name": "Advantest",
+          "ticker": "6857.T",
+          "note": "Automatic test equipment"
+        },
+        {
+          "name": "Teradyne",
+          "ticker": "TER",
+          "note": "Broad semiconductor ATE",
+          "fidelity_symbol": "TER"
+        },
+        {
+          "name": "Cohu",
+          "ticker": "COHU",
+          "note": "Handlers",
+          "fidelity_symbol": "COHU"
+        }
+      ],
+      "scarcity": "soon"
+    },
+    {
+      "id": "power-materials",
+      "title": "Power specialty gases & precursors",
+      "summary": "Epitaxy precursors and specialty gases feed SiC/GaN growth. Materials quality shows up in device yield long before a finished module ships.",
+      "companies": [
+        {
+          "name": "Linde / Air Liquide / Air Products",
+          "ticker": "",
+          "note": "Ultra-high-purity gases and precursors"
+        },
+        {
+          "name": "Coherent",
+          "ticker": "COHR",
+          "note": "SiC materials / epi-related supply",
+          "fidelity_symbol": "COHR"
+        },
+        {
+          "name": "Aixtron customers' chemistries",
+          "ticker": "",
+          "note": "Reactor + precursor pairs gate epi quality"
+        }
+      ]
+    },
+    {
       "id": "test",
       "title": "Wafer & package test",
-      "summary": "Automatic test equipment proves chips work before they ship. AI parts are large and expensive \u2014 bad units hurt more. Probe cards, handlers, and burn-in systems sit at the end of the line.",
+      "summary": "Automatic test equipment proves chips work before they ship. AI parts are large and expensive — bad units hurt more. Probe cards, handlers, and burn-in systems sit at the end of the line.",
       "companies": [
         {
           "name": "Advantest",
@@ -518,7 +1126,7 @@
         {
           "name": "Aehr Test Systems",
           "ticker": "AEHR",
-          "note": "Wafer/package burn-in \u2014 SiC and AI ASIC burn-in demand",
+          "note": "Wafer/package burn-in — SiC and AI ASIC burn-in demand",
           "rating_mark": "strong",
           "fidelity_symbol": "AEHR"
         },
@@ -527,22 +1135,26 @@
           "ticker": "COHU",
           "note": "Handlers",
           "fidelity_symbol": "COHU"
+        },
+        {
+          "name": "Technoprobe",
+          "ticker": "TPRO.MI",
+          "note": "Top-2 probe-card maker for AI / high-performance logic"
         }
-      ],
-      "scarcity": "soon"
+      ]
     }
   ],
   "investor_lens_power_fab": {
     "as_of": "2026-10",
     "scope": "SiC/GaN device manufacturing for AI DC and SST-adjacent power only; SST systems owned by Electrification",
-    "ac_to_dc_read": "Rack-level 800V DC sidecars ~late 2026/early 2027; native 800V racks + SST pilots ~2027; facility HVDC / scaled SST more 2028\u20132029. Not a single-year cliff.",
+    "ac_to_dc_read": "Rack-level 800V DC sidecars ~late 2026/early 2027; native 800V racks + SST pilots ~2027; facility HVDC / scaled SST more 2028–2029. Not a single-year cliff.",
     "marks": {
-      "scarcity_now": "red thick frame \u2014 extreme demand / tight capacity now",
-      "scarcity_soon": "yellow thick frame \u2014 expected bottleneck as 800V/SST ramps",
-      "rating_strong": "dark green ticker \u2014 seed BUY with clear AI/SiC thesis (orientation)",
-      "not_priced_in": "rainbow ticker \u2014 future demand story may be under-reflected; click for timing/why",
+      "scarcity_now": "red thick frame — extreme demand / tight capacity now",
+      "scarcity_soon": "yellow thick frame — expected bottleneck as 800V/SST ramps",
+      "rating_strong": "dark green ticker — seed BUY with clear AI/SiC thesis (orientation)",
+      "not_priced_in": "rainbow ticker — future demand story may be under-reflected; click for timing/why",
       "fidelity": "tickers link to Fidelity quote dashboard"
     },
-    "disclaimer": "Educational marks for Arman\u2019s hub. Not investment advice."
+    "disclaimer": "Educational marks for Arman’s hub. Not investment advice."
   }
 }

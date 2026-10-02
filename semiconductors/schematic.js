@@ -156,7 +156,7 @@
           fig.classList.add("stage-panel-open");
         }
         titleEl.textContent = "Loading stage details…";
-        summaryEl.textContent = "Fetching stages.json?v=investor-1…";
+        summaryEl.textContent = "Fetching stages.json?v=investor-2…";
         renderCompanies([]);
         panel.hidden = false;
         setActiveHotspot(id, fig);
@@ -174,7 +174,7 @@
         fig.classList.add("stage-panel-open");
       }
       titleEl.textContent = "Unknown stage";
-      summaryEl.textContent = "No entry for \"" + id + "\" in stages.json?v=investor-1.";
+      summaryEl.textContent = "No entry for \"" + id + "\" in stages.json?v=investor-2.";
       renderCompanies([]);
       panel.hidden = false;
       setActiveHotspot(id, fig);
@@ -247,19 +247,19 @@
   function stagesJsonUrl() {
     var script = document.querySelector('script[src$="schematic.js"], script[src*="schematic.js"]');
     if (script && script.src) {
-      try { return new URL("stages.json?v=investor-1", script.src).href; } catch (e) {}
+      try { return new URL("stages.json?v=investor-2", script.src).href; } catch (e) {}
     }
     try {
-      return new URL("stages.json?v=investor-1", window.location.href).href;
+      return new URL("stages.json?v=investor-2", window.location.href).href;
     } catch (e) {
-      return "stages.json?v=investor-1";
+      return "stages.json?v=investor-2";
     }
   }
 
   var jsonUrl = stagesJsonUrl();
   fetch(jsonUrl, { credentials: "same-origin", cache: "no-cache" })
     .then(function (r) {
-      if (!r.ok) throw new Error("stages.json?v=investor-1 HTTP " + r.status + " from " + jsonUrl);
+      if (!r.ok) throw new Error("stages.json?v=investor-2 HTTP " + r.status + " from " + jsonUrl);
       return r.json();
     })
     .then(function (data) {
@@ -267,7 +267,7 @@
       list.forEach(function (s) {
         if (s && s.id) stagesById[s.id] = s;
       });
-      // Apply scarcity frame classes from stages.json?v=investor-1 onto matching hotspots
+      // Apply scarcity frame classes from stages.json?v=investor-2 onto matching hotspots
       list.forEach(function (s) {
         if (!s || !s.id || !s.scarcity) return;
         var cls = s.scarcity === "now" ? "scarcity-now" : (s.scarcity === "soon" ? "scarcity-soon" : "");
@@ -287,9 +287,9 @@
       }
     })
     .catch(function (err) {
-      console.warn("Stage panel: failed to load stages.json?v=investor-1", err);
+      console.warn("Stage panel: failed to load stages.json?v=investor-2", err);
       titleEl.textContent = "Stage details unavailable";
-      summaryEl.textContent = "Could not load stages.json?v=investor-1 (" + jsonUrl + ").";
+      summaryEl.textContent = "Could not load stages.json?v=investor-2 (" + jsonUrl + ").";
       renderCompanies([]);
       dataReady = false;
     });
