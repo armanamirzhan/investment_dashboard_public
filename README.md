@@ -19,6 +19,7 @@ A clean, public-facing static site for thematic investment sections:
 | `software/` | AI software landscape |
 | `semiconductors/` | Semiconductor fabrication chain |
 | `hyperscalers/` | Hyperscaler / GPU-cloud / colo buildout |
+| `claude-summary/` | Claude Investment Summary: power and interconnect analysis with picks, consensus and targets; site coverage audit (notes for bots in `claude-summary/NOTES_FOR_GROK.md`) |
 | `digests/` | Morning briefs and digests index |
 | `smr/`, `uranium/`, `photonics/` | Redirect stubs (legacy bookmarks) |
 | `assets/` | Shared CSS / JS |

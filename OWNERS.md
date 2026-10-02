@@ -19,6 +19,7 @@ Bot / human ownership rules for `investment_dashboard_public`. Do not commit int
 | `hyperscalers/` | **Hyperscalers** | Cloud operators, GPU clouds, colo REITs |
 | `analysis/` | **Investment analysis** | Portfolio briefings (electrification focus, gold/rainbow wiring notes) |
 | `analysis/companies/` | **Performance tracker** | One-screen company scorecards |
+| `claude-summary/` | **Claude (Anthropic)** | Claude Investment Summary: power and interconnect investment pages, research reports, coverage-audit data (`data/coverage-gaps.json`). Read and link freely; do not edit picks, ratings or targets (dated judgments). See `claude-summary/NOTES_FOR_GROK.md`. |
 | `digests/` | **AI Infra Daily Digest** | Digest index + dated brief HTML |
 
 ## Rules
@@ -28,6 +29,7 @@ Bot / human ownership rules for `investment_dashboard_public`. Do not commit int
 3. Do **not** push to `armanamirzhan/Investment_Dashboard` from this workflow — that repo is private-source / read-only for extracts.
 4. Digests follow the private dashboard pattern: dated pages + index listing (see private `morning-news/YYYY-MM-DD.html` and `reports/TICKER_Name.html` for style reference only).
 5. Root `smr/`, `uranium/`, and `photonics/` redirect stubs are website-builder owned; do not put new section content there.
+6. The primary nav now has a **Claude Summary** tab (between Analysis and Digests) on every page with a nav; copy the current nav block when you add pages. On phones the nav stays on one row and its links scroll sideways (`assets/site.css`, max-width 640px rule), so it no longer wraps under the mark legend.
 
 ## Pages URL
 

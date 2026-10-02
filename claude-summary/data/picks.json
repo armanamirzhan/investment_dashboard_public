@@ -1,0 +1,1926 @@
+{
+ "as_of": "2 October 2026",
+ "method": "Claude target = multiple x next-fiscal-year consensus EPS (Yahoo Finance consensus feed, LSEG/S&P Global data); prices = latest full-session close available on the morning of the as-of date, New York time (1 Oct 2026 for US and European listings, 2 Oct 2026 for Tokyo, Seoul, Taipei and Hong Kong, 30 Sep 2026 for mainland China).",
+ "pages": {
+  "power": [
+   {
+    "id": "hd-hyundai-electric",
+    "group": "top",
+    "name": "HD Hyundai Electric",
+    "theme": "Extra-high-voltage transformers, built in the US",
+    "tickers": [
+     "267260.KS"
+    ],
+    "mark": "npi",
+    "claude_rating": "Buy",
+    "claude_target": 850000,
+    "claude_fair_value_range": [
+     760000,
+     940000
+    ],
+    "claude_basis": "25x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "KRW",
+    "close": 678000.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 19.9,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -52.25352112676056,
+    "ytd_pct": -12.4,
+    "market_cap_usd_bn": 18.1,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.59091,
+     "analysts": 22,
+     "target_mean": 1171760.4,
+     "target_high": 1600000.0,
+     "target_low": 588727.0
+    },
+    "next_earnings": "2026-10-22"
+   },
+   {
+    "id": "infineon",
+    "group": "top",
+    "name": "Infineon Technologies",
+    "theme": "Power semiconductors for every stage of an 800 V hall",
+    "tickers": [
+     "IFX.DE",
+     "IFNNY"
+    ],
+    "mark": "npi",
+    "claude_rating": "Buy",
+    "claude_target": 74,
+    "claude_fair_value_range": [
+     67,
+     81
+    ],
+    "claude_basis": "26x FY9/27E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "EUR",
+    "close": 59.42,
+    "close_date": "2026-10-01",
+    "forward_pe": 20.8,
+    "fiscal_year": "FY9/27E",
+    "from_52w_high_pct": -32.47727272727272,
+    "ytd_pct": 57.5,
+    "market_cap_usd_bn": 87.1,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.54167,
+     "analysts": 23,
+     "target_mean": 86.73913,
+     "target_high": 124.0,
+     "target_low": 50.0
+    },
+    "next_earnings": "2026-11-10"
+   },
+   {
+    "id": "siemens-energy",
+    "group": "top",
+    "name": "Siemens Energy",
+    "theme": "High-voltage grid oligopoly (plus gas turbines)",
+    "tickers": [
+     "ENR.DE",
+     "SMEGF"
+    ],
+    "mark": "strong",
+    "claude_rating": "Buy",
+    "claude_target": 174,
+    "claude_fair_value_range": [
+     157,
+     191
+    ],
+    "claude_basis": "28x FY9/27E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "EUR",
+    "close": 142.52,
+    "close_date": "2026-10-01",
+    "forward_pe": 22.9,
+    "fiscal_year": "FY9/27E",
+    "from_52w_high_pct": -24.03794904594393,
+    "ytd_pct": 18.4,
+    "market_cap_usd_bn": 136.8,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.80769,
+     "analysts": 26,
+     "target_mean": 197.41962,
+     "target_high": 260.0,
+     "target_low": 100.0
+    },
+    "next_earnings": "2026-11-11"
+   },
+   {
+    "id": "delta-electronics",
+    "group": "top",
+    "name": "Delta Electronics",
+    "theme": "Rack power, 800 V systems, battery backup, solid-state transformers",
+    "tickers": [
+     "2308.TW"
+    ],
+    "mark": "strong",
+    "claude_rating": "Buy",
+    "claude_target": 2250,
+    "claude_fair_value_range": [
+     2020,
+     2480
+    ],
+    "claude_basis": "35x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "TWD",
+    "close": 1885.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 29.4,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -25.198412698412696,
+    "ytd_pct": 95.7,
+    "market_cap_usd_bn": 154.0,
+    "consensus": {
+     "rating": "strong_buy",
+     "mean_score": 1.36364,
+     "analysts": 22,
+     "target_mean": 2482.818,
+     "target_high": 4120.0,
+     "target_low": 1330.0
+    },
+    "next_earnings": "2026-10-28"
+   },
+   {
+    "id": "lite-on",
+    "group": "top",
+    "name": "Lite-On Technology",
+    "theme": "Number two in AI rack power and GPU power smoothing",
+    "tickers": [
+     "2301.TW"
+    ],
+    "mark": "npi",
+    "claude_rating": "Buy",
+    "claude_target": 335,
+    "claude_fair_value_range": [
+     300,
+     370
+    ],
+    "claude_basis": "23x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "TWD",
+    "close": 281.5,
+    "close_date": "2026-10-02",
+    "forward_pe": 19.2,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -11.338582677165354,
+    "ytd_pct": 72.2,
+    "market_cap_usd_bn": 20.1,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.66667,
+     "analysts": 12,
+     "target_mean": 302.66666,
+     "target_high": 400.0,
+     "target_low": 176.0
+    },
+    "next_earnings": "2026-10-28"
+   },
+   {
+    "id": "hyosung-heavy",
+    "group": "top",
+    "name": "Hyosung Heavy Industries",
+    "theme": "765 kV transformers and high-voltage breakers",
+    "tickers": [
+     "298040.KS"
+    ],
+    "mark": "npi",
+    "claude_rating": "Accumulate",
+    "claude_target": 3330000,
+    "claude_fair_value_range": [
+     3000000,
+     3660000
+    ],
+    "claude_basis": "27x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "KRW",
+    "close": 2785000.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 22.6,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -39.46968050423821,
+    "ytd_pct": 56.4,
+    "market_cap_usd_bn": 19.3,
+    "consensus": {
+     "rating": "none",
+     "mean_score": null,
+     "analysts": 19,
+     "target_mean": 4233477.0,
+     "target_high": 5100000.0,
+     "target_low": 3400000.0
+    },
+    "next_earnings": null
+   },
+   {
+    "id": "powell",
+    "group": "top",
+    "name": "Powell Industries",
+    "theme": "Engineered medium-voltage switchgear and power rooms",
+    "tickers": [
+     "POWL"
+    ],
+    "mark": "npi",
+    "claude_rating": "Accumulate",
+    "claude_target": 230,
+    "claude_fair_value_range": [
+     205,
+     255
+    ],
+    "claude_basis": "34x FY9/27E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 190.6,
+    "close_date": "2026-10-01",
+    "forward_pe": 28.0,
+    "fiscal_year": "FY9/27E",
+    "from_52w_high_pct": -40.8166433783574,
+    "ytd_pct": 79.4,
+    "market_cap_usd_bn": 6.9,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 2.25,
+     "analysts": 4,
+     "target_mean": 280.0,
+     "target_high": 333.0,
+     "target_low": 235.0
+    },
+    "next_earnings": "2026-11-17"
+   },
+   {
+    "id": "onsemi",
+    "group": "also",
+    "name": "onsemi",
+    "theme": "Silicon carbide and power devices with operating leverage",
+    "tickers": [
+     "ON"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 95,
+    "claude_fair_value_range": [
+     86,
+     105
+    ],
+    "claude_basis": "21x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 80.08,
+    "close_date": "2026-10-01",
+    "forward_pe": 17.7,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -40.2075711192414,
+    "ytd_pct": 47.9,
+    "market_cap_usd_bn": 31.2,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 2.13333,
+     "analysts": 26,
+     "target_mean": 103.69231,
+     "target_high": 150.0,
+     "target_low": 75.0
+    },
+    "next_earnings": "2026-11-02"
+   },
+   {
+    "id": "innio",
+    "group": "also",
+    "name": "INNIO",
+    "theme": "Gas engines for onsite prime power",
+    "tickers": [
+     "INIO"
+    ],
+    "mark": "npi",
+    "claude_rating": "Speculative buy",
+    "claude_target": 24.0,
+    "claude_fair_value_range": [
+     21.5,
+     26.5
+    ],
+    "claude_basis": "30x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 18.28,
+    "close_date": "2026-10-01",
+    "forward_pe": 23.0,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -55.55555555555556,
+    "ytd_pct": null,
+    "market_cap_usd_bn": 13.7,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.8,
+     "analysts": 10,
+     "target_mean": 37.5,
+     "target_high": 47.0,
+     "target_low": 27.0
+    },
+    "next_earnings": "2026-10-27"
+   },
+   {
+    "id": "flex",
+    "group": "also",
+    "name": "Flex",
+    "theme": "Rack power systems, with a spin-off catalyst",
+    "tickers": [
+     "FLEX"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 134,
+    "claude_fair_value_range": [
+     121,
+     147
+    ],
+    "claude_basis": "19x FY3/28E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 112.78,
+    "close_date": "2026-10-01",
+    "forward_pe": 16.0,
+    "fiscal_year": "FY3/28E",
+    "from_52w_high_pct": -30.41278459924723,
+    "ytd_pct": 86.7,
+    "market_cap_usd_bn": 41.7,
+    "consensus": {
+     "rating": "strong_buy",
+     "mean_score": 1.27273,
+     "analysts": 10,
+     "target_mean": 160.5,
+     "target_high": 180.0,
+     "target_low": 142.0
+    },
+    "next_earnings": "2026-10-28"
+   },
+   {
+    "id": "ls-corp",
+    "group": "also",
+    "name": "LS Corp",
+    "theme": "Korean holding company: HVDC cable, magnet wire, LS Electric",
+    "tickers": [
+     "006260.KS"
+    ],
+    "mark": "npi",
+    "claude_rating": "Speculative buy",
+    "claude_target": 365000,
+    "claude_fair_value_range": [
+     330000,
+     400000
+    ],
+    "claude_basis": "15x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "KRW",
+    "close": 298500.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 12.3,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -46.02169981916817,
+    "ytd_pct": 49.3,
+    "market_cap_usd_bn": 6.1,
+    "consensus": {
+     "rating": "strong_buy",
+     "mean_score": 1.5,
+     "analysts": 8,
+     "target_mean": 547750.0,
+     "target_high": 630000.0,
+     "target_low": 400000.0
+    },
+    "next_earnings": null
+   },
+   {
+    "id": "vicor",
+    "group": "also",
+    "name": "Vicor",
+    "theme": "Vertical power delivery patents: real physics, binary outcome",
+    "tickers": [
+     "VICR"
+    ],
+    "mark": null,
+    "claude_rating": "Hold",
+    "claude_target": 305,
+    "claude_fair_value_range": [
+     275,
+     335
+    ],
+    "claude_basis": "50x 2027E consensus EPS",
+    "claude_buy_below": 240,
+    "claude_buy_below_multiple": 40,
+    "currency": "USD",
+    "close": 308.59,
+    "close_date": "2026-10-01",
+    "forward_pe": 50.9,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -18.745062931170676,
+    "ytd_pct": 181.6,
+    "market_cap_usd_bn": 14.2,
+    "consensus": {
+     "rating": "strong_buy",
+     "mean_score": 1.5,
+     "analysts": 4,
+     "target_mean": 393.75,
+     "target_high": 450.0,
+     "target_low": 350.0
+    },
+    "next_earnings": "2026-10-20"
+   },
+   {
+    "id": "eaton",
+    "group": "priced",
+    "name": "Eaton",
+    "tickers": [
+     "ETN"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 25,
+    "claude_buy_below": 400,
+    "currency": "USD",
+    "close": 437.28,
+    "close_date": "2026-10-01",
+    "forward_pe": 27.0,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -4.930863553352472,
+    "ytd_pct": 37.3,
+    "market_cap_usd_bn": 169.8,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 26,
+     "target_mean": 481.04886,
+     "target_high": 534.0,
+     "target_low": 333.0
+    },
+    "why": "The best-placed US incumbent: an IEC-certified medium-voltage solid-state transformer, Bussmann DC fuses and Boyd liquid cooling. Americas electrical orders were +41% [P1-89]."
+   },
+   {
+    "id": "abb",
+    "group": "priced",
+    "name": "ABB",
+    "tickers": [
+     "ABBN.SW",
+     "ABBNY"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 23,
+    "claude_buy_below": 68,
+    "currency": "CHF",
+    "close": 79.62,
+    "close_date": "2026-10-01",
+    "forward_pe": 26.9,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -10.094850948509482,
+    "ytd_pct": 34.4,
+    "market_cap_usd_bn": 173.9,
+    "consensus": {
+     "rating": "hold",
+     "analysts": 25,
+     "target_mean": 84.242805,
+     "target_high": 97.20156,
+     "target_low": 66.96632
+    },
+    "why": "Holds the first IEC-certified solid-state DC breaker (SACE Infinitus), a medium-voltage UPS and a stake in DG Matrix, but trades at about 27× 2027 earnings, and consensus is \"hold\". ABB sold its power-grids business to Hitachi in 2020–22, so it is not an HVDC supplier."
+   },
+   {
+    "id": "vertiv",
+    "group": "priced",
+    "name": "Vertiv",
+    "tickers": [
+     "VRT"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 22,
+    "claude_buy_below": 200,
+    "currency": "USD",
+    "close": 246.12,
+    "close_date": "2026-10-01",
+    "forward_pe": 26.8,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -34.5825691731122,
+    "ytd_pct": 51.9,
+    "market_cap_usd_bn": 94.8,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 27,
+     "target_mean": 337.74075,
+     "target_high": 427.0,
+     "target_low": 236.0
+    },
+    "why": "A real 800 V portfolio (rack and pod in 2027, hall in 2028) and leadership in liquid cooling, but a consensus favorite whose central-UPS franchise faces the 2028+ mix shift."
+   },
+   {
+    "id": "ge-vernova",
+    "group": "priced",
+    "name": "GE Vernova",
+    "tickers": [
+     "GEV"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 30,
+    "claude_buy_below": 740,
+    "currency": "USD",
+    "close": 987.45,
+    "close_date": "2026-10-01",
+    "forward_pe": 39.9,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -15.951687860681263,
+    "ytd_pct": 51.1,
+    "market_cap_usd_bn": 263.0,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 33,
+     "target_mean": 1230.341,
+     "target_high": 1450.0,
+     "target_low": 940.0
+    },
+    "why": "Turbines are sold out to 2029–30, but the stock trades at about 40× 2027 earnings. Its 2026 earnings are inflated by a gain of about $4 billion on Prolec, and industry turbine capacity roughly doubles by 2030."
+   },
+   {
+    "id": "schneider-electric",
+    "group": "priced",
+    "name": "Schneider Electric",
+    "tickers": [
+     "SU.PA",
+     "SBGSY"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 20,
+    "claude_buy_below": 240,
+    "currency": "EUR",
+    "close": 292.6,
+    "close_date": "2026-10-01",
+    "forward_pe": 24.0,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -5.916398713826354,
+    "ytd_pct": 24.6,
+    "market_cap_usd_bn": 185.9,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 24,
+     "target_mean": 325.97083,
+     "target_high": 370.0,
+     "target_low": 262.0
+    },
+    "why": "Triple-digit data-center growth is already in its 24× multiple, and it has no shipping 800 V switchboard or solid-state transformer yet."
+   },
+   {
+    "id": "hitachi-hitachi-energy",
+    "group": "priced",
+    "name": "Hitachi (Hitachi Energy)",
+    "tickers": [
+     "6501.T",
+     "HTHIY"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 18,
+    "claude_buy_below": 4650,
+    "currency": "JPY",
+    "close": 5522.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 21.3,
+    "fiscal_year": "FY3/28E",
+    "from_52w_high_pct": -5.087658989343414,
+    "ytd_pct": 12.6,
+    "market_cap_usd_bn": 156.6,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 14,
+     "target_mean": 6600.0,
+     "target_high": 7500.0,
+     "target_low": 5500.0
+    },
+    "why": "The broadest owner of the scarce high-voltage stack (about 1 in 6 of the world's transformers, 1 in 4 high-voltage switchgear, more than 175 GW of HVDC links), but the stock is only about 5% below its high [P3-8]."
+   },
+   {
+    "id": "caterpillar",
+    "group": "priced",
+    "name": "Caterpillar",
+    "tickers": [
+     "CAT"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 23,
+    "claude_buy_below": 740,
+    "currency": "USD",
+    "close": 826.35,
+    "close_date": "2026-10-01",
+    "forward_pe": 25.5,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -22.401164428584853,
+    "ytd_pct": 44.2,
+    "market_cap_usd_bn": 379.9,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 26,
+     "target_mean": 975.60614,
+     "target_high": 1225.0,
+     "target_low": 575.0
+    },
+    "why": "The broadest onsite-power seller (diesel generator sets, gas engines and the gas turbines of its Solar Turbines unit), with engine orders running into 2030. It is diversified across mining and construction and trades at about 26× 2027 earnings."
+   },
+   {
+    "id": "prysmian",
+    "group": "priced",
+    "name": "Prysmian",
+    "tickers": [
+     "PRY.MI",
+     "PRYMY"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 18,
+    "claude_buy_below": 110,
+    "currency": "EUR",
+    "close": 124.85,
+    "close_date": "2026-10-01",
+    "forward_pe": 20.4,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -20.427023581899306,
+    "ytd_pct": 44.5,
+    "market_cap_usd_bn": 42.1,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 17,
+     "target_mean": 157.41176,
+     "target_high": 181.0,
+     "target_low": 90.0
+    },
+    "why": "The HVDC-cable oligopoly is running \"flat out\" with \"no pricing pressure\", but it is fully recognized, and the pending Atkore deal dilutes quality [P3-69]."
+   },
+   {
+    "id": "nexans",
+    "group": "priced",
+    "name": "Nexans",
+    "tickers": [
+     "NEX.PA",
+     "NXPRF"
+    ],
+    "claude_rating": "Accumulate",
+    "claude_buy_below_multiple": 16,
+    "claude_buy_below": 145,
+    "currency": "EUR",
+    "close": 132.8,
+    "close_date": "2026-10-01",
+    "forward_pe": 14.5,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -20.905300774270398,
+    "ytd_pct": 5.6,
+    "market_cap_usd_bn": 6.5,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 15,
+     "target_mean": 171.73334,
+     "target_high": 190.0,
+     "target_low": 150.0
+    },
+    "why": "The value member of the cable oligopoly, at about 14.5× 2027 earnings with a €7.7 billion transmission backlog [P3-72]. It is not a top pick because its AI exposure is indirect, through grid connections."
+   },
+   {
+    "id": "quanta-services",
+    "group": "priced",
+    "name": "Quanta Services",
+    "tickers": [
+     "PWR"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 28,
+    "claude_buy_below": 550,
+    "currency": "USD",
+    "close": 662.6,
+    "close_date": "2026-10-01",
+    "forward_pe": 33.5,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -15.618154958993424,
+    "ytd_pct": 57.0,
+    "market_cap_usd_bn": 99.6,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 29,
+     "target_mean": 769.0407,
+     "target_high": 976.0,
+     "target_low": 410.0
+    },
+    "why": "The undisputed leader in transmission construction, priced at about 34× 2027 earnings."
+   },
+   {
+    "id": "myr-group",
+    "group": "priced",
+    "name": "MYR Group",
+    "tickers": [
+     "MYRG"
+    ],
+    "claude_rating": "Accumulate",
+    "claude_buy_below_multiple": 24,
+    "claude_buy_below": 345,
+    "currency": "USD",
+    "close": 297.92,
+    "close_date": "2026-10-01",
+    "forward_pe": 20.4,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -40.550356194999296,
+    "ytd_pct": 36.3,
+    "market_cap_usd_bn": 4.6,
+    "consensus": {
+     "rating": "none",
+     "analysts": 5,
+     "target_mean": 412.0,
+     "target_high": 445.0,
+     "target_low": 375.0
+    },
+    "why": "The cheapest pure electrical contractor with transmission leverage, about 41% below its high. Its transmission revenue has not yet inflected."
+   },
+   {
+    "id": "cummins",
+    "group": "priced",
+    "name": "Cummins",
+    "tickers": [
+     "CMI"
+    ],
+    "claude_rating": "Accumulate",
+    "claude_buy_below_multiple": 17,
+    "claude_buy_below": 570,
+    "currency": "USD",
+    "close": 517.0,
+    "close_date": "2026-10-01",
+    "forward_pe": 15.3,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -28.943498398823518,
+    "ytd_pct": 1.3,
+    "market_cap_usd_bn": 71.2,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 20,
+     "target_mean": 741.26,
+     "target_high": 894.0,
+     "target_low": 530.0
+    },
+    "why": "Its large QSK95 engines are sold out into the second half of 2028, and it expects more than $9 billion of data-center exposure by 2030, mostly diesel standby. At about 15× 2027 earnings it is cheap, but trucks still dominate its earnings."
+   },
+   {
+    "id": "generac",
+    "group": "priced",
+    "name": "Generac",
+    "tickers": [
+     "GNRC"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 16,
+    "claude_buy_below": 200,
+    "currency": "USD",
+    "close": 207.91,
+    "close_date": "2026-10-01",
+    "forward_pe": 16.5,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -29.65080868917913,
+    "ytd_pct": 52.5,
+    "market_cap_usd_bn": 12.3,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 16,
+     "target_mean": 289.5625,
+     "target_high": 375.0,
+     "target_low": 215.0
+    },
+    "why": "An agreement to supply Amazon's data centers with backup generators worth up to $8 billion, of which about $2.4 billion is scheduled for 2027–28. Amazon received warrants on about 1.69 million Generac shares that vest as it buys [X-17]. The residential business remains cyclical."
+   },
+   {
+    "id": "bloom-energy",
+    "group": "avoid",
+    "name": "Bloom Energy",
+    "tickers": [
+     "BE"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": 30,
+    "claude_buy_below": 145,
+    "currency": "USD",
+    "close": 277.58,
+    "close_date": "2026-10-01",
+    "forward_pe": 56.2,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -19.73977157727339,
+    "ytd_pct": 219.5,
+    "market_cap_usd_bn": 81.8,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 26,
+     "target_mean": 282.81537,
+     "target_high": 390.0,
+     "target_low": 97.0
+    },
+    "why": "The only onsite option at gigawatt scale that does not burn its fuel: its fuel cells convert natural gas to electricity chemically. Oracle has committed to 2.4 GW for its Project Jupiter campus in New Mexico and reaffirmed that on 25 September 2026, after it sent the site's developer a force-majeure notice (a contractual warning that events outside its control may delay the project). The stock trades at about 56× 2027 earnings, and gas-pipeline and air permits now limit deployments [X-16]."
+   },
+   {
+    "id": "monolithic-power-systems",
+    "group": "avoid",
+    "name": "Monolithic Power Systems",
+    "tickers": [
+     "MPWR"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 30,
+    "claude_buy_below": 1000,
+    "currency": "USD",
+    "close": 1360.97,
+    "close_date": "2026-10-01",
+    "forward_pe": 39.0,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -19.463988780334816,
+    "ytd_pct": 50.2,
+    "market_cap_usd_bn": 66.9,
+    "consensus": {
+     "rating": "none",
+     "analysts": 15,
+     "target_mean": 1839.8,
+     "target_high": 2100.0,
+     "target_low": 1575.0
+    },
+    "why": "An excellent franchise (data-center revenue +164%), but it trades at about 39× 2027 earnings and is named in two of Vicor's ITC cases [P1-42]."
+   },
+   {
+    "id": "ls-electric",
+    "group": "avoid",
+    "name": "LS Electric",
+    "tickers": [
+     "010120.KS"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "KRW",
+    "close": 209500.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 41.3,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -34.22291993720565,
+    "ytd_pct": 127.7,
+    "market_cap_usd_bn": 23.2,
+    "consensus": {
+     "rating": "none",
+     "analysts": 23,
+     "target_mean": 275813.22,
+     "target_high": 350000.0,
+     "target_low": 180000.0
+    },
+    "why": "It holds the UL 1,500 V DC breaker credential, but at about 41× 2027 earnings the cheaper route is through its parent, LS Corp."
+   },
+   {
+    "id": "doosan-enerbility",
+    "group": "avoid",
+    "name": "Doosan Enerbility",
+    "tickers": [
+     "034020.KS"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "KRW",
+    "close": 81100.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 77.7,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -40.542521994134894,
+    "ytd_pct": 7.7,
+    "market_cap_usd_bn": 38.5,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 21,
+     "target_mean": 125360.664,
+     "target_high": 177000.0,
+     "target_low": 100000.0
+    },
+    "why": "Twelve large H-class gas turbines for xAI, but about 78× 2027 earnings and heavy dependence on one buyer."
+   },
+   {
+    "id": "navitas-semiconductor",
+    "group": "avoid",
+    "name": "Navitas Semiconductor",
+    "tickers": [
+     "NVTS"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 12.12,
+    "close_date": "2026-10-01",
+    "forward_pe": null,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -61.87480339729474,
+    "ytd_pct": 69.7,
+    "market_cap_usd_bn": 3.2,
+    "consensus": {
+     "rating": "hold",
+     "analysts": 8,
+     "target_mean": 14.075,
+     "target_high": 21.0,
+     "target_low": 8.0
+    },
+    "why": "Loss-making on about $10–14 million of quarterly revenue, with 800 V revenue expected from 2027. It is an option, not an investment case."
+   },
+   {
+    "id": "wolfspeed",
+    "group": "avoid",
+    "name": "Wolfspeed",
+    "tickers": [
+     "WOLF"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 31.17,
+    "close_date": "2026-10-01",
+    "forward_pe": null,
+    "fiscal_year": "FY6/28E",
+    "from_52w_high_pct": -57.59183673469388,
+    "ytd_pct": 79.0,
+    "market_cap_usd_bn": 1.6,
+    "consensus": {
+     "rating": "hold",
+     "analysts": 2,
+     "target_mean": 27.5,
+     "target_high": 30.0,
+     "target_low": 25.0
+    },
+    "why": "Runs a −20% gross margin on an adjusted (non-GAAP) basis [P2-23]. Management says it needs an annual revenue run-rate of about $800 million to break even at the gross-margin level [P2-25], against about $600 million at the latest quarterly rate (my estimate)."
+   },
+   {
+    "id": "samsung-electro-mechanics",
+    "group": "avoid",
+    "name": "Samsung Electro-Mechanics",
+    "tickers": [
+     "009150.KS"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "KRW",
+    "close": 1581000.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 36.9,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -30.352422907488986,
+    "ytd_pct": 520.0,
+    "market_cap_usd_bn": 88.8,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 27,
+     "target_mean": 2401111.0,
+     "target_high": 3200000.0,
+     "target_low": 950000.0
+    },
+    "why": "Capacitors for AI power are real, but the stock is up about 520% this year and fell about 11% on the Kyber-delay report alone."
+   },
+   {
+    "id": "fluence-energy",
+    "group": "avoid",
+    "name": "Fluence Energy",
+    "tickers": [
+     "FLNC"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 7.57,
+    "close_date": "2026-10-01",
+    "forward_pe": null,
+    "fiscal_year": "FY9/27E",
+    "from_52w_high_pct": -76.51256593236116,
+    "ytd_pct": -61.7,
+    "market_cap_usd_bn": 1.5,
+    "consensus": {
+     "rating": "hold",
+     "analysts": 19,
+     "target_mean": 10.10526,
+     "target_high": 23.0,
+     "target_low": 3.0
+    },
+    "why": "Data-center batteries are an under-modelled demand spike, but Fluence has had two guidance cuts, a failed manufacturing ramp and class actions."
+   },
+   {
+    "id": "cleveland-cliffs",
+    "group": "avoid",
+    "name": "Cleveland-Cliffs",
+    "tickers": [
+     "CLF"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 11.47,
+    "close_date": "2026-10-01",
+    "forward_pe": 14.8,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -29.11001236093943,
+    "ytd_pct": -13.6,
+    "market_cap_usd_bn": 6.5,
+    "consensus": {
+     "rating": "hold",
+     "analysts": 10,
+     "target_mean": 12.3,
+     "target_high": 15.0,
+     "target_low": 10.0
+    },
+    "why": "It is the only US maker of grain-oriented electrical steel, but electrical and stainless steel are only about 4% of its volume, so it is a steel-cycle stock, not an AI-scarcity owner [P3-37]."
+   }
+  ],
+  "interconnects": [
+   {
+    "id": "mitsui-kinzoku",
+    "group": "top",
+    "name": "Mitsui Kinzoku (Mitsui Mining & Smelting)",
+    "theme": "Ultra-smooth copper foil for 224G boards and IC substrates",
+    "tickers": [
+     "5706.T",
+     "MMSMY"
+    ],
+    "mark": "npi",
+    "claude_rating": "Buy",
+    "claude_target": 3500,
+    "claude_fair_value_range": [
+     3150,
+     3850
+    ],
+    "claude_basis": "20x FY3/28E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "JPY",
+    "close": 2553.5,
+    "close_date": "2026-10-02",
+    "forward_pe": 14.6,
+    "fiscal_year": "FY3/28E",
+    "from_52w_high_pct": -53.48816029143898,
+    "ytd_pct": 44.8,
+    "market_cap_usd_bn": 9.3,
+    "consensus": {
+     "rating": "strong_buy",
+     "mean_score": 1.3,
+     "analysts": 10,
+     "target_mean": 4782.0,
+     "target_high": 6890.0,
+     "target_low": 3200.0
+    },
+    "next_earnings": "2026-11-10"
+   },
+   {
+    "id": "sumitomo-electric",
+    "group": "top",
+    "name": "Sumitomo Electric Industries",
+    "theme": "InP substrates, lasers, optical connectors and fiber",
+    "tickers": [
+     "5802.T",
+     "SMTOY"
+    ],
+    "mark": "npi",
+    "claude_rating": "Buy",
+    "claude_target": 2900,
+    "claude_fair_value_range": [
+     2600,
+     3200
+    ],
+    "claude_basis": "21x FY3/28E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "JPY",
+    "close": 2452.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 17.7,
+    "fiscal_year": "FY3/28E",
+    "from_52w_high_pct": -29.767275331185104,
+    "ytd_pct": 55.1,
+    "market_cap_usd_bn": 48.6,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.54545,
+     "analysts": 11,
+     "target_mean": 3447.2727,
+     "target_high": 5300.0,
+     "target_low": 2600.0
+    },
+    "next_earnings": "2026-10-30"
+   },
+   {
+    "id": "broadcom",
+    "group": "top",
+    "name": "Broadcom",
+    "theme": "Switch silicon, co-packaged optics, lasers, custom accelerators",
+    "tickers": [
+     "AVGO"
+    ],
+    "mark": "strong",
+    "claude_rating": "Buy",
+    "claude_target": 465,
+    "claude_fair_value_range": [
+     420,
+     510
+    ],
+    "claude_basis": "24x FY10/27E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 343.64,
+    "close_date": "2026-10-01",
+    "forward_pe": 17.7,
+    "fiscal_year": "FY10/27E",
+    "from_52w_high_pct": -28.641734327304448,
+    "ytd_pct": -0.7,
+    "market_cap_usd_bn": 1640.4,
+    "consensus": {
+     "rating": "strong_buy",
+     "mean_score": 1.26,
+     "analysts": 47,
+     "target_mean": 531.3149,
+     "target_high": 715.0,
+     "target_low": 215.88
+    },
+    "next_earnings": "2026-12-09"
+   },
+   {
+    "id": "coherent",
+    "group": "top",
+    "name": "Coherent",
+    "theme": "6-inch InP lasers, light sources for co-packaged optics, transceivers",
+    "tickers": [
+     "COHR"
+    ],
+    "mark": null,
+    "claude_rating": "Buy",
+    "claude_target": 380,
+    "claude_fair_value_range": [
+     340,
+     420
+    ],
+    "claude_basis": "27x FY6/28E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 319.19,
+    "close_date": "2026-10-01",
+    "forward_pe": 22.7,
+    "fiscal_year": "FY6/28E",
+    "from_52w_high_pct": -25.22898170488884,
+    "ytd_pct": 72.9,
+    "market_cap_usd_bn": 62.6,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.58333,
+     "analysts": 23,
+     "target_mean": 412.52014,
+     "target_high": 500.0,
+     "target_low": 280.0
+    },
+    "next_earnings": "2026-11-04"
+   },
+   {
+    "id": "tsmc",
+    "group": "top",
+    "name": "TSMC",
+    "theme": "COUPE co-packaged optics, SoIC 3D stacking, CoWoS",
+    "tickers": [
+     "TSM",
+     "2330.TW"
+    ],
+    "mark": "strong",
+    "claude_rating": "Buy",
+    "claude_target": 525,
+    "claude_fair_value_range": [
+     470,
+     580
+    ],
+    "claude_basis": "24x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 459.2,
+    "close_date": "2026-10-01",
+    "forward_pe": 20.9,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -3.8465565257449152,
+    "ytd_pct": 51.1,
+    "market_cap_usd_bn": 2381.6,
+    "consensus": {
+     "rating": "none",
+     "mean_score": null,
+     "analysts": 20,
+     "target_mean": 552.2594,
+     "target_high": 700.0,
+     "target_low": 440.0
+    },
+    "next_earnings": "2026-10-15"
+   },
+   {
+    "id": "jx-advanced-metals",
+    "group": "top",
+    "name": "JX Advanced Metals",
+    "theme": "InP substrates and semiconductor sputtering targets",
+    "tickers": [
+     "5016.T",
+     "JXAMY"
+    ],
+    "mark": "npi",
+    "claude_rating": "Accumulate",
+    "claude_target": 4300,
+    "claude_fair_value_range": [
+     3850,
+     4750
+    ],
+    "claude_basis": "21x FY3/28E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "JPY",
+    "close": 3612.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 17.7,
+    "fiscal_year": "FY3/28E",
+    "from_52w_high_pct": -36.85314685314685,
+    "ytd_pct": 84.3,
+    "market_cap_usd_bn": 20.5,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.72727,
+     "analysts": 11,
+     "target_mean": 4846.364,
+     "target_high": 6900.0,
+     "target_low": 3800.0
+    },
+    "next_earnings": "2026-11-09"
+   },
+   {
+    "id": "aixtron",
+    "group": "top",
+    "name": "Aixtron",
+    "theme": "Epitaxy tools (MOCVD) for lasers",
+    "tickers": [
+     "AIXA.DE",
+     "AIXXF"
+    ],
+    "mark": "npi",
+    "claude_rating": "Accumulate",
+    "claude_target": 44.5,
+    "claude_fair_value_range": [
+     40.0,
+     49.0
+    ],
+    "claude_basis": "33x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "EUR",
+    "close": 36.86,
+    "close_date": "2026-10-01",
+    "forward_pe": 27.2,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -38.9937106918239,
+    "ytd_pct": 113.0,
+    "market_cap_usd_bn": 4.7,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 2.2,
+     "analysts": 15,
+     "target_mean": 48.54,
+     "target_high": 74.0,
+     "target_low": 40.0
+    },
+    "next_earnings": "2026-10-29"
+   },
+   {
+    "id": "besi",
+    "group": "top",
+    "name": "BE Semiconductor Industries (Besi)",
+    "theme": "Hybrid bonding and photonics die attach",
+    "tickers": [
+     "BESI.AS",
+     "BESIY"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 230,
+    "claude_fair_value_range": [
+     205,
+     255
+    ],
+    "claude_basis": "35x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "EUR",
+    "close": 191.4,
+    "close_date": "2026-10-01",
+    "forward_pe": 29.0,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -40.24352169840775,
+    "ytd_pct": 43.1,
+    "market_cap_usd_bn": 17.1,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.82609,
+     "analysts": 23,
+     "target_mean": 289.91302,
+     "target_high": 401.0,
+     "target_low": 220.0
+    },
+    "next_earnings": "2026-10-22"
+   },
+   {
+    "id": "nittobo",
+    "group": "also",
+    "name": "Nittobo (Nitto Boseki)",
+    "theme": "Low-expansion T-glass and low-loss glass cloth",
+    "tickers": [
+     "3110.T",
+     "NBCLF"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 3750,
+    "claude_fair_value_range": [
+     3400,
+     4100
+    ],
+    "claude_basis": "25x FY3/28E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "JPY",
+    "close": 3370.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 22.3,
+    "fiscal_year": "FY3/28E",
+    "from_52w_high_pct": -47.261345852895154,
+    "ytd_pct": 65.2,
+    "market_cap_usd_bn": 3.9,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.8,
+     "analysts": 9,
+     "target_mean": 4532.222,
+     "target_high": 5500.0,
+     "target_low": 3300.0
+    },
+    "next_earnings": "2026-11-05"
+   },
+   {
+    "id": "credo",
+    "group": "also",
+    "name": "Credo Technology",
+    "theme": "Active electrical cables, retimers and optical signal processors",
+    "tickers": [
+     "CRDO"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 240,
+    "claude_fair_value_range": [
+     215,
+     265
+    ],
+    "claude_basis": "25x FY4/28E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 210.17,
+    "close_date": "2026-10-01",
+    "forward_pe": 21.7,
+    "fiscal_year": "FY4/28E",
+    "from_52w_high_pct": -30.526907311913266,
+    "ytd_pct": 46.1,
+    "market_cap_usd_bn": 39.5,
+    "consensus": {
+     "rating": "strong_buy",
+     "mean_score": 1.35,
+     "analysts": 20,
+     "target_mean": 281.0931,
+     "target_high": 350.0,
+     "target_low": 185.0
+    },
+    "next_earnings": "2026-11-30"
+   },
+   {
+    "id": "lumentum",
+    "group": "priced",
+    "name": "Lumentum",
+    "tickers": [
+     "LITE"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 24,
+    "claude_buy_below": 830,
+    "currency": "USD",
+    "close": 1045.78,
+    "close_date": "2026-10-01",
+    "forward_pe": 30.1,
+    "fiscal_year": "FY6/28E",
+    "from_52w_high_pct": -0.6941476986772166,
+    "ytd_pct": 183.7,
+    "market_cap_usd_bn": 93.8,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 27,
+     "target_mean": 1159.4017,
+     "target_high": 1400.0,
+     "target_low": 820.0
+    },
+    "why": "The highest-quality InP franchise: one of two 200G modulated-laser suppliers with Broadcom, ultra-high-power lasers for co-packaged optics, and pump lasers sold out. It trades within 1% of its high at about 48× fiscal 2027 and 30× fiscal 2028 earnings."
+   },
+   {
+    "id": "ciena",
+    "group": "priced",
+    "name": "Ciena",
+    "tickers": [
+     "CIEN"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 30,
+    "claude_buy_below": 305,
+    "currency": "USD",
+    "close": 379.14,
+    "close_date": "2026-10-01",
+    "forward_pe": 37.0,
+    "fiscal_year": "FY10/27E",
+    "from_52w_high_pct": -39.53110047846891,
+    "ytd_pct": 62.1,
+    "market_cap_usd_bn": 53.8,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 20,
+     "target_mean": 512.9907,
+     "target_high": 660.0,
+     "target_low": 347.0
+    },
+    "why": "Coherent optics and line systems for data-center interconnect. Fiscal Q3 revenue rose 37% and fiscal 2026 guidance is $6.42 billion, but two customers are 41.7% of revenue [X-1]."
+   },
+   {
+    "id": "corning",
+    "group": "priced",
+    "name": "Corning",
+    "tickers": [
+     "GLW"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 30,
+    "claude_buy_below": 130,
+    "currency": "USD",
+    "close": 160.42,
+    "close_date": "2026-10-01",
+    "forward_pe": 36.8,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -37.259963236731984,
+    "ytd_pct": 83.2,
+    "market_cap_usd_bn": 138.2,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 17,
+     "target_mean": 187.0,
+     "target_high": 238.0,
+     "target_low": 129.0
+    },
+    "why": "Fiber and connectivity: optical sales +32% and enterprise +65% on generative-AI products in Q2 2026, with its Springboard targets (raised in May) reaffirmed [X-2]. It trades at about 37× 2027 earnings."
+   },
+   {
+    "id": "fujikura",
+    "group": "priced",
+    "name": "Fujikura",
+    "tickers": [
+     "5803.T",
+     "FKURF"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 20,
+    "claude_buy_below": 4550,
+    "currency": "JPY",
+    "close": 5598.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 24.4,
+    "fiscal_year": "FY3/28E",
+    "from_52w_high_pct": -28.733290897517506,
+    "ytd_pct": 92.6,
+    "market_cap_usd_bn": 58.8,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 12,
+     "target_mean": 7351.6665,
+     "target_high": 11700.0,
+     "target_low": 3500.0
+    },
+    "why": "High-density fiber and cable for AI data centers; already re-rated."
+   },
+   {
+    "id": "marvell",
+    "group": "priced",
+    "name": "Marvell",
+    "tickers": [
+     "MRVL"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 30,
+    "claude_buy_below": 200,
+    "currency": "USD",
+    "close": 268.08,
+    "close_date": "2026-10-01",
+    "forward_pe": 39.6,
+    "fiscal_year": "FY1/28E",
+    "from_52w_high_pct": -15.279840723066718,
+    "ytd_pct": 215.5,
+    "market_cap_usd_bn": 240.9,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 43,
+     "target_mean": 290.9704,
+     "target_high": 400.0,
+     "target_low": 210.0
+    },
+    "why": "Owns Celestial AI's Photonic Fabric (optical scale-up and optics into memory) plus optical signal processors and custom silicon, at about 40× fiscal 2028 earnings. Investor Day is on 6 October."
+   },
+   {
+    "id": "arista-networks",
+    "group": "priced",
+    "name": "Arista Networks",
+    "tickers": [
+     "ANET"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 30,
+    "claude_buy_below": 155,
+    "currency": "USD",
+    "close": 204.49,
+    "close_date": "2026-10-01",
+    "forward_pe": 39.3,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -2.8551068883610364,
+    "ytd_pct": 56.1,
+    "market_cap_usd_bn": 257.9,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 29,
+     "target_mean": 242.20724,
+     "target_high": 289.0,
+     "target_low": 190.0
+    },
+    "why": "The scale-out Ethernet leader, near its high at about 39× 2027 earnings."
+   },
+   {
+    "id": "amphenol",
+    "group": "priced",
+    "name": "Amphenol",
+    "tickers": [
+     "APH"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 22,
+    "claude_buy_below": 72,
+    "currency": "USD",
+    "close": 85.67,
+    "close_date": "2026-10-01",
+    "forward_pe": 26.1,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -2.824410163339375,
+    "ytd_pct": 26.8,
+    "market_cap_usd_bn": 211.3,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 19,
+     "target_mean": 99.68421,
+     "target_high": 115.0,
+     "target_low": 85.0
+    },
+    "why": "A connector franchise that does not depend on the medium (copper, fiber and power). Rubin's cable-less tray removed some exclusive content."
+   },
+   {
+    "id": "tower-semiconductor",
+    "group": "priced",
+    "name": "Tower Semiconductor",
+    "tickers": [
+     "TSEM"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 30,
+    "claude_buy_below": 200,
+    "currency": "USD",
+    "close": 241.3,
+    "close_date": "2026-10-01",
+    "forward_pe": 36.0,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -23.844090263531637,
+    "ytd_pct": 105.5,
+    "market_cap_usd_bn": 27.3,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 10,
+     "target_mean": 312.925,
+     "target_high": 355.0,
+     "target_low": 270.0
+    },
+    "why": "The merchant silicon-photonics foundry leader (run-rate $680 million, heading above $1 billion in Q4 2026), but at about 36× 2027 earnings, and four 300 mm silicon-photonics expansions converge in 2027–29 [I2-58]."
+   },
+   {
+    "id": "soitec",
+    "group": "priced",
+    "name": "Soitec",
+    "tickers": [
+     "SOI.PA",
+     "SLOIF"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "EUR",
+    "close": 158.55,
+    "close_date": "2026-10-01",
+    "forward_pe": 44.0,
+    "fiscal_year": "FY3/28E",
+    "from_52w_high_pct": -17.507804370447445,
+    "ytd_pct": 583.7,
+    "market_cap_usd_bn": 6.4,
+    "consensus": {
+     "rating": "hold",
+     "analysts": 19,
+     "target_mean": 157.0,
+     "target_high": 250.0,
+     "target_low": 55.0
+    },
+    "why": "Reportedly about 95% of 300 mm photonics silicon-on-insulator wafers (a secondary estimate) [I2-61], with that revenue growing 2.5–3× in fiscal 2027 [I2-62]. The stock is up about 580% this year, and consensus sits at about the current price."
+   },
+   {
+    "id": "elite-material",
+    "group": "priced",
+    "name": "Elite Material",
+    "tickers": [
+     "2383.TW"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 20,
+    "claude_buy_below": 4550,
+    "currency": "TWD",
+    "close": 5185.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 22.7,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -18.34645669291338,
+    "ytd_pct": 215.2,
+    "market_cap_usd_bn": 58.4,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 17,
+     "target_mean": 7569.706,
+     "target_high": 10200.0,
+     "target_low": 6000.0
+    },
+    "why": "The number one high-speed laminate maker (about 39% share) [I3-62]. It is up 215% this year and squeezed between foil and glass suppliers that have pricing power."
+   },
+   {
+    "id": "fabrinet",
+    "group": "priced",
+    "name": "Fabrinet",
+    "tickers": [
+     "FN"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 18,
+    "claude_buy_below": 390,
+    "currency": "USD",
+    "close": 451.44,
+    "close_date": "2026-10-01",
+    "forward_pe": 20.7,
+    "fiscal_year": "FY6/28E",
+    "from_52w_high_pct": -39.52335659838976,
+    "ytd_pct": -0.8,
+    "market_cap_usd_bn": 16.2,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 9,
+     "target_mean": 734.1111,
+     "target_high": 850.0,
+     "target_low": 598.0
+    },
+    "why": "About 40% below its high after NVIDIA fell to 16% of fiscal 2026 revenue [X-3]. Co-packaged optics moves optical-engine assembly toward TSMC and Foxconn, but Fabrinet is a non-Chinese manufacturing route if US rules tighten."
+   },
+   {
+    "id": "celestica",
+    "group": "priced",
+    "name": "Celestica",
+    "tickers": [
+     "CLS"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 17,
+    "claude_buy_below": 325,
+    "currency": "USD",
+    "close": 373.09,
+    "close_date": "2026-10-01",
+    "forward_pe": 19.3,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -21.022438611346317,
+    "ytd_pct": 26.2,
+    "market_cap_usd_bn": 47.1,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 18,
+     "target_mean": 473.9143,
+     "target_high": 550.0,
+     "target_low": 375.0
+    },
+    "why": "Switch and rack integration at about 19× 2027 earnings; named in Vicor's September 2026 patent complaint at the US International Trade Commission."
+   },
+   {
+    "id": "innolight-zhongji-innolight",
+    "group": "avoid",
+    "name": "InnoLight (Zhongji Innolight)",
+    "tickers": [
+     "300308.SZ",
+     "3308.HK"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "CNY",
+    "close": 808.44,
+    "close_date": "2026-09-30",
+    "forward_pe": 12.2,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -41.51613579970049,
+    "ytd_pct": 32.5,
+    "market_cap_usd_bn": 141.2,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 15,
+     "target_mean": 1392.11,
+     "target_high": 2645.0,
+     "target_low": 430.0
+    },
+    "why": "The world's largest 800G / 1.6T transceiver maker (first-half 2026 net profit CN¥13.65 billion) at only about 12× 2027 earnings. It is cheap for a reason: it was added to the Pentagon's 1260H list on 8 June 2026, and a Treasury listing would bar US persons from holding it [X-4][X-5]. Figures use the Shenzhen line (15 analysts); the Hong Kong line (HK$1,072 on 2 October) has only three analyst targets."
+   },
+   {
+    "id": "astera-labs",
+    "group": "avoid",
+    "name": "Astera Labs",
+    "tickers": [
+     "ALAB"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": 35,
+    "claude_buy_below": 220,
+    "currency": "USD",
+    "close": 356.42,
+    "close_date": "2026-10-01",
+    "forward_pe": 55.7,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -26.21009482009026,
+    "ytd_pct": 114.2,
+    "market_cap_usd_bn": 61.8,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 23,
+     "target_mean": 389.9527,
+     "target_high": 500.0,
+     "target_low": 190.0
+    },
+    "why": "Excellent scale-up position, but about 56× 2027 earnings and 20× 2027 sales, already past the bull case."
+   },
+   {
+    "id": "axt",
+    "group": "avoid",
+    "name": "AXT",
+    "tickers": [
+     "AXTI"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 81.81,
+    "close_date": "2026-10-01",
+    "forward_pe": 36.4,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -41.90868422921253,
+    "ytd_pct": 400.4,
+    "market_cap_usd_bn": 5.4,
+    "consensus": {
+     "rating": "none",
+     "analysts": 5,
+     "target_mean": 91.6,
+     "target_high": 125.0,
+     "target_low": 55.0
+    },
+    "why": "InP substrate leverage, but all crystal growth is in China, US-customer export permits are pending, and the stock trades at about 36× 2027 earnings [I2-21]."
+   },
+   {
+    "id": "poet-technologies",
+    "group": "avoid",
+    "name": "POET Technologies",
+    "tickers": [
+     "POET"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 7.64,
+    "close_date": "2026-10-01",
+    "forward_pe": null,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -62.858531842489064,
+    "ytd_pct": 20.7,
+    "market_cap_usd_bn": 1.3,
+    "consensus": {
+     "rating": "none",
+     "analysts": 1,
+     "target_mean": 14.75,
+     "target_high": 14.75,
+     "target_low": 14.75
+    },
+    "why": "An optical-interposer story valued at $1.3 billion on about $1.7 million of trailing revenue; its Marvell partnership ended."
+   },
+   {
+    "id": "lightwave-logic",
+    "group": "avoid",
+    "name": "Lightwave Logic",
+    "tickers": [
+     "LWLG"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 5.44,
+    "close_date": "2026-10-01",
+    "forward_pe": null,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -70.14270032930845,
+    "ytd_pct": 67.9,
+    "market_cap_usd_bn": 0.8,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 1,
+     "target_mean": 10.0,
+     "target_high": 10.0,
+     "target_low": 10.0
+    },
+    "why": "Electro-optic polymers valued at $0.8 billion on about $0.25 million of trailing revenue; long-term polymer reliability is unproven."
+   },
+   {
+    "id": "skc-absolics-glass-core",
+    "group": "avoid",
+    "name": "SKC (Absolics glass core)",
+    "tickers": [
+     "011790.KS"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "KRW",
+    "close": 106500.0,
+    "close_date": "2026-10-02",
+    "forward_pe": null,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -38.828259620907524,
+    "ytd_pct": 2.0,
+    "market_cap_usd_bn": 3.8,
+    "consensus": {
+     "rating": "hold",
+     "analysts": 10,
+     "target_mean": 97777.3,
+     "target_high": 130000.0,
+     "target_low": 69000.0
+    },
+    "why": "Glass-core substrate mass production pushed to 2027; loss-making [I3-70]."
+   },
+   {
+    "id": "applied-optoelectronics",
+    "group": "avoid",
+    "name": "Applied Optoelectronics",
+    "tickers": [
+     "AAOI"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 107.32,
+    "close_date": "2026-10-01",
+    "forward_pe": 23.3,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -51.89601075750785,
+    "ytd_pct": 207.9,
+    "market_cap_usd_bn": 9.1,
+    "consensus": {
+     "rating": "none",
+     "analysts": 5,
+     "target_mean": 163.4,
+     "target_high": 220.0,
+     "target_low": 109.0
+    },
+    "why": "A transceiver maker that lost about $57 million over the last twelve months [I2-78]. Consensus expects a turn to profit in 2027, and after a 208% rise this year the shares already trade at about 23× those 2027 earnings."
+   }
+  ]
+ }
+}
