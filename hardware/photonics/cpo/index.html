@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Co-packaged optics (CPO) &amp; optical I/O — AI interconnects</title>
+  <meta name="description" content="Layperson briefing on co-packaged optics (CPO) and optical I/O for AI factories: copper vs photonics, today’s GPU–SerDes–switch–module stack, near-term CPO platforms, endgame optical I/O, and five timeline figures. Not investment advice.">
+  <link rel="stylesheet" href="../../../assets/site.css">
+  <link rel="stylesheet" href="../section.css?v=cpo1">
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a class="brand" href="../../../index.html">Arman <span>Invest</span></a>
+      <div class="nav-links">
+        <a href="../../../index.html" data-section="home">Hub</a>
+        <a href="../../../electrification/index.html" data-section="electrification">Electrification</a>
+        <a href="../../../hardware/index.html" data-section="hardware">Hardware</a>
+        <a href="../../../software/index.html" data-section="software">Software</a>
+        <a href="../../../semiconductors/index.html" data-section="semiconductors">Fabrication</a>
+        <a href="../../../hyperscalers/index.html" data-section="hyperscalers">Hyperscalers</a>
+        <a href="../../../analysis/index.html" data-section="analysis">Analysis</a>
+        <a href="../../../digests/index.html" data-section="digests">Digests</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <article class="briefing">
+      <nav aria-label="On this page" class="page-toc">
+        <div class="toc-inner">
+          <span class="toc-label">Jump</span>
+          <a href="#bottlenecks">Bottlenecks</a>
+          <a href="#copper-vs-photonics">Copper vs light</a>
+          <a href="#today-stack">Today’s stack</a>
+          <a href="#near-future">Near future</a>
+          <a href="#endgame">Endgame</a>
+          <a href="#timelines">CPO timelines</a>
+          <a href="#related">Related</a>
+          <a href="#disclaimer">Disclaimer</a>
+        </div>
+      </nav>
+
+      <header class="hero">
+        <span class="eyebrow">Technical briefing · nested under Photonics · October 2026</span>
+        <h1>Co-packaged optics (<abbr data-expand="Co-packaged optics" title="Co-packaged optics">CPO</abbr>) &amp; optical I/O</h1>
+        <p class="subtitle">
+          Why AI factories hit data-movement walls, when copper loses to light, how today’s
+          <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit"><abbr data-expand="Graphics processing unit" title="Graphics processing unit">GPU</abbr></a>
+          networking stack works, and how
+          <a href="https://en.wikipedia.org/wiki/Co-packaged_optics">co-packaged optics (<abbr data-expand="Co-packaged optics" title="Co-packaged optics">CPO</abbr>)</a>
+          and on-package optical I/O change who sits in the middle of that hop.
+        </p>
+        <div class="meta-row">
+          <span class="chip">Parent · <a href="../index.html" style="color:inherit">Photonics</a></span>
+          <span class="chip">Hardware · <a href="../../index.html" style="color:inherit">AI computation</a></span>
+          <span class="chip warn">Not investment advice</span>
+        </div>
+      </header>
+
+      <section aria-labelledby="h-bottlenecks" id="bottlenecks">
+        <h2 id="h-bottlenecks">1. Interconnect bottlenecks — why AI factories hit data-movement walls</h2>
+        <p class="lede">
+          An “AI factory” packs thousands of accelerators into racks and rows so they can train and serve large models together.
+          The chips got faster; moving bits <em>between</em> them is the hard part.
+        </p>
+        <p>
+          Inside a hall, GPUs must exchange gradients, activations, and expert tokens at enormous rates.
+          When the wires cannot keep up, GPUs sit idle waiting on data — wasted capital and power.
+          After
+          <a href="https://en.wikipedia.org/wiki/High_Bandwidth_Memory">high-bandwidth memory (<abbr data-expand="High-bandwidth memory" title="High-bandwidth memory">HBM</abbr>)</a>
+          and advanced packaging ease, many industry maps expect
+          <a href="https://en.wikipedia.org/wiki/Optical_interconnect">optical interconnects</a>
+          to become the next dominant pinch around ~2027–2028 (see the parent
+          <a href="../index.html#scarcity">Photonics scarcity brief</a>).
+        </p>
+        <p>
+          Two different jobs get confused in headlines:
+        </p>
+        <ul>
+          <li><strong>Scale-out</strong> — linking racks and clusters through network switches (Ethernet / InfiniBand fabrics).</li>
+          <li><strong>Scale-up</strong> — linking GPUs inside a tightly coupled domain (today often copper
+            <a href="https://en.wikipedia.org/wiki/NVLink"><abbr data-expand="NVIDIA high-speed GPU interconnect" title="NVIDIA high-speed GPU interconnect">NVLink</abbr></a>-class meshes; tomorrow, more optical I/O on the package).</li>
+        </ul>
+        <p>
+          <abbr data-expand="Co-packaged optics" title="Co-packaged optics">CPO</abbr> shows up in both stories, but the endgames differ. Scale-out can still use a switch
+          <a href="https://en.wikipedia.org/wiki/Application-specific_integrated_circuit"><abbr data-expand="Application-specific integrated circuit" title="Application-specific integrated circuit">ASIC</abbr></a>
+          with optics packaged beside it. Pure scale-up optical I/O aims to remove a separate switch chip from <em>that hop</em>.
+        </p>
+      </section>
+
+      <section aria-labelledby="h-copper" id="copper-vs-photonics">
+        <h2 id="h-copper">2. Direct copper vs photonics</h2>
+        <p class="lede">
+          Copper wins on short hops. Light wins when distance, power, or crosstalk make thick cables painful.
+          The crossover distance is collapsing as lane rates climb.
+        </p>
+        <p>
+          Rule of thumb for AI halls today:
+        </p>
+        <ul>
+          <li><strong>Under about one meter</strong> — direct copper (board traces,
+            <a href="https://en.wikipedia.org/wiki/Twinaxial_cabling">direct-attach copper (<abbr data-expand="Direct-attach copper" title="Direct-attach copper">DAC</abbr>)</a>
+            cables) usually wins on cost, latency, and simplicity.</li>
+          <li><strong>Beyond a few meters</strong> — optics dominate; even mid-reach links often use
+            <a href="https://en.wikipedia.org/wiki/Active_optical_cable">active optical cables (<abbr data-expand="Active optical cable" title="Active optical cable">AOC</abbr>)</a>
+            or pluggable optical modules.</li>
+          <li><strong>At 800 gigabits per second and 1.6 terabits per second class links</strong> — the useful copper reach is collapsing toward roughly <strong>1–2 meters</strong>. Shielding, equalization, and retimers get expensive; heat and latency add up.</li>
+        </ul>
+        <div class="callout">
+          <div class="label">What each side “pays”</div>
+          <p style="margin:0">
+            <strong>Copper pays</strong> in shielding, channel equalization, retimers, and latency as rates rise.
+            <strong>Optics pay</strong> an electron↔photon conversion cost (lasers, modulators, detectors, and often a
+            <a href="https://en.wikipedia.org/wiki/Digital_signal_processor">digital signal processor (<abbr data-expand="Digital signal processor" title="Digital signal processor">DSP</abbr>)</a>
+            inside the module). <abbr data-expand="Co-packaged optics" title="Co-packaged optics">CPO</abbr> and on-package optical I/O try to shrink that conversion tax by moving optics next to the compute or switch die and sharing
+            <a href="https://en.wikipedia.org/wiki/Silicon_photonics">external light sources (<abbr data-expand="External light source" title="External light source">ELS</abbr>)</a>.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="h-today" id="today-stack">
+        <h2 id="h-today">3. Today’s stack — GPU → SerDes → networking ASIC → optical module</h2>
+        <p class="lede">
+          Most AI clusters still move data the “classic” way: the GPU talks electrically, a networking chip switches packets, and a pluggable optical module turns those bits into light at the faceplate.
+        </p>
+        <ol>
+          <li>
+            <strong><abbr data-expand="Graphics processing unit" title="Graphics processing unit">GPU</abbr> / accelerator</strong> — e.g. <strong>NVIDIA</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=NVDA" target="_blank" rel="noopener noreferrer" title="Fidelity quote">NVDA</a>), <strong>AMD</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=AMD" target="_blank" rel="noopener noreferrer" title="Fidelity quote">AMD</a>), or a hyperscaler custom chip.
+            High-speed
+            <a href="https://en.wikipedia.org/wiki/SerDes">serializer/deserializer (<abbr data-expand="Serializer/deserializer" title="Serializer/deserializer">SerDes</abbr>)</a>
+            blocks push bits off the die.
+          </li>
+          <li>
+            <strong>Scale-up fabric (often copper)</strong> —
+            NVIDIA’s <abbr data-expand="NVIDIA high-speed GPU interconnect" title="NVIDIA high-speed GPU interconnect">NVLink</abbr> mesh ties GPUs inside a node or rack domain.
+            The open
+            <a href="https://en.wikipedia.org/wiki/UALink"><abbr data-expand="Ultra Accelerator Link" title="Ultra Accelerator Link">UALink</abbr></a>
+            effort aims at a multi-vendor accelerator fabric.
+          </li>
+          <li>
+            <strong>Networking <abbr data-expand="Application-specific integrated circuit" title="Application-specific integrated circuit">ASIC</abbr></strong> — Ethernet or InfiniBand switch silicon from <strong>Broadcom</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=AVGO" target="_blank" rel="noopener noreferrer" title="Fidelity quote">AVGO</a>), <strong>NVIDIA</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=NVDA" target="_blank" rel="noopener noreferrer" title="Fidelity quote">NVDA</a>) (Spectrum / Quantum lines), <strong>Marvell</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=MRVL" target="_blank" rel="noopener noreferrer" title="Fidelity quote">MRVL</a>), and peers.
+          </li>
+          <li>
+            <strong>Front-panel optics</strong> —
+            <a href="https://en.wikipedia.org/wiki/Twinaxial_cabling"><abbr data-expand="Direct-attach copper" title="Direct-attach copper">DAC</abbr></a> /
+            <a href="https://en.wikipedia.org/wiki/Active_optical_cable"><abbr data-expand="Active optical cable" title="Active optical cable">AOC</abbr></a>
+            for short reaches, or pluggable transceivers (QSFP / OSFP cages) that convert electrical lanes to fiber.
+            Module assemblers such as <strong>Fabrinet</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=FN" target="_blank" rel="noopener noreferrer" title="Fidelity quote">FN</a>) and platform vendors such as <strong>Cisco</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=CSCO" target="_blank" rel="noopener noreferrer" title="Fidelity quote">CSCO</a>) and <strong>Arista</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=ANET" target="_blank" rel="noopener noreferrer" title="Fidelity quote">ANET</a>) sit in this faceplate world.
+          </li>
+        </ol>
+        <p>
+          Retimers and connectivity silicon from names like <strong>Credo</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=CRDO" target="_blank" rel="noopener noreferrer" title="Fidelity quote">CRDO</a>) and <strong>Astera Labs</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=ALAB" target="_blank" rel="noopener noreferrer" title="Fidelity quote">ALAB</a>) help copper channels survive higher lane rates between chips, boards, and cages.
+        </p>
+        <h3>Why there is no simple “blade sandwich” of optics today</h3>
+        <p>
+          People sometimes imagine sliding optical engines between every GPU like a mezzanine card.
+          In practice that hits limits:
+        </p>
+        <ul>
+          <li><strong>Mezzanine lane rates</strong> — many board-to-board connectors top out around ~112 gigabits per second per lane class, while switch and GPU roadmaps push toward 224G-class signaling.</li>
+          <li><strong>Crosstalk and signal integrity</strong> — packing dense electrical lanes beside hot, noisy compute boards is hard.</li>
+          <li><strong>Serviceability</strong> — pluggable faceplate modules are easy to swap; burying optics under a GPU stack is not, unless the light source is designed to be external and replaceable (<abbr data-expand="External light source" title="External light source">ELS</abbr> / <abbr data-expand="External laser source form-factor pluggable" title="External laser source form-factor pluggable">ELSFP</abbr>).</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="h-near" id="near-future">
+        <h2 id="h-near">4. Near future — <abbr data-expand="Co-packaged optics" title="Co-packaged optics">CPO</abbr> beside the switch or compute die</h2>
+        <p class="lede">
+          The next step puts the optical engine <em>next to</em> the big chip on the same package or substrate, instead of only at the front panel.
+          Lasers often stay off-package as an
+          <a href="https://en.wikipedia.org/wiki/Silicon_photonics">external light source (<abbr data-expand="External light source" title="External light source">ELS</abbr>)</a>
+          / <abbr data-expand="External laser source form-factor pluggable" title="External laser source form-factor pluggable">ELSFP</abbr> module so they can be swapped and cooled separately.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">NVIDIA</span><a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=NVDA" target="_blank" rel="noopener noreferrer" title="Fidelity quote">NVDA</a>
+            <span class="badge">Scale-out CPO switches</span>
+            <p>
+              <strong>Quantum-X Photonics</strong> InfiniBand <abbr data-expand="Co-packaged optics" title="Co-packaged optics">CPO</abbr> (144 ports, 800 gigabits per second class) and
+              <strong>Spectrum-X Photonics</strong> Ethernet on
+              <strong>TSMC</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=TSM" target="_blank" rel="noopener noreferrer" title="Fidelity quote">TSM</a>)’s
+              <a href="https://en.wikipedia.org/wiki/Silicon_photonics">Compact Universal Photonic Engine (<abbr data-expand="Compact Universal Photonic Engine" title="Compact Universal Photonic Engine">COUPE</abbr>)</a>.
+              Laser capacity ties involve <strong>Lumentum</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=LITE" target="_blank" rel="noopener noreferrer" title="Fidelity quote">LITE</a>) and <strong>Coherent</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=COHR" target="_blank" rel="noopener noreferrer" title="Fidelity quote">COHR</a>).
+            </p>
+          </li>
+          <li>
+            <span class="name">Broadcom</span><a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=AVGO" target="_blank" rel="noopener noreferrer" title="Fidelity quote">AVGO</a>
+            <span class="badge">Bailly CPO switch</span>
+            <p>
+              <strong>51.2 terabits per second Bailly</strong> co-packaged optics switch silicon — platforms discussed with Delta / Micas and Meta validation paths.
+              Still a <em>switch <abbr data-expand="Application-specific integrated circuit" title="Application-specific integrated circuit">ASIC</abbr> + optics beside it</em> story for scale-out networking.
+            </p>
+          </li>
+          <li>
+            <span class="name">TSMC</span><a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=TSM" target="_blank" rel="noopener noreferrer" title="Fidelity quote">TSM</a>
+            <span class="badge">COUPE foundry path</span>
+            <p>
+              Foundry building blocks for substrate-level <abbr data-expand="Co-packaged optics" title="Co-packaged optics">CPO</abbr>, microring modulators at 200 gigabits per second per lane, and denser on-interposer optics over time.
+            </p>
+          </li>
+          <li>
+            <span class="name">Ayar Labs</span><span class="badge private">private</span>
+            <span class="badge">Optical I/O chiplets</span>
+            <p>
+              <strong>TeraPHY</strong> optical I/O chiplets and <strong>SuperNova</strong> multi-wavelength light sources — customer integration in 2026; production often framed late 2026–2027. No public ticker.
+            </p>
+          </li>
+          <li>
+            <span class="name">Lightmatter</span><span class="badge private">private</span>
+            <span class="badge">Passage photonic fabric</span>
+            <p>Passage photonic interconnect fabric shown at industry forums; private company, no public ticker.</p>
+          </li>
+          <li>
+            <span class="name">Celestial AI</span><span class="badge">→ Marvell</span>
+            <p>
+              Photonic fabric technology; acquired by <strong>Marvell</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=MRVL" target="_blank" rel="noopener noreferrer" title="Fidelity quote">MRVL</a>) — follow the public ticker <a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=MRVL" target="_blank" rel="noopener noreferrer" title="Fidelity quote">MRVL</a>, not a standalone Celestial listing.
+            </p>
+          </li>
+        </ul>
+        <p class="muted">
+          Parent stack map and scarcity names:
+          <a href="../index.html#stack-map">Photonics → Stack map</a>,
+          <a href="../index.html#scarcity">Scarcity ~2027–28</a>.
+        </p>
+      </section>
+
+      <section aria-labelledby="h-endgame" id="endgame">
+        <h2 id="h-endgame">5. Endgame — GPU <abbr data-expand="Serializer/deserializer" title="Serializer/deserializer">SerDes</abbr> drives the modulator; external laser; no separate switch <abbr data-expand="Application-specific integrated circuit" title="Application-specific integrated circuit">ASIC</abbr> on that hop</h2>
+        <p class="lede">
+          On the <strong>pure optical-I/O scale-up path</strong>, the long-run picture looks like this:
+          the GPU’s own <abbr data-expand="Serializer/deserializer" title="Serializer/deserializer">SerDes</abbr> drives a silicon-photonic modulator; an external
+          <a href="https://en.wikipedia.org/wiki/Indium_phosphide">indium phosphide (<abbr data-expand="Indium phosphide" title="Indium phosphide">InP</abbr>)</a>
+          laser (or multi-wavelength <abbr data-expand="External light source" title="External light source">ELS</abbr>) feeds light; fiber carries the hop; there is
+          <em>no separate switch <abbr data-expand="Application-specific integrated circuit" title="Application-specific integrated circuit">ASIC</abbr></em> in the middle of that particular link.
+        </p>
+        <div class="callout warn">
+          <div class="label">Nuance — do not over-read “who gets sidelined”</div>
+          <p style="margin:0">
+            Scale-<em>out</em> networking can still use <abbr data-expand="Co-packaged optics" title="Co-packaged optics">CPO</abbr> switch ASICs (Broadcom Bailly, NVIDIA Spectrum-X / Quantum-X Photonics, and peers).
+            The “sidelined on that hop” framing applies to the <strong>tight GPU-to-GPU optical-I/O scale-up path</strong>, not to the entire networking industry.
+            Pluggables, retimers, and faceplate optics also remain relevant wherever copper reach, serviceability, or brownfield racks still win.
+          </p>
+        </div>
+        <div class="two-col-note">
+          <div class="stay-card">
+            <h3>Who tends to stay relevant on that optical-I/O path</h3>
+            <ul>
+              <li><strong>Lumentum</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=LITE" target="_blank" rel="noopener noreferrer" title="Fidelity quote">LITE</a>) — lasers / optical engines / <abbr data-expand="External light source" title="External light source">ELS</abbr> supply.</li>
+              <li><strong>Coherent</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=COHR" target="_blank" rel="noopener noreferrer" title="Fidelity quote">COHR</a>) — lasers and broader photonics.</li>
+              <li><strong>AXT</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=AXTI" target="_blank" rel="noopener noreferrer" title="Fidelity quote">AXTI</a>) — upstream <abbr data-expand="Indium phosphide" title="Indium phosphide">InP</abbr> / compound substrates for many lasers.</li>
+              <li><strong>TSMC</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=TSM" target="_blank" rel="noopener noreferrer" title="Fidelity quote">TSM</a>) — <abbr data-expand="Compact Universal Photonic Engine" title="Compact Universal Photonic Engine">COUPE</abbr> and advanced packaging for optics beside compute.</li>
+              <li><strong>POET Technologies</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=POET" target="_blank" rel="noopener noreferrer" title="Fidelity quote">POET</a>) — optical interposer / engine approaches aimed at lower-cost light engines.</li>
+              <li>Private optical-I/O specialists (Ayar Labs, Lightmatter) if they win sockets — no tickers.</li>
+            </ul>
+          </div>
+          <div class="side-card">
+            <h3>Who can be sidelined <em>on that pure scale-up hop</em></h3>
+            <ul>
+              <li><strong>Broadcom</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=AVGO" target="_blank" rel="noopener noreferrer" title="Fidelity quote">AVGO</a>) / <strong>Marvell</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=MRVL" target="_blank" rel="noopener noreferrer" title="Fidelity quote">MRVL</a>) <strong>switch ASICs for that hop</strong> — less needed if GPUs talk optically peer-to-peer (they remain central for scale-out <abbr data-expand="Co-packaged optics" title="Co-packaged optics">CPO</abbr> switches).</li>
+              <li><strong>Credo</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=CRDO" target="_blank" rel="noopener noreferrer" title="Fidelity quote">CRDO</a>) / <strong>Astera Labs</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=ALAB" target="_blank" rel="noopener noreferrer" title="Fidelity quote">ALAB</a>) <strong>retimers on that hop</strong> — less copper channel to rescue (retimers still matter elsewhere in the rack).</li>
+              <li><strong>Fabrinet</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=FN" target="_blank" rel="noopener noreferrer" title="Fidelity quote">FN</a>) <strong>pluggable module assembly</strong> for that hop — engines move on-package (Fabrinet can still build other optics).</li>
+              <li><strong>Cisco</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=CSCO" target="_blank" rel="noopener noreferrer" title="Fidelity quote">CSCO</a>) / <strong>Arista</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=ANET" target="_blank" rel="noopener noreferrer" title="Fidelity quote">ANET</a>) <strong>faceplate optics role on that hop</strong> — less front-panel conversion inside a pure optical scale-up domain (they remain core to Ethernet switching and campus/DC networking).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="h-timelines" id="timelines">
+        <h2 id="h-timelines">6. CPO timelines (five figures)</h2>
+        <p class="lede">
+          Horizontal timelines for scale-out switches, scale-up optical I/O, <strong>TSMC</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=TSM" target="_blank" rel="noopener noreferrer" title="Fidelity quote">TSM</a>) <abbr data-expand="Compact Universal Photonic Engine" title="Compact Universal Photonic Engine">COUPE</abbr>,
+          external light sources, and standards (<abbr data-expand="Universal Chiplet Interconnect Express" title="Universal Chiplet Interconnect Express">UCIe</abbr>, laser <abbr data-expand="Multi-source agreement" title="Multi-source agreement">MSA</abbr>s).
+          Each figure ends with a plain-language end state. <strong>Not investment advice.</strong>
+        </p>
+        <div class="cpo-timelines">
+          <figure class="cpo-timeline">
+            <img src="../../timelines/cpo-timeline-01-scale-out-switches.png?v=cpo-tl1"
+                 alt="Timeline: co-packaged optics for AI scale-out switches from 2026 NVIDIA and Broadcom platforms through 2030 ramp."
+                 width="1520" height="820" loading="lazy" decoding="async">
+            <figcaption>
+              Fig 1 — Scale-out <abbr data-expand="Co-packaged optics" title="Co-packaged optics">CPO</abbr> switches (NVIDIA Quantum-X / Spectrum-X, Broadcom Bailly).
+              SVG: <a href="../../timelines/cpo-timeline-01-scale-out-switches.svg">vector source</a>.
+              Not investment advice.
+            </figcaption>
+          </figure>
+          <figure class="cpo-timeline">
+            <img src="../../timelines/cpo-timeline-02-scale-up-optical-io.png?v=cpo-tl1"
+                 alt="Timeline: scale-up optical I/O from 2025 demos through late-2020s volume timing."
+                 width="1520" height="800" loading="lazy" decoding="async">
+            <figcaption>
+              Fig 2 — Scale-up optical I/O (Ayar, Lightmatter, Celestial→Marvell; SemiAnalysis-style timing).
+              SVG: <a href="../../timelines/cpo-timeline-02-scale-up-optical-io.svg">vector source</a>.
+              Not investment advice.
+            </figcaption>
+          </figure>
+          <figure class="cpo-timeline">
+            <img src="../../timelines/cpo-timeline-03-tsmc-coupe.png?v=cpo-tl1"
+                 alt="Timeline: TSMC Compact Universal Photonic Engine roadmap from 2026 substrate CPO to 2030 density goals."
+                 width="1520" height="760" loading="lazy" decoding="async">
+            <figcaption>
+              Fig 3 — <strong>TSMC</strong> (<a class="co-ticker" href="https://digital.fidelity.com/prgw/digital/research/quote/dashboard/summary?symbol=TSM" target="_blank" rel="noopener noreferrer" title="Fidelity quote">TSM</a>) Compact Universal Photonic Engine (<abbr data-expand="Compact Universal Photonic Engine" title="Compact Universal Photonic Engine">COUPE</abbr>) roadmap.
+              SVG: <a href="../../timelines/cpo-timeline-03-tsmc-coupe.svg">vector source</a>.
+              Not investment advice.
+            </figcaption>
+          </figure>
+          <figure class="cpo-timeline">
+            <img src="../../timelines/cpo-timeline-04-external-light-source.png?v=cpo-tl1"
+                 alt="Timeline: external light source architecture and 2026–2027 multi-wavelength source ramps."
+                 width="1520" height="720" loading="lazy" decoding="async">
+            <figcaption>
+              Fig 4 — External light source (<abbr data-expand="External light source" title="External light source">ELS</abbr>) / multi-wavelength sources.
+              SVG: <a href="../../timelines/cpo-timeline-04-external-light-source.svg">vector source</a>.
+              Not investment advice.
+            </figcaption>
+          </figure>
+          <figure class="cpo-timeline">
+            <img src="../../timelines/cpo-timeline-05-standards.png?v=cpo-tl1"
+                 alt="Timeline: UCIe, laser multi-source agreements, and optical protocol maturity versus copper SerDes."
+                 width="1520" height="740" loading="lazy" decoding="async">
+            <figcaption>
+              Fig 5 — Standards: Universal Chiplet Interconnect Express (<abbr data-expand="Universal Chiplet Interconnect Express" title="Universal Chiplet Interconnect Express">UCIe</abbr>), laser multi-source agreements (<abbr data-expand="Multi-source agreement" title="Multi-source agreement">MSA</abbr>s), optical protocols.
+              SVG: <a href="../../timelines/cpo-timeline-05-standards.svg">vector source</a>.
+              Not investment advice.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section related" id="related">
+        <h2>Related on this hub</h2>
+        <p>
+          Parent optics map:
+          <a href="../index.html">Photonics</a>
+          (stack, scarcity, who-is-who).
+          Computation hardware parent:
+          <a href="../../index.html">Hardware</a>.
+          Power to the package:
+          <a href="../../../electrification/index.html">Electrification</a>.
+          Weekday context:
+          <a href="../../../digests/index.html">AI infra digests</a>.
+        </p>
+      </section>
+
+      <footer class="caveat" id="disclaimer" aria-labelledby="h-disclaimer">
+        <p id="h-disclaimer"><strong>Not investment advice.</strong>
+          This page is an educational briefing for Arman’s public investment hub.
+          It does not recommend buying or selling any security, does not consider your objectives or risk tolerance,
+          and may be incomplete or outdated. Company and ticker mentions are orientation only; Fidelity links are convenience quotes, not recommendations.
+          Do your own research. Past performance and thematic narratives are not guarantees of future results.
+          Section owned by the AI Computation Hardware bot per <a href="../../../OWNERS.md">OWNERS.md</a>.
+        </p>
+      </footer>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>Public investment briefing hub · <a href="https://armanamirzhan.github.io/investment_dashboard_public/">armanamirzhan.github.io/investment_dashboard_public</a></p>
+    <p>Not investment advice. Nested under <a href="../index.html">Photonics</a> · Hardware ownership per <a href="../../../OWNERS.md">OWNERS.md</a>.</p>
+  </footer>
+  <script src="../../../assets/site.js"></script>
+</body>
+</html>

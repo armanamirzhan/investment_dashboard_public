@@ -371,3 +371,102 @@
   border-left: 3px solid var(--warn);
 }
 
+
+/* CPO timelines + nested CPO briefing */
+.briefing abbr[data-expand] {
+  text-decoration: none;
+  color: #8ec5e8;
+  border-bottom: 1px dashed rgba(91, 159, 212, 0.65);
+  cursor: help;
+  padding: 0 0.05em;
+  border-radius: 2px;
+}
+.briefing abbr[data-expand]:hover,
+.briefing abbr[data-expand]:focus {
+  background: var(--accent-soft);
+  color: #b8daf0;
+  border-bottom-color: var(--accent);
+  outline: none;
+}
+
+.briefing a.co-ticker {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.78em;
+  font-weight: 600;
+  color: var(--accent-2);
+  background: var(--accent-2-soft);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  margin-left: 0.2rem;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.briefing a.co-ticker:hover {
+  text-decoration: underline;
+  filter: brightness(1.12);
+}
+.briefing .badge.private {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+  background: var(--bg-soft);
+  border: 1px solid var(--border-soft);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  margin-left: 0.35rem;
+  vertical-align: middle;
+}
+
+.briefing .cpo-timelines {
+  display: grid;
+  gap: 1.5rem;
+  margin: 1.25rem 0 1.75rem;
+}
+.briefing figure.cpo-timeline {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-local);
+  padding: 0.85rem;
+  margin: 0;
+  overflow: hidden;
+}
+.briefing figure.cpo-timeline img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  background: #eceff3;
+}
+.briefing figure.cpo-timeline figcaption {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  padding: 0 0.2rem;
+  line-height: 1.5;
+}
+.briefing .two-col-note {
+  display: grid;
+  gap: 0.85rem;
+}
+@media (min-width: 840px) {
+  .briefing .two-col-note {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.briefing .stay-card,
+.briefing .side-card {
+  background: var(--bg-card-local);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-local);
+  padding: 0.9rem 1rem;
+}
+.briefing .stay-card h3,
+.briefing .side-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: #f0f4fa;
+}
+.briefing .stay-card { border-color: rgba(126, 200, 163, 0.35); }
+.briefing .side-card { border-color: rgba(212, 163, 91, 0.35); }
