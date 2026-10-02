@@ -1,0 +1,110 @@
+{
+  "as_of": "2026-10-02",
+  "owner": "Performance tracker",
+  "decision": "decline_scoring",
+  "reason": "Deferred after Claude audit high/medium fixes; will score on request. No new scorecard pages in this push.",
+  "not_investment_advice": true,
+  "source": "analysis/claude-audit-handoff.json watch_by_field",
+  "names": [
+    {
+      "name": "Generac",
+      "ticker": "GNRC",
+      "field": "field-onsite"
+    },
+    {
+      "name": "Cummins",
+      "ticker": "CMI",
+      "field": "field-onsite"
+    },
+    {
+      "name": "Caterpillar",
+      "ticker": "CAT",
+      "field": "field-onsite"
+    },
+    {
+      "name": "Hubbell",
+      "ticker": "HUBB",
+      "field": "field-switchgear"
+    },
+    {
+      "name": "Powell Industries",
+      "ticker": "POWL",
+      "field": "field-switchgear"
+    },
+    {
+      "name": "Littelfuse",
+      "ticker": "LFUS",
+      "field": "field-switchgear"
+    },
+    {
+      "name": "Siemens AG",
+      "ticker": "SIEGY",
+      "field": "field-switchgear",
+      "note": "MV + Reinhausen SST; distinct from Siemens Energy"
+    },
+    {
+      "name": "Hitachi",
+      "ticker": "HTHIY",
+      "field": "field-facility",
+      "note": "Hitachi Energy HVDC/LPT"
+    },
+    {
+      "name": "HD Hyundai Electric",
+      "ticker": "267260.KS",
+      "field": "field-facility"
+    },
+    {
+      "name": "Hyosung Heavy",
+      "ticker": "298040.KS",
+      "field": "field-facility"
+    },
+    {
+      "name": "Prysmian",
+      "ticker": "PRYMY",
+      "field": "field-facility"
+    },
+    {
+      "name": "Vicor",
+      "ticker": "VICR",
+      "field": "field-rack"
+    },
+    {
+      "name": "Lite-On",
+      "ticker": "2301.TW",
+      "field": "field-rack"
+    },
+    {
+      "name": "onsemi",
+      "ticker": "ON",
+      "field": "field-sic",
+      "note": "device lane cross-link; capacity already gold"
+    },
+    {
+      "name": "Navitas",
+      "ticker": "NVTS",
+      "field": "field-sic"
+    },
+    {
+      "name": "Monolithic Power",
+      "ticker": "MPWR",
+      "field": "field-sic"
+    },
+    {
+      "name": "SICC",
+      "ticker": "2631.HK",
+      "field": "field-sic-capacity",
+      "note": "also SHA:688234"
+    },
+    {
+      "name": "Aixtron",
+      "ticker": "AIXXF",
+      "field": "field-sic-capacity",
+      "note": "Xetra AIXA.DE"
+    },
+    {
+      "name": "PVA TePla",
+      "ticker": "TPE.DE",
+      "field": "field-sic-capacity"
+    }
+  ]
+}

@@ -457,7 +457,7 @@
       </label>
       <button id="saveBtn" type="button">Save this week</button>
       <button id="exportBtn" class="secondary" type="button">Export JSON</button>
-      <button id="resetBtn" class="secondary" type="button">Reset to video baseline</button>
+      <button id="resetBtn" class="secondary" type="button">Reset to shipped defaults</button>
     </div>
   </header>
 
@@ -473,13 +473,13 @@
 
 
   <div class="banner">
-    <p id="bannerText">Source slide titled these “Six Gauges to Watch Every Quarter.” This page is set up for weekly check-ins as requested. Baseline statuses match the video ending slide.</p>
+    <p id="bannerText">Source slide titled these “Six Gauges to Watch Every Quarter.” This page is set up for weekly check-ins as requested. Shipped defaults match the latest verified weekly levels (see updates/oklo-week-latest.json).</p>
   </div>
 
   <section class="import-panel">
     <div class="import-card">
       <h3>Import weekly update</h3>
-      <p class="hint">Paste or load a JSON update from the weekly routine (see schema comment in this file / <code>update-schema.example.json</code>). Apply sets gauges, notes, citations, week history, and the summary banner.</p>
+      <p class="hint">Paste or load a JSON update from the weekly routine (schema comment in this file; live example: <code>updates/oklo-week-latest.json</code>). Apply sets gauges, notes, citations, week history, and the summary banner. On page load the tracker also auto-fetches that latest file when available.</p>
       <div class="import-row">
         <input type="file" id="importFile" accept="application/json,.json" />
       </div>
@@ -518,7 +518,8 @@ const GAUGES = [
     subtitle: 'The path to first fuel & first data',
     levels: ['Behind', 'On Track', 'Ahead'],
     tracks: ['Site preparation', 'Equipment manufacturing', 'Construction progress', 'Testing & commissioning'],
-    goal: 'Target: Criticality in 2027',
+    goal: 'Groves first criticality Aug 5–6, 2026 (DOE pilot); Aurora-INL commercial target ~2028',
+    videoBaseline: 2,
     baseline: 2
   },
   {
@@ -529,7 +530,8 @@ const GAUGES = [
     levels: ['None', 'LOI Signed', 'PPA Executed'],
     tracks: ['Active LOIs', 'Progress of conversion conversations', 'Contract terms (price, tenor, delivery)'],
     goal: 'Goal: First binding PPA',
-    baseline: 2
+    videoBaseline: 2,
+    baseline: 1
   },
   {
     id: 'haleu',
@@ -539,7 +541,8 @@ const GAUGES = [
     levels: ['No Contract', 'Contract Signed', 'Deliveries on Track'],
     tracks: ['Definitive supply agreement', 'Quantities & pricing', 'Delivery schedule for 2029 startup', 'DOE / regulatory approvals'],
     goal: 'Goal: On-time fuel delivery',
-    baseline: 2
+    videoBaseline: 2,
+    baseline: 0
   },
   {
     id: 'cash',
@@ -549,6 +552,7 @@ const GAUGES = [
     levels: ['High Burn', 'In Line', 'Below Guidance'],
     tracks: ['Quarterly cash burn vs. guidance', 'Cash balance & runway', 'Equity raised (YTD & planned)', 'Dilution level'],
     goal: 'Goal: Extend runway with minimal dilution',
+    videoBaseline: 1,
     baseline: 1
   },
   {
@@ -559,23 +563,25 @@ const GAUGES = [
     levels: ['Behind', 'On Track', 'Ahead'],
     tracks: ['Combined License Application (COLA) status', 'NRC review milestones', 'Environmental reviews', 'Target license approvals'],
     goal: 'Goal: Timely approval',
-    baseline: 2
+    videoBaseline: 2,
+    baseline: 1
   },
   {
     id: 'revenue',
     num: 6,
     title: 'FIRST ACTUAL REVENUE',
-    subtitle: 'Starting with isotopes in 2025',
+    subtitle: 'Isotope/power revenue still ahead; acq eng/fab ≠ product sales',
     levels: ['No Revenue', 'Isotope Revenue', 'Power Revenue'],
-    tracks: ['Isotope production & sales (2025)', 'Revenue amount & growth', 'Customer pipeline', 'Transition to power sales'],
+    tracks: ['Isotope production & sales', 'Revenue amount & growth', 'Customer pipeline', 'Transition to power sales'],
     goal: 'Goal: First actual revenue — isotopes first, then power',
-    baseline: 2
+    videoBaseline: 2,
+    baseline: 0
   }
 ];
 
 const LEVEL_CLASS = ['red', 'yellow', 'green'];
 const NEEDLE_DEG = [-60, 0, 60];
-const DEFAULT_BANNER = 'Source slide titled these “Six Gauges to Watch Every Quarter.” This page is set up for weekly check-ins as requested. Baseline statuses match the video ending slide.';
+const DEFAULT_BANNER = 'Source slide titled these “Six Gauges to Watch Every Quarter.” This page is set up for weekly check-ins as requested. Shipped defaults match the latest verified weekly levels (see updates/oklo-week-latest.json).';
 
 function isoWeekNow() {
   const d = new Date();
@@ -912,7 +918,7 @@ document.getElementById('exportBtn').addEventListener('click', () => {
   URL.revokeObjectURL(a.href);
 });
 document.getElementById('resetBtn').addEventListener('click', () => {
-  if (!confirm('Reset current statuses to the video baseline? History is kept.')) return;
+  if (!confirm('Reset current statuses to shipped defaults (latest verified weekly levels)? History is kept.')) return;
   state.current = defaultCurrent();
   saveState(state);
   setBanner(DEFAULT_BANNER);
@@ -961,6 +967,22 @@ if (state.lastAutoUpdate && state.history.length) {
 renderLastAuto();
 renderCards();
 renderHistory();
+
+// Auto-fetch latest shipped weekly update so fresh visitors see verified levels (not video greens).
+async function tryAutoFetchLatest() {
+  try {
+    const res = await fetch('updates/oklo-week-latest.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const payload = await res.json();
+    const week = applyImportPayload(payload);
+    setImportStatus('Auto-loaded shipped update for ' + week + '.', 'ok');
+  } catch (err) {
+    // Keep localStorage / shipped-default behavior if fetch fails (file://, offline, 404).
+    console.warn('Oklo auto-fetch skipped:', err && err.message ? err.message : err);
+  }
+}
+tryAutoFetchLatest();
+
 </script>
   <script src="../../assets/site.js"></script>
 </body>

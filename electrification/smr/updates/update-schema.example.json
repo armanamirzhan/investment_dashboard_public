@@ -1,0 +1,22 @@
+{
+  "week": "2026-W40",
+  "generatedAt": "2026-09-30T17:19:41.000Z",
+  "source": "oklo-weekly-routine",
+  "gauges": {
+    "groves": {
+      "level": 2,
+      "label": "Ahead",
+      "note": "Short plain-language note for this gauge.",
+      "confidence": "high",
+      "citations": [
+        { "title": "Example source title", "url": "https://example.com/source" }
+      ]
+    },
+    "ppa": { "level": 1, "label": "LOI Signed", "note": "...", "confidence": "high", "citations": [] },
+    "haleu": { "level": 0, "label": "No Contract", "note": "...", "confidence": "high", "citations": [] },
+    "cash": { "level": 1, "label": "In Line", "note": "...", "confidence": "high", "citations": [] },
+    "nrc": { "level": 1, "label": "On Track", "note": "...", "confidence": "medium", "citations": [] },
+    "revenue": { "level": 0, "label": "No Revenue", "note": "...", "confidence": "high", "citations": [] }
+  },
+  "summary": "One-paragraph digest shown in the banner after import."
+}
