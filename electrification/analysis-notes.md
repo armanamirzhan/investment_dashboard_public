@@ -125,3 +125,14 @@ Closed high-priority coverage-gaps on Power Map + uranium Cameco (folder-only; s
 
 Not investment advice.
 
+## Claude audit medium batch (Oct 2, 2026 follow-up)
+
+- Siemens Energy US OTC **SMEGF** (SMNEY did not quote 2 Oct 2026).
+- Digest adds: **LS Electric** (transformers), **LG Energy Solution** (BESS); Tesla Megapack already on UPS.
+- Reciprocal links to `analysis/sic-burn-in.html` from Aehr / SiC burn-in copy.
+- NextEra–Dominion restated as pending acquisition (NEE / D).
+- Utility/IPP tickers on §8.2; hop 1 names GEV + Siemens Energy as large-frame turbine OEMs.
+- Compact table A-007 column fix; multi-ticker cells split for A-006; static note for stages without hotspots (A-008).
+
+Not investment advice.
+

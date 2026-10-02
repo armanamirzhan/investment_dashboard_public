@@ -21,9 +21,9 @@
         },
         {
           "name": "Siemens Energy",
-          "ticker": "ENR.DE / SMNEY",
+          "ticker": "ENR.DE / SMEGF",
           "note": "Utility generation and grid equipment",
-          "fidelity_symbol": "SMNEY"
+          "fidelity_symbol": "SMEGF"
         },
         {
           "name": "Caterpillar",
@@ -141,9 +141,9 @@
         },
         {
           "name": "Siemens Energy",
-          "ticker": "ENR.DE / SMNEY",
+          "ticker": "ENR.DE / SMEGF",
           "note": "Transmission and facility transformers",
-          "fidelity_symbol": "SMNEY"
+          "fidelity_symbol": "SMEGF"
         },
         {
           "name": "Hitachi Energy",
@@ -181,6 +181,11 @@
           "note": "Memphis plant — key US 765 kV large power transformer source — Korea listing; no US Fidelity line here"
         },
         {
+          "name": "LS Electric",
+          "ticker": "010120.KS",
+          "note": "Won a ~₩181B order for 345 kV transformers for a North American hyperscale data center (digest baseline note) — Korea listing; no US Fidelity line here"
+        },
+        {
           "name": "Cleveland-Cliffs",
           "ticker": "CLF",
           "note": "Upstream GOES for grid/facility transformers (supply-chain bottleneck context)",
@@ -202,9 +207,9 @@
         },
         {
           "name": "Siemens Energy",
-          "ticker": "ENR.DE / SMNEY",
+          "ticker": "ENR.DE / SMEGF",
           "note": "Transmission and facility power equipment",
-          "fidelity_symbol": "SMNEY"
+          "fidelity_symbol": "SMEGF"
         },
         {
           "name": "Hitachi Energy",
@@ -265,9 +270,9 @@
         },
         {
           "name": "Siemens Energy",
-          "ticker": "ENR.DE / SMNEY",
+          "ticker": "ENR.DE / SMEGF",
           "note": "HVDC / converter-station capability",
-          "fidelity_symbol": "SMNEY"
+          "fidelity_symbol": "SMEGF"
         },
         {
           "name": "GE Vernova",
@@ -297,9 +302,9 @@
         },
         {
           "name": "Siemens Energy",
-          "ticker": "ENR.DE / SMNEY",
+          "ticker": "ENR.DE / SMEGF",
           "note": "HVDC transmission capability",
-          "fidelity_symbol": "SMNEY"
+          "fidelity_symbol": "SMEGF"
         },
         {
           "name": "GE Vernova",
@@ -732,9 +737,9 @@
         },
         {
           "name": "Siemens Energy",
-          "ticker": "ENR.DE / SMNEY",
+          "ticker": "ENR.DE / SMEGF",
           "note": "Grid / renewables equipment",
-          "fidelity_symbol": "SMNEY"
+          "fidelity_symbol": "SMEGF"
         },
         {
           "name": "Hitachi Energy",
@@ -851,9 +856,9 @@
         },
         {
           "name": "Siemens Energy",
-          "ticker": "ENR.DE / SMNEY",
+          "ticker": "ENR.DE / SMEGF",
           "note": "Grid and facility power equipment",
-          "fidelity_symbol": "SMNEY"
+          "fidelity_symbol": "SMEGF"
         },
         {
           "name": "Schneider Electric",
@@ -896,9 +901,9 @@
         },
         {
           "name": "Siemens Energy",
-          "ticker": "ENR.DE / SMNEY",
+          "ticker": "ENR.DE / SMEGF",
           "note": "Facility transformers",
-          "fidelity_symbol": "SMNEY"
+          "fidelity_symbol": "SMEGF"
         },
         {
           "name": "Hitachi Energy",
@@ -940,6 +945,11 @@
           "name": "Hyosung Heavy Industries",
           "ticker": "298040.KS",
           "note": "Memphis plant — key US 765 kV large power transformer source — Korea listing; no US Fidelity line here"
+        },
+        {
+          "name": "LS Electric",
+          "ticker": "010120.KS",
+          "note": "Won a ~₩181B order for 345 kV transformers for a North American hyperscale data center (digest baseline note) — Korea listing; no US Fidelity line here"
         },
         {
           "name": "Cleveland-Cliffs",
@@ -993,6 +1003,11 @@
           "ticker": "FLNC",
           "note": "Utility- and campus-scale BESS systems (battery storage / backup energy)",
           "fidelity_symbol": "FLNC"
+        },
+        {
+          "name": "LG Energy Solution",
+          "ticker": "373220.KS",
+          "note": "Battery cells / systems — NVIDIA DSX Ready BESS vendor in digest baseline notes — Korea listing; no US Fidelity line here"
         },
         {
           "name": "Hitachi Energy",
@@ -1167,9 +1182,9 @@
         },
         {
           "name": "Siemens Energy",
-          "ticker": "ENR.DE / SMNEY",
+          "ticker": "ENR.DE / SMEGF",
           "note": "High-voltage transmission switchgear / T&D gear (grid side)",
-          "fidelity_symbol": "SMNEY"
+          "fidelity_symbol": "SMEGF"
         },
         {
           "name": "ABB",

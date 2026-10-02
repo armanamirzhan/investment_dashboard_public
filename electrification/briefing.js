@@ -407,6 +407,21 @@
     }
   });
 
+
+  function splitTickerTokens(text) {
+    // Split multi-ticker cells on middot, comma, or " / " while keeping "SU.PA / SBGSY" as one token when both sides look like one listing pair.
+    var raw = String(text || "").trim();
+    if (!raw) return [];
+    if (/[·,]/.test(raw) || /\s\/\s/.test(raw) && raw.split(/[·,]/).length > 1) {
+      return raw.split(/\s*[·,]\s*|\s+\/\s+/).map(function (s) { return s.trim(); }).filter(Boolean);
+    }
+    // "FLEX · AEIS" already handled; single tokens stay whole
+    if (raw.indexOf("·") >= 0) {
+      return raw.split("·").map(function (s) { return s.trim(); }).filter(Boolean);
+    }
+    return [raw];
+  }
+
   function enhancePageTickers() {
     // Restyle .ticker nodes and turn them into Fidelity links without breaking <td class="ticker">
     document.querySelectorAll(".briefing .ticker").forEach(function (el) {
@@ -414,6 +429,30 @@
       if (el.tagName === "A") { el.setAttribute("data-tax-enhanced", "1"); return; }
       var text = (el.textContent || "").trim();
       if (!text) return;
+      // Nested .ticker spans already split — enhance each leaf, skip wrappers that only contain child .tickers
+      if (el.querySelector && el.querySelector(".ticker") && el.children.length) {
+        el.setAttribute("data-tax-enhanced", "1");
+        return;
+      }
+      var tokens = splitTickerTokens(text);
+      if (tokens.length > 1 && (el.tagName === "TD" || el.tagName === "SPAN" || el.tagName === "TH")) {
+        el.setAttribute("data-tax-enhanced", "1");
+        if (el.tagName === "TD" || el.tagName === "TH") el.className = "";
+        el.textContent = "";
+        tokens.forEach(function (tok, ti) {
+          if (ti) el.appendChild(document.createTextNode(" · "));
+          var span = document.createElement("span");
+          span.className = "ticker";
+          span.textContent = tok;
+          el.appendChild(span);
+        });
+        // Re-run enhancer on the new leaf spans in a nested pass below via querySelectorAll already live? 
+        // Mark leaves for a second pass:
+        el.querySelectorAll(".ticker").forEach(function (leaf) {
+          leaf.removeAttribute("data-tax-enhanced");
+        });
+        return;
+      }
       var nameText = null;
       var row = el.closest("tr");
       if (row) {
@@ -458,7 +497,8 @@
           if (/^[A-Z]{1,5}$/i.test(p)) { fid = p.toUpperCase(); url = fidelityUrl(fid); break; }
         }
         if (!url && /SIEGY/i.test(text)) { fid = "SIEGY"; url = fidelityUrl(fid); }
-        if (!url && /SMNEY/i.test(text)) { fid = "SMNEY"; url = fidelityUrl(fid); }
+        if (!url && /SMEGF/i.test(text)) { fid = "SMEGF"; url = fidelityUrl(fid); }
+        if (!url && /SMNEY/i.test(text)) { fid = "SMEGF"; url = fidelityUrl(fid); }
         if (!url && /CPWHF/i.test(text)) { fid = "CPWHF"; url = fidelityUrl(fid); }
         if (!url && /PRYMY/i.test(text)) { fid = "PRYMY"; url = fidelityUrl(fid); }
         if (!url && /LGRDY/i.test(text)) { fid = "LGRDY"; url = fidelityUrl(fid); }
@@ -506,6 +546,68 @@
         } else {
           el.className = cls;
         }
+      }
+    });
+
+    // Second pass: leaf .ticker spans created by multi-ticker split
+    document.querySelectorAll(".briefing .ticker").forEach(function (el) {
+      if (el.getAttribute("data-tax-enhanced") === "1") return;
+      if (el.tagName === "A") { el.setAttribute("data-tax-enhanced", "1"); return; }
+      if (el.querySelector && el.querySelector(".ticker")) return;
+      var text = (el.textContent || "").trim();
+      if (!text) return;
+      var meta = lookupCompanyMeta(text, null);
+      var mark = companyMark(meta);
+      var fid = companyFidelity(meta);
+      var cls = tickerClass(mark);
+      var url = fidelityUrl(fid);
+      if (!url) {
+        var parts = text.split(/[\/·|,]/);
+        for (var i = 0; i < parts.length; i++) {
+          var p = parts[i].replace(/NYSE:|NASDAQ:|LSE:|TSE:|KRX:|via/gi, "").trim();
+          if (/^[A-Z]{1,5}$/i.test(p) && p.indexOf(".") === -1 && !/^\d/.test(p)) {
+            // bare US ticker only
+            if (!/\./.test(text) && !/^(LSE|KRX|TSE)/i.test(text)) {
+              fid = p.toUpperCase(); url = fidelityUrl(fid); break;
+            }
+          }
+        }
+        if (!url && /SMEGF|SMNEY/i.test(text)) { fid = "SMEGF"; url = fidelityUrl(fid); }
+        if (!url && /SBGSY/i.test(text)) { fid = "SBGSY"; url = fidelityUrl(fid); }
+        if (!url && /IFNNY|\bIFX\b/i.test(text)) { fid = "IFNNY"; url = fidelityUrl(fid); }
+        if (!url && /\bGEV\b/i.test(text)) { fid = "GEV"; url = fidelityUrl(fid); }
+        if (!url && /\bETN\b/i.test(text)) { fid = "ETN"; url = fidelityUrl(fid); }
+        if (!url && /\bVRT\b/i.test(text)) { fid = "VRT"; url = fidelityUrl(fid); }
+        if (!url && /\bSTM\b/i.test(text)) { fid = "STM"; url = fidelityUrl(fid); }
+        if (!url && /\bWOLF\b/i.test(text)) { fid = "WOLF"; url = fidelityUrl(fid); }
+        if (!url && /\bFLEX\b/i.test(text)) { fid = "FLEX"; url = fidelityUrl(fid); }
+        if (!url && /\bAEIS\b/i.test(text)) { fid = "AEIS"; url = fidelityUrl(fid); }
+        if (!url && /\bNVT\b/i.test(text)) { fid = "NVT"; url = fidelityUrl(fid); }
+        if (!url && /\bMOD\b/i.test(text)) { fid = "MOD"; url = fidelityUrl(fid); }
+        if (!url && /\bPOWL\b/i.test(text)) { fid = "POWL"; url = fidelityUrl(fid); }
+        if (!url && /\bHUBB\b/i.test(text)) { fid = "HUBB"; url = fidelityUrl(fid); }
+        if (!url && /\bPLUG\b/i.test(text)) { fid = "PLUG"; url = fidelityUrl(fid); }
+        if (!url && /\bBLDP\b/i.test(text)) { fid = "BLDP"; url = fidelityUrl(fid); }
+        if (!url && /\bVICR\b/i.test(text)) { fid = "VICR"; url = fidelityUrl(fid); }
+        if (!url && /\bPWR\b/i.test(text)) { fid = "PWR"; url = fidelityUrl(fid); }
+        if (!url && /\bABBNY\b/i.test(text)) { fid = "ABBNY"; url = fidelityUrl(fid); }
+        if (!url && /CPWHF/i.test(text)) { fid = "CPWHF"; url = fidelityUrl(fid); }
+        if (!url && /SIEGY/i.test(text)) { fid = "SIEGY"; url = fidelityUrl(fid); }
+        if (!url && /6501/i.test(text)) { fid = "HTHIY"; url = fidelityUrl(fid); }
+      }
+      el.setAttribute("data-tax-enhanced", "1");
+      if (url) {
+        var a = document.createElement("a");
+        a.className = cls;
+        a.href = url;
+        a.target = "_blank";
+        a.rel = "noopener noreferrer";
+        a.title = "Fidelity quote: " + (fid || text);
+        a.textContent = text;
+        a.setAttribute("data-tax-enhanced", "1");
+        el.replaceWith(a);
+      } else {
+        el.className = cls;
       }
     });
 
