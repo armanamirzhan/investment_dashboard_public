@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coherent (COHR) — SiC capacity scorecard</title>
+  <meta name="description" content="One-screen scorecard for Coherent (COHR) in the SiC substrate / epi capacity theme. Not investment advice.">
+  <link rel="stylesheet" href="../../assets/site.css">
+  <style>
+  .score { max-width: 920px; margin: 0 auto; padding: 10px 16px 8px; }
+  .co-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 12px; margin-bottom:6px; }
+  .co-head h1 { font-size:1.25rem; font-weight:700; color:var(--text-on-dark); margin:0; letter-spacing:-.02em; }
+  .tickers { display:flex; gap:6px; flex-wrap:wrap; }
+  .badge { font-size:11px; font-weight:700; padding:2px 8px; border-radius:999px; background:rgba(76,139,245,.15); color:var(--accent-blue); }
+  .role { font-size:12.5px; color:var(--text-secondary); margin:0 0 10px; line-height:1.35; }
+  .metrics { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-bottom:10px; }
+  .metric { background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:7px 9px; min-height:0; }
+  .metric .mlabel { font-size:10px; text-transform:uppercase; letter-spacing:.04em; color:var(--text-secondary); margin-bottom:3px; }
+  .metric .mrow { display:flex; align-items:center; gap:6px; }
+  .dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+  .dot.l0 { background:var(--accent-red); box-shadow:0 0 0 2px rgba(234,67,53,.25); }
+  .dot.l1 { background:var(--accent-orange); box-shadow:0 0 0 2px rgba(249,171,0,.25); }
+  .dot.l2 { background:var(--accent-green); box-shadow:0 0 0 2px rgba(52,168,83,.25); }
+  .metric .mnote { font-size:11.5px; color:var(--text-primary); line-height:1.3; }
+  .cols { display:grid; grid-template-columns:1.4fr .9fr; gap:8px; margin-bottom:8px; }
+  .box { background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:10px 12px; }
+  .box h2 { font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--accent-blue); margin:0 0 6px; }
+  .box p { font-size:12.5px; color:var(--text-secondary); margin:0; line-height:1.4; }
+  .box a { color:var(--accent-cyan); }
+  .stance { border-color:rgba(76,139,245,.35); background:linear-gradient(135deg,rgba(76,139,245,.08),var(--bg-card)); }
+  .stance .tag { display:inline-block; font-size:13px; font-weight:700; color:var(--text-on-dark); margin-bottom:4px; }
+  .stance .tag.buy,.stance .tag.accumulate { color:var(--accent-green); }
+  .stance .tag.hold { color:var(--accent-orange); }
+  .stance .tag.avoid { color:var(--accent-red); }
+  .street { font-size:11px; color:var(--text-secondary); margin-top:6px; }
+  .foot { display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; align-items:center; font-size:11px; color:var(--text-secondary); padding-top:4px; border-top:1px solid var(--border); }
+  .foot strong { color:var(--text-primary); font-weight:600; }
+  @media (max-width:720px){
+    .metrics { grid-template-columns:1fr 1fr; }
+    .cols { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a class="brand" href="../../index.html">Arman <span>Invest</span></a>
+      <div class="nav-links">
+        <a href="../../index.html" data-section="home">Hub</a>
+        <a href="../../electrification/index.html" data-section="electrification">Electrification</a>
+        <a href="../../hardware/index.html" data-section="hardware">Hardware</a>
+        <a href="../../software/index.html" data-section="software">Software</a>
+        <a href="../../semiconductors/index.html" data-section="semiconductors">Fabrication</a>
+        <a href="../../hyperscalers/index.html" data-section="hyperscalers">Hyperscalers</a>
+        <a href="../../analysis/index.html" data-section="analysis">Analysis</a>
+        <a href="../../digests/index.html" data-section="digests">Digests</a>
+      </div>
+    </div>
+  </nav>
+  <main class="score">
+    <header class="co-head">
+      <h1>Coherent</h1>
+      <div class="tickers"><span class="badge">COHR</span><span class="badge">NYSE</span></div>
+    </header>
+    <p class="role">Merchant SiC substrates and epitaxial wafers (incl. 200 mm epi).</p>
+    <div class="metrics">
+      <div class="metric"><div class="mlabel">200 mm epi readiness</div><div class="mrow"><span class="dot l2" title="level 2"></span><span class="mnote">Shipping 200 mm n-type epi (from Sep 2024); thick epi to ~10 kV class.</span></div></div><div class="metric"><div class="mlabel">Merchant materials share</div><div class="mrow"><span class="dot l2" title="level 2"></span><span class="mnote">DENSO / Mitsubishi Electric equity + long-term substrate/epi supply.</span></div></div><div class="metric"><div class="mlabel">SiC revenue purity</div><div class="mrow"><span class="dot l0" title="level 0"></span><span class="mnote">Lasers and optical networking still dominate the equity story.</span></div></div><div class="metric"><div class="mlabel">Customer diversification</div><div class="mrow"><span class="dot l2" title="level 2"></span><span class="mnote">Device OEMs as buyers; not captive-only to one auto line.</span></div></div><div class="metric"><div class="mlabel">EV / wafer cyclicality</div><div class="mrow"><span class="dot l1" title="level 1"></span><span class="mnote">Wafer demand tied to EV and industrial power cycles.</span></div></div><div class="metric"><div class="mlabel">Valuation vs peers</div><div class="mrow"><span class="dot l1" title="level 1"></span><span class="mnote">Elevated after AI optics / SiC headlines; capacity not free.</span></div></div>
+    </div>
+    <div class="cols">
+      <section class="box">
+        <h2>Thesis</h2>
+        <p>Coherent sells merchant <a href="https://en.wikipedia.org/wiki/Silicon_carbide">SiC</a> <a href="https://en.wikipedia.org/wiki/Epitaxy">epitaxial wafers</a> — including 200 mm — so device makers can ramp without owning crystal growth. Thick epi aimed at multi-kilovolt AI-datacenter and industrial power is a capacity differentiator, but lasers/networking still dilute how “pure” the equity is to SiC wafers.</p>
+      </section>
+      <aside class="box stance">
+        <h2>Stance (personal research)</h2>
+        <div class="tag accumulate">Accumulate</div>
+        <p>One of the few liquid merchant 200 mm epi capacity names with OEM equity anchors; buy the materials lever, not a pure SiC multiple.</p>
+        <p class="street">Street leaning: Moderate Buy (MarketBeat consensus, 2026; targets lifted after Apr 2026 thick-epi news).</p>
+      </aside>
+    </div>
+    <div class="foot">
+      <span><strong>Not investment advice.</strong> Research for personal education. As of 2026-10-01.</span>
+      <a href="index.html">← All company scorecards</a>
+    </div>
+  </main>
+  <script src="../../assets/site.js"></script>
+</body>
+</html>

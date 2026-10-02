@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROHM (ROHCY) — SiC capacity scorecard</title>
+  <meta name="description" content="One-screen scorecard for ROHM (ROHCY / TSE 6963) in the SiC substrate / captive fab capacity theme. Not investment advice.">
+  <link rel="stylesheet" href="../../assets/site.css">
+  <style>
+  .score { max-width: 920px; margin: 0 auto; padding: 10px 16px 8px; }
+  .co-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 12px; margin-bottom:6px; }
+  .co-head h1 { font-size:1.25rem; font-weight:700; color:var(--text-on-dark); margin:0; letter-spacing:-.02em; }
+  .tickers { display:flex; gap:6px; flex-wrap:wrap; }
+  .badge { font-size:11px; font-weight:700; padding:2px 8px; border-radius:999px; background:rgba(76,139,245,.15); color:var(--accent-blue); }
+  .role { font-size:12.5px; color:var(--text-secondary); margin:0 0 10px; line-height:1.35; }
+  .metrics { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-bottom:10px; }
+  .metric { background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:7px 9px; min-height:0; }
+  .metric .mlabel { font-size:10px; text-transform:uppercase; letter-spacing:.04em; color:var(--text-secondary); margin-bottom:3px; }
+  .metric .mrow { display:flex; align-items:center; gap:6px; }
+  .dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; }
+  .dot.l0 { background:var(--accent-red); box-shadow:0 0 0 2px rgba(234,67,53,.25); }
+  .dot.l1 { background:var(--accent-orange); box-shadow:0 0 0 2px rgba(249,171,0,.25); }
+  .dot.l2 { background:var(--accent-green); box-shadow:0 0 0 2px rgba(52,168,83,.25); }
+  .metric .mnote { font-size:11.5px; color:var(--text-primary); line-height:1.3; }
+  .cols { display:grid; grid-template-columns:1.4fr .9fr; gap:8px; margin-bottom:8px; }
+  .box { background:var(--bg-card); border:1px solid var(--border); border-radius:8px; padding:10px 12px; }
+  .box h2 { font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--accent-blue); margin:0 0 6px; }
+  .box p { font-size:12.5px; color:var(--text-secondary); margin:0; line-height:1.4; }
+  .box a { color:var(--accent-cyan); }
+  .stance { border-color:rgba(76,139,245,.35); background:linear-gradient(135deg,rgba(76,139,245,.08),var(--bg-card)); }
+  .stance .tag { display:inline-block; font-size:13px; font-weight:700; color:var(--text-on-dark); margin-bottom:4px; }
+  .stance .tag.buy,.stance .tag.accumulate { color:var(--accent-green); }
+  .stance .tag.hold { color:var(--accent-orange); }
+  .stance .tag.avoid { color:var(--accent-red); }
+  .street { font-size:11px; color:var(--text-secondary); margin-top:6px; }
+  .foot { display:flex; flex-wrap:wrap; justify-content:space-between; gap:8px; align-items:center; font-size:11px; color:var(--text-secondary); padding-top:4px; border-top:1px solid var(--border); }
+  .foot strong { color:var(--text-primary); font-weight:600; }
+  @media (max-width:720px){
+    .metrics { grid-template-columns:1fr 1fr; }
+    .cols { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Primary">
+    <div class="nav-inner">
+      <a class="brand" href="../../index.html">Arman <span>Invest</span></a>
+      <div class="nav-links">
+        <a href="../../index.html" data-section="home">Hub</a>
+        <a href="../../electrification/index.html" data-section="electrification">Electrification</a>
+        <a href="../../hardware/index.html" data-section="hardware">Hardware</a>
+        <a href="../../software/index.html" data-section="software">Software</a>
+        <a href="../../semiconductors/index.html" data-section="semiconductors">Fabrication</a>
+        <a href="../../hyperscalers/index.html" data-section="hyperscalers">Hyperscalers</a>
+        <a href="../../analysis/index.html" data-section="analysis">Analysis</a>
+        <a href="../../digests/index.html" data-section="digests">Digests</a>
+      </div>
+    </div>
+  </nav>
+  <main class="score">
+    <header class="co-head">
+      <h1>ROHM</h1>
+      <div class="tickers"><span class="badge">ROHCY</span><span class="badge">TSE 6963</span></div>
+    </header>
+    <p class="role">SiCrystal substrates + captive SiC device fabs — vertical capacity.</p>
+    <div class="metrics">
+      <div class="metric"><div class="mlabel">Vertical (SiCrystal + fabs)</div><div class="mrow"><span class="dot l2" title="level 2"></span><span class="mnote">German SiCrystal substrates feeding captive Japan device fabs.</span></div></div><div class="metric"><div class="mlabel">8-inch / 200 mm shift</div><div class="mrow"><span class="dot l1" title="level 1"></span><span class="mnote">Moving to 8-inch internal substrates; external 6-inch sales downsized.</span></div></div><div class="metric"><div class="mlabel">EV-cycle / BEV risk</div><div class="mrow"><span class="dot l0" title="level 0"></span><span class="mnote">BEV softness drove large SiC-related impairment (~¥194B).</span></div></div><div class="metric"><div class="mlabel">Captive utilization</div><div class="mrow"><span class="dot l1" title="level 1"></span><span class="mnote">Equipment installs paused where demand soft; device lines selective full.</span></div></div><div class="metric"><div class="mlabel">Balance sheet after impairment</div><div class="mrow"><span class="dot l1" title="level 1"></span><span class="mnote">Hit clears depreciation path to profitability targets, but confidence scar remains.</span></div></div><div class="metric"><div class="mlabel">ADR / conglomerate mix</div><div class="mrow"><span class="dot l1" title="level 1"></span><span class="mnote">Broad analog/discrete mix; US ADR liquidity limited.</span></div></div>
+    </div>
+    <div class="cols">
+      <section class="box">
+        <h2>Thesis</h2>
+        <p>ROHM owns SiCrystal substrate capacity plus captive SiC fabs — a vertical materials-to-device stack — but the investment question for this field is whether EV softness and the FY2025 impairment strand that capacity below plan. External substrate sales were cut as 6-inch oversupply hit; internal 8-inch is the recovery path.</p>
+      </section>
+      <aside class="box stance">
+        <h2>Stance (personal research)</h2>
+        <div class="tag hold">Hold</div>
+        <p>Vertical capacity is real, but BEV-driven impairment and paused installs argue for waiting on utilization and 8-inch yield proof.</p>
+        <p class="street">Street leaning: Japan sell-side mixed after SiC impairment; US ADR coverage thin (as of 2026).</p>
+      </aside>
+    </div>
+    <div class="foot">
+      <span><strong>Not investment advice.</strong> Research for personal education. As of 2026-10-01.</span>
+      <a href="index.html">← All company scorecards</a>
+    </div>
+  </main>
+  <script src="../../assets/site.js"></script>
+</body>
+</html>

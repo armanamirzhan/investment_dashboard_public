@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Company scorecards — onsite DC / 800 V DC — Investment Hub</title>
-  <meta name="description" content="One-screen company scorecards for public names tied to onsite DC and 800 V DC AI datacenter power. Not investment advice.">
+  <title>Company scorecards — onsite DC & SiC capacity — Investment Hub</title>
+  <meta name="description" content="One-screen company scorecards for onsite DC / 800 V DC AI power and SiC wafer &amp; fab capacity names. Not investment advice.">
   <link rel="stylesheet" href="../../assets/site.css">
 </head>
 <body>
@@ -25,8 +25,8 @@
   </nav>
   <main class="container">
     <header class="page-header">
-      <h1>Company scorecards — onsite DC / 800 V</h1>
-      <p class="subtitle">Compact one-screen cards for twelve public names on the path from facility power and onsite generation into 800 V DC AI racks. Theme timeline (research context): NVIDIA 800 V DC rack optional ~Vera Rubin H2 2026; volume ~Rubin Ultra H2 2027; facility-wide new halls primarily 800 V DC ~2029+; NEC 2029 for fuller U.S. code support.</p>
+      <h1>Company scorecards — onsite DC &amp; SiC capacity</h1>
+      <p class="subtitle">Compact one-screen cards across two research themes: (1) twelve onsite-DC / 800 V AI-rack power names, and (2) six SiC substrate / epi / captive-fab capacity names. Onsite-DC timeline (research context): NVIDIA 800 V DC rack optional ~Vera Rubin H2 2026; volume ~Rubin Ultra H2 2027; facility-wide new halls primarily 800 V DC ~2029+; NEC 2029 for fuller U.S. code support.</p>
       <div class="meta-row">
         <span>As of 2026-10-01</span>
         <span class="badge">Bottlenecks: DC protection · MV SST cert (UL 2877) · HV SiC · iron-core lead times</span>
@@ -34,8 +34,12 @@
     </header>
     <section class="section">
       <h2>How to read</h2>
-      <p>Each company page fits roughly one laptop screen: six red/yellow/green metrics, a short thesis, and a personal stance with disclaimer. <strong>Gold</strong> = higher-conviction theme names this pass. <strong>Rainbow</strong> = judgment that meaningful 800 V / onsite-DC upside may still be under-reflected in valuation (used sparingly).</p>
+      <p>Each company page fits roughly one laptop screen: six red/yellow/green metrics, a short thesis, and a personal stance with disclaimer. <strong>Gold</strong> = higher-conviction theme names this pass. <strong>Rainbow</strong> = judgment that meaningful theme upside may still be under-reflected in valuation (used sparingly; capacity and onsite-DC alike).</p>
       <p style="font-size:12px;color:var(--text-secondary)"><strong>Not investment advice.</strong> Research for personal education.</p>
+    </section>
+    <section class="section" style="margin-bottom:8px">
+      <h2>Onsite DC / 800 V</h2>
+      <p style="font-size:12.5px;color:var(--text-secondary);margin:0">Facility power, onsite generation, and rack-side 800 V DC. Related: <a href="../index.html#field-onsite">Analysis · onsite</a> · <a href="../../electrification/index.html">Electrification</a>.</p>
     </section>
     <div class="card-grid">
       <a class="card" href="vertiv.html" style="text-decoration:none;color:inherit">
@@ -111,7 +115,51 @@
         <span class="card-link">Open scorecard →</span>
       </a>
     </div>
-    <p style="font-size:12px;color:var(--text-secondary);margin-bottom:24px">Handoff for Investment analysis: <a href="handoff.json"><code>handoff.json</code></a> · Related: <a href="../../electrification/index.html">Electrification</a></p>
+
+    <section class="section" style="margin:28px 0 8px">
+      <h2>SiC capacity (wafers &amp; fabs)</h2>
+      <p style="font-size:12.5px;color:var(--text-secondary);margin:0">Substrate / boule / wafer / epi / captive fab throughput — not device design-wins (Infineon/STM) and not burn-in (AEHR/Cohu). Related: <a href="../index.html#field-sic-capacity">Analysis · SiC capacity</a>.</p>
+    </section>
+    <div class="card-grid">
+      <a class="card" href="onsemi.html" style="text-decoration:none;color:inherit">
+        <h2>onsemi <span class="ticker">ON</span> <span class="badge" style="background:rgba(249,171,0,.15);color:var(--accent-orange)">Gold</span></h2>
+        <p>Captive end-to-end SiC (boule → epi → fab), e.g. Hudson NH; Czech 200 mm plans.</p>
+        <p style="margin:0;font-size:12px"><strong style="color:var(--text-on-dark)">Stance:</strong> Accumulate</p>
+        <span class="card-link">Open scorecard →</span>
+      </a>
+      <a class="card" href="coherent.html" style="text-decoration:none;color:inherit">
+        <h2>Coherent <span class="ticker">COHR</span> <span class="badge" style="background:rgba(249,171,0,.15);color:var(--accent-orange)">Gold</span></h2>
+        <p>Merchant SiC substrates and epitaxial wafers (incl. 200 mm epi).</p>
+        <p style="margin:0;font-size:12px"><strong style="color:var(--text-on-dark)">Stance:</strong> Accumulate</p>
+        <span class="card-link">Open scorecard →</span>
+      </a>
+      <a class="card" href="resonac.html" style="text-decoration:none;color:inherit">
+        <h2>Resonac <span class="ticker">SHWDY</span></h2>
+        <p>Independent SiC epitaxial-wafer specialist — merchant epi capacity.</p>
+        <p style="margin:0;font-size:12px"><strong style="color:var(--text-on-dark)">Stance:</strong> Accumulate</p>
+        <span class="card-link">Open scorecard →</span>
+      </a>
+      <a class="card" href="rohm.html" style="text-decoration:none;color:inherit">
+        <h2>ROHM <span class="ticker">ROHCY</span></h2>
+        <p>SiCrystal substrates + captive SiC device fabs — vertical capacity.</p>
+        <p style="margin:0;font-size:12px"><strong style="color:var(--text-on-dark)">Stance:</strong> Hold</p>
+        <span class="card-link">Open scorecard →</span>
+      </a>
+      <a class="card" href="disco.html" style="text-decoration:none;color:inherit">
+        <h2>DISCO <span class="ticker">6146.T</span></h2>
+        <p>SiC wafering equipment (dicing/grinding/polishing) — capacity-enabling tools.</p>
+        <p style="margin:0;font-size:12px"><strong style="color:var(--text-on-dark)">Stance:</strong> Hold</p>
+        <span class="card-link">Open scorecard →</span>
+      </a>
+      <a class="card" href="wolfspeed.html" style="text-decoration:none;color:inherit">
+        <h2>Wolfspeed <span class="ticker">WOLF</span></h2>
+        <p>Vertical SiC materials + Mohawk Valley 200 mm fab — capacity pure-play with Ch.11 overhang.</p>
+        <p style="margin:0;font-size:12px"><strong style="color:var(--text-on-dark)">Stance:</strong> Avoid</p>
+        <span class="card-link">Open scorecard →</span>
+      </a>
+    </div>
+
+    <p style="font-size:12px;color:var(--text-secondary);margin-bottom:24px">Handoffs: <a href="handoff.json"><code>handoff.json</code></a> (onsite DC) · <a href="sic-capacity-handoff.json"><code>sic-capacity-handoff.json</code></a> (SiC capacity) · Related: <a href="../index.html#field-sic-capacity">SiC capacity field</a> · <a href="../../electrification/index.html">Electrification</a></p>
   </main>
   <footer class="site-footer">Not investment advice. Personal research hub.</footer>
   <script src="../../assets/site.js"></script>
