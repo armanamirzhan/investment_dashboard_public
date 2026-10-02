@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hyperscalers — cloud operators, GPU clouds &amp; colo</title>
-  <meta name="description" content="Layperson briefing on AI datacenter demand owners and capacity builders: integrated cloud operators (AWS, Azure, GCP, Meta, Oracle), GPU cloud / neocloud providers, and colocation / datacenter REITs. CapEx, power-buildout, PPA / offtake, and ratepayer-protection framing. Not investment advice.">
+  <meta name="description" content="Layperson briefing on AI datacenter demand owners and capacity builders: US and Chinese cloud operators, GPU cloud / neocloud providers, miner AI landlords, and colocation / datacenter REITs. CapEx, power-buildout, PPA / offtake, and ratepayer-protection framing. Not investment advice.">
   <link rel="stylesheet" href="../assets/site.css">
   <link rel="stylesheet" href="section.css">
 </head>
@@ -35,6 +35,7 @@
           <a href="#stack">Map</a>
           <a href="#layer-1">Cloud operators</a>
           <a href="#layer-2">GPU clouds</a>
+          <a href="#layer-2b">Miner landlords</a>
           <a href="#layer-3">Colo &amp; REITs</a>
           <a href="#layer-4">Buildouts</a>
           <a href="#layer-5">Power &amp; PPAs</a>
@@ -44,26 +45,26 @@
       </nav>
 
       <header class="hero">
-        <span class="eyebrow">Technical briefing · from hub extraction · September 2026</span>
+        <span class="eyebrow">Technical briefing · Claude audit refresh · October 2026</span>
         <h1>Hyperscalers — who builds and hosts AI capacity</h1>
         <p class="subtitle">
           Chips and software matter only if someone pays for floorspace, power, and clusters.
           This page maps
           <a href="https://en.wikipedia.org/wiki/Hyperscale_computing">hyperscale</a>
-          demand owners and capacity builders from the shared extraction —
+          demand owners and capacity builders —
           integrated
           <a href="https://en.wikipedia.org/wiki/Cloud_computing">cloud</a>
-          operators,
+          operators (US and Chinese),
           <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit">GPU</a>
-          clouds (sometimes called neoclouds), and
+          clouds (neoclouds), miner / AI landlords, and
           <a href="https://en.wikipedia.org/wiki/Colocation_centre">colocation</a>
           /
           <a href="https://en.wikipedia.org/wiki/Real_estate_investment_trust">datacenter REIT</a>
-          landlords that host that demand.
+          hosts.
         </p>
         <div class="meta-row">
           <span class="chip">Hub section · five layers</span>
-          <span class="chip">Source: hub-extraction + data/hyperscaler_*.json</span>
+          <span class="chip">Sources: hub extraction + public seed JSON · Claude audit Oct 2026</span>
           <span class="chip warn">Not investment advice</span>
         </div>
       </header>
@@ -79,30 +80,30 @@
         <ul>
           <li>
             <strong>Own and build capacity.</strong>
-            Integrated cloud operators (Amazon Web Services, Microsoft Azure, Google Cloud, Meta, Oracle)
-            spend tens to hundreds of billions of dollars a year in
+            Integrated cloud operators (Amazon Web Services, Microsoft Azure, Google Cloud, Meta, Oracle,
+            plus Chinese peers) spend tens to hundreds of billions of dollars a year in
             <a href="https://en.wikipedia.org/wiki/Capital_expenditure">capital expenditure (CapEx)</a>
             on land, power, cooling, and AI clusters.
           </li>
           <li>
             <strong>Specialize in GPU rental.</strong>
-            GPU cloud providers (CoreWeave, Lambda, and peers) run dense accelerator fleets —
+            GPU cloud providers (CoreWeave, Nebius, SpaceXAI / Colossus, Lambda, and peers) run dense accelerator fleets —
             often leasing space and power from colo landlords while selling training and inference capacity to labs and enterprises.
           </li>
           <li>
             <strong>Host the footprint.</strong>
-            Colocation providers and datacenter REITs own facilities and interconnection hubs;
+            Colocation providers, datacenter REITs, and former bitcoin-mining landlords own facilities and interconnection hubs;
             in many deals the hyperscaler is a <em>tenant</em> of the colo, not the building owner.
           </li>
         </ul>
         <div class="callout">
           <div class="label">How this list was built</div>
           <p style="margin:0">
-            Curated from <code>/workspace/hub-extraction-ai-sections.md</code>,
-            <code>data/hyperscaler_companies.json</code>, and
-            <code>data/hyperscaler_buildouts.json</code>.
+            Curated from hub extraction + public seed JSON
+            (<code>hyperscaler_companies.json</code>, <code>hyperscaler_buildouts.json</code>),
+            refreshed against a Claude audit in October 2026.
             Tickers appear when the company trades publicly.
-            CapEx and power figures are orientation snapshots from the extract — they go stale; treat them as context, not live guidance.
+            CapEx and power figures are orientation snapshots — they go stale; treat them as context, not live guidance.
             Ratings and buy/sell language from private notes are omitted on purpose.
           </p>
         </div>
@@ -111,10 +112,12 @@
       <section aria-labelledby="h-stack" id="stack">
         <h2 id="h-stack">Five-layer map</h2>
         <ol>
-          <li><a href="#layer-1">Integrated cloud operators</a> — AWS, Azure, GCP, Meta, Oracle (own/build at hyperscale CapEx).</li>
-          <li><a href="#layer-2">GPU cloud providers</a> — neoclouds that specialize in rented accelerator capacity.</li>
-          <li><a href="#layer-3">Colocation &amp; datacenter REITs</a> — facility owners / landlords that often host hyperscaler tenants.</li>
-          <li><a href="#layer-4">Buildout tracker</a> — CapEx and gigawatt targets from the shared buildouts seed (includes xAI Colossus).</li>
+          <li><a href="#layer-1">Integrated cloud operators</a> — US hyperscalers (AWS, Azure, GCP, Meta, Oracle) plus Chinese clouds (Alibaba, Tencent, Baidu, ByteDance / Volcano Engine).</li>
+          <li><a href="#layer-2">GPU cloud providers</a> — neoclouds (CoreWeave, Lambda, SpaceXAI / Colossus, Nebius, Crusoe, IREN, Fluidstack, Nscale), plus a
+            <a href="#layer-2b">miner / AI landlords</a>
+            subsection (Applied Digital, Cipher Digital, TeraWulf, Core Scientific).</li>
+          <li><a href="#layer-3">Colocation &amp; datacenter REITs</a> — facility owners / landlords (Equinix, Digital Realty, Iron Mountain, American Tower / CoreSite, NTT, Keppel, GDS, VNET) plus private hyperscale developers.</li>
+          <li><a href="#layer-4">Buildout tracker</a> — CapEx and gigawatt targets (includes SpaceXAI / Colossus).</li>
           <li><a href="#layer-5">Offtake, PPAs &amp; ratepayer protection</a> — how hyperscalers contract power and who pays for grid upgrades.</li>
         </ol>
       </section>
@@ -128,14 +131,22 @@
           <a href="https://en.wikipedia.org/wiki/Infrastructure_as_a_service">infrastructure as a service</a>,
           platform tools, and first-party AI products. Framing here is <strong>operator / builder</strong>, not “tenant only.”
         </p>
+
+        <h4>US operators</h4>
         <ul class="company-list">
           <li>
             <span class="name">Microsoft</span><span class="ticker">MSFT</span>
             <p>
               Operates
               <a href="https://en.wikipedia.org/wiki/Microsoft_Azure">Azure</a>,
-              one of the largest cloud platforms, with a heavy AI data-center buildout and a deep partnership with OpenAI for capacity and product distribution.
-              Extract notes cite very large 2026 CapEx plans and power constraints on unfulfilled Azure orders.
+              one of the largest cloud platforms, with a heavy AI data-center buildout.
+              OpenAI remains an important Azure customer and product partner, but OpenAI now also spreads capacity across
+              <a href="https://en.wikipedia.org/wiki/Oracle_Cloud">Oracle</a>
+              /
+              <a href="https://en.wikipedia.org/wiki/Stargate_LLC">Stargate</a>,
+              Amazon Web Services, and others — so the relationship is no longer a single exclusive capacity lock-in.
+              Calendar-2026 CapEx guidance is about $175B on a reported basis (cut from about $190B after a lease-accounting change; underlying spend unchanged).
+              Fiscal-2026 (June year-end) actual CapEx was about $115.9B.
             </p>
           </li>
           <li>
@@ -143,7 +154,8 @@
             <p>
               <a href="https://en.wikipedia.org/wiki/Amazon_Web_Services">Amazon Web Services (AWS)</a>
               is the long-time cloud-infrastructure leader, with a global footprint and custom AI chips (Trainium / Inferentia families)
-              alongside merchant GPUs. Extract framing: among the largest CapEx spenders directed at AI data centers.
+              alongside merchant GPUs. 2026 CapEx guidance is about $220B (raised from about $200B, with memory costs cited as a driver) —
+              among the largest CapEx books directed at AI data centers.
             </p>
           </li>
           <li>
@@ -153,8 +165,10 @@
               <a href="https://en.wikipedia.org/wiki/Google_Cloud_Platform">Google Cloud Platform (GCP)</a>
               and designs
               <a href="https://en.wikipedia.org/wiki/Tensor_Processing_Unit">Tensor Processing Units (TPUs)</a>
-              — custom silicon tightly coupled to Google’s AI stack. Extract notes highlight large CapEx guidance,
-              multi-gigawatt campus plans, and unusual energy contracts (including nuclear restart and a corporate fusion power purchase agreement).
+              — custom silicon tightly coupled to Google’s AI stack.
+              2026 CapEx guidance is $195–205B (raised from $180–190B).
+              GCP revenue growth was about 82% year-over-year in Q2 2026; cloud backlog is about $514B.
+              Unusual energy contracts include a nuclear restart and a corporate fusion power purchase agreement.
             </p>
           </li>
           <li>
@@ -162,8 +176,9 @@
             <p>
               Builds large private AI clusters for training and serving models such as
               <a href="https://en.wikipedia.org/wiki/Llama_(language_model)">Llama</a>,
-              while also buying third-party GPU cloud capacity. Extract framing includes a multi-gigawatt Hyperion campus plan
-              and large nuclear and solar power deals.
+              while also buying third-party GPU cloud capacity (including CoreWeave and a large Nebius deal).
+              2026 CapEx guidance is $130–145B (narrowed on 2026-07-29; earlier conflicting 115–135 / 125–145 ranges are outdated).
+              Campus framing includes a multi-gigawatt Hyperion plan plus nuclear and solar power deals.
             </p>
           </li>
           <li>
@@ -172,8 +187,53 @@
               Expanding
               <a href="https://en.wikipedia.org/wiki/Oracle_Cloud">Oracle Cloud Infrastructure (OCI)</a>
               aggressively, including the multi-site
-              <a href="https://en.wikipedia.org/wiki/Stargate_(AI_project)">Stargate</a>
-              AI infrastructure partnership. Extract notes emphasize high CapEx relative to revenue and a large remaining-performance-obligation backlog.
+              <a href="https://en.wikipedia.org/wiki/Stargate_LLC">Stargate</a>
+              AI infrastructure partnership.
+              Fiscal-2026 (May year-end) CapEx actual was about $55.7B; FY2027 guidance is $90–95B.
+              Remaining performance obligations (RPO) are about $664B.
+              OCI revenue grew about 121% in Q1 FY2027.
+            </p>
+          </li>
+        </ul>
+
+        <h4>Chinese clouds</h4>
+        <ul class="company-list">
+          <li>
+            <span class="name">Alibaba Cloud / Alibaba Group</span><span class="ticker">9988.HK</span>
+            <p>
+              China’s largest cloud operator (also trades as
+              <a href="https://en.wikipedia.org/wiki/Alibaba_Group">Alibaba</a>
+              ADR BABA). Cloud &amp; AI revenue grew about 45% year-over-year with heavy AI CapEx —
+              the clearest listed China hyperscale peer to the US operators above.
+            </p>
+          </li>
+          <li>
+            <span class="name">Tencent Cloud / Tencent</span><span class="ticker">0700.HK</span>
+            <p>
+              Cloud arm of
+              <a href="https://en.wikipedia.org/wiki/Tencent">Tencent</a>
+              (OTC ADR TCEHY). Large domestic cloud and AI infrastructure footprint alongside gaming and consumer platforms.
+            </p>
+          </li>
+          <li>
+            <span class="name">Baidu AI Cloud / Baidu</span><span class="ticker">BIDU</span>
+            <p>
+              Cloud and AI stack from
+              <a href="https://en.wikipedia.org/wiki/Baidu">Baidu</a>
+              (also 9888.HK), including in-house Kunlun accelerator chips for training and inference.
+            </p>
+          </li>
+          <li>
+            <span class="name">ByteDance / Volcano Engine</span>
+            <p>
+              Private. Volcano Engine is ByteDance’s cloud / AI-infra arm and a large AI infrastructure spender —
+              including a reported ~$29.6B AI-related loan facility around September 2026.
+            </p>
+          </li>
+          <li>
+            <span class="name">Huawei Cloud</span>
+            <p>
+              Private / restricted in some markets. Large China cloud and Ascend AI-chip stack; included briefly for map completeness, not as a US-listed peer.
             </p>
           </li>
         </ul>
@@ -189,27 +249,98 @@
           <li>
             <span class="name">CoreWeave</span><span class="ticker">CRWV</span>
             <p>
-              Public pure-play GPU cloud focused on AI workloads, with large contracted capacity and named enterprise / lab customers in the extract.
-              Buildout tracker lists multi-gigawatt contracted targets and high CapEx intensity.
+              Public pure-play GPU cloud focused on AI workloads.
+              Backlog about $104.2B as of 2026-06-30; FY2026 revenue guidance $12.4–13.2B.
+              CapEx for 2026 is in a roughly $30–39B class (report/letter basis — confirm against the latest shareholder letter).
+              A proposed acquisition of Core Scientific (CORZ) died after CORZ holders rejected it in October 2025.
             </p>
           </li>
           <li>
             <span class="name">Lambda</span>
             <p>
-              Private GPU cloud aimed at AI and machine-learning teams — training and inference capacity for enterprises that do not want to build their own clusters.
+              Private GPU cloud aimed at AI and machine-learning teams.
+              Raised about $1B of private debt in August 2026 for GPUs leased to Microsoft; pre-IPO talks have been reported.
+              Also among signatories to the Ratepayer Protection Pledge (September 2026).
+            </p>
+          </li>
+          <li>
+            <span class="name">SpaceXAI / Colossus</span><span class="ticker">SPCX</span>
+            <p>
+              Formerly xAI; now SpaceXAI, a division of
+              <a href="https://en.wikipedia.org/wiki/SpaceX">SpaceX</a>
+              (Nasdaq: SPCX, IPO 2026-06-12). The ticker XAI does not exist.
+              SpaceX rents Colossus training capacity to Google (about $920M per month for 32 months) and to Anthropic —
+              so this name belongs in the GPU-cloud layer as a compute seller, not only as a side callout.
+              See the buildout tracker for campus / spend context.
+            </p>
+          </li>
+          <li>
+            <span class="name">Nebius Group</span><span class="ticker">NBIS</span>
+            <p>
+              Listed neocloud. Announced a $27B five-year Meta capacity deal (2026-09-30) and a raised year-end contracted-power target of about 5&nbsp;GW.
+            </p>
+          </li>
+          <li>
+            <span class="name">Crusoe</span>
+            <p>
+              Private, vertically integrated AI infrastructure developer and cloud — including work as a
+              <a href="https://en.wikipedia.org/wiki/Stargate_LLC">Stargate</a>
+              Abilene developer. Raised about $3.9B at a $30.9B valuation in September 2026.
+            </p>
+          </li>
+          <li>
+            <span class="name">IREN</span><span class="ticker">IREN</span>
+            <p>
+              Listed neocloud with a $9.7B Microsoft AI-cloud contract and roughly $4B of 2026 annual recurring revenue (ARR) contracted.
+            </p>
+          </li>
+          <li>
+            <span class="name">Fluidstack</span>
+            <p>
+              Private. Framed as a primary infrastructure partner for Anthropic; about $18B valuation as of September 2026.
+            </p>
+          </li>
+          <li>
+            <span class="name">Nscale</span>
+            <p>
+              Private / pre-IPO UK neocloud. About $3.36B pre-IPO valuation, targeting a NYSE listing; announced agreement to acquire Anyscale (2026-07-30).
             </p>
           </li>
         </ul>
-        <div class="callout">
-          <div class="label">Related name outside the nine-name seed list</div>
-          <p style="margin:0">
-            <strong>xAI (Colossus)</strong> appears in the buildout tracker as a large dedicated training campus (Memphis)
-            rather than in the nine-name <code>hyperscaler_companies.json</code> set.
-            Model/product context also sits under
-            <a href="../software/index.html">Software</a>
-            (foundation-model developers). See the buildout layer below.
-          </p>
-        </div>
+
+        <h3 id="layer-2b">2b. Miner / AI landlords</h3>
+        <p class="layer-intro">
+          Former
+          <a href="https://en.wikipedia.org/wiki/Bitcoin">bitcoin</a>
+          miners converting power contracts, land, and halls into AI / HPC campuses.
+          They often look like landlords or power-first hosts rather than full neocloud operators — and sometimes do both.
+        </p>
+        <ul class="company-list">
+          <li>
+            <span class="name">Applied Digital</span><span class="ticker">APLD</span>
+            <p>
+              Listed AI / HPC campus developer converting mining-era power and sites into liquid-cooled AI capacity for hyperscale and neocloud tenants.
+            </p>
+          </li>
+          <li>
+            <span class="name">Cipher Digital</span><span class="ticker">CIFR</span>
+            <p>
+              Formerly Cipher Mining. Listed landlord / developer pivoting power and data-center capacity toward AI hosting.
+            </p>
+          </li>
+          <li>
+            <span class="name">TeraWulf</span><span class="ticker">WULF</span>
+            <p>
+              Listed zero-carbon / nuclear-adjacent mining-to-AI campus operator with contracted AI / HPC capacity.
+            </p>
+          </li>
+          <li>
+            <span class="name">Core Scientific</span><span class="ticker">CORZ</span>
+            <p>
+              Listed. CoreWeave acquisition was rejected by CORZ holders in October 2025; Core Scientific has since signed a deal for more than 500&nbsp;MW with AMD and continues as an independent AI / HPC host.
+            </p>
+          </li>
+        </ul>
 
         <h3 id="layer-3">3. Colocation &amp; datacenter REITs</h3>
         <p class="layer-intro">
@@ -223,7 +354,7 @@
             <p>
               Largest global
               <a href="https://en.wikipedia.org/wiki/Colocation_centre">colocation</a>
-              provider in the extract framing — hundreds of data centers across dozens of metros,
+              provider in this framing — hundreds of data centers across dozens of metros,
               with interconnection that matters for AI and cloud networking.
             </p>
           </li>
@@ -233,18 +364,68 @@
               Major
               <a href="https://en.wikipedia.org/wiki/Real_estate_investment_trust">datacenter REIT</a>
               with a global portfolio and PlatformDIGITAL positioning for AI workloads.
-              Extract thesis cites leasing momentum from hyperscaler demand and a multi-gigawatt construction pipeline.
+              Leasing momentum from hyperscaler demand and a multi-gigawatt construction pipeline.
+            </p>
+          </li>
+          <li>
+            <span class="name">Iron Mountain</span><span class="ticker">IRM</span>
+            <p>
+              Listed REIT with a growing data-center segment; roughly 300&nbsp;MW of data-center pipeline called out in recent framing.
+            </p>
+          </li>
+          <li>
+            <span class="name">American Tower / CoreSite</span><span class="ticker">AMT</span>
+            <p>
+              Tower REIT that owns
+              <a href="https://en.wikipedia.org/wiki/CoreSite">CoreSite</a>,
+              a major interconnection colo business with strong leasing from cloud and enterprise tenants.
+            </p>
+          </li>
+          <li>
+            <span class="name">NTT DC REIT</span>
+            <p>
+              Singapore-listed data-center REIT; parent is
+              <a href="https://en.wikipedia.org/wiki/NTT">NTT</a>
+              (9432.T). Asia-facing colo / hyperscale host exposure.
+            </p>
+          </li>
+          <li>
+            <span class="name">Keppel DC REIT</span>
+            <p>
+              Singapore-listed datacenter REIT with Asia–Europe colo portfolio oriented to cloud and interconnection demand.
+            </p>
+          </li>
+          <li>
+            <span class="name">GDS Holdings</span><span class="ticker">GDS</span>
+            <p>
+              China / APAC hyperscale data-center operator (also 9698.HK). DayOne is a private spin aimed at international / US–Singapore listing plans.
+            </p>
+          </li>
+          <li>
+            <span class="name">VNET Group</span><span class="ticker">VNET</span>
+            <p>
+              China carrier-neutral and hyperscale data-center operator serving cloud and enterprise tenants.
             </p>
           </li>
         </ul>
+        <div class="callout">
+          <div class="label">Private hyperscale developers (brief)</div>
+          <p style="margin:0">
+            Several private developers build multi-hundred-megawatt campuses leased to hyperscalers and neoclouds:
+            Aligned (about $40B AIP / MGX / BlackRock GIP deal closed July 2026),
+            QTS (Blackstone), Vantage, Stack, EdgeCore, and CyrusOne (KKR / GIP).
+            Short map only — not full profiles here.
+          </p>
+        </div>
       </section>
 
       <section aria-labelledby="h-build" id="layer-4">
         <h2 id="h-build">4. Buildout tracker (CapEx &amp; power)</h2>
         <p class="lede">
-          Snapshot from <code>data/hyperscaler_buildouts.json</code> — CapEx (billions of US dollars) and power framing in
-          <a href="https://en.wikipedia.org/wiki/Watt#Gigawatt">gigawatts (GW)</a>.
-          Figures are extract-era estimates; energy badges name the kinds of supply deals the source listed
+          Orientation snapshot of CapEx (billions of US dollars) and power framing in
+          <a href="https://en.wikipedia.org/wiki/Watt#Gigawatt">gigawatts (GW)</a>,
+          refreshed against October 2026 guidance notes.
+          Figures go stale; energy badges name the kinds of supply deals sources listed
           (<a href="https://en.wikipedia.org/wiki/Power_purchase_agreement">power purchase agreements (PPAs)</a>, nuclear, solar, gas, fusion).
           Cross-link power and nuclear supply chain under
           <a href="../electrification/index.html">Electrification</a>.
@@ -253,60 +434,67 @@
           <li>
             <span class="name">Microsoft</span><span class="ticker">MSFT</span>
             <p>
-              CapEx 2026 (extract): about $110–120B (notes also cite a higher calendar-year figure).
-              Power: roughly 2&nbsp;GW added in one recent fiscal year; ~34&nbsp;GW contracted clean energy toward 2027–2030.
+              CapEx: calendar-2026 about $175B reported (cut from ~$190B by a lease-accounting change; underlying spend unchanged).
+              FY2026 (June year-end) actual about $115.9B — do not mix the calendar and fiscal figures without saying which basis.
+              Power: roughly 2&nbsp;GW were <em>additions</em> in FY2025, not the installed base (about 12&nbsp;GW today, with plans above 38&nbsp;GW by 2032).
+              About 34&nbsp;GW contracted clean energy toward 2027–2030 is a PPA / clean-energy book, not IT load.
               Energy badges: nuclear PPA (Three Mile Island / Crane framing), solar.
             </p>
           </li>
           <li>
             <span class="name">Amazon / AWS</span><span class="ticker">AMZN</span>
             <p>
-              CapEx 2026 (extract): about $200B, mostly AI data-center infrastructure.
+              CapEx 2026: about $220B (raised from ~$200B on memory costs), mostly AI data-center infrastructure.
               Power: ~15&nbsp;GW (Q3 2025 framing) toward ~31&nbsp;GW by end of 2027.
-              Energy badges: nuclear (Susquehanna), solar, gas. Multi-gigawatt sites in Indiana and Virginia called out in the source.
+              Energy badges: nuclear (Susquehanna), solar, gas. Multi-gigawatt sites in Indiana and Virginia called out in sources.
             </p>
           </li>
           <li>
             <span class="name">Google / Alphabet</span><span class="ticker">GOOGL</span>
             <p>
-              CapEx 2026 (extract): about $180–190B.
-              Power: growing fast; 2.7&nbsp;GW Michigan campus alone (2026–2028 framing); chart target ~25&nbsp;GW.
+              CapEx 2026: $195–205B guidance (raised from $180–190B).
+              Power: growing fast; 2.7&nbsp;GW Michigan campus alone (2026–2028 framing); clean-energy chart targets often cited near ~25&nbsp;GW (normalize to IT load when comparing).
               Energy badges: nuclear (Duane Arnold restart), large solar, fusion PPA (Commonwealth Fusion Systems).
             </p>
           </li>
           <li>
             <span class="name">Meta</span><span class="ticker">META</span>
             <p>
-              CapEx 2026 (extract): about $125–145B.
+              CapEx 2026: $130–145B guidance (narrowed 2026-07-29).
               Power: Hyperion campus framed at ~5&nbsp;GW by 2030; large nuclear deal book (extract: ~6.6&nbsp;GW) plus solar PPAs;
-              also expanded third-party GPU cloud contracts (e.g. CoreWeave) alongside owned clusters.
+              also expanded third-party GPU cloud contracts (CoreWeave, Nebius) alongside owned clusters.
             </p>
           </li>
           <li>
             <span class="name">Oracle / Stargate</span><span class="ticker">ORCL</span>
             <p>
-              CapEx 2026 (extract): roughly $50B class, with CapEx-to-revenue among the highest in the set.
-              Power: Stargate multi-site total framed toward ~7&nbsp;GW (2027–2029). Energy badges: grid + behind-the-meter, gas.
+              CapEx: FY2026 (May year-end) actual ~$55.7B; FY2027 guidance $90–95B — not a flat “~$50B 2026” figure.
+              RPO about $664B. Power: Stargate multi-site total framed toward ~7&nbsp;GW (2027–2029).
+              Buildout risk note: Project Jupiter (New Mexico, about 2.45&nbsp;GW) received a force-majeure notice in September 2026.
+              Energy badges: grid + behind-the-meter, gas.
             </p>
           </li>
           <li>
             <span class="name">CoreWeave</span><span class="ticker">CRWV</span>
             <p>
-              CapEx 2026 (extract): about $30–35B.
-              Power: hundreds of megawatts live across many sites, with contracted capacity framed toward multi-gigawatts by 2027 and higher long-term chart targets.
+              CapEx 2026: roughly $30–39B class (state the letter / report basis; older $30–35B seed is narrow).
+              Backlog $104.2B (2026-06-30); FY2026 revenue guide $12.4–13.2B.
+              Power: hundreds of megawatts live across many sites, with contracted capacity framed toward multi-gigawatts by 2027.
               Energy badges: grid, gas.
             </p>
           </li>
           <li>
-            <span class="name">xAI (Colossus)</span>
+            <span class="name">SpaceXAI / Colossus</span><span class="ticker">SPCX</span>
             <p>
-              Dedicated training campus (Memphis) in the buildout file — CapEx extract estimate around $15B class;
-              power from hundreds of megawatts live toward ~2&nbsp;GW (2027 framing), with large on-site gas-turbine supply called out in the source.
+              Dedicated training campus (Memphis / Colossus) under SpaceXAI, a division of SpaceX (Nasdaq: SPCX).
+              Drop the stale “$15B-class CapEx alone” framing.
+              Context from SpaceX filings: 2025 xAI operating loss about $6.4B on about $3.2B revenue — spend intensity, not a CapEx guidance line.
+              Power from hundreds of megawatts live toward ~2&nbsp;GW (2027 framing), with large on-site gas-turbine supply called out in sources.
+              Capacity is rented outward (Google ~$920M/month for 32 months; Anthropic) as well as used for SpaceXAI models.
             </p>
           </li>
         </ul>
       </section>
-
 
       <section aria-labelledby="h-power" id="layer-5">
         <h2 id="h-power">5. Offtake, PPAs &amp; ratepayer protection</h2>
@@ -339,6 +527,8 @@
             The White House Ratepayer Protection Pledge (March 2026) asks hyperscalers to commit to
             <em>build, bring, or buy</em> generation and to cover related infrastructure —
             aligning corporate CapEx with the power system they stress.
+            In July 2026 the pledge expanded to 23 governors and 187 utilities / developers.
+            The U.S. House passed the Ratepayer Protection Act (H.R. 9340) by 417–3 on 2026-09-16.
           </li>
           <li>
             <strong>Regional contrast.</strong>
@@ -346,13 +536,17 @@
             bills can fall as new industrial load spreads fixed costs over more kilowatt-hours.
             In the
             <a href="https://en.wikipedia.org/wiki/PJM_Interconnection">PJM</a>
-            capacity market, clearing prices have jumped from about $29 to $325+ per megawatt-day —
+            capacity market, the 2028/29 Base Residual Auction cleared at about $325+ per megawatt-day —
             a shock that hits all customers in that footprint, not only data-center owners.
+            Optionally noted: the
+            <a href="https://en.wikipedia.org/wiki/Federal_Energy_Regulatory_Commission">Federal Energy Regulatory Commission (FERC)</a>
+            chair criticized a delayed PJM backstop auction on 2026-09-30.
           </li>
           <li>
-            <strong>Utility-scale partnerships.</strong>
-            Large utility deals (extract example: NextEra–Dominion, framed around a ~$66.8B package)
-            are tied to Data Center Alley load (~51&nbsp;GW class) and to generation optionality under regulation —
+            <strong>Utility-scale M&amp;A tied to Data Center Alley load.</strong>
+            NextEra Energy (NEE) and Dominion Energy (D) announced a pending all-stock acquisition / merger valued around $66.8–67B —
+            not a data-center “package” or partnership. It faces Virginia opposition and guided closing in the second half of 2027.
+            The deal sits next to Data Center Alley load (~51&nbsp;GW class) and generation optionality under regulation —
             another path where hyperscaler demand shapes who builds what, and who pays.
           </li>
         </ul>
