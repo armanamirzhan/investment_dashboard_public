@@ -7,22 +7,25 @@
     "rating": null,
     "rating_source": null,
     "emoji": "🟡",
-    "exposure": "Medium",
+    "exposure": "HALEU enrichment",
     "report": null,
     "public": true,
-    "thesis": "Only US company licensed to produce HALEU fuel needed for advanced nuclear reactors (SMRs). Critical bottleneck position.",
+    "thesis": "US enricher with the only currently licensed western commercial HALEU production facility (American Centrifuge Plant, Piketon, OH). Not a permanent monopoly: BWXT downblending and future Orano / Urenco / GLE (Silex) capacity compete over time. Sep 2026 catalysts: multi-year HALEU supply agreements with Antares and Radiant (prepayments supporting capacity build-out) and an about $500M Class A common + warrants raise. Educational research only — not investment advice.",
     "catalysts": [
-      "HALEU production scale-up",
-      "SMR fuel supply monopoly",
-      "Government funding support",
-      "Growing nuclear demand"
+      "Sep 2026 Antares multi-year HALEU supply contract (prepayments; deliveries before end of decade)",
+      "Sep 2026 Radiant Kaleidos multi-year HALEU partnership (prepayments)",
+      "Sep 2026 ~$500M underwritten public offering of Class A common stock and warrants",
+      "Commercial-scale HALEU / LEU expansion at Piketon underway (company statements)"
     ],
     "risks": [
-      "Production scaling challenges",
-      "Regulatory hurdles",
-      "Uranium price volatility"
+      "Production and centrifuge deployment scale-up risk",
+      "Competitive HALEU paths: BWXT downblending; Orano / Urenco enrichment; GLE laser (Silex 51% / Cameco 49%)",
+      "DOE / policy funding timing — do not rely on expired June 2026 DOE contract wording as current monopoly lock-in",
+      "Dilution from equity/warrant raises; uranium and SWU price volatility"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02",
+    "as_of": "2026-10-02",
+    "note": "A-171 refresh 2026-10-02: removed 'only monopoly' / expired June 2026 DOE framing; Antares+Radiant+~$500M raise cited from company/PR Newswire Sep 2026."
   },
   {
     "ticker": "CCJ",
@@ -32,21 +35,212 @@
     "rating": null,
     "rating_source": null,
     "emoji": "🟡",
-    "exposure": "Uranium Supply",
+    "exposure": "Uranium mining + nuclear services equity",
     "report": null,
     "public": true,
-    "thesis": "Largest Western uranium producer. Nuclear renaissance driven by datacenter power demand creates structural uranium demand.",
+    "thesis": "Largest Western uranium producer with a 49% equity stake in Westinghouse (Brookfield 51%) — an equity interest, not a simple JV 'benefit' tagline — and a 49% stake in Global Laser Enrichment (GLE; Silex 51%). Oct 2025 US government partnership context supports large Westinghouse reactor build ambitions; Sep 2026 press reported Westinghouse IPO interest at >$50B valuation (reported/unverified until primary filing details). Educational research only.",
     "catalysts": [
-      "Nuclear renaissance demand",
-      "Uranium price appreciation",
-      "Long-term contract book",
-      "Westinghouse JV benefits"
+      "49% Westinghouse equity (Brookfield 51%) — nuclear services / new-build exposure via equity accounting",
+      "Oct 2025 US government partnership with Cameco/Brookfield on Westinghouse reactor construction support (company release)",
+      "Sep 2026 reported Westinghouse IPO targeting >$50B valuation (Bloomberg/secondary — label unverified vs confidential draft registration)",
+      "49% GLE ownership alongside Silex; exclusive offtake path for planned Paducah laser enrichment facility (company/Silex disclosures)",
+      "Long-term uranium contract book and Western mine supply"
     ],
     "risks": [
-      "Uranium price cyclicality",
-      "Production restart execution",
-      "Geopolitical supply risks"
+      "Uranium price cyclicality and mine restart/execution risk",
+      "Westinghouse IPO timing/valuation uncertain; reported >$50B figures are secondary until priced",
+      "Geopolitical supply and trade-policy risk",
+      "GLE / laser enrichment commercialization still pre-FID / technology risk"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02",
+    "as_of": "2026-10-02",
+    "note": "A-172: Westinghouse is 49% equity (not 'JV benefit'); GLE 49% noted; Oct 2025 US reactor partnership + Sep 2026 >$50B IPO interest labelled reported/unverified where secondary."
+  },
+  {
+    "ticker": "KAP.L",
+    "name": "Kazatomprom",
+    "sector": "electricity",
+    "sub_sector": "Nuclear Fuel",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Primary uranium supply",
+    "report": null,
+    "public": true,
+    "thesis": "World's largest uranium producer (Kazakhstan ISR). Critical supply node for China and global utilities. Educational fuel-cycle seed.",
+    "fuel_cycle_role": "Mining / primary production (ISR)",
+    "catalysts": [
+      "Kazakhstan production guides",
+      "China and Western term contracting",
+      "ISR cost position"
+    ],
+    "risks": [
+      "Kazakhstan / geopolitics",
+      "Production quota and JV partner dynamics",
+      "Uranium price cyclicality"
+    ],
+    "updated": "2026-10-02",
+    "us_symbol": "NATKY",
+    "local_symbol": "KZAP",
+    "exchange": "London (GDR)",
+    "note": "Tickers: KAP.L (LSE GDR), NATKY (US 144A GDR), KZAP (local KASE). Prefer KAP.L / NATKY for Western access. Verified via Yahoo profile pages / Morningstar 2026-10-02."
+  },
+  {
+    "ticker": "NXE",
+    "name": "NexGen Energy",
+    "sector": "electricity",
+    "sub_sector": "Nuclear Fuel",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Development-stage uranium",
+    "report": null,
+    "public": true,
+    "thesis": "Athabasca Basin developer (Arrow / Rook I path). Development leverage to uranium price and permitting — not a current large producer.",
+    "fuel_cycle_role": "Exploration / mine development",
+    "catalysts": [
+      "Permitting and project advancement",
+      "Uranium price leverage",
+      "Athabasca grade narrative"
+    ],
+    "risks": [
+      "Development / financing risk",
+      "Permitting timelines",
+      "No current large-scale production"
+    ],
+    "updated": "2026-10-02",
+    "note": "Verified Yahoo NXE 2026-10-02."
+  },
+  {
+    "ticker": "DNN",
+    "name": "Denison Mines",
+    "sector": "electricity",
+    "sub_sector": "Nuclear Fuel",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Development-stage uranium",
+    "report": null,
+    "public": true,
+    "thesis": "Athabasca developer (Wheeler River and related interests). ISR/mining development exposure to nuclear fuel demand.",
+    "fuel_cycle_role": "Exploration / mine development",
+    "catalysts": [
+      "Wheeler River advancement",
+      "Uranium price leverage",
+      "Athabasca project pipeline"
+    ],
+    "risks": [
+      "Development and permitting risk",
+      "Financing / dilution",
+      "Execution vs peers"
+    ],
+    "updated": "2026-10-02",
+    "note": "Verified Yahoo DNN 2026-10-02."
+  },
+  {
+    "ticker": "UEC",
+    "name": "Uranium Energy Corp",
+    "sector": "electricity",
+    "sub_sector": "Nuclear Fuel",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "US ISR uranium",
+    "report": null,
+    "public": true,
+    "thesis": "US-focused ISR uranium producer/developer aiming to rebuild domestic mined supply. Educational fuel-cycle seed.",
+    "fuel_cycle_role": "Mining / ISR (US-focused)",
+    "catalysts": [
+      "US ISR restart / ramp",
+      "Domestic supply narrative",
+      "M&A / resource consolidation"
+    ],
+    "risks": [
+      "Production ramp execution",
+      "Uranium price sensitivity",
+      "Permitting and water/ISR operational risk"
+    ],
+    "updated": "2026-10-02",
+    "note": "Verified Yahoo UEC 2026-10-02."
+  },
+  {
+    "ticker": "UUUU",
+    "name": "Energy Fuels",
+    "sector": "electricity",
+    "sub_sector": "Nuclear Fuel",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "US uranium + rare earths adjacency",
+    "report": null,
+    "public": true,
+    "thesis": "US conventional uranium / alternate feed processor with White Mesa mill; also rare-earth processing adjacency. Fuel-cycle midstream/mining hybrid.",
+    "fuel_cycle_role": "Mining / milling (US); alternate feeds",
+    "catalysts": [
+      "White Mesa mill utilization",
+      "US uranium policy support",
+      "Rare-earth processing optionality"
+    ],
+    "risks": [
+      "Commodity price mix",
+      "Regulatory / environmental permitting",
+      "Dual uranium–REE focus complexity"
+    ],
+    "updated": "2026-10-02",
+    "note": "Verified Yahoo UUUU 2026-10-02."
+  },
+  {
+    "ticker": "BWXT",
+    "name": "BWX Technologies",
+    "sector": "electricity",
+    "sub_sector": "Nuclear Fuel",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Nuclear components + HALEU path",
+    "report": null,
+    "public": true,
+    "thesis": "Nuclear components / naval nuclear heritage with growing commercial advanced-reactor and HALEU-related roles (including downblending / fuel-cycle work cited in DOE supply-chain context). Competes with Centrus on future HALEU availability paths — not identical enrichment monopoly.",
+    "fuel_cycle_role": "Components / fuel fabrication adjacency; HALEU downblending path",
+    "catalysts": [
+      "Advanced reactor component demand",
+      "HALEU / downblending and DOE fuel-cycle contracts",
+      "Naval nuclear backlog stability"
+    ],
+    "risks": [
+      "Gov/contractor concentration",
+      "HALEU enrichment still nascent vs Centrus licensed production",
+      "Program timing risk"
+    ],
+    "updated": "2026-10-02",
+    "note": "Verified Yahoo BWXT 2026-10-02. Cited as HALEU competitor/capacity path vs LEU (A-171)."
+  },
+  {
+    "ticker": "SLX.AX",
+    "name": "Silex Systems",
+    "sector": "electricity",
+    "sub_sector": "Nuclear Fuel",
+    "rating": null,
+    "rating_source": null,
+    "emoji": null,
+    "exposure": "Laser enrichment technology",
+    "report": null,
+    "public": true,
+    "thesis": "Australian developer of SILEX laser enrichment; 51% owner of GLE (Cameco 49%). Path to US Paducah laser enrichment facility remains technology/FID dependent. Educational seed.",
+    "fuel_cycle_role": "Enrichment technology (laser) via GLE",
+    "catalysts": [
+      "GLE technology maturation / TRL milestones",
+      "Paducah project FID path",
+      "Cameco offtake support for PLEF"
+    ],
+    "risks": [
+      "Technology commercialization risk",
+      "Licensing and project financing",
+      "Long dated cash flows; ADR liquidity"
+    ],
+    "updated": "2026-10-02",
+    "us_symbol": "SILXY",
+    "exchange": "ASX",
+    "note": "ASX SLX (SLX.AX); US OTCQX SILXY (1 ADR = 5 ords per company FAQs). Yahoo SLX.AX verified 2026-10-02; SILXY per Silex investor FAQs."
   }
 ]

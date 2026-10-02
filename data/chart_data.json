@@ -316,7 +316,7 @@
   "sic_market": {
     "type": "doughnut",
     "title": "SiC Power Electronics Market Share (%)",
-    "source": "Source: older industry-estimate seed (labelled 2025) — NOT re-verified against Yole/TrendForce on 2026-10-02. Conflicts with Electrification Power Map ordering (Infineon first; onsemi omitted there). Treat as illustrative only until cited.",
+    "source": "CAVEAT (A-175): Unsourced older industry-estimate seed labelled 2025 — NOT re-verified against Yole/TrendForce on 2026-10-02. Do NOT invent Yole numbers. Figures may conflict with Electrification Power Map narrative (Infineon-first; onsemi omitted there). Treat doughnut as illustrative only until a primary share source is attached. Educational research only.",
     "labels": [
       "STMicroelectronics (35%)",
       "onsemi (25%)",
@@ -340,7 +340,7 @@
     ],
     "cutout": "55%",
     "as_of": "2025 (unverified seed)",
-    "caveat": "Unsourced share split; Claude audit A-175. Prefer Power Map narrative over this doughnut until a primary share source is attached.",
+    "caveat": "Unsourced share split; may conflict with Infineon-first Power Map ordering. Prefer Power Map narrative over this doughnut until a cited primary source replaces these estimates. No Yole figures invented on 2026-10-02.",
     "updated": "2026-10-02"
   },
   "lead_times": {

@@ -2,7 +2,20 @@
   "title": "Critical Constraint: HALEU Fuel Supply",
   "company": "Centrus Energy",
   "ticker": "LEU",
-  "report": "reports/LEU_Centrus_Energy.html",
-  "description": "High-Assay Low-Enriched Uranium (HALEU) is required by most advanced reactors (Oklo, X-energy, Kairos). Centrus Energy (LEU) is the only US commercial HALEU producer. Revenue $449M, net income $78M (profitable). DOE contract extended through June 2026 (~$110M). HALEU market projected to grow from $0.26B to $6.2B by 2030. Analyst consensus: Buy, avg target $265.",
-  "updated": "2026-04-24"
+  "report": null,
+  "as_of": "2026-10-02",
+  "updated": "2026-10-02",
+  "description": "High-Assay Low-Enriched Uranium (HALEU) is required by many advanced reactors (Oklo, X-energy, Kairos, microreactors). Centrus (LEU) operates the only currently licensed western commercial HALEU production facility at Piketon, OH — an important near-term bottleneck, not a permanent monopoly. Competing / complementary paths include BWXT downblending and fuel-cycle work, plus longer-dated Orano, Urenco and GLE (Silex/Cameco) capacity. Sep 2026: definitive multi-year HALEU agreements with Antares and Radiant (prepayments supporting expansion) and an about $500M Class A common + warrants raise. Do not cite expired June 2026 DOE contract wording as the live constraint narrative. Educational research only — not investment advice. No invented ratings.",
+  "catalysts_sep_2026": [
+    "Antares multi-year HALEU supply contract (PR Newswire / company, mid-Sep 2026)",
+    "Radiant Kaleidos HALEU partnership (company, 9 Sep 2026)",
+    "~$500M underwritten public offering of Class A common and warrants (company, Sep 2026)"
+  ],
+  "competitors_capacity_paths": [
+    "BWXT — downblending / DOE fuel-cycle roles",
+    "Orano — enrichment capacity expansions (timeline dependent)",
+    "Urenco — LEU/+ capability; HALEU commercial plant not assumed here",
+    "GLE (Silex 51% / Cameco 49%) — laser enrichment / Paducah path (pre-FID)"
+  ],
+  "disclaimer": "Educational research only. Not investment advice. Ratings intentionally null on public hub."
 }

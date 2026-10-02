@@ -1,452 +1,719 @@
-[
-  {
-    "ticker": "CEG",
-    "name": "Constellation Energy",
-    "sector": "electricity",
-    "sub_sector": "Nuclear Utilities",
-    "rating": null,
-    "rating_source": null,
-    "emoji": "🟡",
-    "exposure": "High",
-    "report": null,
-    "public": true,
-    "thesis": "World's largest private power producer (55 GW post-Calpine) with the nation's premier nuclear fleet (22 GW, 183 TWh zero-emissions generation in 2025). FY2025 revenue $25.5B (+8% YoY) with adjusted EPS of $9.39. Calpine acquisition closed Jan 7, 2026 for $16.4B, adding 23 GW of natural gas and geothermal generation, promising 20%+ EPS accretion. Guided 2026 adjusted EPS to $11.00-12.00 with 20% CAGR commitment through 2029. Key datacenter PPAs: Microsoft (Crane Clean Energy Center restart, 20-year PPA), Meta (Clinton nuclear, 1.1 GW), CyrusOne (380 MW). Stock down ~13% YTD as guidance disappointed vs Street expectations, creating potential entry point. $5B share buyback authorized.",
-    "catalysts": [
-      "Calpine integration delivering 20%+ EPS accretion — Q1 2026 EBITDA consensus $2.02B (+139% sequential)",
-      "2026 adjusted EPS guidance $11-12 with 20% CAGR commitment through 2029",
-      "Crane Clean Energy Center restart (835 MW) backed by 20-year Microsoft PPA",
-      "Nuclear license renewals: Clinton extended to 2047, Dresden to 2049/2051 — $370M invested",
-      "$5B share buyback program authorized — significant capital return"
-    ],
-    "risks": [
-      "Crane Clean Energy Center interconnection flagged for potential delay to 2031 by PJM — threatens Microsoft PPA",
-      "Calpine integration complexity: 2,300 employees, 60+ power plants, rising interest expense from $16.4B financing",
-      "2026 guidance midpoint ($11.50 EPS) below initial Street consensus ($11.73) — sent stock down 7%",
-      "Nuclear operational risk across 22 GW fleet — unplanned outages impact earnings",
-      "Regulatory and policy risk: clean energy subsidies, capacity market reforms, PJM interconnection rules"
-    ],
-    "updated": "2026-05-09",
-    "latest_revenue": "$25.5B FY2025"
+{
+  "_meta": {
+    "as_of": "2026-10-02",
+    "role": "curated_seed_subset",
+    "note": "This file is a curated legacy-compatible seed subset for the public hub — NOT the full Electrification Power Map roster (~45+ tickers across stages/companies). Pages should treat electrification/stages (and related briefing data) as the source of truth for Power Map coverage. High-value missing names were seeded 2026-10-02 (A-157); remaining Power Map names are intentionally omitted here to avoid inventive ballooning. Educational research only — not investment advice.",
+    "cross_listing": "Names with sector dc_hardware (e.g. Amphenol APH, Vertiv VRT, Asetek) may appear in BOTH electrification_companies.json and hardware_companies.json intentionally — cooling/connectors/thermal span power delivery and compute hardware. Do not delete either side (C-165).",
+    "ratings_policy": "Public hub seeds use null rating / rating_source / report paths (A-159).",
+    "source_of_truth": "electrification/ Power Map stages & briefing — not this seed file alone"
   },
-  {
-    "ticker": "VST",
-    "name": "Vistra Energy",
-    "sector": "electricity",
-    "sub_sector": "Nuclear Utilities",
-    "rating": null,
-    "rating_source": null,
-    "emoji": "🟡",
-    "exposure": "High",
-    "report": null,
-    "public": true,
-    "thesis": "Diversified power generator with nuclear fleet. Comanche Peak nuclear assets positioned for datacenter PPAs.",
-    "catalysts": [
-      "Nuclear PPA opportunities",
-      "Power price tailwinds",
-      "Datacenter demand in ERCOT"
-    ],
-    "risks": [
-      "ERCOT market volatility",
-      "Regulatory changes",
-      "Nuclear operational risk"
-    ],
-    "updated": "2026-04-27"
-  },
-  {
-    "ticker": "NEE",
-    "name": "NextEra Energy",
-    "sector": "electricity",
-    "sub_sector": "IPPs & Generators",
-    "rating": null,
-    "rating_source": null,
-    "emoji": "🟡",
-    "exposure": "15-20%",
-    "report": null,
-    "public": true,
-    "thesis": "Largest US renewable energy generator with growing datacenter power supply portfolio. Solar, wind, and battery storage.",
-    "catalysts": [
-      "Largest US renewable portfolio",
-      "Growing datacenter power contracts",
-      "Battery storage deployment",
-      "IRA incentives"
-    ],
-    "risks": [
-      "Interest rate sensitivity",
-      "Renewable intermittency",
-      "Regulatory changes"
-    ],
-    "updated": "2026-04-27"
-  },
-  {
-    "ticker": "AES",
-    "name": "AES Corporation",
-    "sector": "electricity",
-    "sub_sector": "IPPs & Generators",
-    "rating": null,
-    "rating_source": null,
-    "emoji": "🟠",
-    "exposure": "Medium",
-    "report": null,
-    "public": true,
-    "thesis": "Global power company with growing renewable portfolio and datacenter energy supply contracts.",
-    "catalysts": [
-      "Datacenter PPA pipeline",
-      "Renewable energy growth",
-      "Energy storage deployment",
-      "Pending GIP/EQT take-private (>$33B) under regulatory review"
-    ],
-    "risks": [
-      "International exposure risk",
-      "Debt levels",
-      "Execution on renewables pipeline",
-      "Deal may be blocked or renegotiated in FERC/regulatory review"
-    ],
-    "updated": "2026-10-02",
-    "note": "PENDING TAKE-PRIVATE >$33B (BlackRock GIP/EQT); shareholders approved Jun 2026; FERC review ongoing as of late Sep 2026. Still NYSE: AES until close.",
-    "status": "pending_take_private"
-  },
-  {
-    "ticker": "GEV",
-    "name": "GE Vernova",
-    "sector": "electricity",
-    "sub_sector": "Gas Turbine OEMs",
-    "rating": null,
-    "rating_source": null,
-    "emoji": "🟢",
-    "exposure": "25-30%",
-    "report": null,
-    "public": true,
-    "thesis": "Critical grid infrastructure provider. $42B electrification backlog (from $9B in 2022). 20% of 100 GW gas power under contract for datacenters.",
-    "catalysts": [
-      "Electrification datacenter orders $2.4B in Q1 exceed full 2025",
-      "Raised FY2026 guidance across all metrics"
-    ],
-    "risks": [
-      "Turbine delivery lead times",
-      "Supply chain constraints",
-      "Transition risk to renewables"
-    ],
-    "updated": "2026-05-09",
-    "latest_revenue": "Q1 orders 18.3B (+71%)"
-  },
-  {
-    "ticker": "ENR.DE",
-    "name": "Siemens Energy",
-    "sector": "electricity",
-    "sub_sector": "Gas Turbine OEMs",
-    "rating": null,
-    "rating_source": null,
-    "emoji": "🟡",
-    "exposure": "High",
-    "report": null,
-    "public": true,
-    "thesis": "Major gas turbine OEM with growing datacenter power demand. Gamesa wind issues being resolved. Grid infrastructure exposure.",
-    "catalysts": [
-      "Gas turbine demand from datacenters",
-      "Grid equipment backlog growth",
-      "Gamesa turnaround"
-    ],
-    "risks": [
-      "Gamesa wind turbine legacy issues",
-      "Execution risk",
-      "Competition from GE Vernova"
-    ],
-    "updated": "2026-04-27"
-  },
-  {
-    "ticker": "ETN",
-    "name": "Eaton",
-    "sector": "electricity",
-    "sub_sector": "Grid Equipment & Power Distribution",
-    "rating": null,
-    "rating_source": null,
-    "emoji": "🟡",
-    "exposure": "30-35%",
-    "report": null,
-    "public": true,
-    "thesis": "Diversified electrical infrastructure leader. $9.5B Boyd acquisition strengthens integrated power/cooling portfolio. 11-year datacenter backlog.",
-    "catalysts": [
-      "Datacenter orders +240% YoY",
-      "228 GW backlog",
-      "Raised organic growth guidance to 9-11%"
-    ],
-    "risks": [
-      "Boyd integration execution risk",
-      "Macro sensitivity in non-DC segments",
-      "Premium multiple"
-    ],
-    "updated": "2026-10-02",
-    "latest_revenue": "7.5B Q1 2026",
-    "latest_eps": 2.81,
-    "note": "Grid/cooling/BESS supplier formerly also listed under data/hardware_suppliers.json (relocated 2026-10-02)."
-  },
-  {
-    "ticker": "SU.PA",
-    "name": "Schneider Electric",
-    "sector": "electricity",
-    "sub_sector": "Grid Equipment & Power Distribution",
-    "rating": null,
-    "rating_source": null,
-    "emoji": "🟡",
-    "exposure": "30%+",
-    "report": null,
-    "public": true,
-    "thesis": "Global leader in power management and automation for datacenters. Galaxy UPS systems, PDUs, and building management.",
-    "catalysts": [
-      "Datacenter power management demand",
-      "Edge computing deployments",
-      "Sustainability solutions",
-      "Digital twin technology"
-    ],
-    "risks": [
-      "Currency exposure",
-      "Integration complexity",
-      "Competition from Eaton/Vertiv"
-    ],
-    "updated": "2026-10-02",
-    "us_symbol": "SBGSY",
-    "us_symbol_alt": "SBGSF",
-    "exchange": "Euronext Paris",
-    "note": "Local SU.PA; US ADR SBGSY (Fidelity) / OTC SBGSF. SNEXF invalid. Verified Yahoo 2026-10-02. Grid/cooling/BESS supplier formerly also listed under data/hardware_suppliers.json (relocated 2026-10-02)."
-  },
-  {
-    "ticker": "FLNC",
-    "name": "Fluence Energy",
-    "sector": "electricity",
-    "sub_sector": "Renewables & Storage",
-    "rating": null,
-    "rating_source": null,
-    "emoji": "🟡",
-    "exposure": "Medium",
-    "report": null,
-    "public": true,
-    "thesis": "Battery energy storage solutions provider. Growing demand from datacenter backup power and grid storage applications.",
-    "catalysts": [
-      "Battery storage demand from datacenters",
-      "Grid-scale storage deployments",
-      "IRA incentives"
-    ],
-    "risks": [
-      "Battery cost volatility",
-      "Competition intensifying",
-      "Project execution risk"
-    ],
-    "updated": "2026-10-02",
-    "note": "Grid/cooling/BESS supplier formerly also listed under data/hardware_suppliers.json (relocated 2026-10-02)."
-  },
-  {
-    "ticker": "TSLA",
-    "name": "Tesla Energy",
-    "sector": "electricity",
-    "sub_sector": "Renewables & Storage",
-    "rating": null,
-    "rating_source": null,
-    "emoji": "🟠",
-    "exposure": "Indirect",
-    "report": null,
-    "public": true,
-    "thesis": "Megapack utility-scale battery storage gaining traction for datacenter backup and grid stabilization. Energy segment growing rapidly.",
-    "catalysts": [
-      "Megapack production scaling",
-      "Grid storage demand growth",
-      "Energy segment revenue acceleration"
-    ],
-    "risks": [
-      "Core auto business overshadows energy",
-      "Battery supply constraints",
-      "Competition from Fluence/BYD"
-    ],
-    "updated": "2026-10-02",
-    "note": "Grid/cooling/BESS supplier formerly also listed under data/hardware_suppliers.json (relocated 2026-10-02)."
-  },
-  {
-    "ticker": "APH",
-    "name": "Amphenol",
-    "sector": "dc_hardware",
-    "sub_sector": "Connectors & Cabling",
-    "rating": null,
-    "rating_source": null,
-    "emoji": "🟡",
-    "exposure": "High",
-    "report": null,
-    "public": true,
-    "thesis": "High-quality electrical connector compounder with exceptional datacom growth. Q1 2026 revenue +49% YoY.",
-    "catalysts": [
-      "+49% YoY revenue growth Q1 2026",
-      "IT Datacom segment acceleration",
-      "AI infrastructure connector demand"
-    ],
-    "risks": [
-      "Premium valuation",
-      "Growth deceleration risk",
-      "Acquisition integration"
-    ],
-    "updated": "2026-04-27"
-  },
-  {
-    "ticker": "VRT",
-    "name": "Vertiv",
-    "sector": "dc_hardware",
-    "sub_sector": "Cooling & Thermal",
-    "rating": null,
-    "rating_source": null,
-    "emoji": "🟡",
-    "exposure": "45-50%",
-    "report": null,
-    "public": true,
-    "thesis": "Dominant datacenter thermal management and power distribution leader riding the AI infrastructure supercycle. Q1 2026 revenue $2.65B (+30% YoY) with adjusted EPS of $1.17 (+83% YoY). FY2025 revenue reached $10.2B (+28% YoY) with $1.3B net income (+169%). Backlog surged to $15.0B (+109% YoY) with Q4 2025 book-to-bill of 2.9x driven by 252% organic orders growth. Adjusted operating margin expanded to 20.8% in Q1 2026 (+430bps YoY). Raised 2026 guidance to $13.5-14.0B revenue (+34% growth) with adj. EPS of $6.30-6.40 (+51%). Net leverage at 0.2x with $5.0B liquidity. CoolPhase Flex hybrid cooling and 800VDC power solutions position Vertiv at the center of the liquid cooling transition for 100+ kW AI racks.",
-    "catalysts": [
-      "$15.0B backlog (+109% YoY) with book-to-bill of 2.9x — orders accelerating, not decelerating",
-      "2026 guidance raised to $13.5-14.0B revenue (+34% growth), adj. EPS $6.30-6.40 (+51%)",
-      "Q1 2026 adjusted free cash flow $653M (+147% YoY) — cash generation inflecting sharply",
-      "Liquid cooling supercycle: CoolPhase Flex and 800VDC solutions for NVIDIA next-gen GPU racks",
-      "Adjusted operating margin expansion to 22.8-23.8% guided for FY2026 (+290bps vs FY2025)"
-    ],
-    "risks": [
-      "Premium valuation at ~42x forward P/E and $131B market cap — priced for perfection",
-      "Hyperscaler customer concentration — top customers drive outsized revenue share",
-      "Execution risk on 34% revenue growth with simultaneous margin expansion",
-      "STL acquisition integration risk alongside organic growth demands",
-      "Potential demand moderation if hyperscaler capex cycle decelerates"
-    ],
-    "updated": "2026-10-02",
-    "latest_revenue": "$2.65B Q1 2026",
-    "note": "Grid/cooling/BESS supplier formerly also listed under data/hardware_suppliers.json (relocated 2026-10-02)."
-  },
-  {
-    "ticker": null,
-    "name": "Asetek",
-    "sector": "dc_hardware",
-    "sub_sector": "Cooling & Thermal",
-    "rating": null,
-    "emoji": null,
-    "exposure": "High",
-    "report": null,
-    "public": false,
-    "thesis": "Liquid cooling specialist for AI datacenters. Direct-to-chip and rear-door heat exchanger solutions.",
-    "catalysts": [
-      "Liquid cooling adoption acceleration",
-      "AI GPU power density driving demand",
-      "OEM partnerships"
-    ],
-    "risks": [
-      "Small market cap",
-      "Competition from Vertiv/CoolIT",
-      "Scaling challenges"
-    ],
-    "updated": "2026-10-02",
-    "note": "Was Nasdaq Copenhagen ASTK. CQXA takeover completed Apr 2026; last trading day 2026-05-21; now private. Older Oslo-2024 delisting note obsolete."
-  },
-  {
-    "ticker": "BE",
-    "name": "Bloom Energy",
-    "sector": "electricity",
-    "sub_sector": "Hydrogen & Fuel Cells",
-    "rating": null,
-    "rating_source": null,
-    "emoji": "🟡",
-    "exposure": "High",
-    "report": null,
-    "public": true,
-    "thesis": "Market-leading solid oxide fuel cell (SOFC) manufacturer with dominant datacenter power positioning. Q1 2026 revenue $751M (+130% YoY) — record quarter. Oracle expanded master agreement to 2.8 GW. FY2025 revenue $2.02B (+37%). First GAAP net income achieved in Q1 2026 ($70.7M). 2026 guidance raised to $3.4-3.8B (~80% growth). Fuel flexibility (natural gas, hydrogen, biogas) and rapid deployment (55-day installation for Oracle) are key differentiators for grid-constrained datacenter sites.",
-    "catalysts": [
-      "Oracle 2.8 GW master agreement — initial 1.2 GW contracted, deployment underway",
-      "Q1 2026 revenue $751M (+130% YoY) — first GAAP profit ($70.7M net income)",
-      "2026 guidance raised to $3.4-3.8B revenue (~80% growth at midpoint)",
-      "55-day deployment speed for Oracle — month ahead of schedule",
-      "Gross margin expanded to 31.5% (+280bps YoY)"
-    ],
-    "risks": [
-      "Stock up ~240% YTD — valuation stretched at $82B market cap",
-      "Oracle customer concentration risk in near-term",
-      "Long-term debt of $2.6B vs $2.5B cash — elevated leverage",
-      "Competition from grid power, gas turbines for baseload datacenter",
-      "Hydrogen transition timeline uncertain for SOFC platform"
-    ],
-    "updated": "2026-05-09",
-    "latest_revenue": "751M Q1 2026"
-  },
-  {
-    "ticker": "PLUG",
-    "name": "Plug Power",
-    "sector": "electricity",
-    "sub_sector": "Hydrogen & Fuel Cells",
-    "rating": null,
-    "rating_source": null,
-    "emoji": "🟠",
-    "exposure": "Emerging",
-    "report": null,
-    "public": true,
-    "thesis": "Hydrogen fuel cell and electrolyzer company pivoting to datacenter backup power. FY2025 revenue $710M (+13% YoY), first positive gross margin in Q4 2025. Targeting datacenter fuel cell deployments with all three hyperscalers. Cash-burn remains significant ($536M operating outflow in 2025) with only $368M unrestricted cash. Management targets positive EBITDAS by Q4 2026 and full profitability by end of 2028.",
-    "catalysts": [
-      "Datacenter pivot: LOI with Stream Data Centers for $132.5M+ asset monetization supporting DC buildout",
-      "First positive gross margin achieved Q4 2025 — inflection point",
-      "Electrolyzer sales reached $187M in FY2025, growing sequentially",
-      "$275M+ monetization of electricity rights to support datacenter build-out",
-      "Testing with all three major hyperscalers for fuel cell backup power"
-    ],
-    "risks": [
-      "Severe cash burn: $536M operating cash outflow in 2025 with only $368M cash remaining",
-      "Profitability not expected until end of 2028 — multi-year path",
-      "Stock trading near all-time lows (~$3.08) — dilution risk from capital raises",
-      "Hydrogen cost economics still unproven at datacenter scale",
-      "Competition from Bloom Energy (SOFC) and diesel generators"
-    ],
-    "updated": "2026-05-09",
-    "latest_revenue": "710M FY2025"
-  },
-  {
-    "ticker": "FCEL",
-    "name": "FuelCell Energy",
-    "sector": "electricity",
-    "sub_sector": "Hydrogen & Fuel Cells",
-    "rating": null,
-    "rating_source": null,
-    "emoji": "🟠",
-    "exposure": "Emerging",
-    "report": null,
-    "public": true,
-    "thesis": "Carbonate fuel cell manufacturer pivoting aggressively to datacenter power. Q1 FY2026 revenue $30.5M (+61% YoY). 1.5 GW datacenter pipeline with 275% growth since Feb 2025. New 12.5 MW standardized power blocks for rapid datacenter deployment. SDCL partnership for 450 MW identified projects. Tri-gen technology produces electricity, hydrogen, and heat (absorption cooling for DC thermal management). Still pre-profit with $192M operating loss in FY2025, but $379.6M cash provides runway.",
-    "catalysts": [
-      "Datacenter pipeline 1.5+ GW with 275% growth — SDCL partnership for 450 MW",
-      "New 12.5 MW standardized power block for rapid datacenter deployment (months, not years)",
-      "Q1 FY2026 revenue +61% YoY to $30.5M — accelerating growth",
-      "Tri-gen technology: electricity + hydrogen + absorption cooling for DC thermal loads",
-      "Manufacturing expansion planned: 100 MW to 350 MW capacity at Torrington, CT"
-    ],
-    "risks": [
-      "$1.17B backlog declining 10.8% — revenue recognized faster than new awards",
-      "Still deeply unprofitable: $192M operating loss in FY2025, net loss $7.42/share",
-      "Dilution risk: $56.3M raised via at-the-market stock sales in Q1 2026",
-      "Small revenue base ($158M FY2025) relative to datacenter power ambitions",
-      "Competition from Bloom Energy, natural gas generators, and grid power"
-    ],
-    "updated": "2026-05-09",
-    "latest_revenue": "158.2M FY2025 (Oct)"
-  },
-  {
-    "ticker": "6501.T",
-    "name": "Hitachi Energy (Hitachi)",
-    "sector": "electricity",
-    "sub_sector": "Grid Equipment & Power Distribution",
-    "rating": null,
-    "rating_source": null,
-    "emoji": null,
-    "exposure": "High",
-    "report": null,
-    "public": true,
-    "thesis": "Grid and large power transformers / HV equipment used to energize datacenter campuses; long lead times remain a constraint for AI power delivery.",
-    "catalysts": [
-      "Datacenter transformer and HV equipment demand",
-      "US/EU manufacturing expansions",
-      "Long-dated grid equipment backlog"
-    ],
-    "risks": [
-      "Very long lead times / capacity constraints",
-      "Parent conglomerate mix (Hitachi 6501.T)",
-      "Project timing and utility CapEx cycles"
-    ],
-    "updated": "2026-10-02",
-    "note": "Moved/merged from former hardware_suppliers.json (power/electrification scope, not compute hardware)."
-  }
-]
+  "companies": [
+    {
+      "ticker": "CEG",
+      "name": "Constellation Energy",
+      "sector": "electricity",
+      "sub_sector": "Nuclear Utilities",
+      "rating": null,
+      "rating_source": null,
+      "emoji": "🟡",
+      "exposure": "High",
+      "report": null,
+      "public": true,
+      "thesis": "World's largest private power producer (55 GW post-Calpine) with the nation's premier nuclear fleet (22 GW, 183 TWh zero-emissions generation in 2025). FY2025 revenue $25.5B (+8% YoY) with adjusted EPS of $9.39. Calpine acquisition closed Jan 7, 2026 for $16.4B, adding 23 GW of natural gas and geothermal generation, promising 20%+ EPS accretion. Guided 2026 adjusted EPS to $11.00-12.00 with 20% CAGR commitment through 2029. Key datacenter PPAs: Microsoft (Crane Clean Energy Center restart, 20-year PPA), Meta (Clinton nuclear, 1.1 GW), CyrusOne (380 MW). Stock down ~13% YTD as guidance disappointed vs Street expectations, creating potential entry point. $5B share buyback authorized.",
+      "catalysts": [
+        "Calpine integration delivering 20%+ EPS accretion — Q1 2026 EBITDA consensus $2.02B (+139% sequential)",
+        "2026 adjusted EPS guidance $11-12 with 20% CAGR commitment through 2029",
+        "Crane Clean Energy Center restart (835 MW) backed by 20-year Microsoft PPA",
+        "Nuclear license renewals: Clinton extended to 2047, Dresden to 2049/2051 — $370M invested",
+        "$5B share buyback program authorized — significant capital return"
+      ],
+      "risks": [
+        "Crane Clean Energy Center interconnection flagged for potential delay to 2031 by PJM — threatens Microsoft PPA",
+        "Calpine integration complexity: 2,300 employees, 60+ power plants, rising interest expense from $16.4B financing",
+        "2026 guidance midpoint ($11.50 EPS) below initial Street consensus ($11.73) — sent stock down 7%",
+        "Nuclear operational risk across 22 GW fleet — unplanned outages impact earnings",
+        "Regulatory and policy risk: clean energy subsidies, capacity market reforms, PJM interconnection rules"
+      ],
+      "updated": "2026-05-09",
+      "latest_revenue": "$25.5B FY2025"
+    },
+    {
+      "ticker": "VST",
+      "name": "Vistra Energy",
+      "sector": "electricity",
+      "sub_sector": "Nuclear Utilities",
+      "rating": null,
+      "rating_source": null,
+      "emoji": "🟡",
+      "exposure": "High",
+      "report": null,
+      "public": true,
+      "thesis": "Diversified power generator with nuclear fleet. Comanche Peak nuclear assets positioned for datacenter PPAs.",
+      "catalysts": [
+        "Nuclear PPA opportunities",
+        "Power price tailwinds",
+        "Datacenter demand in ERCOT"
+      ],
+      "risks": [
+        "ERCOT market volatility",
+        "Regulatory changes",
+        "Nuclear operational risk"
+      ],
+      "updated": "2026-04-27"
+    },
+    {
+      "ticker": "NEE",
+      "name": "NextEra Energy",
+      "sector": "electricity",
+      "sub_sector": "IPPs & Generators",
+      "rating": null,
+      "rating_source": null,
+      "emoji": "🟡",
+      "exposure": "15-20%",
+      "report": null,
+      "public": true,
+      "thesis": "Largest US renewable energy generator with growing datacenter power supply portfolio. Solar, wind, and battery storage.",
+      "catalysts": [
+        "Largest US renewable portfolio",
+        "Growing datacenter power contracts",
+        "Battery storage deployment",
+        "IRA incentives"
+      ],
+      "risks": [
+        "Interest rate sensitivity",
+        "Renewable intermittency",
+        "Regulatory changes"
+      ],
+      "updated": "2026-04-27"
+    },
+    {
+      "ticker": "AES",
+      "name": "AES Corporation",
+      "sector": "electricity",
+      "sub_sector": "IPPs & Generators",
+      "rating": null,
+      "rating_source": null,
+      "emoji": "🟠",
+      "exposure": "Medium",
+      "report": null,
+      "public": true,
+      "thesis": "Global power company with growing renewable portfolio and datacenter energy supply contracts.",
+      "catalysts": [
+        "Datacenter PPA pipeline",
+        "Renewable energy growth",
+        "Energy storage deployment",
+        "Pending GIP/EQT take-private (>$33B) under regulatory review"
+      ],
+      "risks": [
+        "International exposure risk",
+        "Debt levels",
+        "Execution on renewables pipeline",
+        "Deal may be blocked or renegotiated in FERC/regulatory review"
+      ],
+      "updated": "2026-10-02",
+      "note": "PENDING TAKE-PRIVATE >$33B (BlackRock GIP/EQT); shareholders approved Jun 2026; FERC review ongoing as of late Sep 2026. Still NYSE: AES until close.",
+      "status": "pending_take_private"
+    },
+    {
+      "ticker": "GEV",
+      "name": "GE Vernova",
+      "sector": "electricity",
+      "sub_sector": "Gas Turbine OEMs",
+      "rating": null,
+      "rating_source": null,
+      "emoji": "🟢",
+      "exposure": "25-30%",
+      "report": null,
+      "public": true,
+      "thesis": "Critical grid infrastructure provider. $42B electrification backlog (from $9B in 2022). 20% of 100 GW gas power under contract for datacenters.",
+      "catalysts": [
+        "Electrification datacenter orders $2.4B in Q1 exceed full 2025",
+        "Raised FY2026 guidance across all metrics"
+      ],
+      "risks": [
+        "Turbine delivery lead times",
+        "Supply chain constraints",
+        "Transition risk to renewables"
+      ],
+      "updated": "2026-05-09",
+      "latest_revenue": "Q1 orders 18.3B (+71%)"
+    },
+    {
+      "ticker": "ENR.DE",
+      "name": "Siemens Energy",
+      "sector": "electricity",
+      "sub_sector": "Gas Turbine OEMs",
+      "rating": null,
+      "rating_source": null,
+      "emoji": "🟡",
+      "exposure": "High",
+      "report": null,
+      "public": true,
+      "thesis": "Major gas turbine OEM with growing datacenter power demand. Gamesa wind issues being resolved. Grid infrastructure exposure.",
+      "catalysts": [
+        "Gas turbine demand from datacenters",
+        "Grid equipment backlog growth",
+        "Gamesa turnaround"
+      ],
+      "risks": [
+        "Gamesa wind turbine legacy issues",
+        "Execution risk",
+        "Competition from GE Vernova"
+      ],
+      "updated": "2026-04-27"
+    },
+    {
+      "ticker": "ETN",
+      "name": "Eaton",
+      "sector": "electricity",
+      "sub_sector": "Grid Equipment & Power Distribution",
+      "rating": null,
+      "rating_source": null,
+      "emoji": "🟡",
+      "exposure": "30-35%",
+      "report": null,
+      "public": true,
+      "thesis": "Diversified electrical infrastructure leader. $9.5B Boyd acquisition strengthens integrated power/cooling portfolio. 11-year datacenter backlog.",
+      "catalysts": [
+        "Datacenter orders +240% YoY",
+        "228 GW backlog",
+        "Raised organic growth guidance to 9-11%"
+      ],
+      "risks": [
+        "Boyd integration execution risk",
+        "Macro sensitivity in non-DC segments",
+        "Premium multiple"
+      ],
+      "updated": "2026-10-02",
+      "latest_revenue": "7.5B Q1 2026",
+      "latest_eps": 2.81,
+      "note": "Grid/cooling/BESS supplier formerly also listed under data/hardware_suppliers.json (relocated 2026-10-02)."
+    },
+    {
+      "ticker": "SU.PA",
+      "name": "Schneider Electric",
+      "sector": "electricity",
+      "sub_sector": "Grid Equipment & Power Distribution",
+      "rating": null,
+      "rating_source": null,
+      "emoji": "🟡",
+      "exposure": "30%+",
+      "report": null,
+      "public": true,
+      "thesis": "Global leader in power management and automation for datacenters. Galaxy UPS systems, PDUs, and building management.",
+      "catalysts": [
+        "Datacenter power management demand",
+        "Edge computing deployments",
+        "Sustainability solutions",
+        "Digital twin technology"
+      ],
+      "risks": [
+        "Currency exposure",
+        "Integration complexity",
+        "Competition from Eaton/Vertiv"
+      ],
+      "updated": "2026-10-02",
+      "us_symbol": "SBGSY",
+      "us_symbol_alt": "SBGSF",
+      "exchange": "Euronext Paris",
+      "note": "Local SU.PA; US ADR SBGSY (Fidelity) / OTC SBGSF. SNEXF invalid. Verified Yahoo 2026-10-02. Grid/cooling/BESS supplier formerly also listed under data/hardware_suppliers.json (relocated 2026-10-02)."
+    },
+    {
+      "ticker": "FLNC",
+      "name": "Fluence Energy",
+      "sector": "electricity",
+      "sub_sector": "Renewables & Storage",
+      "rating": null,
+      "rating_source": null,
+      "emoji": "🟡",
+      "exposure": "Medium",
+      "report": null,
+      "public": true,
+      "thesis": "Battery energy storage solutions provider. Growing demand from datacenter backup power and grid storage applications.",
+      "catalysts": [
+        "Battery storage demand from datacenters",
+        "Grid-scale storage deployments",
+        "IRA incentives"
+      ],
+      "risks": [
+        "Battery cost volatility",
+        "Competition intensifying",
+        "Project execution risk"
+      ],
+      "updated": "2026-10-02",
+      "note": "Grid/cooling/BESS supplier formerly also listed under data/hardware_suppliers.json (relocated 2026-10-02)."
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla Energy",
+      "sector": "electricity",
+      "sub_sector": "Renewables & Storage",
+      "rating": null,
+      "rating_source": null,
+      "emoji": "🟠",
+      "exposure": "Indirect",
+      "report": null,
+      "public": true,
+      "thesis": "Megapack utility-scale battery storage gaining traction for datacenter backup and grid stabilization. Energy segment growing rapidly.",
+      "catalysts": [
+        "Megapack production scaling",
+        "Grid storage demand growth",
+        "Energy segment revenue acceleration"
+      ],
+      "risks": [
+        "Core auto business overshadows energy",
+        "Battery supply constraints",
+        "Competition from Fluence/BYD"
+      ],
+      "updated": "2026-10-02",
+      "note": "Grid/cooling/BESS supplier formerly also listed under data/hardware_suppliers.json (relocated 2026-10-02)."
+    },
+    {
+      "ticker": "APH",
+      "name": "Amphenol",
+      "sector": "dc_hardware",
+      "sub_sector": "Connectors & Cabling",
+      "rating": null,
+      "rating_source": null,
+      "emoji": "🟡",
+      "exposure": "High",
+      "report": null,
+      "public": true,
+      "thesis": "High-quality electrical connector compounder with exceptional datacom growth. Q1 2026 revenue +49% YoY.",
+      "catalysts": [
+        "+49% YoY revenue growth Q1 2026",
+        "IT Datacom segment acceleration",
+        "AI infrastructure connector demand"
+      ],
+      "risks": [
+        "Premium valuation",
+        "Growth deceleration risk",
+        "Acquisition integration"
+      ],
+      "updated": "2026-04-27"
+    },
+    {
+      "ticker": "VRT",
+      "name": "Vertiv",
+      "sector": "dc_hardware",
+      "sub_sector": "Cooling & Thermal",
+      "rating": null,
+      "rating_source": null,
+      "emoji": "🟡",
+      "exposure": "45-50%",
+      "report": null,
+      "public": true,
+      "thesis": "Dominant datacenter thermal management and power distribution leader riding the AI infrastructure supercycle. Q1 2026 revenue $2.65B (+30% YoY) with adjusted EPS of $1.17 (+83% YoY). FY2025 revenue reached $10.2B (+28% YoY) with $1.3B net income (+169%). Backlog surged to $15.0B (+109% YoY) with Q4 2025 book-to-bill of 2.9x driven by 252% organic orders growth. Adjusted operating margin expanded to 20.8% in Q1 2026 (+430bps YoY). Raised 2026 guidance to $13.5-14.0B revenue (+34% growth) with adj. EPS of $6.30-6.40 (+51%). Net leverage at 0.2x with $5.0B liquidity. CoolPhase Flex hybrid cooling and 800VDC power solutions position Vertiv at the center of the liquid cooling transition for 100+ kW AI racks.",
+      "catalysts": [
+        "$15.0B backlog (+109% YoY) with book-to-bill of 2.9x — orders accelerating, not decelerating",
+        "2026 guidance raised to $13.5-14.0B revenue (+34% growth), adj. EPS $6.30-6.40 (+51%)",
+        "Q1 2026 adjusted free cash flow $653M (+147% YoY) — cash generation inflecting sharply",
+        "Liquid cooling supercycle: CoolPhase Flex and 800VDC solutions for NVIDIA next-gen GPU racks",
+        "Adjusted operating margin expansion to 22.8-23.8% guided for FY2026 (+290bps vs FY2025)"
+      ],
+      "risks": [
+        "Sep 2026 UtilityInnovation Group deal (~$1.45B cash + up to $1.15B EBITDA earnouts) — microgrids/onsite gen/BTM power; closing risk Q4 2026",
+        "Sep 2026 King Environmental Services (EMEA fluid management / commissioning) — integration and services scaling risk",
+        "Premium valuation at ~42x forward P/E and $131B market cap — priced for perfection",
+        "Hyperscaler customer concentration — top customers drive outsized revenue share",
+        "Execution risk on 34% revenue growth with simultaneous margin expansion",
+        "Potential demand moderation if hyperscaler capex cycle decelerates"
+      ],
+      "updated": "2026-10-02",
+      "latest_revenue": "$2.65B Q1 2026",
+      "note": "Grid/cooling/BESS supplier formerly also listed under data/hardware_suppliers.json (relocated 2026-10-02). Acquisitions announced Sep 2026: UtilityInnovation Group (~$1.45B microgrids/onsite gen/BTM) and King Environmental Services (EMEA fluid mgmt); expected close Q4 2026. Educational research only."
+    },
+    {
+      "ticker": null,
+      "name": "Asetek",
+      "sector": "dc_hardware",
+      "sub_sector": "Cooling & Thermal",
+      "rating": null,
+      "emoji": null,
+      "exposure": "n/a (private)",
+      "public": false,
+      "thesis": "Former liquid-cooling OEM (direct-to-chip / rack solutions). Was public on Nasdaq Copenhagen as ASTK; CQXA Holdings takeover completed Apr 2026. Now private — not an investable public hub seed. Educational context only for cooling supply-chain history; do not treat as a live AI-DC pure-play listing.",
+      "catalysts": [
+        "Private ownership under CQXA — no public catalysts tracked on this hub",
+        "Historical cooling IP/OEM relationships (context only)"
+      ],
+      "risks": [
+        "No longer publicly traded — cannot buy/sell on public markets",
+        "Post-takeover strategy and disclosures limited vs public filings",
+        "Competition in liquid cooling remains with Vertiv, CoolIT and others"
+      ],
+      "updated": "2026-10-02",
+      "note": "Was Nasdaq Copenhagen ASTK (earlier Oslo-listed). CQXA takeover completed Apr 2026; last trading day 2026-05-21; now private / Copenhagen delisted. Older Oslo-2024 delisting note obsolete. Drop stale High AI-DC exposure / gaming-only product framing. No dead ASTK report paths.",
+      "rating_source": null
+    },
+    {
+      "ticker": "BE",
+      "name": "Bloom Energy",
+      "sector": "electricity",
+      "sub_sector": "Hydrogen & Fuel Cells",
+      "rating": null,
+      "rating_source": null,
+      "emoji": "🟡",
+      "exposure": "High",
+      "report": null,
+      "public": true,
+      "thesis": "Market-leading solid oxide fuel cell (SOFC) manufacturer with dominant datacenter power positioning. Q1 2026 revenue $751M (+130% YoY) — record quarter. Oracle expanded master agreement to 2.8 GW. FY2025 revenue $2.02B (+37%). First GAAP net income achieved in Q1 2026 ($70.7M). 2026 guidance raised to $3.4-3.8B (~80% growth). Fuel flexibility (natural gas, hydrogen, biogas) and rapid deployment (55-day installation for Oracle) are key differentiators for grid-constrained datacenter sites.",
+      "catalysts": [
+        "Oracle 2.8 GW master agreement — initial 1.2 GW contracted, deployment underway",
+        "Q1 2026 revenue $751M (+130% YoY) — first GAAP profit ($70.7M net income)",
+        "2026 guidance raised to $3.4-3.8B revenue (~80% growth at midpoint)",
+        "55-day deployment speed for Oracle — month ahead of schedule",
+        "Gross margin expanded to 31.5% (+280bps YoY)"
+      ],
+      "risks": [
+        "Stock up ~240% YTD — valuation stretched at $82B market cap",
+        "Oracle customer concentration risk in near-term",
+        "Long-term debt of $2.6B vs $2.5B cash — elevated leverage",
+        "Competition from grid power, gas turbines for baseload datacenter",
+        "Hydrogen transition timeline uncertain for SOFC platform"
+      ],
+      "updated": "2026-05-09",
+      "latest_revenue": "751M Q1 2026"
+    },
+    {
+      "ticker": "PLUG",
+      "name": "Plug Power",
+      "sector": "electricity",
+      "sub_sector": "Hydrogen & Fuel Cells",
+      "rating": null,
+      "rating_source": null,
+      "emoji": "🟠",
+      "exposure": "Emerging",
+      "report": null,
+      "public": true,
+      "thesis": "Hydrogen fuel cell and electrolyzer company pivoting to datacenter backup power. FY2025 revenue $710M (+13% YoY), first positive gross margin in Q4 2025. Targeting datacenter fuel cell deployments with all three hyperscalers. Cash-burn remains significant ($536M operating outflow in 2025) with only $368M unrestricted cash. Management targets positive EBITDAS by Q4 2026 and full profitability by end of 2028.",
+      "catalysts": [
+        "Datacenter pivot: LOI with Stream Data Centers for $132.5M+ asset monetization supporting DC buildout",
+        "First positive gross margin achieved Q4 2025 — inflection point",
+        "Electrolyzer sales reached $187M in FY2025, growing sequentially",
+        "$275M+ monetization of electricity rights to support datacenter build-out",
+        "Testing with all three major hyperscalers for fuel cell backup power"
+      ],
+      "risks": [
+        "Severe cash burn: $536M operating cash outflow in 2025 with only $368M cash remaining",
+        "Profitability not expected until end of 2028 — multi-year path",
+        "Stock trading near all-time lows (~$3.08) — dilution risk from capital raises",
+        "Hydrogen cost economics still unproven at datacenter scale",
+        "Competition from Bloom Energy (SOFC) and diesel generators"
+      ],
+      "updated": "2026-05-09",
+      "latest_revenue": "710M FY2025"
+    },
+    {
+      "ticker": "FCEL",
+      "name": "FuelCell Energy",
+      "sector": "electricity",
+      "sub_sector": "Hydrogen & Fuel Cells",
+      "rating": null,
+      "rating_source": null,
+      "emoji": "🟠",
+      "exposure": "Emerging",
+      "report": null,
+      "public": true,
+      "thesis": "Carbonate fuel cell manufacturer pivoting aggressively to datacenter power. Q1 FY2026 revenue $30.5M (+61% YoY). 1.5 GW datacenter pipeline with 275% growth since Feb 2025. New 12.5 MW standardized power blocks for rapid datacenter deployment. SDCL partnership for 450 MW identified projects. Tri-gen technology produces electricity, hydrogen, and heat (absorption cooling for DC thermal management). Still pre-profit with $192M operating loss in FY2025, but $379.6M cash provides runway.",
+      "catalysts": [
+        "Datacenter pipeline 1.5+ GW with 275% growth — SDCL partnership for 450 MW",
+        "New 12.5 MW standardized power block for rapid datacenter deployment (months, not years)",
+        "Q1 FY2026 revenue +61% YoY to $30.5M — accelerating growth",
+        "Tri-gen technology: electricity + hydrogen + absorption cooling for DC thermal loads",
+        "Manufacturing expansion planned: 100 MW to 350 MW capacity at Torrington, CT"
+      ],
+      "risks": [
+        "$1.17B backlog declining 10.8% — revenue recognized faster than new awards",
+        "Still deeply unprofitable: $192M operating loss in FY2025, net loss $7.42/share",
+        "Dilution risk: $56.3M raised via at-the-market stock sales in Q1 2026",
+        "Small revenue base ($158M FY2025) relative to datacenter power ambitions",
+        "Competition from Bloom Energy, natural gas generators, and grid power"
+      ],
+      "updated": "2026-05-09",
+      "latest_revenue": "158.2M FY2025 (Oct)"
+    },
+    {
+      "ticker": "6501.T",
+      "name": "Hitachi Energy (Hitachi)",
+      "sector": "electricity",
+      "sub_sector": "Grid Equipment & Power Distribution",
+      "rating": null,
+      "rating_source": null,
+      "emoji": null,
+      "exposure": "High",
+      "report": null,
+      "public": true,
+      "thesis": "Grid and large power transformers / HV equipment used to energize datacenter campuses; long lead times remain a constraint for AI power delivery.",
+      "catalysts": [
+        "Datacenter transformer and HV equipment demand",
+        "US/EU manufacturing expansions",
+        "Long-dated grid equipment backlog"
+      ],
+      "risks": [
+        "Very long lead times / capacity constraints",
+        "Parent conglomerate mix (Hitachi 6501.T)",
+        "Project timing and utility CapEx cycles"
+      ],
+      "updated": "2026-10-02",
+      "note": "Moved/merged from former hardware_suppliers.json (power/electrification scope, not compute hardware). Local 6501.T; US OTC ADR HTHIY. Power Map Energy / grid equipment path.",
+      "us_symbol": "HTHIY"
+    },
+    {
+      "ticker": "7011.T",
+      "name": "Mitsubishi Heavy Industries (Mitsubishi Power)",
+      "sector": "electricity",
+      "sub_sector": "Gas Turbine OEMs",
+      "exposure": "High",
+      "thesis": "Major gas-turbine OEM (Mitsubishi Power) supplying large-frame turbines for datacenter and grid power. Parent conglomerate 7011.T; US OTC ADR MHVIY. Educational seed aligned with Power Map ccgt/turbine path — not investment advice.",
+      "catalysts": [
+        "Large-frame turbine demand for AI/datacenter power",
+        "US market order flow (see power_suppliers backlog notes)",
+        "Backlog scheduled into late decade (Power Map baseline)"
+      ],
+      "risks": [
+        "Conglomerate mix (defense, industrial, energy)",
+        "Long turbine lead times / capacity constraints",
+        "Competition from GE Vernova and Siemens Energy"
+      ],
+      "us_symbol": "MHVIY",
+      "exchange": "Tokyo Stock Exchange",
+      "note": "Power Map: TSE 7011 / Fid MHVIY (ADR). Consistent with data/power_suppliers.json Mitsubishi Power entry. Verified Yahoo MHVIY + 7011.T 2026-10-02.",
+      "rating": null,
+      "rating_source": null,
+      "report": null,
+      "public": true,
+      "emoji": null,
+      "updated": "2026-10-02"
+    },
+    {
+      "ticker": "2308.TW",
+      "name": "Delta Electronics",
+      "sector": "electricity",
+      "sub_sector": "Grid Equipment & Power Distribution",
+      "exposure": "Medium-High",
+      "thesis": "Taiwan power-electronics leader (PSUs, SST/power shelves, cooling adjacency) on AI datacenter 800 VDC / site power path. Local listing 2308.TW. Educational research seed — ratings null.",
+      "catalysts": [
+        "AI power shelf / SST demand",
+        "Datacenter power conversion content growth",
+        "Power Map site-sst coverage"
+      ],
+      "risks": [
+        "Taiwan / geopolitics and FX",
+        "Cyclical electronics demand",
+        "Competition from Eaton, Schneider, Vicor and peers"
+      ],
+      "us_symbol": null,
+      "fidelity_symbol_note": "Power Map lists Fidelity DELTY; Yahoo Finance did not resolve DELTY on 2026-10-02 (Symbol Lookup). Prefer local 2308.TW; MarketWatch also cites OTC GDR DLELY — treat US OTC symbols as verify-before-trade.",
+      "exchange": "Taiwan Stock Exchange",
+      "note": "Seeded 2026-10-02 (A-157). Primary verified ticker 2308.TW. DELTY not confirmed on Yahoo.",
+      "rating": null,
+      "rating_source": null,
+      "report": null,
+      "public": true,
+      "emoji": null,
+      "updated": "2026-10-02"
+    },
+    {
+      "ticker": "IFNNY",
+      "name": "Infineon Technologies",
+      "sector": "electricity",
+      "sub_sector": "Power Semiconductors",
+      "exposure": "High",
+      "thesis": "Leading power-semiconductor vendor (SiC/Si) for datacenter DC-DC, VRMs and AI power stages. US OTC ADR IFNNY (local IFX.DE). Educational seed — null ratings; SiC share doughnut in chart_data is unverified (see A-175 caveat).",
+      "catalysts": [
+        "AI server power / 800 VDC content",
+        "SiC and power MOSFET demand",
+        "Power Map dc-dc / llc / silicon coverage"
+      ],
+      "risks": [
+        "Semiconductor cycle / inventory",
+        "SiC competition (STM, onsemi, Wolfspeed and others)",
+        "Auto vs industrial mix shifts"
+      ],
+      "local_symbol": "IFX.DE",
+      "note": "Verified Yahoo IFNNY 2026-10-02. Also appears on semiconductor pages — intentional power-map adjacency.",
+      "rating": null,
+      "rating_source": null,
+      "report": null,
+      "public": true,
+      "emoji": null,
+      "updated": "2026-10-02"
+    },
+    {
+      "ticker": "STM",
+      "name": "STMicroelectronics",
+      "sector": "electricity",
+      "sub_sector": "Power Semiconductors",
+      "exposure": "Medium-High",
+      "thesis": "Power and analog semiconductors with datacenter / 800 VDC collaboration mentions in hub notes. Educational electrification seed mirroring Power Map dc-dc/llc — fuller coverage may live under semiconductors.",
+      "catalysts": [
+        "AI / datacenter power semiconductor demand",
+        "SiC and power discrete content",
+        "Power Map adjacency with Infineon"
+      ],
+      "risks": [
+        "Foundry/manufacturing execution",
+        "Competition in SiC and power",
+        "Consumer/auto cyclicality"
+      ],
+      "note": "Verified Yahoo STM 2026-10-02. May also appear in semiconductor_companies / companies.json (sector may differ) — intentional cross-theme seed.",
+      "rating": null,
+      "rating_source": null,
+      "report": null,
+      "public": true,
+      "emoji": null,
+      "updated": "2026-10-02"
+    },
+    {
+      "ticker": "ABBNY",
+      "name": "ABB",
+      "sector": "electricity",
+      "sub_sector": "Grid Equipment & Power Distribution",
+      "exposure": "Medium",
+      "thesis": "Electrification / automation compounder (drives, breakers, busway, robotics). US OTC ABBNY (SIX/Stockholm primary). Note: Power Grids sold to Hitachi — HVDC heritage is Hitachi Energy, not current ABB. Educational seed — null ratings; not investment advice.",
+      "catalysts": [
+        "Datacenter electrical distribution / busway demand",
+        "Industrial automation + electrification spend",
+        "Power Map dc-bus / site electrical path"
+      ],
+      "risks": [
+        "Do not credit ABB for Hitachi Energy HVDC (sold Power Grids)",
+        "OTC liquidity vs primary SIX listing",
+        "Macro industrial cycle"
+      ],
+      "note": "Verified Yahoo ABBNY 2026-10-02. ABB ticker 'ABB' on NYSE is stale — use ABBNY.",
+      "rating": null,
+      "rating_source": null,
+      "report": null,
+      "public": true,
+      "emoji": null,
+      "updated": "2026-10-02"
+    },
+    {
+      "ticker": "HUBB",
+      "name": "Hubbell",
+      "sector": "electricity",
+      "sub_sector": "Grid Equipment & Power Distribution",
+      "exposure": "Medium",
+      "thesis": "Electrical products (utility, lighting, communications) with datacenter / facility power distribution adjacency on the Power Map dc-bus path. Educational seed — null ratings.",
+      "catalysts": [
+        "Grid and facility electrical product demand",
+        "Datacenter buildout supporting electrical SKUs",
+        "Utility infrastructure CapEx cycle"
+      ],
+      "risks": [
+        "Construction / utility CapEx cyclicality",
+        "Competitive electrical-products market",
+        "Acquisition integration if inorganic growth continues"
+      ],
+      "note": "Verified Yahoo HUBB 2026-10-02.",
+      "rating": null,
+      "rating_source": null,
+      "report": null,
+      "public": true,
+      "emoji": null,
+      "updated": "2026-10-02"
+    },
+    {
+      "ticker": "POWL",
+      "name": "Powell Industries",
+      "sector": "electricity",
+      "sub_sector": "Grid Equipment & Power Distribution",
+      "exposure": "Medium-High",
+      "thesis": "Custom-engineered electrical distribution and control equipment (switchgear, power control rooms) used in industrial and energy projects, with rising AI/datacenter electrical package relevance. Educational seed.",
+      "catalysts": [
+        "Datacenter and industrial E-house / switchgear demand",
+        "Energy transition project electrical packages",
+        "Backlog visibility in engineered equipment"
+      ],
+      "risks": [
+        "Project timing / backlog conversion",
+        "Customer concentration in large projects",
+        "Smaller-cap liquidity and cyclicality"
+      ],
+      "note": "Verified Yahoo POWL 2026-10-02.",
+      "rating": null,
+      "rating_source": null,
+      "report": null,
+      "public": true,
+      "emoji": null,
+      "updated": "2026-10-02"
+    },
+    {
+      "ticker": "PWR",
+      "name": "Quanta Services",
+      "sector": "electricity",
+      "sub_sector": "Grid Equipment & Power Distribution",
+      "exposure": "High",
+      "thesis": "Specialty infrastructure contractor for electric power, renewables and communications — critical 'who builds the lines and substations' exposure for AI power delivery. Educational seed.",
+      "catalysts": [
+        "Transmission / distribution buildout for datacenter load",
+        "Renewables interconnection labor demand",
+        "Power Map hvac/hvdc contractor path"
+      ],
+      "risks": [
+        "Labor and execution risk on large projects",
+        "Utility CapEx timing",
+        "Weather / storm restoration volatility"
+      ],
+      "note": "Verified Yahoo PWR 2026-10-02.",
+      "rating": null,
+      "rating_source": null,
+      "report": null,
+      "public": true,
+      "emoji": null,
+      "updated": "2026-10-02"
+    },
+    {
+      "ticker": "VICR",
+      "name": "Vicor",
+      "sector": "electricity",
+      "sub_sector": "Power Semiconductors",
+      "exposure": "High",
+      "thesis": "High-density power-module / vertical power delivery specialist for AI accelerators and 48V/800V conversion stages. Educational Power Map llc seed — null ratings; no invented CapEx.",
+      "catalysts": [
+        "AI OEM power-delivery licensing / modules",
+        "Higher rack power density driving module content",
+        "Power Map llc / VPD adjacency"
+      ],
+      "risks": [
+        "Customer concentration / design-win timing",
+        "Competition from Infineon, STM, Delta and discrete solutions",
+        "Stock volatility around AI narrative"
+      ],
+      "note": "Verified Yahoo VICR 2026-10-02.",
+      "rating": null,
+      "rating_source": null,
+      "report": null,
+      "public": true,
+      "emoji": null,
+      "updated": "2026-10-02"
+    },
+    {
+      "ticker": "CAT",
+      "name": "Caterpillar",
+      "sector": "electricity",
+      "sub_sector": "Gensets / Engines",
+      "exposure": "Medium",
+      "thesis": "Genset and reciprocating/engine power for datacenter backup and some prime-power / BTM paths (incl. Solar Turbines brand context on Power Map). Educational seed — not a pure CCGT OEM.",
+      "catalysts": [
+        "Datacenter backup genset demand",
+        "Energy and industrial engine content",
+        "Aligned with power_suppliers.json CAT entry"
+      ],
+      "risks": [
+        "Not a large-frame CCGT peer of GEV/Siemens/MHI",
+        "Construction equipment cycle overshadows power",
+        "Competition from Cummins, Generac, Rolls-Royce mtu"
+      ],
+      "note": "Verified Yahoo CAT 2026-10-02. Consistent naming with power_suppliers.",
+      "rating": null,
+      "rating_source": null,
+      "report": null,
+      "public": true,
+      "emoji": null,
+      "updated": "2026-10-02"
+    }
+  ]
+}

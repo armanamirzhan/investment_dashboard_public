@@ -69,29 +69,29 @@
     "us_symbol": "SMEGF"
   },
   {
-    "company": "Mitsubishi Power",
+    "company": "Mitsubishi Power (Mitsubishi Heavy Industries)",
     "ticker": "7011.T",
     "segment": "Gas Turbine OEM",
     "exposure": "High",
     "deals": "US market turbine orders",
-    "backlog": "~74 unit large-frame turbine backlog (Power Map baseline); older seed said 48 — prefer dated Power Map figure.",
+    "backlog": "~74 large-frame turbine units (Electrification Power Map baseline as of 2026-10-02). Older seed said 48 — treat 48 as stale/unverified vs Power Map figure; confirm vs primary MHI IR when available.",
     "outlook": "Backlog scheduled through 2028-2030",
     "report": null,
     "updated": "2026-10-02",
     "us_symbol": "MHVIY",
-    "note": "TODO: confirm unit backlog from primary MHI IR."
+    "note": "Naming aligned with electrification_companies 7011.T / MHVIY (A-157/A-163). Backlog unit count is Power Map baseline, not a $B figure."
   },
   {
     "company": "ExxonMobil",
     "ticker": "XOM",
     "segment": "BTM Gas Power",
     "exposure": "New / Growing",
-    "deals": "1.5 GW dedicated gas plant (BTM) in April 2026 seed. \"1.2 GW JV with NextEra\" unverified in Oct 2026 audit.",
+    "deals": "BTM gas plant seed (~1.5 GW in Apr 2026 notes). \"1.2 GW JV with NextEra\" remains UNVERIFIED in Oct 2026 audit — do not treat as confirmed.",
     "backlog": "Entering DC power market",
     "outlook": "Bypasses grid queue via behind-the-meter. 2,500-acre campus in SE US",
     "report": null,
     "updated": "2026-10-02",
-    "note": "UNVERIFIED: XOM/NextEra 1.2 GW JV (A-163)."
+    "note": "UNVERIFIED: XOM/NextEra 1.2 GW JV (A-163). Prefer marking unverified over inventing a source."
   },
   {
     "company": "Enchanted Rock",

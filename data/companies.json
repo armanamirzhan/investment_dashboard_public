@@ -1027,22 +1027,25 @@
     "rating": null,
     "rating_source": null,
     "emoji": "🟡",
-    "exposure": "Medium",
+    "exposure": "HALEU enrichment",
     "report": null,
     "public": true,
-    "thesis": "Only US company licensed to produce HALEU fuel needed for advanced nuclear reactors (SMRs). Critical bottleneck position.",
+    "thesis": "US enricher with the only currently licensed western commercial HALEU production facility (American Centrifuge Plant, Piketon, OH). Not a permanent monopoly: BWXT downblending and future Orano / Urenco / GLE (Silex) capacity compete over time. Sep 2026 catalysts: multi-year HALEU supply agreements with Antares and Radiant (prepayments supporting capacity build-out) and an about $500M Class A common + warrants raise. Educational research only — not investment advice.",
     "catalysts": [
-      "HALEU production scale-up",
-      "SMR fuel supply monopoly",
-      "Government funding support",
-      "Growing nuclear demand"
+      "Sep 2026 Antares multi-year HALEU supply contract (prepayments; deliveries before end of decade)",
+      "Sep 2026 Radiant Kaleidos multi-year HALEU partnership (prepayments)",
+      "Sep 2026 ~$500M underwritten public offering of Class A common stock and warrants",
+      "Commercial-scale HALEU / LEU expansion at Piketon underway (company statements)"
     ],
     "risks": [
-      "Production scaling challenges",
-      "Regulatory hurdles",
-      "Uranium price volatility"
+      "Production and centrifuge deployment scale-up risk",
+      "Competitive HALEU paths: BWXT downblending; Orano / Urenco enrichment; GLE laser (Silex 51% / Cameco 49%)",
+      "DOE / policy funding timing — do not rely on expired June 2026 DOE contract wording as current monopoly lock-in",
+      "Dilution from equity/warrant raises; uranium and SWU price volatility"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02",
+    "as_of": "2026-10-02",
+    "note": "A-171 refresh 2026-10-02: removed 'only monopoly' / expired June 2026 DOE framing; Antares+Radiant+~$500M raise cited from company/PR Newswire Sep 2026."
   },
   {
     "ticker": "CCJ",
@@ -1052,22 +1055,26 @@
     "rating": null,
     "rating_source": null,
     "emoji": "🟡",
-    "exposure": "Uranium Supply",
+    "exposure": "Uranium mining + nuclear services equity",
     "report": null,
     "public": true,
-    "thesis": "Largest Western uranium producer. Nuclear renaissance driven by datacenter power demand creates structural uranium demand.",
+    "thesis": "Largest Western uranium producer with a 49% equity stake in Westinghouse (Brookfield 51%) — an equity interest, not a simple JV 'benefit' tagline — and a 49% stake in Global Laser Enrichment (GLE; Silex 51%). Oct 2025 US government partnership context supports large Westinghouse reactor build ambitions; Sep 2026 press reported Westinghouse IPO interest at >$50B valuation (reported/unverified until primary filing details). Educational research only.",
     "catalysts": [
-      "Nuclear renaissance demand",
-      "Uranium price appreciation",
-      "Long-term contract book",
-      "Westinghouse JV benefits"
+      "49% Westinghouse equity (Brookfield 51%) — nuclear services / new-build exposure via equity accounting",
+      "Oct 2025 US government partnership with Cameco/Brookfield on Westinghouse reactor construction support (company release)",
+      "Sep 2026 reported Westinghouse IPO targeting >$50B valuation (Bloomberg/secondary — label unverified vs confidential draft registration)",
+      "49% GLE ownership alongside Silex; exclusive offtake path for planned Paducah laser enrichment facility (company/Silex disclosures)",
+      "Long-term uranium contract book and Western mine supply"
     ],
     "risks": [
-      "Uranium price cyclicality",
-      "Production restart execution",
-      "Geopolitical supply risks"
+      "Uranium price cyclicality and mine restart/execution risk",
+      "Westinghouse IPO timing/valuation uncertain; reported >$50B figures are secondary until priced",
+      "Geopolitical supply and trade-policy risk",
+      "GLE / laser enrichment commercialization still pre-FID / technology risk"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02",
+    "as_of": "2026-10-02",
+    "note": "A-172: Westinghouse is 49% equity (not 'JV benefit'); GLE 49% noted; Oct 2025 US reactor partnership + Sep 2026 >$50B IPO interest labelled reported/unverified where secondary."
   },
   {
     "ticker": "SMR",
