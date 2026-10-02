@@ -78,7 +78,7 @@
     "exposure": "Core AI",
     "report": null,
     "public": false,
-    "thesis": "French LLM developer with competitive open models (Mistral, Mixtral). $2B valuation, strong EU backing.",
+    "thesis": "French open-weight and commercial LLMs. Series D Sep 2026 at >\u20ac21B (~$24B) post-money.",
     "catalysts": [
       "European AI sovereignty demand",
       "Open-weight model adoption",
@@ -89,7 +89,7 @@
       "Market share challenges",
       "EU regulatory complexity"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": null,
@@ -124,7 +124,7 @@
     "exposure": "Enterprise AI",
     "report": null,
     "public": false,
-    "thesis": "Enterprise-focused LLM APIs with multilingual models. $5.5B valuation, IPO pending.",
+    "thesis": "Enterprise LLM APIs; merger with Aleph Alpha signed Sep 2026 (combined ~$20B).",
     "catalysts": [
       "Enterprise AI adoption",
       "IPO catalyst",
@@ -135,18 +135,18 @@
       "Enterprise sales cycle",
       "Pricing pressure"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "PLTR",
     "name": "Palantir Technologies",
     "sector": "software",
     "sub_sector": "AI Platforms & Enterprise",
-    "rating": "STRONG_BUY",
-    "rating_source": "Claude fundamental analysis based on official Palantir 10-K and Q1 2026 earnings release. Wall Street consensus: Buy (14 Buy, 4 Hold, 2 Sell out of 20 analysts). Avg PT $194. Assessed May 2026.",
+    "rating": null,
+    "rating_source": null,
     "emoji": "\ud83d\udfe1",
     "exposure": "Core AI",
-    "report": "reports/PLTR_Palantir_Technologies.html",
+    "report": null,
     "public": true,
     "thesis": "AI platform leader with 85% revenue growth and 60% operating margins. US commercial acceleration at 133% YoY is exceptional. Valuation at 100x P/E is the key risk.",
     "catalysts": [
@@ -166,11 +166,11 @@
     "name": "Salesforce",
     "sector": "software",
     "sub_sector": "AI Platforms & Enterprise",
-    "rating": "HOLD",
-    "rating_source": "Claude fundamental analysis based on official Salesforce 10-K and quarterly earnings. Wall Street consensus: Buy (26 Buy, 8 Hold, 1 Sell out of 35 analysts). Avg PT $283. Assessed May 2026.",
+    "rating": null,
+    "rating_source": null,
     "emoji": "\ud83d\udfe0",
     "exposure": "AI Integration",
-    "report": "reports/CRM_Salesforce.html",
+    "report": null,
     "public": true,
     "thesis": "Enterprise CRM leader with Einstein AI and Agentforce. $282B market cap, $38B+ revenue. AI features driving upsell.",
     "catalysts": [
@@ -190,11 +190,11 @@
     "name": "ServiceNow",
     "sector": "software",
     "sub_sector": "AI Platforms & Enterprise",
-    "rating": "BUY",
-    "rating_source": "Claude fundamental analysis based on official ServiceNow 10-K and quarterly earnings. Wall Street consensus: Buy (32 analysts). Avg PT $350. Assessed May 2026.",
+    "rating": null,
+    "rating_source": null,
     "emoji": "\ud83d\udfe1",
     "exposure": "AI Integration",
-    "report": "reports/NOW_ServiceNow.html",
+    "report": null,
     "public": true,
     "thesis": "Enterprise workflow platform with deep AI/ML integration. $265B market cap, $10B+ revenue. AI driving workflow automation.",
     "catalysts": [
@@ -214,11 +214,11 @@
     "name": "Snowflake",
     "sector": "software",
     "sub_sector": "AI Platforms & Enterprise",
-    "rating": "HOLD",
-    "rating_source": "Claude fundamental analysis based on official Snowflake 10-K and quarterly earnings. Wall Street consensus: Buy (37 analysts). Avg PT $233. Assessed May 2026.",
+    "rating": null,
+    "rating_source": null,
     "emoji": "\ud83d\udfe0",
     "exposure": "AI Data Platform",
-    "report": "reports/SNOW_Snowflake.html",
+    "report": null,
     "public": true,
     "thesis": "Cloud data platform enabling AI/ML workloads. $56B market cap, $3.7B revenue. Cortex AI features driving data-native AI.",
     "catalysts": [
@@ -243,7 +243,7 @@
     "exposure": "AI Data Platform",
     "report": null,
     "public": false,
-    "thesis": "Lakehouse platform unifying data + AI infrastructure. $43B valuation, $1B+ ARR. MLflow ecosystem leader.",
+    "thesis": "Lakehouse + MLflow. ~$190B valuation (Aug 2026 raise), >$7B run-rate; IPO prep.",
     "catalysts": [
       "IPO potential",
       "Enterprise AI workload growth",
@@ -254,18 +254,18 @@
       "Cloud provider competition",
       "IPO timing"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "PATH",
     "name": "UiPath",
     "sector": "software",
     "sub_sector": "AI Platforms & Enterprise",
-    "rating": "HOLD",
-    "rating_source": "Claude fundamental analysis based on official UiPath 10-K and quarterly earnings. Wall Street consensus: Hold (15 analysts). Assessed May 2026.",
+    "rating": null,
+    "rating_source": null,
     "emoji": "\ud83d\udfe0",
     "exposure": "AI Automation",
-    "report": "reports/PATH_UiPath.html",
+    "report": null,
     "public": true,
     "thesis": "RPA leader integrating AI/ML for enterprise automation. $20B market cap, $1.3B revenue.",
     "catalysts": [
@@ -344,7 +344,8 @@
       "Parent concentration",
       "Competition from cloud-native tools"
     ],
-    "updated": "2026-10-02"
+    "updated": "2026-10-02",
+    "backlog_note": "CoreWeave backlog $104.2B per Claude NOTES 2026-10-02 (supersedes older $66.8B seed)."
   },
   {
     "ticker": null,
@@ -356,7 +357,7 @@
     "exposure": "AI Inference",
     "report": null,
     "public": false,
-    "thesis": "Inference optimization with custom LPU chip architecture. $2.8B valuation. Ultra-low latency inference.",
+    "thesis": "LPU inference + software. NVIDIA ~$20B license/acquihire (Dec 2025, DOJ review); 2026 raise and neocloud pivot.",
     "catalysts": [
       "LPU chip production scale",
       "Inference demand growth",
@@ -367,7 +368,7 @@
       "Hardware production scaling",
       "Capital requirements"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": null,
@@ -420,11 +421,11 @@
     "name": "Synopsys",
     "sector": "software",
     "sub_sector": "EDA & Chip Design",
-    "rating": "HOLD",
-    "rating_source": "Claude fundamental analysis based on official Synopsys 10-K and quarterly earnings. Wall Street consensus: Strong Buy (22 Buy, 4 Hold out of 26 analysts). Avg PT $380. Assessed May 2026.",
+    "rating": null,
+    "rating_source": null,
     "emoji": "\ud83d\udfe0",
     "exposure": "AI Chip Design",
-    "report": "reports/SNPS_Synopsys.html",
+    "report": null,
     "public": true,
     "thesis": "Leading EDA + semiconductor IP. Ansys multiphysics simulation folded in after Jul 2025 acquisition (ANSS delisted).",
     "catalysts": [
@@ -443,35 +444,33 @@
     "name": "Cadence Design Systems",
     "sector": "software",
     "sub_sector": "EDA & Chip Design",
-    "rating": "HOLD",
-    "rating_source": "Claude fundamental analysis based on official Cadence 10-K and quarterly earnings. Wall Street consensus: Strong Buy (22 Buy, 4 Hold out of 26 analysts). Avg PT $380. Assessed May 2026.",
+    "rating": null,
+    "rating_source": null,
     "emoji": "\ud83d\udfe0",
     "exposure": "AI Chip Design",
-    "report": "reports/CDNS_Cadence_Design_Systems.html",
+    "report": null,
     "public": true,
-    "thesis": "Leading EDA tools for chip design, simulation, and verification. $53B market cap, $3.9B revenue.",
+    "thesis": "Peer EDA leader (digital, analog/mixed-signal, system design). Distinct from Synopsys \u2014 do not reuse SNPS analyst text.",
     "catalysts": [
-      "AI accelerator design demand",
-      "System design expansion",
-      "Simulation workload growth"
+      "AI-chip design spend",
+      "System analysis attach"
     ],
     "risks": [
-      "Premium valuation",
-      "Competition from Synopsys",
-      "R&D spending pressure"
+      "Competition from Synopsys/Siemens EDA",
+      "Cyclical design spend"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "CRWD",
     "name": "CrowdStrike",
     "sector": "software",
     "sub_sector": "AI Security",
-    "rating": "BUY",
-    "rating_source": "Claude fundamental analysis based on official CrowdStrike 10-K and quarterly earnings. Wall Street consensus: Buy (43 analysts). Assessed May 2026.",
+    "rating": null,
+    "rating_source": null,
     "emoji": "\ud83d\udfe1",
     "exposure": "AI Security",
-    "report": "reports/CRWD_CrowdStrike.html",
+    "report": null,
     "public": true,
     "thesis": "Cybersecurity leader with AI/ML-powered threat detection. $84B market cap, $3.1B revenue. Charlotte AI platform.",
     "catalysts": [
@@ -496,7 +495,7 @@
     "exposure": "Legal AI",
     "report": null,
     "public": false,
-    "thesis": "AI legal assistant for corporate law firms. $765M valuation. Deep integration with major law firms.",
+    "thesis": "Legal AI assistant. ~$15.5B valuation after Sep 2026 raise.",
     "catalysts": [
       "Law firm AI adoption",
       "Enterprise contract expansion",
@@ -507,7 +506,7 @@
       "Competition from incumbents",
       "Regulatory risk"
     ],
-    "updated": "2026-04-27"
+    "updated": "2026-10-02"
   },
   {
     "ticker": "SPCX",
@@ -547,7 +546,8 @@
     "risks": [
       "See page briefing"
     ],
-    "updated": "2026-10-02"
+    "updated": "2026-10-02",
+    "capex_2026_note": "Calendar 2026 guidance about $195\u2013205B (Claude NOTES 2026-10-02; Motley Fool 2026-07-30). Older thesis figures superseded."
   },
   {
     "ticker": "META",
@@ -566,7 +566,8 @@
     "risks": [
       "See page briefing"
     ],
-    "updated": "2026-10-02"
+    "updated": "2026-10-02",
+    "capex_2026_note": "Calendar 2026 guidance about $130\u2013145B (Claude NOTES 2026-10-02)."
   },
   {
     "ticker": "DDOG",
@@ -788,6 +789,728 @@
     "report": null,
     "public": true,
     "thesis": "ChatGLM-line models; HKEX-listed as Z.ai (2513) since Jan 2026.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "MSFT",
+    "name": "Microsoft AI (MAI)",
+    "sector": "software",
+    "sub_sector": "AI Model Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "In-house MAI frontier models alongside OpenAI partnership.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "AMZN",
+    "name": "Amazon (Nova / AGI lab)",
+    "sector": "software",
+    "sub_sector": "AI Model Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Nova models + AGI lab; major Anthropic/OpenAI investor.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": null,
+    "name": "Safe Superintelligence (SSI)",
+    "sector": "software",
+    "sub_sector": "AI Model Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": false,
+    "thesis": "Frontier lab; long-term NVIDIA compute partnership (Jul 2026).",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": null,
+    "name": "Thinking Machines Lab",
+    "sector": "software",
+    "sub_sector": "AI Model Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": false,
+    "thesis": "Frontier/open-model lab; large fundraise talks + Crusoe inference deal (Sep 2026).",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "0100.HK",
+    "name": "MiniMax Group",
+    "sector": "software",
+    "sub_sector": "AI Model Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "HKEX-listed Chinese foundation-model lab (Jan 2026 IPO).",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": null,
+    "name": "ByteDance (Doubao / Seed)",
+    "sector": "software",
+    "sub_sector": "AI Model Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": false,
+    "thesis": "Doubao/Seed models; large AI infra spender.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": null,
+    "name": "Moonshot AI (Kimi)",
+    "sector": "software",
+    "sub_sector": "AI Model Developers",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": false,
+    "thesis": "Kimi models; confidential HK IPO filing reported Sep 2026.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "MSFT",
+    "name": "Microsoft (Azure AI Foundry / Fabric / Copilot)",
+    "sector": "software",
+    "sub_sector": "AI Platforms & Enterprise",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Enterprise AI platform: Foundry, Fabric, Copilot.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "IBM",
+    "name": "IBM (watsonx / Granite)",
+    "sector": "software",
+    "sub_sector": "AI Platforms & Enterprise",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "watsonx/Granite plus HashiCorp and Confluent (CFLT delisted).",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "SAP",
+    "name": "SAP (Joule / Business AI)",
+    "sector": "software",
+    "sub_sector": "AI Platforms & Enterprise",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "ERP AI agents (Joule). SAP.DE / ADR SAP.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "ADBE",
+    "name": "Adobe",
+    "sector": "software",
+    "sub_sector": "AI Platforms & Enterprise",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Firefly / GenStudio creative and marketing AI.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "WDAY",
+    "name": "Workday",
+    "sector": "software",
+    "sub_sector": "AI Platforms & Enterprise",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "HR/finance AI agents; take-private talks reported 2026.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "GTLB",
+    "name": "GitLab",
+    "sector": "software",
+    "sub_sector": "AI Platforms & Enterprise",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "DevOps platform with Duo AI.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "HUBS",
+    "name": "HubSpot",
+    "sector": "software",
+    "sub_sector": "Vertical AI Applications",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "CRM/marketing with AI features.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "KVYO",
+    "name": "Klaviyo",
+    "sector": "software",
+    "sub_sector": "Vertical AI Applications",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Email/customer marketing with AI assist.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "TRI",
+    "name": "Thomson Reuters",
+    "sector": "software",
+    "sub_sector": "Vertical AI Applications",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Legal/professional info with generative research tools.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "RELX",
+    "name": "RELX (LexisNexis)",
+    "sector": "software",
+    "sub_sector": "Vertical AI Applications",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Legal research platforms with AI features.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "NBIS",
+    "name": "Nebius Token Factory",
+    "sector": "software",
+    "sub_sector": "AI Inference Platforms",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Listed inference/serving; cross-link Hyperscalers neocloud.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "KEYS",
+    "name": "Keysight Technologies",
+    "sector": "software",
+    "sub_sector": "EDA & Chip Design",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "PathWave EDA/photonic design; VPIphotonics Jun 2026.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "SVCO",
+    "name": "Silvaco Group",
+    "sector": "software",
+    "sub_sector": "EDA & Chip Design",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Listed TCAD/EDA vendor.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "301269.SZ",
+    "name": "Empyrean Technology",
+    "sector": "software",
+    "sub_sector": "EDA & Chip Design",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Leading domestic Chinese EDA vendor.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "FTNT",
+    "name": "Fortinet",
+    "sector": "software",
+    "sub_sector": "AI Security",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Network-security platform with AI features.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "S",
+    "name": "SentinelOne",
+    "sector": "software",
+    "sub_sector": "AI Security",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "AI-native endpoint and AI-security platform.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "GOOGL",
+    "name": "Wiz (Google)",
+    "sector": "software",
+    "sub_sector": "AI Security",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Cloud/AI security; Google closed ~$32B deal Mar 2026.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "OKTA",
+    "name": "Okta",
+    "sector": "software",
+    "sub_sector": "AI Security",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Identity for AI agents and machine identities.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "CHKP",
+    "name": "Check Point Software",
+    "sector": "software",
+    "sub_sector": "AI Security",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Listed security platform with AI security products.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "DT",
+    "name": "Dynatrace",
+    "sector": "software",
+    "sub_sector": "AI Security",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Observability; acquiring Arize for AI observability (Aug 2026).",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "3696.HK",
+    "name": "Insilico Medicine",
+    "sector": "software",
+    "sub_sector": "Vertical AI Applications",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Listed generative-AI drug discovery; clinical programs.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": null,
+    "name": "Cognition (Devin / Windsurf)",
+    "sector": "software",
+    "sub_sector": "Vertical AI Applications",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": false,
+    "thesis": "AI coding agents; ~$1B ARR, large private valuation Sep 2026.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": null,
+    "name": "Perplexity",
+    "sector": "software",
+    "sub_sector": "Vertical AI Applications",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": false,
+    "thesis": "AI search application.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": null,
+    "name": "ElevenLabs",
+    "sector": "software",
+    "sub_sector": "Vertical AI Applications",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": false,
+    "thesis": "Voice AI platform.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": null,
+    "name": "Snorkel AI",
+    "sector": "software",
+    "sub_sector": "AI Infrastructure & MLOps",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": false,
+    "thesis": "Training-data platform.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "GOOGL",
+    "name": "Google (TPU stack: JAX / XLA / Pathways)",
+    "sector": "software",
+    "sub_sector": "AI Inference Platforms",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "TPU software stack (JAX/XLA/Pathways).",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "AMZN",
+    "name": "AWS Neuron SDK",
+    "sector": "software",
+    "sub_sector": "AI Inference Platforms",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Trainium/Inferentia software stack.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": null,
+    "name": "Huawei (Ascend / CANN / MindSpore)",
+    "sector": "software",
+    "sub_sector": "AI Inference Platforms",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": false,
+    "thesis": "China CUDA alternative software stack.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "688256.SS",
+    "name": "Cambricon Technologies",
+    "sector": "software",
+    "sub_sector": "AI Inference Platforms",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Listed Chinese AI accelerator + software stack.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": null,
+    "name": "OpenRouter (Stripe)",
+    "sector": "software",
+    "sub_sector": "AI Inference Platforms",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": false,
+    "thesis": "Model-routing gateway acquired by Stripe.",
+    "catalysts": [
+      "Coverage refresh 2026-10-02"
+    ],
+    "risks": [
+      "See page briefing"
+    ],
+    "updated": "2026-10-02"
+  },
+  {
+    "ticker": "SIE.DE / SIEGY",
+    "name": "Siemens EDA",
+    "sector": "software",
+    "sub_sector": "EDA & Chip Design",
+    "rating": null,
+    "emoji": null,
+    "exposure": "Core AI",
+    "report": null,
+    "public": true,
+    "thesis": "Siemens AG EDA (ex-Mentor); includes Altair.",
     "catalysts": [
       "Coverage refresh 2026-10-02"
     ],

@@ -98,11 +98,11 @@
         <div class="callout">
           <div class="label">How this list was built</div>
           <p style="margin:0">
-            Curated from <code>/workspace/hub-extraction-ai-sections.md</code> and the public seed
-            <code>data/software_companies.json</code>.
+            Curated from the hub’s AI-sections extraction notes and the public seed
+            <code>data/software_companies.json</code> (refreshed October 2026 against Claude’s coverage audit).
             Tickers appear when the company (or clear parent) trades publicly.
             Blurbs say what each name does — orientation only, not recommendations.
-            Old valuation and market-cap figures in the private extract go stale; this page mostly skips them.
+            Absolute dollar valuations move fast; this page prefers qualitative framing unless a recent figure is needed for context.
           </p>
         </div>
       </section>
@@ -146,11 +146,11 @@
           </li>
           <li>
             <span class="name">Cohere</span>
-            <p>Enterprise-focused LLM APIs with multilingual strengths — sells models without requiring a customer to run a frontier lab.</p>
+            <p>Enterprise-focused LLM APIs with multilingual strengths. Signed a merger with Germany’s Aleph Alpha (September 2026; combined value about $20B) — still completing.</p>
           </li>
           <li>
             <span class="name">AI21 Labs</span>
-            <p>Enterprise LLMs (Jurassic family and successors) aimed at business text and document workflows.</p>
+            <p>Enterprise LLMs (Jurassic family and successors) aimed at business text and document workflows. Sharply diminished after sale talks collapsed and a large layoff (May 2026).</p>
           </li>
           <li>
             <span class="name">Stability AI</span>
@@ -164,12 +164,28 @@
             <span class="name">Meta (Llama / Meta Superintelligence Labs)</span><span class="ticker">META</span>
             <p>Leading open-weight model lab (Llama family) and Meta Superintelligence Labs; also a major AI infrastructure buyer (see Hyperscalers).</p>
           </li>
+          <li>
+            <span class="name">Microsoft AI (MAI)</span><span class="ticker">MSFT</span>
+            <p>In-house frontier models (MAI family) alongside Microsoft’s OpenAI partnership — distinct from GitHub Copilot / Azure AI Foundry product surfaces.</p>
+          </li>
+          <li>
+            <span class="name">Amazon (Nova / AGI lab)</span><span class="ticker">AMZN</span>
+            <p>Amazon’s own Nova model family and AGI lab work; also a major investor in Anthropic and OpenAI. Cloud delivery via AWS.</p>
+          </li>
+          <li>
+            <span class="name">Safe Superintelligence (SSI)</span>
+            <p>Frontier lab with a long-term NVIDIA compute partnership (announced July 2026).</p>
+          </li>
+          <li>
+            <span class="name">Thinking Machines Lab</span>
+            <p>Frontier / open-model lab; reported large fundraise talks and a multi-year inference deal on Crusoe Cloud (September 2026).</p>
+          </li>
         </ul>
         <h4>Europe</h4>
         <ul class="company-list">
           <li>
             <span class="name">Mistral AI</span>
-            <p>French lab known for competitive open-weight and commercial LLMs; a leading European alternative to US frontier labs.</p>
+            <p>French lab known for competitive open-weight and commercial LLMs; a leading European alternative to US frontier labs. Raised a large Series D in September 2026 at more than €21B post-money.</p>
           </li>
           <li>
             <span class="name">BigCode</span>
@@ -183,20 +199,32 @@
             <p>Chinese lab known for high-performance models and training-efficiency claims; important for the global model race.</p>
           </li>
           <li>
-            <span class="name">Alibaba</span><span class="ticker">BABA</span>
+            <span class="name">Alibaba</span><span class="ticker">BABA / 9988.HK</span>
             <p>Qwen LLM series plus cloud AI services — models integrated with Alibaba’s cloud and consumer businesses.</p>
           </li>
           <li>
-            <span class="name">Baidu</span><span class="ticker">BIDU</span>
+            <span class="name">Baidu</span><span class="ticker">BIDU / 9888.HK</span>
             <p>Ernie model family tied to search and Chinese consumer/enterprise AI products.</p>
           </li>
           <li>
-            <span class="name">Tencent</span><span class="ticker">0700.HK</span>
+            <span class="name">Tencent</span><span class="ticker">0700.HK / TCEHY</span>
             <p>Hunyuan models inside a broad consumer and enterprise portfolio (messaging, games, cloud).</p>
           </li>
           <li>
             <span class="name">Z.ai (Zhipu AI)</span><span class="ticker">2513.HK</span>
             <p>ChatGLM-line conversational models. Listed on HKEX as Z.ai (stock code 2513) since January 2026 — no longer private.</p>
+          </li>
+          <li>
+            <span class="name">MiniMax Group</span><span class="ticker">0100.HK</span>
+            <p>Listed Chinese foundation-model lab (HKEX IPO January 2026; quoted as MINIMAX-W / 00100).</p>
+          </li>
+          <li>
+            <span class="name">ByteDance (Doubao / Seed)</span>
+            <p>Top Chinese model developer (Doubao / Seed) and a major AI infrastructure spender.</p>
+          </li>
+          <li>
+            <span class="name">Moonshot AI (Kimi)</span>
+            <p>Major Chinese lab behind the Kimi models; confidential Hong Kong IPO filing reported September 2026.</p>
           </li>
         </ul>
 
@@ -212,7 +240,7 @@
           </li>
           <li>
             <span class="name">Salesforce</span><span class="ticker">CRM</span>
-            <p>Customer-relationship platform; Einstein and Agentforce add generative and agent features inside CRM clouds.</p>
+            <p>Customer-relationship platform; Einstein and Agentforce add generative and agent features inside CRM clouds. Includes Informatica data-management (acquisition closed November 2025; INFA delisted).</p>
           </li>
           <li>
             <span class="name">ServiceNow</span><span class="ticker">NOW</span>
@@ -223,8 +251,28 @@
             <p>Cloud data platform; Cortex and related features bring LLM and ML functions closer to warehouse data.</p>
           </li>
           <li>
+            <span class="name">Microsoft (Azure AI Foundry / Fabric / Copilot)</span><span class="ticker">MSFT</span>
+            <p>Largest enterprise AI platform surface — Azure AI Foundry, Microsoft Fabric, and Copilot across Office and GitHub (see also Microsoft AI models above).</p>
+          </li>
+          <li>
+            <span class="name">IBM (watsonx / Granite)</span><span class="ticker">IBM</span>
+            <p>Enterprise generative-AI platform (watsonx, Granite models) plus HashiCorp and Confluent (CFLT delisted March 2026) for infra and streaming data.</p>
+          </li>
+          <li>
+            <span class="name">SAP (Joule / Business AI)</span><span class="ticker">SAP</span>
+            <p>Largest enterprise-application vendor embedding AI agents (Joule / Business AI) into ERP workflows. Local listing SAP.DE; US ADR SAP.</p>
+          </li>
+          <li>
+            <span class="name">Adobe</span><span class="ticker">ADBE</span>
+            <p>Creative and marketing AI (Firefly / GenStudio) across design and content workflows.</p>
+          </li>
+          <li>
+            <span class="name">Workday</span><span class="ticker">WDAY</span>
+            <p>HR and finance platform with AI agents; take-private talks involving Silver Lake were reported in 2026 — status is time-sensitive.</p>
+          </li>
+          <li>
             <span class="name">Databricks</span>
-            <p>Lakehouse platform unifying data engineering and machine learning (including MLflow) for training and feature pipelines.</p>
+            <p>Lakehouse platform unifying data engineering and machine learning (including MLflow). Raised at about a $190B valuation (August 2026) with run-rate revenue above $7B; preparing an IPO.</p>
           </li>
           <li>
             <span class="name">UiPath</span><span class="ticker">PATH</span>
@@ -289,7 +337,7 @@
           <li>
             <span class="name">Anyscale (Ray)</span>
             <p>Commercial home of the open-source
-            <a href="https://en.wikipedia.org/wiki/Ray_(software)">Ray</a>
+            <a href="https://www.ray.io/">Ray</a>
             distributed framework used for training and serving at scale. <strong>Pending acquisition by Nscale</strong> (definitive agreement July 2026) — cross-link to Hyperscalers neoclouds.</p>
           </li>
           <li>
@@ -299,6 +347,10 @@
           <li>
             <span class="name">Voxel51</span>
             <p>Computer-vision data platform (FiftyOne and related) for curating and evaluating visual datasets and models.</p>
+          </li>
+          <li>
+            <span class="name">Snorkel AI</span>
+            <p>Training-data platform for labeling and programmatic data development (reported valuation step-up in September 2026).</p>
           </li>
           <li>
             <span class="name">Replicate (Cloudflare)</span><span class="ticker">NET</span>
@@ -316,6 +368,7 @@
           <li>
             <span class="name">Groq</span>
             <p>Custom inference chip (language processing unit, or LPU) plus software stack aimed at very low-latency LLM serving.
+            NVIDIA paid about $20B for a non-exclusive license plus an acquihire (December 2025; under DOJ review); Groq raised again in 2026 and is pivoting toward a neocloud-style serving business.
             Hardware angle also belongs on the
             <a href="../hardware/index.html">Hardware</a> map.</p>
           </li>
@@ -336,12 +389,21 @@
             <p>Serverless inference for open models — pay-per-use endpoints without managing GPUs yourself.</p>
           </li>
           <li>
-            <span class="name">vLLM</span>
-            <p>Widely adopted open-source LLM serving engine (origins in UC Berkeley / LMSYS research) used under many commercial APIs.</p>
+            <span class="name">vLLM / Inferact</span>
+            <p>Widely adopted open-source LLM serving engine (UC Berkeley / LMSYS lineage) used under many commercial APIs. Creators launched commercial steward Inferact in January 2026.</p>
           </li>
           <li>
             <span class="name">Cloudflare Workers AI</span><span class="ticker">NET</span>
             <p>Edge inference via Workers AI; Cloudflare also owns Replicate (see MLOps and Security layers).</p>
+          </li>
+          <li>
+            <span class="name">Nebius Token Factory</span><span class="ticker">NBIS</span>
+            <p>Listed inference and serving platform (Nebius Group). Cross-link:
+            <a href="../hyperscalers/index.html">Hyperscalers</a> neocloud layer.</p>
+          </li>
+          <li>
+            <span class="name">OpenRouter (Stripe)</span>
+            <p>Model-routing gateway bought by Stripe (reported 2026) — one API across many model providers.</p>
           </li>
         </ul>
 
@@ -362,8 +424,21 @@
             <p>Peer EDA leader covering digital, analog/mixed-signal, and system design/simulation.</p>
           </li>
           <li>
-            <span class="name">Siemens EDA</span><span class="ticker">SIEGY</span>
-            <p>EDA division inside Siemens (formerly Mentor Graphics) — IC design, PCB, and related verification tools.</p>
+            <span class="name">Siemens EDA</span><span class="ticker">SIE.DE / SIEGY</span>
+            <p>EDA division inside Siemens AG (formerly Mentor Graphics) — IC design, PCB, and related verification tools. Altair is now part of Siemens Digital Industries Software (ALTR delisted March 2025).</p>
+          </li>
+          <li>
+            <span class="name">Keysight Technologies</span><span class="ticker">KEYS</span>
+            <p>EDA and photonic design tools (PathWave); bought VPIphotonics in June 2026. Also appears on
+            <a href="../hardware/photonics/index.html">Photonics</a>.</p>
+          </li>
+          <li>
+            <span class="name">Silvaco Group</span><span class="ticker">SVCO</span>
+            <p>Listed TCAD and EDA vendor for semiconductor process and device simulation.</p>
+          </li>
+          <li>
+            <span class="name">Empyrean Technology</span><span class="ticker">301269.SZ</span>
+            <p>Leading domestic Chinese EDA vendor — relevant under export-control and China-silicon software discussions.</p>
           </li>
           <li>
             <span class="name">OpenROAD</span>
@@ -395,8 +470,32 @@
             <p>Edge security, AI-crawler control, and Workers AI inference; owns Replicate. Also relevant under inference &amp; serving.</p>
           </li>
           <li>
-            <span class="name">Abnormal Security</span>
-            <p>AI-driven email and identity threat detection aimed at business email compromise and related attacks.</p>
+            <span class="name">Abnormal AI</span>
+            <p>AI-driven email and identity threat detection aimed at business email compromise and related attacks (rebranded from Abnormal Security).</p>
+          </li>
+          <li>
+            <span class="name">Fortinet</span><span class="ticker">FTNT</span>
+            <p>Major listed network-security platform with expanding AI-security features.</p>
+          </li>
+          <li>
+            <span class="name">SentinelOne</span><span class="ticker">S</span>
+            <p>AI-native endpoint and AI-security platform.</p>
+          </li>
+          <li>
+            <span class="name">Wiz (Google)</span><span class="ticker">GOOGL</span>
+            <p>Cloud and AI security leader — Google closed the ~$32B acquisition in March 2026.</p>
+          </li>
+          <li>
+            <span class="name">Okta</span><span class="ticker">OKTA</span>
+            <p>Identity and access platform increasingly used to secure AI agents and machine identities.</p>
+          </li>
+          <li>
+            <span class="name">Check Point Software</span><span class="ticker">CHKP</span>
+            <p>Listed security platform with AI security products.</p>
+          </li>
+          <li>
+            <span class="name">Dynatrace</span><span class="ticker">DT</span>
+            <p>Observability platform; definitive agreement to acquire Arize ($915M, August 2026) for AI observability.</p>
           </li>
           <li>
             <span class="name">Robust Intelligence (Cisco AI Defense)</span><span class="ticker">CSCO</span>
@@ -438,12 +537,16 @@
             <span class="name">Atomwise</span>
             <p>Structure-based / generative approaches to early drug discovery.</p>
           </li>
+          <li>
+            <span class="name">Insilico Medicine</span><span class="ticker">3696.HK</span>
+            <p>Listed generative-AI drug-discovery company with clinical programs (including Phase III).</p>
+          </li>
         </ul>
         <h4>Legal &amp; financial</h4>
         <ul class="company-list">
           <li>
             <span class="name">Harvey</span>
-            <p>AI assistant for corporate law firms — research, drafting, and review inside legal workflows.</p>
+            <p>AI assistant for corporate law firms — research, drafting, and review inside legal workflows. Raised at about a $15.5B valuation (September 2026).</p>
           </li>
           <li>
             <span class="name">Thomson Reuters</span><span class="ticker">TRI</span>
@@ -474,7 +577,11 @@
           </li>
           <li>
             <span class="name">Tabnine (Tricentis)</span>
-            <p>Code completion assistant that can run with private / enterprise model options — now part of Tricentis.</p>
+            <p>Code completion assistant that can run with private / enterprise model options — Tricentis completed the acquisition in August 2026.</p>
+          </li>
+          <li>
+            <span class="name">Cognition (Devin / Windsurf)</span>
+            <p>AI coding-agent leader (Devin / Windsurf) with roughly $1B ARR and a mid-to-high tens-of-billions valuation band reported in September 2026.</p>
           </li>
         </ul>
         <h4>Marketing &amp; vertical SaaS</h4>
@@ -490,6 +597,14 @@
           <li>
             <span class="name">Jasper</span>
             <p>Generative content tools aimed at marketing teams.</p>
+          </li>
+          <li>
+            <span class="name">Perplexity</span>
+            <p>Major AI search application; NVIDIA investment talks at a large valuation were reported in 2026.</p>
+          </li>
+          <li>
+            <span class="name">ElevenLabs</span>
+            <p>Voice-AI platform (speech synthesis / agents) — one of the larger private vertical AI names as of October 2026.</p>
           </li>
         </ul>
 
@@ -529,6 +644,22 @@
           <li>
             <span class="name">SambaNova</span>
             <p>AI accelerators with a compiler/software stack aimed at enterprise model serving and training.</p>
+          </li>
+          <li>
+            <span class="name">Google (TPU stack: JAX / XLA / Pathways)</span><span class="ticker">GOOGL</span>
+            <p>Second-largest accelerator software stack after CUDA — JAX, XLA, and Pathways for Google TPUs.</p>
+          </li>
+          <li>
+            <span class="name">AWS Neuron SDK</span><span class="ticker">AMZN</span>
+            <p>Software stack for AWS Trainium and Inferentia custom silicon.</p>
+          </li>
+          <li>
+            <span class="name">Huawei (Ascend / CANN / MindSpore)</span>
+            <p>China’s main CUDA alternative — Ascend accelerators with CANN and MindSpore software.</p>
+          </li>
+          <li>
+            <span class="name">Cambricon Technologies</span><span class="ticker">688256.SS</span>
+            <p>Listed Chinese AI accelerator company with its own software stack.</p>
           </li>
         </ul>
       </section>
