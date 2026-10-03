@@ -1,8 +1,8 @@
 {
  "as_of": "2 October 2026",
- "method": "Claude target = multiple x next-fiscal-year consensus EPS (Yahoo Finance consensus feed, LSEG/S&P Global data); prices = latest full-session close available on the morning of the as-of date, New York time (1 Oct 2026 for US and European listings, 2 Oct 2026 for Tokyo, Seoul, Taipei and Hong Kong, 30 Sep 2026 for mainland China).",
+ "method": "Claude target = multiple x next-fiscal-year consensus EPS (Yahoo Finance consensus feed, LSEG/S&P Global data). Prices: snapshot A (electrification, interconnects) = latest full-session close available on the morning of 2 Oct 2026, New York time (1 Oct 2026 for US and European listings, 2 Oct 2026 for Asian listings, 30 Sep 2026 for mainland China); snapshot B (generation, providers) = 2 Oct 2026 close for every listing (30 Sep 2026 for mainland China; 1 Oct for Saudi and Indian listings). The close_date field states the date used for each row.",
  "pages": {
-  "power": [
+  "electrification": [
    {
     "id": "hd-hyundai-electric",
     "group": "top",
@@ -294,42 +294,6 @@
     "next_earnings": "2026-11-02"
    },
    {
-    "id": "innio",
-    "group": "also",
-    "name": "INNIO",
-    "theme": "Gas engines for onsite prime power",
-    "tickers": [
-     "INIO"
-    ],
-    "mark": "npi",
-    "claude_rating": "Speculative buy",
-    "claude_target": 24.0,
-    "claude_fair_value_range": [
-     21.5,
-     26.5
-    ],
-    "claude_basis": "30x 2027E consensus EPS",
-    "claude_buy_below": null,
-    "claude_buy_below_multiple": null,
-    "currency": "USD",
-    "close": 18.28,
-    "close_date": "2026-10-01",
-    "forward_pe": 23.0,
-    "fiscal_year": "2027E",
-    "from_52w_high_pct": -55.55555555555556,
-    "ytd_pct": null,
-    "market_cap_usd_bn": 13.7,
-    "consensus": {
-     "rating": "buy",
-     "mean_score": 1.8,
-     "analysts": 10,
-     "target_mean": 37.5,
-     "target_high": 47.0,
-     "target_low": 27.0
-    },
-    "next_earnings": "2026-10-27"
-   },
-   {
     "id": "flex",
     "group": "also",
     "name": "Flex",
@@ -520,33 +484,6 @@
     "why": "A real 800 V portfolio (rack and pod in 2027, hall in 2028) and leadership in liquid cooling, but a consensus favorite whose central-UPS franchise faces the 2028+ mix shift."
    },
    {
-    "id": "ge-vernova",
-    "group": "priced",
-    "name": "GE Vernova",
-    "tickers": [
-     "GEV"
-    ],
-    "claude_rating": "Hold",
-    "claude_buy_below_multiple": 30,
-    "claude_buy_below": 740,
-    "currency": "USD",
-    "close": 987.45,
-    "close_date": "2026-10-01",
-    "forward_pe": 39.9,
-    "fiscal_year": "2027E",
-    "from_52w_high_pct": -15.951687860681263,
-    "ytd_pct": 51.1,
-    "market_cap_usd_bn": 263.0,
-    "consensus": {
-     "rating": "buy",
-     "analysts": 33,
-     "target_mean": 1230.341,
-     "target_high": 1450.0,
-     "target_low": 940.0
-    },
-    "why": "Turbines are sold out to 2029–30, but the stock trades at about 40× 2027 earnings. Its 2026 earnings are inflated by a gain of about $4 billion on Prolec, and industry turbine capacity roughly doubles by 2030."
-   },
-   {
     "id": "schneider-electric",
     "group": "priced",
     "name": "Schneider Electric",
@@ -601,33 +538,6 @@
      "target_low": 5500.0
     },
     "why": "The broadest owner of the scarce high-voltage stack (about 1 in 6 of the world's transformers, 1 in 4 high-voltage switchgear, more than 175 GW of HVDC links), but the stock is only about 5% below its high [P3-8]."
-   },
-   {
-    "id": "caterpillar",
-    "group": "priced",
-    "name": "Caterpillar",
-    "tickers": [
-     "CAT"
-    ],
-    "claude_rating": "Hold",
-    "claude_buy_below_multiple": 23,
-    "claude_buy_below": 740,
-    "currency": "USD",
-    "close": 826.35,
-    "close_date": "2026-10-01",
-    "forward_pe": 25.5,
-    "fiscal_year": "2027E",
-    "from_52w_high_pct": -22.401164428584853,
-    "ytd_pct": 44.2,
-    "market_cap_usd_bn": 379.9,
-    "consensus": {
-     "rating": "buy",
-     "analysts": 26,
-     "target_mean": 975.60614,
-     "target_high": 1225.0,
-     "target_low": 575.0
-    },
-    "why": "The broadest onsite-power seller (diesel generator sets, gas engines and the gas turbines of its Solar Turbines unit), with engine orders running into 2030. It is diversified across mining and construction and trades at about 26× 2027 earnings."
    },
    {
     "id": "prysmian",
@@ -740,87 +650,6 @@
     "why": "The cheapest pure electrical contractor with transmission leverage, about 41% below its high. Its transmission revenue has not yet inflected."
    },
    {
-    "id": "cummins",
-    "group": "priced",
-    "name": "Cummins",
-    "tickers": [
-     "CMI"
-    ],
-    "claude_rating": "Accumulate",
-    "claude_buy_below_multiple": 17,
-    "claude_buy_below": 570,
-    "currency": "USD",
-    "close": 517.0,
-    "close_date": "2026-10-01",
-    "forward_pe": 15.3,
-    "fiscal_year": "2027E",
-    "from_52w_high_pct": -28.943498398823518,
-    "ytd_pct": 1.3,
-    "market_cap_usd_bn": 71.2,
-    "consensus": {
-     "rating": "buy",
-     "analysts": 20,
-     "target_mean": 741.26,
-     "target_high": 894.0,
-     "target_low": 530.0
-    },
-    "why": "Its large QSK95 engines are sold out into the second half of 2028, and it expects more than $9 billion of data-center exposure by 2030, mostly diesel standby. At about 15× 2027 earnings it is cheap, but trucks still dominate its earnings."
-   },
-   {
-    "id": "generac",
-    "group": "priced",
-    "name": "Generac",
-    "tickers": [
-     "GNRC"
-    ],
-    "claude_rating": "Hold",
-    "claude_buy_below_multiple": 16,
-    "claude_buy_below": 200,
-    "currency": "USD",
-    "close": 207.91,
-    "close_date": "2026-10-01",
-    "forward_pe": 16.5,
-    "fiscal_year": "2027E",
-    "from_52w_high_pct": -29.65080868917913,
-    "ytd_pct": 52.5,
-    "market_cap_usd_bn": 12.3,
-    "consensus": {
-     "rating": "buy",
-     "analysts": 16,
-     "target_mean": 289.5625,
-     "target_high": 375.0,
-     "target_low": 215.0
-    },
-    "why": "An agreement to supply Amazon's data centers with backup generators worth up to $8 billion, of which about $2.4 billion is scheduled for 2027–28. Amazon received warrants on about 1.69 million Generac shares that vest as it buys [X-17]. The residential business remains cyclical."
-   },
-   {
-    "id": "bloom-energy",
-    "group": "avoid",
-    "name": "Bloom Energy",
-    "tickers": [
-     "BE"
-    ],
-    "claude_rating": "Avoid",
-    "claude_buy_below_multiple": 30,
-    "claude_buy_below": 145,
-    "currency": "USD",
-    "close": 277.58,
-    "close_date": "2026-10-01",
-    "forward_pe": 56.2,
-    "fiscal_year": "2027E",
-    "from_52w_high_pct": -19.73977157727339,
-    "ytd_pct": 219.5,
-    "market_cap_usd_bn": 81.8,
-    "consensus": {
-     "rating": "buy",
-     "analysts": 26,
-     "target_mean": 282.81537,
-     "target_high": 390.0,
-     "target_low": 97.0
-    },
-    "why": "The only onsite option at gigawatt scale that does not burn its fuel: its fuel cells convert natural gas to electricity chemically. Oracle has committed to 2.4 GW for its Project Jupiter campus in New Mexico and reaffirmed that on 25 September 2026, after it sent the site's developer a force-majeure notice (a contractual warning that events outside its control may delay the project). The stock trades at about 56× 2027 earnings, and gas-pipeline and air permits now limit deployments [X-16]."
-   },
-   {
     "id": "monolithic-power-systems",
     "group": "avoid",
     "name": "Monolithic Power Systems",
@@ -873,33 +702,6 @@
      "target_low": 180000.0
     },
     "why": "It holds the UL 1,500 V DC breaker credential, but at about 41× 2027 earnings the cheaper route is through its parent, LS Corp."
-   },
-   {
-    "id": "doosan-enerbility",
-    "group": "avoid",
-    "name": "Doosan Enerbility",
-    "tickers": [
-     "034020.KS"
-    ],
-    "claude_rating": "Avoid",
-    "claude_buy_below_multiple": null,
-    "claude_buy_below": null,
-    "currency": "KRW",
-    "close": 81100.0,
-    "close_date": "2026-10-02",
-    "forward_pe": 77.7,
-    "fiscal_year": "2027E",
-    "from_52w_high_pct": -40.542521994134894,
-    "ytd_pct": 7.7,
-    "market_cap_usd_bn": 38.5,
-    "consensus": {
-     "rating": "strong_buy",
-     "analysts": 21,
-     "target_mean": 125360.664,
-     "target_high": 177000.0,
-     "target_low": 100000.0
-    },
-    "why": "Twelve large H-class gas turbines for xAI, but about 78× 2027 earnings and heavy dependence on one buyer."
    },
    {
     "id": "navitas-semiconductor",
@@ -1035,6 +837,2208 @@
      "target_low": 10.0
     },
     "why": "It is the only US maker of grain-oriented electrical steel, but electrical and stainless steel are only about 4% of its volume, so it is a steel-cycle stock, not an AI-scarcity owner [P3-37]."
+   }
+  ],
+  "generation": [
+   {
+    "id": "innio",
+    "group": "top",
+    "name": "INNIO Group",
+    "theme": "Gas engines: the workhorse of the 2026–28 onsite build",
+    "tickers": [
+     "INIO"
+    ],
+    "mark": "npi",
+    "claude_rating": "Buy",
+    "claude_target": 25.5,
+    "claude_fair_value_range": [
+     23.0,
+     28.0
+    ],
+    "claude_basis": "32x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 19.99,
+    "close_date": "2026-10-02",
+    "forward_pe": 25.2,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -51.398006321419885,
+    "ytd_pct": null,
+    "market_cap_usd_bn": 15.0,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.8,
+     "analysts": 10,
+     "target_mean": 37.5,
+     "target_high": 47.0,
+     "target_low": 27.0
+    },
+    "next_earnings": "2026-10-27"
+   },
+   {
+    "id": "mitsubishi-heavy",
+    "group": "top",
+    "name": "Mitsubishi Heavy Industries",
+    "theme": "The most defensive heavy-duty turbine book",
+    "tickers": [
+     "7011.T",
+     "MHVYF"
+    ],
+    "mark": "npi",
+    "claude_rating": "Buy",
+    "claude_target": 4850,
+    "claude_fair_value_range": [
+     4350,
+     5350
+    ],
+    "claude_basis": "32x FY3/28E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "JPY",
+    "close": 3813.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 25.2,
+    "fiscal_year": "FY3/28E",
+    "from_52w_high_pct": -26.60250240615977,
+    "ytd_pct": -0.7,
+    "market_cap_usd_bn": 81.1,
+    "consensus": {
+     "rating": "strong_buy",
+     "mean_score": 1.5,
+     "analysts": 16,
+     "target_mean": 5450.578,
+     "target_high": 6400.0,
+     "target_low": 3000.0
+    },
+    "next_earnings": "2026-11-06"
+   },
+   {
+    "id": "bwxt",
+    "group": "top",
+    "name": "BWX Technologies",
+    "theme": "Naval reactors, TRISO fuel and heavy nuclear components",
+    "tickers": [
+     "BWXT"
+    ],
+    "mark": "strong",
+    "claude_rating": "Buy",
+    "claude_target": 168,
+    "claude_fair_value_range": [
+     151,
+     185
+    ],
+    "claude_basis": "32x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 134.86,
+    "close_date": "2026-10-02",
+    "forward_pe": 25.7,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -43.43595335961747,
+    "ytd_pct": -22.0,
+    "market_cap_usd_bn": 12.4,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.61111,
+     "analysts": 16,
+     "target_mean": 217.69438,
+     "target_high": 290.0,
+     "target_low": 165.0
+    },
+    "next_earnings": "2026-11-02"
+   },
+   {
+    "id": "howmet",
+    "group": "top",
+    "name": "Howmet Aerospace",
+    "theme": "The casting bottleneck behind every turbine expansion",
+    "tickers": [
+     "HWM"
+    ],
+    "mark": "npi",
+    "claude_rating": "Accumulate",
+    "claude_target": 258,
+    "claude_fair_value_range": [
+     232,
+     284
+    ],
+    "claude_basis": "40x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 231.27,
+    "close_date": "2026-10-02",
+    "forward_pe": 35.8,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -20.973859559200402,
+    "ytd_pct": 12.8,
+    "market_cap_usd_bn": 92.2,
+    "consensus": {
+     "rating": "strong_buy",
+     "mean_score": 1.43478,
+     "analysts": 21,
+     "target_mean": 331.50287,
+     "target_high": 375.0,
+     "target_low": 255.0
+    },
+    "next_earnings": "2026-10-29"
+   },
+   {
+    "id": "baker-hughes",
+    "group": "top",
+    "name": "Baker Hughes",
+    "theme": "Small turbines, generators and gas compression for onsite power",
+    "tickers": [
+     "BKR"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 66,
+    "claude_fair_value_range": [
+     59,
+     73
+    ],
+    "claude_basis": "22x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 56.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 18.6,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -19.621070762164493,
+    "ytd_pct": 23.0,
+    "market_cap_usd_bn": 55.6,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.68,
+     "analysts": 24,
+     "target_mean": 71.20833,
+     "target_high": 85.0,
+     "target_low": 51.0
+    },
+    "next_earnings": "2026-10-27"
+   },
+   {
+    "id": "cameco",
+    "group": "top",
+    "name": "Cameco",
+    "theme": "Uranium, conversion and 49% of Westinghouse",
+    "tickers": [
+     "CCJ",
+     "CCO.TO"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 100,
+    "claude_fair_value_range": [
+     90,
+     110
+    ],
+    "claude_basis": "55x 2027E consensus EPS",
+    "claude_buy_below": 81,
+    "claude_buy_below_multiple": 45,
+    "currency": "USD",
+    "close": 85.18,
+    "close_date": "2026-10-02",
+    "forward_pe": 46.8,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -36.47550152882392,
+    "ytd_pct": -6.9,
+    "market_cap_usd_bn": 37.1,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.57143,
+     "analysts": 11,
+     "target_mean": 126.74649,
+     "target_high": 169.12964,
+     "target_low": 83.137505
+    },
+    "next_earnings": "2026-10-30"
+   },
+   {
+    "id": "japan-steel-works",
+    "group": "top",
+    "name": "Japan Steel Works",
+    "theme": "One of three forges on earth for large reactor vessels",
+    "tickers": [
+     "5631.T"
+    ],
+    "mark": "npi",
+    "claude_rating": "Accumulate",
+    "claude_target": 9300,
+    "claude_fair_value_range": [
+     8350,
+     10250
+    ],
+    "claude_basis": "26x FY3/28E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "JPY",
+    "close": 7182.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 20.1,
+    "fiscal_year": "FY3/28E",
+    "from_52w_high_pct": -30.909090909090907,
+    "ytd_pct": -6.5,
+    "market_cap_usd_bn": 3.3,
+    "consensus": {
+     "rating": "strong_buy",
+     "mean_score": 1.0,
+     "analysts": 6,
+     "target_mean": 11158.333,
+     "target_high": 12450.0,
+     "target_low": 9100.0
+    },
+    "next_earnings": "2026-11-10"
+   },
+   {
+    "id": "centrus",
+    "group": "top",
+    "name": "Centrus Energy",
+    "theme": "The only US-owned enricher, and the HALEU gate for advanced reactors",
+    "tickers": [
+     "LEU"
+    ],
+    "mark": "npi",
+    "claude_rating": "Speculative buy",
+    "claude_target": 172,
+    "claude_fair_value_range": [
+     155,
+     189
+    ],
+    "claude_basis": "45x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 139.27,
+    "close_date": "2026-10-02",
+    "forward_pe": 36.4,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -68.05733944954129,
+    "ytd_pct": -42.6,
+    "market_cap_usd_bn": 2.8,
+    "consensus": {
+     "rating": "none",
+     "mean_score": null,
+     "analysts": 17,
+     "target_mean": 247.39824,
+     "target_high": 340.0,
+     "target_low": 168.77
+    },
+    "next_earnings": "2026-11-04"
+   },
+   {
+    "id": "cummins",
+    "group": "also",
+    "name": "Cummins",
+    "theme": "Large gensets, gas engines and the cheapest multiple among the engine makers",
+    "tickers": [
+     "CMI"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 641,
+    "claude_fair_value_range": [
+     577,
+     705
+    ],
+    "claude_basis": "19x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 528.32,
+    "close_date": "2026-10-02",
+    "forward_pe": 15.7,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -27.387677125853838,
+    "ytd_pct": 3.5,
+    "market_cap_usd_bn": 72.7,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.86957,
+     "analysts": 20,
+     "target_mean": 741.26,
+     "target_high": 894.0,
+     "target_low": 530.0
+    },
+    "next_earnings": "2026-11-05"
+   },
+   {
+    "id": "wartsila",
+    "group": "also",
+    "name": "Wärtsilä",
+    "theme": "Medium-speed engines, rated Hold while orders hit records",
+    "tickers": [
+     "WRT1V.HE",
+     "WRTBY"
+    ],
+    "mark": "npi",
+    "claude_rating": "Accumulate",
+    "claude_target": 34.0,
+    "claude_fair_value_range": [
+     30.5,
+     37.5
+    ],
+    "claude_basis": "26x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "EUR",
+    "close": 29.35,
+    "close_date": "2026-10-02",
+    "forward_pe": 22.4,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -25.93994448650013,
+    "ytd_pct": -3.5,
+    "market_cap_usd_bn": 19.5,
+    "consensus": {
+     "rating": "hold",
+     "mean_score": 2.88235,
+     "analysts": 16,
+     "target_mean": 32.975,
+     "target_high": 43.0,
+     "target_low": 19.5
+    },
+    "next_earnings": "2026-10-27"
+   },
+   {
+    "id": "argan",
+    "group": "also",
+    "name": "Argan",
+    "theme": "The only listed US contractor whose core business is building gas power plants",
+    "tickers": [
+     "AGX"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 451,
+    "claude_fair_value_range": [
+     406,
+     496
+    ],
+    "claude_basis": "28x FY1/28E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 383.83,
+    "close_date": "2026-10-02",
+    "forward_pe": 23.8,
+    "fiscal_year": "FY1/28E",
+    "from_52w_high_pct": -51.934130611733764,
+    "ytd_pct": 22.5,
+    "market_cap_usd_bn": 5.4,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 2.0,
+     "analysts": 6,
+     "target_mean": 570.5,
+     "target_high": 785.0,
+     "target_low": 273.0
+    },
+    "next_earnings": "2026-09-02"
+   },
+   {
+    "id": "curtiss-wright",
+    "group": "also",
+    "name": "Curtiss-Wright",
+    "theme": "Reactor coolant pumps: three to four reactors' worth a year",
+    "tickers": [
+     "CW"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 617,
+    "claude_fair_value_range": [
+     555,
+     679
+    ],
+    "claude_basis": "36x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 545.64,
+    "close_date": "2026-10-02",
+    "forward_pe": 31.8,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -31.172975768507893,
+    "ytd_pct": -1.0,
+    "market_cap_usd_bn": 20.2,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.77778,
+     "analysts": 8,
+     "target_mean": 786.25,
+     "target_high": 870.0,
+     "target_low": 665.0
+    },
+    "next_earnings": "2026-11-04"
+   },
+   {
+    "id": "mirion",
+    "group": "also",
+    "name": "Mirion Technologies",
+    "theme": "Radiation measurement for every restart, uprate and new plant",
+    "tickers": [
+     "MIR"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 17.5,
+    "claude_fair_value_range": [
+     16.0,
+     19.0
+    ],
+    "claude_basis": "26x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 14.6,
+    "close_date": "2026-10-02",
+    "forward_pe": 21.6,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -50.924369747899156,
+    "ytd_pct": -37.7,
+    "market_cap_usd_bn": 3.6,
+    "consensus": {
+     "rating": "strong_buy",
+     "mean_score": 1.36364,
+     "analysts": 11,
+     "target_mean": 24.0,
+     "target_high": 29.0,
+     "target_low": 20.0
+    },
+    "next_earnings": "2026-10-27"
+   },
+   {
+    "id": "kazatomprom",
+    "group": "also",
+    "name": "Kazatomprom",
+    "theme": "The lowest-cost uranium producer, at about 10× earnings",
+    "tickers": [
+     "KAP.L"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 79,
+    "claude_fair_value_range": [
+     71,
+     87
+    ],
+    "claude_basis": "12x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 64.6,
+    "close_date": "2026-10-02",
+    "forward_pe": 9.8,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -15.555555555555568,
+    "ytd_pct": null,
+    "market_cap_usd_bn": 13.0,
+    "consensus": {
+     "rating": "strong_buy",
+     "mean_score": 1.42857,
+     "analysts": 14,
+     "target_mean": 92.535645,
+     "target_high": 107.68661,
+     "target_low": 79.37728
+    },
+    "next_earnings": null
+   },
+   {
+    "id": "ge-vernova",
+    "group": "priced",
+    "name": "GE Vernova",
+    "tickers": [
+     "GEV"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 30,
+    "claude_buy_below": 740,
+    "currency": "USD",
+    "close": 988.7,
+    "close_date": "2026-10-02",
+    "forward_pe": 39.9,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -15.845292205028672,
+    "ytd_pct": 51.3,
+    "market_cap_usd_bn": 263.3,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 33,
+     "target_mean": 1230.341,
+     "target_high": 1450.0,
+     "target_low": 940.0
+    },
+    "why": "The largest turbine book (116 GW under contract, 53 GW firm, rising to \"at least 125 GW\" by year-end) and pricing up 10–20 points on 2026 orders [G1-1][G1-3]. But 90% of new signings are reservations, the shares trade at about 40× 2027 earnings, and 2026 earnings include a pre-tax gain of about $4 billion on Prolec [P3-18]. The bottleneck is fully priced."
+   },
+   {
+    "id": "caterpillar",
+    "group": "priced",
+    "name": "Caterpillar",
+    "tickers": [
+     "CAT"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 22,
+    "claude_buy_below": 710,
+    "currency": "USD",
+    "close": 845.42,
+    "close_date": "2026-10-02",
+    "forward_pe": 26.1,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -20.610385951732567,
+    "ytd_pct": 47.6,
+    "market_cap_usd_bn": 388.6,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 26,
+     "target_mean": 975.60614,
+     "target_high": 1225.0,
+     "target_low": 575.0
+    },
+    "why": "Caterpillar equipment is 33% of permitted US onsite data-center capacity, power-generation retail sales rose 72%, the backlog is $72 billion and it is tripling large-engine capacity versus 2024 [G1-16][G1-17][G1-56]. Construction and mining are still two-thirds of sales, and $2.2 billion of 2026 tariff costs weigh on margins."
+   },
+   {
+    "id": "generac",
+    "group": "priced",
+    "name": "Generac",
+    "tickers": [
+     "GNRC"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 16,
+    "claude_buy_below": 200,
+    "currency": "USD",
+    "close": 216.8,
+    "close_date": "2026-10-02",
+    "forward_pe": 17.2,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -26.642755633755165,
+    "ytd_pct": 59.0,
+    "market_cap_usd_bn": 12.8,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 16,
+     "target_mean": 289.5625,
+     "target_high": 375.0,
+     "target_low": 215.0
+    },
+    "why": "An agreement to supply Amazon's data centers with backup generators worth up to $8 billion, of which about $2.4 billion is scheduled for 2027–28, with warrants on about 1.69 million shares that vest as Amazon buys [G1-35]. The residential business is cyclical, and the large-megawatt capacity only triples by the third quarter of 2027."
+   },
+   {
+    "id": "solaris-energy-infrastructure",
+    "group": "priced",
+    "name": "Solaris Energy Infrastructure",
+    "tickers": [
+     "SEI"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 18,
+    "claude_buy_below": 63,
+    "currency": "USD",
+    "close": 74.93,
+    "close_date": "2026-10-02",
+    "forward_pe": 21.2,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -9.59218146718145,
+    "ytd_pct": 63.0,
+    "market_cap_usd_bn": 7.5,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 14,
+     "target_mean": 101.27143,
+     "target_high": 120.0,
+     "target_low": 82.0
+    },
+    "why": "A \"behind-the-meter utility\": 950 MW earning, about 2.3 GW contracted and 800 MW uncontracted with near-term delivery, with $1.4 billion of liquidity [G1-25]. One customer group (xAI) dominates, the fleet's value falls when turbines become available again in 2029–30, and the Southaven permits are in litigation."
+   },
+   {
+    "id": "rolls-royce",
+    "group": "priced",
+    "name": "Rolls-Royce",
+    "tickers": [
+     "RR.L",
+     "RYCEY"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 24,
+    "claude_buy_below": 1150,
+    "currency": "GBp",
+    "close": 1477.2,
+    "close_date": "2026-10-02",
+    "forward_pe": 29.8,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -5.934793683138051,
+    "ytd_pct": 28.5,
+    "market_cap_usd_bn": 161.0,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 20,
+     "target_mean": 1722.05,
+     "target_high": 2000.0,
+     "target_low": 1199.0
+    },
+    "why": "mtu Series 4000 engines and the British SMR program, but Power Systems is under a quarter of the group and the shares are priced at about 30× for civil aerospace and defense [G1-33]."
+   },
+   {
+    "id": "ati",
+    "group": "priced",
+    "name": "ATI",
+    "tickers": [
+     "ATI"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 24,
+    "claude_buy_below": 150,
+    "currency": "USD",
+    "close": 192.42,
+    "close_date": "2026-10-02",
+    "forward_pe": 30.2,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -16.981620502200368,
+    "ytd_pct": 67.7,
+    "market_cap_usd_bn": 26.2,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 9,
+     "target_mean": 256.0,
+     "target_high": 270.0,
+     "target_low": 240.0
+    },
+    "why": "Nickel superalloys and forgings for turbine hot sections, but specialty energy is about 5% of revenue and aerospace sets the 30× multiple [G1-44]."
+   },
+   {
+    "id": "carpenter-technology",
+    "group": "priced",
+    "name": "Carpenter Technology",
+    "tickers": [
+     "CRS"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 20,
+    "claude_buy_below": 315,
+    "currency": "USD",
+    "close": 388.47,
+    "close_date": "2026-10-02",
+    "forward_pe": 24.5,
+    "fiscal_year": "FY6/28E",
+    "from_52w_high_pct": -37.26766249495357,
+    "ytd_pct": 23.4,
+    "market_cap_usd_bn": 19.3,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 8,
+     "target_mean": 612.125,
+     "target_high": 700.0,
+     "target_low": 430.0
+    },
+    "why": "Superalloys for aerospace and energy; energy is about 5% of sales [G1-45]. A good aerospace cycle stock, not a turbine bottleneck owner."
+   },
+   {
+    "id": "fluor",
+    "group": "priced",
+    "name": "Fluor",
+    "tickers": [
+     "FLR"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 13,
+    "claude_buy_below": 43,
+    "currency": "USD",
+    "close": 49.9,
+    "close_date": "2026-10-02",
+    "forward_pe": 14.8,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -13.217391304347824,
+    "ytd_pct": 25.9,
+    "market_cap_usd_bn": 6.7,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 8,
+     "target_mean": 61.6875,
+     "target_high": 71.0,
+     "target_low": 50.0
+    },
+    "why": "Wants gas-plant engineering and construction work, but expects meaningful awards only from the first half of 2027, and its backlog fell 4.7% [G1-50]; its NuScale stake is being monetized."
+   },
+   {
+    "id": "doosan-enerbility",
+    "group": "priced",
+    "name": "Doosan Enerbility",
+    "tickers": [
+     "034020.KS"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 50,
+    "claude_buy_below": 52000,
+    "currency": "KRW",
+    "close": 81100.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 77.7,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -40.542521994134894,
+    "ytd_pct": 7.7,
+    "market_cap_usd_bn": 38.6,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 21,
+     "target_mean": 125360.664,
+     "target_high": 177000.0,
+     "target_low": 100000.0
+    },
+    "why": "Unique assets: the world's largest nuclear forging press and the only new heavy-duty turbine entrant in a generation, with 7 of the 29 firm US large-turbine orders of the first half of 2026 and deliveries from May 2029 [G1-11][G1-10][G2-79]. At about 78× 2027 earnings, after Korean retail flows, the assets are priced; I would reconsider below 50×."
+   },
+   {
+    "id": "sprott-physical-uranium-trust",
+    "group": "priced",
+    "name": "Sprott Physical Uranium Trust",
+    "tickers": [
+     "SRUUF",
+     "U-UN.TO"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 19.2,
+    "close_date": "2026-10-02",
+    "forward_pe": null,
+    "fiscal_year": "next FY",
+    "from_52w_high_pct": -20.066611157368865,
+    "ytd_pct": -1.4,
+    "market_cap_usd_bn": 6.6,
+    "consensus": {
+     "rating": "none",
+     "analysts": null,
+     "target_mean": null,
+     "target_high": null,
+     "target_low": null
+    },
+    "why": "The cleanest way to own uranium itself (81.7 million pounds in the trust) without company risk [G2-70]. The term price is already a record and the physical tightness is a 2028–35 story, so I treat it as a hold rather than a buy today."
+   },
+   {
+    "id": "bloom-energy",
+    "group": "avoid",
+    "name": "Bloom Energy",
+    "tickers": [
+     "BE"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": 30,
+    "claude_buy_below": 145,
+    "currency": "USD",
+    "close": 289.15,
+    "close_date": "2026-10-02",
+    "forward_pe": 58.5,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -16.39439063177679,
+    "ytd_pct": 232.8,
+    "market_cap_usd_bn": 85.2,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 26,
+     "target_mean": 282.81537,
+     "target_high": 390.0,
+     "target_low": 97.0
+    },
+    "why": "The permit-light onsite option that Oracle chose (up to 2.8 GW), with about 3.8 GW booked against 0.03 GW for FuelCell Energy, the other US solid-oxide maker [G1-38][G1-54]. At about 58× 2027 earnings, above the analysts' mean target, with 73% of quarterly revenue from one customer and a disputed scandium supply chain [G1-37][G1-39], the price outweighs the position."
+   },
+   {
+    "id": "oklo",
+    "group": "avoid",
+    "name": "Oklo",
+    "tickers": [
+     "OKLO"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 35.87,
+    "close_date": "2026-10-02",
+    "forward_pe": null,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -79.40163087171241,
+    "ytd_pct": -50.0,
+    "market_cap_usd_bn": 6.7,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 20,
+     "target_mean": 75.775,
+     "target_high": 130.0,
+     "target_low": 14.0
+    },
+    "why": "A $6.7 billion market value on $1.2 million of trailing revenue. The Groves criticality in August 2026 is real but belongs to a 15-megawatt-thermal isotope test reactor; the 75 MW Aurora targets 2028 at best, and the \"15 GW order book\" is letters of intent [G2-45][G2-47][G2-49]."
+   },
+   {
+    "id": "nuscale-power",
+    "group": "avoid",
+    "name": "NuScale Power",
+    "tickers": [
+     "SMR"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 7.75,
+    "close_date": "2026-10-02",
+    "forward_pe": null,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -85.4950402395658,
+    "ytd_pct": -45.3,
+    "market_cap_usd_bn": 3.2,
+    "consensus": {
+     "rating": "hold",
+     "analysts": 15,
+     "target_mean": 11.96667,
+     "target_high": 20.0,
+     "target_low": 6.0
+    },
+    "why": "The only US-approved small-modular design, but no construction-permit application, a non-binding 6 GW framework with ENTRA1 and TVA, $10.7 million of trailing revenue and a UBS Sell [G2-43]."
+   },
+   {
+    "id": "x-energy",
+    "group": "avoid",
+    "name": "X-energy",
+    "tickers": [
+     "XE"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 14.38,
+    "close_date": "2026-10-02",
+    "forward_pe": null,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -60.03335186214562,
+    "ytd_pct": null,
+    "market_cap_usd_bn": 5.8,
+    "consensus": {
+     "rating": "none",
+     "analysts": 8,
+     "target_mean": 34.375,
+     "target_high": 57.0,
+     "target_low": 9.0
+    },
+    "why": "The one developer with its own fuel plant under construction, a construction-permit application through environmental review (safety review due November 2026) and two anchor customers (Dow and Amazon) [G2-53][G2-102]. It is the name to revisit after the NRC decision; today it is a $5.8 billion value on $150 million of revenue and a $449 million trailing loss."
+   },
+   {
+    "id": "nano-nuclear-energy",
+    "group": "avoid",
+    "name": "NANO Nuclear Energy",
+    "tickers": [
+     "NNE"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 15.62,
+    "close_date": "2026-10-02",
+    "forward_pe": null,
+    "fiscal_year": "FY9/27E",
+    "from_52w_high_pct": -72.41744658308318,
+    "ytd_pct": -34.9,
+    "market_cap_usd_bn": 0.8,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 7,
+     "target_mean": 37.57143,
+     "target_high": 50.0,
+     "target_low": 22.0
+    },
+    "why": "An $839 million value on $214,000 of revenue, with a construction-permit review running to late 2027 [G2-50]."
+   },
+   {
+    "id": "fermi-america",
+    "group": "avoid",
+    "name": "Fermi America",
+    "tickers": [
+     "FRMI"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 4.03,
+    "close_date": "2026-10-02",
+    "forward_pe": 31.0,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -86.57114295234922,
+    "ytd_pct": -49.6,
+    "market_cap_usd_bn": 2.6,
+    "consensus": {
+     "rating": "none",
+     "analysts": 8,
+     "target_mean": 17.125,
+     "target_high": 35.0,
+     "target_low": 6.0
+    },
+    "why": "A Texas campus with gas turbines on site and AP1000 ambitions for 2032 and beyond, $91.7 million of cash against $520 million of debt [G2-34]: a real-estate and gas financing story."
+   },
+   {
+    "id": "babcock-wilcox",
+    "group": "avoid",
+    "name": "Babcock & Wilcox",
+    "tickers": [
+     "BW"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 5.7,
+    "close_date": "2026-10-02",
+    "forward_pe": 12.7,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -73.91304347826086,
+    "ytd_pct": -10.1,
+    "market_cap_usd_bn": 0.8,
+    "consensus": {
+     "rating": "none",
+     "analysts": 4,
+     "target_mean": 22.0,
+     "target_high": 25.0,
+     "target_low": 20.0
+    },
+    "why": "A real 1.2 GW boiler-and-steam-turbine contract and a backlog up from $488 million to $2.6 billion, but $240 million of debt against $57 million of equity, and a workaround that ends when turbines return [G1-47][G1-48]."
+   },
+   {
+    "id": "fuelcell-energy",
+    "group": "avoid",
+    "name": "FuelCell Energy",
+    "tickers": [
+     "FCEL"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 18.47,
+    "close_date": "2026-10-02",
+    "forward_pe": null,
+    "fiscal_year": "FY10/27E",
+    "from_52w_high_pct": -48.708692029991674,
+    "ytd_pct": 152.7,
+    "market_cap_usd_bn": 1.5,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 11,
+     "target_mean": 20.63636,
+     "target_high": 32.0,
+     "target_low": 8.0
+    },
+    "why": "A 37 MW annualized production rate and falling revenue, two orders of magnitude behind Bloom [G1-40]."
+   },
+   {
+    "id": "uranium-energy",
+    "group": "avoid",
+    "name": "Uranium Energy",
+    "tickers": [
+     "UEC"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 9.3,
+    "close_date": "2026-10-02",
+    "forward_pe": null,
+    "fiscal_year": "FY7/28E",
+    "from_52w_high_pct": -53.823237338629596,
+    "ytd_pct": -20.4,
+    "market_cap_usd_bn": 4.6,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 11,
+     "target_mean": 16.20909,
+     "target_high": 26.75,
+     "target_low": 10.0
+    },
+    "why": "A $4.6 billion value for a small producer whose pounds the data-center thesis does not need before 2030; the term price is already a record [G2-68]."
+   },
+   {
+    "id": "nexgen-energy",
+    "group": "avoid",
+    "name": "NexGen Energy",
+    "tickers": [
+     "NXE",
+     "NXE.TO"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 9.0,
+    "close_date": "2026-10-02",
+    "forward_pe": null,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -35.3448275862069,
+    "ytd_pct": -2.2,
+    "market_cap_usd_bn": 6.0,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 2,
+     "target_mean": 16.318523,
+     "target_high": 18.871342,
+     "target_low": 13.765705
+    },
+    "why": "The development-stage name to watch (Rook I licensed for construction in March 2026), but pre-production and valued at about $6 billion; timing, not quality, is the objection [G2-90]."
+   }
+  ],
+  "providers": [
+   {
+    "id": "vistra",
+    "group": "top",
+    "name": "Vistra",
+    "theme": "Hedged merchant fleet in the two tightest markets",
+    "tickers": [
+     "VST"
+    ],
+    "mark": "npi",
+    "claude_rating": "Buy",
+    "claude_target": 186,
+    "claude_fair_value_range": [
+     167,
+     205
+    ],
+    "claude_basis": "18x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 140.02,
+    "close_date": "2026-10-02",
+    "forward_pe": 13.5,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -33.592601375385335,
+    "ytd_pct": -13.2,
+    "market_cap_usd_bn": 47.0,
+    "consensus": {
+     "rating": "strong_buy",
+     "mean_score": 1.35,
+     "analysts": 19,
+     "target_mean": 212.78947,
+     "target_high": 305.0,
+     "target_low": 106.0
+    },
+    "next_earnings": "2026-11-06"
+   },
+   {
+    "id": "constellation",
+    "group": "top",
+    "name": "Constellation Energy",
+    "theme": "The only multi-gigawatt, already-interconnected clean supply a hyperscaler can contract before 2028",
+    "tickers": [
+     "CEG"
+    ],
+    "mark": "strong",
+    "claude_rating": "Buy",
+    "claude_target": 320,
+    "claude_fair_value_range": [
+     288,
+     352
+    ],
+    "claude_basis": "24x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 257.49,
+    "close_date": "2026-10-02",
+    "forward_pe": 19.3,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -36.25696249535834,
+    "ytd_pct": -27.1,
+    "market_cap_usd_bn": 91.2,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.54545,
+     "analysts": 20,
+     "target_mean": 342.982,
+     "target_high": 395.0,
+     "target_low": 290.0
+    },
+    "next_earnings": "2026-11-09"
+   },
+   {
+    "id": "talen",
+    "group": "top",
+    "name": "Talen Energy",
+    "theme": "Fixed 2028 capacity revenue and the largest single hyperscaler nuclear contract",
+    "tickers": [
+     "TLN"
+    ],
+    "mark": "npi",
+    "claude_rating": "Buy",
+    "claude_target": 431,
+    "claude_fair_value_range": [
+     388,
+     474
+    ],
+    "claude_basis": "14x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 320.77,
+    "close_date": "2026-10-02",
+    "forward_pe": 10.4,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -28.052664633052217,
+    "ytd_pct": -14.4,
+    "market_cap_usd_bn": 15.2,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.58824,
+     "analysts": 17,
+     "target_mean": 455.64706,
+     "target_high": 560.0,
+     "target_low": 307.0
+    },
+    "next_earnings": "2026-11-04"
+   },
+   {
+    "id": "ppl",
+    "group": "top",
+    "name": "PPL Corporation",
+    "theme": "Wires in the PJM zones that carry the growth, with 11 GW signed",
+    "tickers": [
+     "PPL"
+    ],
+    "mark": "strong",
+    "claude_rating": "Buy",
+    "claude_target": 38,
+    "claude_fair_value_range": [
+     34,
+     42
+    ],
+    "claude_basis": "18x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 32.8,
+    "close_date": "2026-10-02",
+    "forward_pe": 15.5,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -17.60864104496359,
+    "ytd_pct": -6.3,
+    "market_cap_usd_bn": 24.7,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.70588,
+     "analysts": 16,
+     "target_mean": 40.125,
+     "target_high": 45.0,
+     "target_low": 35.0
+    },
+    "next_earnings": "2026-11-04"
+   },
+   {
+    "id": "sempra",
+    "group": "top",
+    "name": "Sempra",
+    "theme": "Oncor: the Texas grid connection, which is the scarce good",
+    "tickers": [
+     "SRE"
+    ],
+    "mark": null,
+    "claude_rating": "Buy",
+    "claude_target": 94,
+    "claude_fair_value_range": [
+     85,
+     103
+    ],
+    "claude_basis": "17x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 78.38,
+    "close_date": "2026-10-02",
+    "forward_pe": 14.1,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -21.42355889724311,
+    "ytd_pct": -11.2,
+    "market_cap_usd_bn": 51.3,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.6,
+     "analysts": 18,
+     "target_mean": 99.91667,
+     "target_high": 118.0,
+     "target_low": 83.0
+    },
+    "next_earnings": "2026-11-04"
+   },
+   {
+    "id": "pseg",
+    "group": "top",
+    "name": "Public Service Enterprise Group",
+    "theme": "A wires valuation with an unhedged nuclear option in PJM",
+    "tickers": [
+     "PEG"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 79,
+    "claude_fair_value_range": [
+     71,
+     87
+    ],
+    "claude_basis": "17x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 68.07,
+    "close_date": "2026-10-02",
+    "forward_pe": 14.6,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -21.71362852213917,
+    "ytd_pct": -15.2,
+    "market_cap_usd_bn": 33.9,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 2.27273,
+     "analysts": 18,
+     "target_mean": 84.47222,
+     "target_high": 96.0,
+     "target_low": 73.0
+    },
+    "next_earnings": "2026-11-02"
+   },
+   {
+    "id": "kinder-morgan",
+    "group": "top",
+    "name": "Kinder Morgan",
+    "theme": "The pipe into the Southeast, where no new gas arrives before 2028",
+    "tickers": [
+     "KMI"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 35.5,
+    "claude_fair_value_range": [
+     32.0,
+     39.0
+    ],
+    "claude_basis": "23x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 31.07,
+    "close_date": "2026-10-02",
+    "forward_pe": 20.1,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -9.443310988050136,
+    "ytd_pct": 13.0,
+    "market_cap_usd_bn": 69.2,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 2.12,
+     "analysts": 22,
+     "target_mean": 36.09091,
+     "target_high": 43.0,
+     "target_low": 31.0
+    },
+    "next_earnings": "2026-10-28"
+   },
+   {
+    "id": "kodiak",
+    "group": "top",
+    "name": "Kodiak Gas Services",
+    "theme": "Compression horsepower and a 1 GW turbine allocation: the quiet onsite-power beneficiary",
+    "tickers": [
+     "KGS"
+    ],
+    "mark": "npi",
+    "claude_rating": "Accumulate",
+    "claude_target": 68,
+    "claude_fair_value_range": [
+     61,
+     75
+    ],
+    "claude_basis": "21x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 54.33,
+    "close_date": "2026-10-02",
+    "forward_pe": 16.8,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -28.766225252392818,
+    "ytd_pct": 45.3,
+    "market_cap_usd_bn": 5.5,
+    "consensus": {
+     "rating": "strong_buy",
+     "mean_score": 1.33333,
+     "analysts": 15,
+     "target_mean": 83.06667,
+     "target_high": 93.0,
+     "target_low": 69.0
+    },
+    "next_earnings": "2026-11-03"
+   },
+   {
+    "id": "eqt",
+    "group": "also",
+    "name": "EQT",
+    "theme": "Appalachian gas next to PJM's load, with its own pipes",
+    "tickers": [
+     "EQT"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 60,
+    "claude_fair_value_range": [
+     54,
+     66
+    ],
+    "claude_basis": "15x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 50.17,
+    "close_date": "2026-10-02",
+    "forward_pe": 12.6,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -26.144560577064635,
+    "ytd_pct": -6.4,
+    "market_cap_usd_bn": 31.4,
+    "consensus": {
+     "rating": "strong_buy",
+     "mean_score": 1.46154,
+     "analysts": 26,
+     "target_mean": 67.19231,
+     "target_high": 81.0,
+     "target_low": 52.0
+    },
+    "next_earnings": "2026-10-20"
+   },
+   {
+    "id": "nrg",
+    "group": "also",
+    "name": "NRG Energy",
+    "theme": "The first disclosed \"paid for megawatts, not utilization\" gas contract",
+    "tickers": [
+     "NRG"
+    ],
+    "mark": "npi",
+    "claude_rating": "Speculative buy",
+    "claude_target": 123,
+    "claude_fair_value_range": [
+     111,
+     135
+    ],
+    "claude_basis": "11x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 95.23,
+    "close_date": "2026-10-02",
+    "forward_pe": 8.5,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -48.253002227897625,
+    "ytd_pct": -40.2,
+    "market_cap_usd_bn": 20.0,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.5625,
+     "analysts": 16,
+     "target_mean": 185.5,
+     "target_high": 270.0,
+     "target_low": 104.0
+    },
+    "next_earnings": "2026-11-05"
+   },
+   {
+    "id": "firstenergy",
+    "group": "also",
+    "name": "FirstEnergy",
+    "theme": "The fastest-growing contracted book relative to system size among wires utilities",
+    "tickers": [
+     "FE"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 50,
+    "claude_fair_value_range": [
+     45,
+     55
+    ],
+    "claude_basis": "17x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 43.34,
+    "close_date": "2026-10-02",
+    "forward_pe": 14.7,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -16.50934309381621,
+    "ytd_pct": -3.2,
+    "market_cap_usd_bn": 25.1,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 2.125,
+     "analysts": 12,
+     "target_mean": 52.66667,
+     "target_high": 56.0,
+     "target_low": 48.0
+    },
+    "next_earnings": "2026-10-27"
+   },
+   {
+    "id": "energy-transfer",
+    "group": "also",
+    "name": "Energy Transfer",
+    "theme": "Texas intrastate pipe: no federal certificate needed",
+    "tickers": [
+     "ET"
+    ],
+    "mark": null,
+    "claude_rating": "Accumulate",
+    "claude_target": 23.5,
+    "claude_fair_value_range": [
+     21.0,
+     26.0
+    ],
+    "claude_basis": "14x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "USD",
+    "close": 20.47,
+    "close_date": "2026-10-02",
+    "forward_pe": 12.2,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -5.798435342844,
+    "ytd_pct": 24.1,
+    "market_cap_usd_bn": 70.5,
+    "consensus": {
+     "rating": "strong_buy",
+     "mean_score": 1.47826,
+     "analysts": 23,
+     "target_mean": 24.7,
+     "target_high": 28.0,
+     "target_low": 22.0
+    },
+    "next_earnings": "2026-11-03"
+   },
+   {
+    "id": "capital-power",
+    "group": "also",
+    "name": "Capital Power",
+    "theme": "Alberta's surplus gas capacity, contracted to Meta from 2028",
+    "tickers": [
+     "CPX.TO"
+    ],
+    "mark": "npi",
+    "claude_rating": "Accumulate",
+    "claude_target": 69,
+    "claude_fair_value_range": [
+     62,
+     76
+    ],
+    "claude_basis": "24x 2027E consensus EPS",
+    "claude_buy_below": null,
+    "claude_buy_below_multiple": null,
+    "currency": "CAD",
+    "close": 61.46,
+    "close_date": "2026-10-02",
+    "forward_pe": 21.3,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -19.078341013824883,
+    "ytd_pct": 5.0,
+    "market_cap_usd_bn": 6.8,
+    "consensus": {
+     "rating": "buy",
+     "mean_score": 1.92308,
+     "analysts": 13,
+     "target_mean": 77.46154,
+     "target_high": 88.0,
+     "target_low": 57.0
+    },
+    "next_earnings": "2026-11-04"
+   },
+   {
+    "id": "williams",
+    "group": "priced",
+    "name": "Williams",
+    "tickers": [
+     "WMB"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 22,
+    "claude_buy_below": 58,
+    "currency": "USD",
+    "close": 70.54,
+    "close_date": "2026-10-02",
+    "forward_pe": 26.7,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -11.158690176322416,
+    "ytd_pct": 17.4,
+    "market_cap_usd_bn": 86.3,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 24,
+     "target_mean": 85.45833,
+     "target_high": 103.0,
+     "target_low": 69.0
+    },
+    "why": "The AI gas utility: Transco's Southeast expansion (1.6 Bcf/d, Q4 2027), a 2.6 GW behind-the-meter power portfolio funded by Blackstone at a 6.35% equity cost cap, a \"6 GW+\" power backlog and an 11%-plus growth target [U2-5][U2-48][U2-19]. The highest quality in midstream, at the highest multiple (about 27× 2027)."
+   },
+   {
+    "id": "xcel-energy",
+    "group": "priced",
+    "name": "Xcel Energy",
+    "tickers": [
+     "XEL"
+    ],
+    "claude_rating": "Accumulate",
+    "claude_buy_below_multiple": 17,
+    "claude_buy_below": 77,
+    "currency": "USD",
+    "close": 71.4,
+    "close_date": "2026-10-02",
+    "forward_pe": 15.7,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -14.908830890239532,
+    "ytd_pct": -3.3,
+    "market_cap_usd_bn": 44.6,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 18,
+     "target_mean": 90.61111,
+     "target_high": 101.0,
+     "target_low": 74.0
+    },
+    "why": "Long-term growth raised to 9%-plus on a $70 billion plan with 85% of equity pre-funded, a \"high probability\" portfolio of more than 20 GW and a Plains and Texas footprint in the load-shift corridor [U1-63]. About 16× 2027 with a 3.3% yield; wildfire liability in Colorado and Texas is the risk."
+   },
+   {
+    "id": "nextera-energy",
+    "group": "priced",
+    "name": "NextEra Energy",
+    "tickers": [
+     "NEE"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 16,
+    "claude_buy_below": 70,
+    "currency": "USD",
+    "close": 76.83,
+    "close_date": "2026-10-02",
+    "forward_pe": 17.5,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -21.505925623212097,
+    "ytd_pct": -4.3,
+    "market_cap_usd_bn": 160.3,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 19,
+     "target_mean": 98.21053,
+     "target_high": 114.0,
+     "target_low": 56.0
+    },
+    "why": "A 35.1 GW renewables and storage backlog, 30–40 data-center hubs in discussion, 9.5 GW of gas in development, the Duane Arnold restart for Google by 2029 and the pending Dominion merger [U2-21][U1-53][U1-54]. Good assets at one of the highest regulated multiples; the Virginia merger conditions are the swing factor."
+   },
+   {
+    "id": "southern-company",
+    "group": "priced",
+    "name": "Southern Company",
+    "tickers": [
+     "SO"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 15,
+    "claude_buy_below": 73,
+    "currency": "USD",
+    "close": 83.72,
+    "close_date": "2026-10-02",
+    "forward_pe": 17.0,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -16.044925792218212,
+    "ytd_pct": -4.0,
+    "market_cap_usd_bn": 96.3,
+    "consensus": {
+     "rating": "hold",
+     "analysts": 19,
+     "target_mean": 98.13158,
+     "target_high": 112.0,
+     "target_low": 79.0
+    },
+    "why": "Contracted load of 17 GW (+6 GW in a quarter), the 3.2 GW OpenAI contract with 1 GW of flexibility and about 10 GW of approved new generation [U1-56][U1-57]. Georgia bills rose $43 a month in two years, the commission faces elections, and the Hold consensus reflects that tension [U1-58]."
+   },
+   {
+    "id": "duke-energy",
+    "group": "priced",
+    "name": "Duke Energy",
+    "tickers": [
+     "DUK"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 14,
+    "claude_buy_below": 100,
+    "currency": "USD",
+    "close": 114.13,
+    "close_date": "2026-10-02",
+    "forward_pe": 15.9,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -14.483740446575766,
+    "ytd_pct": -2.6,
+    "market_cap_usd_bn": 89.0,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 18,
+     "target_mean": 136.11111,
+     "target_high": 147.0,
+     "target_low": 127.0
+    },
+    "why": "A $103 billion plan, 7.8 GW of executed data-center agreements and large combined-cycle builds, but $10 billion of equity to issue in 2027–30 and a 9.8% allowed return [U1-62]. Fair rather than cheap."
+   },
+   {
+    "id": "american-electric-power",
+    "group": "priced",
+    "name": "American Electric Power",
+    "tickers": [
+     "AEP"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 15,
+    "claude_buy_below": 100,
+    "currency": "USD",
+    "close": 119.57,
+    "close_date": "2026-10-02",
+    "forward_pe": 17.4,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -13.786141754993153,
+    "ytd_pct": 3.7,
+    "market_cap_usd_bn": 65.1,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 20,
+     "target_mean": 142.525,
+     "target_high": 173.0,
+     "target_low": 128.0
+    },
+    "why": "63 GW \"contracted\", 90% data centers, and the template large-load tariff in Ohio, but that tariff cut AEP Ohio's working queue from more than 30 GW to 13 GW, and a $78 billion plan makes equity the swing factor [U1-14][U1-13]."
+   },
+   {
+    "id": "entergy",
+    "group": "priced",
+    "name": "Entergy",
+    "tickers": [
+     "ETR"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 17,
+    "claude_buy_below": 86,
+    "currency": "USD",
+    "close": 100.91,
+    "close_date": "2026-10-02",
+    "forward_pe": 19.8,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -14.417776270036464,
+    "ytd_pct": 9.2,
+    "market_cap_usd_bn": 48.2,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 20,
+     "target_mean": 122.275,
+     "target_high": 137.0,
+     "target_low": 91.0
+    },
+    "why": "The Meta Hyperion package: $15 billion of capital, seven combined-cycle plants and a capital plan raised 30% to $57 billion [U1-59]. Single-customer concentration at the highest multiple in the regulated set."
+   },
+   {
+    "id": "dominion-energy",
+    "group": "priced",
+    "name": "Dominion Energy",
+    "tickers": [
+     "D"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 14,
+    "claude_buy_below": 53,
+    "currency": "USD",
+    "close": 61.31,
+    "close_date": "2026-10-02",
+    "forward_pe": 16.1,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -14.479006834983954,
+    "ytd_pct": 4.6,
+    "market_cap_usd_bn": 53.9,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 12,
+     "target_mean": 71.91667,
+     "target_high": 87.0,
+     "target_low": 63.0
+    },
+    "why": "12 GW of firm data-center agreements in Northern Virginia and the pending merger with NextEra at 0.8138 shares; the allowed return was cut to 9.8% and upgrades are now assigned directly to data centers [U1-52][U1-16][U1-18]. The merger spread is too thin to be the reason to own it."
+   },
+   {
+    "id": "centerpoint-energy",
+    "group": "priced",
+    "name": "CenterPoint Energy",
+    "tickers": [
+     "CNP"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 16,
+    "claude_buy_below": 33,
+    "currency": "USD",
+    "close": 37.79,
+    "close_date": "2026-10-02",
+    "forward_pe": 18.1,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -16.0968028419183,
+    "ytd_pct": -1.4,
+    "market_cap_usd_bn": 24.9,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 17,
+     "target_mean": 45.05882,
+     "target_high": 50.0,
+     "target_low": 38.0
+    },
+    "why": "Houston wires serving about 14 GW of eligible load by 2031 and a regulator-friendly story of at least $5 billion of delivery-charge reductions [U1-67]. The purest Texas connection play, at the richest multiple in the wires set (about 18× 2027)."
+   },
+   {
+    "id": "dt-midstream",
+    "group": "priced",
+    "name": "DT Midstream",
+    "tickers": [
+     "DTM"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 22,
+    "claude_buy_below": 105,
+    "currency": "USD",
+    "close": 121.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 24.7,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -19.931180518793013,
+    "ytd_pct": 1.1,
+    "market_cap_usd_bn": 12.3,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 15,
+     "target_mean": 152.66667,
+     "target_high": 170.0,
+     "target_low": 130.0
+    },
+    "why": "A $3.4 billion backlog and 7.5 Bcf/d of potential Midwest demand from 50 GW of announced large loads [U2-10], but about 25× 2027 earnings for mid-single-digit growth."
+   },
+   {
+    "id": "enbridge",
+    "group": "priced",
+    "name": "Enbridge",
+    "tickers": [
+     "ENB",
+     "ENB.TO"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 13,
+    "claude_buy_below": 29,
+    "currency": "USD",
+    "close": 45.97,
+    "close_date": "2026-10-02",
+    "forward_pe": 20.3,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -20.7960027567195,
+    "ytd_pct": -3.9,
+    "market_cap_usd_bn": 102.5,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 5,
+     "target_mean": 51.127815,
+     "target_high": 58.94785,
+     "target_low": 44.784164
+    },
+    "why": "The only company here that sells both the gas and the solar-plus-storage to the same hyperscaler (Meta), inside a C$41 billion secured backlog, with a 6% yield [U2-38][U2-81]. Leverage of 5.1× and a rate-driven de-rating; consensus earnings are in Canadian dollars and were converted for the New York line."
+   },
+   {
+    "id": "tc-energy",
+    "group": "priced",
+    "name": "TC Energy",
+    "tickers": [
+     "TRP",
+     "TRP.TO"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 14,
+    "claude_buy_below": 38,
+    "currency": "USD",
+    "close": 59.07,
+    "close_date": "2026-10-02",
+    "forward_pe": 21.4,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -16.69722183048935,
+    "ytd_pct": 7.4,
+    "market_cap_usd_bn": 61.5,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 3,
+     "target_mean": 66.66737,
+     "target_high": 71.58069,
+     "target_low": 57.673195
+    },
+    "why": "Two Columbia expansions explicitly for data-center generation (0.7 Bcf/d, 2028–30) in a $20 billion-plus project pipeline [U2-8][U2-83]. A close call; the leverage target of 4.75× tips it to Hold."
+   },
+   {
+    "id": "archrock",
+    "group": "priced",
+    "name": "Archrock",
+    "tickers": [
+     "AROC"
+    ],
+    "claude_rating": "Accumulate",
+    "claude_buy_below_multiple": 15,
+    "claude_buy_below": 32,
+    "currency": "USD",
+    "close": 30.33,
+    "close_date": "2026-10-02",
+    "forward_pe": 13.8,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -27.699642431466042,
+    "ytd_pct": 16.6,
+    "market_cap_usd_bn": 5.3,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 8,
+     "target_mean": 42.5,
+     "target_high": 46.0,
+     "target_low": 40.0
+    },
+    "why": "Compression at 94% utilization with a 665,000-horsepower ten-year contract, but Caterpillar lead times of 195–200 weeks cap its growth, and Kodiak has the turbine allocation [U2-11]. Cheaper than Kodiak at about 14× 2027."
+   },
+   {
+    "id": "rwe",
+    "group": "priced",
+    "name": "RWE",
+    "tickers": [
+     "RWE.DE",
+     "RWEOY"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 16,
+    "claude_buy_below": 51,
+    "currency": "EUR",
+    "close": 59.1,
+    "close_date": "2026-10-02",
+    "forward_pe": 18.2,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -4.64666021297192,
+    "ytd_pct": 30.5,
+    "market_cap_usd_bn": 51.9,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 18,
+     "target_mean": 68.05,
+     "target_high": 76.0,
+     "target_low": 55.0
+    },
+    "why": "The exception in Europe: 30 connected sites suitable for data centers, two deals \"nearing agreement\", 10 GW of US capacity secured and Germany's gas-plant tenders [U2-30][U2-41]. About 18× 2027 earnings near its high; the European power-contract market collapsed around it."
+   },
+   {
+    "id": "expand-energy",
+    "group": "priced",
+    "name": "Expand Energy",
+    "tickers": [
+     "EXE"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 9,
+    "claude_buy_below": 77,
+    "currency": "USD",
+    "close": 85.52,
+    "close_date": "2026-10-02",
+    "forward_pe": 10.0,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -30.409309138253725,
+    "ytd_pct": -22.5,
+    "market_cap_usd_bn": 19.8,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 27,
+     "target_mean": 125.0,
+     "target_high": 160.0,
+     "target_low": 93.0
+    },
+    "why": "The largest US gas producer, with the Haynesville volume behind every Southeast pipeline project, at about 10× 2027 earnings and 30% below its high. Management says liquefied natural gas, not data centers, leads demand [U2-56]: a gas-price trade with a data-center option."
+   },
+   {
+    "id": "exelon",
+    "group": "avoid",
+    "name": "Exelon",
+    "tickers": [
+     "EXC"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 12,
+    "claude_buy_below": 36,
+    "currency": "USD",
+    "close": 40.73,
+    "close_date": "2026-10-02",
+    "forward_pe": 13.4,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -19.009743487770937,
+    "ytd_pct": -6.6,
+    "market_cap_usd_bn": 42.0,
+    "consensus": {
+     "rating": "hold",
+     "analysts": 17,
+     "target_mean": 48.52941,
+     "target_high": 58.0,
+     "target_low": 41.0
+    },
+    "why": "The cheapest wires name (about 13× 2027, 4.1% yield), but its high-probability load fell 40% once collateral was required, it withdrew a Pennsylvania rate request, and it is the most exposed to Pennsylvania and Illinois affordability politics [U1-19][U1-35]. I would reconsider below 12×."
+   },
+   {
+    "id": "edison-international",
+    "group": "avoid",
+    "name": "Edison International",
+    "tickers": [
+     "EIX"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 53.89,
+    "close_date": "2026-10-02",
+    "forward_pe": 8.3,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -32.95595919382931,
+    "ytd_pct": -10.2,
+    "market_cap_usd_bn": 20.7,
+    "consensus": {
+     "rating": "hold",
+     "analysts": 14,
+     "target_mean": 65.57143,
+     "target_high": 86.0,
+     "target_low": 42.0
+    },
+    "why": "Wildfire liability and no disclosed data-center pipeline; a yield above 6% is a warning, not an invitation."
+   },
+   {
+    "id": "aes",
+    "group": "avoid",
+    "name": "AES",
+    "tickers": [
+     "AES"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 14.91,
+    "close_date": "2026-10-02",
+    "forward_pe": 6.3,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -13.715277777777779,
+    "ytd_pct": 4.0,
+    "market_cap_usd_bn": 10.6,
+    "consensus": {
+     "rating": "none",
+     "analysts": 8,
+     "target_mean": 15.0,
+     "target_high": 15.0,
+     "target_low": 15.0
+    },
+    "why": "A $15-per-share cash take-private by GIP and EQT approved by shareholders, closing late 2026 or early 2027; the spread is under 1% [U1-73][U2-22]. A merger-arbitrage position, not a thesis."
+   },
+   {
+    "id": "ormat-technologies",
+    "group": "avoid",
+    "name": "Ormat Technologies",
+    "tickers": [
+     "ORA"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 25,
+    "claude_buy_below": 63,
+    "currency": "USD",
+    "close": 92.86,
+    "close_date": "2026-10-02",
+    "forward_pe": 36.4,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -36.00275671950379,
+    "ytd_pct": -15.9,
+    "market_cap_usd_bn": 5.7,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 12,
+     "target_mean": 127.66667,
+     "target_high": 145.0,
+     "target_low": 100.0
+    },
+    "why": "The only non-nuclear firm, carbon-free resource a hyperscaler can contract today: 150 MW of geothermal for Google through Nevada's Clean Transition Tariff (2028–30) and a Switch contract [U2-24]. At about 36× 2027 earnings after a 36% fall, I would wait for the Nevada regulator's decision and a lower price."
+   },
+   {
+    "id": "clearway-energy",
+    "group": "avoid",
+    "name": "Clearway Energy",
+    "tickers": [
+     "CWEN"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 15,
+    "claude_buy_below": 24,
+    "currency": "USD",
+    "close": 29.34,
+    "close_date": "2026-10-02",
+    "forward_pe": 17.9,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -28.889966068831797,
+    "ytd_pct": -11.8,
+    "market_cap_usd_bn": 7.2,
+    "consensus": {
+     "rating": "strong_buy",
+     "analysts": 14,
+     "target_mean": 41.5,
+     "target_high": 58.0,
+     "target_low": 32.0
+    },
+    "why": "Contracted renewables with no verified data-center contract, at about 18× 2027 earnings."
+   },
+   {
+    "id": "comstock-resources",
+    "group": "avoid",
+    "name": "Comstock Resources",
+    "tickers": [
+     "CRK"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "USD",
+    "close": 12.78,
+    "close_date": "2026-10-02",
+    "forward_pe": 20.1,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -53.30654000730728,
+    "ytd_pct": -44.9,
+    "market_cap_usd_bn": 3.8,
+    "consensus": {
+     "rating": "hold",
+     "analysts": 14,
+     "target_mean": 15.96429,
+     "target_high": 20.0,
+     "target_low": 14.0
+    },
+    "why": "Host of NextEra's proposed 5.2 GW, $16 billion Western Haynesville power hub, which could take almost 1 Bcf/d by 2031 [U2-15]. The hub is 2029–31, the stock is 53% below its high on depressed earnings, and the thesis is gas price first."
+   },
+   {
+    "id": "iberdrola",
+    "group": "avoid",
+    "name": "Iberdrola",
+    "tickers": [
+     "IBE.MC",
+     "IBDRY"
+    ],
+    "claude_rating": "Hold",
+    "claude_buy_below_multiple": 15,
+    "claude_buy_below": 16,
+    "currency": "EUR",
+    "close": 20.82,
+    "close_date": "2026-10-02",
+    "forward_pe": 18.9,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -4.670329670329664,
+    "ytd_pct": 12.8,
+    "market_cap_usd_bn": 156.4,
+    "consensus": {
+     "rating": "hold",
+     "analysts": 23,
+     "target_mean": 21.03,
+     "target_high": 25.0,
+     "target_low": 18.0
+    },
+    "why": "Land, grid and a €2 billion Spanish data-center joint venture (headlines) [U2-90][U2-92], but a Hold consensus with about 1% upside and a European power-contract market that collapsed [U2-31]."
+   },
+   {
+    "id": "korea-electric-power",
+    "group": "avoid",
+    "name": "Korea Electric Power",
+    "tickers": [
+     "015760.KS",
+     "KEP"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "KRW",
+    "close": 30050.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 2.5,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -55.74374079528719,
+    "ytd_pct": -36.3,
+    "market_cap_usd_bn": null,
+    "consensus": {
+     "rating": "buy",
+     "analysts": 22,
+     "target_mean": 47590.91,
+     "target_high": 83000.0,
+     "target_low": 26000.0
+    },
+    "why": "A policy instrument with ₩202 trillion of debt, eleven new regional price zones and a request that chipmakers prepay $18 billion of power bills [U2-34][U2-70]. Down 56% from its high; the data-center load is a cost it must serve, not a profit."
+   },
+   {
+    "id": "tokyo-electric-power",
+    "group": "avoid",
+    "name": "Tokyo Electric Power",
+    "tickers": [
+     "9501.T"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "JPY",
+    "close": 524.0,
+    "close_date": "2026-10-02",
+    "forward_pe": 3.1,
+    "fiscal_year": "FY3/28E",
+    "from_52w_high_pct": -43.90322235306713,
+    "ytd_pct": -20.3,
+    "market_cap_usd_bn": 5.3,
+    "consensus": {
+     "rating": "none",
+     "analysts": 2,
+     "target_mean": 335.0,
+     "target_high": 400.0,
+     "target_low": 270.0
+    },
+    "why": "A reported data center near its Kashiwazaki nuclear plant moved the shares in December 2025 [U2-73], but pass-through tariffs and the Fukushima liabilities limit the upside; 44% below its high."
+   },
+   {
+    "id": "acwa-power",
+    "group": "avoid",
+    "name": "ACWA Power",
+    "tickers": [
+     "2082.SR"
+    ],
+    "claude_rating": "Avoid",
+    "claude_buy_below_multiple": null,
+    "claude_buy_below": null,
+    "currency": "SAR",
+    "close": 163.5,
+    "close_date": "2026-10-02",
+    "forward_pe": 41.4,
+    "fiscal_year": "2027E",
+    "from_52w_high_pct": -34.258142340168874,
+    "ytd_pct": -10.1,
+    "market_cap_usd_bn": 33.4,
+    "consensus": {
+     "rating": "underperform",
+     "analysts": 7,
+     "target_mean": 143.0,
+     "target_high": 195.0,
+     "target_low": 100.0
+    },
+    "why": "Gulf AI power (Stargate UAE, Saudi Humain) is real but state-directed; returns are set by the state, the consensus is \"underperform\", and the shares are 34% below their high."
    }
   ],
   "interconnects": [

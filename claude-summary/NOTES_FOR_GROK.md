@@ -1,6 +1,6 @@
 # Notes for the Grok bots: what Claude did, what Claude found, and how to use it
 
-*Written by Claude (Anthropic) on 2 October 2026, at the site owner's request. Audience: the Grok section bots and the website builder. Everything here is meant to save you work. Please read section 3 before your next pass on your folder.*
+*Written by Claude (Anthropic) on 2 October 2026 and extended on 3 October 2026, at the site owner's request. Audience: the Grok section bots and the website builder. Everything here is meant to save you work. Please read section 3 before your next pass on your folder.*
 
 ---
 
@@ -10,17 +10,20 @@
 
 | Path | What it is |
 |---|---|
-| `claude-summary/index.html` | The landing page, titled "Claude Investment Summary". It has five cross-cutting conclusions, a table of all picks, a summary of the site audit, and links for you. |
-| `claude-summary/power.html` | The power analysis: 800 V DC, solid-state transformers, rack power, power semiconductors, grid transformers, switchgear and onsite engines. It includes picks, analyst consensus and Claude targets. |
+| `claude-summary/index.html` | The landing page, titled "Claude Investment Summary". It has seven cross-cutting conclusions, a table of all top picks, a summary of the site audit, and links for you. The four topic pages are grouped as **Power** (three subsections) and **Interconnects** (one page). |
+| `claude-summary/electrification.html` | Power subsection 1, the electrification analysis: 800 V DC, solid-state transformers, rack power, power semiconductors, grid transformers, switchgear and cables. It includes picks, analyst consensus and Claude targets. (This page was published as `power.html` on 2 October 2026 and renamed on 3 October.) |
+| `claude-summary/generation.html` | Power subsection 2, the generation analysis (added 3 October 2026): heavy-duty and aeroderivative gas turbines, reciprocating engines, fuel cells, nuclear restarts and uprates, large reactors and small modular reactors, and the uranium, enrichment, casting and forging chain. Picks included. |
+| `claude-summary/providers.html` | Power subsection 3, the energy-provider analysis (added 3 October 2026): PJM, ERCOT and MISO market rules, large-load tariffs, merchant generators and nuclear owners, regulated and wires utilities, gas pipelines and compression, and non-US providers. Picks included. |
+| `claude-summary/power.html` | A redirect stub that forwards to `electrification.html`, kept so that old links and the hub card keep working. |
 | `claude-summary/interconnects.html` | The interconnect analysis: copper scale-up, PCB materials, co-packaged optics, optical I/O, InP lasers and substrates, epitaxy, packaging and test. It also includes picks. |
 | `claude-summary/section.css` | Section styles. They reuse the hub tokens and the hub-wide ticker marks: grey default, `rating-strong` dark green, `not-priced-in` rainbow. |
-| `claude-summary/data/picks.json` | Every company on the two pages: tickers, close and date, forward P/E, distance from the 52-week closing high, change this year, market value, analyst consensus, and Claude's rating, target, basis and "would buy below" price. |
+| `claude-summary/data/picks.json` | Every company on the four pages, keyed `electrification`, `generation`, `providers` and `interconnects` (the key `power` used on 2 October was renamed `electrification`): tickers, close and date, forward P/E, distance from the 52-week closing high, change this year, market value, analyst consensus, and Claude's rating, target, basis and "would buy below" price. |
 | `claude-summary/data/coverage-gaps.json` | **587 audit items** (110 high, 253 medium, 224 low priority). Each item has its owner, file, location, action, company, ticker, reason and source. See section 4. |
-| `claude-summary/research/*.md` | Five research reports, each with numbered, dated sources: P1 in-hall DC power, P2 power semiconductors, P3 grid and facility, I2 lasers and photonic materials, I3 copper, co-packaged optics and optical I/O. Also the three audit reports (A, B, C). |
-| `claude-summary/RESEARCH_NOTES.md` | A summary of the investment research: theses, bottleneck maps, picks and the catalyst calendars for both fields. |
+| `claude-summary/research/*.md` | Nine research reports, each with numbered, dated sources: P1 in-hall DC power, P2 power semiconductors, P3 grid and facility, G1 thermal generation, G2 nuclear and its fuel chain, U1 US electricity providers and power markets, U2 the gas chain and international providers, I2 lasers and photonic materials, I3 copper, co-packaged optics and optical I/O. Also the three audit reports (A, B, C). |
+| `claude-summary/RESEARCH_NOTES.md` | A summary of the investment research: theses, bottleneck maps, picks and the catalyst calendars for all four fields. |
 | `claude-summary/NOTES_FOR_GROK.md` | This file. |
 
-**Review before publication.** Three independent reviewers checked the pages against the research reports and `picks.json` before the first push. Their corrections (market values at the displayed close, several source markers, overstated claims and unexplained jargon) are included, and each topic page now ends with a glossary.
+**Review before publication.** Independent reviewers checked each page against the research reports and `picks.json` before it was pushed (three reviewers for the first two pages on 2 October, three more for the new pages and the landing page on 3 October). Their corrections (market values at the displayed close, several source markers, overstated claims and unexplained jargon) are included, and each topic page now ends with a glossary.
 
 **Small, coordinated edits outside my folder.** The site owner asked for the new section to be a top-level tab.
 
@@ -36,10 +39,12 @@
 ## 2. Ownership and how to treat `claude-summary/`
 
 - `claude-summary/` is Claude-owned, like the other section folders. Please do not edit the pick lists, ratings, targets or narrative. They are dated judgments, and silently changing them would misattribute views to Claude.
-- You may **link to** the pages and cards. Every card has a stable anchor, for example `claude-summary/power.html#hd-hyundai-electric` or `claude-summary/interconnects.html#mitsui-kinzoku`. You may also reuse the data files and research reports.
+- You may **link to** the pages and cards. Every card has a stable anchor, for example `claude-summary/electrification.html#hd-hyundai-electric`, `claude-summary/generation.html#innio`, `claude-summary/providers.html#vistra` or `claude-summary/interconnects.html#mitsui-kinzoku`. Links to `claude-summary/power.html` still work through the redirect stub, but please point new links at `electrification.html`. You may also reuse the data files and research reports.
 - If a refresh is needed, the cleanest route is a new dated snapshot with a new as-of date, regenerated by Claude, not an in-place edit of the current numbers.
 
 ## 3. Discoveries that matter for the whole site (read this first)
+
+*Status note (3 October 2026): this section and the appendix describe the site as audited on 2 October (commit 9d8ec4e). Between 2 and 3 October the section bots pushed about twenty commits that close many of these items (tickers, capex figures, new listings, coverage gaps, the hub legend). The lists are kept as the record of what was found; check an item against the live page before acting on it.*
 
 ### 3.1 Wrong tickers and broken links (fix first; they send readers to the wrong company)
 
@@ -134,6 +139,10 @@ These are summarized from `RESEARCH_NOTES.md`; each has sources in the reports.
 5. **Copper scale-up stays inside the rack until about 2029.** Optics enters scale-up *between* racks first: NVL576 in test volumes in 2027 (SemiAnalysis warns it may be delayed or stay small) and Feynman NVL1152 in 2028. The copper limit shows up as a **circuit-board materials wall** (ultra-smooth HVLP copper foil, low-expansion T-glass cloth, M9 laminate).
 6. **Indium-phosphide (InP) laser capacity is the binding optical constraint in 2026–27.** Co-packaged optics cuts laser *count* but probably not InP *area* or dollars (an estimate), because external light sources need about 10× the power per laser.
 7. **The 1260H listing** of InnoLight (8 Jun 2026) brings Pentagon procurement limits from 30 Jun 2026 and, for goods containing its products, from 30 Jun 2027. This is relevant to any page that lists Chinese module makers.
+8. **Heavy-duty gas turbines are sold out to 2030–31, and the 2026–28 onsite build runs on engines.** The four makers' order books (GE Vernova 116 GW including 63 GW of slot reservations, Siemens Energy about 69 GW, Mitsubishi Heavy 35 GW, Doosan Enerbility about 9 GW) are roughly four years of combined output (about 54 GW a year). Turbine prices are up 10–20 points. About 75 GW of firm behind-the-meter orders compare with 2–3 GW operating at end-2026. Any page that shows onsite power as a "bridge" should say that the grid connection arrives in 2029–31 and that the bridge is becoming permanent (G1 report).
+9. **Nuclear for AI is a contracting story before it is a supply story.** About 9 GW of US nuclear output is under hyperscaler contract, but net-new supply before 2030 is about 3 GW, almost all from the Crane (2027), Palisades (paused, 25 Sep 2026) and Duane Arnold (2029) restarts. The first US small-modular-reactor construction permit (TVA, Clinch River) was issued in September 2026; first power is 2030–32. The SMR hub should separate developers (no revenue; shares down 60–86% from their highs) from the fuel and component chain (Centrus, BWXT, Curtiss-Wright, Doosan, Japan Steel Works), where the cash flows are (G2 report).
+10. **Co-location is finished as a model.** The federal regulator rejected the behind-the-meter Talen–Amazon arrangement twice, the deal moved onto the grid through PPL's wires, PJM caps behind-the-meter generation at 50 MW for new arrangements, and Texas confirmed that a co-located load can be fully curtailed. Pages that describe "data centers on reactor sites" should describe front-of-the-meter contracts instead (U1 report).
+11. **For the electricity sellers, the rules are the story.** PJM's capacity price has cleared at its cap three times (about $325–333 per MW-day), the cap runs through the 2029/30 auction, and the 15-year backstop auction was suspended on 29 September 2026. Interconnection queues are about six times plausible demand (Texas 438 GW); the useful figure is contracted load with collateral, now under take-or-pay tariffs in 25 states. The Analysis section's utility and merchant-generator pages should carry those dates and the May 2027 uncapped-auction catalyst (U1 and U2 reports).
 
 ### 3.6 Layout on phones
 
@@ -155,7 +164,7 @@ These are summarized from `RESEARCH_NOTES.md`; each has sources in the reports.
 
 ## 5. Conventions I recommend, learned the hard way during this pass
 
-1. **Verify every US symbol by quoting it** before you link it. OTC lines come and go: SMNEY and DELTY did not quote on 2 Oct 2026. Link the US OTC/ADR line to Fidelity and the local listing to its exchange quote page; never build a Fidelity link from an exchange prefix.
+1. **Verify every US symbol by quoting it** before you link it. OTC lines come and go: SMNEY and DELTY did not quote on 2 Oct 2026, and Coterra (CTRA), TransAlta's US line (TA) and TAQA (TAQA.AE) returned no data from the chart feed on 3 Oct. Link the US OTC/ADR line to Fidelity and the local listing to its exchange quote page; never build a Fidelity link from an exchange prefix.
 2. **Watch currency mismatches in consensus EPS.** ABB's estimates are in USD while ABBN trades in CHF, and CRRC Times Electric's are in CNY while it trades in HKD. Mixing them overstates or understates P/E by 20% or more. Mitsui Kinzoku split 10-for-1 on 1 Oct 2026, so check that targets are split-adjusted. InnoLight's Hong Kong line (3308.HK) has only three analyst targets, so use the Shenzhen line (300308.SZ, 15 analysts) for its consensus.
 3. **Yahoo's market capitalization uses the live price.** Scale it to the close you display (market cap × close ÷ live price), or market values and prices will disagree on volatile days. On 2 Oct 2026 several chip stocks moved 5–11% intraday.
 4. **Put an "as of" date on every price, multiple and target**, and keep marks (green/rainbow) separate from ratings.
@@ -165,15 +174,15 @@ These are summarized from `RESEARCH_NOTES.md`; each has sources in the reports.
 ## 6. Market-data method (so numbers can be refreshed consistently)
 
 - Prices, 52-week highs and consensus come from the Yahoo Finance chart endpoint (`/v8/finance/chart/{sym}`) and the quoteSummary endpoint (`/v10/finance/quoteSummary/{sym}?modules=price,summaryDetail,defaultKeyStatistics,financialData,earningsTrend,calendarEvents`), with a crumb. Consensus is LSEG / S&P Global data as shown by Yahoo.
-- "Close" is the latest full-session close available on the morning of the as-of date, New York time: US and European listings on 1 Oct 2026, Asian listings on 2 Oct 2026, China A-shares on 30 Sep 2026 (National Day holiday). Forward P/E = close ÷ next-fiscal-year consensus EPS (`earningsTrend` `+1y`).
+- Two snapshots are in use, and each page says which. **Snapshot A** (electrification, interconnects): "close" is the latest full-session close available on the morning of 2 Oct 2026, New York time, so US and European listings are at 1 Oct 2026, Asian listings at 2 Oct 2026 and China A-shares at 30 Sep 2026 (National Day holiday). **Snapshot B** (generation, providers): the 2 Oct 2026 close for every listing (China 30 Sep; Saudi and Indian listings 1 Oct). Where Yahoo's chart feed had not yet posted the 2 Oct bar for a European listing, the regular-market price was used as the 2 Oct close when it was within 8% of the 1 Oct close. Forward P/E = close ÷ next-fiscal-year consensus EPS (`earningsTrend` `+1y`). Consensus EPS quoted in a currency other than the listing currency (ABB, CRRC Times Electric, InnoLight's Hong Kong line, Cameco, Enbridge, TC Energy, NexGen, Denison, Kazatomprom's London line, Paladin) is converted at the snapshot's exchange rate.
 - Claude's 12-month target = a stated multiple × next-fiscal-year consensus EPS, rounded. The fair-value range is ±10%. "Would buy below" applies a stricter multiple and is rounded down. The multiple and its reasoning are on each card and in `picks.json`.
-- Market value = Yahoo market cap × close ÷ live price, converted to US dollars at mid-morning New York exchange rates on 2 Oct 2026. "From high" is the distance below the highest daily close of the past 52 weeks.
+- Market value = Yahoo market cap × close ÷ live price, converted to US dollars at the snapshot's exchange rates (mid-morning New York on 2 Oct 2026 for snapshot A; the 2 Oct 2026 closing rates for snapshot B). "From high" is the distance below the highest daily close of the past 52 weeks.
 
 ## 7. Limits of this pass
 
 - The audits read everything in scope, but they verified time-sensitive claims only where primary pages were reachable. Treat items marked "snippet" or "not re-verified" accordingly.
 - Some research figures are analyst relays (Goldman, Morgan Stanley and SemiAnalysis paid content). They are marked "secondary" in the reports.
-- Prices move. Everything numeric is a 2 Oct 2026 snapshot.
+- Prices move. Everything numeric is a 1–2 Oct 2026 snapshot, as labelled on each page.
 
 ---
 

@@ -19,7 +19,7 @@ Bot / human ownership rules for `investment_dashboard_public`. Do not commit int
 | `hyperscalers/` | **Hyperscalers** | Cloud operators, GPU clouds, colo REITs |
 | `analysis/` | **Investment analysis** | Portfolio briefings (electrification focus, gold/rainbow wiring notes) |
 | `analysis/companies/` | **Performance tracker** | One-screen company scorecards |
-| `claude-summary/` | **Claude (Anthropic)** | Claude Investment Summary: power and interconnect investment pages, research reports, coverage-audit data (`data/coverage-gaps.json`). Read and link freely; do not edit picks, ratings or targets (dated judgments). See `claude-summary/NOTES_FOR_GROK.md`. |
+| `claude-summary/` | **Claude (Anthropic)** | Claude Investment Summary: four investment pages (electrification, generation, energy providers, interconnects), nine research reports, coverage-audit data (`data/coverage-gaps.json`). Read and link freely; do not edit picks, ratings or targets (dated judgments). See `claude-summary/NOTES_FOR_GROK.md`. |
 | `digests/` | **AI Infra Daily Digest** | Digest index + dated brief HTML |
 
 ## Rules
